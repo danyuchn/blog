@@ -1,0 +1,48 @@
+---
+// Language switcher: EN / 中文 toggle
+// Stores preference in localStorage, filters [data-lang] elements on list pages
+---
+
+<button
+  id="lang-btn"
+  class="focus-outline relative px-2 py-1 text-sm font-medium hover:text-accent"
+  aria-label="Switch language"
+>
+  <span id="lang-label"></span>
+</button>
+
+<script>
+  function initLangSwitcher() {
+    const btn = document.getElementById("lang-btn");
+    const label = document.getElementById("lang-label");
+    if (!btn || !label) return;
+
+    const current = localStorage.getItem("lang") || "zh";
+    label.textContent = current === "zh" ? "EN" : "中文";
+
+    btn.addEventListener("click", () => {
+      const lang = localStorage.getItem("lang") || "zh";
+      const next = lang === "zh" ? "en" : "zh";
+      localStorage.setItem("lang", next);
+      label.textContent = next === "zh" ? "EN" : "中文";
+      filterByLang(next);
+    });
+
+    // Apply filter on load
+    filterByLang(current);
+  }
+
+  function filterByLang(lang: string) {
+    document.querySelectorAll<HTMLElement>("[data-lang]").forEach(el => {
+      el.style.display = el.dataset.lang === lang ? "" : "none";
+    });
+
+    // Also filter tag items that have data-lang
+    document.querySelectorAll<HTMLElement>("[data-tag-lang]").forEach(el => {
+      el.style.display = el.dataset.tagLang === lang || el.dataset.tagLang === "both" ? "" : "none";
+    });
+  }
+
+  initLangSwitcher();
+  document.addEventListener("astro:after-swap", initLangSwitcher);
+</script>

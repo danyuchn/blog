@@ -2,18 +2,21 @@
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
 import { getPath } from "@/utils/getPath";
+import { getLangFromPost } from "@/utils/i18n";
 import Datetime from "./Datetime.astro";
 
 type Props = {
   variant?: "h2" | "h3";
 } & CollectionEntry<"blog">;
 
-const { variant: Heading = "h2", id, data, filePath } = Astro.props;
+const post = Astro.props;
+const { variant: Heading = "h2", id, data, filePath } = post;
+const lang = getLangFromPost(post);
 
 const { title, description, ...props } = data;
 ---
 
-<li class="my-6">
+<li class="my-6" data-lang={lang}>
   <a
     href={getPath(id, filePath)}
     class:list={[

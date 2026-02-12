@@ -9,8 +9,10 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import TranslationLink from "@/components/TranslationLink.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
+import { getLangFromPost } from "@/utils/i18n";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
@@ -56,6 +58,8 @@ const ogImage = ogImageUrl
   ? new URL(ogImageUrl, Astro.url.origin).href
   : undefined;
 
+const postLang = getLangFromPost(post);
+
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
   author,
@@ -65,21 +69,24 @@ const layoutProps = {
   canonicalURL,
   ogImage,
   scrollSmooth: true,
+  language: postLang,
 };
 
-/* ========== Prev/Next Posts ========== */
+/* ========== Prev/Next Posts (same language only) ========== */
 
-const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
-  id,
-  title,
-  filePath,
-}));
+const sameLangPosts = posts
+  .filter(p => getLangFromPost(p) === postLang)
+  .map(({ data: { title }, id, filePath }) => ({
+    id,
+    title,
+    filePath,
+  }));
 
-const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
+const currentPostIndex = sameLangPosts.findIndex(a => a.id === post.id);
 
-const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
+const prevPost = currentPostIndex > 0 ? sameLangPosts[currentPostIndex - 1] : null;
 const nextPost =
-  currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+  currentPostIndex < sameLangPosts.length - 1 ? sameLangPosts[currentPostIndex + 1] : null;
 ---
 
 <Layout {...layoutProps}>
@@ -96,6 +103,7 @@ const nextPost =
     >
       {title}
     </h1>
+    <TranslationLink post={post} allPosts={posts} />
     <div class="my-2 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
       <span

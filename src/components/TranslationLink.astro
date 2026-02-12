@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { findTranslation, getLangFromPost } from "@/utils/i18n";
+import { getPath } from "@/utils/getPath";
+
+type Props = {
+  post: CollectionEntry<"blog">;
+  allPosts: CollectionEntry<"blog">[];
+};
+
+const { post, allPosts } = Astro.props;
+const lang = getLangFromPost(post);
+const translation = findTranslation(post, allPosts);
+---
+
+{
+  translation && (
+    <a
+      href={getPath(translation.id, translation.filePath)}
+      class="mb-4 inline-block rounded border border-border px-3 py-1.5 text-sm hover:bg-muted"
+    >
+      {lang === "zh" ? "Read in English" : "閱讀中文版"}
+    </a>
+  )
+}
