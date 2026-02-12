@@ -20,9 +20,10 @@
 ### Batch 4：教育與轉型 ✅ 完成
 - [x] 4-1. 教學者如何擁抱 AI 而不被取代 → `zh/teachers-embrace-ai.md`
 
-### 待決定
-- [ ] 審核 82 則 AI+GMAT 混合內容，決定保留哪些作為案例
-- [ ] 處理重複貼文（同時發在 IG 和 Threads 的）去重
+### 混合內容審核 ✅ 完成
+- [x] 審核 103 則 AI+GMAT 混合內容 → 已提取 D 類觀點寫成 `zh/ai-era-critical-thinking.md`
+- [x] 其餘 A/B/C 類（已吸收、純推廣、GMAT 專屬細節）全部捨棄
+- [x] 去重已在各 Batch 改寫過程中完成
 
 ---
 
