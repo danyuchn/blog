@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# classification output (contains personal data)
+scripts/classified_posts.json
+
 # macOS-specific files
 .DS_Store
 
@@ -26,3 +29,4 @@ pnpm-debug.log*
 # pagefind
 
 public/pagefind
+scripts/categories/

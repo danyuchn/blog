@@ -59,6 +59,17 @@ Pages use Astro file-based routing in `src/pages/`:
 
 `@/*` maps to `./src/*` (configured in `tsconfig.json`).
 
+## Content Rewriting Principles
+
+When converting social media posts (Threads/IG) into blog articles:
+
+1. **Preserve original voice**: Keep the author's tone, slang, metaphors, and opinions verbatim. Never add views the author didn't express.
+2. **Remove platform fragmentation**: Weave separate short posts into coherent paragraphs with logical flow and transitions.
+3. **Deduplicate**: When the same content was posted on both IG and Threads, keep only the most complete version.
+4. **Filter noise**: Remove bare links, promotional CTAs, sign-up forms, and context-free @mentions that have no value in a blog.
+5. **No AI-speak**: No summary sentences, no "let's explore together", no emoji garnish, no bullet-point filler. The author explicitly dislikes AI-generated writing patterns.
+6. **Micro-notes format**: For short posts that can't form a full article, preserve the one-by-one format with date separators. Only add minimal context so each entry is independently readable.
+
 ## Deployment
 
 GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. Build uses Node 20.
