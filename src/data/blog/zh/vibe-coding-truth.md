@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T16:00:00Z
+pubDatetime: 2026-02-12T06:00:00Z
 title: "Vibe Coding 的真與假：一個從業十年老師的觀察"
 slug: zh/vibe-coding-truth
 featured: false

@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T19:00:00Z
+pubDatetime: 2026-02-12T09:00:00Z
 title: "我的 AI 工作流：收斂與發散"
 slug: zh/ai-workflow-convergence-divergence
 featured: false

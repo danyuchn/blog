@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T18:00:00Z
+pubDatetime: 2026-02-12T08:00:00Z
 title: "用 Claude Skill 做 FIRE 理財規劃：跟 AI 聊退休"
 slug: zh/fire-planning-with-claude
 featured: false

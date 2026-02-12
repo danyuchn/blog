@@ -1,5 +1,6 @@
 import { BLOG_PATH } from "@/content.config";
 import { slugifyStr } from "./slugify";
+import { withBase } from "./withBase";
 
 /**
  * Get full path of a blog post
@@ -28,9 +29,9 @@ export function getPath(
   const slug = blogId.length > 0 ? blogId.slice(-1) : blogId;
 
   // If not inside the sub-dir, simply return the file path
-  if (!pathSegments || pathSegments.length < 1) {
-    return [basePath, slug].join("/");
-  }
+  const raw = !pathSegments || pathSegments.length < 1
+    ? [basePath, slug].join("/")
+    : [basePath, ...pathSegments, slug].join("/");
 
-  return [basePath, ...pathSegments, slug].join("/");
+  return includeBase ? withBase(raw) : raw;
 }

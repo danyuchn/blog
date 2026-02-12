@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T12:00:00Z
+pubDatetime: 2026-02-12T02:00:00Z
 title: "Claude vs Gemini vs GPT：一個重度使用者的模型體感實錄"
 slug: zh/claude-vs-gemini-vs-gpt
 featured: true

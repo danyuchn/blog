@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T21:00:00Z
+pubDatetime: 2026-02-12T11:00:00Z
 title: "AI 時代的思考力：裝傻狂問、費曼學習法，與未來人才的樣子"
 slug: zh/ai-era-critical-thinking
 featured: false

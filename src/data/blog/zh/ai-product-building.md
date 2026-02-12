@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T17:00:00Z
+pubDatetime: 2026-02-12T07:00:00Z
 title: "從零打造 AI 產品的踩坑日記：一個非工程師的四代進化"
 slug: zh/ai-product-building
 featured: false

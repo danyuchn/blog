@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T14:00:00Z
+pubDatetime: 2026-02-12T04:00:00Z
 title: "AI 碎念日記：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false

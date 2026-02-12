@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T15:00:00Z
+pubDatetime: 2026-02-12T05:00:00Z
 title: "Claude Code 的達克曲線：從陌生到極致同步的實戰心得"
 slug: zh/claude-code-dunning-kruger
 featured: true
