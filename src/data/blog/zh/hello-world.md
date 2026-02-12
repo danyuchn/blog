@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T12:00:00Z
+pubDatetime: 2026-02-12T00:00:00Z
 title: "你好世界：為什麼我開始寫這個部落格"
 slug: zh/hello-world
 featured: true

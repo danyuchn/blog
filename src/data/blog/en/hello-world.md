@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T12:00:00Z
+pubDatetime: 2026-02-12T00:00:00Z
 title: "Hello World: Why I Started This Blog"
 slug: en/hello-world
 featured: true
