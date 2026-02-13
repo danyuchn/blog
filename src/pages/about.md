@@ -25,4 +25,5 @@ title: "About"
 ## 聯絡
 
 - GitHub: [danyuchn](https://github.com/danyuchn)
-- LinkedIn: [Dustin Yuchen Teng](https://www.linkedin.com/in/dustin-yuchen-teng/)
+- LinkedIn: [Dustin Yuchen Teng](https://www.linkedin.com/in/yuchen-teng-b617a715/)
+- Email: [danyuchn@gmail.com](mailto:danyuchn@gmail.com)
