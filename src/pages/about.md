@@ -3,26 +3,26 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Hi, I'm Dustin Yuchen Teng — an AI practitioner and educator based in Bangkok.
+我是 Dustin（鄧宇辰），在曼谷生活，教 GMAT 教了 12 年，現在同時用 AI 做教育產品。
 
-I run [PDT Learning](https://pdtlearning.com), where I help people integrate AI tools into their learning and productivity workflows. I also coach GMAT prep at [dustingmat.com](https://dustingmat.com).
+經營 [PDT Learning](https://pdtlearning.com)，幫人把 AI 工具整合進學習和工作流程。GMAT 教學在 [DustinGMAT](https://dustingmat.com)。
 
-## What This Blog Is About
+## 這個 blog 在寫什麼
 
-This blog documents my hands-on experience with AI tools, workflows, and systems. Topics include:
+記錄我實際使用 AI 工具的過程和踩坑經驗：
 
-- **AI Workflows** — Building practical automation with LLMs, APIs, and agents
-- **Developer Tools** — Claude Code, Cursor, and other AI-powered dev tools
-- **Content Systems** — Using AI for content creation, translation, and analysis
-- **Learning with AI** — How AI changes the way we study and teach
+- AI 工作流 — 用 LLM、API、agent 搭建實際可用的自動化
+- 開發工具 — Claude Code、Cursor 這類 AI 輔助開發工具的使用心得
+- Vibe coding — 沒有工程背景的人怎麼靠 AI 把產品做出來
+- AI 與教學 — AI 怎麼改變學習和教學方式
 
-I write in both English and Chinese, depending on the topic and audience.
+中英文都寫，看主題和讀者決定。
 
-## Why I Write
+## 為什麼寫
 
-I believe the best way to learn is to build things and share what you discover along the way. This blog is my lab notebook — part tutorial, part reflection, part experiment log.
+學東西最快的方式就是做出來，然後把過程記下來。這個 blog 就是我的實驗筆記。
 
-## Get in Touch
+## 聯絡
 
 - GitHub: [danyuchn](https://github.com/danyuchn)
 - LinkedIn: [Dustin Yuchen Teng](https://www.linkedin.com/in/dustin-yuchen-teng/)
