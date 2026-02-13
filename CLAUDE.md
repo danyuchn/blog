@@ -40,6 +40,8 @@ Blog posts are Markdown with YAML frontmatter. Slugs must include language prefi
 
 Required frontmatter: `title`, `pubDatetime`, `description`, `slug`. Optional: `featured`, `draft`, `tags`, `modDatetime`, `ogImage`, `canonicalURL`.
 
+**⚠️ pubDatetime 陷阱：** 設為 UTC 未來時間（即使只差幾小時）會導致 `postFilter.ts` 在 production build 時過濾掉文章。文章頁面仍會生成（`getStaticPaths` 不用 postFilter），但翻譯連結、首頁列表、RSS 等全部不會出現。建議使用已過去的 UTC 時間，例如 `T04:00:00Z`（曼谷上午 11 點）。
+
 ### Routing
 
 Pages use Astro file-based routing in `src/pages/`:
@@ -103,5 +105,5 @@ When importing content from social media exports (Instagram/Threads):
 - **Slug format:** `zh/article-name` for Chinese, `en/article-name` for English
 - **Language detection:** Automatic from slug prefix in post detail pages
 - **Language filtering:** Client-side via `localStorage` preference on list pages
-- **Translation links:** Show "Read in English / 閱讀中文版" at bottom of articles
+- **Translation links:** Show "Read in English / 閱讀中文版" at top of articles. Matching logic in `src/utils/i18n.ts` uses `filePath` to find same-filename posts in the other language directory. **翻譯連結依賴 `getSortedPosts`（經 `postFilter` 過濾）**，如果文章被排程過濾掉，翻譯連結就不會出現
 - **Workflow:** Always write Chinese first, then translate to English
