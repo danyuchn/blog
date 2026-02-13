@@ -25,7 +25,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Hey, I'm Dustin.
+        嗨，我是 Dustin。
       </h1>
       <a
         target="_blank"
@@ -43,20 +43,16 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </a>
 
       <p>
-        GMAT instructor for 12 years, now building AI-powered learning tools
-        from Bangkok. I write about what happens when someone with zero
-        engineering background ships real products with Claude Code, Gemini, and
-        too many late nights.
+        教了 12 年 GMAT，現在人在曼谷，用 AI 做教育產品。這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和 Gemini 把東西做出來的過程，還有途中踩過的坑。
       </p>
       <p class="mt-2">
-        Mostly: AI workflows, vibe coding gone wrong (and right), and what I
-        actually learned building
+        主要聊：AI 工作流、vibe coding 的實戰紀錄，以及從零打造
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
           href="https://dustingmat.com"
         >
           DustinGMAT
-        </LinkButton> from scratch.
+        </LinkButton> 的經驗。
       </p>
       {
         // only display if at least one social link is enabled
