@@ -73,3 +73,35 @@ When converting social media posts (Threads/IG) into blog articles:
 ## Deployment
 
 GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. Build uses Node 20.
+
+**Important:** Never commit or push without explicit user confirmation. Wait for user to say "commit" or "commit & push".
+
+## API Key Management
+
+- **Gemini API Key:** Required for content classification scripts (`scripts/classify_posts.py`). Key is stored in `.env` file (gitignored).
+- **Cross-project key access:** When needed, read API keys from other projects' `.env` files (e.g., `../crawler/.env`, `../gmat-simulator-1/.env`).
+- **Never hardcode API keys** in scripts or config files.
+- **Always verify `.gitignore`** includes sensitive files before running classification scripts.
+
+## Content Import Workflow
+
+When importing content from social media exports (Instagram/Threads):
+
+1. **Extract & Classify:** Use `scripts/classify_posts.py` for semantic classification with Gemini API
+   - Batch processing: 30 posts per request
+   - Output: `scripts/classified_posts.json` (gitignored)
+   - Categories: `scripts/categories/*.md` (gitignored)
+2. **Aggregate:** Group related posts into coherent blog articles
+3. **Write:** Create Chinese article first in `src/data/blog/zh/`
+4. **Translate:** Create English version in `src/data/blog/en/`
+5. **Humanize:** Use `/humanizer` skill to remove AI writing patterns from translations
+6. **Build & Verify:** Run `npm run build` to validate, test in browser with `npm run dev`
+7. **Deploy:** Wait for explicit "commit & push" instruction from user
+
+## Bilingual Architecture
+
+- **Slug format:** `zh/article-name` for Chinese, `en/article-name` for English
+- **Language detection:** Automatic from slug prefix in post detail pages
+- **Language filtering:** Client-side via `localStorage` preference on list pages
+- **Translation links:** Show "Read in English / 閱讀中文版" at bottom of articles
+- **Workflow:** Always write Chinese first, then translate to English
