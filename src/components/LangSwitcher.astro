@@ -24,6 +24,15 @@
       const lang = localStorage.getItem("lang") || "zh";
       const next = lang === "zh" ? "en" : "zh";
       localStorage.setItem("lang", next);
+
+      // On post pages, navigate to translation if available
+      const mainEl = document.getElementById("main-content");
+      const translationUrl = mainEl?.dataset.translationUrl;
+      if (translationUrl) {
+        window.location.href = translationUrl;
+        return;
+      }
+
       label.textContent = next === "zh" ? "EN" : "中文";
       filterByLang(next);
     });
