@@ -10,12 +10,12 @@ tags:
   - ai-coding
   - developer-experience
   - opinions
-description: "46 days, 102 projects, 7,843 conversations. This is not a manual — it's a diary of trial and error."
+description: "46 days, 6 projects, 7,843 conversations. This is not a manual — it's a diary of trial and error."
 ---
 
 ## Why I'm Writing This
 
-From December 29, 2024 to February 13, 2025, I used Claude Code on 102 projects and accumulated 7,843 conversation records. At first I thought this tool was just "ChatGPT that writes code." Turns out it's nothing like that.
+From December 29, 2024 to February 13, 2025, I used Claude Code across 6 projects and accumulated 7,843 conversation records. At first I thought this tool was just "ChatGPT that writes code." Turns out it's nothing like that.
 
 I hit every pitfall, made every mistake, and eventually figured out my own workflow. This isn't a user manual — it's my 46-day diary of stumbling through. If you're using Claude Code or considering it, these insights might save you a few days of trial and error.
 
