@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T02:00:00Z
 title: "Claude vs Gemini vs GPT: A Power User's Honest Field Notes"
 slug: en/claude-vs-gemini-vs-gpt
-featured: true
+featured: false
 draft: false
 tags:
   - ai-models

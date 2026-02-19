@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T10:00:00Z
 title: "教學者如何擁抱 AI 而不被取代"
 slug: zh/teachers-embrace-ai
-featured: true
+featured: false
 draft: false
 tags:
   - ai-education

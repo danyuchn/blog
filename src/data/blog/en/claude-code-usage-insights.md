@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-16T04:00:00Z
 title: "What I Learned from 7,843 Claude Code Conversations"
 slug: en/claude-code-usage-insights
-featured: true
+featured: false
 draft: false
 tags:
   - claude-code

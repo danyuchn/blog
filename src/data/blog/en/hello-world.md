@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T00:00:00Z
 title: "Hello World: Why I Started This Blog"
 slug: en/hello-world
-featured: true
+featured: false
 draft: false
 tags:
   - meta

@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T03:00:00Z
 title: "看不見三年後的自己：AI 時代的焦慮與適應"
 slug: zh/ai-anxiety-and-adaptation
-featured: true
+featured: false
 draft: false
 tags:
   - ai-trends

@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-13T04:00:00Z
 title: "I scanned 500 Claude Code sessions and the AI stopped making the same mistakes"
 slug: en/self-improving-claude-md
-featured: true
+featured: false
 draft: false
 tags:
   - claude-code

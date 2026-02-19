@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-13T04:00:00Z
 title: "我掃了 500 個 Claude Code 對話紀錄，然後 AI 就不再犯同樣的錯了"
 slug: zh/self-improving-claude-md
-featured: true
+featured: false
 draft: false
 tags:
   - claude-code

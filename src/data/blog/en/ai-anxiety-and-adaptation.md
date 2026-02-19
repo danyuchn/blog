@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T03:00:00Z
 title: "Can't See Myself in Three Years: Anxiety and Adaptation in the Age of AI"
 slug: en/ai-anxiety-and-adaptation
-featured: true
+featured: false
 draft: false
 tags:
   - ai-trends

@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T10:00:00Z
 title: "How Teachers Can Embrace AI Without Getting Replaced"
 slug: en/teachers-embrace-ai
-featured: true
+featured: false
 draft: false
 tags:
   - ai-education
