@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-27T04:00:00Z
+pubDatetime: 2026-02-27T02:00:00Z
 title: "claude-work-timer: Auto-Track Your Claude Code Working Hours"
 slug: en/claude-work-timer
 featured: false

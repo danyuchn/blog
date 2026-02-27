@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-27T04:00:00Z
+pubDatetime: 2026-02-27T02:00:00Z
 title: "claude-work-timer：讓 Claude Code 自動算工時"
 slug: zh/claude-work-timer
 featured: false
