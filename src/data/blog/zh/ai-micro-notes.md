@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T04:00:00Z
+modDatetime: 2026-02-27T04:00:00Z
 title: "AI 碎念日記：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -141,3 +142,9 @@ description: 從 Threads 和 IG 上累積的 AI 短碎念。模型吐槽、開�
 
 **Gemini 也支援 Skill 了**
 > 現在 Gemini 也支援 Skill 了。不過以 Gemini 的尿性，我保持觀望。
+
+**AI 採用落差**
+> 年前展示給幾個朋友看 Claude Code 的花式應用（非編程而是辦公室工作），無一不感到驚艷。然後我順便把手上的免費體驗一週 Pro 付費會員的推廣連結發給他們。本來還想說只有 3 張 pass，會不會太少一下就被搶光了。後來發現是我多慮了——發出去的 3 張到現在都還沒被用過。舊工作習慣的慣性真的很大，大多數人都是「沒壞就不用修」。根據周遭觀察，90% 的人對 AI 的應用都落後於技術狂熱者大約 1.5 到 2 年，甚至更長。這個差距我認為未來很難被拉近。
+
+**額度重置日的好習慣**
+> 請有在用 Claude Code 的朋友養成一個好習慣。每週額度即將在一天內重置，你暫時變身「單日 token 富翁」的時候，趁這時開計畫模式：一、開給他全電腦權限，掃描所有使用 Claude Code 的專案，給出過時和暫存檔案的歸檔清理建議。二、用 claude-log CLI 讀取本週所有 session 的對話紀錄，找到跟 Claude Code 溝通不順的地方，然後用官方文檔的最佳實踐修正 Claude.md、rules、memory。相信我，這會讓你接下來一週過得很愉快。

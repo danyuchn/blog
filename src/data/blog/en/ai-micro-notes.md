@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T04:00:00Z
+modDatetime: 2026-02-27T04:00:00Z
 title: "AI Micro-Notes: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -141,3 +142,9 @@ Over the past six months I've been posting tons of short AI takes on Threads. So
 
 **Gemini Supports Skills Now**
 > Now Gemini supports Skills too. But given Gemini's track record, I'm staying on the sidelines.
+
+**The AI Adoption Gap**
+> Showed a few friends Claude Code's non-coding applications — office work stuff — before the holidays. Every one of them was blown away. So I sent them my referral links for a free one-week Pro trial. I only had 3 passes and was worried they'd get snatched up instantly. Turns out I worried for nothing — all 3 are still unused. The inertia of old work habits is real. Most people are "if it ain't broke, don't fix it." From what I see around me, 90% of people are about 1.5 to 2 years behind tech enthusiasts when it comes to AI adoption, if not more. I don't think that gap is closing anytime soon.
+
+**Reset Day Habits**
+> A good habit for Claude Code users: when your weekly quota is about to reset within 24 hours and you're temporarily a "one-day token millionaire," switch to plan mode and do this — first, give it full computer access and have it scan all your Claude Code projects for stale and temp files that need cleaning up. Second, use claude-log CLI to read all your session transcripts from the week, find the friction points in your communication with Claude Code, then fix your Claude.md, rules, and memory using official best practices. Trust me, this will make your next week way smoother.
