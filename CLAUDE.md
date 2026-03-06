@@ -1,3 +1,6 @@
+@~/.claude-lang-rules/typescript/patterns.md
+
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -73,10 +76,7 @@ GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. 
 
 ## API Key Management
 
-- **Gemini API Key:** Required for content classification scripts (`scripts/classify_posts.py`). Key is stored in `.env` file (gitignored).
-- **Cross-project key access:** When needed, read API keys from other projects' `.env` files (e.g., `../crawler/.env`, `../gmat-simulator-1/.env`).
-- **Never hardcode API keys** in scripts or config files.
-- **Always verify `.gitignore`** includes sensitive files before running classification scripts.
+API keys 存於 `.env`（gitignored）。跨專案時從其他專案 `.env` 讀取。遵循全域安全規則。
 
 ## Bilingual Architecture
 
