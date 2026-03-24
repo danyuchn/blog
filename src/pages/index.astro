@@ -23,61 +23,44 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 <Layout>
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
-    <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl" data-lang="zh">
+    <section id="hero" class="border-b border-border/50 pt-16 pb-12">
+      <h1
+        class="font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl"
+        data-lang="zh"
+      >
         嗨，我是 Dustin。
       </h1>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl" data-lang="en">
+      <h1
+        class="font-display text-4xl font-bold italic leading-tight tracking-tight text-foreground sm:text-5xl"
+        data-lang="en"
+      >
         Hi, I'm Dustin.
       </h1>
-      <a
-        target="_blank"
-        href={withBase("/rss.xml")}
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
 
-      <p data-lang="zh">
-        教了 12 年 GMAT，現在人在曼谷，用 AI 做教育產品。這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和 Gemini 把東西做出來的過程，還有途中踩過的坑。
-      </p>
-      <p class="mt-2" data-lang="zh">
-        主要聊：AI 工作流、vibe coding 的實戰紀錄，以及從零打造
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://dustingmat.com"
+      <div class="mt-6 max-w-prose">
+        <p class="text-base leading-relaxed text-foreground/70" data-lang="zh">
+          教了 12 年 GMAT，現在人在曼谷，用 AI 做教育產品。這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和 Gemini 把東西做出來的過程，還有途中踩過的坑。
+        </p>
+        <p class="mt-2 text-base leading-relaxed text-foreground/70" data-lang="en">
+          12 years teaching GMAT. Now based in Bangkok, building education products with AI. This blog is about how someone with zero engineering background actually ships things — and all the pitfalls along the way.
+        </p>
+      </div>
+
+      <div class="mt-6 flex items-center gap-4">
+        {
+          SOCIALS.length > 0 && <Socials />
+        }
+        <a
+          target="_blank"
+          href={withBase("/rss.xml")}
+          class="text-foreground/40 hover:text-accent transition-colors"
+          aria-label="RSS Feed"
+          title="RSS Feed"
         >
-          DustinGMAT
-        </LinkButton> 的經驗。
-      </p>
-      <p data-lang="en">
-        12 years teaching GMAT. Now based in Bangkok, building education products with AI. This blog is about how someone with zero engineering background actually ships things using Claude Code and Gemini — and all the pitfalls along the way.
-      </p>
-      <p class="mt-2" data-lang="en">
-        Topics: AI workflows, vibe coding in practice, and building
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://dustingmat.com"
-        >
-          DustinGMAT
-        </LinkButton> from scratch.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+          <IconRss width={16} height={16} class="stroke-current stroke-2" />
+          <span class="sr-only">RSS Feed</span>
+        </a>
+      </div>
     </section>
 
     {
@@ -85,14 +68,16 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <section
           id="featured"
           class:list={[
-            "pt-12 pb-6",
-            { "border-b border-border": recentPosts.length > 0 },
+            "pt-10 pb-4",
+            { "border-b border-border/50": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+          <p class="mb-2 font-display text-sm font-semibold uppercase tracking-widest text-accent">
+            精選
+          </p>
           <ul>
             {featuredPosts.map(data => (
-              <Card variant="h3" {...data} />
+              <Card variant="h2" {...data} />
             ))}
           </ul>
         </section>
@@ -101,8 +86,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+        <section id="recent-posts" class="pt-10 pb-4">
+          <p class="mb-2 font-display text-sm font-semibold uppercase tracking-widest text-foreground/50">
+            最近在寫
+          </p>
           <ul>
             {recentPosts.map(data => <Card variant="h3" {...data} />)}
           </ul>
@@ -110,10 +97,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       )
     }
 
-    <div class="my-8 text-center">
-      <LinkButton href={withBase("/posts/")}>
-        All Posts
-        <IconArrowRight class="inline-block rtl:-rotate-180" />
+    <div class="py-8">
+      <LinkButton
+        href={withBase("/posts/")}
+        class="text-sm text-foreground/50 hover:text-accent transition-colors"
+      >
+        所有文章 →
       </LinkButton>
     </div>
   </main>

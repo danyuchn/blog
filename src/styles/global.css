@@ -5,28 +5,33 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --background: #faf7f2;
+  --foreground: #1a1714;
+  --accent: #7c4f3a;
+  --muted: #ede9e3;
+  --border: #d9d4cb;
+  --accent-surface: color-mix(in srgb, #7c4f3a 10%, #faf7f2);
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60;
-  --border: #ab4b08;
+  --background: #272320;
+  --foreground: #f7f2eb;
+  --accent: #d4845a;
+  --muted: #36302a;
+  --border: #4a4138;
+  --accent-surface: color-mix(in srgb, #d4845a 16%, #272320);
 }
 
 @theme inline {
-  --font-app: var(--font-google-sans-code);
+  --font-display: var(--font-playfair), "STSong", "Songti SC", Georgia, serif;
+  --font-app: var(--font-lora), "STSong", "Songti SC", Georgia, serif;
+  --font-mono: var(--font-google-sans-code), ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-accent-surface: var(--accent-surface);
 }
 
 @layer base {
