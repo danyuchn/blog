@@ -24,8 +24,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl" data-lang="zh">
         嗨，我是 Dustin。
+      </h1>
+      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl" data-lang="en">
+        Hi, I'm Dustin.
       </h1>
       <a
         target="_blank"
@@ -42,10 +45,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
+      <p data-lang="zh">
         教了 12 年 GMAT，現在人在曼谷，用 AI 做教育產品。這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和 Gemini 把東西做出來的過程，還有途中踩過的坑。
       </p>
-      <p class="mt-2">
+      <p class="mt-2" data-lang="zh">
         主要聊：AI 工作流、vibe coding 的實戰紀錄，以及從零打造
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
@@ -53,6 +56,18 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         >
           DustinGMAT
         </LinkButton> 的經驗。
+      </p>
+      <p data-lang="en">
+        12 years teaching GMAT. Now based in Bangkok, building education products with AI. This blog is about how someone with zero engineering background actually ships things using Claude Code and Gemini — and all the pitfalls along the way.
+      </p>
+      <p class="mt-2" data-lang="en">
+        Topics: AI workflows, vibe coding in practice, and building
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          href="https://dustingmat.com"
+        >
+          DustinGMAT
+        </LinkButton> from scratch.
       </p>
       {
         // only display if at least one social link is enabled

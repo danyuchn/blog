@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T06:00:00Z
 title: "The Truth and BS of Vibe Coding: Observations from a 10-Year Teaching Veteran"
 slug: en/vibe-coding-truth
-featured: false
+featured: true
 draft: false
 tags:
   - vibe-coding
