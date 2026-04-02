@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-03-24T04:00:00Z
+modDatetime: 2026-04-01T04:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -86,9 +86,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **AI 採用落差**
 > 年前展示給幾個朋友看 Claude Code 的花式應用（非編程而是辦公室工作），無一不感到驚艷。然後我順便把手上的免費體驗一週 Pro 付費會員的推廣連結發給他們。本來還想說只有 3 張 pass，會不會太少一下就被搶光了。後來發現是我多慮了——發出去的 3 張到現在都還沒被用過。舊工作習慣的慣性真的很大，大多數人都是「沒壞就不用修」。根據周遭觀察，90% 的人對 AI 的應用都落後於技術狂熱者大約 1.5 到 2 年，甚至更長。這個差距我認為未來很難被拉近。
 
-**額度重置日的好習慣**
-> 請有在用 Claude Code 的朋友養成一個好習慣。每週額度即將在一天內重置，你暫時變身「單日 token 富翁」的時候，趁這時開計畫模式：一、開給他全電腦權限，掃描所有使用 Claude Code 的專案，給出過時和暫存檔案的歸檔清理建議。二、用 claude-log CLI 讀取本週所有 session 的對話紀錄，找到跟 Claude Code 溝通不順的地方，然後用官方文檔的最佳實踐修正 Claude.md、rules、memory。相信我，這會讓你接下來一週過得很愉快。
-
 ---
 
 ## 2026 年 3 月
@@ -101,9 +98,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **Claude Code vs 網頁版 AI 的差異**
 > 正在構思如何讓只用過網頁版 ChatGPT、Gemini 的朋友們，快速理解 Claude Code 跟他們過去用的有什麼不同。網頁版一次只能做一件事，線性聊下來。但 Claude Code 可以 call 工讀生（sub-agent）同時處理好幾個任務——我曾經一次 call 過 20 個。如果這些任務之間需要互相交換情報，還可以組成 agent team 讓工讀生主動互相開會、協調任務跟審查。
-
-**n8n vs Claude Code**
-> 我是 n8n 總是學不好、Claude Code 陣痛一小時後馬上上手、最終用它處理 95% 工作的那種人。對我來說 n8n 堆積木，不如我直接把工作流講出來。講得不清楚也沒關係，Claude 會問我問題。
 
 **模型刷分不如刷對齊**
 > 大部分的模型都在專注刷分。但有幾個面向我覺得應該更重視：人類的意圖對齊——講少少的話就精準地知道我要做什麼；對約束的遵循——不能叫你不要做你還做；真正有效的上下文長度。
@@ -118,9 +112,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **AI detox**
 > 以後應該要把週四中午後到週五早上十點前訂成休假日，徹底讓自己 detox from AI。
-
-**Obsidian 工作日誌**
-> 平常都會 `/obsidian log` 紀錄每個對話做了什麼。每週重置時把 daily log 整理成 weekly report，更新相關文檔內容，然後再用 claude-log CLI 讀對話訊息找出溝通不順的地方。
 
 **大量資料處理的習慣**
 > 大量資料處理我的習慣是：先用 Opus 討論未來需求、取樣跟規劃 schema。接下來按照 schema，用 SiliconFlow 或 OpenRouter 上的便宜模型，API 加並行批量處理。
@@ -163,9 +154,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Claude Cowork Remote Control**
 > Claude Cowork 現在也有自己的 remote control 了！電腦上開著 Claude Desktop（Cowork 模式），手機掃 QR code 配對，就能遠端操控。
 
-**Obsidian + Claude Code 結合工作日誌**
-> `/obsidian` 的 log 功能非常好用，可以把你在一個對話視窗中完整的工作打上時間標籤記錄到日誌裡。我都會每個禮拜把日誌彙整成週報，就可以清楚知道過去做了哪些事情。
-
 **Claude 大當機**
 > Claude 大當機，瞬間被打回原形，度日如年。想起那個還在手動複製貼上 AI 問答視窗內容的日子，不過也就一兩年前。想起那個沒有 AI 純靠打字的日子，不過也就三四年前。我不確定我到底是進化了，還是退化了。
 
@@ -187,16 +175,8 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Prompt 不重要，指揮才重要**
 > 比起自己生複雜的 prompt，重要的是你知道如何指揮它去找到好的 prompt（Skill）。我自己的 prompt 都下得很隨便，用語音指令，甚至還有錯字。但我知道什麼時候要他去上網找最佳實踐。
 
-**Obsidian 阻塞與非阻塞待辦**
-> 把人生都放到 Obsidian，跟 Claude Code 接入的好處是：他可以隨時提醒我哪些是阻塞待辦（需要別的東西完成或別人配合才能做的），哪些是非阻塞待辦（現在馬上就能辦到的），然後在我跟 Claude Code 工作的間隙自動處理非阻塞的項目。
-
-![Obsidian + Claude Code](/blog/images/micro-notes/obsidian-claude.jpg)
-
 **Vibe Coding 面試的真相**
 > 先不論那個 CEO 的發言真假，但一個正常的 CEO 如果要這樣找人，下一步就是在面試中詳細問：你這樣設計的邏輯是什麼？你的客群調查？用戶需求？成本效益分析？怎麼做資安防護？怎麼做隱私資料治理跟風險測試？——這些才是真正的門檻。
-
-**Claude Code 可以取代 n8n**
-> 事實上我覺得 Claude Code 根本可以直接取代 n8n。n8n 才是過渡產品。Claude Code + Notion 就好，n8n 的所有事情用自然語言產出腳本都能做到，沒有必要積木疊疊樂。
 
 **Terminal 才是最輕量的**
 > 純 terminal 裡開 Claude Code 還有另一個好處：對系統資源的負載極低。VSCode 這類的 IDE 吃的系統資源是它的好幾倍。
@@ -225,9 +205,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **CLI 的速度**
 > 終端機執行的速度快到不行，跟包在 GUI 或 IDE 裡的速度差很多。終端機才算是真的住在電腦底層。
 
-**Obsidian 勝過 Notion**
-> 我喜歡 Obsidian 勝過 Notion 的原因：資料都在本地 md 格式。哪天 Obsidian 消失了，資料還是會在。
-
 **Agent browser 推薦**
 > Chrome MCP 又耗 token 又容易斷線，只能說是最後的備案。如果不需要持久登入狀態的話，Vercel 出的 agent browser skill 比它好用得多。爬蟲推薦：`/agent-browser` 跟 `/crawl4ai`。
 
@@ -236,15 +213,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **細心決定 Agent 的高度**
 > 你的細心程度跟邏輯，決定了 agent 能有的高度。當然模型終究會進步，但我害怕你成為豬隊友拖累了模型。
-
-**龍蝦的真相**
-> 很多人裝了龍蝦但是實際上根本沒有那麼多需求，就是為裝而裝。其實根本不用養蝦子，Claude Code 也完全可以做到全自動化。關鍵在主理人的腦子夠不夠清楚。
-
-**與其訂十幾個 AI，不如訂一個 Claude Max**
-> fomofly 能做的，Claude Code 基本上掛一個 skill「youtube-clipper」就能完成，其他的更不用講。與其訂十幾個 AI 工具，不如訂一個 Claude Max。
-
-**Augment 是 Claude 的免費廣告**
-> 從 Augment 跳到 Claude Code 的我留：謝謝 Augment 的免費 Claude Opus 跟免費 Gemini Pro 並列，才讓我知道原來模型也是有分聽得懂跟聯不懂人話的。所以 Augment 的出現，其實是為 Claude 打廣告。
 
 **NeurIPS 被 AI 洗版**
 > NeurIPS 都被 AI 洗到幾萬篇投稿了。博士用 AI 生成內容也不是很意外。
@@ -260,9 +228,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **Claude 最厲害的是 Agent，不是提示詞**
 > Claude 最厲害的絕對不是提示詞而已，而是他們的 agent，可以讓一個提示詞寫得很爛的人也能完成需求。所以用 Claude 的重點不是 prompt 下的好不好，而是你給 agent 的文檔庫、建立的規則檔跟個人的知識庫是否完整。
-
-**從溫室走出來就回不去了**
-> 很難找到從 Code 走回 Cowork 的人。只有從溫室走出來的，沒有聽過走回溫室的。
 
 **Claude 當機的求生策略**
 > Claude 當機的時候：睡好幾頓覺，深度打掃家裡，恢復運動習慣。同時每小時刷 Claude status 網頁。
@@ -285,8 +250,21 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **iQOS 藍牙逆向工程**
 > 我真的是服了 Claude Code。前幾天在 Reddit 看到有人分享 Claude Code 是如何幫他解掉惡意勒索軟體、救回資料。今天我突發奇想，把 iQOS 接進電腦，問他能不能讀到資料。結果他真的自動幫我上網找資訊，找到有人逆向工程開發的開源專案，閱讀裡面的邏輯，然後自己寫一個腳本，硬是透過藍牙把 iQOS 的資料讀出來了。
 
-**Claude Code 唯一推薦**
-> Claude Code 唯一推薦。初期陣痛，過了之後狠甩其他 AI 工具一萬條街。
-
 **Hook 清理殭屍進程**
 > 我的 hook 設計：每當偵測到我主動打 `/clear`、`git commit and push`、或 `/obsidian log` 寫日誌的時候（代表這個 session 的工作結束了，在做 checkpoint），就去清掉殘留的殭屍進程。
+
+**Harness Engineering 路漫漫**
+> 看來 Harness engineering 還有很長的路要走。
+
+**模型的極限**
+> 我認為模型的極限應該是如何從無狀態轉為有狀態，還有就是如何在使用的過程中實時更新權重。這些才是真實人類跟 AI 最大不一樣的地方。
+
+---
+
+## 2026 年 4 月
+
+**Qwen 3.6 Plus**
+> 在經歷核心人員出走的風波後，阿里巴巴在 OpenRouter 上發布了下一代模型 Qwen 3.6 Plus 的預覽版。官方表示強化了編程、Agentic、前端開發、複雜問題解決能力。不過目前的 preview 版會收集 prompt 跟 completion output，生產環境要謹慎。
+
+**Token 珍惜論**
+> 其實人類對 token 一直都很不珍惜。不只是 LLM 的 token，自己的生物 token 也是。每次刷 Threads 看到網友互嘴，故有此感。

@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-03-24T04:00:00Z
+modDatetime: 2026-04-01T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -86,9 +86,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **The AI Adoption Gap**
 > Showed a few friends Claude Code's non-coding applications — office work stuff — before the holidays. Every one of them was blown away. So I sent them my referral links for a free one-week Pro trial. I only had 3 passes and was worried they'd get snatched up instantly. Turns out I worried for nothing — all 3 are still unused. The inertia of old work habits is real. Most people are "if it ain't broke, don't fix it." From what I see around me, 90% of people are about 1.5 to 2 years behind tech enthusiasts when it comes to AI adoption, if not more. I don't think that gap is closing anytime soon.
 
-**Reset Day Habits**
-> A good habit for Claude Code users: when your weekly quota is about to reset within 24 hours and you're temporarily a "one-day token millionaire," switch to plan mode and do this — first, give it full computer access and have it scan all your Claude Code projects for stale and temp files that need cleaning up. Second, use claude-log CLI to read all your session transcripts from the week, find the friction points in your communication with Claude Code, then fix your Claude.md, rules, and memory using official best practices. Trust me, this will make your next week way smoother.
-
 ---
 
 ## March 2026
@@ -101,9 +98,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Claude Code vs Web-Based AI**
 > Trying to figure out how to quickly explain to people who've only used ChatGPT and Gemini in a browser what makes Claude Code different. Web chat is one thing at a time, linear conversation. But Claude Code can call interns (sub-agents) to handle multiple tasks simultaneously — I've called 20 at once. If those tasks need to share intel, they can form an agent team where the interns proactively hold meetings, coordinate tasks, and review each other's work.
-
-**n8n vs Claude Code**
-> I'm the kind of person who could never get the hang of n8n but picked up Claude Code after one painful hour and now uses it for 95% of my work. For me, stacking n8n blocks is worse than just describing my workflow out loud. Even if I'm not clear, Claude asks me questions.
 
 **Benchmark Chasing vs Alignment**
 > Most models are focused on chasing benchmark scores. But there are aspects I think deserve more attention: human intent alignment — understanding what I want from minimal input; constraint compliance — when I say don't do something, don't do it; and actually useful context length.
@@ -118,9 +112,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **AI Detox**
 > I should start blocking Thursday afternoon through Friday 10 AM as a rest day. Complete detox from AI.
-
-**Obsidian Work Journaling**
-> I routinely use `/obsidian log` to record what I did in each conversation. At weekly reset time, I compile daily logs into a weekly report, update relevant docs, then use claude-log CLI to read conversation transcripts and find communication friction points.
 
 **Bulk Data Processing Habit**
 > For bulk data processing, my habit is: discuss future requirements with Opus first, sample data, plan the schema. Then follow the schema using cheap models on SiliconFlow or OpenRouter, API calls plus parallel processing.
@@ -163,9 +154,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Claude Cowork Remote Control**
 > Claude Cowork now has its own remote control! Open Claude Desktop in Cowork mode on your computer, scan a QR code with your phone, and you can control it remotely.
 
-**Obsidian + Claude Code Work Logs**
-> The `/obsidian` log feature is incredibly useful — it timestamps everything you did in a conversation window and records it to your journal. I compile these into weekly reports so I always know exactly what happened last week.
-
 **Claude Outage**
 > Claude went down hard. Instantly knocked back to being human. Time crawled. Remembering the days of manually copy-pasting AI chat window content — that was only a year or two ago. Remembering the days of no AI, pure typing — that was only three or four years ago. I'm not sure if I've evolved or devolved.
 
@@ -187,16 +175,8 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Prompting Doesn't Matter, Directing Does**
 > More important than crafting complex prompts yourself is knowing how to direct AI to find good prompts (Skills). My own prompts are super casual — voice commands, typos and all. But I know when to tell it to search for best practices online.
 
-**Obsidian Blocked vs Unblocked Todos**
-> Putting my whole life in Obsidian and connecting it to Claude Code means it can always remind me which todos are blocked (waiting on something else or someone else) and which are unblocked (can be done right now), then automatically handle unblocked items during gaps in our work sessions.
-
-![Obsidian + Claude Code](/blog/images/micro-notes/obsidian-claude.jpg)
-
 **The Truth About Vibe Coding Interviews**
 > Regardless of whether that CEO's claim was real, any reasonable CEO hiring this way would follow up in interviews with: What's the logic behind your design? Your target audience research? User needs? Cost-benefit analysis? Security measures? Data privacy governance and risk testing? Those are the real barriers.
-
-**Claude Code Can Replace n8n**
-> I genuinely think Claude Code could straight-up replace n8n. n8n is the transitional product. Claude Code + Notion is all you need — everything n8n does can be done with natural language scripts. No need for block-stacking.
 
 **Terminal Is the Lightest**
 > Running Claude Code in a pure terminal has another advantage: minimal system resource usage. VSCode and similar IDEs consume several times more resources.
@@ -225,9 +205,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **CLI Speed**
 > Terminal execution speed is insanely fast — a completely different league from being wrapped in a GUI or IDE. Terminal is what it means to truly live at the OS level.
 
-**Obsidian Over Notion**
-> Why I prefer Obsidian over Notion: all data is local in md format. If Obsidian disappears tomorrow, your data is still there.
-
 **Agent Browser Recommendation**
 > Chrome MCP burns tokens and drops connections constantly — it's the last resort. If you don't need persistent login state, Vercel's agent browser skill is much better. For crawling: `/agent-browser` and `/crawl4ai`.
 
@@ -236,15 +213,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Your Attention Determines the Agent's Ceiling**
 > Your attention to detail and logic determine how high your agent can reach. Sure, models will keep improving, but I worry about you becoming the weak link that drags the model down.
-
-**The Lobster Truth**
-> A lot of people set up lobster automations but don't actually have enough demand to justify them — they're automating for the sake of automating. You don't actually need lobsters. Claude Code can achieve full automation on its own. The bottleneck is whether the operator's thinking is clear enough.
-
-**One Claude Max Beats Ten AI Subscriptions**
-> What fomofly can do, Claude Code with a single "youtube-clipper" skill can handle. No need to mention anything else. Instead of subscribing to a dozen AI tools, just subscribe to Claude Max.
-
-**Augment Was Free Advertising for Claude**
-> Jumping from Augment to Claude Code, I'll say this: thanks to Augment for offering free Claude Opus and free Gemini Pro side by side. That's how I learned that models actually vary in whether they understand human language or not. So Augment's existence was basically free advertising for Claude.
 
 **NeurIPS Flooded by AI**
 > NeurIPS is getting washed with tens of thousands of AI-generated submissions. PhD students using AI to generate content isn't even surprising anymore.
@@ -260,9 +228,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Claude's Strength Is Agents, Not Prompts**
 > Claude's greatest strength isn't prompting at all — it's their agent system, which lets someone with terrible prompts still accomplish their goals. So the key to using Claude isn't how well you write prompts, but whether your document library, rule files, and personal knowledge base are complete.
-
-**Once You Leave the Greenhouse, You Don't Go Back**
-> It's nearly impossible to find someone who went from Code back to Cowork. People only leave the greenhouse — nobody goes back in.
 
 **Surviving a Claude Outage**
 > When Claude goes down: sleep several naps, deep-clean the house, resume exercise habits. Also refresh the Claude status page every hour.
@@ -285,8 +250,21 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **iQOS Bluetooth Reverse Engineering**
 > I'm genuinely impressed by Claude Code. I saw someone on Reddit share how Claude Code helped them defeat ransomware and recover data. On a whim, I plugged my iQOS into the computer and asked if it could read the data. It actually went online to research, found an open-source reverse engineering project, read through the logic, then wrote its own script to pull data from the iQOS via Bluetooth.
 
-**Claude Code: The Only Recommendation**
-> Claude Code is the only recommendation. The initial pain period is real, but once you're past it, everything else is leagues behind.
-
 **Hook for Cleaning Up Zombie Processes**
 > My hook design: whenever it detects me running `/clear`, `git commit and push`, or `/obsidian log` (meaning the session's work is done and I'm checkpointing), it automatically cleans up lingering zombie processes.
+
+**Harness Engineering Has a Long Road Ahead**
+> Looks like harness engineering still has a very long way to go.
+
+**The Limits of Models**
+> I think the real frontier for models is how to go from stateless to stateful, and how to update weights in real time during usage. Those are the biggest differences between real humans and AI.
+
+---
+
+## April 2026
+
+**Qwen 3.6 Plus**
+> After the core team exodus drama, Alibaba released a preview of their next-gen model Qwen 3.6 Plus on OpenRouter. They claim enhanced coding, agentic capability, frontend development, and complex problem solving. Note: the preview version collects prompts and completion output — be careful in production.
+
+**The Token Conservation Principle**
+> Humans have never been good at conserving tokens. Not just LLM tokens — our own biological tokens too. Every time I scroll Threads and see people arguing, I'm reminded of this.
