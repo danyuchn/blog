@@ -268,3 +268,18 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **Token 珍惜論**
 > 其實人類對 token 一直都很不珍惜。不只是 LLM 的 token，自己的生物 token 也是。每次刷 Threads 看到網友互嘴，故有此感。
+
+**2.1.90 終於修好 resume cache miss**
+> 30 分鐘前，Claude Code 推送了 2.1.90 更新。這次終於把 resume 導致 cache miss 的問題修好了。之前每次 resume 一個長對話，第一條訊息就會重建整包快取，等於付一次入場費才能繼續工作。一天 resume 五六次就飽了。修掉之後體感立刻回來。
+
+**how-claude-code-works 這個站點**
+> 最近減少看 Threads 的時間，開始認真讀這個網站：<https://windy3f3f3f3f.github.io/how-claude-code-works/>。系統性地吸收知識還是比碎片化好太多。
+
+**泰國的 Claude Code 社群**
+> 因為住在泰國且略懂泰語，YouTube 演算法偶爾會推泰語的 AI 影片給我。目前 Claude Code 在泰國很少有社群分享，流量非常集中，每部影片幾萬人看。講解視角也跟中文英文圈略有不同。另外無意間發現曼谷有 Claude Code meet up。下次要去參加，順便練習泰語。
+
+**就算 AI 加速，也不應做白工**
+> 留給自己看：就算 AI 大大加速了工作的速度，也不應該做白工。速度的前提是方向對。
+
+**Mythos Preview 244 頁系統卡**
+> 官方發了下一代 Claude Mythos Preview 的系統卡，244 頁。我把覺得是重點的地方另外 highlight 起來供大家參考。原檔在 <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>。讀系統卡真的是比讀 marketing blog 有用多了，該有的招數跟不該有的陷阱都在裡面。

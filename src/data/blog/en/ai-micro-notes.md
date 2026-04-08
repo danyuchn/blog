@@ -268,3 +268,18 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **The Token Conservation Principle**
 > Humans have never been good at conserving tokens. Not just LLM tokens — our own biological tokens too. Every time I scroll Threads and see people arguing, I'm reminded of this.
+
+**2.1.90 Finally Fixes the Resume Cache Miss**
+> Claude Code pushed 2.1.90 thirty minutes ago. They finally fixed the resume-causes-cache-miss bug. Before this, every time you resumed a long conversation, the very first message rebuilt the entire cache — basically a cover charge to keep working. Five or six resumes a day and you were broke. Feels instantly better now.
+
+**how-claude-code-works Is Worth Your Time**
+> I've been scrolling Threads less and reading this site more: <https://windy3f3f3f3f.github.io/how-claude-code-works/>. Systematic learning beats scattered posts by a mile.
+
+**The Claude Code Scene in Thailand**
+> Living in Thailand and speaking some Thai, YouTube's algorithm occasionally pushes Thai AI videos at me. There's almost no Claude Code community presence in Thailand yet, so traffic is highly concentrated — every video has tens of thousands of views. The perspective also differs slightly from the Chinese/English community. Also, I accidentally discovered there's a Claude Code meetup in Bangkok. Going next time, bonus Thai practice.
+
+**AI Speeds Up Work, Doesn't Replace the Direction**
+> Note to self: just because AI massively accelerated the work doesn't mean you should be doing busywork. Speed only matters if the direction is right.
+
+**Mythos Preview 244-Page System Card**
+> Anthropic released the system card for the next-gen Claude Mythos Preview — 244 pages. I highlighted the parts I thought were important. Original PDF: <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>. Reading system cards is far more useful than reading marketing blogs. The real techniques and the real pitfalls are all in there.
