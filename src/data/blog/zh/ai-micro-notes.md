@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-04-01T04:00:00Z
+modDatetime: 2026-04-16T02:30:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -25,12 +25,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Claude Extension 配 Claude Code**
 > 我最常用的：Claude Extension 搭配 Claude Code，效率高到飛起來。
 
-**Extra Usage 的痛**
-> 我兩天 extra usage 就花了 20 USD。後來加購額度又燒了 20，乾脆直接升級。
-
-**Rate Limit 落寞**
-> 現在已經對 AI 有依賴了。Rate limit 到了之後人非常落寞。
-
 **20x 的猶豫**
 > 我怕 20x 我跟不上。AI 跑的時候我也不會閒著，會思考怎麼驗收、怎麼給明確指令、嘗試理解它改動的邏輯。
 
@@ -45,9 +39,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **越來越 Nerdy**
 > 還有很多 fork branch merge push fallback prop hook……感覺自己跟 AI 講話越來越 nerdy 了。
-
-**CLI 才是完全體**
-> 任何的 IDE 只是綁住 Claude 手腳，CLI 裡的 Claude 才是完全解放了。
 
 **Gemini 3 的脾氣**
 > Gemini 3.0 Pro 很有自己的小脾氣。打開思維鏈看就會發現內心戲有夠多，不斷自我懷疑、搞砸、自責、重來又搞砸一次。
@@ -83,32 +74,9 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Gemini 也支援 Skill 了**
 > 現在 Gemini 也支援 Skill 了。不過以 Gemini 的尿性，我保持觀望。
 
-**AI 採用落差**
-> 年前展示給幾個朋友看 Claude Code 的花式應用（非編程而是辦公室工作），無一不感到驚艷。然後我順便把手上的免費體驗一週 Pro 付費會員的推廣連結發給他們。本來還想說只有 3 張 pass，會不會太少一下就被搶光了。後來發現是我多慮了——發出去的 3 張到現在都還沒被用過。舊工作習慣的慣性真的很大，大多數人都是「沒壞就不用修」。根據周遭觀察，90% 的人對 AI 的應用都落後於技術狂熱者大約 1.5 到 2 年，甚至更長。這個差距我認為未來很難被拉近。
-
 ---
 
 ## 2026 年 3 月
-
-**Usage 重置天降大禮**
-> 很多人發現 Claude Code 天降大禮：usage 被重置。Anthropic 員工出來解釋了——前一個版本的更新有快取的 bug，導致 usage 被異常快速消耗，緊急在最新版本 2.1.62 修復，修完之後順便幫大家重置了用量。他們內部維護 Claude Code 的人力很少，Boris 在訪談中說過這本來就是他個人的 side project，爆紅之後基本上也是用極致敏捷開發的理念在做。
-
-**同溫層外有多少人聽過 Claude Code？**
-> 你覺得 Claude Code 在同溫層外有多少人聽過？
-
-**Claude Code vs 網頁版 AI 的差異**
-> 正在構思如何讓只用過網頁版 ChatGPT、Gemini 的朋友們，快速理解 Claude Code 跟他們過去用的有什麼不同。網頁版一次只能做一件事，線性聊下來。但 Claude Code 可以 call 工讀生（sub-agent）同時處理好幾個任務——我曾經一次 call 過 20 個。如果這些任務之間需要互相交換情報，還可以組成 agent team 讓工讀生主動互相開會、協調任務跟審查。
-
-**模型刷分不如刷對齊**
-> 大部分的模型都在專注刷分。但有幾個面向我覺得應該更重視：人類的意圖對齊——講少少的話就精準地知道我要做什麼；對約束的遵循——不能叫你不要做你還做；真正有效的上下文長度。
-
-**期待語音輸入內建**
-> 期待語音輸入內建！
-
-**Ghostty 終端機**
-> Claude 內部工作團隊推薦的 Ghostty 終端機工具，真的很棒。從 iTerm 跳過來完全不後悔。Claude Code 之父 Boris 的原話說：「雖然我自己在用 iTerm 2，但是整個 Anthropic 團隊推薦 Ghostty。」
-
-![Ghostty 終端機](/blog/images/micro-notes/ghostty.jpg)
 
 **AI detox**
 > 以後應該要把週四中午後到週五早上十點前訂成休假日，徹底讓自己 detox from AI。
@@ -131,25 +99,14 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ![Claude 幽默對話](/blog/images/micro-notes/claude-humor.jpg)
 
-**Token 訂閱計價**
-> 有神人破解 Claude 的訂閱 token 計算。重要結論：只有 API 才會對 cache reads 計價，訂閱方案的 cache reads 不計費。我也做了一個類似的工具，同時計算到下次 weekly quota reset 前的時間比例跟剩餘 quota 比例作比較，一旦 over pace 就提醒自己放慢。
-
 **案子滿就沒時間發文**
 > 最近突然悟出了一個道理：當案子滿的時候，其實是沒什麼時間在 Threads 上發文做內容的，因為都在跟 Claude Code 講話，光這樣就飽了。
 
 **讀 Anthropic 官方文件**
 > Anthropic 官網的 research 欄位，建議每出一篇都要讀一下。Claude Code 的 official documentation 也建議時不時閱讀。他們家寫的東西真的詳細又容易理解。
 
-**庫存管理系統的靈魂拷問**
-> 有人問我是不是可以自己寫一個庫存管理系統。我沒回答，先問他幾個問題：這個系統是自己用還是給別人用？資料會怕送給 AI 嗎？現在是用什麼管的？——搞清楚這些之後，答案往往就出來了。AI 導入要 top down 才有機會，bottom up 不太可能。基層沒動力優化工作流程，大多只是朝九晚五被動完成既定事務。
-
 **追蹤 Anthropic 員工**
 > 除了 Anthropic 自己的官網部落格文章外，我也喜歡去追蹤 Anthropic 員工的社群媒體帳號。比如 Claude Code 的主要維護者 Thariq，他的文章都非常有價值。
-
-**學習路徑是障礙驅動的**
-> 我感覺自己學習 Claude Code 的過程是自然而然的，每一個學習都有一個障礙觸發點，真的遇到了困難需要用，才跟著學會。比如：對話太長上下文管理沒做好導致模型遺忘，就學會了用文檔紀錄管理。
-
-![Claude Code 學習路徑](/blog/images/micro-notes/learning-path.jpg)
 
 **Claude Cowork Remote Control**
 > Claude Cowork 現在也有自己的 remote control 了！電腦上開著 Claude Desktop（Cowork 模式），手機掃 QR code 配對，就能遠端操控。
@@ -157,62 +114,11 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Claude 大當機**
 > Claude 大當機，瞬間被打回原形，度日如年。想起那個還在手動複製貼上 AI 問答視窗內容的日子，不過也就一兩年前。想起那個沒有 AI 純靠打字的日子，不過也就三四年前。我不確定我到底是進化了，還是退化了。
 
-**Rate Limit Statusline**
-> 最新版的 Claude Code 2.1.80，直接把 rate limit 欄位加到 statusline 的可選設定了，這樣以後就不用一直打 `/usage` 看了，很棒！
-
-![Rate Limit Statusline](/blog/images/micro-notes/rate-limit-statusline.jpg)
-
-**5 分鐘重設額度的焦慮**
-> 當你還有 5 分鐘就重設週額度但是還有 10% 沒用完：
-
-![額度重設倒數](/blog/images/micro-notes/quota-reset-meme.jpg)
-
-**雙倍用量的餓鬼**
-> 好好笑，自從雙倍用量開始，我就瘋狂燒 token，根本跟被放進 buffet 的餓鬼一樣。有沒有人跟我一樣，一天燒 200+ 的？
-
-![瘋狂燒 token](/blog/images/micro-notes/token-burning.jpg)
-
-**Prompt 不重要，指揮才重要**
-> 比起自己生複雜的 prompt，重要的是你知道如何指揮它去找到好的 prompt（Skill）。我自己的 prompt 都下得很隨便，用語音指令，甚至還有錯字。但我知道什麼時候要他去上網找最佳實踐。
-
-**Vibe Coding 面試的真相**
-> 先不論那個 CEO 的發言真假，但一個正常的 CEO 如果要這樣找人，下一步就是在面試中詳細問：你這樣設計的邏輯是什麼？你的客群調查？用戶需求？成本效益分析？怎麼做資安防護？怎麼做隱私資料治理跟風險測試？——這些才是真正的門檻。
-
-**Terminal 才是最輕量的**
-> 純 terminal 裡開 Claude Code 還有另一個好處：對系統資源的負載極低。VSCode 這類的 IDE 吃的系統資源是它的好幾倍。
-
-**多視窗工作狂**
-> Ghostty 我開 3 個分頁，每個分頁開 3-4 個視窗。不會有等待結果的時候。我一次開 5-6 個 session。
-
-**語音輸入不怕錯字**
-> 完全不用在乎打字打錯，也不用回去修改。我常常打錯字他也是知道我要什麼。最近開始頻繁用語音輸入，就算格式慘不忍睹、成篇錯字、嗯嗯啊啊口頭禪，Claude 都看得懂。
-
-**2x 額度陰謀論**
-> 我之前想過一個陰謀論：搞不好 2x 之後恢復「正常」，那個「正常」其實已經偷偷被調到比以前更低了，但是因為大家剛從狂歡中回來，所以沒人會發現。
-
-**週額度的真相**
-> 只有 5 小時額度是 4 倍量。週額度國外有不少人實測過，其實只有 2 倍。
-
-**Cowork 浪費 token**
-> 直接用 Code CLI 就好。Cowork 真的很浪費 token，Pro 是不夠燒的。Cowork 只是 Code 的溫室沙盒版本。
-
-**Recitation Error 的解法**
-> Recitation error 最嚴的是 Gemini，最鬆的是 Qwen。所以 Qwen 搭配 OpenRouter 上美國的 Provider 是最佳選擇——資料不會流到中國，因為是在美國機房部署，同時模型限制的只有政治敏感內容，對版權管得比較鬆。
-
-**Google 的老招**
-> Google 老招：大方騙你上車，然後改額度、降智、各種花式損客操作。根本跟台灣的銀行信用卡有九成像。
-
-**CLI 的速度**
-> 終端機執行的速度快到不行，跟包在 GUI 或 IDE 裡的速度差很多。終端機才算是真的住在電腦底層。
-
 **Agent browser 推薦**
 > Chrome MCP 又耗 token 又容易斷線，只能說是最後的備案。如果不需要持久登入狀態的話，Vercel 出的 agent browser skill 比它好用得多。爬蟲推薦：`/agent-browser` 跟 `/crawl4ai`。
 
 **/frontend-design 的妙用**
 > `/frontend-design` 醜死了？直接叫他幫你重新設計，給你 20 個靜態 html 範例讓你選擇。
-
-**細心決定 Agent 的高度**
-> 你的細心程度跟邏輯，決定了 agent 能有的高度。當然模型終究會進步，但我害怕你成為豬隊友拖累了模型。
 
 **NeurIPS 被 AI 洗版**
 > NeurIPS 都被 AI 洗到幾萬篇投稿了。博士用 AI 生成內容也不是很意外。
@@ -226,9 +132,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **/loop 全自動上下班**
 > 加個最新推出的 `/loop` 指令：`/loop 1d 幫我在 ERP 打卡`。恭喜你，收獲全自動上下班。
 
-**Claude 最厲害的是 Agent，不是提示詞**
-> Claude 最厲害的絕對不是提示詞而已，而是他們的 agent，可以讓一個提示詞寫得很爛的人也能完成需求。所以用 Claude 的重點不是 prompt 下的好不好，而是你給 agent 的文檔庫、建立的規則檔跟個人的知識庫是否完整。
-
 **Claude 當機的求生策略**
 > Claude 當機的時候：睡好幾頓覺，深度打掃家裡，恢復運動習慣。同時每小時刷 Claude status 網頁。
 
@@ -237,15 +140,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **OpenRouter 按量付費很划算**
 > 只要用到大量文字的地方就會用到 OpenRouter，比如會議記錄整理。不過因為很 on-demand，而且都選量大便宜的模型，所以評估之後按量付費比較划算，儲值 10 USD 可以用好久。
-
-**訂閱方案的選擇**
-> Pro 的額度本來就很少。Max 會好非常非常多，100 美的下去就夠了。我自己是先 20x 後來退回 5x，大部分用 Sonnet 小部分用 Opus。
-
-**Ghostty 自訂字體**
-> 自訂字體最爽。跟 Claude Code 說你想要改 Ghostty 的字體，請他幫你推薦中英文字體組合。改完真的很舒服。
-
-**Codex 量大管飽**
-> Codex 量大管飽，很不錯。
 
 **iQOS 藍牙逆向工程**
 > 我真的是服了 Claude Code。前幾天在 Reddit 看到有人分享 Claude Code 是如何幫他解掉惡意勒索軟體、救回資料。今天我突發奇想，把 iQOS 接進電腦，問他能不能讀到資料。結果他真的自動幫我上網找資訊，找到有人逆向工程開發的開源專案，閱讀裡面的邏輯，然後自己寫一個腳本，硬是透過藍牙把 iQOS 的資料讀出來了。
@@ -283,3 +177,24 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **Mythos Preview 244 頁系統卡**
 > 官方發了下一代 Claude Mythos Preview 的系統卡，244 頁。我把覺得是重點的地方另外 highlight 起來供大家參考。原檔在 <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>。讀系統卡真的是比讀 marketing blog 有用多了，該有的招數跟不該有的陷阱都在裡面。
+
+**Monitor Tool 登場**
+> Claude Code 推出 Monitor Tool：讓 Claude 寫一段背景監看腳本（日誌、PR 狀態、API endpoint），只有偵測到重要事件才喚醒 agent，其他時間完全不消耗 token。等於幫 agent 裝了一個守門員——別急著叫我，有事再說。
+
+**Clem 嗆 Mythos**
+> Claude Mythos「自主發現零日漏洞」的宣傳出來後，Hugging Face CEO Clem 馬上拿出實測：小型開源模型也能做到同樣的事。他們拿了 8 個模型跑 Anthropic 宣傳的漏洞，8 個都復現了，其中一個只要 $0.11/M token。中文自媒體一片吹捧，英文技術圈直接開嗆。來源：[AI Cybersecurity After Mythos: The Jagged Frontier](https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier)
+
+![Clem 的實測 tweet](/blog/images/micro-notes/clem-mythos-tweet.jpg)
+
+**2.1.100 的實用修復**
+> CC 2.1.100 有一條修復值得注意：tag 大型檔案時不再做 JSON 跳脫處理，有效降低 token 消耗。另外修掉了長 session 記憶體暴增 bug（markdown 語法反白快取造成）。這兩個 bug 之前無聲無息地吃資源。
+
+**Commands 跟 Skills 終於清楚了**
+> 今天讀官方文件才終於搞清楚：custom commands 是舊格式，已被合併進 skill 體系。兩者兼容，但 skill 多了目錄結構支援、frontmatter 控制、自動觸發。以後統一叫 skill 就對了。
+
+![官方文件的說明截圖](/blog/images/micro-notes/skills-vs-commands-docs.jpg)
+
+**Google OAuth 邪惡想法**
+> 官方 Claude App Connector 的 OAuth 幾乎是全開，但 MCP 只用到一小部分。理論上可以借用它的 credential 自己架功能更完整的 MCP——Gmail 讀發刪、Drive 讀寫刪、Calendar 讀建刪，全通。但這違反服務條款，是未授權使用。所以說邪惡。正規做法還是自己去 Cloud Console 申請，或者用 [gog CLI](https://youtu.be/Ymzp6hF8ZBc)。
+
+![Google 服務實測結果](/blog/images/micro-notes/google-oauth-connector-table.jpg)

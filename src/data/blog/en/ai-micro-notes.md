@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-04-01T04:00:00Z
+modDatetime: 2026-04-16T02:30:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -25,12 +25,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Claude Extension + Claude Code**
 > My most-used combo: Claude Extension paired with Claude Code. Productivity goes through the roof.
 
-**The Pain of Extra Usage**
-> Burned through $20 in extra usage in two days. Then bought more credits and burned another $20. Said screw it and just upgraded.
-
-**Rate Limit Sadness**
-> I'm genuinely dependent on AI now. When I hit the rate limit, I feel profoundly empty.
-
 **The Hesitation About 20x**
 > I'm worried 20x will leave me behind. When AI is running, I'm not just sitting around either — I'm thinking about how to review its output, how to give precise instructions, trying to understand the logic behind its changes.
 
@@ -45,9 +39,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Getting Nerdier**
 > There's also all the fork, branch, merge, push, fallback, prop, hook... I feel like I'm getting nerdier and nerdier talking to AI.
-
-**CLI Is the Final Form**
-> Any IDE just ties Claude's hands. Claude in the CLI is Claude fully unleashed.
 
 **Gemini 3's Temperament**
 > Gemini 3.0 Pro has quite the personality. Open the chain-of-thought and you'll find it's full of inner drama — constant self-doubt, screwing up, self-blame, starting over, and screwing up again.
@@ -83,32 +74,9 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Gemini Supports Skills Now**
 > Now Gemini supports Skills too. But given Gemini's track record, I'm staying on the sidelines.
 
-**The AI Adoption Gap**
-> Showed a few friends Claude Code's non-coding applications — office work stuff — before the holidays. Every one of them was blown away. So I sent them my referral links for a free one-week Pro trial. I only had 3 passes and was worried they'd get snatched up instantly. Turns out I worried for nothing — all 3 are still unused. The inertia of old work habits is real. Most people are "if it ain't broke, don't fix it." From what I see around me, 90% of people are about 1.5 to 2 years behind tech enthusiasts when it comes to AI adoption, if not more. I don't think that gap is closing anytime soon.
-
 ---
 
 ## March 2026
-
-**Usage Reset Gift from Heaven**
-> A lot of people discovered Claude Code's usage got reset out of nowhere. An Anthropic employee explained — a caching bug in the previous update was burning through usage abnormally fast. They emergency-fixed it in version 2.1.62 and reset everyone's usage while they were at it. The team maintaining Claude Code is tiny. Boris mentioned in an interview that it started as his personal side project, and even after blowing up they're basically running extreme agile — users file issues, they fix them.
-
-**How Many People Outside the Bubble Know Claude Code?**
-> How many people outside our tech bubble have even heard of Claude Code?
-
-**Claude Code vs Web-Based AI**
-> Trying to figure out how to quickly explain to people who've only used ChatGPT and Gemini in a browser what makes Claude Code different. Web chat is one thing at a time, linear conversation. But Claude Code can call interns (sub-agents) to handle multiple tasks simultaneously — I've called 20 at once. If those tasks need to share intel, they can form an agent team where the interns proactively hold meetings, coordinate tasks, and review each other's work.
-
-**Benchmark Chasing vs Alignment**
-> Most models are focused on chasing benchmark scores. But there are aspects I think deserve more attention: human intent alignment — understanding what I want from minimal input; constraint compliance — when I say don't do something, don't do it; and actually useful context length.
-
-**Voice Input Please**
-> Hoping for built-in voice input!
-
-**Ghostty Terminal**
-> Ghostty, the terminal tool recommended by Claude's internal team, is genuinely great. No regrets switching from iTerm. Boris (Claude Code's creator) said: "While I personally use iTerm 2, the whole Anthropic team recommends Ghostty."
-
-![Ghostty terminal](/blog/images/micro-notes/ghostty.jpg)
 
 **AI Detox**
 > I should start blocking Thursday afternoon through Friday 10 AM as a rest day. Complete detox from AI.
@@ -131,25 +99,14 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ![Claude humor](/blog/images/micro-notes/claude-humor.jpg)
 
-**Subscription Token Pricing**
-> Someone reverse-engineered Claude's subscription token calculation. Key finding: only the API charges for cache reads — subscription plans don't count cache reads against your quota. I also built a similar tool that compares time-remaining-percentage against quota-remaining-percentage, alerting me when I'm over pace.
-
 **Too Busy for Threads**
 > Recently had a realization: when projects are full, there's genuinely no time to post content on Threads. All my talking is with Claude Code, and that alone maxes me out.
 
 **Read Anthropic's Official Docs**
 > Anthropic's website research section — I recommend reading every new article they publish. Claude Code's official documentation is also worth revisiting regularly. Their writing is genuinely detailed and easy to follow.
 
-**The Inventory System Soul-Search**
-> Someone asked me if they could build their own inventory management system. I didn't answer — I asked them questions first: Is this for yourself or others? Is the data sensitive to AI? What are you using now? After sorting those out, the answer usually becomes obvious. AI adoption needs to be top-down. Bottom-up rarely works — most people just complete their assigned tasks nine-to-five and go home.
-
 **Following Anthropic Employees**
 > Beyond Anthropic's own blog, I also follow Anthropic employees on social media. Thariq, the main Claude Code maintainer, consistently publishes valuable content.
-
-**Learning Path Is Obstacle-Driven**
-> My Claude Code learning journey has been entirely natural. Every new thing I learned had an obstacle as its trigger — I only learned it when I actually hit the problem. Example: conversations getting too long with poor context management causing the model to forget things — that's when I learned to use documentation for state management.
-
-![Claude Code learning path](/blog/images/micro-notes/learning-path.jpg)
 
 **Claude Cowork Remote Control**
 > Claude Cowork now has its own remote control! Open Claude Desktop in Cowork mode on your computer, scan a QR code with your phone, and you can control it remotely.
@@ -157,44 +114,11 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Claude Outage**
 > Claude went down hard. Instantly knocked back to being human. Time crawled. Remembering the days of manually copy-pasting AI chat window content — that was only a year or two ago. Remembering the days of no AI, pure typing — that was only three or four years ago. I'm not sure if I've evolved or devolved.
 
-**Rate Limit Statusline**
-> Claude Code 2.1.80 added rate limit to the statusline options. No more typing `/usage` constantly. Nice.
+**Benchmark Chasing vs Alignment**
+> Most models are focused on chasing benchmark scores. But there are aspects I think deserve more attention: human intent alignment — understanding what I want from minimal input; constraint compliance — when I say don't do something, don't do it; and actually useful context length.
 
-![Rate limit statusline](/blog/images/micro-notes/rate-limit-statusline.jpg)
-
-**5 Minutes to Quota Reset Anxiety**
-> When you've got 5 minutes until your weekly quota resets but still have 10% left:
-
-![Quota reset countdown](/blog/images/micro-notes/quota-reset-meme.jpg)
-
-**Double Usage Hungry Ghost**
-> Since the double usage started, I've been burning through tokens like a hungry ghost let loose in a buffet. Anyone else burning 200+ a day?
-
-![Token burning frenzy](/blog/images/micro-notes/token-burning.jpg)
-
-**Prompting Doesn't Matter, Directing Does**
-> More important than crafting complex prompts yourself is knowing how to direct AI to find good prompts (Skills). My own prompts are super casual — voice commands, typos and all. But I know when to tell it to search for best practices online.
-
-**The Truth About Vibe Coding Interviews**
-> Regardless of whether that CEO's claim was real, any reasonable CEO hiring this way would follow up in interviews with: What's the logic behind your design? Your target audience research? User needs? Cost-benefit analysis? Security measures? Data privacy governance and risk testing? Those are the real barriers.
-
-**Terminal Is the Lightest**
-> Running Claude Code in a pure terminal has another advantage: minimal system resource usage. VSCode and similar IDEs consume several times more resources.
-
-**Multi-Window Power User**
-> I run Ghostty with 3 tabs, each tab with 3-4 windows. There's never any waiting. I run 5-6 sessions at once.
-
-**Voice Input, Typos and All**
-> You really don't need to worry about typos or go back to fix them. I typo constantly and Claude still knows what I mean. Lately I've been using voice input heavily — even when the format is a mess, full of typos and verbal fillers like "um" and "uh," Claude understands it all.
-
-**The 2x Quota Conspiracy**
-> I had a conspiracy theory: what if after the 2x period ends and things go back to "normal," that "normal" was secretly lowered below the original level? But since everyone's coming down from the feast, nobody would notice.
-
-**The Real Weekly Quota**
-> Only the 5-hour quota is 4x. Multiple people internationally have tested the weekly quota — it's actually only 2x.
-
-**Cowork Wastes Tokens**
-> Just use Code CLI directly. Cowork genuinely wastes tokens — Pro isn't enough to sustain it. Cowork is just Code's greenhouse sandbox version.
+**Voice Input Please**
+> Hoping for built-in voice input!
 
 **Recitation Error Solution**
 > Gemini is the strictest on recitation errors, Qwen is the most lenient. So Qwen via US-based providers on OpenRouter is the best choice — data doesn't flow to China since it's deployed in US data centers, and the model only restricts politically sensitive content, not copyright.
@@ -202,17 +126,11 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Google's Classic Move**
 > Classic Google: generous onboarding to get you hooked, then quota cuts, quality drops, and various creative ways to screw customers. Ninety percent identical to Taiwanese bank credit card tactics.
 
-**CLI Speed**
-> Terminal execution speed is insanely fast — a completely different league from being wrapped in a GUI or IDE. Terminal is what it means to truly live at the OS level.
-
 **Agent Browser Recommendation**
 > Chrome MCP burns tokens and drops connections constantly — it's the last resort. If you don't need persistent login state, Vercel's agent browser skill is much better. For crawling: `/agent-browser` and `/crawl4ai`.
 
 **/frontend-design Trick**
 > `/frontend-design` output looks ugly? Just tell it to redesign and give you 20 static HTML examples to choose from.
-
-**Your Attention Determines the Agent's Ceiling**
-> Your attention to detail and logic determine how high your agent can reach. Sure, models will keep improving, but I worry about you becoming the weak link that drags the model down.
 
 **NeurIPS Flooded by AI**
 > NeurIPS is getting washed with tens of thousands of AI-generated submissions. PhD students using AI to generate content isn't even surprising anymore.
@@ -226,9 +144,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **/loop Auto Clock-In**
 > Add the new `/loop` command: `/loop 1d clock me into ERP`. Congratulations, you now have fully automated attendance.
 
-**Claude's Strength Is Agents, Not Prompts**
-> Claude's greatest strength isn't prompting at all — it's their agent system, which lets someone with terrible prompts still accomplish their goals. So the key to using Claude isn't how well you write prompts, but whether your document library, rule files, and personal knowledge base are complete.
-
 **Surviving a Claude Outage**
 > When Claude goes down: sleep several naps, deep-clean the house, resume exercise habits. Also refresh the Claude status page every hour.
 
@@ -237,15 +152,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **OpenRouter Pay-As-You-Go Is Great Value**
 > Anywhere that involves large amounts of text, I use OpenRouter — meeting transcript processing, for example. But since it's truly on-demand and I always pick cheap bulk-friendly models, pay-as-you-go works out better. Top up $10 USD and it lasts a long time.
-
-**Choosing a Subscription Tier**
-> Pro's quota is genuinely small. Max is vastly better — $100/month is enough. I personally went 20x first, then dropped back to 5x, mostly Sonnet with some Opus.
-
-**Ghostty Font Customization**
-> Custom fonts are the best. Tell Claude Code you want to change Ghostty's font and ask it to recommend Chinese-English font combinations. The result feels great.
-
-**Codex: Volume and Value**
-> Codex offers generous volume at a good price. Not bad at all.
 
 **iQOS Bluetooth Reverse Engineering**
 > I'm genuinely impressed by Claude Code. I saw someone on Reddit share how Claude Code helped them defeat ransomware and recover data. On a whim, I plugged my iQOS into the computer and asked if it could read the data. It actually went online to research, found an open-source reverse engineering project, read through the logic, then wrote its own script to pull data from the iQOS via Bluetooth.
@@ -283,3 +189,24 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Mythos Preview 244-Page System Card**
 > Anthropic released the system card for the next-gen Claude Mythos Preview — 244 pages. I highlighted the parts I thought were important. Original PDF: <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>. Reading system cards is far more useful than reading marketing blogs. The real techniques and the real pitfalls are all in there.
+
+**Monitor Tool Arrives**
+> Claude Code shipped the Monitor Tool: write a background watching script (logs, PR status, API endpoints), and it only wakes the agent when something important is detected — zero token consumption the rest of the time. Basically a gatekeeper for your agent — don't call me, I'll call you.
+
+**Clem Challenges Mythos**
+> After Anthropic's Mythos announcement claiming impressive autonomous vulnerability discovery, Hugging Face CEO Clem published a replication: they took the exact vulnerabilities Anthropic showcased, ran them through small, cheap open-weights models, and 8 out of 8 recovered much of the same analysis — one with only 3.6B active parameters costing $0.11/M tokens. Chinese AI media cheered, the English technical community pushed back hard. Source: [AI Cybersecurity After Mythos: The Jagged Frontier](https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier)
+
+![Clem's test results tweet](/blog/images/micro-notes/clem-mythos-tweet.jpg)
+
+**2.1.100's Useful Fix**
+> One fix in CC 2.1.100 worth noting: large files tagged in context no longer get JSON-escaped, which was silently inflating token usage. Also fixed a long-session memory bloat bug caused by markdown syntax highlighting cache. Both bugs were quietly eating resources before this.
+
+**Commands and Skills: Finally Clear**
+> Reading the official docs today finally cleared this up: custom commands are the old format, already merged into the skills system. They're compatible, but skills add directory structure support, frontmatter control, and automatic triggering. Going forward, just say "skill" — it covers everything.
+
+![Official docs explaining the merge](/blog/images/micro-notes/skills-vs-commands-docs.jpg)
+
+**The Evil Idea: Borrowing Connector OAuth**
+> The official Claude App Connector's OAuth is nearly fully scoped — Gmail read/send/delete, Drive read/write/delete, Calendar, YouTube, all passing. But MCP only uses a small slice of it. In theory you could borrow those credentials to build a more capable MCP yourself. The reason I called it evil: this violates the Terms of Service and is unauthorized use. The legitimate path is setting up OAuth in Google Cloud Console yourself, or using the [gog CLI](https://youtu.be/Ymzp6hF8ZBc).
+
+![Google services test results](/blog/images/micro-notes/google-oauth-connector-table.jpg)
