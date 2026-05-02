@@ -91,6 +91,16 @@
     }
   }
 
+  /* ===== YouTube / Video Embed ===== */
+  .video-embed {
+    @apply relative w-full overflow-hidden rounded-sm border border-border;
+    padding-top: 56.25%;
+  }
+
+  .video-embed iframe {
+    @apply absolute inset-0 h-full w-full border-0;
+  }
+
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
     @apply flex border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
