@@ -30,3 +30,6 @@ scripts/classified_posts.json
 
 public/pagefind
 scripts/categories/
+
+# Codex AI files
+AGENTS.md
