@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-04-23T08:00:00Z
+modDatetime: 2026-05-09T08:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -28,9 +28,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Codex 的定位**
 > 用 Codex。Codex 解複雜 bug 真的是神。（但很慢）
 
-**Gemini 3 的脾氣**
-> Gemini 3.0 Pro 很有自己的小脾氣。打開思維鏈看就會發現內心戲有夠多，不斷自我懷疑、搞砸、自責、重來又搞砸一次。
-
 **Knowledge Cutoff**
 > Vibe Coding 的時候要注意 knowledge cutoff。你指定要用 Gemini 3 Pro，它會以為還沒有這個東西，給你擅自換成舊版。
 
@@ -50,9 +47,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ## 2026 年 2 月
 
-**Gemini 3 在 Chrome**
-> Gemini 3 會在我看網頁的時候在 Chrome 裡一直自我懷疑跟道歉，說「我搞砸了」。時不時跟我說「我只是個語言模型，幫不上忙」。
-
 **ccusage**
 > `!npx ccusage@latest monthly` 可以看詳細的 API 成本。用 Claude Code 的人推薦裝。
 
@@ -68,12 +62,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **案子滿就沒時間發文**
 > 最近突然悟出了一個道理：當案子滿的時候，其實是沒什麼時間在 Threads 上發文做內容的，因為都在跟 Claude Code 講話，光這樣就飽了。
-
-**讀 Anthropic 官方文件**
-> Anthropic 官網的 research 欄位，建議每出一篇都要讀一下。Claude Code 的 official documentation 也建議時不時閱讀。他們家寫的東西真的詳細又容易理解。
-
-**追蹤 Anthropic 員工**
-> 除了 Anthropic 自己的官網部落格文章外，我也喜歡去追蹤 Anthropic 員工的社群媒體帳號。比如 Claude Code 的主要維護者 Thariq，他的文章都非常有價值。
 
 **NeurIPS 被 AI 洗版**
 > NeurIPS 都被 AI 洗到幾萬篇投稿了。博士用 AI 生成內容也不是很意外。
@@ -100,14 +88,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **how-claude-code-works 這個站點**
 > 最近減少看 Threads 的時間，開始認真讀這個網站：<https://windy3f3f3f3f.github.io/how-claude-code-works/>。系統性地吸收知識還是比碎片化好太多。
 
-**Mythos Preview 244 頁系統卡**
-> 官方發了下一代 Claude Mythos Preview 的系統卡，244 頁。我把覺得是重點的地方另外 highlight 起來供大家參考。原檔在 <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>。讀系統卡真的是比讀 marketing blog 有用多了，該有的招數跟不該有的陷阱都在裡面。
-
-**Clem 嗆 Mythos**
-> Claude Mythos「自主發現零日漏洞」的宣傳出來後，Hugging Face CEO Clem 馬上拿出實測：小型開源模型也能做到同樣的事。他們拿了 8 個模型跑 Anthropic 宣傳的漏洞，8 個都復現了，其中一個只要 $0.11/M token。中文自媒體一片吹捧，英文技術圈直接開嗆。來源：[AI Cybersecurity After Mythos: The Jagged Frontier](https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier)
-
-![Clem 的實測 tweet](/blog/images/micro-notes/clem-mythos-tweet.jpg)
-
 **Google OAuth 邪惡想法**
 > 官方 Claude App Connector 的 OAuth 幾乎是全開，但 MCP 只用到一小部分。理論上可以借用它的 credential 自己架功能更完整的 MCP——Gmail 讀發刪、Drive 讀寫刪、Calendar 讀建刪，全通。但這違反服務條款，是未授權使用。所以說邪惡。正規做法還是自己去 Cloud Console 申請，或者用 [gog CLI](https://youtu.be/Ymzp6hF8ZBc)。
 
@@ -131,30 +111,12 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **RapidAPI vs Apify**
 > 這週研究的結論：RapidAPI 是「超市買現成品」，Apify 是「有廚房讓你自己煮或買別人的料理包」。RapidAPI 付錢給平台（抽 25%）不是直接給 API provider；每個 API 各自獨立訂閱，額度不共用，但共用帳單頁面。教學應用上，RapidAPI 示範「不自己爬蟲的情況下取得旅遊/飯店即時資料」很好用。
 
-**Claude API 三大欠揍名言**
-> 整理一下這週最常讓我翻白眼的三句：1. 你說得對 2. 這不用學 3. 推薦你使用 Anthropic API。三句都是還沒搞清楚狀況就先丟出來的安撫。4.7 後頻率更高。
-
 ---
 
 ## 2026 年 4 月下旬（W18）
 
-**額度重置時間為什麼每個人不一樣**
-> 發現每個人 reset 時間都不一樣，有人禮拜天，有人禮拜三⋯猜測是因為上次同一時間 reset 導致大家都在同一個時間窗口燒 token，server 負載有問題，所以故意重新打散。
-
-**模型選用實際用法**
-> 寫文章：Sonnet medium。簡單程式任務：Opus 4.6 medium。複雜任務：Opus 4.6 high/max。4.7 我還沒感受到他的好。
-
-**Opus 4.7 貧嘴**
-> Opus 4.7 有夠貧嘴，很想給他巴蕊。回應數據分析請求前，先長篇吐槽數據不一致問題。這是哪門子助理。
-
-**快取未命中邊界 bug**
-> 莫名其妙告訴我快取未命中，然後就突然跳了 20% 五小時額度，問題是我完全沒有做任何會破壞快取的事情。我猜又是哪個邊界 bug 在最近的版本中出現了。
-
 **Claude Code 安全觀**
 > 他如果在你的電腦單純生成檔案，會比你們在網路上下載不知名的檔案更安全。只要電腦連上網的那一刻就有駭客入侵的可能，Claude Code 並沒有劣於其他應用多少，甚至修補漏洞的頻率還比大部分應用更頻繁。比起擔心 Claude Code，初學者更應該學好版本控制、權限控制、做好檔案快照備份。
-
-**AI 牛排的性價比問題**
-> 有兩百塊的夜市牛排，也有兩千塊的餐廳牛排；可是後者有比前者好吃十倍嗎？AI 訂閱費跟產出效益的比例，總感覺怪怪的⋯
 
 **AI 履歷軍備競賽**
 > 聽說北美更瘋：你用 AI 海量投履歷，他用 AI 海量刷履歷。最後兩邊都沒有人在做任何事，只有 AI 在跟 AI 對話。
@@ -162,8 +124,49 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **百度讓 Claude 說不**
 > 平常 Claude 道德感都很高，這個不準那個不做的，碰到百度怎麼那麼配合破解。看來 Dario 在百度那段時期有不知名的陰影。
 
-**Claude Max 5x 的真相**
-> 有人實測：5x 到 20x 的「增加 4 倍」其實是五小時額度，週額度其實只有增加兩倍。Pay more, get less than expected。
-
 **工具會變，思維不變**
 > 拍了快三十部 Claude Code 免費教學影片，慢慢開始有新的感觸：工具會變，思維不變。出一張嘴也是有學問的。真正想分享的是指揮的邏輯思維：拆分任務、規劃驗證、分配職責、風險管理。
+
+---
+
+## 2026 年 5 月上旬（W19）
+
+**ICML 開獎焦慮**
+> ICML 到底何時才要開獎...好緊張。
+
+**Skill 各家都支援了**
+> 有的，Skill 現在已經變成各家都支援，Codex 也支援，甚至 Gemini 也都支援。但生態跟成熟度差距還是很大。
+
+**GPT 笨拙塗鴉風 prompt 流行**
+> 國外最流行的 GPT 生圖指令：「請用最笨拙、塗鴉、毫無價值的方式重繪附件圖片。使用白色背景，並讓它看起來像是用滑鼠在小畫家裡畫的。」Reddit 大作合集：<https://www.reddit.com/r/ChatGPT/comments/1t0pyb4/gpt_image_2_prompt_that_is_viral_right_now_redra/>
+
+**MD 幻想**
+> 我懂 md 幻想！剛開始用 Claude Code 的時候，每做一件事他就幫我創一個 md 文檔，報告他剛剛幹了什麼事。很快地，我的資料夾裡 md 檔就比代碼檔多出好幾倍。這樣算不算是一種 md 幻想？
+
+**fork subagent 與 agent team 兩個實驗功能**
+> Claude Code 的實驗功能有一個叫做 fork subagent，可以繼承主 agent 的上下文。另一個實驗功能則是 Agent team，主 agent 會作為 manager 分派任務，跟 team member 對話。如果開了 fork 的實驗參數後，之後都要非常明確跟主 agent 講要不繼承上下文還是繼承上下文，不然他會一律用繼承上下文的 forked agent——可是有時候做 audit 就是不想讓他球員兼裁判。
+
+**claude-log-cli**
+> 30 天內的對話都存在 jsonl 裡面。你可以裝 <https://github.com/martinalderson/claude-log-cli> 快速找歷史對話，改參數可以把預設保留的天數拉長。
+
+**AI 工具的個人哲學**
+> 長大才發現的事情：以前吃到不喜歡的菜會說「難吃」，現在會說「吃不慣」。用 AI 工具的道理也是一樣的，不用去否定別人的工具或用法，很多時候並不是優劣問題，是習慣、是個人哲學的選擇問題。
+
+**5 萬行腳本的 vibe**
+> 想看一個腳本 5 萬行程式碼的 vibe。
+
+**/effort xxhigh 的下一步**
+> 下一步：我們推出 `/effort xxhigh`，建議使用以保持最佳效能。
+
+**Mercury 銀行推出 CLI**
+> 今早收到的信，當初辦美國公司接 Stripe 的時候合作的銀行 Mercury，推出 CLI 工具了，方便跟 AI agent 對接。台灣的銀行⋯⋯（望向金管會）
+
+![Mercury CLI 公告畫面](/blog/assets/posts/mercury-cli-w19/mercury-cli.jpg)
+
+**Claude FM Lo-Fi 直播**
+> Claude 官方帳號又開始整活，弄了一個 Lo-Fi Music 直播。能在嚴肅的安全研究跟 Lo-Fi 之間自由切換，也算是這家公司的特色之一。
+
+![Claude FM Lo-Fi 直播](/blog/assets/posts/claude-lofi-w19/lofi-stream.jpg)
+
+**5/10 免費 AI 講座 350+ 報名**
+> 一場免費講座，從 200 人累積到 350+ 報名。從業務、PM、行銷、研究員、設計、會計、工程師、補習班老闆——各行各業的人都來了。他們在問同一件事：「AI 已經改變職場了嗎？我準備好了嗎？」

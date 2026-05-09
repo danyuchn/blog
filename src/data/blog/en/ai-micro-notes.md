@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-04-23T09:00:00Z
+modDatetime: 2026-05-09T09:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -28,9 +28,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Codex's Niche**
 > Using Codex. Codex is genuinely god-tier for solving complex bugs. (But slow.)
 
-**Gemini 3's Temperament**
-> Gemini 3.0 Pro has quite the personality. Open the chain-of-thought and you'll find it's full of inner drama — constant self-doubt, screwing up, self-blame, starting over, and screwing up again.
-
 **Knowledge Cutoff**
 > Watch out for knowledge cutoff when vibe coding. If you specify Gemini 3 Pro, the model might think it doesn't exist yet and quietly swap in an older version.
 
@@ -50,9 +47,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ## February 2026
 
-**Gemini 3 in Chrome**
-> Gemini 3 keeps second-guessing itself and apologizing while I'm browsing in Chrome, saying "I screwed up." Every now and then it tells me "I'm just a language model, I can't help."
-
 **ccusage**
 > `!npx ccusage@latest monthly` lets you see detailed API costs. Recommended for anyone using Claude Code.
 
@@ -68,12 +62,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Too Busy for Threads**
 > Recently had a realization: when projects are full, there's genuinely no time to post content on Threads. All my talking is with Claude Code, and that alone maxes me out.
-
-**Read Anthropic's Official Docs**
-> Anthropic's website research section — I recommend reading every new article they publish. Claude Code's official documentation is also worth revisiting regularly. Their writing is genuinely detailed and easy to follow.
-
-**Following Anthropic Employees**
-> Beyond Anthropic's own blog, I also follow Anthropic employees on social media. Thariq, the main Claude Code maintainer, consistently publishes valuable content.
 
 **Benchmark Chasing vs Alignment**
 > Most models are focused on chasing benchmark scores. But there are aspects I think deserve more attention: human intent alignment — understanding what I want from minimal input; constraint compliance — when I say don't do something, don't do it; and actually useful context length.
@@ -112,15 +100,85 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **how-claude-code-works Is Worth Your Time**
 > I've been scrolling Threads less and reading this site more: <https://windy3f3f3f3f.github.io/how-claude-code-works/>. Systematic learning beats scattered posts by a mile.
 
-**Mythos Preview 244-Page System Card**
-> Anthropic released the system card for the next-gen Claude Mythos Preview — 244 pages. I highlighted the parts I thought were important. Original PDF: <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>. Reading system cards is far more useful than reading marketing blogs. The real techniques and the real pitfalls are all in there.
-
-**Clem Challenges Mythos**
-> After Anthropic's Mythos announcement claiming impressive autonomous vulnerability discovery, Hugging Face CEO Clem published a replication: they took the exact vulnerabilities Anthropic showcased, ran them through small, cheap open-weights models, and 8 out of 8 recovered much of the same analysis — one with only 3.6B active parameters costing $0.11/M tokens. Chinese AI media cheered, the English technical community pushed back hard. Source: [AI Cybersecurity After Mythos: The Jagged Frontier](https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier)
-
-![Clem's test results tweet](/blog/images/micro-notes/clem-mythos-tweet.jpg)
-
 **The Evil Idea: Borrowing Connector OAuth**
 > The official Claude App Connector's OAuth is nearly fully scoped — Gmail read/send/delete, Drive read/write/delete, Calendar, YouTube, all passing. But MCP only uses a small slice of it. In theory you could borrow those credentials to build a more capable MCP yourself. The reason I called it evil: this violates the Terms of Service and is unauthorized use. The legitimate path is setting up OAuth in Google Cloud Console yourself, or using the [gog CLI](https://youtu.be/Ymzp6hF8ZBc).
 
 ![Google services test results](/blog/images/micro-notes/google-oauth-connector-table.jpg)
+
+**Haiku 4.5 for Full-Stack Dev**
+> Most pretentious flex of 2026: doing full-stack development with Haiku 4.5. Not bravado — only Haiku has the cost-and-speed combination to sustain a "tweak, verify, tweak again" full-stack rhythm.
+
+**Claude Code Roblox Talent**
+> Half the comments below couldn't even spell Roblox correctly. But people who love Roblox actually have a knack for it — switch them over to Claude Code. After two years of obsession they will out-intuit half the engineers when it comes to AI agents.
+
+**CC Means Claude Code**
+> Crap, I now read every "CC" as Claude Code. Am I sick?
+
+**Social Agentic AI Club**
+> I want a social agentic AI club: face to face, no talking, my Claude Code argues with your Codex, mutually code-reviewing each other into shreds. Cover charge required.
+
+**/HSYW-bullshit Skill Business Plan**
+> Set a `/schedule` cron: every Monday before leaving, Claude Code generates a fake weekend story; every morning it generates yesterday's fake achievements, mailed to you, read on commute, ready to bullshit colleagues. Package as a `/HSYW-bullshit` skill on GitHub — should easily collect 5000 stars from introverts, then qualify for free Claude.
+
+**RapidAPI vs Apify**
+> This week's research conclusion: RapidAPI is "supermarket buying ready-made"; Apify is "kitchen where you can cook your own or buy meal-kits." RapidAPI takes 25% from the platform side rather than the API provider; each API has its own subscription, quotas don't pool, but billing is unified. For teaching scenarios, RapidAPI's "get travel/hotel real-time data without writing scrapers yourself" is great.
+
+---
+
+## Late April 2026 (W18)
+
+**Claude Code's Security View**
+> If it just generates files on your computer, it's safer than downloading random files from the internet. The moment your computer is online, attackers can find a way in. Claude Code is no worse than other applications, and arguably patches faster than most. Beginners should worry less about Claude Code and more about version control, permission management, and snapshot backups.
+
+**The AI Resume Arms Race**
+> North America is even crazier: you blast resumes with AI, they screen resumes with AI. Eventually nobody is doing anything; it's just AI talking to AI.
+
+**Baidu Got Claude to Comply**
+> Claude is normally so morally upright — won't do this, won't do that. But somehow with Baidu it suddenly cooperates with jailbreaks. Looks like Dario has some unspecified trauma from his Baidu days.
+
+**Tools Change, Thinking Doesn't**
+> After almost thirty Claude Code free tutorial videos, I've started to feel something new: tools change, thinking doesn't. Talking is also a craft. What I really want to share is the logical thinking of a director: task decomposition, planning and verification, role assignment, risk management.
+
+---
+
+## Early May 2026 (W19)
+
+**ICML Award Anxiety**
+> When the hell is ICML going to release results... so nervous.
+
+**Skills Are Now Cross-Vendor**
+> Yes, Skills are now supported by everyone — Codex supports them, even Gemini supports them. But the ecosystem and maturity gap is still wide.
+
+**The Viral Crayon Doodle Prompt**
+> The hottest GPT image prompt overseas right now: "Please redraw the attached image in the most clumsy, doodled, worthless way possible. Use a white background, and make it look like it was drawn with a mouse in MS Paint." Reddit gallery: <https://www.reddit.com/r/ChatGPT/comments/1t0pyb4/gpt_image_2_prompt_that_is_viral_right_now_redra/>
+
+**The MD Hallucination**
+> I get the md hallucination! When I started using Claude Code, every action created an md document reporting what it just did. Soon, my folders had way more md files than code files. Does that count as a kind of md hallucination?
+
+**Fork Subagent and Agent Team Experimental Features**
+> Claude Code has an experimental feature called fork subagent — it can inherit the main agent's context. Another experimental feature is Agent team, where the main agent acts as a manager dispatching tasks and conversing with team members. If you turn on the fork experimental flag, you have to be very explicit about whether to inherit context, otherwise it defaults to the inheriting fork — but sometimes for audits you specifically don't want it to be both player and referee.
+
+**claude-log-cli**
+> Conversations from the past 30 days are stored in jsonl. You can install <https://github.com/martinalderson/claude-log-cli> to quickly find historical conversations. Adjust a parameter to extend the default retention.
+
+**Personal Philosophy of AI Tools**
+> Something I only learned as I got older: as a kid, food I didn't like was "gross"; now I say "not my taste." Same with AI tools — no need to put down others' tools or workflows. Often it's not a quality issue, it's habit, it's a personal philosophy.
+
+**The 50,000-Line Script Vibe**
+> Want to see the vibe of a 50,000-line script.
+
+**The Next Step: /effort xxhigh**
+> Next step: we're rolling out `/effort xxhigh`, recommended for optimal performance.
+
+**Mercury Bank Ships a CLI**
+> Got an email this morning. Mercury — the bank we set up our US company with for Stripe — just launched a CLI tool, designed for AI agents. Taiwan banks... (looks at the financial regulator)
+
+![Mercury CLI announcement](/blog/assets/posts/mercury-cli-w19/mercury-cli.jpg)
+
+**Claude FM Lo-Fi Stream**
+> The official Claude account is messing around again, launched a Lo-Fi Music livestream. The ability to switch between rigorous safety research and Lo-Fi beats is part of this company's character.
+
+![Claude FM Lo-Fi stream](/blog/assets/posts/claude-lofi-w19/lofi-stream.jpg)
+
+**Free AI Lecture Hits 350+ Signups**
+> A free lecture went from 200 to 350+ signups. Sales reps, PMs, marketers, researchers, designers, accountants, engineers, cram-school owners — every profession showed up. They're all asking the same thing: "Has AI changed the workplace? Am I ready?"
