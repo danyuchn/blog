@@ -20,6 +20,7 @@ When importing content from social media exports (Instagram/Threads):
    - Output: `scripts/classified_posts.json` (gitignored)
    - Categories: `scripts/categories/*.md` (gitignored)
    - Encoding fix: Meta exports use latin-1 encoded strings inside UTF-8 JSON; apply `text.encode('latin-1').decode('utf-8')` per field
+   - **Threads-only export edge case:** When the Meta export contains only Threads (no `posts_1.json` for IG), `classify_posts.py` errors out. Skip the script and write an ad-hoc classification snippet for the W's date range — do not patch the script for one-off cases.
 2. **Aggregate:** Group related posts into coherent blog articles
 3. **Write:** Create Chinese article first in `src/data/blog/zh/`
 4. **Translate:** Create English version in `src/data/blog/en/`
@@ -45,3 +46,5 @@ Extract micro-notes into standalone articles when a single entry has:
 - A non-obvious insight that benefits from elaboration
 
 Micro-notes remain in `ai-micro-notes.md` when they are: single observations, jokes/reactions, one-liner opinions without supporting evidence.
+
+**Cluster-extraction trigger:** When `ai-micro-notes.md` accumulates ~50+ entries, scan for clusters (3+ entries on the same theme) at the end of each weekly roundup. Pull the cluster into a standalone article and **delete the absorbed entries** from `ai-micro-notes.md` (both zh + en) — otherwise the file grows unbounded. W19 precedent: 55/59 → 42/46 by extracting 3 articles.
