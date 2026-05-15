@@ -45,6 +45,8 @@ Required frontmatter: `title`, `pubDatetime`, `description`, `slug`. Optional: `
 
 **⚠️ pubDatetime 陷阱：** 設為 UTC 未來時間（即使只差幾小時）會導致 `postFilter.ts` 在 production build 時過濾掉文章。文章頁面仍會生成（`getStaticPaths` 不用 postFilter），但翻譯連結、首頁列表、RSS 等全部不會出現。建議使用已過去的 UTC 時間，例如 `T04:00:00Z`（曼谷上午 11 點）。
 
+**⚠️ description YAML 冒號陷阱：** `description:` 內含半形 `: ` 會被 YAML 誤解為新 mapping key，astro check 報 `bad indentation of a mapping entry`。解法：整個值用單引號包住，內部單引號 escape 成 `''`。範例：`description: 'A: B and C''s issue.'`。W20 至少踩過 3 次（covey / scope-discipline / youtube-large-upload）。
+
 ### Routing
 
 Pages use Astro file-based routing in `src/pages/`:
