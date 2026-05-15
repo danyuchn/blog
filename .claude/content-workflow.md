@@ -48,3 +48,28 @@ Extract micro-notes into standalone articles when a single entry has:
 Micro-notes remain in `ai-micro-notes.md` when they are: single observations, jokes/reactions, one-liner opinions without supporting evidence.
 
 **Cluster-extraction trigger:** When `ai-micro-notes.md` accumulates ~50+ entries, scan for clusters (3+ entries on the same theme) at the end of each weekly roundup. Pull the cluster into a standalone article and **delete the absorbed entries** from `ai-micro-notes.md` (both zh + en) — otherwise the file grows unbounded. W19 precedent: 55/59 → 42/46 by extracting 3 articles.
+
+## W20 工作流經驗（2026-05-15）
+
+### 提案分批時必說剩餘篇章去處
+
+四來源掃完聚類後，提案給使用者選「全跑 vs Top N」時，**必須明說每個未選篇章的去處**：micro-notes / 留下週 / 完全棄寫。否則使用者選了縮減版後，後續會再來問「為何剩下幾篇沒開」，導致補開階段重做。W20 實況：使用者選 Top 6 後 30 分鐘內又補單 7 篇全開，造成 build 跑兩次、提案重議一次。
+
+### YouTube 來源澄清
+
+`~/knowledge-base/000-weekly-routines.md` Blog 內容盤點第 4 點寫「本週 YouTube 新增影片 — 用 YouTube MCP 查訂閱頻道本週新片」。實際週例行時要區分：
+
+- **AgentCrew Academy 自家上架** — 用 `playlistItems` API 抓 channel 的 uploads playlist（這是大多數情況要的）
+- **AgentCrew Academy 訂閱的別人頻道** — 用 `subscriptions` API 列訂閱清單再迭代 channels（AgentCrew Academy 帳號只訂閱 2 個頻道，這條訊號通常為 0）
+
+預設先跑「自家上架」。要查「訂閱新片」是另一個用途（看別人在做什麼可延伸評論），需明確要求。
+
+### YAML description 含冒號必加引號
+
+frontmatter `description:` 內含半形 `: `（譬如 `important × urgent: ` 或 `WAF: 解法...`）會觸發 YAML mapping error。astro check 報 `bad indentation of a mapping entry`。一律用單引號包住，內部單引號 escape 成 `''`：
+
+```yaml
+description: 'Two 5/13 uploads via YouTube Data API: 216 MB succeeded, 257 MB hung. Threshold around 220-250 MB.'
+```
+
+W20 踩過 3 次（covey-time-matrix / scope-discipline-five-rules / youtube-large-upload-216-257mb）。寫完每篇後 `npm run build` 是唯一可靠的驗證手段。
