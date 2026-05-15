@@ -182,3 +182,37 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Free AI Lecture Hits 350+ Signups**
 > A free lecture went from 200 to 350+ signups. Sales reps, PMs, marketers, researchers, designers, accountants, engineers, cram-school owners — every profession showed up. They're all asking the same thing: "Has AI changed the workplace? Am I ready?"
+
+---
+
+## Mid-May 2026 (W20)
+
+**Learn Slow Enough and You Won't Have to Learn Anything**
+> Just wrapped a 200-person online AI lecture. During FAQ I dropped this line: "In the AI age, if you learn slow enough, you don't have to learn anything at all." The room laughed. But it's a barbed joke — when AI improves faster than you can learn, slow learning is the same as giving up.
+
+**Stripe Atlas: The Four-Step Path**
+> 1. Anyone can do Stripe Atlas. 500 USD, point and click online, the company is formed. I did mine on my phone in a Chiang Mai bar. 2. Click some more after that to apply for Stripe, take the API and wire it to a vibe-coded website. Did that too. 3. Teach people how to do steps 1 and 2. Done — but free, not paid. 4. This one I haven't done, because it crosses a line.
+
+**The "Turn Your Code Into Garbage Before You Leave" Skill**
+> Saw a Skill called `moyu`: turn your own code into garbage before you quit. Truly achieves the state of "the person left, but the ghost stayed." <https://github.com/honunu/moyu>
+
+**On-Demand Loading: Lower View Count**
+> The advanced concept I personally consider most important — "on-demand loading and indexing" — actually pulls less view count. Could be I didn't explain it plainly enough; could also be that even though everyone knows quota matters, the video didn't aggressively tie context management to quota. Context management saves more than tokens; it raises model performance too.
+
+**vague-prompt-detection Hook Plugin**
+> Interesting Claude Code plugin: once installed, it adds a Hook that intercepts every user prompt and judges whether it's vague. Clear ones pass through; vague ones immediately trigger a SKILL that asks 1-6 clarifying questions. Suits a user like me who's chronically imprecise.
+
+**Claude Code Agent View**
+> Claude Code just shipped Agent View hours ago — manage multiple Claude Code sessions collaborating on a single task. Upgrade to the latest CLI, run `claude agents` to start.
+
+**L3 BD Outreach Open Rate**
+> First email using "let's exchange notes" framing (no pitch, no needs ask, just "want to grab some time, exchange notes on AI in practice") got 67% open rate. Same list with a "let me sell you" framing (course pitch, L3 consulting service) got 17%. Four times the gap. Don't sell anything in the first email — that's actually true for the early stage of a BD funnel.
+
+**Resend `scheduled_at` Can't Be Trusted**
+> After setting `scheduled_at`, the read-back from `GET /emails/{id}` is the source of truth. If the field comes back null, the schedule didn't take and the email is already out. Don't trust the response from the batch send call.
+
+**AI Job-Search Demo Clip**
+> Cut out the AI job-search demo segment from the 5/10 lecture and put it on YouTube: <https://youtu.be/HcADayRCJMg>. Claude Code customizes resumes for six companies in one pass, saving five evenings of manual work. This was the most-asked segment from the live lecture.
+
+**The Obsidian Video, Against the Wind**
+> When a wave of folks recently championed HTML over markdown, I shipped an honest video about my own Obsidian knowledge base. Does that count as going against the wind? <https://youtu.be/EhMKfG1dvnI>
