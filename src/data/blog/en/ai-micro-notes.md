@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-05-09T09:00:00Z
+modDatetime: 2026-05-23T05:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -56,9 +56,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 ---
 
 ## March 2026
-
-**Bulk Data Processing Habit**
-> For bulk data processing, my habit is: discuss future requirements with Opus first, sample data, plan the schema. Then follow the schema using cheap models on SiliconFlow or OpenRouter, API calls plus parallel processing.
 
 **Too Busy for Threads**
 > Recently had a realization: when projects are full, there's genuinely no time to post content on Threads. All my talking is with Claude Code, and that alone maxes me out.
@@ -117,9 +114,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Social Agentic AI Club**
 > I want a social agentic AI club: face to face, no talking, my Claude Code argues with your Codex, mutually code-reviewing each other into shreds. Cover charge required.
 
-**/HSYW-bullshit Skill Business Plan**
-> Set a `/schedule` cron: every Monday before leaving, Claude Code generates a fake weekend story; every morning it generates yesterday's fake achievements, mailed to you, read on commute, ready to bullshit colleagues. Package as a `/HSYW-bullshit` skill on GitHub — should easily collect 5000 stars from introverts, then qualify for free Claude.
-
 **RapidAPI vs Apify**
 > This week's research conclusion: RapidAPI is "supermarket buying ready-made"; Apify is "kitchen where you can cook your own or buy meal-kits." RapidAPI takes 25% from the platform side rather than the API provider; each API has its own subscription, quotas don't pool, but billing is unified. For teaching scenarios, RapidAPI's "get travel/hotel real-time data without writing scrapers yourself" is great.
 
@@ -136,9 +130,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Baidu Got Claude to Comply**
 > Claude is normally so morally upright — won't do this, won't do that. But somehow with Baidu it suddenly cooperates with jailbreaks. Looks like Dario has some unspecified trauma from his Baidu days.
 
-**Tools Change, Thinking Doesn't**
-> After almost thirty Claude Code free tutorial videos, I've started to feel something new: tools change, thinking doesn't. Talking is also a craft. What I really want to share is the logical thinking of a director: task decomposition, planning and verification, role assignment, risk management.
-
 ---
 
 ## Early May 2026 (W19)
@@ -146,23 +137,14 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **ICML Award Anxiety**
 > When the hell is ICML going to release results... so nervous.
 
-**Skills Are Now Cross-Vendor**
-> Yes, Skills are now supported by everyone — Codex supports them, even Gemini supports them. But the ecosystem and maturity gap is still wide.
-
 **The Viral Crayon Doodle Prompt**
 > The hottest GPT image prompt overseas right now: "Please redraw the attached image in the most clumsy, doodled, worthless way possible. Use a white background, and make it look like it was drawn with a mouse in MS Paint." Reddit gallery: <https://www.reddit.com/r/ChatGPT/comments/1t0pyb4/gpt_image_2_prompt_that_is_viral_right_now_redra/>
 
 **The MD Hallucination**
 > I get the md hallucination! When I started using Claude Code, every action created an md document reporting what it just did. Soon, my folders had way more md files than code files. Does that count as a kind of md hallucination?
 
-**Fork Subagent and Agent Team Experimental Features**
-> Claude Code has an experimental feature called fork subagent — it can inherit the main agent's context. Another experimental feature is Agent team, where the main agent acts as a manager dispatching tasks and conversing with team members. If you turn on the fork experimental flag, you have to be very explicit about whether to inherit context, otherwise it defaults to the inheriting fork — but sometimes for audits you specifically don't want it to be both player and referee.
-
 **claude-log-cli**
 > Conversations from the past 30 days are stored in jsonl. You can install <https://github.com/martinalderson/claude-log-cli> to quickly find historical conversations. Adjust a parameter to extend the default retention.
-
-**Personal Philosophy of AI Tools**
-> Something I only learned as I got older: as a kid, food I didn't like was "gross"; now I say "not my taste." Same with AI tools — no need to put down others' tools or workflows. Often it's not a quality issue, it's habit, it's a personal philosophy.
 
 **The 50,000-Line Script Vibe**
 > Want to see the vibe of a 50,000-line script.
@@ -187,23 +169,11 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ## Mid-May 2026 (W20)
 
-**Learn Slow Enough and You Won't Have to Learn Anything**
-> Just wrapped a 200-person online AI lecture. During FAQ I dropped this line: "In the AI age, if you learn slow enough, you don't have to learn anything at all." The room laughed. But it's a barbed joke — when AI improves faster than you can learn, slow learning is the same as giving up.
-
 **Stripe Atlas: The Four-Step Path**
 > 1. Anyone can do Stripe Atlas. 500 USD, point and click online, the company is formed. I did mine on my phone in a Chiang Mai bar. 2. Click some more after that to apply for Stripe, take the API and wire it to a vibe-coded website. Did that too. 3. Teach people how to do steps 1 and 2. Done — but free, not paid. 4. This one I haven't done, because it crosses a line.
 
-**The "Turn Your Code Into Garbage Before You Leave" Skill**
-> Saw a Skill called `moyu`: turn your own code into garbage before you quit. Truly achieves the state of "the person left, but the ghost stayed." <https://github.com/honunu/moyu>
-
 **On-Demand Loading: Lower View Count**
 > The advanced concept I personally consider most important — "on-demand loading and indexing" — actually pulls less view count. Could be I didn't explain it plainly enough; could also be that even though everyone knows quota matters, the video didn't aggressively tie context management to quota. Context management saves more than tokens; it raises model performance too.
-
-**vague-prompt-detection Hook Plugin**
-> Interesting Claude Code plugin: once installed, it adds a Hook that intercepts every user prompt and judges whether it's vague. Clear ones pass through; vague ones immediately trigger a SKILL that asks 1-6 clarifying questions. Suits a user like me who's chronically imprecise.
-
-**Claude Code Agent View**
-> Claude Code just shipped Agent View hours ago — manage multiple Claude Code sessions collaborating on a single task. Upgrade to the latest CLI, run `claude agents` to start.
 
 **L3 BD Outreach Open Rate**
 > First email using "let's exchange notes" framing (no pitch, no needs ask, just "want to grab some time, exchange notes on AI in practice") got 67% open rate. Same list with a "let me sell you" framing (course pitch, L3 consulting service) got 17%. Four times the gap. Don't sell anything in the first email — that's actually true for the early stage of a BD funnel.
@@ -216,3 +186,18 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **The Obsidian Video, Against the Wind**
 > When a wave of folks recently championed HTML over markdown, I shipped an honest video about my own Obsidian knowledge base. Does that count as going against the wind? <https://youtu.be/EhMKfG1dvnI>
+
+## Late May 2026 (W21)
+
+**Karpathy — The Ultimate Free Agent**
+> Andrej Karpathy announced he's joining Anthropic. OpenAI to Tesla to OpenAI (return) to departure to Anthropic. Probably the most prolific team-switcher in AI. Then again, top talent gravitating toward where they see the most potential is itself a market signal.
+
+**CLAUDE.md Prohibition Paradox**
+> I wrote in CLAUDE.md: "When corrected by the user, never say 'you're right.'" Claude immediately ignored it. After I called it out for violating the rule, its next response was: "You're right, I shouldn't have violated the language prohibition." CLAUDE.md is advisory, not enforced — if you really need to block something, use Hooks.
+
+**Learn Slow Enough and You Learn Nothing**
+> In the AI era, if you learn slowly enough, you can skip learning anything at all. By the time you finish, that thing has already been automated. Flip side: people who learn fast enough keep finding they can do more and more.
+
+**Vietnamese Coffee Shop Internet**
+> When I first arrived in Vietnam, I avoided those open-front street coffee shops with low tables and camping chairs, assuming the internet would be unreliable. Turns out these places have the best connections — because Vietnamese teenagers camp there all day playing mobile games on a single coffee order. If the latency were high, nobody would show up.
+

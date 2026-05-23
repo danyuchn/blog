@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-05-09T08:00:00Z
+modDatetime: 2026-05-23T05:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -57,9 +57,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ## 2026 年 3 月
 
-**大量資料處理的習慣**
-> 大量資料處理我的習慣是：先用 Opus 討論未來需求、取樣跟規劃 schema。接下來按照 schema，用 SiliconFlow 或 OpenRouter 上的便宜模型，API 加並行批量處理。
-
 **案子滿就沒時間發文**
 > 最近突然悟出了一個道理：當案子滿的時候，其實是沒什麼時間在 Threads 上發文做內容的，因為都在跟 Claude Code 講話，光這樣就飽了。
 
@@ -105,9 +102,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **社交 agentic AI 俱樂部**
 > 我需要一個社交 agentic AI 俱樂部：面對面不說話，用我手中的 Claude Code 跟對面的 Codex 吵架，互相審查代碼撕逼。門票要收。
 
-**/HSYW-bullshit skill 的商業計畫**
-> 設定 `/schedule` 排程，每週一出門前，讓 Claude Code 幫你生成週末假故事；每天出門前，生成昨天假成就，自動發到信箱，通勤時閱讀 1 分鐘，等等跟同事胡吹。還可以包成一個 skill `/HSYW-bullshit` 上 GitHub，我相信很快就能收穫 5000 顆來自 i 人的星星，然後就可以申請免費用 Claude。
-
 **RapidAPI vs Apify**
 > 這週研究的結論：RapidAPI 是「超市買現成品」，Apify 是「有廚房讓你自己煮或買別人的料理包」。RapidAPI 付錢給平台（抽 25%）不是直接給 API provider；每個 API 各自獨立訂閱，額度不共用，但共用帳單頁面。教學應用上，RapidAPI 示範「不自己爬蟲的情況下取得旅遊/飯店即時資料」很好用。
 
@@ -124,9 +118,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **百度讓 Claude 說不**
 > 平常 Claude 道德感都很高，這個不準那個不做的，碰到百度怎麼那麼配合破解。看來 Dario 在百度那段時期有不知名的陰影。
 
-**工具會變，思維不變**
-> 拍了快三十部 Claude Code 免費教學影片，慢慢開始有新的感觸：工具會變，思維不變。出一張嘴也是有學問的。真正想分享的是指揮的邏輯思維：拆分任務、規劃驗證、分配職責、風險管理。
-
 ---
 
 ## 2026 年 5 月上旬（W19）
@@ -134,23 +125,14 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **ICML 開獎焦慮**
 > ICML 到底何時才要開獎...好緊張。
 
-**Skill 各家都支援了**
-> 有的，Skill 現在已經變成各家都支援，Codex 也支援，甚至 Gemini 也都支援。但生態跟成熟度差距還是很大。
-
 **GPT 笨拙塗鴉風 prompt 流行**
 > 國外最流行的 GPT 生圖指令：「請用最笨拙、塗鴉、毫無價值的方式重繪附件圖片。使用白色背景，並讓它看起來像是用滑鼠在小畫家裡畫的。」Reddit 大作合集：<https://www.reddit.com/r/ChatGPT/comments/1t0pyb4/gpt_image_2_prompt_that_is_viral_right_now_redra/>
 
 **MD 幻想**
 > 我懂 md 幻想！剛開始用 Claude Code 的時候，每做一件事他就幫我創一個 md 文檔，報告他剛剛幹了什麼事。很快地，我的資料夾裡 md 檔就比代碼檔多出好幾倍。這樣算不算是一種 md 幻想？
 
-**fork subagent 與 agent team 兩個實驗功能**
-> Claude Code 的實驗功能有一個叫做 fork subagent，可以繼承主 agent 的上下文。另一個實驗功能則是 Agent team，主 agent 會作為 manager 分派任務，跟 team member 對話。如果開了 fork 的實驗參數後，之後都要非常明確跟主 agent 講要不繼承上下文還是繼承上下文，不然他會一律用繼承上下文的 forked agent——可是有時候做 audit 就是不想讓他球員兼裁判。
-
 **claude-log-cli**
 > 30 天內的對話都存在 jsonl 裡面。你可以裝 <https://github.com/martinalderson/claude-log-cli> 快速找歷史對話，改參數可以把預設保留的天數拉長。
-
-**AI 工具的個人哲學**
-> 長大才發現的事情：以前吃到不喜歡的菜會說「難吃」，現在會說「吃不慣」。用 AI 工具的道理也是一樣的，不用去否定別人的工具或用法，很多時候並不是優劣問題，是習慣、是個人哲學的選擇問題。
 
 **5 萬行腳本的 vibe**
 > 想看一個腳本 5 萬行程式碼的 vibe。
@@ -175,23 +157,11 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ## 2026 年 5 月中旬（W20）
 
-**學得夠慢就不用學**
-> 剛結束 200 人線上 AI 講座。FAQ 我講了一句：「AI 時代，只要你學得夠慢，就可以什麼都不用學。」現場大笑。但這個笑話是有殺傷力的——AI 進步比你學習快的時候，慢學等於放棄學。
-
 **Stripe Atlas 四步路徑**
 > 1. Stripe Atlas 誰都能做，500 USD 線上點一點就開好公司，我就是在清邁酒吧裡點手機申請的。2. 點完後再繼續點一點申請 Stripe，拿 API 去串 vibe coding 出來的網站。3. 教人怎麼點出以上 1、2，我也做過，不過是免費的。4. 這我就沒做了，因為太缺德。
 
-**離職前轉屎山的 Skill**
-> 看到一個叫 `moyu` 的 Skill：離職前把自己寫的代碼轉成屎山。真正達到了「人走了，陰魂不散」的境界。<https://github.com/honunu/moyu>
-
 **按需載入流量觀察**
 > 我認為很重要的進階觀念「按需載入跟索引」反而流量較差。有可能是自己講得不夠淺顯，也有可能是大家雖然知道額度很重要，但是這部影片卻沒有很積極地把上下文管理跟額度連結在一起。其實上下文管理能省的不只是額度，還有提升模型的表現。
-
-**vague-prompt-detection hook 外掛**
-> 這個 Claude Code 的外掛蠻有趣的，掛上去之後，他就會新增 Hook，攔截每一個使用者送出的指令，判斷是否模糊。清晰的直接放行，模糊的就直接觸發 SKILL，追問 1-6 個問題。很適合我這種常常語焉不詳的使用者。
-
-**Claude Code Agent View**
-> Claude Code 幾小時前新推出的 Agent View 功能，可以讓你一次管理好幾個 Claude Code Session 協同完成任務。使用方式：升級到最新版 CLI，打 `claude agents` 啟動。
 
 **L3 BD outreach 開信率**
 > 用「交流型」第一封信（不提報價、不問需求、只提「想跟你約個時間，交流一下 AI 的實際應用」），開信率 67%。同一批 list 用「推銷型」（提課程、提 L3 顧問服務）開信率 17%。差距 4 倍。第一封信不要急著賣東西，這件事在 BD 漏斗的前期是真的成立。
@@ -204,3 +174,18 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **Obsidian 影片的逆風**
 > 在前陣子不少人跟風吹捧 HTML 揚棄 markdown 的時刻，我發了一部誠實分享自己 Obsidian 知識庫的影片，算不算是一種逆風呢？<https://youtu.be/EhMKfG1dvnI>
+
+## 2026 年 5 月下旬（W21）
+
+**Karpathy 三姓家臣**
+> Andrej Karpathy 宣布加入 Anthropic。OpenAI → Tesla → OpenAI（回鍋）→ 離開 → Anthropic。這應該是 AI 圈最強的三姓家臣了。不過換個角度看，頂尖人才往他認為最有潛力的地方跑，本身就是一種市場訊號。
+
+**Claude.md 禁令自相矛盾**
+> 我在 CLAUDE.md 寫了「被使用者糾正時禁止說『你說得對』」。結果 Claude 馬上無視，被我罵沒有遵守規則後，下一句回：「你說得對，我不應該違反語言禁令。」CLAUDE.md 寫的是建議不是強制，真要擋就得用 Hook。
+
+**學得足夠慢就什麼都不用學**
+> 在 AI 時代，只要你學得足夠慢，那你就可以什麼都不用學。因為等你學完，那個東西已經被自動化了。反過來說，學得夠快的人會發現自己能做的事越來越多。
+
+**越南咖啡店網路品質**
+> 到越南後一開始看到路邊那種門戶敞開、擺矮桌加露營椅的咖啡店，都會想避開，覺得網路不穩。後來才發現這種地方網路品質最好——因為一堆越南少年點一杯咖啡就在那邊玩手遊，萬一延遲高誰要來消費。
+
