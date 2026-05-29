@@ -10,6 +10,14 @@ When converting social media posts (Threads/IG) into blog articles:
 4. **Filter noise**: Remove bare links, promotional CTAs, sign-up forms, and context-free @mentions that have no value in a blog.
 5. **No AI-speak**: No summary sentences, no "let's explore together", no emoji garnish, no bullet-point filler. The author explicitly dislikes AI-generated writing patterns.
 6. **Micro-notes format**: For short posts that can't form a full article, preserve the one-by-one format with date separators. Only add minimal context so each entry is independently readable.
+7. **Minimal bridging (忠實度)**: AI 只做最小銜接，不無中生有。改寫時不要替作者補技術解釋、情緒鋪陳、軍備競賽式論述、或喊話式「## 小結」收尾——原貼文沒有的論點就不要加。**fan-out subagent 寫稿特別容易把短貼文過度展開**（W22 dont-scrape 從 ~150 字短貼文膨脹成長論述），主對話回收時必逐篇對照原文砍掉 AI 補述。短素材就讓它保持短而緊湊。
+
+## 語意去重工具（W22 新增）
+
+`scripts/semantic_dedup.py`：用 `gemini-embedding-2` 對全部文章（與 `--micro` 拆分的 micro-notes 條目）做語意向量，列出近重複對供檢視合併。預設併發 256、同檔名 zh/en 翻譯對自動排除。
+- 跑法：`export GEMINI_API_KEY=<working key>` → `uv run scripts/semantic_dedup.py --micro --threshold 0.78 --json /tmp/blog_dedup.json`
+- ⚠️ `blog/.env` 的 key 已過期（2026-05-30），從 GMAT-skills / PDT-learning / crawler 借 key。
+- 判讀：**高相似 ≠ 該合併**。同主題文章（CC 訂閱、desktop vs CLI）會落在 0.84–0.92，但若各自角度不同、或是時間軸上的觀點演進（如 desktop-vs-cli 4 月「CLI 勝」vs 5 月「桌面版現在 OK」），保留比合併更有資訊量。真要合併才動，published URL 無 redirect 機制。
 
 ## Content Import Workflow
 
