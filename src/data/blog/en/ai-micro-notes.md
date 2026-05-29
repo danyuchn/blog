@@ -201,3 +201,17 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Vietnamese Coffee Shop Internet**
 > When I first arrived in Vietnam, I avoided those open-front street coffee shops with low tables and camping chairs, assuming the internet would be unreliable. Turns out these places have the best connections — because Vietnamese teenagers camp there all day playing mobile games on a single coffee order. If the latency were high, nobody would show up.
 
+
+## Late May 2026 (W22)
+
+**103 Agents Auto-Triggered Without Even Turning On Ultracode**
+> I didn't turn on ultracode, yet it auto-triggered a dynamic workflow on me — by the time I looked up, 103 agents were already on their way. Infuriating. Looks like I need to find a parameter to force it off. Honestly though, my request was killing a chicken, so I couldn't even see where the ox-cleaver's superiority was supposed to show.
+
+**DeepSeek Is the Best Value Alternative**
+> They'll keep cutting prices once their compute comes online. Honestly, compliance requirements aside, DeepSeek is probably the best value-for-money alternative right now.
+
+**How Someone With GAD Reads a Risk Report**
+> Let me show you how I, with generalized anxiety disorder, read a risk report: One, an 8.6% risk is way too high, unacceptable. Two, if it happens, 70% of cases will match or exceed what I imagined? Unacceptable. Three, we never just worry about 30 days out — 30 years sounds more like it.
+
+**Setting Gemini's Thinking Budget to Infinite Returns an Empty String**
+> Gemini 2.5 Flash kept returning an empty `{}`. The root cause: `thinking.budget_tokens: -1` (unlimited) — thinking eats the entire token budget, and `content` comes back null. The 3.x line switched to `reasoning_effort`; stop passing `thinking` in the model config.
