@@ -68,7 +68,7 @@ Pages use Astro file-based routing in `src/pages/`:
 
 ## Content Workflow
 
-詳見 @.claude/content-workflow.md（改寫原則 6 條、社群媒體匯入 7 步驟流程）。
+詳見 @.claude/content-workflow.md（改寫原則 7 條、社群媒體匯入 7 步驟流程）。
 
 ## Deployment
 

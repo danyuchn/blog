@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-05-23T05:00:00Z
+modDatetime: 2026-06-05T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -19,14 +19,8 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ## January 2026
 
-**Claude Extension + Claude Code**
-> My most-used combo: Claude Extension paired with Claude Code. Productivity goes through the roof.
-
 **Claude Code Writing Docs**
 > Claude Code is amazing for writing technical documents. Drop it into Overleaf and it passes on the first try.
-
-**Codex's Niche**
-> Using Codex. Codex is genuinely god-tier for solving complex bugs. (But slow.)
 
 **Knowledge Cutoff**
 > Watch out for knowledge cutoff when vibe coding. If you specify Gemini 3 Pro, the model might think it doesn't exist yet and quietly swap in an older version.
@@ -42,16 +36,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **rm -rf Warning**
 > There are already plenty of horror stories about `rm -rf` online. Never run that with `dangerously skip permission` enabled.
-
----
-
-## February 2026
-
-**ccusage**
-> `!npx ccusage@latest monthly` lets you see detailed API costs. Recommended for anyone using Claude Code.
-
-**Gemini Supports Skills Now**
-> Now Gemini supports Skills too. But given Gemini's track record, I'm staying on the sidelines.
 
 ---
 
@@ -75,9 +59,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **NeurIPS Flooded by AI**
 > NeurIPS is getting washed with tens of thousands of AI-generated submissions. PhD students using AI to generate content isn't even surprising anymore.
 
-**The Value of Small Models for Local Deployment**
-> If we're talking 3B parameters, the biggest appeal is lightweight plus local deployment. After all, many OCR scenarios involve highly sensitive data that can't leave the premises. Add federated learning architecture on top and it gets even better.
-
 **Claude Moves Wall Street**
 > Claude is the one AI that can single-handedly shake the stock prices of major software companies on Wall Street. Enough said.
 
@@ -90,20 +71,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 ---
 
 ## April 2026
-
-**Qwen 3.6 Plus**
-> After the core team exodus drama, Alibaba released a preview of their next-gen model Qwen 3.6 Plus on OpenRouter. They claim enhanced coding, agentic capability, frontend development, and complex problem solving. Note: the preview version collects prompts and completion output — be careful in production.
-
-**how-claude-code-works Is Worth Your Time**
-> I've been scrolling Threads less and reading this site more: <https://windy3f3f3f3f.github.io/how-claude-code-works/>. Systematic learning beats scattered posts by a mile.
-
-**The Evil Idea: Borrowing Connector OAuth**
-> The official Claude App Connector's OAuth is nearly fully scoped — Gmail read/send/delete, Drive read/write/delete, Calendar, YouTube, all passing. But MCP only uses a small slice of it. In theory you could borrow those credentials to build a more capable MCP yourself. The reason I called it evil: this violates the Terms of Service and is unauthorized use. The legitimate path is setting up OAuth in Google Cloud Console yourself, or using the [gog CLI](https://youtu.be/Ymzp6hF8ZBc).
-
-![Google services test results](/blog/images/micro-notes/google-oauth-connector-table.jpg)
-
-**Haiku 4.5 for Full-Stack Dev**
-> Most pretentious flex of 2026: doing full-stack development with Haiku 4.5. Not bravado — only Haiku has the cost-and-speed combination to sustain a "tweak, verify, tweak again" full-stack rhythm.
 
 **Claude Code Roblox Talent**
 > Half the comments below couldn't even spell Roblox correctly. But people who love Roblox actually have a knack for it — switch them over to Claude Code. After two years of obsession they will out-intuit half the engineers when it comes to AI agents.
@@ -120,9 +87,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 ---
 
 ## Late April 2026 (W18)
-
-**Claude Code's Security View**
-> If it just generates files on your computer, it's safer than downloading random files from the internet. The moment your computer is online, attackers can find a way in. Claude Code is no worse than other applications, and arguably patches faster than most. Beginners should worry less about Claude Code and more about version control, permission management, and snapshot backups.
 
 **The AI Resume Arms Race**
 > North America is even crazier: you blast resumes with AI, they screen resumes with AI. Eventually nobody is doing anything; it's just AI talking to AI.
@@ -143,9 +107,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **The MD Hallucination**
 > I get the md hallucination! When I started using Claude Code, every action created an md document reporting what it just did. Soon, my folders had way more md files than code files. Does that count as a kind of md hallucination?
 
-**claude-log-cli**
-> Conversations from the past 30 days are stored in jsonl. You can install <https://github.com/martinalderson/claude-log-cli> to quickly find historical conversations. Adjust a parameter to extend the default retention.
-
 **The 50,000-Line Script Vibe**
 > Want to see the vibe of a 50,000-line script.
 
@@ -162,9 +123,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ![Claude FM Lo-Fi stream](/blog/assets/posts/claude-lofi-w19/lofi-stream.jpg)
 
-**Free AI Lecture Hits 350+ Signups**
-> A free lecture went from 200 to 350+ signups. Sales reps, PMs, marketers, researchers, designers, accountants, engineers, cram-school owners — every profession showed up. They're all asking the same thing: "Has AI changed the workplace? Am I ready?"
-
 ---
 
 ## Mid-May 2026 (W20)
@@ -172,20 +130,11 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Stripe Atlas: The Four-Step Path**
 > 1. Anyone can do Stripe Atlas. 500 USD, point and click online, the company is formed. I did mine on my phone in a Chiang Mai bar. 2. Click some more after that to apply for Stripe, take the API and wire it to a vibe-coded website. Did that too. 3. Teach people how to do steps 1 and 2. Done — but free, not paid. 4. This one I haven't done, because it crosses a line.
 
-**On-Demand Loading: Lower View Count**
-> The advanced concept I personally consider most important — "on-demand loading and indexing" — actually pulls less view count. Could be I didn't explain it plainly enough; could also be that even though everyone knows quota matters, the video didn't aggressively tie context management to quota. Context management saves more than tokens; it raises model performance too.
-
 **L3 BD Outreach Open Rate**
 > First email using "let's exchange notes" framing (no pitch, no needs ask, just "want to grab some time, exchange notes on AI in practice") got 67% open rate. Same list with a "let me sell you" framing (course pitch, L3 consulting service) got 17%. Four times the gap. Don't sell anything in the first email — that's actually true for the early stage of a BD funnel.
 
 **Resend `scheduled_at` Can't Be Trusted**
 > After setting `scheduled_at`, the read-back from `GET /emails/{id}` is the source of truth. If the field comes back null, the schedule didn't take and the email is already out. Don't trust the response from the batch send call.
-
-**AI Job-Search Demo Clip**
-> Cut out the AI job-search demo segment from the 5/10 lecture and put it on YouTube: <https://youtu.be/HcADayRCJMg>. Claude Code customizes resumes for six companies in one pass, saving five evenings of manual work. This was the most-asked segment from the live lecture.
-
-**The Obsidian Video, Against the Wind**
-> When a wave of folks recently championed HTML over markdown, I shipped an honest video about my own Obsidian knowledge base. Does that count as going against the wind? <https://youtu.be/EhMKfG1dvnI>
 
 ## Late May 2026 (W21)
 
@@ -207,11 +156,34 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **103 Agents Auto-Triggered Without Even Turning On Ultracode**
 > I didn't turn on ultracode, yet it auto-triggered a dynamic workflow on me — by the time I looked up, 103 agents were already on their way. Infuriating. Looks like I need to find a parameter to force it off. Honestly though, my request was killing a chicken, so I couldn't even see where the ox-cleaver's superiority was supposed to show.
 
-**DeepSeek Is the Best Value Alternative**
-> They'll keep cutting prices once their compute comes online. Honestly, compliance requirements aside, DeepSeek is probably the best value-for-money alternative right now.
-
 **How Someone With GAD Reads a Risk Report**
 > Let me show you how I, with generalized anxiety disorder, read a risk report: One, an 8.6% risk is way too high, unacceptable. Two, if it happens, 70% of cases will match or exceed what I imagined? Unacceptable. Three, we never just worry about 30 days out — 30 years sounds more like it.
 
 **Setting Gemini's Thinking Budget to Infinite Returns an Empty String**
 > Gemini 2.5 Flash kept returning an empty `{}`. The root cause: `thinking.budget_tokens: -1` (unlimited) — thinking eats the entire token budget, and `content` comes back null. The 3.x line switched to `reasoning_effort`; stop passing `thinking` in the model config.
+
+## Early June 2026 (W23)
+
+**gemini CLI Fails Silently in Untrusted Folders**
+> Since gemini CLI v0.28, headless mode fails silently in an "untrusted folder" — exit 0 with no output, and wrapped in `2>/dev/null` it just looks dead. The real error message is `Gemini CLI is not running in a trusted directory`. Fix: add `--skip-trust`, or set `GEMINI_CLI_TRUST_WORKSPACE=true`.
+
+**dotenv's `\n` Trap Killed My Resend Key**
+> The RESEND_API_KEY in `.env.local` had a literal `\n` (backslash plus n, two characters) at the end of the value — dotenv's double-quote trap — and the key got decapitated by a regex. SOP: before using a key, run `curl GET /domains` once to verify it's clean.
+
+**Plaintext API Keys Sitting in Codex Snapshots**
+> Scanned `~/.codex/shell_snapshots/` and found one snapshot exporting 16+ API keys in plaintext, with 0644 world-readable file permissions.
+
+**Two Traps in Vercel Throwaway Public Pages**
+> A fresh project's deploy URL ships with Deployment Protection (Vercel Authentication) on by default — outside visitors get a 401. The other trap: the bare `<proj>.vercel.app` alias may be someone else's empty shell; your auto-updating prod alias is `<proj>-<team>.vercel.app`. curl and check the content before sending anyone the link.
+
+**Why Quota Reset Times Are Deliberately Staggered**
+> Because if a reset also reset the clock, everyone's reset time would converge — and everyone would binge right before the cycle ends, piling on peak load and destabilizing the servers. That's why they deliberately stagger it. My guess, anyway.
+
+**Claude Design's Separate Quota Is Gone**
+> Cold news of the morning: Claude Design's standalone quota has disappeared, folded into the overall Claude usage quota.
+
+**A File Named "Transcript" Isn't Necessarily a Transcript**
+> The file was named "transcript," but it turned out to be an already-edited summary — the raw recording lived elsewhere. Bonus trap: SenseVoice STT has no speaker diarization, so in multi-speaker sessions the opening introductions get attributed to the wrong people.
+
+**`includes('ai')` Tags "failed" as AI**
+> An error classifier used `includes('ai')` to catch AI-related errors — and tagged every "failed" and "available" along the way. Classification keywords should always use word-boundary regex: `/\bai\b/`.

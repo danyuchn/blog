@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-05-23T05:00:00Z
+modDatetime: 2026-06-05T04:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -19,14 +19,8 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ## 2026 年 1 月
 
-**Claude Extension 配 Claude Code**
-> 我最常用的：Claude Extension 搭配 Claude Code，效率高到飛起來。
-
 **Claude Code 寫文件**
 > Claude Code 寫技術文件超好用，放到 Overleaf 一次過。
-
-**Codex 的定位**
-> 用 Codex。Codex 解複雜 bug 真的是神。（但很慢）
 
 **Knowledge Cutoff**
 > Vibe Coding 的時候要注意 knowledge cutoff。你指定要用 Gemini 3 Pro，它會以為還沒有這個東西，給你擅自換成舊版。
@@ -45,16 +39,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ---
 
-## 2026 年 2 月
-
-**ccusage**
-> `!npx ccusage@latest monthly` 可以看詳細的 API 成本。用 Claude Code 的人推薦裝。
-
-**Gemini 也支援 Skill 了**
-> 現在 Gemini 也支援 Skill 了。不過以 Gemini 的尿性，我保持觀望。
-
----
-
 ## 2026 年 3 月
 
 **案子滿就沒時間發文**
@@ -62,9 +46,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **NeurIPS 被 AI 洗版**
 > NeurIPS 都被 AI 洗到幾萬篇投稿了。博士用 AI 生成內容也不是很意外。
-
-**小模型本地部署的價值**
-> 如果是 3B 的話，最大的特色我猜是輕量加本地部署。畢竟很多 OCR 高敏感場景，資料是不能出去的。如果再搭配上聯邦學習架構就更好了。
 
 **Claude 撼動華爾街**
 > Claude 是那個唯一可以撼動華爾街各大軟體股股價的 AI。你說呢。
@@ -78,20 +59,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 ---
 
 ## 2026 年 4 月
-
-**Qwen 3.6 Plus**
-> 在經歷核心人員出走的風波後，阿里巴巴在 OpenRouter 上發布了下一代模型 Qwen 3.6 Plus 的預覽版。官方表示強化了編程、Agentic、前端開發、複雜問題解決能力。不過目前的 preview 版會收集 prompt 跟 completion output，生產環境要謹慎。
-
-**how-claude-code-works 這個站點**
-> 最近減少看 Threads 的時間，開始認真讀這個網站：<https://windy3f3f3f3f.github.io/how-claude-code-works/>。系統性地吸收知識還是比碎片化好太多。
-
-**Google OAuth 邪惡想法**
-> 官方 Claude App Connector 的 OAuth 幾乎是全開，但 MCP 只用到一小部分。理論上可以借用它的 credential 自己架功能更完整的 MCP——Gmail 讀發刪、Drive 讀寫刪、Calendar 讀建刪，全通。但這違反服務條款，是未授權使用。所以說邪惡。正規做法還是自己去 Cloud Console 申請，或者用 [gog CLI](https://youtu.be/Ymzp6hF8ZBc)。
-
-![Google 服務實測結果](/blog/images/micro-notes/google-oauth-connector-table.jpg)
-
-**Haiku 4.5 做全端開發**
-> 2026 最強炫智方式：用 Haiku 4.5 做完全端開發。不是逞強，是因為成本跟速度的組合現在只有 Haiku 撐得住「改一點、驗一點、再改一點」這種全端節奏。
 
 **Claude Code 遊戲玩家天賦**
 > 看到有留言區一半的網友連 Roblox 都拼錯字。不過會喜歡玩 Roblox 的其實很有天賦，給他換 Claude Code 吧，他在這裡面沈迷，未來肯定大有可為。操作滿兩年後出來做 AI agent 比很多工程師還有直覺。
@@ -108,9 +75,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 ---
 
 ## 2026 年 4 月下旬（W18）
-
-**Claude Code 安全觀**
-> 他如果在你的電腦單純生成檔案，會比你們在網路上下載不知名的檔案更安全。只要電腦連上網的那一刻就有駭客入侵的可能，Claude Code 並沒有劣於其他應用多少，甚至修補漏洞的頻率還比大部分應用更頻繁。比起擔心 Claude Code，初學者更應該學好版本控制、權限控制、做好檔案快照備份。
 
 **AI 履歷軍備競賽**
 > 聽說北美更瘋：你用 AI 海量投履歷，他用 AI 海量刷履歷。最後兩邊都沒有人在做任何事，只有 AI 在跟 AI 對話。
@@ -131,9 +95,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **MD 幻想**
 > 我懂 md 幻想！剛開始用 Claude Code 的時候，每做一件事他就幫我創一個 md 文檔，報告他剛剛幹了什麼事。很快地，我的資料夾裡 md 檔就比代碼檔多出好幾倍。這樣算不算是一種 md 幻想？
 
-**claude-log-cli**
-> 30 天內的對話都存在 jsonl 裡面。你可以裝 <https://github.com/martinalderson/claude-log-cli> 快速找歷史對話，改參數可以把預設保留的天數拉長。
-
 **5 萬行腳本的 vibe**
 > 想看一個腳本 5 萬行程式碼的 vibe。
 
@@ -150,9 +111,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ![Claude FM Lo-Fi 直播](/blog/assets/posts/claude-lofi-w19/lofi-stream.jpg)
 
-**5/10 免費 AI 講座 350+ 報名**
-> 一場免費講座，從 200 人累積到 350+ 報名。從業務、PM、行銷、研究員、設計、會計、工程師、補習班老闆——各行各業的人都來了。他們在問同一件事：「AI 已經改變職場了嗎？我準備好了嗎？」
-
 ---
 
 ## 2026 年 5 月中旬（W20）
@@ -160,20 +118,11 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Stripe Atlas 四步路徑**
 > 1. Stripe Atlas 誰都能做，500 USD 線上點一點就開好公司，我就是在清邁酒吧裡點手機申請的。2. 點完後再繼續點一點申請 Stripe，拿 API 去串 vibe coding 出來的網站。3. 教人怎麼點出以上 1、2，我也做過，不過是免費的。4. 這我就沒做了，因為太缺德。
 
-**按需載入流量觀察**
-> 我認為很重要的進階觀念「按需載入跟索引」反而流量較差。有可能是自己講得不夠淺顯，也有可能是大家雖然知道額度很重要，但是這部影片卻沒有很積極地把上下文管理跟額度連結在一起。其實上下文管理能省的不只是額度，還有提升模型的表現。
-
 **L3 BD outreach 開信率**
 > 用「交流型」第一封信（不提報價、不問需求、只提「想跟你約個時間，交流一下 AI 的實際應用」），開信率 67%。同一批 list 用「推銷型」（提課程、提 L3 顧問服務）開信率 17%。差距 4 倍。第一封信不要急著賣東西，這件事在 BD 漏斗的前期是真的成立。
 
 **Resend `scheduled_at` 不可信**
 > 設定 `scheduled_at` 排程後，回讀 `GET /emails/{id}` 才是真實狀態。如果欄位回讀 null，代表排程沒成功、已經立刻寄出。不要相信 batch 送出時的 response。
-
-**AI 求職示範片**
-> 5/10 講座的「AI 求職示範」段落剪出來放 YouTube：<https://youtu.be/HcADayRCJMg>。Claude Code 一次跑完 6 間公司客製履歷，比手動投省 5 個晚上。這段是講座當天最多人留言問的內容。
-
-**Obsidian 影片的逆風**
-> 在前陣子不少人跟風吹捧 HTML 揚棄 markdown 的時刻，我發了一部誠實分享自己 Obsidian 知識庫的影片，算不算是一種逆風呢？<https://youtu.be/EhMKfG1dvnI>
 
 ## 2026 年 5 月下旬（W21）
 
@@ -195,11 +144,34 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **沒開 ultracode 也被自動觸發 103 個 agent**
 > 沒開 ultracode，它也給我自動觸發 dynamic workflow，一回神 103 個 agent 已經在路上了，氣死。看來我得研究有什麼參數可以把它強制關掉。不過老實說，我這個 request 只是在殺雞，所以也看不出來牛刀的優越性在哪。
 
-**DeepSeek 是性價比最高的平替**
-> 等他們算力到位之後還會繼續降價。說真的，除了合規要求以外，DeepSeek 應該是目前性價比最高的平替了。
-
 **廣泛焦慮症怎麼看風險報告**
 > 教大家有廣泛焦慮症的我會怎麼看一份風險報告：一、8.6% 的風險太高了，不可以接受。二、萬一發生，70% 的狀況跟我想像的一樣、甚至更糟？不可接受。三、我們從不會只擔心 30 天後的事情，30 年還差不多。
 
 **Gemini thinking budget 設無限會回空字串**
 > Gemini 2.5 Flash 一直回 `{}` 空回應，根因是 `thinking.budget_tokens: -1`（無限）——thinking 把整個 token budget 吃完，`content` 就變成 null。3.x 改用 `reasoning_effort`，不要再在 model config 裡帶 `thinking`。
+
+## 2026 年 6 月上旬（W23）
+
+**gemini CLI 在未信任資料夾會靜默掛掉**
+> gemini CLI v0.28 之後，headless 模式在「未信任資料夾」會靜默失敗——exit 0 但無輸出，包了 `2>/dev/null` 看起來就像掛掉。真正的錯誤訊息是 `Gemini CLI is not running in a trusted directory`。修法：加 `--skip-trust`，或設 `GEMINI_CLI_TRUST_WORKSPACE=true`。
+
+**dotenv 的 `\n` 陷阱殺掉 Resend key**
+> RESEND_API_KEY 在 `.env.local` 裡值的結尾混了字面 `\n`（backslash 加 n 兩個字元，dotenv 雙引號陷阱），key 被 regex 砍頭。SOP：用之前先 `curl GET /domains` 驗證 key 是乾淨的。
+
+**Codex 快照裡躺著明文 API key**
+> 掃 `~/.codex/shell_snapshots/`，發現一份快照明文 export 了 16+ 組 API key，檔案權限還是 0644 world-readable。
+
+**Vercel 臨時公開頁的兩個坑**
+> 新 project 部署出來的 URL 預設開著 Deployment Protection（Vercel Authentication），外部訪客拿到 401。另一坑：`<proj>.vercel.app` 裸別名可能是別人佔走的空殼，自家自動更新的 prod 別名是 `<proj>-<team>.vercel.app`。發連結前先 curl 驗內容。
+
+**額度重置時間為什麼刻意打亂**
+> 因為如果重置同時重設時間，那所有人的重置時間會變得一樣，這樣子可能會導致大家有一樣的使用高峰：比如在週期快到的時候瘋狂用，可能會加重尖峰負載，導致伺服器不穩定，所以他們才刻意打亂，我猜是這樣。
+
+**Claude Design 獨立額度消失**
+> 早起一則冷新聞：Claude Design 的獨立額度已經消失，併入整體 Claude 的使用額度中。
+
+**檔名叫「逐字稿」的不一定是逐字稿**
+> 檔名寫「逐字稿」，打開來是已經整理過的摘要，真正的原始錄音另外存。另一個坑：SenseVoice STT 沒有說話人標記，多人同場時開場自介很容易張冠李戴。
+
+**`includes('ai')` 把 failed 標成 AI**
+> 錯誤分類器用 `includes('ai')` 抓 AI 相關錯誤，結果 failed 跟 available 全被誤標。分類關鍵字一律用 word-boundary regex：`/\bai\b/`。
