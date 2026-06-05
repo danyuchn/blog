@@ -10,6 +10,14 @@ When converting social media posts (Threads/IG) into blog articles:
 4. **Filter noise**: Remove bare links, promotional CTAs, sign-up forms, and context-free @mentions that have no value in a blog.
 5. **No AI-speak**: No summary sentences, no "let's explore together", no emoji garnish, no bullet-point filler. The author explicitly dislikes AI-generated writing patterns.
 6. **Micro-notes format**: For short posts that can't form a full article, preserve the one-by-one format with date separators. Only add minimal context so each entry is independently readable.
+7. **Minimal bridging (忠實度)**: AI 只做最小銜接，不無中生有。改寫時不要替作者補技術解釋、情緒鋪陳、軍備競賽式論述、或喊話式「## 小結」收尾——原貼文沒有的論點就不要加。**fan-out subagent 寫稿特別容易把短貼文過度展開**（W22 dont-scrape 從 ~150 字短貼文膨脹成長論述），主對話回收時必逐篇對照原文砍掉 AI 補述。短素材就讓它保持短而緊湊。
+
+## 語意去重工具（W22 新增）
+
+`scripts/semantic_dedup.py`：用 `gemini-embedding-2` 對全部文章（與 `--micro` 拆分的 micro-notes 條目）做語意向量，列出近重複對供檢視合併。預設併發 256、同檔名 zh/en 翻譯對自動排除。
+- 跑法：`export GEMINI_API_KEY=<working key>` → `uv run scripts/semantic_dedup.py --micro --threshold 0.78 --json /tmp/blog_dedup.json`
+- `blog/.env` 的 GEMINI_API_KEY 2026-05-30 已換新，W23（2026-06-05）實測可用；若失效再從 GMAT-skills / PDT-learning / crawler 借。
+- 判讀：**高相似 ≠ 該合併**。同主題文章（CC 訂閱、desktop vs CLI）會落在 0.84–0.92，但若各自角度不同、或是時間軸上的觀點演進（如 desktop-vs-cli 4 月「CLI 勝」vs 5 月「桌面版現在 OK」），保留比合併更有資訊量。真要合併才動，published URL 無 redirect 機制。
 
 ## Content Import Workflow
 
@@ -73,3 +81,13 @@ description: 'Two 5/13 uploads via YouTube Data API: 216 MB succeeded, 257 MB hu
 ```
 
 W20 踩過 3 次（covey-time-matrix / scope-discipline-five-rules / youtube-large-upload-216-257mb）。寫完每篇後 `npm run build` 是唯一可靠的驗證手段。
+
+## W23 工作流經驗（2026-06-05）
+
+### Fan-out 寫作的忠實度審查協議
+
+16 篇全交 subagent 寫、主對話只驗證的模式下，每個寫作 agent 的 prompt 必須要求**回報「新增的非原文句子」逐句清單**。主對話照清單逐句裁決（保留/砍/改寫），比盲讀全篇快且不漏。W23 實測：13 篇一次過，3 篇需修剪（T6 替作者編造決定、D2 修辭過度+內部矛盾、D4 AI 排比收尾）——全是清單上自首的句子。
+
+### Subagent 會漏 required frontmatter
+
+W23 一篇（yu-tinghao）agent 自行判斷 `description` 是 optional 而略過，astro check 報 InvalidContentEntryDataError。寫作 prompt 要明列必填欄位（title/pubDatetime/description/slug），且收尾必跑 `npm run build` 兜底。
