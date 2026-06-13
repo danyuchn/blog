@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-06-05T04:00:00Z
+modDatetime: 2026-06-13T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -110,9 +110,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **The 50,000-Line Script Vibe**
 > Want to see the vibe of a 50,000-line script.
 
-**The Next Step: /effort xxhigh**
-> Next step: we're rolling out `/effort xxhigh`, recommended for optimal performance.
-
 **Mercury Bank Ships a CLI**
 > Got an email this morning. Mercury — the bank we set up our US company with for Stripe — just launched a CLI tool, designed for AI agents. Taiwan banks... (looks at the financial regulator)
 
@@ -153,9 +150,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ## Late May 2026 (W22)
 
-**103 Agents Auto-Triggered Without Even Turning On Ultracode**
-> I didn't turn on ultracode, yet it auto-triggered a dynamic workflow on me — by the time I looked up, 103 agents were already on their way. Infuriating. Looks like I need to find a parameter to force it off. Honestly though, my request was killing a chicken, so I couldn't even see where the ox-cleaver's superiority was supposed to show.
-
 **How Someone With GAD Reads a Risk Report**
 > Let me show you how I, with generalized anxiety disorder, read a risk report: One, an 8.6% risk is way too high, unacceptable. Two, if it happens, 70% of cases will match or exceed what I imagined? Unacceptable. Three, we never just worry about 30 days out — 30 years sounds more like it.
 
@@ -187,3 +181,23 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **`includes('ai')` Tags "failed" as AI**
 > An error classifier used `includes('ai')` to catch AI-related errors — and tagged every "failed" and "available" along the way. Classification keywords should always use word-boundary regex: `/\bai\b/`.
+
+## Mid-June 2026 (W24)
+
+**The Token Diet**
+> Here's a weight-loss trick: get hooked on AI and you'll forget to eat, forget to sleep, and only remember to eat tokens. I dropped 6kg in three months.
+
+**Vietnamese Coffee Plus a Nap**
+> Ever since coming back from Vietnam I've loved Vietnamese coffee. One trick that works incredibly well: down it, then immediately go nap for 20-30 minutes. You wake up with a crystal-clear head — it feels like dialing Opus 4.7 back to 4.6, productivity maxed out.
+
+**Why GPT 5.6 Isn't Shipping**
+> Word is GPT 5.6 won't ship this week, because what OpenAI is really aiming at isn't Opus 4.8 — it's the soon-to-launch Mythos.
+
+**Waiting for the Crying-Open-Codex Moment**
+> Watching a very earnest video, I kept waiting for it to end with "You've hit usage limit - reset next weekend," followed by the scene where you tearfully open Codex. Sadly, no such luck.
+
+**Sonnet 4.6 Plus MCP for Suspicious Emails**
+> Ordinary folks don't need to reach for Mythos — Sonnet 4.6 wired up to an MCP can help analyze suspicious malicious emails too. "The email was crudely made, the template placeholders weren't even swapped out" — I wouldn't have noticed that if it hadn't pointed it out. Just remember to tell the model not to click unfamiliar links, unless you have a proper sandbox.
+
+**Anthropic's Arrogance Playbook**
+> Being able to describe quietly nerfing the model so openly, a few days back, tells you the decision-makers are arrogant to the bone. Fable/Mythos getting pulled reminds me they put out a long post just last week urging the government to slow dangerous AI deployment and asking model vendors to ease off the pace together — so this is them getting exactly what they asked for. The funniest part: that Fable 5 takedown notice has no X to dismiss it, just sits there permanently. You can tell how mad they are.
