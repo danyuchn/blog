@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-06-05T04:00:00Z
+modDatetime: 2026-06-13T04:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -98,9 +98,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **5 萬行腳本的 vibe**
 > 想看一個腳本 5 萬行程式碼的 vibe。
 
-**/effort xxhigh 的下一步**
-> 下一步：我們推出 `/effort xxhigh`，建議使用以保持最佳效能。
-
 **Mercury 銀行推出 CLI**
 > 今早收到的信，當初辦美國公司接 Stripe 的時候合作的銀行 Mercury，推出 CLI 工具了，方便跟 AI agent 對接。台灣的銀行⋯⋯（望向金管會）
 
@@ -141,9 +138,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 ## 2026 年 5 月下旬（W22）
 
-**沒開 ultracode 也被自動觸發 103 個 agent**
-> 沒開 ultracode，它也給我自動觸發 dynamic workflow，一回神 103 個 agent 已經在路上了，氣死。看來我得研究有什麼參數可以把它強制關掉。不過老實說，我這個 request 只是在殺雞，所以也看不出來牛刀的優越性在哪。
-
 **廣泛焦慮症怎麼看風險報告**
 > 教大家有廣泛焦慮症的我會怎麼看一份風險報告：一、8.6% 的風險太高了，不可以接受。二、萬一發生，70% 的狀況跟我想像的一樣、甚至更糟？不可接受。三、我們從不會只擔心 30 天後的事情，30 年還差不多。
 
@@ -175,3 +169,23 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 **`includes('ai')` 把 failed 標成 AI**
 > 錯誤分類器用 `includes('ai')` 抓 AI 相關錯誤，結果 failed 跟 available 全被誤標。分類關鍵字一律用 word-boundary regex：`/\bai\b/`。
+
+## 2026 年 6 月中旬（W24）
+
+**吃 token 減肥法**
+> 給你一個減肥妙招：迷上 AI 就會忘記吃飯忘記睡覺，只記得吃 token，我三個月就瘦了 6kg。
+
+**越南咖啡加小睡**
+> 自從越南回來就愛喝越南咖啡。分享一個超有效的喝法：喝完立刻去睡 20-30 分鐘，醒來腦袋無比清醒，那感覺就像 Opus 4.7 轉回 4.6，工作效率直接拉滿。
+
+**GPT 5.6 為何不發**
+> 網傳 GPT 5.6 這週不會發布，因為 OpenAI 要狙擊的不是 Opus 4.8，而是即將發布的 Mythos。
+
+**期待哭著打開 Codex 的橋段**
+> 看一部很認真的影片時，我一直期待最後會出現「You've hit usage limit - reset next weekend」，然後哭著打開 Codex 的橋段。可惜沒有。
+
+**Sonnet 4.6 接 MCP 看惡意信**
+> 其實普通人不用動用到 Mythos，用 Sonnet 4.6 接 MCP 也能幫忙分析可疑惡意信件。「信件製作粗劣、模板佔位符沒改掉」這點我不講還沒發現。記得提醒模型不認識的連結不要亂點，不然就要有完整沙盒。
+
+**A 社的傲慢劇本**
+> 前幾天能把偷偷降智講得那麼光明正大，代表決策者骨子裡就是這麼傲慢。Fable/Mythos 被拉下架，讓我想到上禮拜他們才發長文呼籲政府延緩危險 AI 部署、模型商一起放緩進程，現在算是求仁得仁。最好笑的是那個 Fable 5 下架通知竟然沒有叉叉可以按掉，一直常駐在那邊，可見有多氣。
