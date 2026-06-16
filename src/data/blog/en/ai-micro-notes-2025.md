@@ -50,8 +50,8 @@ This is the archived AI micro-notes from the second half of 2025. For 2026 onwar
 **The Truth About Tech Debt**
 > Counterpoint: the freelance engineers I hired on Upwork left behind just as much tech debt as AI does.
 
-**Taiwan's "Human Intelligence"**
-> Read an article about Taiwanese companies adopting AI. Had a bitter laugh. Taiwanese companies still run on "human intelligence" more than artificial intelligence.
+**Taiwan Won't Be Replaced — "Human Intelligence" Is Too Cheap**
+> Read an article about Taiwanese companies adopting AI. Had a bitter laugh — Taiwanese companies still run on "human intelligence" more than artificial intelligence. I don't think AI will replace humans here. Because labor is just that cheap.
 
 **Using Cursor to Check My Bills**
 > Using Cursor + Claude to audit my credit card rewards and cashback — I'm probably the only person doing this.
@@ -62,9 +62,6 @@ This is the archived AI micro-notes from the second half of 2025. For 2026 onwar
 
 **The Twilight of Knowledge Websites**
 > With AI going mainstream, these old-school knowledge aggregation sites — even though they're the soil that fed large model parameters — will ultimately be marginalized by the sheer usability of LLMs.
-
-**Taiwan Won't Be Replaced**
-> I don't think AI will replace humans in Taiwan. Because labor is just that cheap here.
 
 **The Pain of Recitation Errors**
 > When designing an AI app, I keep hitting recitation errors, but users need to see the original question text to answer it! This problem has had me stuck for three days. Coming here to vent.
