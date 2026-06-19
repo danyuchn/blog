@@ -24,6 +24,7 @@
       const lang = localStorage.getItem("lang") || "zh";
       const next = lang === "zh" ? "en" : "zh";
       localStorage.setItem("lang", next);
+      window.dispatchEvent(new CustomEvent("lang-change", { detail: next }));
 
       // On post pages, navigate to translation if available
       const mainEl = document.getElementById("main-content");
