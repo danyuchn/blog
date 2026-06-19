@@ -1,4 +1,5 @@
 @~/.claude-lang-rules/typescript/patterns.md
+<!-- shared TypeScript lang-rules imported from ~/.claude-lang-rules/typescript/patterns.md -->
 
 
 # CLAUDE.md
