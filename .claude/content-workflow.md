@@ -29,6 +29,7 @@ When importing content from social media exports (Instagram/Threads):
    - Categories: `scripts/categories/*.md` (gitignored)
    - Encoding fix: Meta exports use latin-1 encoded strings inside UTF-8 JSON; apply `text.encode('latin-1').decode('utf-8')` per field
    - **Threads-only export edge case:** When the Meta export contains only Threads (no `posts_1.json` for IG), `classify_posts.py` errors out. Skip the script and write an ad-hoc classification snippet for the W's date range — do not patch the script for one-off cases.
+   - **匯出視窗與上週重疊必去重：** 匯出日通常是週六、上週週報也在週六做，所以匯出開頭一兩天的貼文常已收進上週 micro-notes。提案前必對照上週 micro-notes 區段剔除重複（W25 實況：06-13 兩則 Fable 下架貼文已在 W24「A 社的傲慢劇本」，剔除）。Threads export 的文字是 latin-1 包 UTF-8，逐欄 `s.encode('latin-1').decode('utf-8')` 修正。
 2. **Aggregate:** Group related posts into coherent blog articles
    - **提案分批時必說剩餘篇章去處**：四來源掃完聚類後，提案給使用者選「全跑 vs Top N」時，**必須明說每個未選篇章的去處**（micro-notes / 留下週 / 完全棄寫）。否則使用者選了縮減版後會再來問「為何剩下幾篇沒開」，導致補開階段重做（曾發生：選 Top 6 後 30 分鐘內又補單 7 篇全開，build 跑兩次、提案重議一次）。
 3. **Write:** Create Chinese article first in `src/data/blog/zh/`
@@ -65,6 +66,7 @@ Micro-notes remain in `ai-micro-notes.md` when they are: single observations, jo
 - **忠實度審查協議**：每個寫作 agent 的 prompt 必須要求回報「新增的非原文句子」逐句清單。主對話照清單逐句裁決（保留/砍/改寫），比盲讀全篇快且不漏。實測 16 篇：13 篇一次過，3 篇需修剪（替作者編造決定、修辭過度+內部矛盾、AI 排比收尾）——全是清單上自首的句子。
 - **required frontmatter 兜底**：subagent 會自行判斷 `description` 為 optional 而略過，導致 astro check 報 InvalidContentEntryDataError。寫作 prompt 要明列必填欄位（title / pubDatetime / description / slug），收尾必跑 `npm run build` 兜底。
 - 呼應上方原則 7：fan-out 特別容易把短貼文過度展開，主對話回收時必逐篇對照原文砍掉 AI 補述。
+- **寫手 subagent 會自行 git commit/push（即使 prompt 明寫「不要跑 git」）**：general-purpose agent 帶 Bash，W25 有寫手跑了 `git add -A && commit && push`，把開場既有的 working-tree 變更（CLAUDE.md、.codex 刪除、doc reorg）和它處理的圖片一起掃進一個 `chore:` commit 並 push。後果可控（圖片進版庫無妨）但違反「commit 需使用者確認」。對策：fan-out 前先把既有 working-tree 變更自己 commit 或 stash 乾淨，避免被掃入；圖片資產由主對話複製、不交給寫手；收尾 commit 一律主對話自己做，逐檔 `git add <path>` 而非 `git add -A`。
 
 ## YAML frontmatter 規則
 

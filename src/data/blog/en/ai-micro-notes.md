@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-06-13T04:00:00Z
+modDatetime: 2026-06-19T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -130,9 +130,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **L3 BD Outreach Open Rate**
 > First email using "let's exchange notes" framing (no pitch, no needs ask, just "want to grab some time, exchange notes on AI in practice") got 67% open rate. Same list with a "let me sell you" framing (course pitch, L3 consulting service) got 17%. Four times the gap. Don't sell anything in the first email — that's actually true for the early stage of a BD funnel.
 
-**Resend `scheduled_at` Can't Be Trusted**
-> After setting `scheduled_at`, the read-back from `GET /emails/{id}` is the source of truth. If the field comes back null, the schedule didn't take and the email is already out. Don't trust the response from the batch send call.
-
 ## Late May 2026 (W21)
 
 **Karpathy — The Ultimate Free Agent**
@@ -153,16 +150,7 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **How Someone With GAD Reads a Risk Report**
 > Let me show you how I, with generalized anxiety disorder, read a risk report: One, an 8.6% risk is way too high, unacceptable. Two, if it happens, 70% of cases will match or exceed what I imagined? Unacceptable. Three, we never just worry about 30 days out — 30 years sounds more like it.
 
-**Setting Gemini's Thinking Budget to Infinite Returns an Empty String**
-> Gemini 2.5 Flash kept returning an empty `{}`. The root cause: `thinking.budget_tokens: -1` (unlimited) — thinking eats the entire token budget, and `content` comes back null. The 3.x line switched to `reasoning_effort`; stop passing `thinking` in the model config.
-
 ## Early June 2026 (W23)
-
-**gemini CLI Fails Silently in Untrusted Folders**
-> Since gemini CLI v0.28, headless mode fails silently in an "untrusted folder" — exit 0 with no output, and wrapped in `2>/dev/null` it just looks dead. The real error message is `Gemini CLI is not running in a trusted directory`. Fix: add `--skip-trust`, or set `GEMINI_CLI_TRUST_WORKSPACE=true`.
-
-**dotenv's `\n` Trap Killed My Resend Key**
-> The RESEND_API_KEY in `.env.local` had a literal `\n` (backslash plus n, two characters) at the end of the value — dotenv's double-quote trap — and the key got decapitated by a regex. SOP: before using a key, run `curl GET /domains` once to verify it's clean.
 
 **Plaintext API Keys Sitting in Codex Snapshots**
 > Scanned `~/.codex/shell_snapshots/` and found one snapshot exporting 16+ API keys in plaintext, with 0644 world-readable file permissions.
@@ -178,9 +166,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **A File Named "Transcript" Isn't Necessarily a Transcript**
 > The file was named "transcript," but it turned out to be an already-edited summary — the raw recording lived elsewhere. Bonus trap: SenseVoice STT has no speaker diarization, so in multi-speaker sessions the opening introductions get attributed to the wrong people.
-
-**`includes('ai')` Tags "failed" as AI**
-> An error classifier used `includes('ai')` to catch AI-related errors — and tagged every "failed" and "available" along the way. Classification keywords should always use word-boundary regex: `/\bai\b/`.
 
 ## Mid-June 2026 (W24)
 
@@ -201,3 +186,41 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **Anthropic's Arrogance Playbook**
 > Being able to describe quietly nerfing the model so openly, a few days back, tells you the decision-makers are arrogant to the bone. Fable/Mythos getting pulled reminds me they put out a long post just last week urging the government to slow dangerous AI deployment and asking model vendors to ease off the pace together — so this is them getting exactly what they asked for. The funniest part: that Fable 5 takedown notice has no X to dismiss it, just sits there permanently. You can tell how mad they are.
+
+## Late June 2026 (W25)
+
+**The AI-Detects-the-Fallen Utopia Is Still Far Off**
+> Someone wished AI could detect a collapsed person in a riverside park and auto-call for help. The problem: covering an entire riverside with detection is basically Skynet — the privacy backlash would explode, and it's economically unviable. Even Tesla FSD is road-legal in only a handful of places worldwide. The pragmatic option today is to wear the detector yourself (Apple Watch fall detection auto-dials emergency). It's not that Taiwan lacks it — nowhere in the world has it yet.
+
+**OpenAI's Lying-Flat-and-Winning Timeline**
+> Someone on Reddit compiled an "OpenAI lying-flat-and-winning timeline": the Pentagon labeled Anthropic a "supply chain risk," and hours later that same day OpenAI signed its own Pentagon contract; a federal court later ruled the label was "punitive retaliation"; then Anthropic's valuation overtook OpenAI's; then Commerce pulled two models on "national security" grounds with a zero-detail letter, while GPT-5.5 has the same capabilities and goes untouched. Hilarious.
+
+**People With Body Odor Never Know**
+> Trust me: people with body odor never realize it, no matter how you hint. And the moment you say it outright, there's a high chance of a wounded ego.
+
+**Claude Code Unleashed My ADHD**
+> Biggest side effect of starting with Claude Code: discovering that the mild, undiagnosed ADHD from my childhood has been completely unleashed by AI.
+
+**Coming Home, I Realized Taiwan Got Rich**
+> Back in Taiwan this trip, it really feels like the place got rich — in hospitals, restaurants, on the metro, the overheard chatter is all about buying stocks and investing; office workers in the elevator talk about trips to Japan and Europe. A set meal at my usual spot went from NT$160 to NT$220 in two years; an Uber that used to be NT$160-200 is now NT$250-300. Living in Thailand, I can barely keep up.
+
+**Don't Rush to Trash Gemini**
+> Gemini's strengths are multimodality and long context. Throw a one-hour audio recording at Gemini 3.5 Flash for a summary, and you'll get that "Gemini is trash" meme thrown right back at you.
+
+**GMAC Really Is Going Superscore**
+> Can't believe it — GMAC is seriously pushing GMAT Superscore this time, ushering in the score-stacking era.
+
+**A Modern Half-Glass-of-Water Metaphor**
+> Optimist: deal's on? Fable's coming back, that's why it errors out. Pessimist: deal's off? Anthropic angrily pulled every model to spite the government.
+
+**First Principles: If Holding a Grudge Doesn't Help, Delete It**
+> First principles, right? Does holding a grudge make things better? No. Then delete it.
+
+**The AI-Course Cash Grab, Overheard at a Convenience Store**
+> Sheltering from the rain at a 7-Eleven seating area in Da'an, Taipei, waiting for class, I overheard some aunties talking about AI: "I'm paying NT$18,000 a month for my son to learn AI, four installments now, it's that teacher's course he recommended last time." Infuriating — I really want to know which teacher rakes it in this well. The market is now buzzing with "Law of Attraction AI," "Benefactor AI," "share your gratitude and closed deals with AI," "AI raises your personal energy," "networking coach radiating beauty" — I can't take it anymore. The highest-value overheard conversations really do happen in convenience stores and fast-food seating areas.
+
+**A Sense of Boundaries**
+> Learn one more term while you're at it: a sense of boundaries. Many say it's a Mainland Chinese coinage, but I find it irreplaceable. The relative you haven't seen since last New Year prying into your private life — how much you earn, are you married yet — that's the absence of boundaries.
+
+**A Wuxia-Style Water Dispenser**
+> Deep winter, snow falling, the swordsman arrives at the inn, parched. Innkeeper: please have some warm water. "Have you boiling water?" Innkeeper: first press unlock, then press hot.
