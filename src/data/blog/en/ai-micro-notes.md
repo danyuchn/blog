@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-06-19T04:00:00Z
+modDatetime: 2026-06-25T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -88,9 +88,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ## Late April 2026 (W18)
 
-**The AI Resume Arms Race**
-> North America is even crazier: you blast resumes with AI, they screen resumes with AI. Eventually nobody is doing anything; it's just AI talking to AI.
-
 **Baidu Got Claude to Comply**
 > Claude is normally so morally upright — won't do this, won't do that. But somehow with Baidu it suddenly cooperates with jailbreaks. Looks like Dario has some unspecified trauma from his Baidu days.
 
@@ -169,9 +166,6 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 ## Mid-June 2026 (W24)
 
-**The Token Diet**
-> Here's a weight-loss trick: get hooked on AI and you'll forget to eat, forget to sleep, and only remember to eat tokens. I dropped 6kg in three months.
-
 **Vietnamese Coffee Plus a Nap**
 > Ever since coming back from Vietnam I've loved Vietnamese coffee. One trick that works incredibly well: down it, then immediately go nap for 20-30 minutes. You wake up with a crystal-clear head — it feels like dialing Opus 4.7 back to 4.6, productivity maxed out.
 
@@ -184,34 +178,19 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 **Sonnet 4.6 Plus MCP for Suspicious Emails**
 > Ordinary folks don't need to reach for Mythos — Sonnet 4.6 wired up to an MCP can help analyze suspicious malicious emails too. "The email was crudely made, the template placeholders weren't even swapped out" — I wouldn't have noticed that if it hadn't pointed it out. Just remember to tell the model not to click unfamiliar links, unless you have a proper sandbox.
 
-**Anthropic's Arrogance Playbook**
-> Being able to describe quietly nerfing the model so openly, a few days back, tells you the decision-makers are arrogant to the bone. Fable/Mythos getting pulled reminds me they put out a long post just last week urging the government to slow dangerous AI deployment and asking model vendors to ease off the pace together — so this is them getting exactly what they asked for. The funniest part: that Fable 5 takedown notice has no X to dismiss it, just sits there permanently. You can tell how mad they are.
-
 ## Late June 2026 (W25)
 
 **The AI-Detects-the-Fallen Utopia Is Still Far Off**
 > Someone wished AI could detect a collapsed person in a riverside park and auto-call for help. The problem: covering an entire riverside with detection is basically Skynet — the privacy backlash would explode, and it's economically unviable. Even Tesla FSD is road-legal in only a handful of places worldwide. The pragmatic option today is to wear the detector yourself (Apple Watch fall detection auto-dials emergency). It's not that Taiwan lacks it — nowhere in the world has it yet.
 
-**OpenAI's Lying-Flat-and-Winning Timeline**
-> Someone on Reddit compiled an "OpenAI lying-flat-and-winning timeline": the Pentagon labeled Anthropic a "supply chain risk," and hours later that same day OpenAI signed its own Pentagon contract; a federal court later ruled the label was "punitive retaliation"; then Anthropic's valuation overtook OpenAI's; then Commerce pulled two models on "national security" grounds with a zero-detail letter, while GPT-5.5 has the same capabilities and goes untouched. Hilarious.
-
 **People With Body Odor Never Know**
 > Trust me: people with body odor never realize it, no matter how you hint. And the moment you say it outright, there's a high chance of a wounded ego.
-
-**Claude Code Unleashed My ADHD**
-> Biggest side effect of starting with Claude Code: discovering that the mild, undiagnosed ADHD from my childhood has been completely unleashed by AI.
 
 **Coming Home, I Realized Taiwan Got Rich**
 > Back in Taiwan this trip, it really feels like the place got rich — in hospitals, restaurants, on the metro, the overheard chatter is all about buying stocks and investing; office workers in the elevator talk about trips to Japan and Europe. A set meal at my usual spot went from NT$160 to NT$220 in two years; an Uber that used to be NT$160-200 is now NT$250-300. Living in Thailand, I can barely keep up.
 
-**Don't Rush to Trash Gemini**
-> Gemini's strengths are multimodality and long context. Throw a one-hour audio recording at Gemini 3.5 Flash for a summary, and you'll get that "Gemini is trash" meme thrown right back at you.
-
 **GMAC Really Is Going Superscore**
 > Can't believe it — GMAC is seriously pushing GMAT Superscore this time, ushering in the score-stacking era.
-
-**A Modern Half-Glass-of-Water Metaphor**
-> Optimist: deal's on? Fable's coming back, that's why it errors out. Pessimist: deal's off? Anthropic angrily pulled every model to spite the government.
 
 **First Principles: If Holding a Grudge Doesn't Help, Delete It**
 > First principles, right? Does holding a grudge make things better? No. Then delete it.
@@ -224,3 +203,26 @@ Short AI hot takes I've been posting on Threads since 2026. Some are too short t
 
 **A Wuxia-Style Water Dispenser**
 > Deep winter, snow falling, the swordsman arrives at the inn, parched. Innkeeper: please have some warm water. "Have you boiling water?" Innkeeper: first press unlock, then press hot.
+
+## Late June 2026 (W26)
+
+**Local vs Cloud Models**
+> Cloud models? 8GB is enough to run them. Local models depend on your specs — but why go local? If it's for privacy, that's fair. If it's to save money, not really — because making a local model perform on par with commercial ones means shelling out for hardware first. My advice: don't overthink local early on. Get comfortable with closed-source models first.
+
+**Tokenizer Rewrite Means 1.4x Usage**
+> A tokenizer rewrite is the real shocker — 1.4x usage.
+
+**Opus 4.6 vs 360 Antivirus**
+> A Chinese user pitted Opus 4.6 against 360 Antivirus. 360 won. That tells you everything about 360's technical (hijacking) prowess.
+
+**Claude Import Mode for GPT Memories**
+> Claude has an import mode, right? You can extract GPT's knowledge and memories about you, then import them into Claude.
+
+**The Ones Who Roast Claude Hardest Use It Longest**
+> The people who roast Claude the hardest are the ones who've used it the longest.
+
+**Three Verification Misalignments**
+> Verifying against your own spec is worse than verifying against the actual computation — if your spec has an error, you've made your own mistake the baseline. Deep-research false negatives: 16/19 in the "refuted" bucket were 0-0 or 1-0 votes (agents timed out without verifying, not actually refuted). Dry-runs validate data integrity but can't catch an exercise that simply doesn't work — you need to simulate a real student's spoken prompts with step-by-step chaining to surface that.
+
+**$1,346 Isn't Productivity, It's an Anesthetic Bill**
+> ccusage hit an all-time high, +111%. When you separate spending from output, that number isn't "the cost of efficiency" — it's "the bill for being spoiled by a tool."
