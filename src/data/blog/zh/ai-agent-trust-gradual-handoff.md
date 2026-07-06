@@ -6,7 +6,7 @@ slug: zh/ai-agent-trust-gradual-handoff
 featured: false
 draft: false
 tags:
-  - ai-security
+  - security
   - claude-code
   - opinion
 description: '有人問擔心 AI agent 失控怎麼辦。我的回覆是：別一開始就選高度自主的龍蝦，先在你親自監督放行每一步的隔離環境裡操作，再慢慢放手。'

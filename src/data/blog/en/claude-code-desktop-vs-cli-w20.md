@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-  - ai-coding-tools
+  - ai-coding
   - claude-app
 description: Two or three weeks ago Anthropic overhauled the desktop app. Over 90% of the features now match the CLI. If you're a beginner who's scared of the terminal, starting with the desktop app is fine.
 ---

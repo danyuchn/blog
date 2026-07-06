@@ -8,7 +8,7 @@ draft: false
 tags:
   - vibe-coding
   - ai-coding
-  - opinions
+  - opinion
 description: 不該統一貶低 Vibe Coding，但也要認清課程品質的陷阱。一個教學從業十年以上的人，分享辨識有料與沒料的方法。
 ---
 

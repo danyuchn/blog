@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-  - ai-coding-tools
+  - ai-coding
   - ai-workflow
 description: Web Claude Code has two completely different runtimes — cloud VM and remote-control. Here is what I learned setting up both, the small bugs I hit, and why some user-level configs simply cannot be lifted to the cloud as-is.
 ---

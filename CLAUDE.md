@@ -20,6 +20,7 @@ Astro 5 blog based on AstroPaper template. Bilingual (EN/ZH) content, deployed t
 | `npm run format:check` | Prettier check |
 | `npm run format` | Prettier auto-format |
 | `npm run lint` | ESLint |
+| `npm run check:content` | 內容驗證：frontmatter / tag 白名單 / zh-en 檔名對齊 / micro-notes（CI blocking） |
 
 ## Architecture
 
@@ -43,6 +44,8 @@ Blog posts are Markdown with YAML frontmatter. Slugs must include language prefi
 - Chinese: `src/data/blog/zh/*.md` → slug: `zh/post-name`
 
 Required frontmatter: `title`, `pubDatetime`, `description`, `slug`. Optional: `featured`, `draft`, `tags`, `modDatetime`, `ogImage`, `canonicalURL`.
+
+**完整文章規格 → @.claude/specs/article-spec.md**（frontmatter 逐欄位規則、內文/圖片/embed 慣例、改寫七原則）。新文章從 `.claude/templates/article.md` 複製起手；tags 只准用 `.claude/specs/tags.md` 白名單。機器可查規則由 `npm run check:content` 在 CI 強制。
 
 **⚠️ pubDatetime 陷阱：** 設為 UTC 未來時間（即使只差幾小時）會導致 `postFilter.ts` 在 production build 時過濾掉文章。文章頁面仍會生成（`getStaticPaths` 不用 postFilter），但翻譯連結、首頁列表、RSS 等全部不會出現。建議使用已過去的 UTC 時間，例如 `T04:00:00Z`（曼谷上午 11 點）。
 
@@ -69,7 +72,7 @@ Pages use Astro file-based routing in `src/pages/`:
 
 ## Content Workflow
 
-詳見 @.claude/content-workflow.md（改寫原則 7 條、社群媒體匯入 7 步驟流程）。
+入口 @.claude/content-workflow.md（文件地圖 + 社群匯入 7 步驟 + fan-out 協議）。規格在 `.claude/specs/`、起手模板在 `.claude/templates/`、週報清單在 `.claude/checklists/weekly-roundup.md`。
 
 ## Deployment
 

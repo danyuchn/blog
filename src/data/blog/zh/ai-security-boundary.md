@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-  - ai-security
+  - security
   - ai-tools
 description: 當所有人都在瘋 AI 自動化的時候，我選擇先搞清楚自己的能力邊界。分享 Presidio 隱私工具和用 Claude Code 工作的安全實踐。
 ---

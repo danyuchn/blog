@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-trends
   - ai-education
-  - opinions
+  - opinion
 description: AI 不會取代你的思考，但會暴露你不會思考。從跟 AI 互動中重新發現的學習態度，到未來考試與職場對「AI 協作力」的需求，一個教學者的觀察。
 ---
 

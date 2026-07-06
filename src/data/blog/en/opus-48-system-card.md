@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-trends
-  - ai-models-comparison
+  - model-comparison
 description: 'The night Opus 4.8 launched, I split the 244-page system card into 20 chunks, handed them to 20 gemini agents to summarize in parallel, and pieced together the fastest rundown online. Plus a digest of Reddit''s hands-on reactions within two hours of launch.'
 ---
 

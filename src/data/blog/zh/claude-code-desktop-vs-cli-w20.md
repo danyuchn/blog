@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-  - ai-coding-tools
+  - ai-coding
   - claude-app
 description: 兩三週前 Anthropic 把桌面 App 大翻新，90% 以上功能跟終端機同步。初學者對終端機有恐懼，現在從桌面版開始完全沒問題。
 ---

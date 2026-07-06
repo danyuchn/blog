@@ -1,9 +1,15 @@
 ---
+author: Dustin Yuchen Teng
 title: "知識庫大掃除：用 AI 幫你找到埋了幾個月的爛帳"
 slug: "zh/knowledge-base-audit-2026"
 pubDatetime: 2026-05-01T04:00:00Z
 description: "Rules 從 13,020 降到 7,590 tokens、92 個 wikilink 斷連、待辦系統五大根因——記錄一次花了四天的知識庫健檢，以及整理出來的季度 SOP。"
-tags: [知識管理, Obsidian, Claude Code, 系統健檢, 自動化]
+tags:
+  - knowledge-management
+  - obsidian
+  - claude-code
+  - system-maintenance
+  - automation
 featured: false
 draft: false
 ---

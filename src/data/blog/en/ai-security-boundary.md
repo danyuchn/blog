@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-  - ai-security
+  - security
   - ai-tools
 description: When everyone is going wild with AI automation, I chose to understand my own capability boundaries first. Sharing Presidio for data privacy and my security practices with Claude Code.
 ---

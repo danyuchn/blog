@@ -9,7 +9,7 @@ tags:
   - claude
   - gemini
   - codex
-  - ai-models-comparison
+  - model-comparison
   - opinion
 description: A year in, the three flagships have developed very visible "personalities" — Gemini 3 is the dramatic PhD, Claude 4.7 is the slick veteran, and GPT-5.5 turns out to be the most pragmatic colleague of the wave. Plus a fun trick for guessing the version from "sass density."
 ---

@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-product
   - developer-experience
-  - opinions
+  - opinion
 description: A teacher-turned-builder shares the real story of four generations of AI tool development—RAG, platform architecture, cross-border deployment, and open-source strategy, with all the pitfalls along the way.
 ---
 

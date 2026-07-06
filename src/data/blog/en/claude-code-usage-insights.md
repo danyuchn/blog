@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-  - opinions
+  - opinion
 description: "46 days, 6 projects, 7,843 conversations. This is not a manual — it's a diary of trial and error."
 ---
 

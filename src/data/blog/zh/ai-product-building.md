@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-product
   - developer-experience
-  - opinions
+  - opinion
 description: 一個教學從業者，從 GPT 自訂 Agent 起步，歷經四代 AI 工具開發，分享 RAG、平台架構、跨國部署、開源策略的真實踩坑紀錄。
 ---
 

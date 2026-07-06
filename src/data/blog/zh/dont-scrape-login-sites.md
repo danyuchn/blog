@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ai-tools
-  - ai-security
+  - security
   - ai-workflow
 description: '需要登入的網站，別叫 AI agent 去硬爬。你的 token 就是你的帳號，admin 一丟二向箔你就沒了。花點小錢買第三方爬蟲 API，把封號風險轉嫁出去。'
 ---
