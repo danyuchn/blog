@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://github.com/danyuchn",
   desc: "Sharing practical AI workflows, tools, and insights for everyday learning and productivity.",
   title: "Dustin's AI Lab",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "", // empty → fall back to dynamically generated /og.png
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,

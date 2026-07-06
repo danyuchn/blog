@@ -24,7 +24,7 @@ export default defineConfig({
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
-      themes: { light: "min-light", dark: "night-owl" },
+      themes: { light: "github-light", dark: "github-dark" },
       defaultColor: false,
       wrap: false,
       transformers: [
@@ -62,20 +62,12 @@ export default defineConfig({
     preserveScriptOrder: true,
     fonts: [
       {
-        name: "Playfair Display",
-        cssVariable: "--font-playfair",
+        name: "Noto Serif TC",
+        cssVariable: "--font-noto-serif-tc",
         provider: fontProviders.google(),
-        fallbacks: ["Georgia", "serif"],
-        weights: [400, 600, 700],
-        styles: ["normal", "italic"],
-      },
-      {
-        name: "Lora",
-        cssVariable: "--font-lora",
-        provider: fontProviders.google(),
-        fallbacks: ["Georgia", "serif"],
-        weights: [400, 500, 600, 700],
-        styles: ["normal", "italic"],
+        fallbacks: ["Songti TC", "STSong", "Georgia", "serif"],
+        weights: [700, 900],
+        styles: ["normal"],
       },
       {
         name: "Google Sans Code",

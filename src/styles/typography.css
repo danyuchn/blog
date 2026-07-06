@@ -8,13 +8,12 @@
     h1,
     h2,
     h3,
-    h4,
-    th {
-      @apply mb-3 text-foreground;
+    h4 {
+      @apply mb-3 font-display font-bold text-foreground;
     }
 
-    h3 {
-      @apply italic;
+    th {
+      @apply mb-3 text-foreground;
     }
 
     p,
@@ -28,7 +27,7 @@
     }
 
     a {
-      @apply wrap-break-word text-foreground decoration-dashed underline-offset-4 hover:text-accent focus-visible:no-underline;
+      @apply wrap-break-word text-foreground underline-offset-4 hover:text-accent focus-visible:no-underline;
     }
 
     ul {
@@ -75,7 +74,7 @@
     }
 
     blockquote {
-      @apply border-s-accent/80 wrap-break-word opacity-80;
+      @apply wrap-break-word border-y-2 border-s-0 border-foreground py-4 ps-0 font-display not-italic;
     }
 
     details {
@@ -83,17 +82,17 @@
     }
 
     summary {
-      @apply focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:outline-dashed;
+      @apply focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent;
     }
 
     pre {
-      @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed;
+      @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent;
     }
   }
 
   /* ===== YouTube / Video Embed ===== */
   .video-embed {
-    @apply relative w-full overflow-hidden rounded-sm border border-border;
+    @apply relative w-full overflow-hidden border border-border;
     padding-top: 56.25%;
   }
 
@@ -114,13 +113,13 @@
   /* https://shiki.style/packages/transformers */
   .astro-code {
     .line.diff.add {
-      @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];
+      @apply relative inline-block w-full bg-emerald-500/15 before:absolute before:-left-3 before:text-emerald-500 before:content-['+'];
     }
     .line.diff.remove {
-      @apply relative inline-block w-full bg-red-500/20 before:absolute before:-left-3 before:text-red-500 before:content-['-'];
+      @apply relative inline-block w-full bg-rose-500/15 before:absolute before:-left-3 before:text-rose-500 before:content-['-'];
     }
     .line.highlighted {
-      @apply inline-block w-full bg-slate-400/20;
+      @apply inline-block w-full bg-foreground/10;
     }
     .highlighted-word {
       @apply rounded-sm border border-border px-0.5 py-px;
