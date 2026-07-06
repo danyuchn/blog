@@ -5,26 +5,29 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #faf7f2;
-  --foreground: #1a1714;
-  --accent: #7c4f3a;
-  --muted: #ede9e3;
-  --border: #d9d4cb;
-  --accent-surface: color-mix(in srgb, #7c4f3a 10%, #faf7f2);
+  --background: #ffffff;
+  --foreground: #111111;
+  --accent: #c8371e;
+  --muted: #f2f2f0;
+  --border: #d8d6d2;
+  --accent-surface: color-mix(in srgb, #c8371e 8%, #ffffff);
 }
 
 html[data-theme="dark"] {
-  --background: #272320;
-  --foreground: #f7f2eb;
-  --accent: #d4845a;
-  --muted: #36302a;
-  --border: #4a4138;
-  --accent-surface: color-mix(in srgb, #d4845a 16%, #272320);
+  --background: #141414;
+  --foreground: #f2efea;
+  --accent: #ff6a4d;
+  --muted: #232323;
+  --border: #3a3a38;
+  --accent-surface: color-mix(in srgb, #ff6a4d 14%, #141414);
 }
 
 @theme inline {
-  --font-display: var(--font-playfair), "STSong", "Songti SC", Georgia, serif;
-  --font-app: var(--font-lora), "STSong", "Songti SC", Georgia, serif;
+  --font-display:
+    var(--font-noto-serif-tc), "Songti TC", "STSong", Georgia, serif;
+  --font-app:
+    system-ui, -apple-system, "PingFang TC", "Hiragino Sans", "Noto Sans TC",
+    "Microsoft JhengHei", sans-serif;
   --font-mono: var(--font-google-sans-code), ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -48,7 +51,7 @@ html[data-theme="dark"] {
   }
   a,
   button {
-    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
@@ -65,11 +68,24 @@ html[data-theme="dark"] {
 }
 
 .active-nav {
-  @apply underline decoration-wavy decoration-2 underline-offset-8;
+  @apply underline decoration-2 underline-offset-8;
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
