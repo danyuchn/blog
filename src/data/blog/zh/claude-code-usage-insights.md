@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-  - opinions
+  - opinion
 description: "46 天、6 個專案、7843 條對話，整理出來的 Claude Code 實戰心法。不是教學手冊，是踩坑日記。"
 ---
 

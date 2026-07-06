@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-education
   - ai-trends
-  - opinions
+  - opinion
 description: A 15-year teaching veteran shares how AI reignited his passion for teaching, how to build an AI clone of yourself, open-source your knowledge, and why "teachers who use AI" are the real threat.
 ---
 

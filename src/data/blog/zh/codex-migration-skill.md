@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - codex
-  - ai-coding-tools
+  - ai-coding
   - skills
 description: 把整套個人 harness 從 Claude Code 遷移到 Codex 不容易——claude.md / agents.md、MCP、hooks、settings 各自要對齊。我把流程包成一個 Skill 放在 GitHub，順便聊聊為什麼最近越來越常用 Codex。
 ---

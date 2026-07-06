@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ai-tools
-  - ai-security
+  - security
 description: 台灣的個資格式沒有現成的去識別化工具。所以我自己做了一個，讓機敏資料不離開你的電腦就能安全送 AI 處理。
 ---
 

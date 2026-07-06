@@ -6,7 +6,7 @@ slug: en/ai-agent-trust-gradual-handoff
 featured: false
 draft: false
 tags:
-  - ai-security
+  - security
   - claude-code
   - opinion
 description: 'Someone asked what to do if you worry about AI agents going rogue. My answer: don''t pick a highly autonomous lobster up front. Start in an isolated setting where you supervise and approve every step, then let go slowly.'

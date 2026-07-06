@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-trends
-  - ai-models-comparison
+  - model-comparison
 description: 'Opus 4.8 發布當晚，我把 244 頁系統卡切成 20 份、丟給 20 個 gemini agent 並行摘要，拼出全網最速重點。附上發布兩小時內的 Reddit 實測整理。'
 ---
 

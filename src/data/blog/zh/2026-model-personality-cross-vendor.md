@@ -9,7 +9,7 @@ tags:
   - claude
   - gemini
   - codex
-  - ai-models-comparison
+  - model-comparison
   - opinion
 description: 用了一整年下來，三家的旗艦模型各自有很明顯的「脾氣」——Gemini 3 像戲精博士、Claude 4.7 像油條前輩、GPT-5.5 反而是這波最務實的同事。把累積的觀察整理成一篇對比，順便講一個從「貧嘴密度」反推版本號的玩法。
 ---

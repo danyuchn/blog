@@ -1,9 +1,14 @@
 ---
+author: Dustin Yuchen Teng
 title: "頻道訂閱兩週漲 2205%：一支影片怎麼把演算法打開的"
 slug: "zh/youtube-growth-mechanism"
 pubDatetime: 2026-05-01T04:00:00Z
 description: "用真實數據拆解 EP.18 爆款的完整機制：不是 SEO，是留存率觸發訂閱者激活，再透過 sidebar 擴散。以及我做了什麼讓這件事發生。"
-tags: [youtube, 頻道成長, 創作者, AI課程]
+tags:
+  - youtube
+  - channel-growth
+  - creator
+  - ai-course
 featured: false
 draft: false
 ---

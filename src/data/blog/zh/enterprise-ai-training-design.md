@@ -1,9 +1,14 @@
 ---
+author: Dustin Yuchen Teng
 title: "幫企業導入 AI，教案設計最常犯的三個錯"
 slug: "zh/enterprise-ai-training-design"
 pubDatetime: 2026-05-01T04:00:00Z
 description: "從實際的企業培訓案例中，整理出三個教案設計的核心錯誤：統一任務不等於統一方法論、開放式問卷無效、以及缺少「自主應用」這一步。"
-tags: [企業培訓, AI課程, 教學設計, AgentCrew]
+tags:
+  - enterprise-training
+  - ai-course
+  - teaching-design
+  - agentcrew
 featured: false
 draft: false
 ---

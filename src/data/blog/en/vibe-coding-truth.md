@@ -8,7 +8,7 @@ draft: false
 tags:
   - vibe-coding
   - ai-coding
-  - opinions
+  - opinion
 description: We shouldn't uniformly trash Vibe Coding, but we do need to recognize the traps in course quality. A teacher with 10+ years in the game shares how to tell the real deal from the fakes.
 ---
 

@@ -1,9 +1,15 @@
 ---
+author: Dustin Yuchen Teng
 title: "自動化影片製作管道：2026 年四月踩過的九個坑"
 slug: "zh/video-production-gotchas-2026"
 pubDatetime: 2026-05-01T04:00:00Z
 description: "用 Remotion、ffmpeg、yt-dlp、SiliconFlow ASR、YouTube API 自動化影片製作流程，四月份踩到的九個具體 bug 與解法。"
-tags: [ffmpeg, Remotion, 自動化, 踩坑, YouTube]
+tags:
+  - ffmpeg
+  - remotion
+  - automation
+  - gotchas
+  - youtube
 featured: false
 draft: false
 ---

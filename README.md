@@ -27,20 +27,20 @@ npm run preview
 
 ## Adding New Posts
 
-Create a `.md` file under `src/data/blog/en/` or `src/data/blog/zh/`:
+Create a `.md` file under `src/data/blog/en/` or `src/data/blog/zh/`. Start from the template at `.claude/templates/article.md`; the full authoring spec lives in `.claude/specs/article-spec.md`, and tags must come from the allowlist in `.claude/specs/tags.md` (enforced by `npm run check:content` in CI):
 
 ```markdown
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-02-12T12:00:00Z
+pubDatetime: 2026-02-12T04:00:00Z
 title: "Your Post Title"
 slug: en/your-post-slug
 featured: false
 draft: false
 tags:
   - ai-workflow
-  - tools
-description: A brief description for SEO and previews.
+  - ai-tools
+description: 'A brief description for SEO and previews.'
 ---
 
 Your content here...
@@ -54,7 +54,7 @@ Your content here...
 | `pubDatetime` | Yes | ISO 8601 publish date |
 | `modDatetime` | No | Last modified date |
 | `title` | Yes | Post title |
-| `slug` | No | URL slug (auto-generated from file path if omitted) |
+| `slug` | Yes* | `<lang>/<filename>` — schema allows omitting it, but this repo's content validator requires it explicitly |
 | `featured` | No | Show on homepage featured section |
 | `draft` | No | Set `true` to hide from production |
 | `tags` | No | Array of tag strings |

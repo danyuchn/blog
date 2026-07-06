@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-  - ai-coding-tools
+  - ai-coding
   - ai-workflow
 description: Opus 4.7's default adaptive effort is a disaster—it turns into a lazy emperor. You have to crank it up to high or xhigh to avoid that, but token consumption goes nuts. After testing, Sonnet 4.6 medium is the sweet spot for non-coding work.
 ---

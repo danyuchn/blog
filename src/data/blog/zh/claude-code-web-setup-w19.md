@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-  - ai-coding-tools
+  - ai-coding
   - ai-workflow
 description: 網頁版 Claude Code 有兩種環境——雲端 VM 跟 Remote-control。這篇整理我實測下來的設定訣竅、會踩到的小 bug，以及為什麼有些設定不能無腦丟到雲端。
 ---

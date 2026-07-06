@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ai-tools
-  - ai-security
+  - security
 description: There's no off-the-shelf de-identification tool for Taiwan's PII formats. So I built one that keeps sensitive data on your machine while you send the rest to AI.
 ---
 

@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-education
   - ai-trends
-  - opinions
+  - opinion
 description: 一個教學從業 15 年的人，分享如何用 AI 重燃教學熱情、建立教學分身、開源知識庫，以及為什麼「會用 AI 的老師」才是真正的威脅。
 ---
 

@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - ai-tools
-  - ai-security
+  - security
   - ai-workflow
 description: 'Don''t point an AI agent at sites that require a login. Your token is your account, and when the banhammer comes down you''re gone. Pay a little for a third-party scraping API and offload the ban risk.'
 ---
