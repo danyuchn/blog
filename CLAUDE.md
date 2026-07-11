@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Astro 5 blog based on AstroPaper template. Bilingual (EN/ZH) content, deployed to GitHub Pages at `https://danyuchn.github.io/blog`.
+Astro 6 blog based on AstroPaper template. Bilingual (EN/ZH) content, deployed to GitHub Pages at `https://danyuchn.github.io/blog`.
 
 ## Commands
 
@@ -24,7 +24,7 @@ Astro 5 blog based on AstroPaper template. Bilingual (EN/ZH) content, deployed t
 
 ## Architecture
 
-- **Framework:** Astro 5 with TypeScript (strict), Tailwind CSS 4, Shiki code highlighting
+- **Framework:** Astro 6 with TypeScript (strict), Tailwind CSS 4, Shiki code highlighting
 - **Base path:** `/blog` (configured in `astro.config.ts`)
 - **Content:** Markdown files in `src/data/blog/{en,zh}/` using Astro Content Collections
 - **Search:** Pagefind (indexed at build time, copied to `public/pagefind/`)
@@ -76,7 +76,7 @@ Pages use Astro file-based routing in `src/pages/`:
 
 ## Deployment
 
-GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. Build uses Node 20.
+GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. Build uses Node 22.
 
 **Important:** Never commit or push without explicit user confirmation. Wait for user to say "commit" or "commit & push".
 
