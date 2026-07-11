@@ -20,6 +20,9 @@ pnpm-debug.log*
 # classification output (contains personal data)
 scripts/classified_posts.json
 
+# threads-voice skill output (contains raw Threads posts + personal voice analysis)
+.claude/voice/
+
 # macOS-specific files
 .DS_Store
 
