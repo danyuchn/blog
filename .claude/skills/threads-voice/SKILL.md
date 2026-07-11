@@ -88,6 +88,16 @@ python .claude/skills/threads-voice/scripts/build_voice_fingerprint.py \
 
 第 15 維（認知層：核心信念與判斷框架）是把「風格輪廓」推進到「這個人怎麼想」的關鍵，`voice_fingerprint.md` 的「認知層信念候選句」提供起點候選句，但實際歸納成信念/張力/判斷框架要靠 Fable 讀質化樣本後判斷，資料夠的話不要跳過。
 
+### Step 3.5：去 AI 味規則對照（2026-07-11 新增，實測教訓）
+
+15 維度寫完後，載入去 AI 味規則來源（`humanizer` / `humanizer-zh` skill；有網路時再加 speak-human-tw 的 38 痕跡：github.com/Raymondhou0917/speak-human-tw），逐條與真實語料比對，在 brand_voice.md 產出「去 AI 味規則對照」段，分三塊：
+
+1. **他天然符合的原則**：使用者寫作本來就體現的 humanizer 原則（如刪填充短語、變化節奏、信任讀者），逐條附原文佐證——寫作時沿用這些原則等於在寫他。
+2. **通則不適用清單**：humanizer 的通用建議與使用者簽名衝突的點（如「破折號要刪」vs 他的「——」結構切換符）——標「簽名優先，不要修」，防止後續寫手拿通則磨掉特徵。
+3. **句型頻率基準表**：用腳本對全量語料掃 AI 高頻句型（「而是」「不只是」「先講結論」「愣了X秒」「然而」等）的真實出現率，做成「本人基準 vs AI 預設」對照表——AI 寫手自查用，超過本人基準率＝穿幫。
+
+背後教訓（2026-07-11 寫作實測）：**描述性統計擋不住 AI 的預設寫作習慣**。brand_voice.md 只寫「他怎麼寫」時，寫手會用 AI 慣性（否定排比、硬比喻、運鏡描寫、金句收尾）填補描述的空隙。所以除了「他怎麼寫」，必須明寫「AI 預設會怎麼寫錯」。產出的測試文一律過 humanizer-zh 的 anti-AI 自審迴路再交。
+
 ### Step 4：輸出 brand_voice.md
 
 依 `references/file-template.md` 的模板與重跑保留規則寫入 `.claude/voice/brand_voice.md`：
