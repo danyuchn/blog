@@ -97,10 +97,10 @@ def count_paragraphs(text: str) -> int:
     return len([chunk for chunk in text.splitlines() if chunk.strip()])
 
 
-def extract_post_from_json(item: dict) -> Optional[dict]:
+def extract_post_from_json(item: dict, want_reply: bool = False) -> Optional[dict]:
     text = ""
     for key in ["text", "post", "content", "title"]:
-        if key in item and isinstance(item[key], str):
+        if key in item and isinstance(item[key], str) and item[key].strip():
             text = decode_meta_text(item[key])
             break
         elif key in item and isinstance(item[key], dict):
@@ -117,6 +117,15 @@ def extract_post_from_json(item: dict) -> Optional[dict]:
             if text:
                 break
 
+    # Threads 官方匯出（text_post_app_text_posts）的實際結構：單張圖/純文字貼文
+    # 沒有頂層 text/title，內容藏在 media[0]["title"]；is_reply 也藏在
+    # media[i]["text_app_post"]["is_reply"]，不是頂層欄位。多圖貼文才會有頂層 title。
+    media_list = item.get("media") if isinstance(item.get("media"), list) else []
+    if not text and media_list:
+        first_media = media_list[0]
+        if isinstance(first_media, dict) and isinstance(first_media.get("title"), str):
+            text = decode_meta_text(first_media["title"])
+
     if not text:
         return None
 
@@ -129,11 +138,22 @@ def extract_post_from_json(item: dict) -> Optional[dict]:
             elif isinstance(val, str):
                 timestamp = val
             break
+    if not timestamp and media_list:
+        first_media = media_list[0]
+        if isinstance(first_media, dict) and isinstance(first_media.get("creation_timestamp"), (int, float)):
+            timestamp = datetime.fromtimestamp(
+                first_media["creation_timestamp"], tz=timezone.utc
+            ).isoformat()
 
     is_reply = item.get("is_reply", False)
     if not is_reply:
         is_reply = any(k in item for k in ["parent", "in_reply_to", "reply_to"])
-    if is_reply:
+    if not is_reply and media_list:
+        is_reply = any(
+            isinstance(m, dict) and m.get("text_app_post", {}).get("is_reply")
+            for m in media_list
+        )
+    if bool(is_reply) != want_reply:
         return None
 
     return {
@@ -146,7 +166,7 @@ def extract_post_from_json(item: dict) -> Optional[dict]:
     }
 
 
-def parse_json_export(file_path: str) -> list:
+def parse_json_export(file_path: str, want_reply: bool = False) -> list:
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -154,7 +174,14 @@ def parse_json_export(file_path: str) -> list:
     if isinstance(data, list):
         threads_data = data
     elif isinstance(data, dict):
-        for key in ["threads", "text_post_threads", "thread_posts", "your_threads", "posts"]:
+        for key in [
+            "threads",
+            "text_post_threads",
+            "thread_posts",
+            "your_threads",
+            "posts",
+            "text_post_app_text_posts",
+        ]:
             if key in data:
                 threads_data = data[key]
                 break
@@ -174,7 +201,7 @@ def parse_json_export(file_path: str) -> list:
 
     posts = []
     for item in threads_data:
-        post = extract_post_from_json(item)
+        post = extract_post_from_json(item, want_reply=want_reply)
         if post:
             posts.append(post)
     return posts
@@ -272,6 +299,11 @@ def main():
     )
     parser.add_argument("--input", required=True, help="Meta 匯出資料夾（或直接指定 JSON/HTML 檔）路徑")
     parser.add_argument("--output", default="threads_corpus.json", help="輸出檔路徑")
+    parser.add_argument(
+        "--replies-only",
+        action="store_true",
+        help="反轉過濾邏輯：只輸出回覆（is_reply=true），預設輸出原創貼文",
+    )
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -296,8 +328,11 @@ def main():
 
     print(f"[2/3] 解析 {file_info['format'].upper()} 匯出檔...")
     if file_info["format"] == "json":
-        posts = parse_json_export(file_info["posts_file"])
+        posts = parse_json_export(file_info["posts_file"], want_reply=args.replies_only)
     else:
+        if args.replies_only:
+            print("錯誤：--replies-only 目前只支援 JSON 格式匯出檔（HTML 匯出沒有可靠的 is_reply 標記）。")
+            sys.exit(1)
         posts = parse_html_export(file_info["posts_file"])
 
     if not posts:
