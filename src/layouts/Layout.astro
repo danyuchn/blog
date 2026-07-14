@@ -141,6 +141,28 @@ const structuredData = {
       )
     }
 
+    <!-- Google Analytics (same property as agentcrew.cc main site).
+         send_page_view is disabled and re-sent on astro:page-load so that
+         ClientRouter view-transition navigations are counted too. -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4TJSPB31L3"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4TJSPB31L3", { send_page_view: false });
+      document.addEventListener("astro:page-load", () => {
+        gtag("event", "page_view", {
+          page_location: location.href,
+          page_title: document.title,
+        });
+      });
+    </script>
+
     <ClientRouter />
 
     <!-- Minimal inline script to prevent FOUC - sets theme immediately -->
