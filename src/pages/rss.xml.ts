@@ -15,7 +15,9 @@ export async function GET() {
     description: SITE.desc,
     site: siteWithBase,
     items: sortedPosts.map(({ data, id, filePath }) => ({
-      link: `${siteWithBase}${getPath(id, filePath)}`,
+      // getPath already includes the base path — join with the bare site
+      // origin, otherwise links come out as /blog/blog/... (bug fixed 2026-07-14)
+      link: `${SITE.website}${getPath(id, filePath)}/`,
       title: data.title,
       description: data.description,
       pubDate: new Date(data.modDatetime ?? data.pubDatetime),
