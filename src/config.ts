@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://danyuchn.github.io",
+  website: "https://www.agentcrew.cc", // canonical home; GitHub Pages copy carries cross-domain canonicals here
   author: "Dustin Yuchen Teng",
   profile: "https://github.com/danyuchn",
   desc: "Sharing practical AI workflows, tools, and insights for everyday learning and productivity.",
