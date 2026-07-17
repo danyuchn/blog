@@ -13,8 +13,6 @@ import { findTranslation } from "@/utils/i18n";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import { getLangFromPost } from "@/utils/i18n";
-import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
-import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 
 type Props = {
@@ -37,7 +35,12 @@ const {
   hideEditPost,
 } = post.data;
 
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+
+/* 浮動目錄：只收 H2，少於 2 條不顯示（短敘事文無標題層級） */
+const tocHeadings = headings.filter(h => h.depth === 2);
+const showToc = tocHeadings.length >= 2;
+const tocLabel = getLangFromPost(post) === "zh" ? "目錄" : "On this page";
 
 let ogImageUrl: string | undefined;
 
@@ -88,9 +91,12 @@ const sameLangPosts = posts
 
 const currentPostIndex = sameLangPosts.findIndex(a => a.id === post.id);
 
-const prevPost = currentPostIndex > 0 ? sameLangPosts[currentPostIndex - 1] : null;
+const prevPost =
+  currentPostIndex > 0 ? sameLangPosts[currentPostIndex - 1] : null;
 const nextPost =
-  currentPostIndex < sameLangPosts.length - 1 ? sameLangPosts[currentPostIndex + 1] : null;
+  currentPostIndex < sameLangPosts.length - 1
+    ? sameLangPosts[currentPostIndex + 1]
+    : null;
 ---
 
 <Layout {...layoutProps}>
@@ -141,6 +147,53 @@ const nextPost =
       id="article"
       class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
+      {
+        showToc && (
+          <>
+            <aside
+              class="not-prose float-right mb-4 ml-8 hidden w-56 border border-border p-4 sm:block"
+              aria-label={tocLabel}
+              data-pagefind-ignore
+            >
+              <p class="text-xs font-semibold tracking-widest text-foreground/60 uppercase">
+                {tocLabel}
+              </p>
+              <ol class="mt-2 flex list-none flex-col gap-1.5 text-sm">
+                {tocHeadings.map(h => (
+                  <li>
+                    <a
+                      href={`#${h.slug}`}
+                      class="text-foreground/80 no-underline transition-colors duration-150 hover:text-accent"
+                    >
+                      {h.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </aside>
+            <details
+              class="not-prose mb-6 block w-full border border-border p-4 sm:hidden"
+              data-pagefind-ignore
+            >
+              <summary class="text-xs font-semibold tracking-widest text-foreground/60 uppercase">
+                {tocLabel}
+              </summary>
+              <ol class="mt-2 flex list-none flex-col gap-1.5 text-sm">
+                {tocHeadings.map(h => (
+                  <li>
+                    <a
+                      href={`#${h.slug}`}
+                      class="text-foreground/80 no-underline transition-colors duration-150 hover:text-accent"
+                    >
+                      {h.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          </>
+        )
+      }
       <Content />
     </article>
 
@@ -152,22 +205,22 @@ const nextPost =
 
     <ShareLinks />
 
-    <hr class="my-6" />
-
     <!-- Previous/Next Post Buttons -->
-    <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <div
+      data-pagefind-ignore
+      class="mt-6 grid grid-cols-1 border-t-2 border-foreground sm:grid-cols-2"
+    >
       {
         prevPost && (
           <a
             href={getPath(prevPost.id, prevPost.filePath)}
-            class="flex w-full gap-1 hover:opacity-75"
+            class="group block p-4 transition-colors duration-200 hover:bg-accent-surface"
           >
-            <IconChevronLeft class="inline-block flex-none rtl:rotate-180" />
-            <div>
-              <span class="text-xs tracking-widest text-foreground/60 uppercase"
-                >Previous Post</span
-              >
-              <div class="font-display text-sm font-bold">{prevPost.title}</div>
+            <span class="text-xs tracking-widest text-foreground/60 uppercase">
+              Previous Post
+            </span>
+            <div class="mt-1 font-display text-sm font-bold transition-colors duration-150 group-hover:text-accent">
+              {prevPost.title}
             </div>
           </a>
         )
@@ -176,15 +229,17 @@ const nextPost =
         nextPost && (
           <a
             href={getPath(nextPost.id, nextPost.filePath)}
-            class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"
+            class:list={[
+              "group block p-4 text-end transition-colors duration-200 hover:bg-accent-surface sm:col-start-2",
+              { "border-t border-border sm:border-s sm:border-t-0": prevPost },
+            ]}
           >
-            <div>
-              <span class="text-xs tracking-widest text-foreground/60 uppercase"
-                >Next Post</span
-              >
-              <div class="font-display text-sm font-bold">{nextPost.title}</div>
+            <span class="text-xs tracking-widest text-foreground/60 uppercase">
+              Next Post
+            </span>
+            <div class="mt-1 font-display text-sm font-bold transition-colors duration-150 group-hover:text-accent">
+              {nextPost.title}
             </div>
-            <IconChevronRight class="inline-block flex-none rtl:rotate-180" />
           </a>
         )
       }

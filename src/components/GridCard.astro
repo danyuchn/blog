@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@/utils/slugify";
+import { getPath } from "@/utils/getPath";
+import { getLangFromPost } from "@/utils/i18n";
+import Datetime from "./Datetime.astro";
+
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { id, data, filePath } = post;
+const lang = getLangFromPost(post);
+
+const { title, description, tags, ...props } = data;
+const firstTag = tags && tags.length > 0 ? tags[0] : undefined;
+---
+
+<li
+  class="group scroll-reveal relative border-t-2 border-foreground pt-4 before:absolute before:-top-[2px] before:left-0 before:h-[2px] before:w-0 before:bg-accent before:transition-[width] before:duration-300 hover:before:w-full"
+  data-lang={lang}
+>
+  <h3
+    style={{ viewTransitionName: slugifyStr(title.replaceAll(".", "-")) }}
+    class="font-display text-lg leading-snug font-bold text-foreground"
+  >
+    <a
+      href={getPath(id, filePath)}
+      class="transition-colors duration-150 hover:text-accent focus-visible:ring-1 focus-visible:ring-accent focus-visible:outline-none"
+    >
+      {title}
+    </a>
+  </h3>
+  {
+    description && (
+      <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-foreground/70">
+        {description}
+      </p>
+    )
+  }
+  <div
+    class="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs text-foreground/60"
+  >
+    <Datetime {...props} class="[&_time]:text-xs" />
+    {firstTag && <span class="tracking-wide uppercase">{firstTag}</span>}
+  </div>
+</li>
