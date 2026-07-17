@@ -2,22 +2,50 @@
 import { getCollection } from "astro:content";
 import Main from "@/layouts/Main.astro";
 import Layout from "@/layouts/Layout.astro";
-import Tag from "@/components/Tag.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
+import postFilter from "@/utils/postFilter";
+import { filterByLang, type Lang } from "@/utils/i18n";
+import { slugifyStr } from "@/utils/slugify";
+import { withBase } from "@/utils/withBase";
 import { SITE } from "@/config";
 
 const posts = await getCollection("blog");
 
-let tags = getUniqueTags(posts);
+const tags = getUniqueTags(posts);
+
+/* 每語言各算一次計數（LangSwitcher 以 display:none 只顯示當前語言的數字） */
+const visiblePosts = posts.filter(postFilter);
+const countFor = (tagSlug: string, lang: Lang) =>
+  filterByLang(visiblePosts, lang).filter(p =>
+    (p.data.tags ?? []).some(t => slugifyStr(t) === tagSlug)
+  ).length;
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Tags" pageDesc="All the tags used in posts.">
-    <ul class="flex flex-wrap gap-6">
-      {tags.map(({ tag, tagName }) => <Tag {tag} {tagName} />)}
+    <ul class="grid grid-cols-2 border-s border-t border-border sm:grid-cols-3">
+      {
+        tags.map(({ tag, tagName }) => (
+          <li class="border-e border-b border-border">
+            <a
+              href={withBase(`/tags/${tag}/`)}
+              transition:name={tag}
+              class="group flex h-full flex-col gap-1 p-4 transition-colors duration-200 hover:bg-accent-surface focus-visible:bg-accent-surface"
+            >
+              <span class="text-xs font-semibold tracking-wide break-all uppercase">
+                {tagName}
+              </span>
+              <span class="font-display text-2xl leading-none font-black text-foreground transition-colors duration-150 group-hover:text-accent">
+                <span data-lang="zh">{countFor(tag, "zh")}</span>
+                <span data-lang="en">{countFor(tag, "en")}</span>
+              </span>
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </Main>
   <Footer />

@@ -5,19 +5,29 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
-import Card from "@/components/Card.astro";
+import GridCard from "@/components/GridCard.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
+import { getLangFromPost, filterByLang } from "@/utils/i18n";
+import { getPath } from "@/utils/getPath";
+import { slugifyStr } from "@/utils/slugify";
+import Datetime from "@/components/Datetime.astro";
 import IconRss from "@/assets/icons/IconRss.svg";
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 import { withBase } from "@/utils/withBase";
+
+const RECENT_COUNT = 6;
 
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+// 雙語各取最新 N 篇再合併渲染（LangSwitcher 以 display:none 過濾另一語言）。
+// 不可在 zh/en 混合陣列上 slice——每語言可見篇數會不可控。
+const recentPosts = (["zh", "en"] as const).flatMap(lang =>
+  filterByLang(sortedPosts, lang)
+    .filter(({ data }) => !data.featured)
+    .slice(0, RECENT_COUNT)
+);
 ---
 
 <Layout>
@@ -39,21 +49,26 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
       <div class="mt-6 max-w-prose">
         <p class="text-base leading-relaxed text-foreground/70" data-lang="zh">
-          教了 12 年 GMAT，現在人在曼谷，用 AI 做教育產品。這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和 Gemini 把東西做出來的過程，還有途中踩過的坑。
+          教了 12 年 GMAT，現在人在曼谷，用 AI
+          做教育產品。這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和
+          Gemini 把東西做出來的過程，還有途中踩過的坑。
         </p>
-        <p class="mt-2 text-base leading-relaxed text-foreground/70" data-lang="en">
-          12 years teaching GMAT. Now based in Bangkok, building education products with AI. This blog is about how someone with zero engineering background actually ships things — and all the pitfalls along the way.
+        <p
+          class="mt-2 text-base leading-relaxed text-foreground/70"
+          data-lang="en"
+        >
+          12 years teaching GMAT. Now based in Bangkok, building education
+          products with AI. This blog is about how someone with zero engineering
+          background actually ships things — and all the pitfalls along the way.
         </p>
       </div>
 
       <div class="mt-6 flex items-center gap-4">
-        {
-          SOCIALS.length > 0 && <Socials />
-        }
+        {SOCIALS.length > 0 && <Socials />}
         <a
           target="_blank"
           href={withBase("/rss.xml")}
-          class="text-foreground/40 hover:text-accent transition-colors"
+          class="text-foreground/40 transition-colors hover:text-accent"
           aria-label="RSS Feed"
           title="RSS Feed"
         >
@@ -65,20 +80,50 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
     {
       featuredPosts.length > 0 && (
-        <section
-          id="featured"
-          class:list={[
-            "pt-10 pb-4",
-            { "border-b border-border": recentPosts.length > 0 },
-          ]}
-        >
-          <p class="mb-2 text-sm font-semibold tracking-widest text-accent uppercase">
-            精選
-          </p>
+        <section id="featured" class="pt-10">
           <ul>
-            {featuredPosts.map(data => (
-              <Card variant="h2" {...data} />
-            ))}
+            {featuredPosts.map(post => {
+              const { id, data, filePath } = post;
+              const { title, description, tags, ...props } = data;
+              return (
+                <li
+                  class="group scroll-reveal mb-6 bg-accent-surface p-6 sm:p-8"
+                  data-lang={getLangFromPost(post)}
+                >
+                  <p class="text-sm font-semibold tracking-widest text-accent uppercase">
+                    精選
+                  </p>
+                  <h2
+                    style={{
+                      viewTransitionName: slugifyStr(
+                        title.replaceAll(".", "-")
+                      ),
+                    }}
+                    class="mt-3 font-display text-2xl leading-snug font-black text-foreground sm:text-3xl"
+                  >
+                    <a
+                      href={getPath(id, filePath)}
+                      class="link-underline-slide focus-visible:ring-1 focus-visible:ring-accent focus-visible:outline-none"
+                    >
+                      {title}
+                    </a>
+                  </h2>
+                  {description && (
+                    <p class="mt-3 max-w-prose text-sm leading-relaxed text-foreground/70 sm:text-base">
+                      {description}
+                    </p>
+                  )}
+                  <div class="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs text-foreground/60">
+                    <Datetime {...props} class="[&_time]:text-xs" />
+                    {tags && tags.length > 0 && (
+                      <span class="tracking-wide uppercase">
+                        {tags.join(" · ")}
+                      </span>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )
@@ -86,12 +131,14 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-10 pb-4">
-          <p class="mb-2 text-sm font-semibold tracking-widest text-foreground/50 uppercase">
+        <section id="recent-posts" class="pt-8 pb-4">
+          <p class="mb-6 text-sm font-semibold tracking-widest text-foreground/50 uppercase">
             最近在寫
           </p>
-          <ul>
-            {recentPosts.map(data => <Card variant="h3" {...data} />)}
+          <ul class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {recentPosts.map(post => (
+              <GridCard {...post} />
+            ))}
           </ul>
         </section>
       )
@@ -100,7 +147,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     <div class="py-8">
       <LinkButton
         href={withBase("/posts/")}
-        class="text-sm text-foreground/50 hover:text-accent transition-colors"
+        class="text-sm text-foreground/50 transition-colors hover:text-accent"
       >
         所有文章 →
       </LinkButton>

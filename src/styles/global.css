@@ -71,6 +71,43 @@ html[data-theme="dark"] {
   @apply underline decoration-2 underline-offset-8;
 }
 
+/* Accent underline that slides in from the left on hover/focus */
+.link-underline-slide {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  padding-bottom: 2px;
+  transition: background-size 300ms ease;
+}
+.group:hover .link-underline-slide,
+.link-underline-slide:hover,
+.link-underline-slide:focus-visible {
+  background-size: 100% 2px;
+}
+
+/* Scroll-driven entrance — progressive enhancement, compositor-only.
+   Unsupported browsers (and reduced-motion users) see the final state. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-reveal {
+      animation: scroll-reveal-rise 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+  }
+}
+@keyframes scroll-reveal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
