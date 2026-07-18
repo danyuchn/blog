@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-05-29T02:30:00Z
 title: "The More Rules You Add, the Less Claude Listens — I Sent a Team of Agents to Trim My Setup and Cut 36% of Always-On Context"
 slug: en/harness-slim-down-36
-featured: true
+featured: false
 draft: false
 tags:
   - claude-code

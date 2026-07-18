@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-05-15T05:00:00Z
 title: "What I only learned after taking on enterprise AI training—prep time, the client liaison, instructor flexibility, and how to pick a consultant"
 slug: en/enterprise-ai-training-realities
-featured: false
+featured: true
 draft: false
 tags:
   - ai-consulting

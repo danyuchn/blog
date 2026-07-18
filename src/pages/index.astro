@@ -5,12 +5,10 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import Card from "@/components/Card.astro";
 import GridCard from "@/components/GridCard.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
-import { getLangFromPost, filterByLang } from "@/utils/i18n";
-import { getPath } from "@/utils/getPath";
-import { slugifyStr } from "@/utils/slugify";
-import Datetime from "@/components/Datetime.astro";
+import { filterByLang } from "@/utils/i18n";
 import IconRss from "@/assets/icons/IconRss.svg";
 import { SOCIALS } from "@/constants";
 import { withBase } from "@/utils/withBase";
@@ -80,50 +78,20 @@ const recentPosts = (["zh", "en"] as const).flatMap(lang =>
 
     {
       featuredPosts.length > 0 && (
-        <section id="featured" class="pt-10">
-          <ul>
-            {featuredPosts.map(post => {
-              const { id, data, filePath } = post;
-              const { title, description, tags, ...props } = data;
-              return (
-                <li
-                  class="group scroll-reveal mb-6 bg-accent-surface p-6 sm:p-8"
-                  data-lang={getLangFromPost(post)}
-                >
-                  <p class="text-sm font-semibold tracking-widest text-accent uppercase">
-                    精選
-                  </p>
-                  <h2
-                    style={{
-                      viewTransitionName: slugifyStr(
-                        title.replaceAll(".", "-")
-                      ),
-                    }}
-                    class="mt-3 font-display text-2xl leading-snug font-black text-foreground sm:text-3xl"
-                  >
-                    <a
-                      href={getPath(id, filePath)}
-                      class="link-underline-slide focus-visible:ring-1 focus-visible:ring-accent focus-visible:outline-none"
-                    >
-                      {title}
-                    </a>
-                  </h2>
-                  {description && (
-                    <p class="mt-3 max-w-prose text-sm leading-relaxed text-foreground/70 sm:text-base">
-                      {description}
-                    </p>
-                  )}
-                  <div class="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs text-foreground/60">
-                    <Datetime {...props} class="[&_time]:text-xs" />
-                    {tags && tags.length > 0 && (
-                      <span class="tracking-wide uppercase">
-                        {tags.join(" · ")}
-                      </span>
-                    )}
-                  </div>
-                </li>
-              );
-            })}
+        <section
+          id="featured"
+          class:list={[
+            "pt-8 pb-8",
+            { "border-b border-border": recentPosts.length > 0 },
+          ]}
+        >
+          <p class="mb-6 text-sm font-semibold tracking-widest text-accent uppercase">
+            精選
+          </p>
+          <ul class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredPosts.map(post => (
+              <GridCard {...post} />
+            ))}
           </ul>
         </section>
       )
@@ -131,13 +99,13 @@ const recentPosts = (["zh", "en"] as const).flatMap(lang =>
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-8 pb-4">
-          <p class="mb-6 text-sm font-semibold tracking-widest text-foreground/50 uppercase">
+        <section id="recent-posts" class="pt-10 pb-4">
+          <p class="mb-2 text-sm font-semibold tracking-widest text-foreground/50 uppercase">
             最近在寫
           </p>
-          <ul class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul>
             {recentPosts.map(post => (
-              <GridCard {...post} />
+              <Card variant="h3" {...post} />
             ))}
           </ul>
         </section>

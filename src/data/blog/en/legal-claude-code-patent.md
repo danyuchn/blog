@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-04-30T04:00:00Z
 title: "A Legal Counsel Used Claude Code to Catch Patent Infringement — Days Down to Hours"
 slug: en/legal-claude-code-patent
-featured: false
+featured: true
 draft: false
 tags:
   - claude-code

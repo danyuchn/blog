@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-05-29T02:30:00Z
 title: "規則越加，Claude 越不聽話——派一隊 AI 重整設定，常態上下文省 36%"
 slug: zh/harness-slim-down-36
-featured: true
+featured: false
 draft: false
 tags:
   - claude-code
