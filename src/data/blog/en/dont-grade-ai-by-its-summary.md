@@ -34,6 +34,8 @@ An independent agent reviewing the A-2 lesson plan found one real error. It also
 
 Lesson: an independent agent's finding can itself be wrong. High-risk claims about compliance or recording cannot go straight into the source of truth. The person involved still needs to confirm them.
 
+I later made a video on the same theme: <https://youtu.be/d5Ipmp6RSJ0>
+
 <!--
 Sentences added beyond the source material (fidelity disclosure):
 None. Translation, deletion, and stitching only.
