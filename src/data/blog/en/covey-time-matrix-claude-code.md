@@ -78,6 +78,8 @@ If you want to introduce AI tools to friends or colleagues, my recommended one-l
 
 That line lands on Q2, not Q1.
 
+I later turned this matrix into a hands-on video walking through how I rebuilt my time management with Claude Code: <https://youtu.be/44yArY2P_Hc>
+
 ---
 
 > Original: Stephen R. Covey, *The 7 Habits of Highly Effective People*. The Claude Code collaboration mapping is Dustin's 2026-05-12 commentary.
