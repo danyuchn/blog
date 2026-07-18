@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-05-15T05:00:00Z
 title: "親自接 AI 企業培訓之後才知道的事——準備時間、甲方對接、講師應變、選顧問訊號"
 slug: zh/enterprise-ai-training-realities
-featured: false
+featured: true
 draft: false
 tags:
   - ai-consulting

@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T05:00:00Z
 title: "The Dunning-Kruger Curve of Claude Code: From Clueless to Perfect Sync"
 slug: en/claude-code-dunning-kruger
-featured: true
+featured: false
 draft: false
 tags:
   - claude-code

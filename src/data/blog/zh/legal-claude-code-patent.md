@@ -3,7 +3,7 @@ author: Dustin Yuchen Teng
 pubDatetime: 2026-04-30T04:00:00Z
 title: "法務用 Claude Code 抓專利侵權，從幾天變成一天"
 slug: zh/legal-claude-code-patent
-featured: false
+featured: true
 draft: false
 tags:
   - claude-code
