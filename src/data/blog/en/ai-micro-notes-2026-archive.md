@@ -165,3 +165,33 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Three Claude Code 2.1.201 Fixes**
 
 > Background tasks dropping after sleep, background agents getting stuck behind stale locks, and voice input reporting fake connection errors were all fixed in this release. Quick update: <https://youtu.be/ZtZKP0Sc-Tk>
+
+## Late July 2026 (W31)
+
+**A Google Engineer's Proper Form**
+
+> This weekend's freshest bit: a Google engineer needs to learn proper AI form from vocational school kids — running local models on a 5000 (NT dollar) machine. If that's true, Taiwan stocks, SK Hynix, and Samsung are in for another beating next week.
+
+**The Tender Drama of a Fable Subscription Countdown**
+
+> A: "Fable's only good until 7/12" (the neighbor released a new model people liked, thinking about switching). "Hey hey, don't go, I'll extend you to 7/19."
+
+**13 Subagents to Chat on My Behalf**
+
+> I really want to dispatch 13 subagents to chat for me, saving the human main agent's context window.
+
+**The Future Where You Just Open Your Mouth and Yell at Your AI Agent**
+
+> Word is Opus 5 drops tonight, and Codex is about to pull in that real-time two-way voice model. Soon it'll really just be opening your mouth and yelling at an AI agent.
+
+**GPT 5.6 Sol Is a Mad Dog**
+
+> I tell everyone GPT 5.6 Sol is a mad dog. Give it the /狗死 (dog-die) command — I usually play LISA's "dog-die~dog-die~" alongside it — and it clamps onto the target and won't let go until the job's done.
+
+**1000 Subagents vs. HTML Docs**
+
+> One person single-handedly running 1000 subagents; everyone, let's start writing HTML instead of markdown for docs.
+
+**The Surprise Bonus From Migrating the Mac Mini**
+
+> Migrated the Mac mini M4 Pro via Migration Assistant, machine to machine. TCC permissions tagged along unexpectedly, sparing me from re-authorizing everything one by one.
