@@ -1,7 +1,3 @@
-@~/.claude-lang-rules/typescript/patterns.md
-<!-- shared TypeScript lang-rules imported from ~/.claude-lang-rules/typescript/patterns.md -->
-
-
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -12,15 +8,7 @@ Astro 6 blog based on AstroPaper template. Bilingual (EN/ZH) content, deployed t
 
 ## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `npm run dev` | Dev server at `http://localhost:4321/blog` |
-| `npm run build` | Production build (astro check → astro build → pagefind indexing) |
-| `npm run preview` | Preview production build |
-| `npm run format:check` | Prettier check |
-| `npm run format` | Prettier auto-format |
-| `npm run lint` | ESLint |
-| `npm run check:content` | 內容驗證：frontmatter / tag 白名單 / zh-en 檔名對齊 / micro-notes（CI blocking） |
+指令清單見 `package.json`。兩個非顯而易見處：dev server 帶 base path（`http://localhost:4321/blog`）；`npm run check:content` 驗 frontmatter / tag 白名單 / zh-en 檔名對齊 / micro-notes，**CI blocking**。
 
 ## Architecture
 
@@ -45,44 +33,23 @@ Blog posts are Markdown with YAML frontmatter. Slugs must include language prefi
 
 Required frontmatter: `title`, `pubDatetime`, `description`, `slug`. Optional: `featured`, `draft`, `tags`, `modDatetime`, `ogImage`, `canonicalURL`.
 
-**完整文章規格 → @.claude/specs/article-spec.md**（frontmatter 逐欄位規則、內文/圖片/embed 慣例、改寫七原則）。新文章從 `.claude/templates/article.md` 複製起手；tags 只准用 `.claude/specs/tags.md` 白名單。機器可查規則由 `npm run check:content` 在 CI 強制。
+**動筆前先讀 `.claude/specs/article-spec.md`**（frontmatter 逐欄位規則、內文/圖片/embed 慣例、改寫七原則）。新文章從 `.claude/templates/article.md` 複製起手；tags 只准用 `.claude/specs/tags.md` 白名單。機器可查規則由 `npm run check:content` 在 CI 強制。
 
 **⚠️ pubDatetime 陷阱：** 設為 UTC 未來時間（即使只差幾小時）會導致 `postFilter.ts` 在 production build 時過濾掉文章。文章頁面仍會生成（`getStaticPaths` 不用 postFilter），但翻譯連結、首頁列表、RSS 等全部不會出現。建議使用已過去的 UTC 時間，例如 `T04:00:00Z`（曼谷上午 11 點）。
 
 **⚠️ description YAML 冒號陷阱：** `description:` 內含半形 `: ` 會被 YAML 誤解為新 mapping key，astro check 報 `bad indentation of a mapping entry`。解法：整個值用單引號包住，內部單引號 escape 成 `''`。範例：`description: 'A: B and C''s issue.'`。W20 至少踩過 3 次（covey / scope-discipline / youtube-large-upload）。
 
-### Routing
-
-Pages use Astro file-based routing in `src/pages/`:
-- `posts/[...slug]/index.astro` — Post detail (renders markdown content)
-- `posts/[...slug]/index.png.ts` — Dynamic OG image endpoint per post
-- `tags/[tag]/[...page].astro` — Posts filtered by tag with pagination
-- `rss.xml.ts`, `robots.txt.ts`, `og.png.ts` — Generated feeds/assets
-
-### Utilities (`src/utils/`)
-
-- `getSortedPosts.ts` — Filter drafts/scheduled posts, sort by date
-- `postFilter.ts` — Draft and scheduled post filtering logic
-- `getPath.ts` — Generate `/posts/...` URLs from content collection entries
-- `slugify.ts` — URL-safe slug generation (uses `lodash.kebabcase`)
-
-### Path Alias
-
-`@/*` maps to `./src/*` (configured in `tsconfig.json`).
-
 ## Content Workflow
 
-入口 @.claude/content-workflow.md（文件地圖 + 社群匯入 7 步驟 + fan-out 協議）。規格在 `.claude/specs/`、起手模板在 `.claude/templates/`、週報清單在 `.claude/checklists/weekly-roundup.md`。
+入口 `.claude/content-workflow.md`（文件地圖 + 社群匯入 7 步驟 + fan-out 協議）。規格在 `.claude/specs/`、起手模板在 `.claude/templates/`、週報清單在 `.claude/checklists/weekly-roundup.md`。
 
 ## Deployment
 
-GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. Build uses Node 22.
-
-**Important:** Never commit or push without explicit user confirmation. Wait for user to say "commit" or "commit & push".
+GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. Build uses Node 22 — **push 等於發布**。
 
 ## API Key Management
 
-API keys 存於 `.env`（gitignored）。跨專案時從其他專案 `.env` 讀取。遵循全域安全規則。
+憑證放 `~/.credentials/<project>/`（全域慣例）。本 repo 的 `.env` 為 gitignored 的執行期副本，不是存放位置。
 
 ## Bilingual Architecture
 
