@@ -192,6 +192,32 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > One person single-handedly running 1000 subagents; everyone, let's start writing HTML instead of markdown for docs.
 
-**The Surprise Bonus From Migrating the Mac Mini**
+## Late July 2026 (W32)
 
-> Migrated the Mac mini M4 Pro via Migration Assistant, machine to machine. TCC permissions tagged along unexpectedly, sparing me from re-authorizing everything one by one.
+**The Engineer's Iron Rule**
+
+> Never ship on a Friday.
+
+**Claude Simply Doesn't Care About Uptime**
+
+> Opus 5 shipped last week. My first thought was that they were being brave. Then I thought about it again: Claude has had outages on every day of the week. They simply don't care about uptime.
+
+**Frantic Resets on One Side, Frantic Bans on the Other**
+
+> These past few days, frantic resets on one side and frantic account bans on the other. Easily the most absurd scene I've witnessed.
+
+**The Double Standard on Banning Minors**
+
+> Anthropic is being a bit two-faced here. If they really want to ban minors, their own engineers shouldn't be allowed to use it either — not one of them is mentally an adult.
+
+**iPad Plus Keyboard Is the Best Travel Productivity Combo**
+
+> Took the Magic Keyboard I normally use with the Mac, hooked it up to an old iPad Pro from years back, then ran a virtual terminal back to the Mac mini. Smooth even on mobile data. The whole thing weighs far less than a keyboard case, and terminal work rarely needs a mouse anyway. Claude Code even in the middle of nowhere.
+
+**The Mac Mini Holds Its Value, No Joke**
+
+> Mac mini M4 Pro with 48GB. I paid a bit over NT$50,000 in May including AppleCare — that was pre-price-hike plus employee pricing. Go look now and it's over NT$90,000. A computer is a production tool, and the line about still holding its value after a few years turns out to be true.
+
+**Horror Stories From Free Consultations**
+
+> Fifteen years of teaching, and the horror stories from free and pro bono consultations are endless. I'd love to hear the ones from other industries.

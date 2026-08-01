@@ -23,17 +23,9 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Watch out for knowledge cutoff when vibe coding. If you specify Gemini 3 Pro, the model might think it doesn't exist yet and quietly swap in an older version.
 
-**Local vs Cloud Models**
-
-> Cloud models? 8GB is enough to run them. Local models depend on your specs — but why go local? If it's for privacy, that's fair. If it's to save money, not really — because making a local model perform on par with commercial ones means shelling out for hardware first. My advice: don't overthink local early on. Get comfortable with closed-source models first.
-
 **Claude Import Mode for GPT Memories**
 
 > Claude has an import mode, right? You can extract GPT's knowledge and memories about you, then import them into Claude.
-
-**Recitation Error Solution**
-
-> Gemini is the strictest on recitation errors, Qwen is the most lenient. So Qwen via US-based providers on OpenRouter is the best choice — data doesn't flow to China since it's deployed in US data centers, and the model only restricts politically sensitive content, not copyright.
 
 **The Ones Who Roast Claude Hardest Use It Longest**
 
@@ -42,6 +34,18 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Sonnet Is Becoming the New Haiku**
 
 > Anthropic's latest article listed Fable, Opus, and Sonnet, but never mentioned Haiku. Sonnet appears to be taking Haiku's old place. That is a quiet price increase, and Haiku may well stop at 4.5.
+
+**Terra High Is My First Pick for Grunt Work**
+
+> Besides 5.6 Sol, the one I reach for most these days is 5.6 Terra high. It's the top pick for grunt work — still very accurate at driving the browser and the computer, and it even handled a gnarly award-ticket search for me. Best part is how little quota it burns, which frees up Sol for things that matter more.
+
+**The Timing Politics of Reset Cards**
+
+> Based on my (thoroughly unscientific) research, OpenAI's resets aren't as generous as they look. Their seven-day window restarts after a reset, while Anthropic's window stays fixed — which actually means you get 100% of your quota across a shorter window post-reset. And if you look at when past resets were announced, they always land right as the previously issued banked reset cards are about to expire.
+
+**Gemini Still Leads on Multimodal**
+
+> On multimodal work — audio, video, images — Gemini is still first among the big three.
 
 ## Dev & Security Pitfalls
 
@@ -57,23 +61,19 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > A fresh project's deploy URL ships with Deployment Protection (Vercel Authentication) on by default — outside visitors get a 401. The other trap: the bare `<proj>.vercel.app` alias may be someone else's empty shell; your auto-updating prod alias is `<proj>-<team>.vercel.app`. curl and check the content before sending anyone the link.
 
-**A File Named "Transcript" Isn't Necessarily a Transcript**
-
-> The file was named "transcript," but it turned out to be an already-edited summary — the raw recording lived elsewhere. Bonus trap: SenseVoice STT has no speaker diarization, so in multi-speaker sessions the opening introductions get attributed to the wrong people.
-
-**Three Verification Misalignments**
-
-> Verifying against your own spec is worse than verifying against the actual computation — if your spec has an error, you've made your own mistake the baseline. Deep-research false negatives: 16/19 in the "refuted" bucket were 0-0 or 1-0 votes (agents timed out without verifying, not actually refuted). Dry-runs validate data integrity but can't catch an exercise that simply doesn't work — you need to simulate a real student's spoken prompts with step-by-step chaining to surface that.
-
 **iQOS Bluetooth Reverse Engineering**
 
 > I'm genuinely impressed by Claude Code. I saw someone on Reddit share how Claude Code helped them defeat ransomware and recover data. On a whim, I plugged my iQOS into the computer and asked if it could read the data. It actually went online to research, found an open-source reverse engineering project, read through the logic, then wrote its own script to pull data from the iQOS via Bluetooth.
 
+**The Hook Everyone Should Have**
+
+> No emoji when the AI writes documents. One time it even blocked the write where I was editing the hook script itself.
+
+**File Transfer Over Light Alone**
+
+> Two phones with no wifi, no Bluetooth, no communication protocol of any kind, moving a file using only light: chop the file into chunks, encode them as QR codes, flash them on the sender's screen at roughly 40 frames a second, and let the receiver decode and reassemble. Demonstrated at 128KB per second.
+
 ## Workflow & Method
-
-**CLAUDE.md Prohibition Paradox**
-
-> I wrote in CLAUDE.md: "When corrected by the user, never say 'you're right.'" Claude immediately ignored it. After I called it out for violating the rule, its next response was: "You're right, I shouldn't have violated the language prohibition." CLAUDE.md is advisory, not enforced — if you really need to block something, use Hooks.
 
 **Sonnet 4.6 Plus MCP for Suspicious Emails**
 
@@ -91,10 +91,6 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > A "new Claude feature" going viral was actually built by a company called fastlane — not Anthropic, so it doesn't count as official at all. If I didn't watch Anthropic like a hawk every day, roasting them, knowing their brand style and (fake) moral fastidiousness inside out, I'd have been fooled too.
 
-**Automation Zealots, Refueling the Fire Daily**
-
-> There's a team that champions automation to the extreme — the bald guy's CC team, and their company. The result: they blow up every single day. I figured the humans would step out to wrap things up; instead their people step out to pour fuel on the fire.
-
 **Route Social Sites by Tool Capability**
 
 > Direct WebFetch from Claude or Codex often gets blocked on X and Threads, so they need a browser detour. Gemini can read them directly. Reddit is especially hostile to Claude while Codex and Gemini usually work. Model choice is also about access, not just intelligence.
@@ -102,6 +98,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Polite Does Not Mean Inventing an Excuse for Them**
 
 > "I know things have probably been busy on your end" sounds considerate, but it invents a reason for someone else's silence. AI-written client emails often hide this kind of condescension. I still review every draft after running my polite skill.
+
+**Rage-Driven Code Review**
+
+> Everyone talks about having Claude call in Codex for "adversarial review" to poke holes, but it never quite lands. Here's a fresh angle: wire it straight into the Threads API, give it posting rights, and the moment it lands on a solution, have it brag about what it just vibed in full AI voice. Within minutes a few dozen veteran keyboard engineers will show up in the replies to review it for you, free of charge, out of pure rage.
 
 ## AI Industry & Business
 
@@ -121,10 +121,6 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > In the AI era, if you learn slowly enough, you can skip learning anything at all. By the time you finish, that thing has already been automated. Flip side: people who learn fast enough keep finding they can do more and more.
 
-**Benchmark Chasing vs Alignment**
-
-> Most models are focused on chasing benchmark scores. But there are aspects I think deserve more attention: human intent alignment — understanding what I want from minimal input; constraint compliance — when I say don't do something, don't do it; and actually useful context length.
-
 **The AI-Course Cash Grab, Overheard at a Convenience Store**
 
 > Sheltering from the rain at a 7-Eleven seating area in Da'an, Taipei, waiting for class, I overheard some aunties talking about AI: "I'm paying NT$18,000 a month for my son to learn AI, four installments now, it's that teacher's course he recommended last time." Infuriating — I really want to know which teacher rakes it in this well. The market is now buzzing with "Law of Attraction AI," "Benefactor AI," "share your gratitude and closed deals with AI," "AI raises your personal energy," "networking coach radiating beauty" — I can't take it anymore. The highest-value overheard conversations really do happen in convenience stores and fast-food seating areas.
@@ -140,6 +136,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **The Two Sides of Anthropic's Need to Teach**
 
 > During a PR crisis, Anthropic's "let us educate the user" posture is unbearable. The same instinct also produces unusually careful technical writing. Unknown Unknowns and the recent piece on effort are both excellent.
+
+**The Gap Between the Two Computer-Control Stacks Is Absurd**
+
+> After using both GPT's and Claude's computer control MCP, anyone would be shocked at how far apart they've become. One drives smoothly and checks its work carefully; the other yanks your mouse away and gives up on the task at the slightest resistance.
 
 ## Life & Miscellany
 
