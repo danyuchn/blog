@@ -14,6 +14,10 @@
 【產出】
 1. src/data/blog/zh/{slug-basename}.md（先寫）
 2. src/data/blog/en/{slug-basename}.md（zh 定稿後翻譯，檔名與 zh 完全相同）
+3. en 定稿後，用 Skill 工具載入 `humanizer` skill，就地把 en 檔過一次去 AI 腔。
+   只改英文散文句子——frontmatter、圖片語法與路徑、video-embed HTML、code block、
+   blockquote 裡的中文原文、檔末自首註解，一律不准動。忠實度優先於文筆：
+   作者的口語、粗話、自嘲、括號內心話不准被「潤飾」掉。
 
 【規格（必讀必遵守）】
 - 讀 .claude/specs/article-spec.md 並完全遵守。
@@ -50,5 +54,6 @@
 - [ ] **回收**：照每篇的自首清單**逐句裁決**（保留/砍/改寫），不盲讀全篇。
 - [ ] **回收**：逐篇對照原始貼文，砍 AI 補述——短貼文被膨脹是 fan-out 最常見失敗模式。
 - [ ] **回收**：subagent 的「已完成」回報不可盡信，逐檔 Read 親驗 frontmatter 與內文。
+- [ ] **回收**：確認每篇 en 真的過了 `humanizer`（W32 事故：本模板漏寫這步，8 篇全部漏做、事後才補派 agent 補跑；清單與模板不同步時，被執行的是模板）。
 - [ ] `npm run check:content` → `npm run build` 全綠。
 - [ ] 收尾 commit 由主對話自己做，**逐檔 `git add <path>`，禁 `git add -A`**，且等使用者明說 commit 才動。
