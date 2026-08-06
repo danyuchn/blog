@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-04-16T02:00:00Z
-title: "Obsidian vs NotebookLM：用 Claude Agent 自動化知識管理，選哪個？"
+title: "Obsidian vs NotebookLM 比較：用 Claude Agent 自動化知識管理該選哪個"
 slug: zh/obsidian-vs-notebooklm-agent
 featured: false
 draft: false

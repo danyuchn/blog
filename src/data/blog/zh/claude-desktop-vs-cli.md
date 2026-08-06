@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-04-16T02:00:00Z
-title: "Claude Desktop App 改版了——以及我為什麼還是用終端機"
+title: "Claude Desktop vs CLI 差在哪——改版之後我為什麼還是用終端機"
 slug: zh/claude-desktop-vs-cli
 featured: false
 draft: false

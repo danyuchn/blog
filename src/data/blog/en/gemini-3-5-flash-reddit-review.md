@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-23T04:00:00Z
-title: "Gemini 3.5 Flash Reddit Reviews — 3x Price, Vision Regression, Tool Calling Disaster"
+title: "Gemini 3.5 Flash on Reddit: 3x the Price, Worse Vision, Tool Calling Broken"
 slug: en/gemini-3-5-flash-reddit-review
 featured: false
 draft: false

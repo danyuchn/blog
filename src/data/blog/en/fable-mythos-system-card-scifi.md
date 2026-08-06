@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-06-10T04:00:00Z
-title: "Reading the Claude Fable 5 / Mythos 5 System Card Feels Like a Sci-Fi Novel"
+title: "Claude Fable 5 / Mythos 5 System Card: What's Actually Inside, and Why It Reads Like Sci-Fi"
 slug: en/fable-mythos-system-card-scifi
 featured: false
 draft: false
