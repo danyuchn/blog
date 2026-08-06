@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-06-08T04:00:00Z
-title: "What to Know Before Handling Sensitive Data with Claude"
+title: "Claude and Sensitive Data: Retention Windows, Enterprise Terms, and What to Check First"
 slug: en/claude-sensitive-data-checklist
 featured: false
 draft: false

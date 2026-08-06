@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-04-16T02:00:00Z
-title: "Claude Desktop App Got a Redesign — Here's Why I'm Still Using the Terminal"
+title: "Claude Desktop vs CLI: Why I Still Use the Terminal After the Redesign"
 slug: en/claude-desktop-vs-cli
 featured: false
 draft: false

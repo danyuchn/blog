@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-04-01T04:00:00Z
-title: "Claude Code Skills Demystified: Lazy Loading and the Real Trigger Rate"
+title: "How Claude Code Skills Actually Load: Lazy Loading and a 30-50% Trigger Rate"
 slug: en/claude-code-skills-mechanism
 featured: false
 draft: false
