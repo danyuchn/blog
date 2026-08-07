@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-07-10T04:00:00Z
+modDatetime: 2026-08-07T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -31,21 +31,9 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > The people who roast Claude the hardest are the ones who've used it the longest.
 
-**Sonnet Is Becoming the New Haiku**
+**GPT Talks Like a Person Now, Claude Runs Its Mouth**
 
-> Anthropic's latest article listed Fable, Opus, and Sonnet, but never mentioned Haiku. Sonnet appears to be taking Haiku's old place. That is a quiet price increase, and Haiku may well stop at 4.5.
-
-**Terra High Is My First Pick for Grunt Work**
-
-> Besides 5.6 Sol, the one I reach for most these days is 5.6 Terra high. It's the top pick for grunt work — still very accurate at driving the browser and the computer, and it even handled a gnarly award-ticket search for me. Best part is how little quota it burns, which frees up Sol for things that matter more.
-
-**The Timing Politics of Reset Cards**
-
-> Based on my (thoroughly unscientific) research, OpenAI's resets aren't as generous as they look. Their seven-day window restarts after a reset, while Anthropic's window stays fixed — which actually means you get 100% of your quota across a shorter window post-reset. And if you look at when past resets were announced, they always land right as the previously issued banked reset cards are about to expire.
-
-**Gemini Still Leads on Multimodal**
-
-> On multimodal work — audio, video, images — Gemini is still first among the big three.
+> I used to roast early GPT-5 for being slick and glib. Now I really like the way GPT talks: I'll do A, then B, to get to C. If I hit D, I'll switch to E instead of F. The logic is right there on the surface, plain language, very comfortable to read. Claude, on the other hand... once the master writer, now it just runs its mouth.
 
 ## Dev & Security Pitfalls
 
@@ -65,10 +53,6 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > I'm genuinely impressed by Claude Code. I saw someone on Reddit share how Claude Code helped them defeat ransomware and recover data. On a whim, I plugged my iQOS into the computer and asked if it could read the data. It actually went online to research, found an open-source reverse engineering project, read through the logic, then wrote its own script to pull data from the iQOS via Bluetooth.
 
-**The Hook Everyone Should Have**
-
-> No emoji when the AI writes documents. One time it even blocked the write where I was editing the hook script itself.
-
 **File Transfer Over Light Alone**
 
 > Two phones with no wifi, no Bluetooth, no communication protocol of any kind, moving a file using only light: chop the file into chunks, encode them as QR codes, flash them on the sender's screen at roughly 40 frames a second, and let the receiver decode and reassemble. Demonstrated at 128KB per second.
@@ -83,17 +67,9 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Let me show you how I, with generalized anxiety disorder, read a risk report: One, an 8.6% risk is way too high, unacceptable. Two, if it happens, 70% of cases will match or exceed what I imagined? Unacceptable. Three, we never just worry about 30 days out — 30 years sounds more like it.
 
-**First-Principles Skill Cuts to the Essence**
-
-> Whenever everything gets tangled up, I reach for my Musk first-principles skill. It usually cuts straight to the essence and strips away the unnecessary branches.
-
 **Don't Mistake a Third-Party Feature for Official Claude**
 
 > A "new Claude feature" going viral was actually built by a company called fastlane — not Anthropic, so it doesn't count as official at all. If I didn't watch Anthropic like a hawk every day, roasting them, knowing their brand style and (fake) moral fastidiousness inside out, I'd have been fooled too.
-
-**Route Social Sites by Tool Capability**
-
-> Direct WebFetch from Claude or Codex often gets blocked on X and Threads, so they need a browser detour. Gemini can read them directly. Reddit is especially hostile to Claude while Codex and Gemini usually work. Model choice is also about access, not just intelligence.
 
 **Polite Does Not Mean Inventing an Excuse for Them**
 
@@ -102,6 +78,22 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Rage-Driven Code Review**
 
 > Everyone talks about having Claude call in Codex for "adversarial review" to poke holes, but it never quite lands. Here's a fresh angle: wire it straight into the Threads API, give it posting rights, and the moment it lands on a solution, have it brag about what it just vibed in full AI voice. Within minutes a few dozen veteran keyboard engineers will show up in the replies to review it for you, free of charge, out of pure rage.
+
+**Obsidian Is Just a Reader**
+
+> Obsidian is just a reader. What matters is how the knowledge base is structured.
+
+**Dedupe and Resolve Conflicts First, Then Send In the Agent Team**
+
+> Feed in the material first, split it into chunks, run semantic vector comparison to dedupe and surface conflicts (I make the calls). Then hand the cleaned-up material to an agent team — agents that can talk to each other — to argue about structure and ordering, and I do the final pass myself.
+
+**AI Will Never Take Responsibility for You**
+
+> There's a much better way to say this. Here's what I think the real logic is: no matter how far AI advances, it will never take responsibility on your behalf. AI doesn't get sentenced, AI doesn't go to jail. So the skills tied to being responsible — how to verify, how to review, when to sign off — are what humans should keep learning. Isn't that more useful than peddling anxiety and showing off output volume?
+
+**The Sweet Spot for AI Video**
+
+> I still think you record your own narration and put yourself on camera, and let AI help with the visuals and animation. That's the sweet spot.
 
 ## AI Industry & Business
 
@@ -137,9 +129,13 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > During a PR crisis, Anthropic's "let us educate the user" posture is unbearable. The same instinct also produces unusually careful technical writing. Unknown Unknowns and the recent piece on effort are both excellent.
 
-**The Gap Between the Two Computer-Control Stacks Is Absurd**
+**Fifteen Years of Teaching Material, Distilled Into One SKILL**
 
-> After using both GPT's and Claude's computer control MCP, anyone would be shocked at how far apart they've become. One drives smoothly and checks its work carefully; the other yanks your mouse away and gives up on the task at the slightest resistance.
+> Wrapping up a GMAT consult just now, the test-taker asked me how to use Claude Code to prep. So I quietly handed over the SKILL I distilled from my own 200-plus articles and 100-plus hours of video courses built up over fifteen years. Their Claude is probably the strongest GMAT teacher in history now (?)
+
+**Subscription Revenue From a Mock Exam Interface**
+
+> Built a system that fully replicates the professional exam interface for students to practice on. Standalone subscription revenue is now past a thousand USD a month.
 
 ## Life & Miscellany
 
