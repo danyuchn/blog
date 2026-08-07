@@ -221,3 +221,25 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Horror Stories From Free Consultations**
 
 > Fifteen years of teaching, and the horror stories from free and pro bono consultations are endless. I'd love to hear the ones from other industries.
+
+## Early August 2026 (W33)
+
+**Cowork's Sandbox Isn't Mature Yet**
+
+> The sandbox experience in Cowork still doesn't feel mature to me. ChatGPT Work over in the other camp is a lot better.
+
+**Two Places You Never Find Your Way Out Of**
+
+> Two places where you get lost and never find your way out: Shinjuku Station in Tokyo, and Meta's Business Manager.
+
+**What Microsoft Is Good At**
+
+> Microsoft is excellent at making a mess of everything.
+
+**King of Context Rot**
+
+> I hereby crown you King of Context Rot.
+
+**Southeast Asian Taste**
+
+> Southeast Asia has genuinely good taste. Thailand, for one, has an aesthetic and design language all its own. I'd put it alongside Japan as the standout in Asia.
