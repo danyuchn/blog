@@ -1,5 +1,5 @@
 """
-Scan YouTube subscriptions for new videos in the past N days.
+Scan YouTube subscriptions or a public channel for new videos in the past N days.
 
 Reuses the yutu OAuth credentials at ~/.credentials/yutu/. Refreshes the
 access token automatically via the stored refresh_token — no browser step
@@ -13,12 +13,10 @@ Usage:
 
 import argparse
 import json
+import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from googleapiclient.discovery import build
 
 CRED_DIR = Path.home() / ".credentials" / "yutu"
 CLIENT_SECRET = CRED_DIR / "client_secret.json"
@@ -28,9 +26,40 @@ SCOPES = [
     "https://www.googleapis.com/auth/youtube.force-ssl",
     "https://www.googleapis.com/auth/youtube",
 ]
+YOUTUBE_ATOM_NS = {"atom": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
 
 
-def load_credentials() -> Credentials:
+def recent_public_uploads(channel_id: str, after: datetime) -> list[dict]:
+    """Read the official public YouTube Atom feed; requires no OAuth scope."""
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+    request = urllib.request.Request(url, headers={"User-Agent": "AgentCrew weekly scan/1.0"})
+    with urllib.request.urlopen(request, timeout=20) as response:
+        root = ET.fromstring(response.read())
+
+    videos = []
+    for entry in root.findall("atom:entry", YOUTUBE_ATOM_NS):
+        published = datetime.fromisoformat(
+            entry.findtext("atom:published", namespaces=YOUTUBE_ATOM_NS).replace("Z", "+00:00")
+        )
+        if published < after:
+            continue
+        video_id = entry.findtext("yt:videoId", namespaces=YOUTUBE_ATOM_NS)
+        link = entry.find("atom:link", YOUTUBE_ATOM_NS)
+        videos.append(
+            {
+                "video_id": video_id,
+                "title": entry.findtext("atom:title", namespaces=YOUTUBE_ATOM_NS),
+                "published_at": published.isoformat(),
+                "url": link.attrib["href"] if link is not None else f"https://youtu.be/{video_id}",
+            }
+        )
+    return videos
+
+
+def load_credentials():
+    from google.auth.transport.requests import Request
+    from google.oauth2.credentials import Credentials
+
     client = json.loads(CLIENT_SECRET.read_text())
     web = client.get("web") or client.get("installed")
     token = json.loads(TOKEN_FILE.read_text())
@@ -93,13 +122,34 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=7)
     ap.add_argument("--output", type=Path, default=Path("/tmp/youtube-weekly-scan.json"))
+    ap.add_argument(
+        "--own-channel-id",
+        help="Read this public channel's official RSS feed instead of OAuth subscriptions.",
+    )
     args = ap.parse_args()
-
-    creds = load_credentials()
-    youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
     after = datetime.now(tz=timezone.utc) - timedelta(days=args.days)
     after_iso = after.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    if args.own_channel_id:
+        videos = recent_public_uploads(args.own_channel_id, after)
+        result = {
+            "source": "youtube-public-atom",
+            "channel_id": args.own_channel_id,
+            "after": after_iso,
+            "videos": videos,
+        }
+        print(f"Public channel {args.own_channel_id}: {len(videos)} new video(s) after {after_iso}")
+        for video in videos:
+            print(f"- [{video['published_at'][:10]}] {video['title']}\n  {video['url']}")
+        args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2))
+        print(f"Saved to {args.output}")
+        return
+
+    creds = load_credentials()
+    from googleapiclient.discovery import build
+
+    youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
     print(f"Listing subscriptions...")
     subs = list_subscriptions(youtube)
