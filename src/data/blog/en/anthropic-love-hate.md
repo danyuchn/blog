@@ -34,6 +34,8 @@ After all that sneering, I have to be honest: it's a love-hate thing with Anthro
 
 What I hate is the smug elitism, plus the black-box maneuvering dressed up as "educating the user." What I love is the technical writing they share. Among all the big model vendors, their engineering blog is some of the highest quality out there, and it works for everyone — outsiders can follow it, insiders can still spot the craft underneath.
 
+Both sides come out of the same instinct. During a PR crisis, Anthropic's "let us educate the user" posture is unbearable. The same instinct also produces unusually careful technical writing. Unknown Unknowns and the recent piece on effort are both excellent.
+
 I especially love the pieces on security and permissions.
 
 ## Why security
@@ -53,3 +55,11 @@ Anthropic is stuck between two forces. On one side, models that have a real chan
 Those two-front design trade-offs are spelled out clearly across their technical posts. You can see how they weigh things, where they compromise, how they tug between safe and usable.
 
 I'll keep ragging on the elitism. But the engineering blog, I genuinely recommend reading more of it. There's something to gain on every page.
+
+I'm no exception here, by the way. The people who roast Claude the hardest are the ones who've used it the longest.
+
+<!--
+Self-report list
+1. "Both sides come out of the same instinct. During a PR crisis, Anthropic's "let us educate the user" posture is unbearable. The same instinct also produces unusually careful technical writing. Unknown Unknowns and the recent piece on effort are both excellent." — 類型：併入碎念（Anthropic 好為人師的兩面 / The Two Sides of Anthropic's Need to Teach，2026-08-14 週報併入）
+2. "I'm no exception here, by the way. The people who roast Claude the hardest are the ones who've used it the longest." — 類型：併入碎念（罵 Claude 罵最兇的才用最久 / The Ones Who Roast Claude Hardest Use It Longest，2026-08-14 週報併入）
+-->

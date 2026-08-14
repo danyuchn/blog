@@ -46,8 +46,16 @@ At first I bought the Magic Keyboard case. Painful experience: it wears out easi
 
 If I genuinely need to type, I now carry a Mac Magic Keyboard (Bluetooth) plus a Magic Mouse. The two together weigh just over 200 grams — far lighter than the Magic Keyboard case — and the same set works on the Mac at home and pairs with the iPad on the road. Two uses, one purchase.
 
+The setup is the Magic Keyboard I normally use with the Mac, hooked up to an old iPad Pro from years back, then a virtual terminal back to the Mac mini. Smooth even on mobile data. The whole thing weighs far less than a keyboard case, and terminal work rarely needs a mouse anyway. Claude Code even in the middle of nowhere.
+
 But honestly, I later found I rarely even need that set. Most of what I run isn't coding — issue a command with my mouth, swipe with a finger, watch the result with my eyes, and that's enough. I'm not the kind of person who hand-types code anyway, so going without a mouse turns out to be fine. Voice input plus touch gestures hold up surprisingly well for daily work.
 
 A note on hardware: I'm using a 2018 iPad Pro. Eight years old and it still runs the remote session smoothly. Remoting doesn't tax local resources anyway — all the compute is on the host at home, and the iPad is just a screen and a mouth. So I scrapped the plan to buy a new one. Money saved.
 
 Finally, two handy little things: there's a small button in the top-right corner that shows the diff directly, and another button that previews localhost. Add a fileviewer extension and the iPad turns into a file manager — documents, images, videos, all openable.
+
+<!--
+新增非原文句子清單（忠實度自首）：
+1. 「The setup is」 — 類型：併入碎念（iPad Plus Keyboard Is the Best Travel Productivity Combo，2026-08-14 週報併入）
+-->
+

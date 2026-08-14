@@ -45,6 +45,8 @@ Third parties are the channel most likely to puncture marketing claims.
 
 More advanced: after a source leak a while back, there were extensive teardowns on Reddit and Hacker News with titles like "I reverse-engineered Claude Code's internals." Substantive reading.
 
+Third-party channels have a downside, though: the further something gets passed around, the more likely the attribution falls off. A "new Claude feature" going viral was actually built by a company called fastlane — not Anthropic, so it doesn't count as official at all. If I didn't watch Anthropic like a hawk every day, roasting them, knowing their brand style and (fake) moral fastidiousness inside out, I'd have been fooled too.
+
 Then there are **independent rebuttals and benchmarks**. After Claude Mythos's "autonomously found zero-day vulnerabilities" claim went out, Hugging Face CEO Clem Delangue immediately ran the experiment: small open-source models could do the same. They tested 8 models against the vulnerabilities Anthropic touted; all 8 reproduced the result, one of them at $0.11/M token.
 
 Chinese media praised it without scrutiny. English-speaking technical circles called it out. Source: [AI Cybersecurity After Mythos: The Jagged Frontier](https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier).
@@ -60,3 +62,8 @@ My own habit:
 Stick to only one channel and you become either too credulous or too cynical. Use all three to stay calibrated.
 
 A lighter observation while we are here: the official Claude account recently started messing around again, launching a Lo-Fi music livestream. Being able to switch between rigorous safety research and Lo-Fi beats is part of this company's character.
+
+<!--
+Self-report list
+1. "Third-party channels have a downside, though: the further something gets passed around, the more likely the attribution falls off. A "new Claude feature" going viral was actually built by a company called fastlane — not Anthropic, so it doesn't count as official at all. If I didn't watch Anthropic like a hawk every day, roasting them, knowing their brand style and (fake) moral fastidiousness inside out, I'd have been fooled too." — 類型：併入碎念（別把第三方功能當 Claude 官方 / Don't Mistake a Third-Party Feature for Official Claude，2026-08-14 週報併入）
+-->

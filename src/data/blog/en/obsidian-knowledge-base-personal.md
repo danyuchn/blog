@@ -32,6 +32,8 @@ Obsidian's answer: I write everything in markdown, stored locally, cross-linked 
 
 ## What my knowledge base looks like
 
+One thing to get out of the way before the folder list: Obsidian is just a reader. What matters is how the knowledge base is structured.
+
 The main folders:
 
 - `daily/YYYY-MM-DD.md`: daily notes. Things done, decisions, mistakes, lessons
@@ -85,3 +87,8 @@ Putting them head to head is like asking "should I buy sneakers or dress shoes?"
 I'll keep using Obsidian. And I'd love to see you start from your first daily note too.
 
 > Video: <https://youtu.be/EhMKfG1dvnI>
+
+<!--
+Self-report list
+1. "One thing to get out of the way before the folder list: Obsidian is just a reader. What matters is how the knowledge base is structured." — 類型：併入碎念（Obsidian 只是一個閱讀器 / Obsidian Is Just a Reader，2026-08-14 週報併入）
+-->

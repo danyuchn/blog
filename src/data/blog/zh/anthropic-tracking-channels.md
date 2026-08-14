@@ -45,6 +45,8 @@ description: 從 2026 年 3 月開始我陸續記了一些追 Anthropic 的方�
 
 更進階的話，可以看前陣子源碼洩漏後的大量網路拆解——Reddit 跟 Hacker News 上有不少「我反編譯了 Claude Code 內部運作」的長文。
 
+不過第三方管道也有它的代價：東西傳著傳著，出處就掉了。有個被瘋傳的「Claude 新功能」，其實是一家叫 fastlane 的公司做的，不是 Anthropic，根本不能算官方。要不是我天天盯著 Anthropic 罵、對他們的品牌風格、道德（假）潔癖瞭若指掌，早就被誤導了。
+
 還有就是**獨立的反駁與實測**。Claude Mythos「自主發現零日漏洞」的宣傳出來後，Hugging Face CEO Clem 馬上拿出實測：小型開源模型也能做到同樣的事。他們拿了 8 個模型跑 Anthropic 宣傳的漏洞，8 個都復現了，其中一個只要 $0.11/M token。
 
 中文自媒體一片吹捧，英文技術圈直接開嗆。來源：[AI Cybersecurity After Mythos: The Jagged Frontier](https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier)
@@ -60,3 +62,8 @@ description: 從 2026 年 3 月開始我陸續記了一些追 Anthropic 的方�
 只看其中一個管道，要嘛太天真，要嘛太憤世。三條一起用才能保持判斷力。
 
 順便提一個輕鬆的觀察：Claude 官方帳號最近又開始整活，弄了一個 Lo-Fi Music 直播。能在嚴肅的安全研究跟 Lo-Fi 之間自由切換，也算是這家公司的特色之一了。
+
+<!--
+自首清單
+1. 「不過第三方管道也有它的代價：東西傳著傳著，出處就掉了。有個被瘋傳的「Claude 新功能」，其實是一家叫 fastlane 的公司做的，不是 Anthropic，根本不能算官方。要不是我天天盯著 Anthropic 罵、對他們的品牌風格、道德（假）潔癖瞭若指掌，早就被誤導了。」 — 類型：併入碎念（別把第三方功能當 Claude 官方，2026-08-14 週報併入）
+-->

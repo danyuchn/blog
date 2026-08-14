@@ -48,6 +48,8 @@ On the morning of 31 July I was watching swap. The day before I'd accidentally l
 
 The Mac mini M4 Pro migration did hand me one pleasant surprise. Machine-to-machine transfer with Migration Assistant carried the TCC permissions across, which saved me re-authorizing everything one by one.
 
+On the cost of the machine itself: Mac mini M4 Pro with 48GB. I paid a bit over NT$50,000 in May including AppleCare, and that was pre-price-hike plus employee pricing. Go look now and it's over NT$90,000. A computer is a production tool, and the line about still holding its value after a few years turns out to be true.
+
 If anyone asks whether they should run local, here's my advice. For cloud models, 8GB is enough. For local models it depends on your specs. But first be clear about why you want local. For privacy, that's reasonable. To save money, not so much, because getting local output comparable to a commercial model means spending on hardware first. Don't overthink local at the start. Get fluent with the ordinary closed-source models first.
 
 ## Three Bad Habits
@@ -72,3 +74,9 @@ On the night of 30 July I confessed on Threads what these two weeks had turned m
 For English readers, the three habits are: (1) 慣老闆, the sweatshop boss: I work the Mac even while I sleep, with a pile of local-model schedules handling tasks; if there's an idle slot, I go pull a few more models off Hugging Face to benchmark. My girlfriend asked why the study is hotter than it used to be, and I'm not sure whether I should tell them it's because models are running non-stop. (2) 免費蕭貪仔, the freebie glutton: open-source models cost nothing to pull, so pull as many as possible and test as many as possible; the Mac mini's power draw is negligible anyway. (3) 吃到飽不吃撐不甘心, the all-you-can-eat compulsion: if I don't use up the quota a reset hands me, I regret it enough to 錘心肝 (pound my chest); so the moment it resets I go hard, and this month's tokens would have passed ten thousand US dollars on API pricing. Reflecting on all three.
 
 A few days back someone brought up small models under one of my posts, and I replied: smart. Everyone's racing on big models right now, but small models are what blooms everywhere in the future.
+
+<!--
+新增非原文句子清單（忠實度自首）：
+1. 「On the cost of the machine itself:」 — 類型：併入碎念（The Mac Mini Holds Its Value, No Joke，2026-08-14 週報併入）
+-->
+

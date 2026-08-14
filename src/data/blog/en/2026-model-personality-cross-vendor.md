@@ -29,6 +29,8 @@ UX double-edged sword:
 
 Gemini fits research scenarios where you want to see the reasoning. It does not fit "just do it" daily tasks.
 
+The theatrics are one thing. How it puts things is another. In an online argument, who do I back? Gemini: state the facts plainly, leave the rest to the onlookers, let the facts do the talking. That's enough (you should never expect to convince the other side). Onlookers don't need a pile of agitation and emotional payoff.
+
 ## Claude 4.7: the slick veteran
 
 Lately Claude 4.7 has become **so sassy I want to slap it**.
@@ -52,6 +54,8 @@ The more I use Codex these months, the more it feels like an "emotionless collea
 Plus Codex's quota resets are generous. I have actually migrated my main workflow from Claude over. I wrote a [Skill that handles the harness migration](/posts/en/codex-migration-skill).
 
 Codex CLI also has gaps — no `/rewind` is a real pain — but "personality stability" in repetitive work is an underrated advantage.
+
+The contrast gets sharper in the next generation. I used to roast early GPT-5 for being slick and glib. Now I really like the way GPT talks: I'll do A, then B, to get to C. If I hit D, I'll switch to E instead of F. The logic is right there on the surface, plain language, very comfortable to read. Claude, on the other hand... once the master writer, now it just runs its mouth.
 
 ## A side-by-side table
 
@@ -77,3 +81,9 @@ The answers to these questions matter ten times more than MMLU scores.
 If you are picking a subscription, spend a week chatting with each, **decide based on "who do I want to live with daily"** — more practical than reading benchmark leaderboards.
 
 Tools change, benchmarks change. The "feel of cohabitation" is the relatively stable variable across a model's lifecycle.
+
+<!--
+Added non-source sentences (fidelity disclosure):
+1. 「The theatrics are one thing. How it puts things is another. In an online argument, who do I back? Gemini: state the facts plainly, leave the rest to the onlookers, let the facts do the talking. That's enough (you should never expect to convince the other side). Onlookers don't need a pile of agitation and emotional payoff.」 — 類型：併入碎念（A Vote for Gemini: Let the Facts Talk，2026-08-14 週報併入）
+2. 「The contrast gets sharper in the next generation. I used to roast early GPT-5 for being slick and glib. Now I really like the way GPT talks: I'll do A, then B, to get to C. If I hit D, I'll switch to E instead of F. The logic is right there on the surface, plain language, very comfortable to read. Claude, on the other hand... once the master writer, now it just runs its mouth.」 — 類型：併入碎念（GPT Talks Like a Person Now, Claude Runs Its Mouth，2026-08-14 週報併入）
+-->

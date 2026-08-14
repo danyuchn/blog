@@ -12,6 +12,8 @@ tags:
 description: 'Short instructions go through push-to-talk; walking through a whole course outline or system architecture goes through a full QuickTime recording that I hand to the AI to transcribe and execute. Plus the setup I use to burn the AI quota that came free with Google Drive.'
 ---
 
+Back in March I was still wishing for it: hoping for built-in voice input! The tools have since filled that in, and now the question is just how to use them.
+
 I am curious what everyone's habit is for voice-driving Claude Code or Codex.
 
 At first I assumed my habit was short instructions, so I installed something like SayIt: hold the key to record, release to transcribe. Later I found that for things like walking through the whole thinking behind a slide deck, going over a system architecture, or doing an overall acceptance pass, what I actually prefer is: open QuickTime, start talking through my comments while watching, and when I am done, drag the audio file over and let the AI transcribe it with a preconfigured speech-to-text tool and then act on it.
@@ -39,3 +41,9 @@ Using its headless mode, called out by codex or claude code to eat the subscript
 Someone asked whether this transcription method is accurate. The error rate is about the same, but it is very, very fast, and it comes with speaker identification built in. The quota came free with Drive.
 
 Someone else recommended another STT model. I tried it before. What it is strongest at is recognizing Taiwanese; for Chinese, accuracy is a touch behind qwen.
+
+<!--
+新增非原文句子清單（忠實度自首）：
+1. 「Back in March I was still wishing for it:」「The tools have since filled that in, and now the question is just how to use them.」 — 類型：併入碎念（Voice Input Please，2026-08-14 週報併入）
+-->
+

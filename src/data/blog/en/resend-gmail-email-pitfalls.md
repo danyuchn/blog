@@ -73,6 +73,13 @@ Correct approach: **wait until both batches have matured at least 24 hours**, th
 
 Don't conclude too early. The value of an AI email workflow isn't one metric jumping immediately. It's the controllability across the entire funnel.
 
+The L3 BD outreach batch surfaced something else first, and it wasn't customized vs generic. It was whether the first email tries to sell. First email using "let's exchange notes" framing (no pitch, no needs ask, just "want to grab some time, exchange notes on AI in practice") got 67% open rate. Same list with a "let me sell you" framing (course pitch, L3 consulting service) got 17%. Four times the gap. Don't sell anything in the first email. That's actually true for the early stage of a BD funnel.
+
 ---
 
 If you're doing any kind of send automation, take this as a checklist.
+
+<!--
+Added non-source sentences (fidelity disclosure):
+1. 「The L3 BD outreach batch surfaced something else first, and it wasn't customized vs generic. It was whether the first email tries to sell. First email using "let's exchange notes" framing (no pitch, no needs ask, just "want to grab some time, exchange notes on AI in practice") got 67% open rate. Same list with a "let me sell you" framing (course pitch, L3 consulting service) got 17%. Four times the gap. Don't sell anything in the first email. That's actually true for the early stage of a BD funnel.」 — 類型：併入碎念（L3 BD Outreach Open Rate，2026-08-14 週報併入）
+-->
