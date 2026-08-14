@@ -18,6 +18,8 @@ Three observations from this week that are interesting when viewed together.
 
 GPT's image generation model has been showing signs of degradation recently. No matter how many constraints you set, subsequent rounds of revision always make things worse. For instance, the aspect ratio of CJK characters in generated text is nearly impossible to fix. OpenAI's stealth quality reduction is starting to rival Google Gemini.
 
+Speaking of Google, that's the classic Google move: generous onboarding to get you hooked, then quota cuts, quality drops, and various creative ways to screw customers. Ninety percent identical to Taiwanese bank credit card tactics.
+
 ## Claude Quietly Shrinks Rate Limits
 
 Claude looked generous last week — "5-hour rate limit lifted, weekly quota +50% through July." In practice, that lasted about three days. Limits are quietly tightening again.
@@ -35,3 +37,9 @@ This is actually good news. Quietly building something substantial is better. Bi
 3. **For Anthropic, no news is good news.** Sonnet being late, the team staying quiet — that suggests they're actually heads-down working.
 
 This cycle repeats at every company. The leader harvests, the challenger sprints, and users get squeezed in between. The only defense is never locking into a single provider. Keep your tools swappable.
+
+<!--
+Added non-source sentences (faithfulness disclosure):
+1. "Speaking of Google, that's the classic Google move:" — type: merged micro-note (Google's Classic Move, merged 2026-08-14 weekly roundup; only this transition is new, the rest is the micro-note verbatim)
+-->
+

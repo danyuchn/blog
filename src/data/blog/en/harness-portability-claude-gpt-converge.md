@@ -88,6 +88,22 @@ Six things on my own list:
 
 ![Card six: Six steps for the next round of personal harness tuning — cut duplication, move on-demand, add context, keep hard boundaries, shrink tools, run real tests.](/blog/assets/posts/harness-portability-claude-gpt-converge/card-06.jpg)
 
+## A Set of Numbers That Are Not Mine
+
+After writing all this, I came across a comparison the Schema team ran on the 25 public games in ARC-AGI-3: a bare API run scores 42.83% (the Claude Code baseline), and the same thing with a harness on top scores 98.98%.
+
+![Card: On the 25 public games of ARC-AGI-3, a bare API run at 42.83% next to a harness-equipped run at 98.98%.](/blog/assets/posts/harness-portability-claude-gpt-converge/arc-agi-01.jpg)
+
+Three discounts before you read that number: the metric is RHAE, relative human action efficiency, not a solve rate; the figure is the Schema team's own report from August 2026, and ARC Prize has not verified it independently; the official leaderboard does not count harness scores at all. I am not holding it up as proof. I am pointing out that the same model with and without a shell differs this much, which is the thing this whole piece is about.
+
+The second card in that set is one line from them, and I think it is worth keeping more than the number is:
+
+> A harness lowers the cost of using a theory. The underlying model determines the cost of discovering one.
+
+![Card: The quote "a harness lowers the cost of using a theory, the underlying model determines the cost of discovering one," credited to the Schema harness team, August 2026, self-reported and not independently verified.](/blog/assets/posts/harness-portability-claude-gpt-converge/arc-agi-02.jpg)
+
+That line also puts a boundary around everything above: a harness is worth your time to maintain, but it will not grow a capability the model does not already have.
+
 On August 2 I am running a workshop called "Switch Models, Not Methodology," subtitled "take your rules, habits, and working environment with you." It is aimed at AI users without an engineering background, capped at 30 people. On the poster I wrote a note by hand: the method is in my hands, the environment travels with me.
 
 ![Workshop poster: Switch Models, Not Methodology, subtitled take your rules, habits, and working environment with you.](/blog/assets/posts/harness-portability-claude-gpt-converge/workshop-poster.jpg)

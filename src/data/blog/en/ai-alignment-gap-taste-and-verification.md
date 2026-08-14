@@ -34,6 +34,8 @@ Between those two guesses, I think verification is the more important one. Becau
 
 There's an old joke that any job where doing it wrong sends you to prison is a job AI won't replace. AI can't be sentenced for getting it wrong. It can't be put in front of a firing squad. And I do think the skills built around being accountable will hold up in the AI era for a very, very long time.
 
+Put another way: no matter how far AI advances, it will never take responsibility on your behalf. So the skills tied to being responsible, like how to verify, how to review, when to sign off, are what humans should keep learning. Isn't that more useful than peddling anxiety and showing off output volume?
+
 Get taste wrong and the worst case is something ugly or unpleasant to use. Get verification wrong and it's your name on the signature.
 
 ## Where Verification Actually Goes Wrong
@@ -45,3 +47,8 @@ First: verifying against the spec instead of against the real computation. If th
 There's another kind of slippage where the source material isn't even what you think it is. A file named "transcript" opens up as an already-cleaned summary, with the actual raw recording stored somewhere else. Another trap: SenseVoice STT has no speaker labels, so with several people in the room, the opening self-introductions get attributed to the wrong person very easily. Verification done carefully on a file like that is still worthless.
 
 So what you verify is never what the AI said. It's the thing itself.
+
+<!--
+Added non-source sentences (fidelity disclosure):
+1. 「Put another way: no matter how far AI advances, it will never take responsibility on your behalf. So the skills tied to being responsible, like how to verify, how to review, when to sign off, are what humans should keep learning. Isn't that more useful than peddling anxiety and showing off output volume?」 — 類型：併入碎念（AI Will Never Take Responsibility for You，2026-08-14 週報併入）
+-->

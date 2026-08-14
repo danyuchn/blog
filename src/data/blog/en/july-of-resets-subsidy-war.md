@@ -22,6 +22,8 @@ I'm honestly looking forward to either OpenAI or Anthropic going public, because
 
 No idea how long the subsidy war will run. GPT announced another price cut yesterday, and Kimi and Deepseek keep pushing their benchmarks closer while driving prices down. I can't read the situation clearly, and even if I could, ordinary folks like us can't change anything about it.
 
+Early July made that especially obvious: proactive resets, expired credits restored. No explanation. The only one I can think of is that GPT-5.6 launched and somebody panicked.
+
 ## What I'm already actively doing
 
 Keeping the harness on a diet (cut 40% of the always-injected tokens this week), routing some very simple one-shot tasks to local models overnight, or sending them through the all-you-can-eat Gemini subscription (antigravity CLI).
@@ -42,9 +44,13 @@ From my (unprofessional) research, OpenAI's resets aren't as generous as they lo
 
 So I'm putting this on record: there will definitely be a reset on 8/12-14, and you can all come back and check. Why? Because Tibo is sly, and always times the reset to hit right on the banked reset expiry date. The last banked reset expires 8/13.
 
+Resets aren't the only thing timed to an expiry date. A: "Fable's only good until 7/12" (the neighbor released a new model people liked, thinking about switching). "Hey hey, don't go, I'll extend you to 7/19."
+
 Another gut feeling: the weekly quota on Codex's 100 USD plan seems smaller than Claude's 100 USD one. I haven't tallied token usage, so this is purely a feeling. Anyone else feel the same? Not sure whether it's because Opus 5 is that durable, or because I run so many browser and computer-control tasks on Codex.
 
 One more thing worth noting: Anthropic's latest post lists only Fable, Opus, and Sonnet, with no mention of Haiku at all. Sonnet looks like it's taking over the slot Haiku used to hold, which is a price increase nobody's calling a price increase. Haiku will probably stop at 4.5.
+
+The last few days of the month were even better: frantic resets on one side and frantic account bans on the other. Easily the most absurd scene I've witnessed.
 
 Anthropic, so stingy.
 
@@ -61,4 +67,7 @@ Added non-source sentences (faithfulness disclosure):
 7. "One more thing worth noting:" — type: transition
 8. Both image alt descriptions — type: rewrite (describing actual image content, not source post text)
 All other sentences are verbatim or near-verbatim from the original posts and existing micro-notes entries. Point 5's "non-sensitive information, or via local" is where the original was cut off; it was not continued.
+9. "Early July made that especially obvious:" — type: merged micro-note (Suddenly Feeling Generous, merged 2026-08-14 weekly roundup)
+10. "Resets aren't the only thing timed to an expiry date." — type: merged micro-note (The Tender Drama of a Fable Subscription Countdown, merged 2026-08-14 weekly roundup)
+11. "The last few days of the month were even better: frantic resets on one side and frantic account bans on the other. Easily the most absurd scene I've witnessed." — type: merged micro-note (Frantic Resets on One Side, Frantic Bans on the Other, merged 2026-08-14 weekly roundup; only "The last few days of the month were even better:" is transition)
 -->

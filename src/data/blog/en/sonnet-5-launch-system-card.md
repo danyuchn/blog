@@ -15,6 +15,8 @@ Sonnet 5 is here. First, a screenshot of the model picker: Fable 5 is still stuc
 
 ![Claude App model picker: Fable 5 shows Currently unavailable, Sonnet 5 is selected](/blog/assets/posts/sonnet-5-launch-system-card/model-select.jpg)
 
+The moment Sonnet 5 dropped, the streets filled with people commenting without reading the system card. Yet another one who didn't read it.
+
 ## The lazy version of the system card
 
 Positioning first: this new model is "not the strongest one." The company deliberately won't let it be the strongest; it's positioned as "the cheaper version that gets close to top spec." The safety testing result: it didn't cross any dangerous line, so it can ship normally.
@@ -63,4 +65,5 @@ In one line: it's not here to take Opus's spot, it's here to swap out the Sonnet
 6. 「I have roughly figured out how Sonnet 5 should be used:」— 改寫：原文「大概知道 Sonnet 5 的使用情境了」的口語化替換。
 7. 「In one line: it is not here to take Opus's spot; it is here to swap out the Sonnet 4.6 slot.」— 改寫：收束句，重述原文「拿它來對比 Opus 是不切實際的，他替代是 Sonnet 4.6」。
 8. 三個小標題（The lazy version of the system card / The official performance curves / Where I actually use it）— 銜接：結構分段，非內容句。
+9. "The moment Sonnet 5 dropped, the streets filled with people commenting without reading the system card. Yet another one who didn't read it." — 類型：併入碎念（Yet Another Who Didn't Read the System Card，2026-08-14 週報併入；逐字，無新增銜接詞）
 -->

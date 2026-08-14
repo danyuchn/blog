@@ -36,14 +36,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > Recently had a realization: when projects are full, there's genuinely no time to post content on Threads. All my talking is with Claude Code, and that alone maxes me out.
 
-**Voice Input Please**
-
-> Hoping for built-in voice input!
-
-**Google's Classic Move**
-
-> Classic Google: generous onboarding to get you hooked, then quota cuts, quality drops, and various creative ways to screw customers. Ninety percent identical to Taiwanese bank credit card tactics.
-
 **NeurIPS Flooded by AI**
 
 > NeurIPS is getting washed with tens of thousands of AI-generated submissions. PhD students using AI to generate content isn't even surprising anymore.
@@ -58,19 +50,11 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > Crap, I now read every "CC" as Claude Code. Am I sick?
 
-**Social Agentic AI Club**
-
-> I want a social agentic AI club: face to face, no talking, my Claude Code argues with your Codex, mutually code-reviewing each other into shreds. Cover charge required.
-
 **RapidAPI vs Apify**
 
 > This week's research conclusion: RapidAPI is "supermarket buying ready-made"; Apify is "kitchen where you can cook your own or buy meal-kits." RapidAPI takes 25% from the platform side rather than the API provider; each API has its own subscription, quotas don't pool, but billing is unified. For teaching scenarios, RapidAPI's "get travel/hotel real-time data without writing scrapers yourself" is great.
 
 ## Late April 2026 (W18)
-
-**Baidu Got Claude to Comply**
-
-> Claude is normally so morally upright — won't do this, won't do that. But somehow with Baidu it suddenly cooperates with jailbreaks. Looks like Dario has some unspecified trauma from his Baidu days.
 
 ## Early May 2026 (W19)
 
@@ -144,15 +128,7 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > Herdr is far more usable than Tmux. Spread the word.
 
-**Yet Another Who Didn't Read the System Card**
-
-> The moment Sonnet 5 dropped, the streets filled with people commenting without reading the system card. Yet another one who didn't read it.
-
 ## Early July 2026 (W28)
-
-**Suddenly Feeling Generous**
-
-> Proactive resets, expired credits restored. No explanation. The only one I can think of is that GPT-5.6 launched and somebody panicked.
 
 **My Second-to-Last Fable Prompt**
 
@@ -168,29 +144,9 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 ## Late July 2026 (W31)
 
-**A Google Engineer's Proper Form**
-
-> This weekend's freshest bit: a Google engineer needs to learn proper AI form from vocational school kids — running local models on a 5000 (NT dollar) machine. If that's true, Taiwan stocks, SK Hynix, and Samsung are in for another beating next week.
-
-**The Tender Drama of a Fable Subscription Countdown**
-
-> A: "Fable's only good until 7/12" (the neighbor released a new model people liked, thinking about switching). "Hey hey, don't go, I'll extend you to 7/19."
-
-**13 Subagents to Chat on My Behalf**
-
-> I really want to dispatch 13 subagents to chat for me, saving the human main agent's context window.
-
 **The Future Where You Just Open Your Mouth and Yell at Your AI Agent**
 
 > Word is Opus 5 drops tonight, and Codex is about to pull in that real-time two-way voice model. Soon it'll really just be opening your mouth and yelling at an AI agent.
-
-**GPT 5.6 Sol Is a Mad Dog**
-
-> I tell everyone GPT 5.6 Sol is a mad dog. Give it the /狗死 (dog-die) command — I usually play LISA's "dog-die~dog-die~" alongside it — and it clamps onto the target and won't let go until the job's done.
-
-**1000 Subagents vs. HTML Docs**
-
-> One person single-handedly running 1000 subagents; everyone, let's start writing HTML instead of markdown for docs.
 
 ## Late July 2026 (W32)
 
@@ -202,31 +158,11 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > Opus 5 shipped last week. My first thought was that they were being brave. Then I thought about it again: Claude has had outages on every day of the week. They simply don't care about uptime.
 
-**Frantic Resets on One Side, Frantic Bans on the Other**
-
-> These past few days, frantic resets on one side and frantic account bans on the other. Easily the most absurd scene I've witnessed.
-
 **The Double Standard on Banning Minors**
 
 > Anthropic is being a bit two-faced here. If they really want to ban minors, their own engineers shouldn't be allowed to use it either — not one of them is mentally an adult.
 
-**iPad Plus Keyboard Is the Best Travel Productivity Combo**
-
-> Took the Magic Keyboard I normally use with the Mac, hooked it up to an old iPad Pro from years back, then ran a virtual terminal back to the Mac mini. Smooth even on mobile data. The whole thing weighs far less than a keyboard case, and terminal work rarely needs a mouse anyway. Claude Code even in the middle of nowhere.
-
-**The Mac Mini Holds Its Value, No Joke**
-
-> Mac mini M4 Pro with 48GB. I paid a bit over NT$50,000 in May including AppleCare — that was pre-price-hike plus employee pricing. Go look now and it's over NT$90,000. A computer is a production tool, and the line about still holding its value after a few years turns out to be true.
-
-**Horror Stories From Free Consultations**
-
-> Fifteen years of teaching, and the horror stories from free and pro bono consultations are endless. I'd love to hear the ones from other industries.
-
 ## Early August 2026 (W33)
-
-**Cowork's Sandbox Isn't Mature Yet**
-
-> The sandbox experience in Cowork still doesn't feel mature to me. ChatGPT Work over in the other camp is a lot better.
 
 **Two Places You Never Find Your Way Out Of**
 
@@ -243,3 +179,33 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Southeast Asian Taste**
 
 > Southeast Asia has genuinely good taste. Thailand, for one, has an aesthetic and design language all its own. I'd put it alongside Japan as the standout in Asia.
+
+## Mid-August 2026 (W34)
+
+**OpenAI's Fall From Grace Isn't Far Off**
+
+> The wind keeps shifting. With Tibo teasing and then playing generous by dropping a reset at a moment that was going to reset anyway, with codex version strings revealing they plan to sell reset vouchers later, and with quota burn trending high right now, my estimate is two months at the earliest, four at the latest, before OpenAI falls off the pedestal again. They take turns making marketing and PR mistakes anyway, and gain their edge from the other side's blunders.
+
+**What to Watch Is Next Week's Open Weights**
+
+> What regular people should actually be watching is Qwen 3.8 27b, open weights next week. Quantize that one and it genuinely fits on our machines, with enough speed and enough intelligence for a local model. Waiting on unsloth.
+
+**The Second Wheel on the Feed**
+
+> When people talked about reinventing the wheel with AI, the first thing that came to mind was accounting software. Lately I've noticed the second wheel showing up on the feed: all at once, the whole world is hand-rolling Claude Code/Codex usage monitors.
+
+**Letting an Agent Drive a Mirrored iPhone**
+
+> A repo I just came across, and it's very cool: it lets an agent drive an iPhone mirrored onto a Mac.
+
+**Herdr Got Into YC**
+
+> Herdr, my favorite, just announced they got into YC. Congratulations.
+
+**Gemini's Real Strength Is Multimodal**
+
+> What I think it's best at is multimodal handling. Give it a single-shot task, reading an image, reading audio, watching a video, and it's number one.
+
+**Submission Volume at Top Conferences Is About to Crater**
+
+> Paper submission counts at top international academic conferences are projected to drop sharply.

@@ -65,6 +65,8 @@ This is subjective, but there's a reasonable explanation.
 
 CLI context is cleaner and more focused. The model can spend its compute on the actual problem instead of processing sandbox environment noise. Same model, better input, better output.
 
+Separately, the sandbox experience in Cowork still doesn't feel mature to me. ChatGPT Work over in the other camp is a lot better.
+
 ## When to Use Which
 
 **Claude Code CLI**: Development work, long sessions, tasks where you want precise control. Highest token efficiency. Built for daily heavy use.
@@ -72,3 +74,9 @@ CLI context is cleaner and more focused. The model can spend its compute on the 
 **Cowork**: GUI operations, browser interactions, or when you're not comfortable with the terminal. The tradeoff is significantly higher quota consumption.
 
 If you have a Max plan and your main work is coding, you rarely need to touch Cowork.
+
+<!--
+Added non-source sentences (faithfulness disclosure):
+1. "Separately," — type: merged micro-note (Cowork's Sandbox Isn't Mature Yet, merged 2026-08-14 weekly roundup; only this transition is new, the rest is the micro-note verbatim)
+-->
+
