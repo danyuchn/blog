@@ -13,7 +13,7 @@ tags:
 description: Two MCP servers wrapping Taiwan's public data sources—one focused on court judgments and statutes, the other aggregating 52,960 government open datasets plus 37 local utility tools. They turn out to be complementary; I now run both.
 ---
 
-Spent the last two weeks evaluating two MCP servers that wrap Taiwan's public data. The trigger was needing "official source" demo material for the L2 course, plus checking whether either is good enough to hand to L3 consulting clients in legal, compliance, or government settings.
+Spent the last two weeks evaluating two MCP servers that wrap Taiwan's public data. The trigger was needing "official source" demo material for the L2 course, plus checking whether either is good enough to hand to L3 adoption clients in legal, compliance, or government settings.
 
 ## mcp-taiwan-legal-db
 
