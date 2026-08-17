@@ -72,6 +72,6 @@ What this person did was simple: he trusted the data. He was right, but nobody w
 
 The "gap" people keep complaining about isn't mystical. Last week was fine, this week isn't, your usage habits are identical, but the model is blind-editing files, getting stuck in loops, and firing 80x the API calls per message—that's not "peak-hour limiting." That's the model being tampered with.
 
-I do consulting work, and my workflow is deeply coupled to Claude Code. In this situation, the pragmatic move isn't to argue—it's to prepare a Plan B. OpenCode + GLM/Kimi/MiniMax, config and memory fully backed up, ready to switch at any moment. I wrote about the full setup in [Anthropic Trust Crisis and My Backup Plan](/blog/posts/en/anthropic-trust-crisis-backup).
+I do AI adoption work, and my workflow is deeply coupled to Claude Code. In this situation, the pragmatic move isn't to argue—it's to prepare a Plan B. OpenCode + GLM/Kimi/MiniMax, config and memory fully backed up, ready to switch at any moment. I wrote about the full setup in [Anthropic Trust Crisis and My Backup Plan](/blog/posts/en/anthropic-trust-crisis-backup).
 
 AI companies always get cocky once they have enough users. Don't buy annual subscriptions, don't depend on a single vendor. That's the single most important thing to learn about working with AI in 2026.

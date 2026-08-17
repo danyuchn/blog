@@ -72,6 +72,6 @@ Redact 比例是最驚悚的：3/5 還只是 1.5%，3/7 衝到 24.7%，3/8 變 5
 
 大家抱怨的「落差」不是玄學。上禮拜還可以、這禮拜就不行，使用習慣跟上禮拜一樣，模型卻開始瞎改檔案、陷入 loop、一句話產生 80 倍 API call——這不叫「尖峰時段限制」，這叫模型被動過。
 
-我是做顧問工作的，我的工作已經深度綁定 Claude Code。這種情況下最務實的策略不是吵架，是準備 Plan B：OpenCode + GLM/Kimi/MiniMax，config 跟 memory 全部備份，隨時切換。我前一篇 [Anthropic 信任危機與我的備援方案](/blog/posts/zh/anthropic-trust-crisis-backup) 已經寫過怎麼搞這一套。
+我是做 AI 導入工作的，我的工作已經深度綁定 Claude Code。這種情況下最務實的策略不是吵架，是準備 Plan B：OpenCode + GLM/Kimi/MiniMax，config 跟 memory 全部備份，隨時切換。我前一篇 [Anthropic 信任危機與我的備援方案](/blog/posts/zh/anthropic-trust-crisis-backup) 已經寫過怎麼搞這一套。
 
 AI 公司人一多就開始拿翹。不要買年費，不要只靠一個服務商。這是 2026 年用 AI 工作最該學會的一件事。

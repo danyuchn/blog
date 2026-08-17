@@ -33,7 +33,7 @@ With this rational analysis framework from the book, I've become much calmer whe
 
 The numbers are right there. The floor is right there. When you know where you stand, there's nothing to flinch about. Whatever the other party says is their business. Hold your own scope and that's it.
 
-A recent real example: a student wanted one-on-one consulting at 60% of my rate. After calculating prep time and follow-up overhead, the effective hourly rate dropped to a third. Not worth it. No agonizing needed — just redirect to the course offering.
+A recent real example: a student wanted one-on-one sessions at 60% of my rate. After calculating prep time and follow-up overhead, the effective hourly rate dropped to a third. Not worth it. No agonizing needed — just redirect to the course offering.
 
 ## Why Turn a Book into a Skill
 
