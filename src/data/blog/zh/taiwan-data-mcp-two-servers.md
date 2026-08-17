@@ -10,10 +10,10 @@ tags:
   - taiwan-data
   - ai-tools
   - claude-code
-description: 兩個串接台灣公開資料的 MCP server——一個專精法律判決跟法規查詢、一個聚合 5.3 萬筆政府開放資料 + 37 個在地工具。實測下來各有強項，課程跟顧問場景的搭配方式不一樣。
+description: 兩個串接台灣公開資料的 MCP server——一個專精法律判決跟法規查詢、一個聚合 5.3 萬筆政府開放資料 + 37 個在地工具。實測下來各有強項，課程跟導入場景的搭配方式不一樣。
 ---
 
-最近兩週測了兩個串接台灣公開資料的 MCP server。背景是 L2 課程需要「官方資料來源」的 demo 素材，順便評估能不能直接給 L3 顧問客戶（法務、合規、政府機關）用。
+最近兩週測了兩個串接台灣公開資料的 MCP server。背景是 L2 課程需要「官方資料來源」的 demo 素材，順便評估能不能直接給 L3 導入客戶（法務、合規、政府機關）用。
 
 ## mcp-taiwan-legal-db
 
@@ -76,7 +76,7 @@ claude mcp add --transport http twinkle-hub https://api.twinkleai.tw/mcp/ \
 
 我自己現在的分工是：
 
-- **mcp-taiwan-legal-db**：所有「需要看判決書、看法條原文」的場景。法律 demo、L3 顧問導入、給法務客戶用
+- **mcp-taiwan-legal-db**：所有「需要看判決書、看法條原文」的場景。法律 demo、L3 導入案、給法務客戶用
 - **Twinkle Hub**：所有「需要查政府其他資料」的場景。商業 demo、L2 課堂示範「政府開放資料 + MCP」整合、客戶背景調查（統編查公司）
 
 兩個都裝著沒衝突。Claude Code 在判斷該叫哪個工具的時候，從工具名稱跟 description 就能分辨清楚。

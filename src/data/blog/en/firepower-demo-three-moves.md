@@ -84,7 +84,7 @@ That's when you can survey the manager's needs and participants' needs, then cus
 
 Because the first is a cold sell. The second is the price after "I've seen what you can do, and I trust you."
 
-The firepower demo is free. But **it builds the trust**. Everything that follows—the small group, L3 consulting, long-term engagement—grows out of that trust.
+The firepower demo is free. But **it builds the trust**. Everything that follows—the small group, L3 adoption, long-term engagement—grows out of that trust.
 
 If you're trying to bring AI work into your company, don't rush the course pitch. Pick one coworker or manager near you, pick one of these three moves, and just do it for them. Within a week, they'll come to you asking "can you help me look at that X?"
 

@@ -76,7 +76,7 @@ Sign in at `https://hub.twinkleai.tw/login` with Google or GitHub to get your AP
 
 The split I've landed on:
 
-- **mcp-taiwan-legal-db**: anything that needs court judgment text or original statute. Legal demos, L3 consulting onboarding, hand-off to legal clients
+- **mcp-taiwan-legal-db**: anything that needs court judgment text or original statute. Legal demos, L3 adoption onboarding, hand-off to legal clients
 - **Twinkle Hub**: anything that needs other government data. Business demos, L2 classroom showcase of "government open data + MCP," client background research (company lookup by tax ID)
 
 No conflict running both. Claude Code can distinguish from tool names and descriptions which one to call.

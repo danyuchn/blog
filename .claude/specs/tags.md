@@ -56,7 +56,7 @@
 
 - `agentcrew` — AgentCrew 品牌相關
 - `agentic-coding` — agent 自主寫程式
-- `ai-consulting` — AI 顧問案
+- `ai-consulting` — AI 導入案
 - `ai-course` — AI 課程
 - `ai-daily-use` — AI 日常應用
 - `ai-economics` — AI 經濟學、用量經濟
@@ -76,7 +76,7 @@
 - `claude-app` — Claude 桌面/行動 App
 - `code-review` — 程式碼審查
 - `competitive-analysis` — 競品分析
-- `consulting` — 顧問工作
+- `consulting` — AI 導入工作
 - `contract` — 合約
 - `course-design` — 課程設計
 - `creator` — 創作者
