@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-15T05:00:00Z
-title: "What I only learned after taking on enterprise AI training—prep time, the client liaison, instructor flexibility, and how to pick a consultant"
+title: "What I only learned after taking on enterprise AI training—prep time, the client liaison, instructor flexibility, and how to pick an instructor"
 slug: en/enterprise-ai-training-realities
 featured: true
 draft: false
@@ -50,7 +50,7 @@ The spread of skill levels in an enterprise class is much wider than in a public
 
 The capability requirement: you need to simultaneously hold "too easy is boring" and "too hard is unreachable." My approach is **tiered tasks**: a base task everyone can finish, an advanced task that lets the high-skill folks stretch. For the mid-level manager's question, I redirect with "let's look at a market signal first" rather than debating their anxiety in front of the room.
 
-## 4. If you want to hire an AI consultant, the signals look a lot like picking a pop star
+## 4. If you want to hire an AI instructor, the signals look a lot like picking a pop star
 
 If you're the client looking for a trainer, here's a contrarian tip:
 
