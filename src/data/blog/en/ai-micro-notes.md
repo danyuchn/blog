@@ -85,7 +85,25 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **On the Riemann Hypothesis, the Prompt Was Just a Pep Talk**
 
 > Traditional mathematicians moved it 0.8% over 30 years. This run moved it 25.6%. The funniest part is what the write-up says about the prompting: there was no domain content in it at all, just continuous encouragement, an AI cheering on an AI. Claude spent a day and a half coordinating roughly 60 subagents, running 2,400 shell commands and reviewing each other's work, while the human input was mostly variations on "keep at it" or "believe in yourself".
-## AI Industry & Business
+**Two Ways to Mix Models**
+
+> Switching models means a cache miss, so the usual move is a subagent. When the path isn't clear yet, run a smart main agent and hand the grunt work to cheap throwaway subagents. When the path is clear and only a few hard spots remain, flip it: cheap main agent, and call in a smart subagent as a one-off consultant or reviewer.
+
+**copyparty Plus tailscale**
+
+> Every file on my home machine, readable from my phone: Markdown renders natively, HTML opens as a real web page, a 300-page ebook PDF opens instantly, and a 1GB video plays with no lag. Pair it with remote-controlled Claude Code or Codex and it's a killer combination.
+
+**Connectors Can Finally Send Mail**
+
+> Several of my clients were stuck wanting a cloud schedule that mails them a daily market brief or writes to a Google Sheet. Cloud servers only accept the official connector, and until now the most you could do was save a draft or create a brand-new file in Drive. The official MCP now sends mail and updates existing files.
+
+**The God of Video Post-Production**
+
+> DaVinci Resolve Studio wired up to MCP and driven by Luna Max is the god of video post-production in this new world. For grunt work like this, Luna Max is genuinely first in the world.
+
+**Start With a Harness That Works Out of the Box**
+
+> Just go with codex. Unless you really understand how hermes works under the hood, the codex or claude code harness is the most stable thing you can run out of the box right now.
 
 **Anthropic in China**
 
@@ -102,6 +120,14 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Instructors Who Sell Convenience and Skip the Risk**
 
 > Any instructor who talks about convenience and never about risk, security, permissions, or review can basically be treated as a scam.
+**The Curse of Knowledge**
+
+> Information you think anyone could google is information plenty of people are genuinely grateful someone collected for them. If they can sell it, that's a skill, and as long as nobody gets hurt there's nothing to criticize. Threads really is the most brutal adversarial review tool vibe coding has.
+
+**Be a Community Contributor First, Worry About Money Later**
+
+> The best ideas usually aren't the ones you thought up alone. They come from being deep in a community and solving its problems. Stop trying to monetize every idea. Be the generous, enthusiastic person who shares things, and once you have roots in that community, those people become your first customers.
+
 ## Life & Miscellany
 
 **Coming Home, I Realized Taiwan Got Rich**

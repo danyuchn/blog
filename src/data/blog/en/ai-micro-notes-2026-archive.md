@@ -182,14 +182,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 ## Mid-August 2026 (W34)
 
-**OpenAI's Fall From Grace Isn't Far Off**
-
-> The wind keeps shifting. With Tibo teasing and then playing generous by dropping a reset at a moment that was going to reset anyway, with codex version strings revealing they plan to sell reset vouchers later, and with quota burn trending high right now, my estimate is two months at the earliest, four at the latest, before OpenAI falls off the pedestal again. They take turns making marketing and PR mistakes anyway, and gain their edge from the other side's blunders.
-
-**What to Watch Is Next Week's Open Weights**
-
-> What regular people should actually be watching is Qwen 3.8 27b, open weights next week. Quantize that one and it genuinely fits on our machines, with enough speed and enough intelligence for a local model. Waiting on unsloth.
-
 **The Second Wheel on the Feed**
 
 > When people talked about reinventing the wheel with AI, the first thing that came to mind was accounting software. Lately I've noticed the second wheel showing up on the feed: all at once, the whole world is hand-rolling Claude Code/Codex usage monitors.
@@ -202,10 +194,18 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > Herdr, my favorite, just announced they got into YC. Congratulations.
 
-**Gemini's Real Strength Is Multimodal**
+**Anthropic Is Having a Fight on X**
 
-> What I think it's best at is multimodal handling. Give it a single-shot task, reading an image, reading audio, watching a video, and it's number one.
+> Gavin Baker said sources he trusts told him a former Anthropic employee once boasted, "We will be the only company left in the world." Sholto came out and denied it flatly. Baker's reply: fine, I accept the clarification, but isn't that awfully close to what Dario keeps arguing? You people have been selling AI doomsday all along. Dario eventually jumped in to clear it up himself.
 
-**Submission Volume at Top Conferences Is About to Crater**
+**The Pet Funeral Business**
 
-> Paper submission counts at top international academic conferences are projected to drop sharply.
+> People today own far more pets than they have children, so the growth is there. A person takes decades to pass on; a pet takes a bit over ten years, so the cycle turns fast. People who love their pets spend freely on a good send-off. And nobody's relatives show up at a pet funeral to fight over the estate, so the risk is low.
+
+**Alignment OCD**
+
+> Every API endpoint name and variable name has to be consistent. No orphaned code, no dead code. I see it and my skin crawls.
+
+**The Hanoi Stay the AI Picked**
+
+> Planning where to stay on a solo trip to Hanoi, I told Claude Code and Codex what I wanted: quiet, modest, unhurried, good value, convenient. Both landed independently on a spot I've barely seen in any Chinese-language travel write-up: Trúc Bạch.
