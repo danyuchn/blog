@@ -13,6 +13,8 @@ tags:
 description: Two weeks of heavy use across Resend batch sends and Gmail draft creation for course notifications, lecture thank-you emails, and BD outreach. Over 1,400 emails sent. Seven lessons worth writing down.
 ---
 
+The most expensive one here: you set a schedule for 5/18, all 40 emails went out on 5/11 anyway, and the API response never told you.
+
 The past two weeks I've been heavily running both Resend batch sends and `gog gmail drafts create` for course notifications, lecture thank-you emails, and BD outreach. Over 1,400 emails sent in total. Seven lessons here.
 
 ## 1. Gmail strips out the entire `<style>` block
@@ -82,4 +84,5 @@ If you're doing any kind of send automation, take this as a checklist.
 <!--
 Added non-source sentences (fidelity disclosure):
 1. 「The L3 BD outreach batch surfaced something else first, and it wasn't customized vs generic. It was whether the first email tries to sell. First email using "let's exchange notes" framing (no pitch, no needs ask, just "want to grab some time, exchange notes on AI in practice") got 67% open rate. Same list with a "let me sell you" framing (course pitch, L3 adoption service) got 17%. Four times the gap. Don't sell anything in the first email. That's actually true for the early stage of a BD funnel.」 — 類型：併入碎念（L3 BD Outreach Open Rate，2026-08-14 週報併入）
+2. The reader-risk sentence on the first line of the body — type: framing (roundup lede; every symptom named is already covered below, no new facts)
 -->

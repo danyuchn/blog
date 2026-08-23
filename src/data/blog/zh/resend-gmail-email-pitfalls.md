@@ -13,6 +13,8 @@ tags:
 description: 這兩週密集用 Resend 批次寄信跟 Gmail draft 兩條路徑做課程通知、講座感謝信、BD outreach。整理七個踩坑：HTML inline style、scheduled_at 不生效、Cloudflare 1010、Click tracking、bad-recipients、Gmail thread 漏看、客製 vs 通用開信率對齊。
 ---
 
+這七個坑裡最貴的一個是：你設了 5/18 的排程，那 40 封信在 5/11 就整批寄出去了，而 API 回應完全沒告訴你。
+
 這兩週密集用 Resend 批次寄信跟 `gog gmail drafts create` 兩條路徑做課程通知、講座感謝信、BD outreach。一共寄出超過 1,400 封，學到的七件事整理在這裡。
 
 ## 1. Gmail 會把 `<style>` block 整段砍掉
@@ -82,4 +84,5 @@ claude-course/official/events/a2-lecture-0510/bad-recipients.json
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「後來累積到 L3 BD outreach 這批，先看出來的不是客製 vs 通用，而是「第一封信要不要賣東西」。用「交流型」第一封信（不提報價、不問需求、只提「想跟你約個時間，交流一下 AI 的實際應用」），開信率 67%。同一批 list 用「推銷型」（提課程、提 L3 導入服務）開信率 17%。差距 4 倍。第一封信不要急著賣東西，這件事在 BD 漏斗的前期是真的成立。」 — 類型：併入碎念（L3 BD outreach 開信率，2026-08-14 週報併入）
+2. 正文第一行的讀者風險句 — 類型：框架句（合輯導讀用；所述現象皆為本文既有內容，未新增事實）
 -->

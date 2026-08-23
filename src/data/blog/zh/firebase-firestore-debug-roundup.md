@@ -12,6 +12,8 @@ tags:
 description: '一週內在同一個 Firebase 專案（GMAT 題庫系統）連環踩到的 Firestore 權限、composite index、error_logs 洗版、TPA 計分、App Check token、瀏覽器翻譯 DOM crash 八個坑——每坑現象、根因、解法。'
 ---
 
+這一輪的坑沒有一個會在本機開發時炸給你看——它們是 Slack 上連噴好幾天的 permission-denied、被洗版的 error_logs，以及使用者一開瀏覽器翻譯就整頁掛掉。
+
 這一週都在同一個 Firebase 專案上修 bug——一套 GMAT 題庫系統。Firestore、Cloud Functions、前端比對邏輯，能踩的地方輪流踩了一遍。把它們按坑記下來，每個坑就是現象、根因、解法三段。
 
 ## 坑一：list query 滿足不了 per-doc owner rule
@@ -75,3 +77,8 @@ Slack 又跳「User not authenticated」告警，但後端 log 明明顯示這�
 源頭是瀏覽器翻譯。Chrome / Safari 把 React 子樹的 text node 包進 `<font>` 標籤，React 下次 commit 做 `insertBefore` / `removeChild` 時對著被改過的 DOM 直接 throw，整條 route crash。標準解法是 render 前 monkey-patch `Node.prototype`，讓對 detached node 的操作改成 warn 而不是丟例外。
 
 這一次 render crash 還順帶產生 3 筆 error_logs——原始錯誤，加上 React Router 兩種包裝前綴。按完整訊息去 dedup 擋不住，因為三筆訊息字面不同。所以 dedup key 必須先把包裝前綴剝掉做正規化，一次 crash 才收斂成一則告警。
+
+<!--
+新增非原文句子清單（忠實度自首）：
+1. 正文第一行的讀者風險句 — 類型：框架句（合輯導讀用；所述現象皆為本文既有內容，未新增事實）
+-->

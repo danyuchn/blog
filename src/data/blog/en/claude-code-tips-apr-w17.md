@@ -112,6 +112,6 @@ You've hit your rate limit.
 - Reset Friday 07:00 AM
 ```
 
-That's daily life after Opus 4.7. If you haven't read [my Opus 4.7 one-week recap](/posts/en/opus-47-week-review) from this week, pair it with this one.
+That's daily life after Opus 4.7. If you haven't read [my quota incident log](/blog/posts/en/claude-code-quota-incident-log), one of its sections covers Opus 4.7's launch week. Pair it with this one.
 
 Official changelog: <https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md>

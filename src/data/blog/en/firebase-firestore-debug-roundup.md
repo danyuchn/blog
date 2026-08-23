@@ -12,6 +12,8 @@ tags:
 description: 'Eight bugs I hit in one week on the same Firebase project (a GMAT question bank): Firestore rules, composite indexes, error_logs spam, TPA scoring, App Check tokens, and a browser-translation DOM crash — symptom, root cause, fix for each.'
 ---
 
+None of these bugs blow up while you're developing locally — they surface as days of permission-denied alerts in Slack, an error_logs collection getting spammed, and a page that dies the moment a user turns on browser translation.
+
 I spent this whole week fixing bugs in one Firebase project — a GMAT question bank. Firestore, Cloud Functions, frontend comparison logic: pretty much every layer took a turn. Here they are, one bug at a time, each as symptom, root cause, fix.
 
 ## Bug 1: A list query can't satisfy a per-doc owner rule
@@ -75,3 +77,8 @@ This last cluster belongs together, because it's one cause-and-effect chain from
 The source is browser translation. Chrome / Safari wrap the text nodes of a React subtree into `<font>` tags, and on React's next commit the `insertBefore` / `removeChild` throws against the altered DOM, crashing the whole route. The standard fix is to monkey-patch `Node.prototype` before render, so operations on a detached node warn instead of throwing.
 
 That one render crash also produced 3 error_logs — the original error, plus two React Router wrapper prefixes. Dedup by full message doesn't catch them, because the three messages are literally different strings. So the dedup key has to strip the wrapper prefixes and normalize first; only then does one crash collapse into a single alert.
+
+<!--
+Added non-original sentences (fidelity disclosure):
+1. The reader-risk sentence on the first line of the body — type: framing (roundup lede; every symptom named is already covered below, no new facts)
+-->

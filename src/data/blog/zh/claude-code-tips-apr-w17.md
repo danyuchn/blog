@@ -112,6 +112,6 @@ You've hit your rate limit.
 - Reset Friday 07:00 AM
 ```
 
-這就是 Opus 4.7 之後的日常。如果你還沒看過我這週寫的 [Opus 4.7 一週回顧](/posts/zh/opus-47-week-review)，可以配著一起看。
+這就是 Opus 4.7 之後的日常。如果你還沒看過我寫的[額度事故簿](/blog/posts/zh/claude-code-quota-incident-log)，裡面那一節記的就是 Opus 4.7 上線那一週，可以配著一起看。
 
 官方 changelog 在這：<https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md>
