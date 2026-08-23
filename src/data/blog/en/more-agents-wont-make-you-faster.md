@@ -34,7 +34,7 @@ Third variation. The first two send agents outward; this one gathers the humans 
 
 These are three drawings of the same thing. Thirteen agents, 1000 agents, both sides' agents at one table. The shared assumption is that more agents means faster. But every agent you add generates more things I have to rule on. You can spin up models forever. My context window doesn't work that way, and the number of calls I can make in an hour works that way even less.
 
-This is a different problem from burning through quota. That time it was subagents breeding recursively, [some of them grandfathers by then](/posts/en/ccx-quota-surge-forensics/), and what burned was money. This time what burns is me.
+This is a different problem from burning through quota. That time it was subagents breeding recursively, [some of them grandfathers by then](/blog/posts/en/claude-code-quota-incident-log), and what burned was money. This time what burns is me.
 
 ## Dedupe and Resolve Conflicts First, Then Send In the Agent Team
 

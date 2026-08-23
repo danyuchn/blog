@@ -34,7 +34,7 @@ description: '從想派 13 個 subagent 代聊、一個人操控 1000 個，到�
 
 這三件事其實是同一件事的三種畫法。派 13 個、派 1000 個、把兩邊的 agent 放在同一張桌子上，共同的假設都是「agent 多一點就快一點」。但增加的每一個 agent，都會生出更多需要我裁決的東西。模型可以無限開下去，我的 context window 不行，我在單位時間內能做的判斷更不行。
 
-這跟額度燒掉是不一樣的問題。額度那次是 subagent 遞迴繁殖，[有些 subagent 都當阿公了](/blog/posts/zh/ccx-quota-surge-forensics/)，燒的是錢。這次燒的是我自己。
+這跟額度燒掉是不一樣的問題。額度那次是 subagent 遞迴繁殖，[有些 subagent 都當阿公了](/blog/posts/zh/claude-code-quota-incident-log)，燒的是錢。這次燒的是我自己。
 
 ## 先去重去衝突，再派 agent team
 

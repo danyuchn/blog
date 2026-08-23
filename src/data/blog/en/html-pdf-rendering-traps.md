@@ -11,6 +11,8 @@ tags:
 description: This week I exported a client proposal as HTML→PDF and split an internal report from PDF→images page by page. Both flows had a seemingly unsolvable trap. Each fix is one line of code, but tracking down that line cost me real time.
 ---
 
+Both traps share one thing: everything looks right in the browser, and what's wrong is the file you're about to send out.
+
 This week I exported a client proposal as HTML→PDF and split an internal report from PDF→images page by page. Both workflows had a trap that looked impossible at first. The fixes are one-liners, but tracking them down took real time. Writing them down so I don't forget.
 
 ## Trap 1: Blank Pages and White Borders in HTML→PDF
@@ -74,3 +76,8 @@ Chrome's print margin defaults to 12mm, not 0, because the browser's PDF functio
 The design intent of a tool determines its defaults. As soon as you push a tool into a use case outside its original intent, defaults become traps.
 
 I added both of these to `~/.claude/rules/common/tool-patterns.md`. I won't fall into them again.
+
+<!--
+Added non-original sentences (fidelity disclosure):
+1. The reader-risk sentence on the first line of the body — type: framing (roundup lede; every symptom named is already covered below, no new facts)
+-->

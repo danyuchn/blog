@@ -12,6 +12,8 @@ tags:
 description: 'Two things I logged: cco (Claude Code driven by local Ollama) had long been giving off-topic answers, and the root cause was not a weak model but a full harness whose system prompt had ballooned to 30-50k tokens and was being silently truncated; then I put A3B on the Mac mini for two days as a night worker.'
 ---
 
+If your local model keeps answering off-topic, don't reach for a different model yet — your system prompt may already be getting silently truncated.
+
 `cco` is a shell alias I use to drive Claude Code with local Ollama. It had a chronic bug: under my full personal harness, its answers were often off-topic, or just came back blank. I kept assuming the model wasn't strong enough, until this morning when I finally dug it out.
 
 ## The system prompt had overflowed long ago, it just never said so
@@ -41,4 +43,5 @@ For now the takeaway is to shelve the setup, not build a schedule, and not touch
 5. "Day two was less rosy" — 類型：銜接
 6. "For now the takeaway is to shelve the setup, not build a schedule, and not touch cco's defaults." — 類型：改寫（素材 C 原意重述）
 7. "That's it." — 類型：框架句（短促收尾）
+8. The reader-risk sentence on the first line of the body — type: framing (roundup lede; every symptom named is already covered below, no new facts)
 -->

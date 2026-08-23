@@ -50,6 +50,16 @@ I wrote earlier about [capability boundaries and de-identifying private data](/b
 
 Whether the model says the wrong thing isn't up to me. These three are.
 
+## One more: don't brute-force sites that need a login
+
+Honestly, for sites that need a login, I always tell regular users not to go head-to-head with them—just find a third-party scraping database API.
+
+The reason is simple: your token is your account. Push it too far, and the moment the admin drops a "two-dimensional foil" on you, your account is gone. The two-dimensional foil is a reference from *The Three-Body Problem*. It means a dimensional-reduction strike—the other side doesn't argue with you, it just flattens you. I had a precious old account I'd used since 2012, and I lost it because I got reckless myself.
+
+Use a throwaway, you say? The time cost of producing throwaways could go toward plenty of other things. So hand it to a professional scraping API, pay a little, and offload the risk. Throwaway-account scraping is their specialty, and going toe-to-toe with anti-scraping doesn't scare them.
+
+Technically you can of course have an agent log into a backend and crawl it page by page—but being able to do it isn't the same as it being something you should do yourself.
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「When people talk about AI security, attention usually lands on the model: will it say what it shouldn't, can it be talked around. That layer really is unstable.」 — 類型：框架句
@@ -65,4 +75,5 @@ Whether the model says the wrong thing isn't up to me. These three are.
 11. 「None of the three asks you to understand how the model works inside, or to judge whether this week's jailbreak got patched. All of them happen on the side you control.」 — 類型：框架句
 12. 「I wrote earlier about capability boundaries and de-identifying private data, which was about what shouldn't go out. This one points the other way: even if you send nothing out, the residue, the flags, and the input are still sitting on your machine.」 — 類型：銜接（站內連結）
 13. 「Whether the model says the wrong thing isn't up to me. These three are.」 — 類型：框架句（收尾）
+14. 「## One more: don't brute-force sites that need a login」(H2) and the paragraph merges inside it — 類型：小標＋改寫（本節內容原為獨立文章 dont-scrape-login-sites，合併時只做段落併合與刪去原文的兩個 H2 小標，字句未改；英文版另刪去括號補述「(the banhammer comes down)」以配合段落併合）
 -->
