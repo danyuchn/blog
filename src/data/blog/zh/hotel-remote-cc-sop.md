@@ -10,14 +10,7 @@ tags:
   - ai-tools
   - opinion
 description: '回台北入住旅館，出門跟朋友吃飯前的五步備援 SOP：取電、充電連網、防休眠、tailscale、遠端桌面試通。然後就能邊吃飯邊偷用 Claude Code。'
+canonicalURL: https://www.agentcrew.cc/blog/posts/zh/ipad-workflow-robustness
 ---
 
-回台北入住旅館，出門跟朋友吃飯前做的 SOP：
-
-1. 拿隨便一張晶片卡插著取電。
-2. 電腦保持充電連網。
-3. 咖啡因指令防休眠。
-4. 開 tailscale。
-5. 遠端桌面試一下有通，當備案。
-
-然後就可以邊吃飯邊偷用 Claude Code（X
+這篇已經併入 [iPad 工作流進階——斷網斷電的備案，與我為什麼放棄妙控鍵盤](/blog/posts/zh/ipad-workflow-robustness)，原本的內容完整保留在那一篇裡，之後也只會在那裡更新。

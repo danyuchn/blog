@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-06-05T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "Digital Nomadism Is Something You Stumble Into, Not a Goal to Chase"
 slug: en/digital-nomad-not-a-goal
 featured: false
@@ -22,3 +23,5 @@ Reach that level and working from anywhere stops being a problem — and only th
 Looking back, have you noticed that the people online who hype and sell digital nomadism aren't selling their own professional expertise? They're just teaching you "how to be a digital nomad."
 
 That's the strangest part of it all: digital nomads making money by teaching other people how to be digital nomads.
+
+(Postscript: this thread resurfaced at the end of [Three Moves Between Claude and Codex](/blog/posts/en/three-moves-between-claude-and-codex) — following the tokens the way herders follow water and grass. I really am a digital nomad after all.)

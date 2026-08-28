@@ -10,19 +10,7 @@ tags:
   - ai-education
   - lessons-learned
 description: "Recent corporate workshops reinforced four lessons for me: teach in person when possible, cut the slide count, show smart people the result first, and let students do the work."
+canonicalURL: https://www.agentcrew.cc/blog/posts/en/enterprise-ai-training-design
 ---
 
-Some recent teaching lessons:
-
-1. In-person classes are much easier to pace than online ones.
-
-2. For my teaching style, fewer slides work better. Cut things. Do not assume that stuffing everything into a class makes it better. Sometimes it only restricts my freedom to improvise when an idea comes to me.
-
-3. When teaching smart people, show them the result first and explain the process afterward. Otherwise, they lose patience.
-
-4. Let students work on it themselves. My strongest teaching skill is guiding people to ask questions and think, because that is how I talk to myself every day.
-
-<!--
-Sentences added beyond the source material (fidelity disclosure):
-None. Translation only.
--->
+This post has been merged into [Three design mistakes I keep seeing in enterprise AI training](/blog/posts/en/enterprise-ai-training-design). All of the original content lives there now, and that's the only copy that gets updated.

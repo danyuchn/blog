@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-20T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: Qwen 3.8 開放權重的這一週：從模型卡到 A3B 被刪
 slug: zh/qwen-38-open-weights-week
 featured: false
@@ -41,6 +42,17 @@ description: '從 Qwen 3.8 27B 模型卡放出、實測體感、到 35B A3B 在 
 ![Qwen 3.8 35B A3B 已從 Modelscope 上移除的畫面](/blog/assets/posts/qwen-38-open-weights-week/3-a3b-removed.jpg)
 
 需要 a3b 這種 moe。
+
+
+## 補記：Qwen 3.8 Flash Next
+
+八月二十五日晚上，續集來了。
+
+太好了，終於要有 MoE 的 Qwen 3.8 開放權重了！而且是用下一代 Qwen4 的全新架構。這一顆據說是 125B A6B。
+
+![Modelscope 上的 Qwen3.8-Flash-Next 模型頁面](/blog/assets/posts/qwen-38-open-weights-week/4-flash-next.jpg)
+
+看看能不能正式成為取代 3.6 35B A3B 的模型呢？
 
 <!--
 新增非原文句子清單（忠實度自首）：

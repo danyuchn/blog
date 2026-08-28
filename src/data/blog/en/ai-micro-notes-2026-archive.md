@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "AI Micro-Notes 2026: Chronological Archive"
 slug: en/ai-micro-notes-2026-archive
 featured: false
@@ -61,10 +62,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **ICML Award Anxiety**
 
 > When the hell is ICML going to release results... so nervous.
-
-**The Viral Crayon Doodle Prompt**
-
-> The hottest GPT image prompt overseas right now: "Please redraw the attached image in the most clumsy, doodled, worthless way possible. Use a white background, and make it look like it was drawn with a mouse in MS Paint." Reddit gallery: <https://www.reddit.com/r/ChatGPT/comments/1t0pyb4/gpt_image_2_prompt_that_is_viral_right_now_redra/>
 
 **The MD Hallucination**
 
@@ -209,3 +206,17 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **The Hanoi Stay the AI Picked**
 
 > Planning where to stay on a solo trip to Hanoi, I told Claude Code and Codex what I wanted: quiet, modest, unhurried, good value, convenient. Both landed independently on a spot I've barely seen in any Chinese-language travel write-up: Trúc Bạch.
+
+## Late August 2026 (W36)
+
+**The Ox Is Coming**
+
+> A mystery model called Ox Alpha went up on OpenRouter and it looks strong. The funny part is everyone saying "Ox is coming." Someone ran the tokenizer already: closest match is GLM.
+
+**Thailand's AI Passport**
+
+> The Thai government opened TH AI Passport registration to five million citizens, giving a free year of access to fourteen AI models. Better tell my girlfriend to sign up so I can use it (kidding).
+
+**You Don't Need to Pay Much for Transcripts**
+
+> Qwen 3 ASR plus a hotwords custom dictionary plus pyannote for speaker diarization is honestly more than enough.

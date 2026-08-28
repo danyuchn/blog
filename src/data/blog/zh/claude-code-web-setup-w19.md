@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-01T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "網頁版 Claude Code 環境設定的兩個世界"
 slug: zh/claude-code-web-setup-w19
 featured: false
@@ -12,6 +13,7 @@ tags:
 description: 網頁版 Claude Code 有兩種環境——雲端 VM 跟 Remote-control。這篇整理我實測下來的設定訣竅、會踩到的小 bug，以及為什麼有些設定不能無腦丟到雲端。
 ---
 
+**時效提醒**：本文寫於 2026 年 5 月。文中「打斜線只會出現官方預設指令、自訂指令不會出現」這個 bug 已經修復了——那是 remote control 推出三個月後的事，詳見〈[一年下來，我對「該用終端機還是桌面版」的答案變了三次](/blog/posts/zh/cli-vs-desktop-three-answers)〉。後面關於雲端 VM 的部分（只有 project-level `.claude/` 讀得到、只有遠端 MCP 生效）目前仍然成立。
 iOS 版的 Claude App 實在太廢，加上官方更新的重點都在 Desktop App 跟網頁版，所以我手機上都改用網頁版 Claude Code。
 
 實測下來，網頁版有一些訣竅跟小坑值得分享。

@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-13T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "Your Own Machine Is the Attack Surface: Leftover Credentials, Permission Flags, Untrusted Input"
 slug: en/your-machine-is-the-attack-surface
 featured: false
@@ -59,6 +60,16 @@ The reason is simple: your token is your account. Push it too far, and the momen
 Use a throwaway, you say? The time cost of producing throwaways could go toward plenty of other things. So hand it to a professional scraping API, pay a little, and offload the risk. Throwaway-account scraping is their specialty, and going toe-to-toe with anti-scraping doesn't scare them.
 
 Technically you can of course have an agent log into a backend and crawl it page by page—but being able to do it isn't the same as it being something you should do yourself.
+
+## Merged in: Two Everyday API Key Habits
+
+Would you really let an agent register an API key itself and leave that key sitting in plaintext in the session log?
+
+Also: next up, scan the company website pages daily to see whether a manager has hardcoded an API key into the front end.
+
+<!--
+2026-08-28 W36 micro-note merge: the live notes "Don't Let the Agent Sign Up for Its Own API Key" and "Scan Your Own Company's Front End Every Day" were folded in verbatim; both are about API key exposure and neither is enough for its own post. Removed from the zh/en live files. Added non-original text is limited to the subheading (framing) and "Also:" (connective).
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

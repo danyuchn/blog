@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-04T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "GPT-image-2 Wants Fewer Constraints — Plus a Consistency Drill"
 slug: en/gpt-image-2-prompting
 featured: false
@@ -51,3 +52,11 @@ This is why Canva still matters in this era. It lets you put "AI-generated mater
 Loose at the generation stage to leverage GPT-image-2's strength. Tight at the layout stage to lock down consistency with Canva.
 
 Detailed walkthrough video: <https://www.youtube.com/watch?v=hzrBXjgCLG8>
+
+## Postscript: That Viral Doodle Prompt
+
+The hottest GPT image prompt overseas right now: "Please redraw the attached image in the most clumsy, doodled, worthless way possible. Use a white background, and make it look like it was drawn with a mouse in MS Paint."
+
+<!--
+2026-08-28 W36 micro-note merge: the archive note "The Viral Crayon Doodle Prompt" was folded in verbatim (semantic dedup 0.806) and removed from the zh/en archive. The bare Reddit gallery link was filtered out per article-spec rewrite rule 4. The only added non-original sentence is the subheading (framing).
+-->

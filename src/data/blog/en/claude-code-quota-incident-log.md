@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-22T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "Where the Quota Actually Goes: Claude Code Cache Bugs, Opus 4.7's 2x Burn, and Runaway Subagents"
 slug: en/claude-code-quota-incident-log
 featured: false
@@ -209,6 +210,23 @@ Afterward I ran the forensics: it was recursive fan-out, Agent Teams, everyone r
 The fix was to bump CLIProxyAPI from 7.2.73 to 7.2.91, then add a few guardrails to `ccx()`: a cap on total subagents, a cap on parallelism, background execution, a retry count, and compression. I ran one test round — 2 Terra subagents, depth 1, zero nesting — and it ended normally, no runaway burn. `cc` and `cdx` I left alone.
 
 That's the thing to watch out for. Besides setting the compaction window yourself, remember to turn off nested subagents and cap the total number of subagents.
+
+
+## Merged in: The Token-Burning Perpetual Motion Machine
+
+I didn't even turn on ultracode, and it still auto-triggered a dynamic workflow on me. By the time I looked up, 103 agents were already on their way. Infuriating. Looks like I need to figure out which parameter forcibly shuts this off. Though honestly, my request was just killing a chicken, so I can't really tell where the ox-cleaver's superiority lies.
+
+Next up: they'll probably roll out `/effort xxhigh`, recommended for optimal performance.
+
+Claude Code subagents have officially entered the Russian-doll era: a subagent can call another subagent, up to five layers deep. Told you. The road to burning tokens never ends.
+
+The hottest flex of 2026: skip the Claude subscription, hit the API directly for Fable 5 max, enable dynamic workflow plus five-layer-deep subagents, and you'll soon command a Formosa-Plastics-tier subagent army.
+
+When it comes to encouraging users to burn tokens, Anthropic really is trying harder than anyone before or after.
+
+<!--
+2026-08-28 W36 main-thread note: "The Token-Burning Perpetual Motion Machine" (2026-06-13) was merged in here and turned into a stub. That post is a rant rather than an incident record, which is why the 2026-08-22 merge pass left it out; it is kept as its own section here rather than folded into the four incidents, to preserve the difference in register. Kept verbatim; the only added non-original sentence is the subheading (framing).
+-->
 
 <!--
 Added non-original sentences (fidelity disclosure):

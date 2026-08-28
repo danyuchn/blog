@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-13T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: 你的電腦才是攻擊面：殘留憑證、權限旗標、不可信輸入
 slug: zh/your-machine-is-the-attack-surface
 featured: false
@@ -59,6 +60,16 @@ description: '大家談 AI 資安都在談模型會不會說錯話，但真正�
 你說用小號？產小號的時間成本可以拿去做很多事。所以交給專業爬蟲 API，付一點小錢轉嫁風險吧。小號爬蟲他們專業的，反爬對幹他們沒在怕的。
 
 技術上你當然可以叫 agent 登入後台一頁頁爬，但能做到不等於該自己做。
+
+## 併入：兩條關於 API key 的日常
+
+你真的敢讓 agent 自己去申請 API key，然後讓 API key 明文留在 session log 裡面嗎？
+
+還有，接下來要每天掃一下公司官網的頁面，看看主管有沒有把 API key 寫在前端。
+
+<!--
+2026-08-28 W36 碎念併入：live 碎念「別讓 agent 自己去申請 API key」與「每天掃一次自家官網的前端」逐字併入，兩條同屬 API key 曝險主題（各自單獨不足以成文）。已從 zh/en live 檔刪除。新增非原文句子僅小標一則（框架句）與「還有，」（銜接）。
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

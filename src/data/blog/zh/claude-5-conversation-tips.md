@@ -1,7 +1,8 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-23T00:00:00Z
-title: 跟 Claude 5 對話的 6 個實用技巧：不發散、不話癆、不偷懶
+modDatetime: 2026-08-28T04:00:00Z
+title: 跟 Claude 5 對話的 7 個實用技巧：不發散、不話癆、不偷懶、不雞婆
 slug: zh/claude-5-conversation-tips
 featured: false
 draft: false
@@ -9,7 +10,7 @@ tags:
   - claude-code
   - ai-workflow
   - skills
-description: '一些最近跟朋友分享的，跟 Claude 5 代系列模型對話的實用小技巧：自製 explain skill 抓外星話、一次回完別讓對話發散、語音輸入配置、first-principles 剪枝、用 hook 治偷懶、CLAUDE.md 極簡化。'
+description: '一些最近跟朋友分享的，跟 Claude 5 代系列模型對話的實用小技巧：自製 explain skill 抓外星話、一次回完別讓對話發散、語音輸入配置、first-principles 剪枝、用 hook 治偷懶、CLAUDE.md 極簡化，以及治雞婆的幻影反駁。'
 ---
 
 一些最近跟朋友分享的，跟Claude 5代系列模型對話的實用小技巧：
@@ -52,9 +53,33 @@ Claude總有宣稱跟做的事情不符的通病。這需要用hook來治：只�
 
 <https://github.com/agentcrew-academy/harness-starter-kit/blob/main/claude-md-template/CLAUDE.md>
 
+## 治雞婆：他在反駁我根本沒說過的東西
+
+我不知道大家有沒有發現，Opus 除了愛說外星話之外，還有一個讓人覺得非常躁的點：雞婆。
+
+什麼意思呢？比如我說「把這份報價單的付款條件改成分兩期，簽約先付一半，驗收後再付一半」。
+
+啊這不就是改而已，有什麼好爭的？但是 Opus 會來給我這樣說話：
+
+> 已經改好了。不過有一點我想溫和地提出：你可能會覺得分期付款一定對現金流比較友善，但實際上分期會延後你的入帳時間，而且增加了對方賴帳的風險窗口。值得你再想想。
+
+馬的咧，我什麼時候說過分期一定對現金流比較好？
+
+我超討厭這種為說而說，為了營造「回答結尾有獨立判斷力」而硬塞進去的東西。最重要的是，我最討厭有人來自以為聰明假裝猜我的心然後再反駁我根本沒說過的東西，這種人如果是我的朋友早就反手封鎖。
+
+所以我後來設計了一個 SKILL 專門治他的語病。
+
+<https://github.com/agentcrew-academy/harness-starter-kit/blob/main/skills/phantom-pushback/SKILL.md>
+
+但必須要說這是治標不治本，因為 SKILL 只是事後注入的上下文，模型骨子裡的那個賤嘴會在對話變長後又原形畢露。希望下一代的模型可以解決這個問題。
+
 目前想到的大概是這樣。歡迎補充。
 
 原文發於 [Threads](https://www.threads.com/@dustin_gmat/post/DcXUX-oj6tA)。
+
+<!--
+2026-08-28 W36 主對話補記：新增第七節「治雞婆」，素材為 2026-08-21 13:59 Threads 貼文與其自回覆，逐字保留（含「馬的咧」「賤嘴」等原聲）。新增非原文句子僅小標一則「治雞婆：他在反駁我根本沒說過的東西」（框架句）。原文一處 emoji 依站台規範未保留。
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

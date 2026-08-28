@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-23T05:10:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "AI 工具使用哲學——不選陣營，選思維"
 slug: zh/ai-tool-philosophy
 featured: false
@@ -45,3 +46,9 @@ description: '拍了快三十部教學影片後的感觸：工具會變，思維
 ## 選思維，不選陣營
 
 AI 工具的世界不需要陣營。不需要當 Claude 粉或 GPT 粉。需要的是一套可以跨工具遷移的思維方式——當工具換了，你的方法論還能用。
+
+為什麼要選邊站？Claude 產文案，GPT 的瀏覽器控制負責在 meta 後台找路，不是最完美的嗎。
+
+<!--
+2026-08-28 W36 碎念併入：live 碎念「不用選邊站」逐字併入本節（語意去重相似度 0.802），已從 zh/en live 檔刪除。零新增句子。
+-->

@@ -4,7 +4,7 @@ pubDatetime: 2026-02-13T04:00:00Z
 title: "推薦閱讀：二月上旬的 AI 文章精選"
 slug: zh/ai-reading-list-feb-2026
 featured: false
-draft: false
+draft: true
 tags:
   - recommended-reading
   - ai-trends
