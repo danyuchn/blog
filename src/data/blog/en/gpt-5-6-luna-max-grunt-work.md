@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: GPT-5.6 Luna Max Is the New King of Grunt Work
 slug: en/gpt-5-6-luna-max-grunt-work
 featured: false
@@ -39,6 +40,31 @@ I tell everyone GPT 5.6 Sol is a mad dog. Give it the /狗死 (dog-die) command,
 Lately, besides 5.6 Sol, my favorite is 5.6 Terra high. It's the top pick for grunt work. Still very accurate at driving the browser and the computer, and it even handles complicated award-seat searches for me. The key thing is how little quota it uses, so I can save Sol for more important things. After using both GPT's and Claude's computer control MCP, anyone would be surprised at how big the gap has gotten: one operates smoothly and checks its work carefully, the other yanks your mouse around and gives up easily.
 
 For social sites like X and Threads, direct WebFetch from Claude and Codex often gets blocked and you have to route through a browser, while Gemini can just read them. Reddit is especially unfriendly to Claude; Codex and Gemini go through fine. Models aren't only competing on how smart they are. It also comes down to what data they can get in the door.
+
+
+## Postscript: A Twenty-Minute Video With Luna Max
+
+Sticking to the principle that every model is good for something, I kept throwing different kinds of work at Luna Max. Eventually I made a twenty-minute long-form video entirely with Luna Max plus HyperFrames.
+
+For work like that, Luna Max is passable if you pair it with a pipeline whose spec is nailed down hard. The catch is that the video spec you wrote will drift in certain scenes and you have to go fix it. Same weakness shows up elsewhere: even with a solid spec, LUNA drifts easily. It really only suits data-collection work, the mechanical browser-driving kind.
+
+After finishing, my read is this: next time, pair it with a higher-tier Terra or Sol model for the final review and it should go smoother.
+
+## Postscript: Two Commands Cover Most of It
+
+/goal and /loop. Those two commands solve most problems.
+
+## Postscript: The God of Video Post-Production
+
+DaVinci Resolve Studio wired up to MCP and driven by Luna Max is the god of video post-production in this new world. For grunt work like this, Luna Max is genuinely first in the world.
+
+<!--
+2026-08-28 W36 micro-note merge: the live note "The God of Video Post-Production" was folded in verbatim; it is about exactly this post's subject (Luna Max on grunt work). Removed from the zh/en live files. No sentences added (the subheading is the note's own title).
+-->
+
+<!--
+2026-08-28 W36 micro-note merge: the archive note "Two Commands Cover Most of It" was folded in verbatim; both tasks in this post were dispatched with /goal. Removed from the zh/en archive. The only added non-original sentence is the subheading (framing).
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

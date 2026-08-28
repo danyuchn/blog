@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-04T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "GPT-image-2 越少約束越好，加上一個一致性練習"
 slug: zh/gpt-image-2-prompting
 featured: false
@@ -51,3 +52,11 @@ ChatGPT 最新的生圖模型大家都在玩，能力的確比 Google 的生圖�
 生圖階段越鬆越好，發揮 GPT-image-2 的長處；版面階段越緊越好，用 Canva 控制一致性。
 
 詳細的教學影片在這：<https://www.youtube.com/watch?v=hzrBXjgCLG8>
+
+## 補記：最流行的那條塗鴉 prompt
+
+國外最流行的 GPT 生圖指令：「請用最笨拙、塗鴉、毫無價值的方式重繪附件圖片。使用白色背景，並讓它看起來像是用滑鼠在小畫家裡畫的。」
+
+<!--
+2026-08-28 W36 碎念併入：archive 碎念「GPT 笨拙塗鴉風 prompt 流行」逐字併入（語意去重相似度 0.806），已從 zh/en archive 刪除。原碎念的 Reddit 合集裸連結依 article-spec 改寫原則第 4 條濾除。新增非原文句子僅小標一則（框架句）。
+-->

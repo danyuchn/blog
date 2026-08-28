@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-03-30T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "PII Guard TW: A De-identification Tool Built for Taiwan"
 slug: en/pii-guard-tw
 featured: false
@@ -39,3 +40,17 @@ Still very early stage—issues and PRs are welcome.
 ## A Note for API / Enterprise Users
 
 Claude API and Enterprise users can refer to Anthropic's official ZDR (Zero Data Retention) policy—your data isn't retained by default. For regular subscription users, besides using a de-identification tool, remember to go into your settings and turn off "Allow my data to be used for model training." That way your data is only stored by Anthropic for 30 days instead of five years.
+
+## Postscript: What Isn't Solved Yet
+
+That said, I'm still working on the privilege and isolation problem with commercial agents, and I'm considering a proxy setup down the road. Batch document processing and multi-format documents are the other directions I want to push on.
+
+Anyone interested in collaborating is welcome to try it, and issues and PRs are all welcome.
+
+## Postscript: Measured Recall When Local Models Hunt for Sensitive Data
+
+I actually tested de-identification. `qwen2.5:1.5b` got 3/16: fast, misses way too much. `qwen3-vl:8b` got 14/16: very fast, but the answer fields came out malformed and it dropped people. `qwen3-coder:30b` got 15/16: fine on single tests, but the full pipeline took over 110 seconds and died partway. `qwen3.6:35b-a3b` got 16/16, the most complete and the most stable overall. Don't hand it straight to a local model. Sweep it with a regex script first and let the local model cover the edge cases.
+
+<!--
+2026-08-28 W36 micro-note merge: the live note "Recall Rates When Local Models Hunt for Sensitive Data" was folded in verbatim. Its measurements are about this tool's core mechanism (local-model redaction), so it is more useful here than in the notes pool. Removed from the zh/en live files. The only added non-original sentence is the subheading (framing).
+-->

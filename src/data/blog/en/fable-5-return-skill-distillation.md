@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "Fable 5's One-Week Return: Turning the Most Expensive Model into a Skill Distillation Engine"
 slug: en/fable-5-return-skill-distillation
 featured: false
@@ -40,6 +41,23 @@ I also turned that prompt skeleton into a card: ask the high-end model to play a
 The real test came from a friend writing academic papers. He borrowed my account this morning and said the math proofs Fable wrote were natural, clean, and elegant, and completely correct on the first pass — he wrote two papers from scratch, already ready to submit, at an equivalent API cost of 200 USD. This time we ran every subagent on Fable, i.e. deliberately maxed out; but afterward we discussed it, and the best combination is really: Fable for plan / architecture / final verification, Opus 4.8 for writing the transcript, composer 2.5 for running experiments and writing code, and gpt-image-2 for drawing. He said 100 USD per paper honestly isn't expensive, so even paying via API down the road is worth it.
 
 One week of time-limited quota, and I didn't spend it on small things. Turning the most expensive model's judgment into working rules for cheap models — that's what I actually kept from this week, and what I'm still using every day since.
+
+
+## Merged in: Testing Fable's Limits on a Professor Friend's Paper Repo
+
+I woke up and Fei-bo (the guardrailed build of Mythos) was already live. I quickly pinged my professor friend and asked him to hand over the prompt and repo for the paper he's writing, so I could test where its limits are. Only a few days of subscription quota to play with — after that the API call pricing gets high enough to rival a Taiwan domestic-travel bill.
+
+Completely from scratch, all he started with were three docs: a proposal, meaning the research topic pitch; a prompt, specifying how the model should do research and write the paper; and a workflow, turning the long list of mistakes he'd made writing past papers into negative constraints.
+
+The result, in his own words: Opus would miss a few rules, Fable missed none and got it in one pass, and Gemini and GPT just weren't paying attention at all.
+
+He's working on something federated-learning related, so it probably didn't run into any guardrails.
+
+As for what effort level to set — someone on reddit said high isn't enough, only xhigh gives a clear boost. I'll leave that one to verify myself later.
+
+<!--
+2026-08-28 W36 main-thread note: "Testing Fable's Limits on a Professor Friend's Paper Repo" (2026-06-10) was merged in here and turned into a stub. Kept verbatim, including the professor's own words; the only added non-original sentence is the subheading (framing).
+-->
 
 <!--
 Non-original sentences added (minimal AI bridging, not the author's original text):

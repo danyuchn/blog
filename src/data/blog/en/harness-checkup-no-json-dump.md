@@ -9,12 +9,7 @@ tags:
   - claude-code
   - ai-tools
 description: 'No need to feed the whole context JSON from your last conversation: the harness has several layers — AGENTS.md, rules, skills, hooks — and raw session history is full of useless tool calls.'
+canonicalURL: https://www.agentcrew.cc/blog/posts/en/harness-slim-down-36
 ---
 
-Wait, why would you feed it the context JSON from the last conversation?
-
-The harness comes in several kinds — AGENTS.md, rules, skills, hooks — and they can all carry the load. Summarizing the key points from the previous conversation into a temporary doc works well too.
-
-Raw session history holds too many tool calls, outputs, and flags that are useless; even auto compact strips those out.
-
-I'd suggest doing a fresh checkup on your harness first.
+This post has been merged into [The More Rules You Add, the Less Claude Listens — I Sent a Team of Agents to Trim My Setup and Cut 36% of Always-On Context](/blog/posts/en/harness-slim-down-36). All of the original content lives there now, and that's the only copy that gets updated.

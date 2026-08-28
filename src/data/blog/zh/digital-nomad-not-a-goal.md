@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-06-05T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "數位遊牧是可遇不可求，不要把它當成追求目標"
 slug: zh/digital-nomad-not-a-goal
 featured: false
@@ -22,3 +23,5 @@ description: '從 2016 年就開始世界各地旅遊加遠端工作的我可以
 回過頭來看，有沒有發現那些網路上吹、賣數位遊牧的人，都不是賣他們個人專業的東西，而只是教你「怎麼數位遊牧」？
 
 這就是最弔詭的地方：數位遊牧的人靠教別人數位遊牧來賺錢。
+
+（後記：這條線後來在〈[我在 Claude 和 Codex 之間搬了三次家](/blog/posts/zh/three-moves-between-claude-and-codex)〉的結尾又冒出來過一次——逐 token 如逐水草而居，我果然是數位遊牧啊。）

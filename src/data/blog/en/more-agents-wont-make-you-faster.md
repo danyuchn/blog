@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-11T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: More Subagents Won't Make You Faster
 slug: en/more-agents-wont-make-you-faster
 featured: false
@@ -36,6 +37,34 @@ These are three drawings of the same thing. Thirteen agents, 1000 agents, both s
 
 This is a different problem from burning through quota. That time it was subagents breeding recursively, [some of them grandfathers by then](/blog/posts/en/claude-code-quota-incident-log), and what burned was money. This time what burns is me.
 
+## The Multi-Agent Empire: Can You Actually Afford It?
+
+Interesting thread on Reddit recently. An Anthropic engineer named Daisy showed off her setup and got hit with the "out of touch, let them eat tokens" treatment.
+
+![Card one: The multi-agent empire, can you actually afford it? An Anthropic engineer says 30-50 prompts let dozens of agents work autonomously across 8-10 projects](/blog/assets/posts/more-agents-wont-make-you-faster/card-1-multiagent.jpg)
+
+Her claim: 30 to 50 prompts is enough to keep dozens of agents working autonomously across 8 to 10 projects. The real question isn't whether you can start them. It's whether you can trust them, track them, and carry the cost.
+
+![Card two: architecture diagram, two lead agents running the whole agent organization across three tiers of lead, project lead, and IC agent](/blog/assets/posts/more-agents-wont-make-you-faster/card-2-multiagent.jpg)
+
+The architecture has three tiers. Two lead agents watch each other, and if one fails the other restarts it. Below them, 8 to 10 project leads, each holding one project's goal and progress. Below that, 5 to 10 IC agents per project doing the actual work, running on their own for two or three days. The agents talk to each other directly through SendMessage.
+
+![Card three: a demo is not a reproduction, contrasting the internal demo against a regular user on quota, token burn, and paying twice for rework](/blog/assets/posts/more-agents-wont-make-you-faster/card-3-multiagent.jpg)
+
+Here's the widest gap: a demo is not something you can reproduce. Internally it's dozens of agents in parallel, running autonomously for long stretches, recovering each other after failure. For a regular user it's a subscription quota, token burn that scales with parallelism, and paying a second time whenever something has to be redone. The main complaint in the comments was exactly that: no public cost, no reproducible evidence.
+
+![Card four: the real problem is not starting more agents but keeping them from being wrong together, listing state, verification, recovery, and cost](/blog/assets/posts/more-agents-wont-make-you-faster/card-4-multiagent.jpg)
+
+The real problem isn't starting more agents. It's keeping them from being wrong together. State: who did what, where things stand now. Verification: who can independently catch another agent's mistakes. Recovery: how you restart after a failure without repeating it. Cost: whether the tokens, the rework and the human review are worth it. Without those four layers, parallelism just scales up the mess.
+
+![Card five: the reproducible small version, shrink governance first then add agents, listing five steps](/blog/assets/posts/more-agents-wont-make-you-faster/card-5-multiagent.jpg)
+
+The version you can actually copy is: shrink the governance first, then add agents. The main thread only handles goals and sign-off. Each agent owns one clearly bounded scope. Action logs and handoffs get written every time. Critical facts get checked back against a live source. Failures have to fail loudly. Shrink the parallel scope and you can finally see the cost, the error rate, and the real throughput.
+
+![Card six: conclusion, more agents does not mean more output, ask whether state is traceable, errors independently verified, and failures loudly reported](/blog/assets/posts/more-agents-wont-make-you-faster/card-6-multiagent.jpg)
+
+So the conclusion is the same one: more agents doesn't mean more output. Ask three things first. Is the state traceable? Are errors independently verified? Do failures get reported loudly? Answer those and you've earned the right to scale. Can't answer them, and all you're scaling is token cost and the speed of your mistakes. What's worth copying isn't the dozens of agents. It's one workflow you can trust.
+
 ## Dedupe and Resolve Conflicts First, Then Send In the Agent Team
 
 The order that actually works: feed in the material first, split it into chunks, run semantic vector comparison to dedupe and surface conflicts (I make the calls). Then hand the cleaned-up material to an agent team — agents that can talk to each other — to argue about structure and ordering, and I do the final pass myself.
@@ -60,4 +89,8 @@ The calls stay with me, twice: once in the middle, once at the end. That part do
 12. 「Flip the order, dispatch a pile of agents first and then go back and deal with the duplicates and contradictions each one dragged home, and you land in the three fantasies above.」— 類型：框架句
 13. 「The calls stay with me, twice: once in the middle, once at the end. That part doesn't outsource.」— 類型：改寫（原句 "I make the calls" 與 "I do the final pass myself" 兩處的重述收束）
 其餘句子（13 subagents 代聊句、1000 subagents 與 HTML 取代 markdown 句、social agentic AI club 全句含 cover charge、dedupe/conflict/agent team 全流程句）皆逐字來自原碎念條目對應 en 版。
+-->
+
+<!--
+2026-08-28 W36 main-thread note: this week's Threads material (the 08-23 Reddit Daisy thread plus the author's own six brand cards) makes the same argument as this post, so it was merged here rather than published separately. Added connective sentences only: "Her claim:", "The architecture has three tiers.", "Here's the widest gap:", "So the conclusion is the same one:". Everything else is taken verbatim from the post and the card text.
 -->

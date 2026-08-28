@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: AI 碎念日記 2026：時間軸存檔
 slug: zh/ai-micro-notes-2026-archive
 featured: false
@@ -61,10 +62,6 @@ description: "2026 年較零碎、時效性的 AI 碎念，依時間排列。精
 **ICML 開獎焦慮**
 
 > ICML 到底何時才要開獎...好緊張。
-
-**GPT 笨拙塗鴉風 prompt 流行**
-
-> 國外最流行的 GPT 生圖指令：「請用最笨拙、塗鴉、毫無價值的方式重繪附件圖片。使用白色背景，並讓它看起來像是用滑鼠在小畫家裡畫的。」Reddit 大作合集：<https://www.reddit.com/r/ChatGPT/comments/1t0pyb4/gpt_image_2_prompt_that_is_viral_right_now_redra/>
 
 **MD 幻想**
 
@@ -209,3 +206,17 @@ description: "2026 年較零碎、時效性的 AI 碎念，依時間排列。精
 **AI 推薦的河內住宿**
 
 > 規劃河內獨旅住宿，讓 Claude Code 跟 Codex 聽了我的偏好（安靜、小資感、悠閒、性價比高、方便）之後，他們不約而同推薦了一個我在中文遊記裡很少看見的地方：Trúc Bạch（竹帛湖）。
+
+## 2026 年 8 月下旬（W36）
+
+**牛來了**
+
+> 神秘模型 Ox Alpha 上線 Open Router，表現好像很強。好笑的是，大家都說 Ox is Coming——牛來！有人測過 tokenizer 了，跟 GLM 最像。
+
+**泰國的 AI Passport**
+
+> 泰國政府開放 500 萬名本國民眾登記 TH AI Passport，免費提供 14 種 AI 模型的一年使用權。趕快叫女友申請起來給我用（Ｘ
+
+**逐字稿其實不用買貴的**
+
+> Qwen 3 ASR ＋ hotwords 自定詞庫 ＋ pyannote 說話者辨識，其實就非常夠用了。

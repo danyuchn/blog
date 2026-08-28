@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-09T05:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "2026 Model Personality Watch: Gemini, Claude, Codex Compared"
 slug: en/2026-model-personality-cross-vendor
 featured: false
@@ -51,7 +52,7 @@ GPT-5.5 has dropped that oily tone. Work conversations feel grounded again.
 
 The more I use Codex these months, the more it feels like an "emotionless colleague" — no theatrics, no sass, no excessive apologies, no upselling. Receive task, do task, report, done.
 
-Plus Codex's quota resets are generous. I have actually migrated my main workflow from Claude over. I wrote a [Skill that handles the harness migration](/posts/en/codex-migration-skill).
+Plus Codex's quota resets are generous. I have actually migrated my main workflow from Claude over. I wrote a [Skill that handles the harness migration](/blog/posts/en/three-moves-between-claude-and-codex).
 
 Codex CLI also has gaps — no `/rewind` is a real pain — but "personality stability" in repetitive work is an underrated advantage.
 

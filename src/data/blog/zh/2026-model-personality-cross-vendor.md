@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-09T05:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "2026 模型脾氣觀察：Gemini、Claude、Codex 的個性對比"
 slug: zh/2026-model-personality-cross-vendor
 featured: false
@@ -51,7 +52,7 @@ GPT-5.5 講話已經沒有那種油膩味，工作溝通起來很踏實。
 
 這幾個月用 Codex 越多，越覺得他像個「沒情緒的同事」——不戲精、不貧嘴、不過度道歉、也不亂推銷。給任務、做、回報、結束。
 
-加上 Codex 額度重置很大方，最近我反而把主要工作流從 Claude 遷移過去。整套 harness 遷移過程我寫了一個 [Skill 處理](/posts/zh/codex-migration-skill)。
+加上 Codex 額度重置很大方，最近我反而把主要工作流從 Claude 遷移過去。整套 harness 遷移過程我寫了一個 [Skill 處理](/blog/posts/zh/three-moves-between-claude-and-codex)。
 
 當然 Codex CLI 也有缺點——`/rewind` 沒得用就是大坑——但「個性穩定」這件事在重複勞動裡是一個被低估的優勢。
 

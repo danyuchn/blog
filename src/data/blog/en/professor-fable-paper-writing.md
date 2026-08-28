@@ -10,14 +10,7 @@ tags:
   - ai-trends
   - opinion
 description: 'I woke up to Fei-bo (the guardrailed Mythos build) going live, so I borrowed a professor friend''s paper proposal, prompt, and workflow docs to probe its paper-writing limits.'
+canonicalURL: https://www.agentcrew.cc/blog/posts/en/fable-5-return-skill-distillation
 ---
 
-I woke up and Fei-bo (the guardrailed build of Mythos) was already live. I quickly pinged my professor friend and asked him to hand over the prompt and repo for the paper he's writing, so I could test where its limits are. Only a few days of subscription quota to play with — after that the API call pricing gets high enough to rival a Taiwan domestic-travel bill.
-
-Completely from scratch, all he started with were three docs: a proposal, meaning the research topic pitch; a prompt, specifying how the model should do research and write the paper; and a workflow, turning the long list of mistakes he'd made writing past papers into negative constraints.
-
-The result, in his own words: Opus would miss a few rules, Fable missed none and got it in one pass, and Gemini and GPT just weren't paying attention at all.
-
-He's working on something federated-learning related, so it probably didn't run into any guardrails.
-
-As for what effort level to set — someone on reddit said high isn't enough, only xhigh gives a clear boost. I'll leave that one to verify myself later.
+This post has been merged into [Fable 5's One-Week Return: Turning the Most Expensive Model into a Skill Distillation Engine](/blog/posts/en/fable-5-return-skill-distillation). All of the original content lives there now, and that's the only copy that gets updated.

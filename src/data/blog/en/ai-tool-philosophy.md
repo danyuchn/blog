@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-23T05:10:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "AI Tool Philosophy — Pick a Mindset, Not a Side"
 slug: en/ai-tool-philosophy
 featured: false
@@ -45,3 +46,9 @@ Not everything needs the most expensive model. Using a strong model for planning
 ## Pick a Mindset, Not a Side
 
 The AI tool world doesn't need factions. You don't need to be a Claude fan or a GPT fan. What you need is a thinking framework that transfers across tools — so when the tool changes, your methodology still works.
+
+Why pick a side? Claude writes the copy, GPT's browser control finds its way around the Meta back end. Isn't that the perfect setup?
+
+<!--
+2026-08-28 W36 micro-note merge: the live note "No Need to Pick a Side" was folded into this section verbatim (semantic dedup 0.802) and removed from the zh/en live files. No sentences added.
+-->

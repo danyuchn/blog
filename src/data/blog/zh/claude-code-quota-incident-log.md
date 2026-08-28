@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-22T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "額度是怎麼被燒掉的：Claude Code 快取 bug、Opus 4.7 的 2x 消耗、subagent 遞迴繁殖"
 slug: zh/claude-code-quota-incident-log
 featured: false
@@ -211,6 +212,23 @@ Opus 4.7 已經爛到吹噓的聲音都快沒了，堪稱當年 GPT-5 災難級�
 修法是把 CLIProxyAPI 從 7.2.73 升到 7.2.91，然後幫 `ccx()` 補上幾道護欄：subagent 總數上限、並行上限、背景執行、重試次數，還有壓縮。實測跑了一輪，2 個 Terra subagent、深度 1、零巢狀，正常結束，沒再爆量。`cc` 跟 `cdx` 沒動。
 
 要小心的就是這個。除了壓縮窗口要自己設置之外，記得要關掉 nested subagent、限制總 subagent 的個數。
+
+
+## 併入：燒 token 永動機
+
+沒開 ultracode，它也給我自動觸發 dynamic workflow。一回神，103 個 agent 已經在路上了，氣死。看來我得研究有什麼參數可以把它強制關掉。不過老實說，我這個 request 只是在殺雞，所以也看不出來牛刀的優越性在哪。
+
+下一步：他們大概會推出 `/effort xxhigh`，建議使用以保持最佳效能。
+
+Claude Code subagent 正式進入俄羅斯娃娃時代——subagent 可以再度呼叫 subagent，最多五層。我就說，燒 token 之路永不停歇。
+
+2026 最新炫富方式：不用 Claude 訂閱，直接 API 叫 Fable 5 max，啟用 dynamic workflow + 五層深度 subagent，很快你就擁有一個台塑等級的 subagent 軍團。
+
+在鼓勵用戶燒 token 的路上，Anthropic 真的是努力得前無古人後無來者。
+
+<!--
+2026-08-28 W36 主對話補記：〈燒 token 永動機：Anthropic 真的很努力〉（2026-06-13，364 字）併入本文並轉為 stub。該篇是吐槽而非事故紀錄，故 2026-08-22 那輪合併未收；本次仍以獨立一節收入、不與四起事故混寫，維持語域區隔。全文逐字保留，新增非原文句子僅小標一則（框架句）。
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

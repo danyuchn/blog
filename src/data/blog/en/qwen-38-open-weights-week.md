@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-20T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "The Week of Qwen 3.8 Open Weights: From Model Card to A3B Getting Deleted"
 slug: en/qwen-38-open-weights-week
 featured: false
@@ -41,6 +42,17 @@ Next morning, August 16: Qwen 3.8 35B A3B got deleted. Everyone can go home now.
 ![The screen showing Qwen 3.8 35B A3B removed from Modelscope](/blog/assets/posts/qwen-38-open-weights-week/3-a3b-removed.jpg)
 
 We need an a3b, a MOE like that.
+
+
+## Postscript: Qwen 3.8 Flash Next
+
+The evening of August 25, the sequel showed up.
+
+Finally, an MoE Qwen 3.8 with open weights. And it's on the new next-gen Qwen4 architecture. Word is this one is 125B A6B.
+
+![The Qwen3.8-Flash-Next model page on Modelscope](/blog/assets/posts/qwen-38-open-weights-week/4-flash-next.jpg)
+
+Let's see whether it can properly take over from 3.6 35B A3B.
 
 <!--
 2026-08-21 W35 主對話補記：同 zh 檔。碎念「What to Watch Is Next Week's Open Weights」逐字併入本文開頭，並從 en archive 刪除。新增非原文句子：「Last week I already said in my micro-notes what to watch:」— 銜接。

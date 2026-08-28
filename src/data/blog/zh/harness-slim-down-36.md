@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-29T02:30:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "規則越加，Claude 越不聽話——派一隊 AI 重整設定，常態上下文省 36%"
 slug: zh/harness-slim-down-36
 featured: false
@@ -81,3 +82,17 @@ description: '半夜拿到 Opus 4.8、額度剛好重置，我做的第一件事
 3. 你甚至可以用我的 harness 同步腳本，把 Codex 跟 Claude Code 兩邊定期做同步維護。
 
 這個時代有人願意分享就不容易了。開卷有益，少點 troll，多點動手。
+
+## 併入：別把上一個對話的 JSON 餵給它
+
+不是，為什麼要給它上一個對話的上下文 JSON。
+
+harness 有好幾種，AGENTS.md、rule、skill、hook 這些都能分擔，把前一個對話的重點總結成臨時文檔也很好。
+
+純 session history 裡面含有太多 tool call、output、flag 是無用的，就連 auto compact 的時候這些都會被摘除。
+
+建議先重新體檢 harness。
+
+<!--
+2026-08-28 W36 主對話補記：〈別把上一個對話的 JSON 餵給它，先體檢 harness〉（2026-06-09，172 字）併入本文並轉為 stub。全文逐字保留，新增非原文句子僅小標一則（框架句）。
+-->

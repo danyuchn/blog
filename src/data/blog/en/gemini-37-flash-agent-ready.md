@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-20T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "Gemini 3.7 Flash: The First Gemini in Six Months I'd Actually Put on Agent Work"
 slug: en/gemini-37-flash-agent-ready
 featured: false
@@ -9,7 +10,7 @@ tags:
   - gemini
   - model-comparison
   - ai-trends
-description: 'My take after Gemini 3.7 Flash shipped: it is finally a Gemini I can use for agent work. Slightly stronger than Sonnet 5 but nowhere near Sol, half the price, and quota I cannot burn through.'
+description: 'My take after Gemini 3.7 Flash shipped: it is finally a Gemini I can use for agent work. Slightly stronger than Sonnet 5 but nowhere near Sol, half the price, and quota I cannot burn through. Plus a postscript: the same company''s API and web app are two different things.'
 ---
 
 I hereby declare: Gemini 3.7 Flash, released last night, is the first model in the Gemini family in six months that can actually be used for agent work. I have no idea what 3.1, 3.5, and 3.6 were doing.
@@ -27,3 +28,11 @@ Against what's on the table right now, it feels stronger than Sonnet 5, but nowh
 The price is also half, it has native audio and video multimodality, and the quota feels like the free extra you get when you buy cloud storage. You can't use it up. I don't wince at leaving it running all night. I've already wired it into Claude Code, and it's capable enough for real work.
 
 One more thing: for single-shot multimodal tasks, Gemini is still king.
+
+## Postscript: Multimodal Is King, Except When It Isn't
+
+I deliberately screenshotted a photo of a non-chain restaurant twice to strip the location data, figuring the AI would never place it, since Bangkok is wall-to-wall with this kind of shabu. GPT matched it anyway. Gemini, the one sitting on Google Maps' own imagery, just guessed wrong.
+
+<!--
+2026-08-28 W36 micro-note merge: the archive note "Stripping the Location Doesn't Save You" was folded in verbatim. It is a counterexample to this post's "Gemini is still king at single-shot multimodal work", so both sides now sit in the same piece. Removed from the zh/en archive. The only added non-original sentence is the subheading (framing).
+-->

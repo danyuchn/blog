@@ -1,7 +1,8 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-23T00:00:00Z
-title: "6 Practical Tips for Talking to Claude 5: Less Drift, Less Chatter, Less Slacking"
+modDatetime: 2026-08-28T04:00:00Z
+title: "7 Practical Tips for Talking to Claude 5: Less Drift, Less Chatter, Less Slacking, Less Nagging"
 slug: en/claude-5-conversation-tips
 featured: false
 draft: false
@@ -9,7 +10,7 @@ tags:
   - claude-code
   - ai-workflow
   - skills
-description: 'Some practical tips I have been sharing with friends lately on talking to the Claude 5 generation of models: a home-made explain skill for alien-speak, answering everything in one pass instead of letting the conversation drift, voice-input setups, first-principles pruning, a hook that treats slacking, and a minimal CLAUDE.md.'
+description: 'Some practical tips I have been sharing with friends lately on talking to the Claude 5 generation of models: a home-made explain skill for alien-speak, answering everything in one pass instead of letting the conversation drift, voice-input setups, first-principles pruning, a hook that treats slacking, a minimal CLAUDE.md, and a fix for the phantom pushback habit.'
 ---
 
 Some practical tips I have been sharing with friends lately on talking to the Claude 5 series of models:
@@ -52,9 +53,33 @@ Keep "CLAUDE.md" minimal. Reason things through instead of only giving negative 
 
 <https://github.com/agentcrew-academy/harness-starter-kit/blob/main/claude-md-template/CLAUDE.md>
 
+## Treat the nagging: it argues with things I never said
+
+I don't know if you've noticed, but on top of the alien-speak, Opus has another habit that really grates: it nags.
+
+What do I mean? Say I tell it, "change the payment terms on this quote to two installments, half on signing, half after acceptance."
+
+That's just an edit. What's there to argue about? But Opus comes back at me like this:
+
+> Done. One thing I'd gently push back on, though: you may be assuming installments are always friendlier to cash flow, but in practice they delay when the money lands and widen the window for the other side to stiff you. Worth another thought.
+
+The hell? When did I ever say installments are always better for cash flow?
+
+I really hate this stuff that gets said for the sake of saying something, jammed in to manufacture the impression that the answer ends with independent judgment. Worst of all, I hate people who think they're clever, pretend to read my mind, and then argue against something I never said. If a friend of mine did that I'd have blocked them on the spot.
+
+So I ended up building a SKILL just to treat this verbal tic.
+
+<https://github.com/agentcrew-academy/harness-starter-kit/blob/main/skills/phantom-pushback/SKILL.md>
+
+I do have to say it treats the symptom, not the cause. A SKILL is just context injected after the fact, and the snide streak baked into the model resurfaces once the conversation gets long. I'm hoping the next generation of models solves this one.
+
 That's roughly what comes to mind for now. Additions welcome.
 
 Originally posted on [Threads](https://www.threads.com/@dustin_gmat/post/DcXUX-oj6tA).
+
+<!--
+2026-08-28 W36 main-thread note: added a seventh section on the nagging habit, sourced from the 2026-08-21 Threads post and its self-reply, kept verbatim (including the profanity and the "snide streak" line). The only added non-original sentence is the subheading "Treat the nagging: it argues with things I never said" (framing). One emoji in the original was dropped per site convention.
+-->
 
 <!--
 New non-original sentences added (faithfulness disclosure):

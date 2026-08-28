@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-29T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "iPad 工作流進階——斷網斷電的備案，與我為什麼放棄妙控鍵盤"
 slug: zh/ipad-workflow-robustness
 featured: false
@@ -53,6 +54,33 @@ description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是
 順帶提一下硬體：我用的是 2018 年的 iPad Pro，八年了跑遠端還是很順。遠端本來就不吃本地資源，算力都在家裡那台主機上，iPad 只是一塊螢幕加一張嘴。所以原本想買新機的計畫也打消了，省一筆。
 
 最後兩個好用的小東西：右上角有個小按鈕可以直接看 diff；另一個按鈕能預覽 localhost。再裝個 fileviewer 套件，iPad 就變成檔案總管，各種文檔、圖片、影片都能開。
+
+
+## 併入：出門吃飯前，讓 Claude Code 在旅館背景偷跑的五步 SOP
+
+回台北入住旅館，出門跟朋友吃飯前做的 SOP：
+
+1. 拿隨便一張晶片卡插著取電。
+2. 電腦保持充電連網。
+3. 咖啡因指令防休眠。
+4. 開 tailscale。
+5. 遠端桌面試一下有通，當備案。
+
+然後就可以邊吃飯邊偷用 Claude Code。
+
+## 併入：兩個遠端工具
+
+在手機上看家裡電腦的任何檔案：Markdown 直接內建渲染預覽、HTML 直接網頁版檢視、300 多頁的電子書 PDF 秒速開啟、1GB 多的影片也沒有延遲。拿 copyparty 配 tailscale 來搭配 remote control 的 Claude Code 或 Codex，簡直是一絕。
+
+我最愛的遠端終端機 App Moshi，竟然出了網頁版介面，搭配 Herdr 如有神助。開發者好像是日本人旅居曼谷數位遊牧，不愧是我大曼谷。
+
+<!--
+2026-08-28 W36 碎念併入：live 碎念「copyparty 配 tailscale」與 archive 碎念「Moshi 出網頁版」逐字併入本節，兩條都屬本文的遠端工作流主題。已從 zh/en 對應檔刪除。新增非原文句子僅小標一則（框架句）與「拿 copyparty 配 tailscale 來」的主詞還原（原碎念標題即主詞）。
+-->
+
+<!--
+2026-08-28 W36 主對話補記：〈出門吃飯前，讓 Claude Code 在旅館背景偷跑的五步 SOP〉（2026-06-12，111 字）併入本文並轉為 stub。原文五條逐字保留，新增非原文句子僅小標一則（框架句）。原文句末的玩笑標記依站台規範未保留。
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

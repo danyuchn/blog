@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-01T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "Two Worlds of Web-Based Claude Code Setup"
 slug: en/claude-code-web-setup-w19
 featured: false
@@ -12,6 +13,7 @@ tags:
 description: Web Claude Code has two completely different runtimes — cloud VM and remote-control. Here is what I learned setting up both, the small bugs I hit, and why some user-level configs simply cannot be lifted to the cloud as-is.
 ---
 
+**Dated**: this post is from May 2026. The bug described below, where typing a slash only surfaces the built-in commands and never your custom ones, has since been fixed — three months after remote control shipped, as covered in [A Year In, My Answer to "Terminal or Desktop App?" Has Changed Three Times](/blog/posts/en/cli-vs-desktop-three-answers). The cloud VM part further down (only project-level `.claude/` is readable, only remote MCP works) still holds.
 The iOS Claude app is so bad that I gave up. Combined with the fact that recent updates have all gone to the desktop app and the web app, my phone now uses web Claude Code exclusively.
 
 After a couple of weeks of real use, here is what is worth knowing.

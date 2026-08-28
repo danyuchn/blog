@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-29T02:30:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: "The More Rules You Add, the Less Claude Listens — I Sent a Team of Agents to Trim My Setup and Cut 36% of Always-On Context"
 slug: en/harness-slim-down-36
 featured: false
@@ -81,3 +82,17 @@ A few words for the people who love to swing by and add "why bother with all thi
 3. You can even use my harness sync script to keep Codex and Claude Code maintained in sync on a regular basis.
 
 It's not easy finding someone willing to share these days. Reading is its own reward — less trolling, more hands-on.
+
+## Merged in: Don't Dump the Last Conversation's JSON Into It
+
+Wait, why would you feed it the context JSON from the last conversation?
+
+The harness comes in several kinds — AGENTS.md, rules, skills, hooks — and they can all carry the load. Summarizing the key points from the previous conversation into a temporary doc works well too.
+
+Raw session history holds too many tool calls, outputs, and flags that are useless; even auto compact strips those out.
+
+I'd suggest doing a fresh checkup on your harness first.
+
+<!--
+2026-08-28 W36 main-thread note: "Don't Dump the Last Conversation's JSON Into It, Check Your Harness First" (2026-06-09) was merged in here and turned into a stub. Kept verbatim; the only added non-original sentence is the subheading (framing).
+-->

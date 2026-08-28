@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-20T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: Gemini 3.7 Flash——這半年內第一個能拿去做 agent 的 Gemini
 slug: zh/gemini-37-flash-agent-ready
 featured: false
@@ -9,7 +10,7 @@ tags:
   - gemini
   - model-comparison
   - ai-trends
-description: 'Gemini 3.7 Flash 發布後我的體感：終於是這半年內可以用在 agent 工作上的 Gemini。比 Sonnet 5 略強但沒接近 Sol，價格對半折，額度根本用不完。'
+description: 'Gemini 3.7 Flash 發布後我的體感：終於是這半年內可以用在 agent 工作上的 Gemini。比 Sonnet 5 略強但沒接近 Sol，價格對半折，額度根本用不完。另附一節：同一家的 API 和網頁版根本是兩回事。'
 ---
 
 我在此宣佈：昨晚發佈的 Gemini 3.7 Flash，才是這半年內 Gemini 家族終於可以用在 agent 工作上的模型。之前的 3.1、3.5、3.6 不知道在幹嘛的。
@@ -27,6 +28,40 @@ description: 'Gemini 3.7 Flash 發布後我的體感：終於是這半年內可�
 價格也是對半折，還有原生影音多模態，甚至額度可以當作是買雲端硬碟送的，根本用不完，跑一整晚都不會心疼。我已經把它接進 Claude Code，能力已經可以用在正常工作。
 
 另外，多模態單點任務這一塊，Gemini 仍然是王。
+
+
+## 補記：同一家的 API 和網頁版是兩回事
+
+做單點任務的 Gemini API 真的是寶。三萬多道題目轉寫匯入資料庫，跑起來又快又好。怕品質差？設雙閘門驗證就好。
+
+話說回來，他們是怎麼做到 API 表現好，網頁版表現那麼差的。
+
+![Gemini 額度面板顯示週限額還剩 44%、五小時限額只剩 5%](/blog/assets/posts/gemini-37-flash-agent-ready/1-gemini-usage.jpg)
+
+舒坦了，現在每週都會把 Gemini 用好用滿，總算不負我每月 5 USD 買 5TB 雲端硬碟換到的額外 token。
+
+agy 做單點任務跟多模態任務非常出色，我讓他寫三萬道題目都是極高品質，不痛不癢。無關程式碼的寫作任務上，他是最自然最有人味的。3.5 是旗艦啊，寫作方面的旗艦——因為 A 家後來的模型就越來越不說人話。
+
+有人問我一堆名片怎麼辦，我的回答是這樣：
+
+1. 全部拍照丟一個資料夾裡
+2. 去 Google AI Studio 申請 Gemini API，不用充錢，因為你老闆也沒給你報銷
+3. 給 Claude／ChatGPT 一下指令：「此資料夾裡面有大量名片檔案，請幫我調用 gemini api 使用 gemini-flash-lite-latest 辨識並匯入 excel」
+4. 做完請 Claude／ChatGPT 抽驗
+
+唯一的缺點就是慢，因為免費 tier 有 rate limit。但沒差，老闆給我等，少囉嗦。
+
+## 補記：多模態是王，但也有翻車的時候
+
+我故意把一間非連鎖餐廳的照片二度截圖去掉位置訊息，以為不會被 AI 發現（這種 shabu 曼谷滿大街都是），結果 GPT 還是比對成功了。反而擁有 Google Map 原生圖資的 Gemini 亂猜。
+
+<!--
+2026-08-28 W36 碎念併入：archive 碎念「去掉位置訊息也躲不掉」逐字併入。該條正好是本文「多模態單點任務 Gemini 仍是王」的反例，故收在同一篇讓兩面並陳。已從 zh/en archive 刪除。新增非原文句子僅小標一則（框架句）。
+-->
+
+<!--
+2026-08-28 W36 主對話補記：新增「同一家的 API 和網頁版是兩回事」一節，素材為 2026-08-26 19:50、08-27 08:19／17:16／19:03／20:25、08-28 10:43 六則 Threads 貼文與回覆，逐字保留。新增非原文句子僅小標一則與「有人問我一堆名片怎麼辦，我的回答是這樣：」（銜接，還原原文的回覆情境）。原文 emoji 依站台規範未保留。
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

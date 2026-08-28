@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
+modDatetime: 2026-08-28T04:00:00Z
 title: Fable 5 回歸一週：把最貴的模型變成 Skill Distillation 引擎
 slug: zh/fable-5-return-skill-distillation
 featured: false
@@ -40,6 +41,23 @@ Fable 5 從明天起回歸一週，所以我要用 Sonnet 5 保護我的週額�
 真實驗證來自一個在寫論文的朋友。他早上借用我的帳號，說 Fable 寫出來的數學證明既自然又簡潔優雅，而且一次過完全不會錯，他從無到有寫了兩篇，已經準備投出去，折合 API 成本 200 USD。這次我們是所有 subagent 都用 Fable，也就是故意開到滿；但事後討論，其實最佳搭配應該是 plan / architecture / final verification 用 Fable，寫 transcript 用 Opus 4.8，跑實驗寫 code 用 composer 2.5，畫圖用 gpt-image-2。他說 100 USD 寫一篇其實真的不貴，所以就算未來用 API 也划算。
 
 一週的限時額度，我沒拿去做小事。把最貴模型的判斷，變成便宜模型的工作規範——這是我這一週真正留下、之後每天還在用的東西。
+
+
+## 併入：拿教授朋友的論文 repo 試 Fable 的能力邊界
+
+一覺醒來，肥勃（Mythos 的護欄版本）就上了。我趕緊呼叫我的教授朋友，請他把正在寫的論文 prompt 跟 repo 給我，讓我來測試一下它的能力邊界。只有幾天可以用訂閱額度，之後 API 調用價格高到堪比台灣國旅。
+
+完全從頭，開始的只有三份文檔：proposal，也就是研究主題提案；prompt，規範模型怎麼做研究、怎麼寫論文；還有 workflow，把過去寫論文時做錯的大量教訓寫成負面約束。
+
+結果照教授的原話：Opus 會漏幾條規則，Fable 完全不漏、一次過，Gemini 跟 GPT 是完全沒有在鳥的。
+
+他做的是 federated learning 相關的題目，應該沒有碰到 guardrail。
+
+至於 effort 開多少，reddit 上有網友說開 high 是不夠的，xhigh 才有明顯增益——這條留著之後自己驗。
+
+<!--
+2026-08-28 W36 主對話補記：〈拿教授朋友的論文 repo 試 Fable 的能力邊界〉（2026-06-10，344 字）併入本文並轉為 stub。全文逐字保留（含教授原話「Opus 會漏幾條規則，Fable 完全不漏」），新增非原文句子僅小標一則（框架句）。
+-->
 
 <!--
 新增的非原文句子（AI 最小銜接，非作者原文）：
