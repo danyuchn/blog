@@ -7,6 +7,7 @@ import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
+import DiagnosisCta from "@/components/DiagnosisCta.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import { findTranslation } from "@/utils/i18n";
@@ -202,6 +203,8 @@ const nextPost =
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
     <BackToTopButton />
+
+    <DiagnosisCta lang={postLang} />
 
     <ShareLinks />
 
