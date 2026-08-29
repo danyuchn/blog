@@ -31,12 +31,12 @@ const ui: Record<string, Record<Lang, string>> = {
     zh: "15 分鐘導入診斷",
   },
   "diagnosis.desc": {
-    en: "Fill in a short form first, so I already understand your situation before we talk. Within 15 minutes you'll know which type of problem you have, which plan fits, and roughly how long it takes.",
-    zh: "先填表，通話前我就能看懂你的狀況。15 分鐘內告訴你問題屬於哪一型、適合哪一版、大概多久。",
+    en: "Fill in a short form to book your free 1-on-1 diagnosis, and find out how you can work with AI without the pain and get a real productivity lift.",
+    zh: "填表預約你的專屬 1 對 1 免費診斷時段，了解你可以怎麼無痛與 AI 協作、大幅提升生產力。",
   },
   "diagnosis.cta": {
-    en: "Start the diagnosis",
-    zh: "開始診斷",
+    en: "Book my free diagnosis",
+    zh: "預約免費診斷",
   },
 };
 
