@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-11T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: More Subagents Won't Make You Faster
 slug: en/more-agents-wont-make-you-faster
 featured: false
@@ -73,6 +73,12 @@ The first half is the point. Deduping and conflict resolution happen before disp
 
 The calls stay with me, twice: once in the middle, once at the end. That part doesn't outsource.
 
+## Fable 5.1 Burned a 5-Hour Quota in One Minute
+
+Saw this post first thing in the morning and couldn't stop laughing. Fable 5.1 had just come out, and someone ran Ultracode with it. It dispatched roughly 300 subagents in one go, and every single one inherited the main agent's model (meaning all 300 were Fable). The 5-hour quota was gone in one minute, and the weekly quota immediately dropped to 43%.
+
+If you've run into this too, the original thread has people sharing fixes — mainly changing the config, adding a hook, and editing the frontmatter. <https://www.reddit.com/r/ClaudeAI/comments/1w52pbu/gone_in_60_seconds/>
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「It's a joke, but the joke already contains the whole problem.」— 類型：銜接
@@ -93,4 +99,8 @@ The calls stay with me, twice: once in the middle, once at the end. That part do
 
 <!--
 2026-08-28 W36 main-thread note: this week's Threads material (the 08-23 Reddit Daisy thread plus the author's own six brand cards) makes the same argument as this post, so it was merged here rather than published separately. Added connective sentences only: "Her claim:", "The architecture has three tiers.", "Here's the widest gap:", "So the conclusion is the same one:". Everything else is taken verbatim from the post and the card text.
+-->
+
+<!--
+2026-09-04 weekly-routine addendum: added "Fable 5.1 Burned a 5-Hour Quota in One Minute" section, from a 09-03 Threads post. Added sentence: the heading (framing). Everything else is a sentence-level rewrite of the original post, with no facts or conclusions added.
 -->

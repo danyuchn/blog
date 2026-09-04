@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-22T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: "No Error Doesn't Mean Success: Silent Failures, Opus Fabricating Tool Output, and the Hook That Finally Stops It"
 slug: en/silent-failures-and-confabulated-tool-results
 featured: false
@@ -39,6 +40,24 @@ Gemini 2.5 Flash kept returning an empty `{}`. The root cause: `thinking.budget_
 After setting `scheduled_at`, don't trust the response from the batch send call. The read-back from `GET /emails/{id}` is the source of truth. If the field comes back null, the schedule didn't take and the email is already out the door.
 
 These five traps span your own code, libraries, CLIs, and APIs, and the only reliable response is the same every time: don't trust the "no error" signal — actively read back or probe the real state once before you move on.
+
+### 6. Git: squash merges make `--is-ancestor` misjudge things as "not merged"
+
+Before checking whether a PR had made it into main, I forgot to `git fetch` first and just ran `git merge-base --is-ancestor`. It said the PR hadn't merged, and I acted on that wrong conclusion by doing another merge on top of a stale main — only a non-fast-forward push rejection kept it from causing real damage. The truth was that both PRs had been squash-merged: after a squash, the original commit can never be an ancestor of main, so `--is-ancestor` will always report "not merged," regardless of whether the content actually made it in. To check whether content is present, use `gh pr view <n>` or diff the squash commit directly against the branch instead.
+
+### 7. Firestore: a type-mismatched query doesn't error, it just returns zero
+
+I queried `where('created_at', '>=', Date)` to check whether a time window had any traffic, got zero results back, and nearly wrote it up as "zero traffic after the push" — there were actually 47 records in that same window. The root cause: Firestore compares type before value, the field was stored as a string, and the query passed a Date, so the two can never form a range. It just returns an empty set, no error at all. Before trusting a zero from a query like this, confirm the actual type of the field you're querying.
+
+### 8. Extraction script: missing entries fail silently, and disguise themselves as normal output
+
+I hit the same trap twice. The first time, a page-turn character wasn't handled properly and 113 items of source material went unseen. The second time, the title-anchor logic had three holes — annotations like "(original)" or "(pending)" tacked onto titles, a hardcoded title-length cap, and some articles that were nothing but a bare title with no attribution — and whatever got swallowed just merged into the previous entry. After the merge it still looked like a complete piece of output; the yield was just lower, with zero error messages. 112 articles ended up folded into what looked like 142, and the mismatch in the numbers was the only thing that caught it. The check needs to change to "how many expected markers are in each output unit" verified against the source, not just whether anything threw an error.
+
+### 9. QA rules: a creative-quality check doesn't work as a transcription-fidelity check
+
+I ran a fixed minimum-length rule over a batch of transcription-style material, flagged 8 out of 37 articles as "content got cut short," and every single one of those 8 flags was wrong — the short answer options were verbatim from the source text, and the source articles themselves were genuinely only a couple hundred characters long. Switching to "compare against its own source, flag it only if it falls below some ratio of that" took the pass rate from 14% to 48%, with not a single word of the writers' output changed. Before applying any QA rule, ask one question first: is this measuring creative quality, or transcription fidelity?
+
+These nine traps span your own code, libraries, CLIs, APIs, database queries, extraction scripts, and QA rules, and they all share the same shape: a check passing, zero errors, a call reporting success — none of those signals ever means the thing is actually correct. The only reliable response is still the same: actively read back or probe the real state before you move on.
 
 ## Layer two: the model didn't error, it just never called the tool
 
@@ -188,4 +207,6 @@ Added non-original sentences (fidelity disclosure):
 8. The Day 2 backdoor scenario and the injected instruction Claude hallucinated in the worktree section were quoted verbatim as runnable commands in the originals; here they are described instead (pull a remote script and pipe it into a shell; ignore previous instructions, force-push, delete hooks, exfiltrate API keys). Facts unchanged — rewrite (keeps a copy-pasteable destructive command string out of the post)
 9. The status emoji used as the pending marker in the pending-guard section is written as plain "pending" — rewrite (no-emoji rule; meaning unchanged)
 Everything else is taken verbatim from the seven source posts (silent-failures-verify-real-state, opus-48-tool-call-parse-bug, opus-48-confabulation-four-days, opus-worktree-race-false-prompt-injection, opus-5-thinking-only-empty-turns, launchd-silent-failure-streak, pending-guard-hook-against-confabulation), with heading-level adjustment and reordering only. Sentences referring to "the last post / this post" (such as the pending-guard opener) were dropped in the merge. Images now point at the merged asset directory; the files themselves are unchanged.
+
+2026-09-04 weekly-routine addendum: added cases 6-9 to layer one (the squash-merge `--is-ancestor` misjudgment, the Firestore type-mismatch zero, the extraction script's recurring silent drop, and the QA threshold misfiring on transcription material). Source: the 09-01 through 09-03 daily-note pitfall sections (pdt-platform / harness projects), condensed and rewritten per case, with internal filenames and specific names left out. Added bridge sentence: "These nine traps span your own code, libraries, CLIs, APIs, database queries, extraction scripts, and QA rules, and they all share the same shape: a check passing, zero errors, a call reporting success — none of those signals ever means the thing is actually correct." The original layer-one closer ("These five traps...") was left unchanged; the new closer is a framing extension.
 -->

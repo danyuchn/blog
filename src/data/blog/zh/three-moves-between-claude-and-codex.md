@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-03T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: 我在 Claude 和 Codex 之間搬了三次家
 slug: zh/three-moves-between-claude-and-codex
 featured: false
@@ -170,6 +170,12 @@ Codex 是時候走下神壇了吧。Claude 家最近低調很多，四平八穩�
 
 我果然是數位遊牧啊，逐 token 如逐水草而居的遊牧民族。
 
+## 九月初：塵埃落定，Claude 主力、Codex 副手
+
+過去幾個月我 10 篇文章有 9 篇都在臭 Anthropic，但也必須誠實面對自己的選擇：兩個月兩邊各 100 美元雙開之後，我最終選擇把 Codex 降級到 20 美元，維持 Claude 的 100。
+
+主因是 Fable，次因是 OpenAI 的額度政策。我的工作上創造性任務比維護性任務多，目前所有模型裡，能像上師一樣高度洞悉我的意圖、優雅簡潔地點出我的 unknown unknowns 的，只有 Fable。不是說 GPT 不好，Sol 也是頂級聰明且非常細心，但在我眼裡就是一個聽話的工具人；Luna 成本效益極高，電腦控制表現也好。
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1.「我在 Claude Code 和 Codex 之間來回搬了三次家。以下照時間順序排：五月把整套 harness 搬過去、七月換掉主力、蜜月期、充滿 reset 的七月，最後蜜月期結束。」— 框架句（合併文開頭，內容全部指向下文既有段落）
@@ -178,4 +184,6 @@ Codex 是時候走下神壇了吧。Claude 家最近低調很多，四平八穩�
 4.「我個人已經在積極做的，是把 harness 持續瘦身、把部分很單純的單發任務路由到本地模型夜間做或走量大管飽的 Gemini 訂閱方案，這條線另外寫在 [第二次 harness 減肥：全域 skills 58 砍到 40](/blog/posts/zh/skills-58-to-40-second-diet)。」— 改寫（原 july-of-resets 的「## 個人已經在積極做的」整節屬 harness 減肥系列、非本篇主線，壓縮成一句並外連；原節內「這週減了 40% 常駐注入的 token」數字與「未來打算做的進一步分流：非敏感資訊，或者透過本地……」截斷句於此捨棄）
 5. 原五篇各自的 H2 小標降為 H3（痛點／SKILL 做了什麼／額外收穫／順便講一個生圖的意外發現／七輪五小時窗口／默默飄走／Deepseek 那張圖可能要作廢了／關於 reset 本身），文字未改 — 改寫（標題層級調整）
 其餘所有段落、數據、引用區塊、連結與圖片 alt 均逐字取自五篇原文（codex-migration-skill、why-i-switched-from-claude-code-to-codex、codex-quota-honeymoon、july-of-resets-subsidy-war、codex-quota-nerf-off-the-pedestal），僅做標題層級調整與圖片路徑改指合併目錄，未新增原文沒有的事實、判準或結論，未替作者調和前後立場，也未新增總收尾。
+
+2026-09-04 週例行補記：新增「九月初：塵埃落定，Claude 主力、Codex 副手」一節，素材取自 08-31 Threads 貼文，逐句改寫。新增句：小標（框架句）。其餘句子逐句對應原文，未新增原文沒有的判斷。原貼文結尾一句因文意未完（「Luna 成本效益極高、電腦控制表現」後截斷）已省略未收錄。
 -->

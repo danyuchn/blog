@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-11T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: 派更多 subagent 不會讓你更快
 slug: zh/more-agents-wont-make-you-faster
 featured: false
@@ -73,6 +73,12 @@ description: '從想派 13 個 subagent 代聊、一個人操控 1000 個，到�
 
 裁決權還是在我手上，兩次：中間一次，最後一次。這件事沒有辦法外包。
 
+## Fable 5.1 一分鐘燒光 5 小時額度
+
+一大早看到這篇文章，忍不住笑出來。Fable 5.1 才剛出，就有人用 Ultracode，結果一次被派出大概 300 個 subagent，而且全部都繼承主 agent 的模型種類（也就是全部都是 Fable）。5 小時額度一分鐘被幹光，週額度馬上被幹到剩 43%。
+
+如果你也有這困擾，原討論串裡大家都分享了解法，具體來說就是改 config、加 hook、改 frontmatter。<https://www.reddit.com/r/ClaudeAI/comments/1w52pbu/gone_in_60_seconds/>
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「這句話是玩笑，但它其實把問題講完了。」— 類型：銜接
@@ -93,4 +99,8 @@ description: '從想派 13 個 subagent 代聊、一個人操控 1000 個，到�
 
 <!--
 2026-08-28 W36 主對話補記：本週 Threads 素材（08-23 18:08 Reddit Daisy 討論貼＋作者自製 6 張品牌圖卡）論點與本文同源，故併入本文而非另開新文。新增非原文句子：「她的說法是：」「架構是三層。」「最大的落差在這裡：」「所以結論還是那句：」四處銜接，其餘均逐字取自貼文與圖卡文字。
+-->
+
+<!--
+2026-09-04 週例行補記：新增「Fable 5.1 一分鐘燒光 5 小時額度」一節，素材取自 09-03 Threads 貼文。新增句：小標（框架句）。其餘逐句改寫自原貼文，未新增原文沒有的論點或結論。
 -->

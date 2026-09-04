@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: AI 碎念日記 2026：時間軸存檔
 slug: zh/ai-micro-notes-2026-archive
 featured: false
@@ -220,3 +220,9 @@ description: "2026 年較零碎、時效性的 AI 碎念，依時間排列。精
 **逐字稿其實不用買貴的**
 
 > Qwen 3 ASR ＋ hotwords 自定詞庫 ＋ pyannote 說話者辨識，其實就非常夠用了。
+
+## 2026 年 9 月上旬（W37）
+
+**Fable 5.1 在 Amazon Bedrock 上現蹤**
+
+> 推特上大家都在轉發的圖：Fable 5.1 已經出現在 Amazon Bedrock 上，從以前的 400 identifier not valid 變成 404 model not found。根據過去經驗，代表幾天內就會發布。
