@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: "AI Micro-Notes 2026: Chronological Archive"
 slug: en/ai-micro-notes-2026-archive
 featured: false
@@ -220,3 +220,9 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **You Don't Need to Pay Much for Transcripts**
 
 > Qwen 3 ASR plus a hotwords custom dictionary plus pyannote for speaker diarization is honestly more than enough.
+
+## Early September 2026 (W37)
+
+**Fable 5.1 Spotted on Amazon Bedrock**
+
+> A screenshot everyone's reposting on X: Fable 5.1 has shown up on Amazon Bedrock, the error going from 400 identifier not valid to 404 model not found. Based on how this has gone before, that means release is days away.

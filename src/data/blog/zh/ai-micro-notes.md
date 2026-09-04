@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -26,6 +26,18 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Claude import mode 遷移 GPT 記憶**
 
 > Claude 不是有 import mode 嗎？可以讓你 extract 出 GPT 對你的認知跟記憶然後匯入 Claude。
+
+**GPT-5.6-Luna 接 API 有多省**
+
+> 目前接在兩個地方：類似沈浸式翻譯的網頁外掛，每天約 50-80 個外語網頁一鍵全翻譯；類似 Typeless 的語音輸入法「Say It」，每天約 100-150 次使用做文字整理。10 天下來每天花費不到 0.01 美元，費用儀表板顯示是 0.0。
+
+**AI 圈冷知識：最貴的模型不是 Fable**
+
+> 目前為止 API 定價最貴的模型並不是 Claude Fable，是 GPT-o1-pro，150/600，約為 Fable/Mythos 的 12-15 倍（10/50）。2025 年 3 月發佈，目前為棄用但仍未退役狀態。
+
+**Codex 的 5 小時窗口跟 7 天窗口關係**
+
+> Tibo 預告 back-to-back reset 意外讓我實測出 20USD 方案 5h 窗口跟 7d 窗口的關係：7d 額度大概等於 5 輪 5 小時窗口再多一點。想認真用滿額度，從宣佈後就開始猛用是個好選擇。
 
 ## 開發・資安踩坑
 
@@ -75,6 +87,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 > 建議直接 codex。除非你非常瞭解 hermes 的原理跟架構，不然 codex 或 claude code 的 harness 目前來說是開箱即用最穩定的。
 
+**Claude Code /low-priority 冷知識**
+
+> 看 Reddit 才學到：`/low-priority` 可以在五小時額度打滿後讓你繼續用，只是比較慢，因為用的是離峰算力。同樣會吃週額度。
+
 ## AI 產業・商業觀察
 
 **Anthropic 在中國**
@@ -88,6 +104,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **Karpathy 三姓家臣**
 
 > Andrej Karpathy 宣布加入 Anthropic。OpenAI → Tesla → OpenAI（回鍋）→ 離開 → Anthropic。這應該是 AI 圈最強的三姓家臣了。不過換個角度看，頂尖人才往他認為最有潛力的地方跑，本身就是一種市場訊號。
+
+**OpenAI 這句話細思極恐**
+
+> Fable 5.1 發佈後 OpenAI 發文預告 Astra 跟安全防護，文中寫「雖然 Astra 未捲入 Hugging Face 事件」。等等，那捲入的是誰？下一代的版本嗎？
 
 ## 生活・雜感
 
@@ -118,3 +138,7 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **我只是不喜歡人**
 
 > 從小我一直以為自己天生不擅長也不喜歡領導人，不能當主管帶團隊；AI Agent 出現之後我才發現，我只是不喜歡人。
+
+**Codex 寫的剪髮觀察日記**
+
+> 如果 Codex 裡的 GPT 會寫日記，大概會像一篇學術論文：考察一次「前往曼谷 Ekkamai 理髮」的單次、非隨機、非盲法自然情境觀察，還特別聲明不構成對任何理髮店的推薦。

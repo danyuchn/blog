@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-11T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: "My Client's Chat Blew Up: Three Questions in One Prompt, and Claude Just Drifted Along With Him"
 slug: en/client-scope-explosion-two-skills
 featured: false
@@ -40,6 +41,18 @@ What I gave him today was a skill that gives the AI the courage to pull his scat
 
 If you want to try the same skills: <https://github.com/agentcrew-academy/harness-starter-kit>
 
+## Another Client, Same Problem: CEO-Level Drift
+
+I ran into the same problem with another client, at an even higher level.
+
+This client is the CEO of a small company, plenty of talent, knows the business inside out. But his two biggest weaknesses: every part of the business still ran on tribal knowledge, with all the know-how and process sitting only in his memory and experience; and his thinking is too flexible, which makes collaborating with AI drift too far off course. We'd already helped him consolidate his scattered raw data once before — connecting APIs where possible, and for the rest, at least turning it into files the AI could read. Just getting that far already put him ahead of most people.
+
+In that session we reviewed how he'd been working with AI, and found the real problem: he'd open a huge number of conversations with AI — about revenue formulas, monitoring metrics, that kind of thing — but every single one of those threads just stopped at the AI's reply. No log, no conclusion, no version control, nothing. He kept brainstorming with AI, and none of it ever landed anywhere. Some files were named "old version," others "deprecated," and fields of the same kind used different formats across files — agents in different conversations had no shared rules at all, and they'd drifted badly over time.
+
+What we did that day was "set the rules." Made him use the Grill-me skill to pin down every spec — file-naming format, folder structure, internal fields — no more "we'll figure it out later." Wrote the finalized specs into a file linked from CLAUDE.md, and built a lint script wired to a hook, so both the rules and the gate would make sure future agents produced files that matched spec. And built a checkpoint skill for closing out work — git commit, push, write the daily log, update the progress file — so every step from here on could be traced back. I reminded him: if it's not written down, it doesn't count. The moment you step away from your desk, even for the bathroom, checkpoint first.
+
+My takeaway afterward: all of this is common knowledge if you're an engineer or a software developer. But outside the programming world, plenty of people don't know it and genuinely need it. The curse of knowledge never goes away — what feels obvious to you is a valuable skill to everyone outside your bubble.
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「第一個是 /explain。」「第二個是 /first-principles。」對應之 "The first is /explain." "The second is /first-principles." — 類型：改寫（原文為編號清單，改為段落式序數句以符合純段落格式，語意未增減）
@@ -47,4 +60,6 @@ If you want to try the same skills: <https://github.com/agentcrew-academy/harnes
 3. 原文「AI帶她做的那些報表」的「她」與全文其他處的「他」不一致，判為錯字，英文統一為 him。
 4. 其餘全文為原貼文逐句翻譯；「爆！掉！了！」以 "BLEW. RIGHT. UP." 對應、「我：？？？？？？」以 "Me: ??????" 對應，未新增任何框架句、銜接句或論述展開。
 5. en 版已過 humanizer：只動散文句的縮寫（it is → it's 等）與一句「他回了我一句意味深長的話」的譯法（改為 "He came back with a loaded line:"，更貼原文的「意味深長」）。frontmatter、連結、blockquote 引言未動。
+
+2026-09-04 週例行補記：新增 "Another Client, Same Problem: CEO-Level Drift" 一節，為 zh 版新增段落的翻譯，忠實度自首同 zh 版。新增句對應：標題（框架句）；"I ran into the same problem with another client, at an even higher level."（銜接句）。其餘逐句翻譯自 zh 版新增內容，未新增 zh 版沒有的論點。
 -->

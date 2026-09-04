@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-03T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: Three Moves Between Claude and Codex
 slug: en/three-moves-between-claude-and-codex
 featured: false
@@ -172,6 +172,12 @@ Now I wait to see whether Claude drops the 50% usage discount once this week end
 
 I really am a digital nomad, chasing tokens the way nomads chase grass and water.
 
+## Early September: The Dust Settles — Claude Main, Codex Backup
+
+Over the past few months, 9 out of every 10 posts I wrote were trashing Anthropic. But I also have to be honest about my own choice: after two months of running both at $100 each, I finally downgraded Codex to $20 and kept Claude at $100.
+
+The main reason is Fable. The secondary reason is OpenAI's quota policy. My work has more creative tasks than maintenance tasks, and out of every model available right now, the only one that reads my intent the way a mentor would and elegantly, concisely points out my unknown unknowns is Fable. That's not to say GPT isn't good — Sol is genuinely brilliant and very careful, but in my eyes it's an obedient tool. Luna's cost-to-value ratio is excellent, and its computer-control performance is solid too.
+
 <!--
 Added non-source sentences (fidelity disclosure):
 1. "I've moved back and forth between Claude Code and Codex three times. Here it is in order: moving the whole harness over in May, switching my daily driver in July, the honeymoon, the July full of resets, and then the honeymoon ending." — framing (merged-article opener; every item points to a section below)
@@ -180,4 +186,6 @@ Added non-source sentences (fidelity disclosure):
 4. "On my side I was already keeping the harness on a diet, and routing the very simple one-shot tasks to local models overnight or through the all-you-can-eat Gemini subscription. That thread is written up separately in [Second Harness Diet: Global Skills From 58 Down to 40](/blog/posts/en/skills-58-to-40-second-diet)." — rewrite (the whole "## What I'm already actively doing" section of july-of-resets belongs to the harness-diet series, not this thread; compressed to one sentence with an outbound link. The "cut 40% of the always-injected tokens this week" figure and the truncated "Further routing I plan to do: non-sensitive information, or via local..." line are dropped here)
 5. The original H2 headings within each source were demoted to H3 (The pain points / What the Skill does / A side gripe / A small accident with image generation / Seven five-hour windows / Drifting away / That Deepseek chart may be obsolete soon / On resets themselves), wording unchanged — rewrite (heading level only)
 Every other paragraph, figure, blockquote, link, and image alt is carried over verbatim from the five originals (codex-migration-skill, why-i-switched-from-claude-code-to-codex, codex-quota-honeymoon, july-of-resets-subsidy-war, codex-quota-nerf-off-the-pedestal). Only heading levels and image paths changed. No facts, criteria, or conclusions were added, the author's shifting positions were not reconciled, and no new closing was appended.
+
+2026-09-04 weekly-routine addendum: added "Early September: The Dust Settles" section, translated from the zh version's new section (source: an 08-31 Threads post). Added sentence: the heading (framing). The original post's final line was cut off mid-sentence ("Luna's cost-effectiveness is excellent, computer-control performance...") and was left out here rather than guessed at.
 -->

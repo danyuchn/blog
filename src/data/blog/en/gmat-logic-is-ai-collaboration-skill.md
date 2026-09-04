@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-28T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: People Who Scored High on the GMAT Work Noticeably Better With AI
 slug: en/gmat-logic-is-ai-collaboration-skill
 featured: false
@@ -77,6 +77,16 @@ So my suggestion is to take the Italian tradition of examining everyone one-on-o
 
 If they can answer fluently, whether it came from AI no longer matters.
 
+## A Confirmation From a Hedge Fund Client
+
+I got another live confirmation of this recently. I applied GMAT-style critical thinking coaching to AI coaching, and this time I finally saw a genuinely positive result. Critical-thinking coaching works especially well on people who are sharp and hands-on. This client works at an overseas hedge fund, and his ability to draw connections across domains is very strong — a light nudge at the point where his thinking hits a dead end is all it takes to unstick him.
+
+## Where This Method Actually Came From
+
+I'm grateful for the strong logic and structured-thinking training that 15 years of GMAT teaching gave me. In GMAT teaching I constantly drill students on "define clearly," "break down the process," "separate fact from inference," "structure your thinking" — and it turns out those same habits are extremely useful for AI coaching.
+
+Sticking with writing and sharing has also mattered a lot. Across 15 years of GMAT teaching I never stopped writing blog posts and uploading videos, sharing my teaching methods and new research, and built up over 400 complete pieces of material. Cross-analyzing that material is how I realized I already had a core philosophy and methodology that had grown past GMAT and could carry over into AI applications — something I also wrote about in [Teaching Non-Technical People AI](/blog/posts/en/teaching-non-tech-ai).
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「I mentioned this once in Responsibility Is What AI Cannot Do, where I only talked about the logical training the GMAT gave me and never turned it into questions.」 — 類型：銜接（站內互引，任務指定）
@@ -84,4 +94,6 @@ If they can answer fluently, whether it came from AI no longer matters.
 3. 「I broke down that "how to look at evidence" part in more detail in The Debugging Mindset.」 — 類型：銜接（站內互引，任務指定）
 4. 「## An unwritten observation」「## Not a humanities-versus-science thing」「## Try it. How many can you get right?」「## Q1」「## Q2」「## While I'm at it, a thought on education」 — 類型：框架句（分節標題；Q1/Q2 為原文既有標記）
 5. 「These questions test the logical thinking you use when working with AI.」 — 類型：改寫（原文為一句「試試看，以下你能做對幾題？這些題目會考驗你跟AI協作的邏輯思維」，拆為標題＋句子）
+
+2026-09-04 週例行補記：新增 "A Confirmation From a Hedge Fund Client" 與 "Where This Method Actually Came From" 兩節，為 zh 版新增段落的翻譯，忠實度自首同 zh 版。連結改指向站內英文版 `/blog/posts/en/teaching-non-tech-ai`。
 -->

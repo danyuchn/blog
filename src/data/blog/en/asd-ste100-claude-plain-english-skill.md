@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-24T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: "Making Claude Talk Like a Human: A Plain-English Standard From Aircraft Maintenance Manuals"
 slug: en/asd-ste100-claude-plain-english-skill
 featured: false
@@ -28,7 +29,13 @@ So I turned it into a skill, and every time Claude starts showing off its vocabu
 
 <https://github.com/danyuchn/asd-ste100-skill>
 
+## Postscript: A Month Later, Same Problem
+
+The moment I finished typing a certain prompt, I felt an endless wave of exasperation. Claude, once the model with the best writing chops, has now become the worst offender for not talking like a human. I have to ask Gemini to fix the tone for me these days, and I have to warn it not to change it back.
+
 <!--
 新增非原文句子清單（忠實度自首）：
 零新增。全篇為原 Threads 貼文的英文翻譯，忠實對應 zh 版段落與順序；before/after 例子維持原英文原文不譯、以 blockquote 呈現。無任何 AI 新增的句子或論點。
+
+2026-09-04 週例行補記：新增 "Postscript: A Month Later, Same Problem" 一節，為 zh 版新增段落的翻譯，忠實度自首同 zh 版。
 -->

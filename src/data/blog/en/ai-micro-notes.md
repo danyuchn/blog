@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -26,6 +26,18 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Claude Import Mode for GPT Memories**
 
 > Claude has an import mode, right? You can extract GPT's knowledge and memories about you, then import them into Claude.
+
+**How Cheap GPT-5.6-Luna Is Over the API**
+
+> I'm running it in two places: a browser extension like immersive translation, one-click translating 50-80 foreign-language pages a day; and a voice-input tool like Typeless called "Say It," used 100-150 times a day to clean up text. After 10 days, daily spend is under $0.01, and the cost dashboard just shows 0.0.
+
+**AI Trivia: The Priciest Model Isn't Fable**
+
+> The most expensive model by API pricing right now isn't Claude Fable — it's GPT-o1-pro, at 150/600, about 12-15x Fable/Mythos (10/50). Released March 2025, currently deprecated but not yet retired.
+
+**How Codex's 5-Hour and 7-Day Windows Relate**
+
+> Tibo's heads-up about a back-to-back reset let me accidentally measure the relationship between the $20 plan's 5-hour window and its 7-day window: the 7-day quota works out to roughly five 5-hour rounds, plus a bit more. If you want to seriously max out your quota, going hard from the moment it's announced is the move.
 
 ## Dev & Security Pitfalls
 
@@ -75,6 +87,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Just go with codex. Unless you really understand how hermes works under the hood, the codex or claude code harness is the most stable thing you can run out of the box right now.
 
+**Claude Code Trivia: `/low-priority`**
+
+> Learned this from Reddit: `/low-priority` lets you keep going after your five-hour quota is maxed out, just slower, since it runs on off-peak compute. It still eats into your weekly quota.
+
 ## AI Industry & Business Observations
 
 **Anthropic in China**
@@ -88,6 +104,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Karpathy — The Ultimate Free Agent**
 
 > Andrej Karpathy announced he's joining Anthropic. OpenAI to Tesla to OpenAI (return) to departure to Anthropic. Probably the most prolific team-switcher in AI. Then again, top talent gravitating toward where they see the most potential is itself a market signal.
+
+**The OpenAI Line That Gives Me Chills**
+
+> After Fable 5.1 launched, OpenAI put out a post teasing Astra and its safety measures, and it said: "while Astra was not involved in the Hugging Face incident." Wait. Which version was involved, then? The next one?
 
 ## Life & Miscellany
 
@@ -118,3 +138,7 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **I Just Don't Like People**
 
 > All my life I assumed I was naturally bad at leading people and didn't enjoy it, that I couldn't manage a team. Then AI Agents showed up and I realized I just don't like people.
+
+**Codex's Diary Entry About a Haircut**
+
+> If the GPT inside Codex kept a diary, it would probably read like an academic paper: an examination of a single, non-random, non-blinded naturalistic observation of "a trip to Ekkamai in Bangkok for a haircut," with an explicit disclaimer that it does not constitute a recommendation of any particular salon.

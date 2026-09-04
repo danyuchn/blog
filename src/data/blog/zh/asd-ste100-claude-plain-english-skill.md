@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-24T04:00:00Z
+modDatetime: 2026-09-04T04:00:00Z
 title: 讓 Claude 說人話：一套飛機維修手冊的簡化英文標準
 slug: zh/asd-ste100-claude-plain-english-skill
 featured: false
@@ -28,7 +29,13 @@ description: 'Claude 從 4.7 起就不說人話，我一度以為是自己英文
 
 <https://github.com/danyuchn/asd-ste100-skill>
 
+## 補記：一個月後，還是同一個毛病
+
+打完某段 prompt 的當下，心裡有無限唏噓。曾經的寫作高手模型 Claude，現在淪為不講人話的第一名。我現在都要請 Gemini 幫忙修語氣，還要告誡它不要改回來。
+
 <!--
 新增非原文句子清單（忠實度自首）：
 零新增。全篇逐字沿用原 Threads 貼文，僅將平台短段落織成部落格段落、把 before/after 例子改為 blockquote 呈現、裸連結改為 autolink。無任何 AI 新增的句子或論點。
+
+2026-09-04 週例行補記：新增「補記：一個月後，還是同一個毛病」一節，素材取自 09-01 Threads 貼文，逐字沿用，僅加小標（框架句）。
 -->
