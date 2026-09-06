@@ -48,17 +48,11 @@ Your content here...
 
 ### Frontmatter Fields
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `author` | No | Defaults to site author |
-| `pubDatetime` | Yes | ISO 8601 publish date |
-| `modDatetime` | No | Last modified date |
-| `title` | Yes | Post title |
-| `slug` | Yes* | `<lang>/<filename>` — schema allows omitting it, but this repo's content validator requires it explicitly |
-| `featured` | No | Show on homepage featured section |
-| `draft` | No | Set `true` to hide from production |
-| `tags` | No | Array of tag strings |
-| `description` | Yes | SEO meta description |
+The field-by-field rules live in `.claude/specs/article-spec.md`, the single source of truth enforced by `npm run check:content`. Three traps that fail the check most often:
+
+- `slug` is mandatory and must equal `<lang>/<filename>` (the Astro schema tolerates omitting it, this repo's validator does not).
+- `tags` may only use values from the allowlist in `.claude/specs/tags.md`.
+- `pubDatetime` must not be a future UTC time, or the post is silently filtered out of production.
 
 ### Bilingual Convention
 
