@@ -15,6 +15,7 @@
 | 每週週報全流程 | `.claude/checklists/weekly-roundup.md` |
 | 機器驗證 | `npm run check:content`（CI blocking；錯誤訊息會指回對應 spec） |
 | 品牌調性 / 讀者輪廓 | `.impeccable.md` |
+| 文檔結構／命名的機器檢查 | `.doc-structure.yaml`（`doc-structure-lint.py` 讀它；規則說明見檔內註解） |
 
 ## 社群匯入七步驟
 
@@ -49,4 +50,4 @@
 
 ## YouTube 來源澄清（自家上架 vs 訂閱）
 
-週報「本週 YouTube 新增影片」預設指 **AgentCrew Academy 自家上架**（`playlistItems` API 抓 uploads playlist）。「訂閱頻道的新片」（`subscriptions` API，`scripts/youtube_weekly_scan.py`）是另一用途，需明確要求。上游盤點流程見 `~/knowledge-base/000-weekly-routines.md`。
+週報「本週 YouTube 新增影片」預設指 **AgentCrew Academy 自家上架**（`playlistItems` API 抓 uploads playlist）。「訂閱頻道的新片」（`subscriptions` API，`scripts/youtube_weekly_scan.py`）是另一用途，需明確要求。上游盤點流程見 `~/knowledge-base/000-routines.md`。
