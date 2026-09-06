@@ -15,6 +15,7 @@ dirs:
   - {path: ".claude/checklists/*.md", naming: kebab}
 exempt:
   orphans: ["src/data/blog/**", "src/pages/**"]
-  duplicates: ["src/data/blog/**"]
+  duplicates: ["src/data/blog/**", ".codex/**"]
   refs: ["src/data/blog/**", ".claude/specs/**", ".claude/templates/**"]
+  paths: ["scripts/classified_posts.json"]   # gitignored runtime output of scripts/classify_posts.py
 checks: {orphans: true, dangling: warn, duplicates: true}
