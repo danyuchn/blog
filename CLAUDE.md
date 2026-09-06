@@ -1,10 +1,14 @@
 # CLAUDE.md
 
+> 知識庫主檔：~/knowledge-base/pillars/ai-consulting.md（blog 歸品牌建設線；週例行「Blog 素材決策」在 000-routines.md）
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
 Astro 6 blog based on AstroPaper template. Bilingual (EN/ZH) content, deployed to GitHub Pages at `https://danyuchn.github.io/blog`.
+
+AGENTS.md 是 symlink → CLAUDE.md（供 Codex 讀取）；禁手動複製快照，斷鏈重建：`ln -s CLAUDE.md AGENTS.md`。
 
 ## Commands
 
@@ -41,7 +45,9 @@ Required frontmatter: `title`, `pubDatetime`, `description`, `slug`. Optional: `
 
 ## Content Workflow
 
-入口 `.claude/content-workflow.md`（文件地圖 + 社群匯入 7 步驟 + fan-out 協議）。規格在 `.claude/specs/`、起手模板在 `.claude/templates/`、週報清單在 `.claude/checklists/weekly-roundup.md`。
+入口 `.claude/content-workflow.md`（文件地圖 + 社群匯入 7 步驟 + fan-out 協議）。規格在 `.claude/specs/`（article-spec / micro-notes-spec / tags 白名單）、起手模板在 `.claude/templates/`、週報清單在 `.claude/checklists/weekly-roundup.md`。
+
+文檔結構的機器規格在 `.doc-structure.yaml`（`~/.claude/scripts/doc-structure-lint.py` 於 session 開始印摘要、收工時擋 ERROR；人讀的規則仍在 content-workflow.md 與 specs/）。
 
 ## Deployment
 
