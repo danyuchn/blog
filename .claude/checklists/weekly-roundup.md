@@ -1,7 +1,7 @@
 # 週報執行清單（blog 端）
 
 範圍：**社群匯出素材到手之後 → 等待使用者 commit 指令為止**。
-上游步驟（素材盤點四來源、YouTube 掃描時機、匯出申請）屬 `~/knowledge-base/000-weekly-routines.md`，不在本清單重複——knowledge-base 未掛載時提醒使用者。
+上游步驟（素材盤點四來源、YouTube 掃描時機、匯出申請）屬 `~/knowledge-base/000-routines.md`，不在本清單重複——knowledge-base 未掛載時提醒使用者。
 
 每週照順序打勾。每步附「怎麼驗證」與「失敗時對策」。
 

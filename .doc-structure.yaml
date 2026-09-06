@@ -1,0 +1,20 @@
+# .doc-structure.yaml — the machine-checkable half of this repo's doc spec.
+# Human rules stay in `spec:` (doc map) and .claude/specs/article-spec.md (articles).
+# Checked by ~/.claude/scripts/doc-structure-lint.py: SessionStart prints a summary, Stop blocks on ERROR.
+version: 1
+spec: .claude/content-workflow.md
+kb_master: pillars/ai-consulting.md
+docs:
+  include: ["**/*.md"]
+  exclude: ["node_modules/**", "dist/**", "public/**", ".claude/voice/**"]
+dirs:
+  - {path: "src/data/blog/en/*.md", naming: kebab, dated: none}
+  - {path: "src/data/blog/zh/*.md", naming: kebab, dated: none}
+  - {path: ".claude/specs/*.md", naming: kebab}
+  - {path: ".claude/templates/*.md", naming: kebab}
+  - {path: ".claude/checklists/*.md", naming: kebab}
+exempt:
+  orphans: ["src/data/blog/**", "src/pages/**"]
+  duplicates: ["src/data/blog/**"]
+  refs: ["src/data/blog/**", ".claude/specs/**", ".claude/templates/**"]
+checks: {orphans: true, dangling: warn, duplicates: true}
