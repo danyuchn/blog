@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-13T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: "Your Own Machine Is the Attack Surface: Leftover Credentials, Permission Flags, Untrusted Input"
 slug: en/your-machine-is-the-attack-surface
 featured: false
@@ -67,6 +67,10 @@ Would you really let an agent register an API key itself and leave that key sitt
 
 Also: next up, scan the company website pages daily to see whether a manager has hardcoded an API key into the front end.
 
+## Folded In: Every External File Goes to the Sandbox First
+
+When I have Codex read my mail, the habit I set for it is that every external file gets isolated in a sandbox first. So when I see other people getting burned by something attached to an email, nothing happened on my end.
+
 <!--
 2026-08-28 W36 micro-note merge: the live notes "Don't Let the Agent Sign Up for Its Own API Key" and "Scan Your Own Company's Front End Every Day" were folded in verbatim; both are about API key exposure and neither is enough for its own post. Removed from the zh/en live files. Added non-original text is limited to the subheading (framing) and "Also:" (connective).
 -->
@@ -87,4 +91,6 @@ Also: next up, scan the company website pages daily to see whether a manager has
 12. 「I wrote earlier about capability boundaries and de-identifying private data, which was about what shouldn't go out. This one points the other way: even if you send nothing out, the residue, the flags, and the input are still sitting on your machine.」 — 類型：銜接（站內連結）
 13. 「Whether the model says the wrong thing isn't up to me. These three are.」 — 類型：框架句（收尾）
 14. 「## One more: don't brute-force sites that need a login」(H2) and the paragraph merges inside it — 類型：小標＋改寫（本節內容原為獨立文章 dont-scrape-login-sites，合併時只做段落併合與刪去原文的兩個 H2 小標，字句未改；英文版另刪去括號補述「(the banhammer comes down)」以配合段落併合）
+
+2026-09-11 W38 micro-note merge: the live note "Every External File Goes to the Sandbox First" was folded in verbatim and removed from the zh/en live file. It is the practice version of the third layer above. Added non-source sentence: the heading (framing).
 -->

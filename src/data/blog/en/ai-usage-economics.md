@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: 'The Usage Economics of AI: Quotas, Plans, Tokenizers, and That Anesthetic Bill'
 slug: en/ai-usage-economics
 featured: false
@@ -209,6 +209,16 @@ The tool is good. You should know what you are buying.
 
 Must have shipped a few days ago: it finally auto-resumes once your quota resets. Genuinely great. What I actually want more, though, is for caches older than an hour to survive.
 
+## Folded In: Four Notes on Quota and Pricing
+
+`/low-priority` lets you keep going after your five-hour quota is maxed out, just slower, since it runs on off-peak compute. It still eats into your weekly quota. I learned that one from Reddit.
+
+Over on Codex, Tibo's heads-up about a back-to-back reset let me accidentally measure how the $20 plan's 5-hour window relates to its 7-day window: the 7-day quota works out to roughly five 5-hour rounds, plus a bit more. If you want to seriously max out your quota, going hard from the moment it's announced is the move.
+
+On the pay-as-you-go side, GPT-5.6-Luna is cheap to the point of absurdity. I'm running it in two places: a browser extension like immersive translation, one-click translating 50-80 foreign-language pages a day; and a voice-input tool like Typeless called "Say It," used 100-150 times a day to clean up text. After 10 days, daily spend is under $0.01, and the cost dashboard just shows 0.0.
+
+Trivia pointing the other way: the most expensive model by API pricing right now isn't Claude Fable, it's GPT-o1-pro, at 150/600, about 12-15x Fable/Mythos (10/50). Released March 2025, currently deprecated but not yet retired.
+
 <!--
 2026-08-28 W36 micro-note merge: the archive note "Auto-Resume After the Quota Resets" was folded in verbatim; it belongs to this post's quota-rules thread. Removed from the zh/en archive. The only added non-original sentence is the subheading (framing).
 -->
@@ -240,4 +250,6 @@ No new claims, numbers or criteria were introduced. Duplicated material removed:
 - Openers: the guide's two-paragraph opener survives as "When the Quota Runs Out, the Work Stops There"; the value post's steak question survives; the economics post's "Over the past two weeks I have accumulated..." opener was dropped because it no longer holds after merging.
 - The three `---` dividers in ai-subscription-value were removed in favor of H2 sections.
 Nothing else from the three sources was dropped; every other paragraph moved over intact.
+
+2026-09-11 W38 micro-note merge: four live notes (`/low-priority`, Codex 5h vs 7d windows, GPT-5.6-Luna API spend, o1-pro being the priciest) folded in verbatim as one section and removed from the zh/en live file. Added non-source sentences: the heading (framing) and two bridging phrases.
 -->

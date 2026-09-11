@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-04T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: "GPT-image-2 Wants Fewer Constraints — Plus a Consistency Drill"
 slug: en/gpt-image-2-prompting
 featured: false
@@ -52,6 +52,28 @@ This is why Canva still matters in this era. It lets you put "AI-generated mater
 Loose at the generation stage to leverage GPT-image-2's strength. Tight at the layout stage to lock down consistency with Canva.
 
 Detailed walkthrough video: <https://www.youtube.com/watch?v=hzrBXjgCLG8>
+
+## Postscript: Ten Images in One Shot
+
+After GPT image 2.5 shipped in September 2026, the blurry-background problem is gone. Send the output through magic layer and you can edit it much more freely.
+
+The bigger change is coherence when it generates several images at once — both the content and the look hold together far better. My prompt was one sentence:
+
+> Draw the life of the Buddha in 10 images. Use a realistic style.
+
+Five of the ten:
+
+![Birth](/blog/assets/posts/gpt-image-2-prompting/buddha-01-birth.jpg)
+
+![Palace life](/blog/assets/posts/gpt-image-2-prompting/buddha-02-palace.jpg)
+
+![What he saw outside the city](/blog/assets/posts/gpt-image-2-prompting/buddha-03-suffering.jpg)
+
+![Leaving at night](/blog/assets/posts/gpt-image-2-prompting/buddha-04-departure.jpg)
+
+![Ascetic practice](/blog/assets/posts/gpt-image-2-prompting/buddha-05-ascetic.jpg)
+
+This lines up with the "fewer constraints is better" section above: a one-sentence prompt, and across ten images the figures, clothing and lighting all match.
 
 ## Postscript: That Viral Doodle Prompt
 

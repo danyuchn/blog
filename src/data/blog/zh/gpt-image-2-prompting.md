@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-04T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: "GPT-image-2 越少約束越好，加上一個一致性練習"
 slug: zh/gpt-image-2-prompting
 featured: false
@@ -52,6 +52,28 @@ ChatGPT 最新的生圖模型大家都在玩，能力的確比 Google 的生圖�
 生圖階段越鬆越好，發揮 GPT-image-2 的長處；版面階段越緊越好，用 Canva 控制一致性。
 
 詳細的教學影片在這：<https://www.youtube.com/watch?v=hzrBXjgCLG8>
+
+## 補記：一次十張的連貫性
+
+2026-09 的 GPT image 2.5 出來之後，原本的模糊背景問題解決了，做出來的圖只要再送去 magic layer，就可以更自由地編輯。
+
+更明顯的是一次產出多圖時，內容跟視覺的連貫性都變好非常多。我用的 prompt 只有一句：
+
+> 用 10 張圖片畫出佛陀一生的經歷。風格要用寫實風格。
+
+十張裡的其中五張：
+
+![出生](/blog/assets/posts/gpt-image-2-prompting/buddha-01-birth.jpg)
+
+![宮中生活](/blog/assets/posts/gpt-image-2-prompting/buddha-02-palace.jpg)
+
+![出城所見](/blog/assets/posts/gpt-image-2-prompting/buddha-03-suffering.jpg)
+
+![夜半離城](/blog/assets/posts/gpt-image-2-prompting/buddha-04-departure.jpg)
+
+![苦行](/blog/assets/posts/gpt-image-2-prompting/buddha-05-ascetic.jpg)
+
+這剛好呼應上面那段「越少約束越好」——一句話的 prompt，十張圖的人物、服裝、光線都對得起來。
 
 ## 補記：最流行的那條塗鴉 prompt
 

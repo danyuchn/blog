@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-09-04T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -26,18 +26,6 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Claude Import Mode for GPT Memories**
 
 > Claude has an import mode, right? You can extract GPT's knowledge and memories about you, then import them into Claude.
-
-**How Cheap GPT-5.6-Luna Is Over the API**
-
-> I'm running it in two places: a browser extension like immersive translation, one-click translating 50-80 foreign-language pages a day; and a voice-input tool like Typeless called "Say It," used 100-150 times a day to clean up text. After 10 days, daily spend is under $0.01, and the cost dashboard just shows 0.0.
-
-**AI Trivia: The Priciest Model Isn't Fable**
-
-> The most expensive model by API pricing right now isn't Claude Fable — it's GPT-o1-pro, at 150/600, about 12-15x Fable/Mythos (10/50). Released March 2025, currently deprecated but not yet retired.
-
-**How Codex's 5-Hour and 7-Day Windows Relate**
-
-> Tibo's heads-up about a back-to-back reset let me accidentally measure the relationship between the $20 plan's 5-hour window and its 7-day window: the 7-day quota works out to roughly five 5-hour rounds, plus a bit more. If you want to seriously max out your quota, going hard from the moment it's announced is the move.
 
 ## Dev & Security Pitfalls
 
@@ -79,17 +67,17 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Traditional mathematicians moved it 0.8% over 30 years. This run moved it 25.6%. The funniest part is what the write-up says about the prompting: there was no domain content in it at all, just continuous encouragement, an AI cheering on an AI. Claude spent a day and a half coordinating roughly 60 subagents, running 2,400 shell commands and reviewing each other's work, while the human input was mostly variations on "keep at it" or "believe in yourself".
 
-**Connectors Can Finally Send Mail**
+**The Cure for Garbage Admin Panels**
 
-> Several of my clients were stuck wanting a cloud schedule that mails them a daily market brief or writes to a Google Sheet. Cloud servers only accept the official connector, and until now the most you could do was save a draft or create a brand-new file in Drive. The official MCP now sends mail and updates existing files.
+> The cure for Meta's back office and the LINE Official Account back office is Codex's browser control. Mom, I will never get lost in these garbage admin panels again!
 
-**Start With a Harness That Works Out of the Box**
+**A Cron Job Watching the Radar**
 
-> Just go with codex. Unless you really understand how hermes works under the hood, the codex or claude code harness is the most stable thing you can run out of the box right now.
+> During rainy season I have Codex watch the Bangkok city weather bureau's page, which posts a radar echo image every 15 to 20 minutes. The moment Codex judges there's a 50%+ chance of rain within the hour, it pings me and I run to the balcony to pull the laundry in. No need to wait for an official API.
 
-**Claude Code Trivia: `/low-priority`**
+**Four Moves for When You Leave Your Desk**
 
-> Learned this from Reddit: `/low-priority` lets you keep going after your five-hour quota is maxed out, just slower, since it runs on off-peak compute. It still eats into your weekly quota.
+> 1. Send out more subagents. 2. Use the history-find skill to dig up past sessions easily. 3. Set up a /loop 30m tick to poll while you're away from the desk. 4. /status shows you what's burning tokens, plus the API cost and token count per session.
 
 ## AI Industry & Business Observations
 
@@ -97,17 +85,13 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Search for Claude/Anthropic on Xiaohongshu (China's Instagram-like social platform) and you'll find it's one of the few companies that once explicitly "insulted China" but came out unscathed. Now all you see is "it's so good / how to use a VPN to access it." Strength is the ultimate argument.
 
-**Claude Moves Wall Street**
-
-> Claude is the one AI that can single-handedly shake the stock prices of major software companies on Wall Street. Enough said.
-
-**Karpathy — The Ultimate Free Agent**
-
-> Andrej Karpathy announced he's joining Anthropic. OpenAI to Tesla to OpenAI (return) to departure to Anthropic. Probably the most prolific team-switcher in AI. Then again, top talent gravitating toward where they see the most potential is itself a market signal.
-
 **The OpenAI Line That Gives Me Chills**
 
 > After Fable 5.1 launched, OpenAI put out a post teasing Astra and its safety measures, and it said: "while Astra was not involved in the Hugging Face incident." Wait. Which version was involved, then? The next one?
+
+**People Have Come to Hate the AI Hook**
+
+> No idea whether the model understands Taiwan, but I know for sure you don't understand Threads users. People have come to hate this AI-written hook: "Will you ..., or will you ...?"
 
 ## Life & Miscellany
 

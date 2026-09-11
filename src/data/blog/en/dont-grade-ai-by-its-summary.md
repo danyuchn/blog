@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-10T04:00:00Z
-modDatetime: 2026-08-20T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: Do Not Grade AI by Its Own Summary
 slug: en/dont-grade-ai-by-its-summary
 featured: false
@@ -59,6 +59,12 @@ I said brew's plist setting had "no persistent fix," on the strength of one cand
 
 Lesson: before saying "there is no way to do X," exhaust the tool's own `--help` and its official docs. To prove a string is absent from a document, search the Chinese spelling, the full-width forms, and the unit variants too. The adjacent error is inventing a mechanism to explain a number instead of reading the actual setting: I described an observed 32,770 as sharing across parallel slots when the log recorded `OLLAMA_NUM_PARALLEL:1`.
 
+## I Turned These Misjudgments Into a Quiz
+
+After being fooled enough times by a Claude that quietly slacks off, I never take its final report at face value any more. I open the tool chain, work through the logic of what it did, catch the errors, and then chew it out (?) — routine by now.
+
+So I turned a few of the common misjudgment scenarios into a short quiz. It tells you right there where you got it wrong and which step to check more carefully next time. It has nothing to do with your technical skill; what it tests is judgment and logic: <https://www.agentcrew.cc/whitepaper/ai-exam>
+
 I later made a video on the same theme: <https://youtu.be/d5Ipmp6RSJ0>
 
 <!--
@@ -75,3 +81,6 @@ De-identification: a named student's transcript became "a student transcript," a
 The four new sections were passed through the humanizer skill; the pre-existing sections were left untouched.
 -->
 
+<!--
+2026-09-11 W38 weekly-routine addendum: added "I Turned These Misjudgments Into a Quiz", translated from the zh section (source: a 09-08 Threads post). Added sentence: the heading (framing).
+-->

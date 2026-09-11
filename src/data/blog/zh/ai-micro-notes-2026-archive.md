@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-09-04T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: AI 碎念日記 2026：時間軸存檔
 slug: zh/ai-micro-notes-2026-archive
 featured: false
@@ -226,3 +226,41 @@ description: "2026 年較零碎、時效性的 AI 碎念，依時間排列。精
 **Fable 5.1 在 Amazon Bedrock 上現蹤**
 
 > 推特上大家都在轉發的圖：Fable 5.1 已經出現在 Amazon Bedrock 上，從以前的 400 identifier not valid 變成 404 model not found。根據過去經驗，代表幾天內就會發布。
+
+## 2026 年 9 月中旬（W38）
+
+**我現在對 Fable 的態度**
+
+> 1. 先極致奉承，當個誇誇人 2. 再趁機偷師，讓他能夠寫進 harness 教教其他爛模型。
+
+**Codex 的防禦式寫作**
+
+> 好好笑，這種防禦式寫作我看 Codex 的嫌疑很大：「好的，我會誠實揭露我的睡眠狀態。我會分清楚『閉目養神』、『淺眠』與『深眠』，不會把三種狀態合併計算。我也會用 SHA-256 驗證睡眠時長與夢境內容一致。」
+
+**GPT 生圖臭 Claude 特別優秀**
+
+> 好好笑，GPT 生圖模型做這種臭 Claude 的內容，好像表現特別優秀：「你是對的，而且情況比我想得更嚴重⋯⋯」
+
+**每八次就有一次在罵他**
+
+> 好好笑，剛剛統計我過去一個月跟 Claude 的對話，每 8 次就有一次是在罵他。
+
+**台灣人三愛買**
+
+> 不要懷疑，台灣人三愛買：買課、買保險、買日本電器。我自己幾萬的課程到現在都有快一千位學員了。
+
+**買完會員起價比非會員貴**
+
+> 冷知識：買完會員起價比非會員還貴。不知道是跟哪個老大哥學的。
+
+**Connector 終於能寄信了**
+
+> 之前好幾位客戶就是卡在想設置雲端排程寄每日市場週報、或寫入 Google Sheet 表單——雲端 server 只吃官方 connector，以前最多只能寫草稿或在 Drive 創立全新檔案。現在官方 MCP 開放了寄送信件跟更新現有檔案。
+
+**Karpathy 三姓家臣**
+
+> Andrej Karpathy 宣布加入 Anthropic。OpenAI → Tesla → OpenAI（回鍋）→ 離開 → Anthropic。這應該是 AI 圈最強的三姓家臣了。不過換個角度看，頂尖人才往他認為最有潛力的地方跑，本身就是一種市場訊號。
+
+**Claude 撼動華爾街**
+
+> Claude 是那個唯一可以撼動華爾街各大軟體股股價的 AI。你說呢。

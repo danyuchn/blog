@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-15T07:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: "Obsidian 為什麼是個特別的存在——我為什麼到現在才拍這部影片"
 slug: zh/obsidian-knowledge-base-personal
 featured: false
@@ -86,9 +87,17 @@ Obsidian 的解法是：我把所有東西寫成 markdown，存在本機，用 w
 
 我接下來還會繼續用 Obsidian。也歡迎你從第一個 daily note 開始。
 
+## 我最近最喜歡的一條 prompt
+
+如果你已經把你的生涯方方面面放入了知識庫，那就來試試我最近最喜歡的 Prompt：消融實驗。
+
+拿掉某個模組，看看結果會不會有影響。如果無影響就代表該模組可能是冗餘的。
+
 > 影片：<https://youtu.be/EhMKfG1dvnI>
 
 <!--
 自首清單
 1. 「在講資料夾之前先說個前提：ob 就是一個閱讀器而已，重點是知識庫的結構。」 — 類型：併入碎念（Obsidian 只是一個閱讀器，2026-08-14 週報併入）
+
+2026-09-11 W38 週例行補記：新增「我最近最喜歡的一條 prompt」一節，素材為 09-08 Threads 貼文（逐字）。新增句：小標（框架句）。
 -->

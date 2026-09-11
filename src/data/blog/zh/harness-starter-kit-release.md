@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: 我每天在用的 Skill 跟 Hook，開源了
 slug: zh/harness-starter-kit-release
 featured: false
@@ -38,6 +39,10 @@ Skill 的部分有五個：
 
 ![Claude Code 輸入框截圖，一句話裡串起五個 skill：請派 fable subagent 用 /first-principles 思考目前計劃的合理性，思考完後用 /explain 解釋，審核通過後 /checkpoint 紀錄進度並用 /neat-freak 審查跨檔內容，最後用 /polite 寫一封訊息通知甲方](/blog/assets/posts/harness-starter-kit-release/1-skills-demo.jpg)
 
+## 併入：先用開箱即用的 harness
+
+建議直接 codex。除非你非常瞭解 hermes 的原理跟架構，不然 codex 或 claude code 的 harness 目前來說是開箱即用最穩定的。
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「裡面的 hook 有兩個。第一個是 claim-guard hook：」 — 類型：銜接（原文為「裡面有：1. claim-guard hook：」，改成散文銜接）
@@ -45,4 +50,6 @@ Skill 的部分有五個：
 3. 「Skill 的部分有五個：」 — 類型：銜接（原貼文第一則與第二則之間的接縫，原文無此句）
 4. 「其中 2、4 是魔改開源的，有附上 LICENSE。」 — 類型：改寫（原文為括號「（2, 4是魔改開源的，有附上LICENSE）」，去括號化為正文句）
 註：原貼文第一則的 hook 清單在第 2 點後被截斷、第 3 點沒說完，未替作者補寫。第三則（YouTube／部落格／Threads 的 CTA）依 article-spec 改寫原則第 4 條刪除。
+
+2026-09-11 W38 碎念併入：live 碎念「先用開箱即用的 harness」逐字併入，已從 zh/en live 檔刪除。新增非原文句子：小標（框架句）。
 -->
