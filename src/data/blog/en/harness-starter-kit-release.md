@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: The Skills and Hooks I Use Every Day, Now Open Source
 slug: en/harness-starter-kit-release
 featured: false
@@ -38,6 +39,10 @@ Here's what it looks like in use:
 
 ![Screenshot of the Claude Code input box chaining five skills in one sentence: send a fable subagent to use /first-principles on whether the current plan makes sense, then /explain it to me, and once I approve, /checkpoint the progress and /neat-freak for out-of-sync cross-file content, then use /polite to write a message notifying the client](/blog/assets/posts/harness-starter-kit-release/1-skills-demo.jpg)
 
+## Folded In: Start With a Harness That Works Out of the Box
+
+Just go with codex. Unless you really understand how hermes works under the hood, the codex or claude code harness is the most stable thing you can run out of the box right now.
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「Two hooks inside. First, claim-guard.」 — 類型：銜接（原文為「裡面有：1. claim-guard hook：」，改成散文銜接）
@@ -45,4 +50,6 @@ Here's what it looks like in use:
 3. 「Then there are five skills:」 — 類型：銜接（原貼文第一則與第二則之間的接縫，原文無此句）
 4. 「2 and 4 are heavy mods of open source projects, LICENSE included.」 — 類型：改寫（原文為括號「（2, 4是魔改開源的，有附上LICENSE）」，去括號化為正文句）
 註：原貼文第一則的 hook 清單在第 2 點後被截斷、第 3 點沒說完，未替作者補寫。第三則（YouTube／部落格／Threads 的 CTA）依 article-spec 改寫原則第 4 條刪除。
+
+2026-09-11 W38 micro-note merge: the live note "Start With a Harness That Works Out of the Box" was folded in verbatim and removed from the zh/en live file. Added non-source sentence: the heading (framing).
 -->

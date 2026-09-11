@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-09-04T04:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: "AI Micro-Notes 2026: Chronological Archive"
 slug: en/ai-micro-notes-2026-archive
 featured: false
@@ -226,3 +226,41 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Fable 5.1 Spotted on Amazon Bedrock**
 
 > A screenshot everyone's reposting on X: Fable 5.1 has shown up on Amazon Bedrock, the error going from 400 identifier not valid to 404 model not found. Based on how this has gone before, that means release is days away.
+
+## Mid-September 2026 (W38)
+
+**How I Treat Fable These Days**
+
+> 1. First, flatter it to death, be the hype man. 2. Then steal the technique, so it can write it into the harness and teach the other lousy models.
+
+**Codex's Defensive Writing**
+
+> This is hilarious. This kind of defensive writing looks very much like Codex: "Understood, I will honestly disclose my sleep state. I will distinguish between 'resting with eyes closed,' 'light sleep' and 'deep sleep' and will not merge the three. I will also use SHA-256 to verify that sleep duration matches dream content."
+
+**GPT's Image Model Roasts Claude Especially Well**
+
+> Hilarious. GPT's image model seems to perform especially well when it's making fun of Claude: "You're right, and the situation is worse than I thought..."
+
+**One in Every Eight Is Me Yelling at It**
+
+> Funny thing. I just counted my conversations with Claude over the past month: one in every eight is me yelling at it.
+
+**Three Things Taiwanese People Love to Buy**
+
+> No doubt about it, Taiwanese people love buying three things: courses, insurance, and Japanese appliances. My own courses, priced in the tens of thousands, are up to nearly a thousand students.
+
+**Buying the Membership Raises the Starting Price**
+
+> Fun fact: after you buy the membership, the starting price is higher than for non-members. Not sure which big brother they learned that from.
+
+**Connectors Can Finally Send Mail**
+
+> Several of my clients were stuck wanting a cloud schedule that mails them a daily market brief or writes to a Google Sheet. Cloud servers only accept the official connector, and until now the most you could do was save a draft or create a brand-new file in Drive. The official MCP now sends mail and updates existing files.
+
+**Karpathy — The Ultimate Free Agent**
+
+> Andrej Karpathy announced he's joining Anthropic. OpenAI to Tesla to OpenAI (return) to departure to Anthropic. Probably the most prolific team-switcher in AI. Then again, top talent gravitating toward where they see the most potential is itself a market signal.
+
+**Claude Moves Wall Street**
+
+> Claude is the one AI that can single-handedly shake the stock prices of major software companies on Wall Street. Enough said.

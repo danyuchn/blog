@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-15T07:00:00Z
+modDatetime: 2026-09-11T04:00:00Z
 title: "Why Obsidian is something special to me, and why I only made this video now"
 slug: en/obsidian-knowledge-base-personal
 featured: false
@@ -86,9 +87,17 @@ Putting them head to head is like asking "should I buy sneakers or dress shoes?"
 
 I'll keep using Obsidian. And I'd love to see you start from your first daily note too.
 
+## My Favorite Prompt Right Now
+
+If you have already put every side of your career into the knowledge base, try my favorite prompt at the moment: an ablation study.
+
+Take out one module and see whether the result changes. If it doesn't, that module may be redundant.
+
 > Video: <https://youtu.be/EhMKfG1dvnI>
 
 <!--
 Self-report list
 1. "One thing to get out of the way before the folder list: Obsidian is just a reader. What matters is how the knowledge base is structured." — 類型：併入碎念（Obsidian 只是一個閱讀器 / Obsidian Is Just a Reader，2026-08-14 週報併入）
+
+2026-09-11 W38 weekly-routine addendum: added "My Favorite Prompt Right Now", translated from the zh section (source: a 09-08 Threads post). Added sentence: the heading (framing).
 -->
