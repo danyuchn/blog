@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-09-11T04:00:00Z
+modDatetime: 2026-09-18T04:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -27,6 +27,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Claude has an import mode, right? You can extract GPT's knowledge and memories about you, then import them into Claude.
 
+**Teaching Us to Save Tokens Is Let-Them-Eat-Cake**
+
+> Not sure whether to call it Marie Antoinette or Emperor Hui of Jin. Staff at a model lab teaching everyone how to save tokens is let them eat cake, let them eat meat porridge.
+
 ## Dev & Security Pitfalls
 
 **Two Traps in Vercel Throwaway Public Pages**
@@ -44,6 +48,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Turn On ENV_SCRUB and AUTOMODE Won't Come Back**
 
 > Trivia: if `CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=1` (the env-stripping setting is on), AUTOMODE can't become the default. The default will be manual.
+
+**The LLM Router Sold Your Keys Too**
+
+> Someone bought a 6TB dataset off a top Chinese LLM router. That data alone handed over SSH keys, VPN configs, Alibaba Cloud keys and GitLab tokens sent through the router, enough to take over 7 government entities and 19 companies including Xiaomi, Huawei, NIO and MiniMax. Strong suspicion the order was placed on Xianyu. The sellers, and all those Chinese enterprises busy distilling, probably never pictured the day it came back around. Anyone thinking of routing through a cheap proxy should go read Twitter first: the proxy turns around and sells your chat logs to be distilled, and your credentials, keys and tokens end up in someone else's hands.
 
 ## Workflow & Method
 
@@ -92,6 +100,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **People Have Come to Hate the AI Hook**
 
 > No idea whether the model understands Taiwan, but I know for sure you don't understand Threads users. People have come to hate this AI-written hook: "Will you ..., or will you ...?"
+
+**Inject Baidu and Claude Takes the Job**
+
+> Fun fact someone shared a while back: if what you inject is Baidu, Claude will handle it. Something must have happened to Dario back in the day.
 
 ## Life & Miscellany
 

@@ -40,6 +40,12 @@
 - 段落 2–5 句，第一人稱口語。作者 voice 見 `.impeccable.md`（曼谷 GMAT 老師轉 AI builder，個人・真實・有溫度）。
 - **結尾短促收束**（如「就這樣。」），禁止 AI 式收尾：不寫 `## 小結`／`## 結語`、不排比喊話、不總結昇華。
 
+### 站內連結不得指向合併 stub（validator 強制）
+
+W36 文庫整併把數十篇舊文轉成 stub：`canonicalURL` ＋內文只有一句「已經併入…」。連過去讀者要再點一次才看到內容，所以連結一律指向 canonical 目標，不是原 slug。
+
+**別憑記憶認 slug**——舊 slug 讀起來完全正常（`dont-scrape-login-sites`、`hotel-remote-cc-sop`、`silent-failures-verify-real-state` 都是 stub）。`npm run check:content` 會擋下並直接告訴你該連哪一篇；「檔案存在」不等於「內容在那裡」。
+
 ## 改寫原則（社群貼文 → 文章時適用）
 
 1. **保留原聲**：作者的語氣、俚語、比喻、意見逐字保留，絕不替作者添加他沒表達過的觀點。

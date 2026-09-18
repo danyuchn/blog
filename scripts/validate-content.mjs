@@ -84,6 +84,8 @@ for (const [a, b] of [["zh", "en"], ["en", "zh"]]) {
 
 // 2. per-file frontmatter + image refs
 const microEntryCounts = {};
+const bodies = {}; // "lang/basename" -> body, for the internal-link pass below
+const stubs = {}; // "lang/basename" -> canonical slug it was merged into
 for (const lang of LANGS) {
   for (const fn of files[lang]) {
     const rel = `src/data/blog/${lang}/${fn}`;
@@ -126,6 +128,13 @@ for (const lang of LANGS) {
     if (MICRO_NOTES.includes(fn)) {
       microEntryCounts[`${lang}/${fn}`] = (body.match(/^\*\*.+\*\*\s*$/gm) ?? []).length;
     }
+
+    // merge stubs (see .claude/specs/article-spec.md): canonicalURL + a single "merged into" line
+    bodies[`${lang}/${basename}`] = body;
+    if (data.canonicalURL && /已經併入|has been merged into/.test(body)) {
+      const target = String(data.canonicalURL).match(/\/posts\/(zh|en)\/([a-z0-9-]+)/);
+      stubs[`${lang}/${basename}`] = target ? `${target[1]}/${target[2]}` : null;
+    }
   }
 }
 
@@ -142,7 +151,30 @@ for (const fn of MICRO_NOTES) {
   }
 }
 
-// 4. dual-copy workflow doc must stay byte-identical
+// 4. internal post links must resolve, and must not point at a merge stub
+// (a stub only renders one "merged into" line, so readers have to click twice)
+for (const [key, body] of Object.entries(bodies)) {
+  if (key in stubs) continue; // a stub linking to its own canonical target is correct
+  const [lang, basename] = key.split("/");
+  const rel = `src/data/blog/${lang}/${basename}.md`;
+  const seen = new Set();
+  for (const m of body.matchAll(/\/blog\/posts\/(zh|en)\/([a-z0-9-]+)/g)) {
+    const target = `${m[1]}/${m[2]}`;
+    if (seen.has(target)) continue;
+    seen.add(target);
+    if (!fs.existsSync(path.join(BLOG, m[1], `${m[2]}.md`))) {
+      err(rel, `internal link /blog/posts/${target} has no post at src/data/blog/${target}.md`);
+    } else if (target in stubs) {
+      const canonical = stubs[target];
+      err(
+        rel,
+        `internal link /blog/posts/${target} points at a merge stub — link to ${canonical ? `/blog/posts/${canonical}` : "its canonicalURL target"} instead`
+      );
+    }
+  }
+}
+
+// 5. dual-copy workflow doc must stay byte-identical
 {
   const a = path.join(ROOT, ".claude/content-workflow.md");
   const b = path.join(ROOT, ".codex/content-workflow.md");

@@ -1,0 +1,28 @@
+---
+author: Dustin Yuchen Teng
+pubDatetime: 2026-09-14T04:00:00Z
+title: AI 訂閱該怎麼分配：Fable 買判斷力，Luna Max 賺性價比
+slug: zh/subscription-allocation-fable-and-luna-max
+featured: false
+draft: false
+tags:
+  - subscription
+  - model-comparison
+  - ai-tools
+description: '回覆「該訂哪一家」的結論：Claude 訂 100 美元是為了 Fable 的架構判斷，Codex 20 美元夠用，Luna Max 做瀏覽器操作最划算，賭 Tibo 重置。'
+---
+
+有人在 Threads 上問我，這幾家 AI 訂閱該怎麼分配預算。我心裡其實已經有一套判斷，之前寫過[用量經濟學的框架](/blog/posts/zh/ai-usage-economics)，這篇算是把框架收斂到「錢實際該花在哪」的具體結論版。
+
+先講 Claude。同樣的方案下，額度用起來，我個人感覺相對耐用——前提是沒有被重置。如果要訂 Claude，我的建議很簡單：直接訂 100 美元的方案。理由不是額度大小，而是他們家最大的優勢在 Fable。Fable 提供的架構策略、意圖對齊跟洞見，到目前為止，我還沒看到 GPT 家有哪一個模型比得上。
+
+再講 Codex 這邊。20 美元就夠用，不用衝更高的方案。裡面的 Luna Max，拿來做瀏覽器操作、電腦操作，是我目前用過性價比最高的組合。偶爾我會開 Sol 做對抗式審查，20 美元也很夠花；真的不夠花的話，就賭一把 Tibo 重置，賭到了，又是美好的一天。
+
+<!--
+新增非原文句子清單（忠實度自首）：
+1. 「有人在 Threads 上問我，這幾家 AI 訂閱該怎麼分配預算。」 — 類型：銜接（補上原素材的發話情境）
+2. 「我心裡其實已經有一套判斷，之前寫過用量經濟學的框架，這篇算是把框架收斂到「錢實際該花在哪」的具體結論版。」 — 類型：框架句（依團隊指示唯一允許的框架連結句）
+3. 「先講 Claude。」／「再講 Codex 這邊。」 — 類型：銜接（分段轉場）
+4. （已由主對話刪除）「重置了額度規劃就得重算。」 — 補了原文沒有的推論
+5. （已由主對話刪除）結尾排比收束句 — AI 補述
+-->
