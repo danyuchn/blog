@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
-modDatetime: 2026-09-11T04:00:00Z
+modDatetime: 2026-09-18T04:00:00Z
 title: The Skills and Hooks I Use Every Day, Now Open Source
 slug: en/harness-starter-kit-release
 featured: false
@@ -20,6 +20,8 @@ But I do have a few Skills and Hooks I think you'll like, because I use them eve
 [harness-starter-kit](https://github.com/agentcrew-academy/harness-starter-kit)
 
 Just paste the link into your Agent and it'll walk you through it and install everything for you.
+
+I later recorded a video about it: [New to Claude Code and Codex and can't get them to listen? I'm packaging up everything I've worked out with mine, for free | EP.37](https://youtu.be/ld2iiMqGUxM).
 
 Two hooks inside. First, claim-guard. This one came from noticing that Claude likes to lie: says it verified when it didn't, says it searched and found nothing when it never searched. The moment the hook catches the agent making a claim like that, it goes and checks whether the tool calls actually used a verification or search command. If not, it tells the AI to show its evidence, and if it can't, back to doing the work honestly.
 

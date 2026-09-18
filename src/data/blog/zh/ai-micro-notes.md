@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-09-11T04:00:00Z
+modDatetime: 2026-09-18T04:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -27,6 +27,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 > Claude 不是有 import mode 嗎？可以讓你 extract 出 GPT 對你的認知跟記憶然後匯入 Claude。
 
+**教大家省 token 等於何不食肉糜**
+
+> 不知道要說是現代版瑪麗皇后還是晉惠帝了。模型廠商的員工教大家怎麼省 token，等於何不吃蛋糕，何不食肉糜。
+
 ## 開發・資安踩坑
 
 **Vercel 臨時公開頁的兩個坑**
@@ -44,6 +48,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **ENV_SCRUB 打開，AUTOMODE 就回不去**
 
 > 冷知識：如果 `CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=1`（變數剝離這個設定打開），AUTOMODE 就無法變成 default，default 會是 manual。
+
+**LLM 路由器把你的金鑰一起賣了**
+
+> 有人從一個頂尖的中國 LLM 路由器那裡買到 6TB 資料集，光靠那批資料就能拿到發送到路由器的 SSH 金鑰、VPN 配置、阿里雲金鑰、GitLab 令牌，接管 7 個政府實體與小米、華為、蔚來、MiniMax 這樣 19 家公司。高度懷疑是在閒魚下單的。賣家跟中國忙著蒸餾的大企業們，應該沒想過有一天會被反殺。所有想用中轉站省錢的建議都去看看推特——中轉站轉手把你的聊天記錄賣去給人蒸餾，你的憑證、金鑰、token 都到別人手裡。
 
 ## 工作流・方法論
 
@@ -92,6 +100,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **網友現在恨死 AI 文鉤子**
 
 > 模型懂不懂台灣不知道，但我知道你一定不懂脆網友。網友現在恨死這種 AI 文鉤子了：「你會⋯⋯，還是⋯⋯？」
+
+**注入百度的話 Claude 會包辦**
+
+> 冷知識，之前有網友分享：如果注入的是百度，則 Claude 會包辦。可見 Dario 當年肯定發生了什麼。
 
 ## 生活・雜感
 

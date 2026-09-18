@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
-modDatetime: 2026-09-11T04:00:00Z
+modDatetime: 2026-09-18T04:00:00Z
 title: 我每天在用的 Skill 跟 Hook，開源了
 slug: zh/harness-starter-kit-release
 featured: false
@@ -20,6 +20,8 @@ description: '把我每天都在用、不需要技術力、純邏輯導向的幾
 [harness-starter-kit](https://github.com/agentcrew-academy/harness-starter-kit)
 
 你只需要把連結貼進 Agent，他就能帶你導覽，幫你裝好。
+
+後來錄了一支影片講這件事：[剛用 Claude Code 跟 Codex 不知道怎麼讓他聽話？我把我跟它的默契都免費打包送給你！｜EP.37](https://youtu.be/ld2iiMqGUxM)。
 
 裡面的 hook 有兩個。第一個是 claim-guard hook：起因是我發現 Claude 喜歡說謊，沒驗證說驗了，沒查說查不到，這個 hook 只要偵測到 agent 有這樣聲稱，就會去檢查 tool call 是否有用到驗證／搜尋指令，沒有就直接提醒 AI 拿出證據，拿不出就回去老實做。
 
