@@ -2,11 +2,9 @@
 
 > 知識庫主檔：~/knowledge-base/pillars/ai-consulting.md（blog 歸品牌建設線；週例行「Blog 素材決策」在 000-routines.md）
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Project Overview
 
-Astro 6 blog based on AstroPaper template. Bilingual (EN/ZH) content, deployed to GitHub Pages at `https://danyuchn.github.io/blog`.
+**雙語（EN/ZH）部落格，兩種語言的內容要成對維護**；部署到 GitHub Pages `https://danyuchn.github.io/blog`。技術棧見 `package.json`。
 
 AGENTS.md 是 symlink → CLAUDE.md（供 Codex 讀取）；禁手動複製快照，斷鏈重建：`ln -s CLAUDE.md AGENTS.md`。
 
