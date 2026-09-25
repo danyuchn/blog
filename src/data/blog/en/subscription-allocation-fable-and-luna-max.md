@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-09-14T04:00:00Z
+modDatetime: 2026-09-24T04:00:00Z
 title: "How I Split My AI Subscriptions: Fable Buys Judgment, Luna Max Buys Value"
 slug: en/subscription-allocation-fable-and-luna-max
 featured: false
@@ -18,6 +19,14 @@ Claude first. On the same plan, quota usage feels relatively durable to me, as l
 
 Then Codex. 20 USD is enough, no need to go higher. Luna Max inside it, used for browser automation and computer-use tasks, is the best cost-performance combo I've used. I occasionally open Sol for adversarial review, and 20 USD covers that plenty. If it's not enough, I just bet on a Tibo reset. When it hits, it's a great day again.
 
+## Postscript: I Chose to Bravely Downgrade
+
+I used to feel so embarrassed about it. Everyone's tokenmaxxing, showing off how many 200U plans they're burning through. If I can't use all of mine, does that mean I'm useless and my productivity is too low?
+
+That mindset is actually really unhealthy. People who use a lot don't need to judge how others use their tokens. Using less can also mean you've already got your routing sorted. It's not that we aren't trying or that our output is low.
+
+Give a bit more time back to yourself. Tokens will always be there if you subscribe again, but life is only 30,000-some days, and time is the one asset you never get back.
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「Someone on Threads asked me how I split my budget across these AI subscriptions.」 — 類型：銜接（補上原素材的發話情境）
@@ -25,4 +34,8 @@ Then Codex. 20 USD is enough, no need to go higher. Luna Max inside it, used for
 3. 「Claude first.」／「Then Codex.」 — 類型：銜接（分段轉場）
 4. （已由主對話刪除）「Once that happens, the whole budget calculation is off.」 — 類型：銜接（把原句「如果沒重置」的但書具體化，未新增觀點）
 5. （已由主對話刪除）「That's roughly how I split my subscription budget right now: the expensive one buys Fable's judgment, the cheap one bets on Luna Max and luck.」 — 類型：銜接／收束（複述前文三個判斷做短促收尾，未新增觀點）
+-->
+
+<!--
+2026-09-24 W40 postscript: 2026-09-19 Threads reply merged verbatim. Added non-source sentences: none (heading taken from the reply's first line).
 -->

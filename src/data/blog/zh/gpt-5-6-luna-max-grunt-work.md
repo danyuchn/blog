@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-24T04:00:00Z
 title: GPT-5.6 Luna Max 是新一代的雜活之王
 slug: zh/gpt-5-6-luna-max-grunt-work
 featured: false
@@ -58,6 +58,22 @@ Luna Max 在這樣的任務上如果搭配一套規格非常固定的流水線�
 
 Davinci Resolve Studio 配 MCP 給 Luna Max 操控，就是新世界影片後製的神。Luna Max 做這種雜活真的是世界第一名。
 
+## 補記：GPT 6 Luna Max 標註 100 多個 LINE 客戶
+
+有誰跟我一樣，也很討厭管理 LINE 官方帳號後的這個側邊欄的？
+
+![LINE 官方帳號後台的客戶側邊欄：方案標籤、負責人員與記事本，記事本裡寫著方案到期日與 Google Drive 資料夾（客戶資訊已遮蔽）](/blog/assets/posts/gpt-5-6-luna-max-grunt-work/line-oa-sidebar.jpg)
+
+客戶的報名資料在 Google Drive 裡的表單、客戶的資料夾也散落在 Google Drive，以前我都是一個一個看然後上標籤、寫記事本核對。
+
+剛剛我讓 GPT 6 Luna Max 去做這種雜活，100 多個客戶約一個小時左右完成標註同步，才花 20 USD 5hr 額度的 5%，週額度的 1%……
+
+省是真的省，慢是唯一的缺點，做出來我讓 Opus 快速檢查一遍也沒有漏。感覺蠻好的！
+
+另外，敬告國泰航空：雖然你們的人機驗證很先進，但 GPT Luna max 還是在我眼前一個一個的破解了。
+
+![國泰航空網站的圖片人機驗證，題目要求選出所有早餐吃的東西，其中幾格已被勾選](/blog/assets/posts/gpt-5-6-luna-max-grunt-work/cathay-captcha.jpg)
+
 <!--
 2026-08-28 W36 碎念併入：live 碎念「影片後製的神」逐字併入，該條講的正是本文的主題（Luna Max 幹雜活）。已從 zh/en live 檔刪除。零新增句子（小標即原碎念標題）。
 -->
@@ -72,4 +88,8 @@ Davinci Resolve Studio 配 MCP 給 Luna Max 操控，就是新世界影片後製
 2. 「我最常用 LUNA 的場景有幾個。一是⋯⋯二是⋯⋯三是⋯⋯四是⋯⋯」 — 類型：改寫（原文為 1./2./3./4. 編號列點＋「理由：」標籤，改成連續句；理由文字原樣保留）
 3. 「最近除了 5.6 Sol」的「最近」 — 類型：銜接（原碎念條目起手詞，保留）
 4. 「我都跟別人說，GPT 5.6 Sol 是瘋狗⋯⋯不做完不罷休。」（整段逐字置入，無新增句） — 類型：併入碎念（GPT 5.6 Sol 是瘋狗，2026-08-14 週報併入）
+-->
+
+<!--
+2026-09-24 W40 補記：2026-09-24 Threads 貼文（LINE 官方帳號客戶標註）與 2026-09-20 貼文（國泰人機驗證）逐字併入。新增非原文句子：小標（框架句）、「另外，」（銜接）。截圖中客戶姓氏已由主對話遮蔽。原文 emoji 依站台規範未保留。
 -->

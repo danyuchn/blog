@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-09-17T04:00:00Z
+modDatetime: 2026-09-24T04:00:00Z
 title: "Zero Findings: Nothing Wrong, or the Checker Isn't Checking"
 slug: en/verifier-returns-zero-false-pass
 featured: false
@@ -28,6 +29,10 @@ A check returning zero means one of two things: either nothing is wrong, or the 
 
 The same week, users actually hit four real bugs. The paywall was never wired up in production at all: six 403s in the error log traced back to a missing connection in the interactive onboarding flow, and a paying customer of seven months came back to try a feature on the day they cancelled and got a fake "please check your network connection" message. Then there was `\$10,000` in KaTeX. `\$` is inert in text mode and doesn't open math mode, but once math mode is open, the next `$` closes it regardless of the backslash, so the real closing delimiter became the next opening one and everything after it in the document shifted by one. It stayed hidden for so long because KaTeX doesn't throw on Chinese characters or `①` inside math mode, it just prints "No character metrics," so readers only saw oddly italicized sentences. A full re-parse of 300 cached entries: errors went from 125 to 6, Chinese text mistaken for math went from 59 to 0. On the student side, grading split answers by comma position and never read `dropdowns[].correct_answer`, so a thousands-separator comma inside a dropdown option shifted every field after it; students who picked the right answer got marked wrong. A full scan of 14,436 questions found 3 actually mis-graded and 1 at risk. And when the main site restored a session where not a single question could be fetched (membership expired, or access revoked), the old code kept going anyway: filtering an empty question list against saved answers filtered out everything. One student hit six 403s, came back to open a 12-question session, got it reset to zero, and lost 8 answered questions.
 
+## Getting 5 back means two things too
+
+On 09-20, analyzing a ChatGPT share page a student sent me, I scrolled the whole 3818px container, counted 5 message nodes, and declared that "share pages only keep the last two passages; that's ChatGPT's behavior, not an incomplete scrape." Then I opened an older link to "cross-check" it. The older link was truncated the same way, so my wrong conclusion got reinforced by my own fake verification. In reality the DOM only renders the last few turns, and all five passages were sitting in the embedded script payload (`linear_conversation`). I had even printed out that the script contained `linear_conversation` and never parsed it: I was holding the counter-evidence and didn't use it. "Only 5 nodes" means two things, same as "returned 0": there really are only 5, or not everything got rendered. The rule for this was already written down, but it lived in a skill that doesn't load for that kind of task, which is the same as not existing where it's needed.
+
 Before trusting a zero, prove with a sample you know should trigger it that the checker is actually comparing anything. When a counter-test fails, suspect the counter-test's own wiring before you suspect the code under test. When a sabotage case fails to fail, suspect that the sabotage never took effect before you conclude the code is solid.
 
 <!--
@@ -38,4 +43,8 @@ Non-original sentences added (faithfulness self-disclosure):
 4. "## The checker itself was broken" / "## Every layer checked out on its own, and it still broke" — type: framing (section headers)
 5. "The same week, users actually hit four real bugs." — type: transition
 6. Closing paragraph ("Before trusting a zero... before you conclude the code is solid.") — type: rewrite (the three fixed lessons, rewritten from the source material's own stated criteria, no new methodology added)
+-->
+
+<!--
+2026-09-24 W40 postscript: daily note 2026-09-20 pitfall (ChatGPT share page read from DOM only) rewritten as a new section before the closing rules paragraph. Student name removed. Added non-source sentences: heading (framing).
 -->
