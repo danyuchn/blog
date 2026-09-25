@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-03T04:00:00Z
-modDatetime: 2026-09-04T04:00:00Z
+modDatetime: 2026-09-24T04:00:00Z
 title: Three Moves Between Claude and Codex
 slug: en/three-moves-between-claude-and-codex
 featured: false
@@ -178,6 +178,16 @@ Over the past few months, 9 out of every 10 posts I wrote were trashing Anthropi
 
 The main reason is Fable. The secondary reason is OpenAI's quota policy. My work has more creative tasks than maintenance tasks, and out of every model available right now, the only one that reads my intent the way a mentor would and elegantly, concisely points out my unknown unknowns is Fable. That's not to say GPT isn't good — Sol is genuinely brilliant and very careful, but in my eyes it's an obedient tool. Luna's cost-to-value ratio is excellent, and its computer-control performance is solid too.
 
+## Late September: The Fall From the Pedestal Comes True
+
+I can clearly feel every model in the lineup getting dumber ahead of OpenAI's launch event, not just Astra.
+
+A simple task: browser automation to look at a single page (login state already set up) plus some file changes (fixed spec, with a SKILL). Luna Max used to finish it in about 6 minutes. This time it ran for an hour and still wasn't done. It kept going in circles, checking the browser extension status over and over, and where a simple write/edit would do, it insisted on writing a throwaway script to change the file...
+
+Put simply, it was burning quota for nothing. Completely pointless burn.
+
+A month ago I predicted Codex would come down off its pedestal. Looks like it's actually happening now. Without resets handed out, its real staying power shows...
+
 <!--
 Added non-source sentences (fidelity disclosure):
 1. "I've moved back and forth between Claude Code and Codex three times. Here it is in order: moving the whole harness over in May, switching my daily driver in July, the honeymoon, the July full of resets, and then the honeymoon ending." — framing (merged-article opener; every item points to a section below)
@@ -188,4 +198,8 @@ Added non-source sentences (fidelity disclosure):
 Every other paragraph, figure, blockquote, link, and image alt is carried over verbatim from the five originals (codex-migration-skill, why-i-switched-from-claude-code-to-codex, codex-quota-honeymoon, july-of-resets-subsidy-war, codex-quota-nerf-off-the-pedestal). Only heading levels and image paths changed. No facts, criteria, or conclusions were added, the author's shifting positions were not reconciled, and no new closing was appended.
 
 2026-09-04 weekly-routine addendum: added "Early September: The Dust Settles" section, translated from the zh version's new section (source: an 08-31 Threads post). Added sentence: the heading (framing). The original post's final line was cut off mid-sentence ("Luna's cost-effectiveness is excellent, computer-control performance...") and was left out here rather than guessed at.
+-->
+
+<!--
+2026-09-24 W40 postscript: 2026-09-21 Threads post merged verbatim as a new section. Added non-source sentences: section heading (framing).
 -->

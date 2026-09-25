@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
+modDatetime: 2026-09-24T04:00:00Z
 title: "Letting an Agent Tune a Local Video Model Overnight: My Three Gates"
 slug: en/overnight-agent-lora-tuning-guardrails
 featured: false
@@ -30,6 +31,18 @@ One `/goal` and I don't mind at all letting it run all night on something that i
 
 As for why I bother making rules for the SSD's sake, go look up SWAP and SSD writes & lifespan. It's going to be quite a read.
 
+## Postscript: A Prompt for Letting the Model Run All Night
+
+Plenty of people probably know this already, but here's an example prompt for having the model run an overnight task:
+
+> 由於我等等要去睡覺，會長時間離開電腦，所以我打算讓你在很長一段無我干預的時間去做________。請寫給我看你的完整計劃，計畫中間都不需要經過我干預跟核准，我的目的是醒來就可以看到好的成果。你現在不用開計畫模式，直接把完整計劃寫出來（內部要包含步驟、目標完成的標準、進度回寫紀錄區等等，為了預防長任務長上下文中的 agent 執行飄移）。
+>
+> 寫出的計劃放在___資料夾下，並且請 fable subagent 來對抗式審查，根據審查結果修改後呈現給我看。
+
+In English: "I'm about to go to sleep and will be away from the computer for a long time, so I want you to spend a long stretch with no intervention from me doing ________. Write out your full plan for me. Nothing in the plan needs my input or approval along the way; my goal is to wake up to good results. Don't use plan mode, just write the full plan (including steps, the criteria for done, a progress log section and so on, to keep the agent from drifting over a long task with a long context). Put the plan in the ___ folder, and have a fable subagent do an adversarial review, revise based on the review, then show it to me."
+
+Then open a fresh session and fire off `/goal`. Opus 5.5 is supposedly really, really good at this kind of long-context, long-running task.
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「早上醒來，手機 mosh 連回去看。」／"I woke up and moshed back in from my phone." — 類型：銜接（原貼文於「晚上的實驗成片都放在」處被截斷，改以圖片內容承接；mosh 與手機為圖片可見事實）
@@ -37,4 +50,8 @@ As for why I bother making rules for the SSD's sake, go look up SWAP and SSD wri
 3. 「成片放在 ~/Downloads/comfyui-短劇成果-20260731/…寫進了 KNOWN_ISSUES.md。」／"The finished clips were in…written into KNOWN_ISSUES.md." — 類型：銜接（純陳述圖片上可見的交付物清單）
 4. 「至於為什麼要為了 SSD 立這種規矩——」／"As for why I bother making rules for the SSD's sake —" — 類型：銜接（把 08-05 那則回覆接進本文語境，該則原話逐字保留）
 5. 三個段落開頭的「一、」「二、」「三、」／"One," "Two," "Three," — 類型：框架句（原貼文即為 1./2./3. 編號）
+-->
+
+<!--
+2026-09-24 W40 postscript: 2026-09-23 Threads post merged verbatim. Added non-source sentences: section heading (framing); the English rendering of the prompt (translation, original Chinese kept in blockquote).
 -->

@@ -53,6 +53,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Someone bought a 6TB dataset off a top Chinese LLM router. That data alone handed over SSH keys, VPN configs, Alibaba Cloud keys and GitLab tokens sent through the router, enough to take over 7 government entities and 19 companies including Xiaomi, Huawei, NIO and MiniMax. Strong suspicion the order was placed on Xianyu. The sellers, and all those Chinese enterprises busy distilling, probably never pictured the day it came back around. Anyone thinking of routing through a cheap proxy should go read Twitter first: the proxy turns around and sells your chat logs to be distilled, and your credentials, keys and tokens end up in someone else's hands.
 
+**Switching Browser Automation to OBU**
+
+> The super handy OBU is here: <https://github.com/ifuryst/open-browser-use>. I compared it against Chrome MCP and agent-browser for speed and tokens across four scenarios: hotel booking, cinema showtimes, Threads, and X.
+
 ## Workflow & Method
 
 **How Someone With GAD Reads a Risk Report**
@@ -87,6 +91,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > 1. Send out more subagents. 2. Use the history-find skill to dig up past sessions easily. 3. Set up a /loop 30m tick to poll while you're away from the desk. 4. /status shows you what's burning tokens, plus the API cost and token count per session.
 
+**Editing a Six-Day Vlog With Astra**
+
+> I used Astra + DaVinci Resolve to cut a six-day vlog. The material was my iCloud items, my Google Maps timeline, and my email. It guessed what my six days looked like on its own, wrote the text, ordered everything, imported it, and found the music. Honestly it did the most tedious 90% of the editing. It used about 40% of the weekly quota on the 20 USD plan.
+
 ## AI Industry & Business Observations
 
 **Anthropic in China**
@@ -104,6 +112,14 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Inject Baidu and Claude Takes the Job**
 
 > Fun fact someone shared a while back: if what you inject is Baidu, Claude will handle it. Something must have happened to Dario back in the day.
+
+**Where to Find Real Success Stories**
+
+> Success stories like Uber's and Spotify's get shared on X, Substack and Medium. You won't find many on Threads, and forget about the Chinese-language world. I'd suggest reading those sources more.
+
+**Most AI Experts Are Self-Proclaimed**
+
+> I don't think there are that many AI experts. Agents are less than 2 years old, LLMs less than 5. Before LLMs showed up, everyone had their own line of work. A lot of today's experts are just self-proclaimed. I've taught GMAT for 15 years and I still don't dare call myself an expert.
 
 ## Life & Miscellany
 

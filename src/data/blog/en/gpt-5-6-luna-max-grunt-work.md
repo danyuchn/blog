@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-07T04:00:00Z
-modDatetime: 2026-08-28T04:00:00Z
+modDatetime: 2026-09-24T04:00:00Z
 title: GPT-5.6 Luna Max Is the New King of Grunt Work
 slug: en/gpt-5-6-luna-max-grunt-work
 featured: false
@@ -58,6 +58,22 @@ After finishing, my read is this: next time, pair it with a higher-tier Terra or
 
 DaVinci Resolve Studio wired up to MCP and driven by Luna Max is the god of video post-production in this new world. For grunt work like this, Luna Max is genuinely first in the world.
 
+## Postscript: GPT 6 Luna Max Tagging 100+ LINE Customers
+
+Anyone else hate this sidebar you get when managing a LINE Official Account?
+
+![The customer sidebar in the LINE Official Account admin: plan tag, assigned staff and a notes field holding the plan expiry date and a Google Drive folder (customer details redacted)](/blog/assets/posts/gpt-5-6-luna-max-grunt-work/line-oa-sidebar.jpg)
+
+Customer sign-up data lives in a form on Google Drive, and each customer's folder is scattered around Google Drive too. I used to go through them one by one, add tags, and write notes to cross-check.
+
+Just now I had GPT 6 Luna Max do this kind of grunt work. For 100-odd customers it finished tagging and syncing in about an hour, and only used 5% of the 5-hour quota on the 20 USD plan, 1% of the weekly quota...
+
+It really is cheap. Slow is the only downside. When it was done I had Opus give it a quick pass and nothing was missed. Feels pretty good!
+
+Also, a notice to Cathay Pacific: your CAPTCHA may be advanced, but GPT Luna max still cracked them one by one right in front of me.
+
+![Cathay Pacific's image CAPTCHA asking to identify all things eaten for breakfast, with several tiles already selected](/blog/assets/posts/gpt-5-6-luna-max-grunt-work/cathay-captcha.jpg)
+
 <!--
 2026-08-28 W36 micro-note merge: the live note "The God of Video Post-Production" was folded in verbatim; it is about exactly this post's subject (Luna Max on grunt work). Removed from the zh/en live files. No sentences added (the subheading is the note's own title).
 -->
@@ -72,4 +88,8 @@ DaVinci Resolve Studio wired up to MCP and driven by Luna Max is the god of vide
 2. 「我最常用 LUNA 的場景有幾個。一是⋯⋯二是⋯⋯三是⋯⋯四是⋯⋯」/「A few scenarios where I use LUNA most. One: … Two: … Three: … Four: …」 — 類型：改寫（原文為 1./2./3./4. 編號列點＋「理由：」標籤，改成連續句；理由文字原樣保留）
 3. 「最近除了 5.6 Sol」/「Lately, besides 5.6 Sol」的「最近」 — 類型：銜接（原碎念條目起手詞，保留）
 4. 「I tell everyone GPT 5.6 Sol is a mad dog... until the job's done.」（整段逐字置入，僅把破折號插語改為逗號連接） — 類型：併入碎念（GPT 5.6 Sol Is a Mad Dog，2026-08-14 週報併入）
+-->
+
+<!--
+2026-09-24 W40 補記：2026-09-24 Threads 貼文（LINE 官方帳號客戶標註）與 2026-09-20 貼文（國泰人機驗證）逐字併入。新增非原文句子：小標（框架句）、「另外，」（銜接）。截圖中客戶姓氏已由主對話遮蔽。原文 emoji 依站台規範未保留。
 -->

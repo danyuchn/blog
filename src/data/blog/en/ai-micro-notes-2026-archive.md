@@ -264,3 +264,9 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Claude Moves Wall Street**
 
 > Claude is the one AI that can single-handedly shake the stock prices of major software companies on Wall Street. Enough said.
+
+## Late September 2026 (W40)
+
+**Qwen Image 2.1 Has No Guardrails**
+
+> Qwen Image 2.1 is open source with no NSFW safety guardrails... those who know, know what this thing is going to turn into.

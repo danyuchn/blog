@@ -53,6 +53,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 > 有人從一個頂尖的中國 LLM 路由器那裡買到 6TB 資料集，光靠那批資料就能拿到發送到路由器的 SSH 金鑰、VPN 配置、阿里雲金鑰、GitLab 令牌，接管 7 個政府實體與小米、華為、蔚來、MiniMax 這樣 19 家公司。高度懷疑是在閒魚下單的。賣家跟中國忙著蒸餾的大企業們，應該沒想過有一天會被反殺。所有想用中轉站省錢的建議都去看看推特——中轉站轉手把你的聊天記錄賣去給人蒸餾，你的憑證、金鑰、token 都到別人手裡。
 
+**瀏覽器操作換成 OBU**
+
+> 超好用的 OBU 在這邊：<https://github.com/ifuryst/open-browser-use>。我拿它跟 Chrome MCP、agent-browser 在訂房、影城場次、Threads、X 四個場景比過速度跟 token。
+
 ## 工作流・方法論
 
 **廣泛焦慮症怎麼看風險報告**
@@ -87,6 +91,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 > 1. 多派一些 subagent 2. 用 history-find skill 輕鬆找到過去的 session 3. 弄一個 /loop 30m tick 在離開座位時自動輪詢 4. /status 可以看到耗費 token 原因跟每個 session 的 api 成本 token 量
 
+**用 Astra 剪六天的 vlog**
+
+> 用 Astra + DaVinci Resolve 剪六天的 vlog，素材是 iCloud 項目＋Google 地圖時間軸軌跡＋我的 email。他自己去猜我六天的行程長怎樣，自己寫文字、編排順序、匯入、找音樂。老實說已經把剪接最費工的 90% 都做完了吧，20 USD 月費的週用量大約花 40%。
+
 ## AI 產業・商業觀察
 
 **Anthropic 在中國**
@@ -104,6 +112,14 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **注入百度的話 Claude 會包辦**
 
 > 冷知識，之前有網友分享：如果注入的是百度，則 Claude 會包辦。可見 Dario 當年肯定發生了什麼。
+
+**成功案例要去哪裡找**
+
+> 像 Uber、Spotify 這類成功的例子，都是在 X／Substack／Medium 上面分享的，Threads 找不到多少，中文世界更不用想。建議多看看以上來源。
+
+**AI 專家多半是自稱**
+
+> 我不覺得有那麼多 AI 專家啦。Agent 也才不到 2 年歷史，LLM 也才不到 5 年，大家在 LLM 出現前都是各司其職的。現在有很多專家都只是自稱，我 GMAT 教 15 年都不敢自稱專家了。
 
 ## 生活・雜感
 

@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-28T04:00:00Z
-modDatetime: 2026-09-11T04:00:00Z
+modDatetime: 2026-09-24T04:00:00Z
 title: Most of the Gains From AI Adoption Have Little to Do With AI
 slug: en/ai-adoption-benefits-not-about-ai
 featured: false
@@ -45,6 +45,8 @@ So how the hell do you start using AI and immediately fantasize about one-shotti
 
 This week's video happens to be about the other side of that, the not-daring: "Three Months Into AI Adoption, Why Does Nobody Dare Actually Use It?" <https://youtu.be/TIuu5uMrhnE>
 
+The follow-up is about finding out why you are stuck: "AI Adoption Still Stuck? First Figure Out Which Layer It Is Stuck On" <https://youtu.be/8sLBM7xg9U0>
+
 <!--
 Added non-source sentences (fidelity disclosure):
 1. "At bottom," — type: bridge (the rest is verbatim from reply 1). The main thread cut the draft's "So the bottleneck usually isn't the model" on review: that was the AI issuing a verdict on the author's behalf, and the source material does not contain it.
@@ -55,4 +57,8 @@ Added non-source sentences (fidelity disclosure):
 2026-09-04 weekly-routine addendum: added "An Anonymized Case, Plus a New Video" section, translated from the zh version's new section (source: a 09-02 Threads post that already contained this YouTube link). Added sentences: the heading (framing), "The new video is about exactly this:" (bridge). The case itself is a faithful translation of the source post, no new claims added.
 
 2026-09-11 W38 weekly-routine addendum: added "The Grocery Store Hire, Plus a New Video", translated from the zh section (source: a 09-10 Threads post, kept verbatim including the profanity) plus this week's own new video TIuu5uMrhnE. Added sentences: the heading (framing) and "This week's video happens to be about the other side of that, the not-daring:" (bridge).
+-->
+
+<!--
+2026-09-24 W40 postscript: linked the 2026-09-22 video. Added non-source sentence: the lead-in line (bridging, paraphrased from the video title).
 -->
