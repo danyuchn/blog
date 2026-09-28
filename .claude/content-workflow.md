@@ -45,7 +45,7 @@
 ## 語意去重工具
 
 `scripts/semantic_dedup.py`：`gemini-embedding-2` 對全部文章（`--micro` 含碎念條目）做語意向量，列近重複對。
-- 跑法：`export GEMINI_API_KEY=<key>` → `uv run scripts/semantic_dedup.py --micro --threshold 0.78 --json /tmp/blog_dedup.json`（key 在 `blog/.env`；失效再從 GMAT-skills / PDT-learning / crawler 借）。
+- 跑法：`export GEMINI_API_KEY=<key>` → `uv run scripts/semantic_dedup.py --micro --threshold 0.78 --json /tmp/blog_dedup.json`（key 的存放位置依 CLAUDE.md〈API Key Management〉，`blog/.env` 只是執行期副本；失效再從 GMAT-skills / PDT-learning / crawler 借）。
 - 判讀：**高相似 ≠ 該合併**。同主題不同角度、或時間軸上的觀點演進，保留比合併更有資訊量；published URL 無 redirect，真要合併才動。
 
 ## YouTube 來源澄清（自家上架 vs 訂閱）
