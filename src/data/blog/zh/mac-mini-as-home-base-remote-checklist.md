@@ -1,6 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-09-13T04:00:00Z
+modDatetime: 2026-10-02T01:00:00Z
 title: 出國前的遠端連線檢查表：把 Mac Mini 留在家當本體
 slug: zh/mac-mini-as-home-base-remote-checklist
 featured: false
@@ -26,6 +27,21 @@ description: '出國前一次寫下的八條遠端配置檢查表：Tailscale、
 隔天實測：目前 tailscale + herdr 遠端連回家中的 codex，一切正常。真是有趣的體驗。
 
 會這樣折騰，是因為出遠門旅行，但是筆電容量不足，harness跟排程也都在家中的mac mini。跟之前寫的[旅館出門吃飯前的五步備援 SOP](/blog/posts/zh/ipad-workflow-robustness)不一樣，那篇是人還在台灣、出門吃頓飯的短暫備援；這次是整個人離開這座城市，Mac Mini 要撐好幾天當本體。
+
+## 補記：出門後的實測與踩坑
+
+從台灣隨便一個飯店的 wifi 到泰國曼谷主機的 tailscale 直連實測數據，實際使用上沒有明顯的延遲。經過河內、台北兩地驗證，確定 Mac mini 主機放曼谷家裡，遠端走 mosh/ssh＋tailscale 內網連回去是穩定且正確的選擇。補充數據：台北某路易莎，一開始走香港中繼，過 1-2 分鐘後成功直連，往返延遲 87～92 ms，平均約 89 ms。
+
+出門前的遠端演練也踩到幾個坑，後來都寫進了手冊：
+
+- Mac mini 開了 FileVault：停電、自動更新或 `sudo reboot` 會停在硬碟解鎖畫面，Tailscale、SSH、AnyDesk 全都連不上。遠端唯一安全的重開方式是 `sudo fdesetup authrestart`，重開後停在登入畫面，要靠 AnyDesk 登入，而且 AnyDesk 要等一到兩分鐘才連得上。
+- 重開機後從 SSH 讀不到登入鑰匙圈（`User interaction is not allowed`），git push 要求帳號、gh token 無效，Claude Code 也要重新 /login。用手機執行 `security unlock-keychain` 後三者都恢復，列為每次重開機後的必做步驟。
+- 在筆電上遠端打字卡頓，量到 mini 的 Wi-Fi 每秒有約 0.4 秒的延遲尖峰。在 mini 上關掉 AirDrop 與接力後，立刻從平均 130ms 降到 3.6ms。
+- SSH 連進來讀不到桌面、文件、下載，要打開「遠端登入 → 允許遠端使用者擁有完整磁碟取用權限」。
+
+<!--
+2026-10-02 W41 補記：新增一節，第一段為 09-30 21:33 與 10-01 12:29 兩則 Threads 貼文逐字合併；條列為作者 09-28 工作日誌「踩坑」段刪減改寫（去掉內網位址等細節）。新增非原文句子：小標（框架句）、「出門前的遠端演練也踩到幾個坑，後來都寫進了手冊：」（銜接）。
+-->
 
 <!--
 新增非原文句子清單（忠實度自首）：

@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-09-18T04:00:00Z
+modDatetime: 2026-10-02T01:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -57,6 +57,10 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 > 超好用的 OBU 在這邊：<https://github.com/ifuryst/open-browser-use>。我拿它跟 Chrome MCP、agent-browser 在訂房、影城場次、Threads、X 四個場景比過速度跟 token。
 
+**Codex 沙盒讀不到內網 NAS**
+
+> 去客戶公司現場做 Codex 培訓，公司內網 NAS 掛載磁碟讀不到就是讀不到。各種排查都沒用很絕望時，突然想起：是不是 Codex 的沙盒在搞鬼？果然，口頭授權在沙盒外面嘗試，就讀到了。
+
 ## 工作流・方法論
 
 **廣泛焦慮症怎麼看風險報告**
@@ -94,6 +98,14 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **用 Astra 剪六天的 vlog**
 
 > 用 Astra + DaVinci Resolve 剪六天的 vlog，素材是 iCloud 項目＋Google 地圖時間軸軌跡＋我的 email。他自己去猜我六天的行程長怎樣，自己寫文字、編排順序、匯入、找音樂。老實說已經把剪接最費工的 90% 都做完了吧，20 USD 月費的週用量大約花 40%。
+
+**CLAUDE.md 加一行，讓 tool call 並行**
+
+> Reddit 網友發現 Opus 5.5 預設串行使用工具，一次一個 tool call。可以在 CLAUDE.md 加一行：「動手前先規劃 tool call：彼此獨立的讀取／搜尋／查詢同一輪一起發；寫檔與驗證不併同一輪。」寫檔、驗證要排除，因為這兩個動作極度倚賴前面的結果。我回讀對話紀錄量測，除了 Fable 本來就比較會批次之外，其他模型的確都偏向串行。
+
+**Vibe Coder 做產品，先埋數據收集點**
+
+> 要做產品的話，可以一開始跟 Agent 討論要在網站埋入哪些數據收集點。這樣未來無論是要修復錯誤，還是要改進使用者體驗，都能有跡可循。Opus 5.5 可以非常聰明地從使用者軌跡中分析出產品體驗不好的部分並且自我修復。
 
 ## AI 產業・商業觀察
 

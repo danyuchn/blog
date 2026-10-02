@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-09-11T04:00:00Z
+modDatetime: 2026-10-02T01:00:00Z
 title: "AI Micro-Notes 2026: Chronological Archive"
 slug: en/ai-micro-notes-2026-archive
 featured: false
@@ -270,3 +270,25 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Qwen Image 2.1 Has No Guardrails**
 
 > Qwen Image 2.1 is open source with no NSFW safety guardrails... those who know, know what this thing is going to turn into.
+
+## Early October 2026 (W41)
+
+**Claude's Hang-Up Skill**
+
+> Finally got to see the legendary "Claude hangs up on you" skill. The system prompt says Claude only uses it when it judges the user keeps being abusive and rational conversation is no longer possible. I told it to use it on its own, and it still checked with me: you can't undo this, are you sure?
+
+**Free Adversarial Review**
+
+> Hook your AI up to the Threads API or a browser logged into Threads, and have it post about how it built the thing in a show-off vibe-coder voice. You get adversarial review from the internet for free, no tokens spent.
+
+**LLMs Don't Hold Grudges in Real Time**
+
+> Today's LLMs are stateless; every agent message is assembled fresh. Any change to base-model parameters requires the model company to run training. The parameters don't change on the fly because of one user message.
+
+**Bend Once for a Client and You'll Keep Bending**
+
+> A prospective client, before signing anything, quizzed me in detail on how to use AI and plan their workflows, had me build trial integrations and demos of key workflows, and asked for templates. Two months later there was no contract; my contact said the boss had other plans and vanished. Bend over backwards for a client once, and you'll be doing it many more times. Whenever a client feels off, step away; in hindsight your gut is right.
+
+**The Signal That a Model Company Is Heading Into a Headwind**
+
+> How can you tell a model company is about to hit a headwind? When it keeps pushing all kinds of flashy end-user apps. Think of Claude Design shipping something new every day, or OpenAI's Sora social short-video app. When those get pruned back, the company is about to catch a tailwind again.

@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-09-18T04:00:00Z
+modDatetime: 2026-10-02T01:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -57,6 +57,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > The super handy OBU is here: <https://github.com/ifuryst/open-browser-use>. I compared it against Chrome MCP and agent-browser for speed and tokens across four scenarios: hotel booking, cinema showtimes, Threads, and X.
 
+**Codex's Sandbox Couldn't See the Office NAS**
+
+> I was on site at a client's office running a Codex training, and the company's internal NAS mount just would not read. After every check had failed and I was getting desperate, it hit me: is the Codex sandbox doing this? Sure enough, once I verbally authorized it to try outside the sandbox, it read fine.
+
 ## Workflow & Method
 
 **How Someone With GAD Reads a Risk Report**
@@ -94,6 +98,14 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **Editing a Six-Day Vlog With Astra**
 
 > I used Astra + DaVinci Resolve to cut a six-day vlog. The material was my iCloud items, my Google Maps timeline, and my email. It guessed what my six days looked like on its own, wrote the text, ordered everything, imported it, and found the music. Honestly it did the most tedious 90% of the editing. It used about 40% of the weekly quota on the 20 USD plan.
+
+**One CLAUDE.md Line to Make Tool Calls Parallel**
+
+> Someone on Reddit noticed Opus 5.5 uses tools serially by default, one tool call at a time. You can add one line to CLAUDE.md: "Plan tool calls before acting: send independent reads/searches/lookups together in one turn; don't batch file writes and verification into the same turn." Writes and verification are excluded because they depend heavily on earlier results. I went back through my transcripts and measured it: apart from Fable, which already batches well, the other models do lean serial.
+
+**Vibe Coders: Plant Your Data Collection Points First**
+
+> If you're building a product, talk with the agent at the start about which data collection points to plant in the site. Then whether you're fixing bugs or improving the user experience later, there's a trail to follow. Opus 5.5 is very good at reading user trails, finding where the product experience is bad, and fixing it itself.
 
 ## AI Industry & Business Observations
 

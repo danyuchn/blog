@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-09-11T04:00:00Z
+modDatetime: 2026-10-02T01:00:00Z
 title: 'The Usage Economics of AI: Quotas, Plans, Tokenizers, and That Anesthetic Bill'
 slug: en/ai-usage-economics
 featured: false
@@ -218,6 +218,30 @@ Over on Codex, Tibo's heads-up about a back-to-back reset let me accidentally me
 On the pay-as-you-go side, GPT-5.6-Luna is cheap to the point of absurdity. I'm running it in two places: a browser extension like immersive translation, one-click translating 50-80 foreign-language pages a day; and a voice-input tool like Typeless called "Say It," used 100-150 times a day to clean up text. After 10 days, daily spend is under $0.01, and the cost dashboard just shows 0.0.
 
 Trivia pointing the other way: the most expensive model by API pricing right now isn't Claude Fable, it's GPT-o1-pro, at 150/600, about 12-15x Fable/Mythos (10/50). Released March 2025, currently deprecated but not yet retired.
+
+## What One 5-Hour Window Is Actually Worth
+
+Ever since Opus 5.5 shipped, quota has gone a long way, and the 5-hour window got bigger too. One morning I finally managed to burn through a whole window inside 5 hours, so I got curious how many tokens that window is worth, and pulled it apart with the claude log CLI and an agent-session tool:
+
+- The window ran 8:00-13:00, with 6 main sessions I opened by hand, at most 3 running at once, plus 2 more running on a schedule
+- Model turns in the main sessions: Opus 5.5 746 turns, Sonnet 5 187 turns
+- 32 subagents dispatched: 23 Sonnet / 6 Opus / 3 Fable
+- Total output about 710K tokens, cache reads about 440M tokens
+
+The split: the main thread runs Opus 5.5 for decisions and sign-off, the bulk execution goes to Sonnet subagents, and Fable only comes out when I want a second opinion.
+
+That whole window was roughly 12% of my weekly quota, worth $156.69 at API prices, which puts a week at about $1,276. Scale that up and if I maxed the weekly quota all month, that's $5,469. In other words, a 55x subsidy!
+
+That's about it, for what it's worth.
+
+## Two Cache Facts a Lot of People Don't Know
+
+1. If you want to save money, protect your cache. On the $20 plan the cache lasts 5 minutes; on $100 and up it's 1 hour. Type `/usage` any time and the last line shows your cache hit rate. Beyond not walking away too long, don't keep switching models.
+2. Switching effort mid-conversation on Opus 5.5 finally doesn't break the cache. Want the model more careful and autonomous, turn effort up; want it faster with you stepping in more, turn it down. I switched effort once or twice in that conversation and the cache definitely held.
+
+<!--
+2026-10-02 W41 merge: two sections from two Threads posts (09-25 18:22 on window value, 09-28 16:57 on cache). Translated from the zh, which is verbatim from the posts. Added non-original sentences: the two subheadings (framing). "大 guy 4 這樣" is a Mandarin pun on "大概是這樣" (roughly like this) and is rendered as "That's about it."
+-->
 
 <!--
 2026-08-28 W36 micro-note merge: the archive note "Auto-Resume After the Quota Resets" was folded in verbatim; it belongs to this post's quota-rules thread. Removed from the zh/en archive. The only added non-original sentence is the subheading (framing).
