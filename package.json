@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "check:content": "node scripts/validate-content.mjs",
+    "check:private": "node scripts/check-private-names.mjs",
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",

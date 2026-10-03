@@ -37,6 +37,7 @@
 ## 6. 驗證（全綠才算完成）
 
 - [ ] `npm run check:content` — 0 error。有 error 逐條修，不得跳過。
+- [ ] `npm run check:private` — 0 hits。命中就把真名改成角色描述（zh／en 與自首註解都要改）；本週新接觸的客戶或學員若不在名單，先補進 `~/knowledge-base/reference/data/blog-private-names.txt` 再跑。
 - [ ] `npm run build` — astro check + build + pagefind 全過。
 - [ ] `npm run dev` 抽查：新文章出現在首頁列表、翻譯連結（Read in English / 閱讀中文版）正常、圖片正常顯示。
   - 翻譯連結沒出現的第一嫌疑：pubDatetime 是未來時間被 postFilter 過濾（article-spec 陷阱 1）。
