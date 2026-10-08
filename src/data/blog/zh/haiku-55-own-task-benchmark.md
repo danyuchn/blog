@@ -111,5 +111,3 @@ Haiku 5.5 昨天出來，官方定價輸入每百萬 token 0.10 美元、輸出 
 3. 它會先估要跑幾次、花多少錢，你點頭才開跑
 
 沒用 Claude Code 的，直接把 [repo 網址](https://github.com/danyuchn/model-bench-kit) 丟給你的 agent，叫它讀 SKILL.md 照做。測完歡迎回來跟我說你的結果。
-
-整場考試最貴的考生是 Opus（？

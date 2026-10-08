@@ -111,5 +111,3 @@ If you want to try it:
 3. It estimates how many runs and how much money first, and only starts once you say yes
 
 If you don't use Claude Code, just give your agent the [repo link](https://github.com/danyuchn/model-bench-kit) and tell it to read SKILL.md and follow it. Once you've run it, come back and tell me what you got.
-
-The most expensive test-taker in the whole exam was Opus (?
