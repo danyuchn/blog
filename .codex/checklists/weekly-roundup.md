@@ -31,12 +31,14 @@
 ## 5. Micro-notes 維護（規格：`.claude/specs/micro-notes-spec.md`）
 
 - [ ] 新碎念分流：有可複用洞見 → live；純反應/玩笑 → 2026-archive；短暫感想、猜測、時事梗不收錄。
+- [ ] **併入掃描每週都跑，不等超過上限**：`semantic_dedup.py --micro --threshold 0.78`，逐條看碎念（含本週剛新增的）能否併進既有文章或本週新文，能併就併、併後從碎念刪除。高分但只是「都在講 Claude」的不算。
 - [ ] live 檔 ≤35 條；超過就聚類抽取成文（要有清楚觀點或具體讀者問題；同主題 3+ 條只是提醒，不是門檻）或搬 archive，被吸收條目 zh/en 都刪。
 - [ ] zh/en 條目數、順序完全同步。
 
 ## 6. 驗證（全綠才算完成）
 
 - [ ] `npm run check:content` — 0 error。有 error 逐條修，不得跳過。
+- [ ] `npm run check:private` — 0 hits。命中就把真名改成角色描述（zh／en 與自首註解都要改）；本週新接觸的客戶或學員若不在名單，先補進 `~/knowledge-base/reference/data/blog-private-names.txt` 再跑。
 - [ ] `npm run build` — astro check + build + pagefind 全過。
 - [ ] `npm run dev` 抽查：新文章出現在首頁列表、翻譯連結（Read in English / 閱讀中文版）正常、圖片正常顯示。
   - 翻譯連結沒出現的第一嫌疑：pubDatetime 是未來時間被 postFilter 過濾（article-spec 陷阱 1）。
