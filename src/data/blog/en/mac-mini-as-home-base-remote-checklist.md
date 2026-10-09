@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-09-13T04:00:00Z
-modDatetime: 2026-10-02T01:00:00Z
+modDatetime: 2026-10-09T00:00:00Z
 title: "My Pre-Trip Remote Checklist: Leaving the Mac Mini as Home Base"
 slug: en/mac-mini-as-home-base-remote-checklist
 featured: false
@@ -43,6 +43,25 @@ The remote rehearsal before leaving also turned up a few pitfalls, all of which 
 
 <!--
 2026-10-02 W41 postscript: one new section. The first paragraph merges two Threads posts (09-30 21:33 and 10-01 12:29); the list is trimmed from the author's 09-28 work-log pitfalls (internal addresses removed). Added non-original sentences: the subheading (framing) and "The remote rehearsal before leaving also turned up a few pitfalls, all of which went into the runbook:" (connective).
+-->
+
+## Postscript: SSH to mosh, and moving images across machines
+
+I just switched the protocol I use to reach Claude Code CLI on my home machine from SSH to mosh. On hotel Wi-Fi that drops packets like crazy, mosh is unbelievably smooth. I'm genuinely moved.
+
+One catch: when I'm on the mini through mosh, Markdown links don't get colored and can't be clicked (official mosh doesn't forward OSC 8).
+
+The other problem is sending images. Here's what I do (the mini is the machine being controlled, the Air is the one doing the controlling):
+
+1. Save the image on the Air's clipboard as a png (with pngpaste)
+2. scp it over Tailscale to the mini's /tmp/
+3. Put the file path on the mini back onto the Air's clipboard
+4. Paste that path straight into Claude Code, and Claude can read the image
+
+When I need to actually look at things, I still pair this with copyparty. It's a handy web-based file manager that opens and previews all kinds of files inside the Tailscale network.
+
+<!--
+2026-10-09 W42 addendum: translated from a 10-06 23:39 Threads post, a 10-07 work-log note, and a 10-07 07:39 Threads reply. Added non-source sentences: heading; "The other problem is sending images." (transition).
 -->
 
 <!--

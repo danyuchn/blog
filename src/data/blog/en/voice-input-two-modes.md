@@ -42,6 +42,20 @@ Someone asked whether this transcription method is accurate. The error rate is a
 
 Someone else recommended another STT model. I tried it before. What it is strongest at is recognizing Taiwanese; for Chinese, accuracy is a touch behind qwen.
 
+## Postscript: if you don't want to set anything up, Gemini on the web
+
+The one thing Gemini's web app is still miles ahead at: transcribing audio into a transcript.
+
+Drag in a 23-minute recording and, with Google's massive compute behind it, it's done in 55 seconds. Zero typos.
+
+(The ums and uhs you can clean up afterward if you need to. If it's going into a prompt, just ignore them. On a subscription it's barely a few tokens either way.)
+
+I recommend pairing it with another AI agent. When I'm reviewing a long document, I focus on recording one long audio file, which helps me get into a deep flow state. When I'm done, one click to copy and hand it to the agent to get things done. Lovely.
+
+<!--
+2026-10-09 W42 postscript: translated from a 10-05 17:05 Threads post. Added non-source sentences: heading only.
+-->
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「Back in March I was still wishing for it:」「The tools have since filled that in, and now the question is just how to use them.」 — 類型：併入碎念（Voice Input Please，2026-08-14 週報併入）

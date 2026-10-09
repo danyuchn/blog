@@ -92,6 +92,14 @@ Of course, some tasks do need to be followed strictly to the letter, and maybe G
 
 Even after long-context compression, the accuracy of this mind-reading has not slipped much. I can't tell whether that is the base model being strong or the Claude Code harness being strong.
 
+## One More Thing: opusplan
+
+Claude Code CLI trivia: `/model opusplan` is a special alias. Use it and Plan Mode automatically runs on Opus 5.5, while implementation switches to Sonnet.
+
+<!--
+2026-10-09 W42 merged from micro-notes: 'opusplan' added as a section (heading is framing) and removed from the archive.
+-->
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「Opus 指揮、Sonnet 實作、Fable 當顧問：三個模型的分工」的英文標題 — 類型：框架句（title，在地化）

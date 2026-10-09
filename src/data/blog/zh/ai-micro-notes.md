@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-02T01:00:00Z
+modDatetime: 2026-10-09T00:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -162,7 +162,3 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 **我只是不喜歡人**
 
 > 從小我一直以為自己天生不擅長也不喜歡領導人，不能當主管帶團隊；AI Agent 出現之後我才發現，我只是不喜歡人。
-
-**Codex 寫的剪髮觀察日記**
-
-> 如果 Codex 裡的 GPT 會寫日記，大概會像一篇學術論文：考察一次「前往曼谷 Ekkamai 理髮」的單次、非隨機、非盲法自然情境觀察，還特別聲明不構成對任何理髮店的推薦。

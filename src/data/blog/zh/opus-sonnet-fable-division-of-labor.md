@@ -92,6 +92,14 @@ Gemini 給出的總結好鮮活也好到位：
 
 甚至在長上下文壓縮後，這個讀心的準確度也沒有跑掉多少，這個就不知道是 base model 強還是 claude code harness 強了。
 
+## 補充：opusplan
+
+Claude Code CLI 冷知識：`/model opusplan` 是一個特殊的代號，用了之後會自動進入 Opus 5.5 Plan Mode，但是實作轉 Sonnet。
+
+<!--
+2026-10-09 W42 併入碎念：「opusplan」（10-02 Threads 貼文）新增為一節，小標為框架句，自碎念存檔刪除。
+-->
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「Opus 指揮、Sonnet 實作、Fable 當顧問：三個模型的分工」 — 類型：框架句（title）

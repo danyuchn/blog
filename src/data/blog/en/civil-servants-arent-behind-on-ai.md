@@ -50,3 +50,13 @@ Here's the bullet summary of the ten pages of written comments I gave them.
 - The steam engine paradox: efficiency gains increase workload rather than reducing it.
 - Learning pace is set by individual motivation, not by how fast the tools update.
 - Seed personnel are selected on motivation, logical reasoning, and communication ability.
+
+## Postscript: why the public sector is actually doing better
+
+Here's another counterintuitive one: the best AI adoption results I've seen so far are in the public sector, and the biggest pushback actually comes from young frontline staff.
+
+I think there's another reason too. In the private sector, finish early and your boss hands you more work. In the public sector, finish early and you're simply done early. The time really goes back to the staff, so they're far more motivated.
+
+<!--
+2026-10-09 W42 merged from micro-notes: two 10-08 Threads replies, formerly the live micro-note 'The Public Sector Is Getting the Most Out of AI'; heading is framing.
+-->

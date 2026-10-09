@@ -52,6 +52,18 @@ All in all, if this is a teacher with experience, passion and the drive to make 
 
 All I can say is that people who talk from the comfort of the sidelines have it too easy. They deserve a slap.
 
+## Addendum: the video on running 18 students solo
+
+I never used to think I could coach 18 students on my own and still handle all of it myself: teaching, answering questions, custom study plans, progress adjustments, designing homework, grading homework. Fully personalized service, and more detailed than what I used to give when I only had a handful of students.
+
+With Claude Code, all of that is doable now. It sounds easy, but pulling it off takes some technique:
+
+<div class="video-embed"><iframe src="https://www.youtube.com/embed/Hm05AErsUs8" title="一個人帶 18 位學生，怎麼一個都不漏掉？家教用 AI 管學生的 6 個方法" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<!--
+2026-10-09 W42 addendum: translation of a 10-07 21:32 Threads post; video uploaded to the AgentCrew Academy channel on 10-07. Added non-source sentences: heading only.
+-->
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「流程裡還有一個做法，我都直接跟學生講：」 — 類型：銜接（對應 zh 版同句）

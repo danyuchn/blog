@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-10-02T01:00:00Z
+modDatetime: 2026-10-09T00:00:00Z
 title: "AI Micro-Notes 2026: Chronological Archive"
 slug: en/ai-micro-notes-2026-archive
 featured: false
@@ -54,8 +54,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **RapidAPI vs Apify**
 
 > This week's research conclusion: RapidAPI is "supermarket buying ready-made"; Apify is "kitchen where you can cook your own or buy meal-kits." RapidAPI takes 25% from the platform side rather than the API provider; each API has its own subscription, quotas don't pool, but billing is unified. For teaching scenarios, RapidAPI's "get travel/hotel real-time data without writing scrapers yourself" is great.
-
-## Late April 2026 (W18)
 
 ## Early May 2026 (W19)
 
@@ -151,10 +149,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > Never ship on a Friday.
 
-**Claude Simply Doesn't Care About Uptime**
-
-> Opus 5 shipped last week. My first thought was that they were being brave. Then I thought about it again: Claude has had outages on every day of the week. They simply don't care about uptime.
-
 **The Double Standard on Banning Minors**
 
 > Anthropic is being a bit two-faced here. If they really want to ban minors, their own engineers shouldn't be allowed to use it either — not one of them is mentally an adult.
@@ -227,15 +221,15 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > A screenshot everyone's reposting on X: Fable 5.1 has shown up on Amazon Bedrock, the error going from 400 identifier not valid to 404 model not found. Based on how this has gone before, that means release is days away.
 
+**Codex's Diary Entry About a Haircut**
+
+> If the GPT inside Codex kept a diary, it would probably read like an academic paper: an examination of a single, non-random, non-blinded naturalistic observation of "a trip to Ekkamai in Bangkok for a haircut," with an explicit disclaimer that it does not constitute a recommendation of any particular salon.
+
 ## Mid-September 2026 (W38)
 
 **How I Treat Fable These Days**
 
 > 1. First, flatter it to death, be the hype man. 2. Then steal the technique, so it can write it into the harness and teach the other lousy models.
-
-**Codex's Defensive Writing**
-
-> This is hilarious. This kind of defensive writing looks very much like Codex: "Understood, I will honestly disclose my sleep state. I will distinguish between 'resting with eyes closed,' 'light sleep' and 'deep sleep' and will not merge the three. I will also use SHA-256 to verify that sleep duration matches dream content."
 
 **GPT's Image Model Roasts Claude Especially Well**
 
@@ -288,7 +282,3 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Bend Once for a Client and You'll Keep Bending**
 
 > A prospective client, before signing anything, quizzed me in detail on how to use AI and plan their workflows, had me build trial integrations and demos of key workflows, and asked for templates. Two months later there was no contract; my contact said the boss had other plans and vanished. Bend over backwards for a client once, and you'll be doing it many more times. Whenever a client feels off, step away; in hindsight your gut is right.
-
-**The Signal That a Model Company Is Heading Into a Headwind**
-
-> How can you tell a model company is about to hit a headwind? When it keeps pushing all kinds of flashy end-user apps. Think of Claude Design shipping something new every day, or OpenAI's Sora social short-video app. When those get pruned back, the company is about to catch a tailwind again.

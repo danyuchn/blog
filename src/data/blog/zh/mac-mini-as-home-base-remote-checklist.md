@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-09-13T04:00:00Z
-modDatetime: 2026-10-02T01:00:00Z
+modDatetime: 2026-10-09T00:00:00Z
 title: 出國前的遠端連線檢查表：把 Mac Mini 留在家當本體
 slug: zh/mac-mini-as-home-base-remote-checklist
 featured: false
@@ -41,6 +41,25 @@ description: '出國前一次寫下的八條遠端配置檢查表：Tailscale、
 
 <!--
 2026-10-02 W41 補記：新增一節，第一段為 09-30 21:33 與 10-01 12:29 兩則 Threads 貼文逐字合併；條列為作者 09-28 工作日誌「踩坑」段刪減改寫（去掉內網位址等細節）。新增非原文句子：小標（框架句）、「出門前的遠端演練也踩到幾個坑，後來都寫進了手冊：」（銜接）。
+-->
+
+## 補記：SSH 換 mosh、跨機傳圖
+
+剛剛把遠端連回家中 Claude Code CLI 的通訊協定，從 SSH 改成 mosh 了，在飯店 Wifi 瘋狂掉封包的情境下，mosh 竟然超級順，太感動了。
+
+不過經 mosh 連進 mini 時，Markdown 連結不變色也點不開（官方 mosh 不轉送 OSC 8）。
+
+另一個問題是傳圖。我的方法是（mini 被操控機，Air 操控機）：
+
+1. 把 Air 剪貼簿裡的圖存成 png（用 pngpaste）
+2. 透過 Tailscale 用 scp 傳到 mini 的 /tmp/
+3. 把 mini 上的檔案路徑放回 Air 的剪貼簿
+4. 你在 Claude Code 裡直接貼上那個路徑，Claude 就讀得到圖
+
+有一些要看東西的部分我還是會搭配 copyparty 這個套件，他是一個蠻好用的網頁式檔案總管，可以在 Tailscale 內網中打開且預覽各式各樣的檔案。
+
+<!--
+2026-10-09 W42 補記：第一段為 10-06 23:39 Threads 貼文逐字；第二段為作者 10-07 工作日誌踩坑改寫；條列與末段為 10-07 07:39 Threads 回覆逐字（去掉開頭「我昨天也是在處理圖的問題...不過是傳圖」）。新增非原文句子：小標（框架句）、「另一個問題是傳圖。」（銜接）。
 -->
 
 <!--

@@ -224,6 +224,12 @@ The hottest flex of 2026: skip the Claude subscription, hit the API directly for
 
 When it comes to encouraging users to burn tokens, Anthropic really is trying harder than anyone before or after.
 
+Dynamic workflow is basically Anthropic's in-house toy. You need unlimited tokens to use it without worrying. Best to leave it alone, or else cap the number of subagents in your settings.
+
+<!--
+2026-10-09 W42 merged from micro-notes: dynamic-workflow note appended to this section and removed from the archive.
+-->
+
 <!--
 2026-08-28 W36 main-thread note: "The Token-Burning Perpetual Motion Machine" (2026-06-13) was merged in here and turned into a stub. That post is a rant rather than an incident record, which is why the 2026-08-22 merge pass left it out; it is kept as its own section here rather than folded into the four incidents, to preserve the difference in register. Kept verbatim; the only added non-original sentence is the subheading (framing).
 -->

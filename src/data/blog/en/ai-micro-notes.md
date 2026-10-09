@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-02T01:00:00Z
+modDatetime: 2026-10-09T00:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -162,7 +162,3 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **I Just Don't Like People**
 
 > All my life I assumed I was naturally bad at leading people and didn't enjoy it, that I couldn't manage a team. Then AI Agents showed up and I realized I just don't like people.
-
-**Codex's Diary Entry About a Haircut**
-
-> If the GPT inside Codex kept a diary, it would probably read like an academic paper: an examination of a single, non-random, non-blinded naturalistic observation of "a trip to Ekkamai in Bangkok for a haircut," with an explicit disclaimer that it does not constitute a recommendation of any particular salon.

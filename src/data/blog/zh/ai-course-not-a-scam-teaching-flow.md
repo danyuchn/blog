@@ -52,6 +52,18 @@ description: '最近看到有人說開 AI 課就是割韭菜。我教 GMAT 15 �
 
 只能說脆上面出嘴的人還是太輕鬆了，欠掌嘴
 
+## 補記：一個人帶 18 位學生的影片
+
+以前的我從來沒有想過，我可以一個人當教練管理 18 個學員，還能夠一手包辦教學、答疑、讀書計劃客製規劃、進度調整、設計作業、批改作業，做到高度個人化的服務，服務的細緻程度比我以前帶個位數的學員還來得好得多。
+
+現在有了 Claude Code，這些都能做到。說起來輕鬆，但是做起來，卻需要一點技巧：
+
+<div class="video-embed"><iframe src="https://www.youtube.com/embed/Hm05AErsUs8" title="一個人帶 18 位學生，怎麼一個都不漏掉？家教用 AI 管學生的 6 個方法" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<!--
+2026-10-09 W42 補記：兩段為 10-07 21:32 Threads 貼文逐字（補半形空格）；影片為 AgentCrew Academy 10-07 上架。新增非原文句子：小標（框架句）。
+-->
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「流程裡還有一個做法，我都直接跟學生講：」 — 類型：銜接（把另一則回覆接進流程段，取代原文「我都直接跟學生講：」開頭）
