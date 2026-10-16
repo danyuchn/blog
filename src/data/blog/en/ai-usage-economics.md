@@ -239,6 +239,26 @@ That's about it, for what it's worth.
 1. If you want to save money, protect your cache. On the $20 plan the cache lasts 5 minutes; on $100 and up it's 1 hour. Type `/usage` any time and the last line shows your cache hit rate. Beyond not walking away too long, don't keep switching models.
 2. Switching effort mid-conversation on Opus 5.5 finally doesn't break the cache. Want the model more careful and autonomous, turn effort up; want it faster with you stepping in more, turn it down. I switched effort once or twice in that conversation and the cache definitely held.
 
+## Use the monthly API credit
+
+A reminder: use the API credit Claude gives you each month, equal to your subscription fee. Right now I plug it straight into the scheduled jobs I run every night: the to-do morning-brief dashboard, newsletter material collection, and weekly harness maintenance.
+
+I also used this as a chance to tune those scheduled jobs. When I first took stock, I found some of them were running on Opus, and the hidden cost was pretty high. Because scheduled jobs run where you can't see them, that invisible quota burn is easy to miss. So I switched to Sonnet 5.5 and adjusted effort and the prompts, and ended up replacing the model with Sonnet: same quality, half the cost.
+
+Next step: figure out how to use up the Cloud Session credit that expires in early November...
+
+People asked what else I use it for and how I hook it up (I plug the API key in under -p mode):
+
+1. I designed my own eval set based on my tasks and use it to test different models at different effort levels, to find the most fine-grained dispatch settings for subagents.
+2. Once a week, capped at 25 USD, I let it clear low-risk to-dos that can run autonomously.
+3. The things mentioned above.
+
+But actually, switching /login over to the API also draws on that 100 USD. So if you can't think of anything to use it on, switch to API mode a few days before the credit expires and it gets used up. As long as you don't attach a card for billing on the API Console side, you lose nothing.
+
+<!--
+2026-10-16 W43 merge: one section from a 10-10 15:55 Threads post and two replies (10-10 16:17, 16:31). Translated from the zh, which is verbatim. Added non-original sentences: subheading (framing); "People asked what else I use it for and how I hook it up" (transition giving the reply context).
+-->
+
 <!--
 2026-10-02 W41 merge: two sections from two Threads posts (09-25 18:22 on window value, 09-28 16:57 on cache). Translated from the zh, which is verbatim from the posts. Added non-original sentences: the two subheadings (framing). "大 guy 4 這樣" is a Mandarin pun on "大概是這樣" (roughly like this) and is rendered as "That's about it."
 -->

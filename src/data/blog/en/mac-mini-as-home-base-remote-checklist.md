@@ -64,6 +64,26 @@ When I need to actually look at things, I still pair this with copyparty. It's a
 2026-10-09 W42 addendum: translated from a 10-06 23:39 Threads post, a 10-07 work-log note, and a 10-07 07:39 Threads reply. Added non-source sentences: heading; "The other problem is sending images." (transition).
 -->
 
+## Postscript: clicking file links remotely, and asking AI over ssh on a China eSIM
+
+For the past two weeks I've been traveling, mostly working by remote-controlling Claude Code CLI on the Mac mini at home from my laptop and phone. Every time I clicked a file link, nothing happened. Then I'd remember the link is a local path, so clicking it only opens the file on the mini back home, and I'd have to hurriedly add: open it on my laptop/phone through tailscale.
+
+Just now I had an idea and built a switcher with a Claude Mod. When I'm on the laptop or phone, I flip the mode, and the Mod intercepts the local paths in the model's output, rewrites them as LAN addresses, and injects a prompt: the user is currently on remote device XX; if the user asks to open a file, use tailscale to do it on that device.
+
+Aren't I clever!
+
+![The remote-device Mod's help screen: three modes, /at air, /at iphone and /at mini, which rewrite file:// links in replies as copyparty URLs and tell Claude to ssh into the Air and run open when it needs to open a file.](/blog/assets/posts/mac-mini-as-home-base-remote-checklist/1-remote-device-mod.jpg)
+
+I also stumbled on a nice side use of tailscale: when I accidentally bought a travel eSIM that routes through a China node and every AI service died, I could still ask AI over ssh.
+
+![On my phone, connected to the Mac mini at home over mosh, asking AI about jjimjilbang spas in Busan, and the answer comes back as usual.](/blog/assets/posts/mac-mini-as-home-base-remote-checklist/2-ssh-ask-ai-china-esim.jpg)
+
+Someone asked whether to route all traffic through an exit node. No need. With claude in particular, I worry there's some device fingerprint I don't know about, and if it doesn't match the region of the VPN exit, the account gets flagged and banned. So I just keep the device fully hidden in the back.
+
+<!--
+2026-10-16 W43 addendum: translated from a 10-09 23:30 Threads post, a 10-13 08:51 Threads post, and a 10-13 16:26 Threads reply. Added non-source sentences: heading; "also" (transition); "Someone asked whether to route all traffic through an exit node." (transition, split out of the reply's opening line); both image alt texts.
+-->
+
 <!--
 List of added non-original sentences (fidelity disclosure):
 1. "Unlike the [five-step SOP I wrote for letting Claude Code run in the background from a hotel room before dinner], that one was a short backup plan for stepping out for dinner while still in Taiwan; this time I'm leaving the whole country, and the Mac Mini has to hold up as home base for days." — Type: framing sentence (the one framing sentence explicitly authorized by the dispatch instructions, pointing out the difference from the existing article and linking to it)

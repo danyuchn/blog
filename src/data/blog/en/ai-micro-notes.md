@@ -107,6 +107,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > If you're building a product, talk with the agent at the start about which data collection points to plant in the site. Then whether you're fixing bugs or improving the user experience later, there's a trail to follow. Opus 5.5 is very good at reading user trails, finding where the product experience is bad, and fixing it itself.
 
+**One Line on Managing It All in Docs**
+
+> One-off results go in a file, a workflow you'll do a second time becomes a skill, shared house rules go in agents.md, and if it still won't listen after you've told it, hang a hook on it.
+
 ## AI Industry & Business Observations
 
 **Anthropic in China**

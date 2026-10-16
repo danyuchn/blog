@@ -181,6 +181,25 @@ Once the paths were fixed and I went to re-render, I hit a second landmine: the 
 
 Eight days of failure, and not a single line of red text saved me. Nothing looked off on the launchd side. The YouTube backend showed no failed jobs, because no job ever reached it. The cheapest place to catch all of this was that one `launchctl list | grep <label>` to glance at the exit code — I just didn't look for eight days.
 
+## Postscript: guards in stripped-down environments that look like they ran but guarded nothing
+
+This week's work log piled up another batch of the same kind of trap. Every one of them returned rc=0 with no error message:
+
+- `ssd-swap-guard.sh` couldn't find `sysctl` under launchd's minimal PATH, so the swap field stayed empty the whole time. In effect, swap wasn't being guarded. Fixed by adding `/usr/sbin` inside the guard script.
+- `~/.claude/` is a protected path: a model running headless still can't write there even when allowedTools permits Write/Edit. Because of this, every B1 run in my eval script produced nothing from 10/08 on. Output folders have to live outside `~/.claude`.
+- The browser automation tool's `active.json` got wiped while the host process was still alive. It only worked again after I killed the host and the extension restarted itself.
+- A writing-guard hook always blocks inside subagents (it only reads the main thread's transcript), and it matches against the full text of Bash commands, which produces false positives.
+
+The other kind is a long background run that just sits and waits, and I only find out when I ask:
+
+- Three processes in a confirmation round sat idle when the Codex quota ran out: every retry waited 10 minutes, up to 4 times, and it held up Qwen too. I've added monitoring that switches over automatically.
+- `A && nohup B &` throws the whole chain into a subshell, so the background process dies the moment it starts and the log is empty. Background launches need their own line: `nohup B &`.
+- Running agy serially over 14 batches took 50 minutes and 270k tokens, and a background agent was polling with `sleep 240` doing nothing. Changed to label everything in one go with batches in parallel.
+
+<!--
+2026-10-16 W43 merge: one section from the author's 10-09, 10-10, 10-11 and 10-16 work-log "gotchas" entries, translated from the zh. Added non-original sentences: subheading (framing); the opening line (framing); "The other kind is a long background run..." (transition, from the log's "only found out when the user asked").
+-->
+
 ## The one thing that holds: write the plea as a hook
 
 I spent some time researching how to defend against Opus 4.8 faking tool output and poisoning context with hallucinations, and I confirmed one thing empirically: a rule written in CLAUDE.md is only a probabilistic constraint on the model. You write the prohibition, and it can still ignore it. The thing that actually holds is a hook — because a hook is code, not something the model chooses whether to obey.

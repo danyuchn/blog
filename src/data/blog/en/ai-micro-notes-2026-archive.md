@@ -282,3 +282,21 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Bend Once for a Client and You'll Keep Bending**
 
 > A prospective client, before signing anything, quizzed me in detail on how to use AI and plan their workflows, had me build trial integrations and demos of key workflows, and asked for templates. Two months later there was no contract; my contact said the boss had other plans and vanished. Bend over backwards for a client once, and you'll be doing it many more times. Whenever a client feels off, step away; in hindsight your gut is right.
+
+## Mid-October 2026 (W43)
+
+**Resets Are Losing Their Soothing Effect**
+
+> I'm starting to understand the old saying that a cup of rice earns gratitude while a bushel earns resentment. The calming effect of handing out resets seems to be wearing off fast.
+
+**Same Prompt as Someone Running 16 Projects at Once**
+
+> Turns out my most-used prompt is exactly the same as Lauren's: "/bro catch me up on everything since my last message, and if there are any action items for me, give me enough context (executive summary) to make a decision."
+
+**Claude Code as Couples Counselor**
+
+> Claude Code is attempting deep couples counseling between me and Codex: it started by digging the "this made me furious" moments out of my actual past conversations with Codex, as the basis for a probe script.
+
+**OAI, Please Pull It Together**
+
+> OAI, please pull it together. If you're gone, A\ will start acting up.

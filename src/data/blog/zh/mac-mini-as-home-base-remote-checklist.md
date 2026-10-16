@@ -62,6 +62,26 @@ description: '出國前一次寫下的八條遠端配置檢查表：Tailscale、
 2026-10-09 W42 補記：第一段為 10-06 23:39 Threads 貼文逐字；第二段為作者 10-07 工作日誌踩坑改寫；條列與末段為 10-07 07:39 Threads 回覆逐字（去掉開頭「我昨天也是在處理圖的問題...不過是傳圖」）。新增非原文句子：小標（框架句）、「另一個問題是傳圖。」（銜接）。
 -->
 
+## 補記：遠端點檔案連結、中國 eSIM 時用 ssh 問 AI
+
+這兩個禮拜出遠門，常常用筆電跟手機遙控家裡的 mac mini 上的 claude code CLI 工作。每次點下去檔案連結發現沒有反應，才想到連結是本機路徑，點下去只會在家裡的 mini 開啟，然後又要匆忙補一句：幫我用 tailscale 在筆電／手機上打開。
+
+剛才靈機一動，用 Claude Mod 做了一個切換器：在筆電或手機上的時候就切模式，Mod 會自動把模型輸出的本機路徑攔截轉譯成內網路徑，並注入提示詞：用戶現在在 XX 遠端，如果用戶要求打開檔案，請操作 tailscale 在該遠端執行。
+
+我真是冰雪聰明！
+
+![remote-device Mod 的說明畫面：/at air、/at iphone、/at mini 三種模式，把回覆裡的 file:// 連結改成 copyparty 網址，並提示 Claude 要開檔就 ssh 到 Air 執行 open。](/blog/assets/posts/mac-mini-as-home-base-remote-checklist/1-remote-device-mod.jpg)
+
+另外意外發現 tailscale 的妙用：不小心買到中國節點的旅遊 esim 導致 AI 全 G 時，還可以用 ssh 問 AI。
+
+![手機用 mosh 連回家裡的 Mac mini，請 AI 查釜山的汗蒸幕，回覆照常出現。](/blog/assets/posts/mac-mini-as-home-base-remote-checklist/2-ssh-ask-ai-china-esim.jpg)
+
+有人問要不要讓所有流量都走 exit node。沒有需要。如果是 claude，我擔心有什麼我不知道的裝置指紋，如果跟 vpn 出口地域特徵不一致，會被 flag、被封。所以還是完全讓裝置隱身在後方就好。
+
+<!--
+2026-10-16 W43 補記：第一～三段為 10-09 23:30 Threads 貼文逐字；第四段為 10-13 08:51 Threads 貼文逐字（去掉開頭「好好笑，」）；末段為 10-13 16:26 Threads 回覆逐字合併。新增非原文句子：小標（框架句）、「另外」（銜接）、「有人問要不要讓所有流量都走 exit node。」（銜接，原文為回覆他人時的開頭「沒有需要所有流量都走exit node⋯」拆寫）、兩張圖 alt 文字（改寫）。
+-->
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「跟之前寫的[出門吃飯前，讓 Claude Code 在旅館背景偷跑的五步 SOP]不一樣，那篇是人還在台灣、出門吃頓飯的短暫備援；這次是整個人離開這座城市，Mac Mini 要撐好幾天當本體。」 — 類型：框架句（依派工指示新增的唯一允許框架句，點出與既有文章的差異並附連結）
