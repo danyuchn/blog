@@ -11,6 +11,7 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
+import rehypeInlineCta from "./src/utils/plugins/rehypeInlineCta";
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
         remarkToc,
         [remarkCollapse, { test: "Table of contents" }],
       ],
+      rehypePlugins: [rehypeInlineCta],
     }),
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes

@@ -4,15 +4,24 @@ import type { Lang } from "@/utils/i18n";
 
 type Props = {
   lang: Lang;
+  slug: string;
 };
 
-const { lang } = Astro.props;
+const { lang, slug } = Astro.props;
 
-const ctaUrl =
+const utmContent = slug.replace(/^(zh|en)\//, "");
+const soloParams = new URLSearchParams({
+  utm_source: "blog",
+  utm_medium: "post_cta",
+  utm_campaign: "blog_funnel_fix",
+  utm_content: utmContent,
+});
+const ctaUrl = `https://agentcrew.cc/l3/solo?${soloParams.toString()}`;
+const diagnosisUrl =
   "https://agentcrew.cc/l3/inquire?utm_source=blog&utm_medium=post_cta&utm_campaign=diagnosis";
 ---
 
-<div class="mt-10 border border-border p-6 sm:p-8" data-pagefind-ignore>
+<div class="mt-10 border-2 border-accent bg-accent-surface p-6 sm:p-8" data-pagefind-ignore>
   <div class="flex items-baseline gap-2">
     <span
       class="font-mono text-xs tracking-widest text-accent uppercase"
@@ -21,24 +30,29 @@ const ctaUrl =
       &rarr;
     </span>
     <h2 class="font-display text-xl font-bold text-foreground sm:text-2xl">
-      {t("diagnosis.title", lang)}
+      {t("solo.title", lang)}
     </h2>
   </div>
   <p class="mt-3 text-sm leading-relaxed text-foreground/75 sm:text-base">
-    {t("diagnosis.desc", lang)}
+    {t("solo.desc", lang)}
   </p>
   <a
     href={ctaUrl}
     target="_blank"
     rel="noopener noreferrer"
-    class="link-underline-slide group mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent"
+    class="mt-5 inline-flex items-center gap-1.5 bg-accent px-5 py-3 text-sm font-semibold text-background no-underline"
   >
-    {t("diagnosis.cta", lang)}
-    <span
-      aria-hidden="true"
-      class="transition-transform duration-150 group-hover:translate-x-0.5"
-    >
-      &rarr;
-    </span>
+    {t("solo.cta", lang)}
+    <span aria-hidden="true">&rarr;</span>
   </a>
+  <p class="mt-4 text-sm text-foreground/75">
+    <a
+      href={diagnosisUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-underline-slide text-accent"
+    >
+      {t("diagnosis.cta", lang)}
+    </a>
+  </p>
 </div>

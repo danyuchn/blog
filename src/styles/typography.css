@@ -126,3 +126,14 @@
     }
   }
 }
+
+/* Lightweight inline CTA injected before the first H2 (rehypeInlineCta) */
+.post-inline-cta {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+  font-size: 0.95em;
+}
+.post-inline-cta a {
+  color: var(--accent);
+  font-weight: 600;
+}
