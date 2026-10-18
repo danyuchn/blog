@@ -12,6 +12,23 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
 import rehypeInlineCta from "./src/utils/plugins/rehypeInlineCta";
+import { readdirSync, readFileSync } from "node:fs";
+
+// Posts whose canonicalURL points to another post are merged duplicates;
+// keep them out of the sitemap so Google only sees canonical URLs.
+const nonCanonicalPaths = new Set<string>();
+for (const lang of readdirSync("src/data/blog")) {
+  if (lang.startsWith("_") || lang.includes(".")) continue;
+  for (const file of readdirSync(`src/data/blog/${lang}`)) {
+    if (!file.endsWith(".md")) continue;
+    const fm = readFileSync(`src/data/blog/${lang}/${file}`, "utf8").split("\n---")[0];
+    const canonical = fm.match(/^canonicalURL:\s*["']?([^"'\s]+)/m)?.[1];
+    if (!canonical) continue;
+    const slug = (fm.match(/^slug:\s*["']?([^"'\s]+)/m)?.[1] ?? file.replace(/\.md$/, "")).split("/").pop();
+    const path = `/blog/posts/${lang}/${slug}`;
+    if (new URL(canonical).pathname.replace(/\/$/, "") !== path) nonCanonicalPaths.add(path);
+  }
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +36,9 @@ export default defineConfig({
   base: "/blog",
   integrations: [
     sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives"),
+      filter: page =>
+        (SITE.showArchives || !page.endsWith("/archives")) &&
+        !nonCanonicalPaths.has(new URL(page).pathname.replace(/\/$/, "")),
     }),
   ],
   markdown: {
