@@ -25,12 +25,22 @@ const {
   profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage ? `/${SITE.ogImage}` : "/og.png",
-  canonicalURL = new URL(Astro.url.pathname, Astro.url),
+  canonicalURL: rawCanonicalURL = new URL(Astro.url.pathname, Astro.url),
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
   language,
 } = Astro.props;
+
+// The /blog proxy serves both "/x" and "/x/" with 200; always point canonical
+// (and og:url) at the trailing-slash form so Google consolidates on one URL.
+const canonicalURL = (() => {
+  const url = new URL(rawCanonicalURL);
+  if (!url.pathname.endsWith("/") && !/\.[a-z0-9]+$/i.test(url.pathname)) {
+    url.pathname += "/";
+  }
+  return url.href;
+})();
 
 const htmlLang = language ?? SITE.lang ?? "en";
 
