@@ -22,7 +22,7 @@ I checked prices and limits on the official pages on 2026-10-18. They will chang
 - Max 5x: 100 USD a month, with 5 times Pro's usage per session.
 - Max 20x: 200 USD a month, with 20 times Pro's usage per session.
 - Both Max tiers include monthly API credits: 100 USD on 5x, 200 USD on 20x.
-- Limits come as a rolling five-hour window plus a weekly limit. The web app, desktop, mobile and Claude Code share one pool, and Max adds a separate weekly limit for Fable.
+- Limits come as a rolling five-hour window plus a weekly limit. The web app, desktop, mobile and Claude Code share one pool. On Max, Fable can use at most 50% of the weekly limit; on Pro, Fable needs separately purchased usage credits.
 - The [Claude Code help article](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan) gives no message counts, hours or token counts, and the actual weekly numbers aren't published.
 
 That last point matters. Whenever I say below whether a plan is enough in practice, it's from my own testing or someone else's. There's no official number to check it against.
@@ -62,8 +62,6 @@ One trap to remember: the official help page says that if an `ANTHROPIC_API_KEY`
 ## Before you buy
 
 Quota disappearing doesn't always mean you used too much. A cache bug, resume recomputing the whole context, Opus 4.7's measured consumption, and the time one of my own sessions burned 90% of my quota in half an hour through recursive subagents are all written up in the [quota incident log](/blog/posts/en/claude-code-quota-incident-log). If you bought Max and the quota still looks wrong, check those four first.
-
-And if there are 5 minutes left before reset and 10% unused, burn it. Unused quota is just wasted.
 
 That's it.
 

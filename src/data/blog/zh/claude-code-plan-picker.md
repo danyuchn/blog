@@ -22,7 +22,7 @@ Pro 20 美元，適合偶爾問問題、還沒讓 Claude Code 自己跑多步驟
 - Max 5x：每月 100 美元，每個 session 的用量是 Pro 的 5 倍。
 - Max 20x：每月 200 美元，每個 session 的用量是 Pro 的 20 倍。
 - Max 兩檔都附每月 API 額度，5x 是 100 美元，20x 是 200 美元。
-- 額度分五小時的滾動視窗跟週額度。網頁、桌面、手機、Claude Code 共用同一個池，Max 另外有 Fable 的獨立週額度。
+- 額度分五小時的滾動視窗跟週額度。網頁、桌面、手機、Claude Code 共用同一個池。Fable 在 Max 最多只能用到週額度的 50%，Pro 要用 Fable 得另外買 usage credits。
 - [Claude Code 的說明頁](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan)沒有給訊息數、小時數或 token 數，週額度的實際數字也沒公布。
 
 最後這點很重要，下面幾段講到的「實際夠不夠用」，都是我自己或別人實測的，官方沒有數字可以對。
@@ -62,8 +62,6 @@ Max 每個月還送等值的 API credit，這個要善用。我是接到每天�
 ## 買之前還要知道的
 
 額度被吃掉，不一定是你用太兇。快取 bug、resume 重算整包上下文、Opus 4.7 的實測消耗，還有我自己一個 session 半小時燒掉 90% 的 subagent 遞迴，我都記在[額度事件那篇](/blog/posts/zh/claude-code-quota-incident-log)。如果你買了 Max 還是覺得額度不對勁，先去對一下那四起。
-
-至於重置前剩 5 分鐘、還有 10% 沒用完，趕快燒完，不燒就浪費了。
 
 就這樣。
 
