@@ -12,7 +12,7 @@ tags:
 description: 'My question bank is AI-generated, so I did not let the same AI check it. A second AI re-solved every sampled question without seeing the answer key, and people judged whatever did not match.'
 ---
 
-I run a GMAT practice platform called PDT, and most of its question bank is AI-generated. The Critical Reasoning (CR) section alone has 2,662 questions, and 2,624 of them have IDs starting with ai_gen.
+I run a GMAT practice platform called PDT, and most of its question bank is AI-generated. In the early-September backup, the Critical Reasoning (CR) section alone had 2,662 questions, and 2,624 of them had IDs starting with ai_gen.
 
 If an AI wrote the questions, who checks them? I asked a second AI to solve each one from scratch without seeing the answer.
 
@@ -44,7 +44,7 @@ The second kind is small enough that a human eye would miss it. In one reading p
 
 The third kind is leftover damage from batch generation. In 38 DS questions, the closing question was replaced with the text of option A, so students read a sentence that looks like it's giving the answer. For 10 of them the key happened to be A. They all came from the same generation batch.
 
-The fourth kind can't be seen on any single question; you have to look at the whole bank. Across 2,662 CR questions, the correct answer is C 48% of the time, B 38%, D 5%, E 1%. Always picking C gets you nearly half right, which inflates students' scores and teaches a habit that doesn't help on the real exam.
+The fourth kind can't be seen on any single question; you have to look at the whole bank. Across 2,662 CR questions, the correct answer is C 48% of the time, B 38%, D 5%, E 1%. Always picking C gets you nearly half right, which inflates students' scores and teaches a habit that doesn't help on the real exam. Shuffling the options later fixed part of this: of the 4,766 CR questions live on October 20, C is the key about 32% of the time, still not even.
 
 ## The blind solver gets things wrong too
 
@@ -87,5 +87,6 @@ Source material: the nine blind-solve audit files dated 2026-10-18 onward and th
 12. "AI can write the questions ... the name on it is still mine." (framing; echoes Dustin's 7/31 post on verification as human responsibility, but this sentence is mine)
 13. "deliberately over-sampled the small question types" (rewrite of the CR audit appendix A quota design)
 14. The solving AI is only called "a second AI". The audit files repeatedly say Claude did the blind solving, and do not say which model wrote the questions; the article names no model.
+16. "In the early-September backup" and the shuffle sentence with 4,766 / about 32%: facts added by the main session (2,662 is the 9/3 backup count; 4,766 and 1,523 C keys come from the read-only production export of 2026-10-20 01:23; the shuffle going live is in the pdt-platform.md 10/20 entry, "option shuffle 3,842").
 15. Number sources: 2,662 / 2,624 (verbal audit L120); 112 questions and 2.7% (L45, L50); 0.94% and 319 (CR audit L69); PS 250 / DS 250 / CR 200 / RC 240 with 0 wrong keys (pdt-platform.md progress log, 2026-10-18 entry); 9 attempts, 11% (verbal L84); only record (verbal L127-L131); 4 options (verbal L134); still water (verbal L138); 38 questions, 10 of them (DS audit L73); 48% / 38% / 5% / 1% (verbal L120); DS missed "cost can't be negative" (DS audit L62, L158); first pick D on the tobacco question (low-accuracy audit L45); 13/13 and three medium-confidence (verbal L35-L40); 10/20 blind solve picked B (pdt-platform.md progress log, 2026-10-20 entry); same solving model across rounds (PS audit L114).
 -->
