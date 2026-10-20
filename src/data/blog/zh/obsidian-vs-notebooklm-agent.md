@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-tools
   - obsidian
-description: 這兩個工具常被拿來比較，但解決的問題其實不同。從 Claude Agent 自動化的角度來看，差異更明顯：一個是 Agent 直接讀寫的本機知識庫，另一個的 API 在「管理 Notebook」這件事上就停了。
+description: '這兩個工具常被拿來比較，但解決的問題其實不同。從 Claude Agent 自動化的角度來看，差異更明顯：一個是 Agent 直接讀寫的本機知識庫，另一個的 API 在「管理 Notebook」這件事上就停了。'
 ---
 
 Obsidian 和 NotebookLM 這兩個工具常被放在一起比較，但多數比較都停在「哪個的 AI 比較好用」這個角度。

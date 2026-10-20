@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - ai-trends
   - ai-workflow
-description: 4/23–4/29 這週的觀察與整理：1M context window 的正確心態、Claude 額度焦慮進化成集體現象、SpaceX 搶在微軟前面拿下 Cursor、Claude 4.7 根據 125 字認出記者、live coding 做音樂的副作用。
+description: '4/23–4/29 這週的觀察與整理：1M context window 的正確心態、Claude 額度焦慮進化成集體現象、SpaceX 搶在微軟前面拿下 Cursor、Claude 4.7 根據 125 字認出記者、live coding 做音樂的副作用。'
 ---
 
 ## 1M Context 是管理問題，不是容量問題

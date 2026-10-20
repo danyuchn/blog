@@ -12,7 +12,7 @@ tags:
   - codex
   - model-comparison
   - opinion
-description: A year in, the three flagships have developed very visible "personalities" — Gemini 3 is the dramatic PhD, Claude 4.7 is the slick veteran, and GPT-5.5 turns out to be the most pragmatic colleague of the wave. Plus a fun trick for guessing the version from "sass density."
+description: 'A year in, the three flagships have developed very visible "personalities" — Gemini 3 is the dramatic PhD, Claude 4.7 is the slick veteran, and GPT-5.5 turns out to be the most pragmatic colleague of the wave. Plus a fun trick for guessing the version from "sass density."'
 ---
 
 From January to May I have been jotting model-personality observations on Threads. Read individually they are just gripes. Compiled into one piece, it becomes clear — the three flagships have walked into very distinct "personalities" this generation.

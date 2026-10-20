@@ -9,7 +9,7 @@ tags:
   - ai-consulting
   - contract
   - lessons-learned
-description: 5/12 行政班合約 1.5 小時被自己做成 2.5 小時（+67%），追根究底是把客戶閒談的主題偏好誤解為 scope 擴張授權。教訓寫成五條 Scope Discipline，未來企業案 / 1-on-1 / 家教合約必含。
+description: '5/12 行政班合約 1.5 小時被自己做成 2.5 小時（+67%），追根究底是把客戶閒談的主題偏好誤解為 scope 擴張授權。教訓寫成五條 Scope Discipline，未來企業案 / 1-on-1 / 家教合約必含。'
 ---
 
 5/12 接了一場行政班，合約寫 1.5 小時。最後上了 2.5 小時。超時 67%。

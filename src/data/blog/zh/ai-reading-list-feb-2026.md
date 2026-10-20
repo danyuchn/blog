@@ -8,7 +8,7 @@ draft: true
 tags:
   - recommended-reading
   - ai-trends
-description: 二月上旬讀到的 AI 好文，涵蓋 coding agent、AI 對工作的影響、程式語言的未來等主題。
+description: '二月上旬讀到的 AI 好文，涵蓋 coding agent、AI 對工作的影響、程式語言的未來等主題。'
 ---
 
 最近讀了不少 AI 相關的文章，有些觀點蠻值得記下來的。趁還沒忘，先寫下來。

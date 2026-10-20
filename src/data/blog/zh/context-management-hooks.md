@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: 從 Claude.md 到 Hooks，分享大量使用 Claude Code 後對上下文管理的理解升級。規則塞太多怎麼辦？Hooks 就是那個完美的守門員。
+description: '從 Claude.md 到 Hooks，分享大量使用 Claude Code 後對上下文管理的理解升級。規則塞太多怎麼辦？Hooks 就是那個完美的守門員。'
 ---
 
 很多從對話視窗轉過來用 Claude Code 想要提升生產力的人，一開始感到挫折的原因，都是因為不懂 Claude.md。再來就是懂了，但不知道怎麼管理上下文。

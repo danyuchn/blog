@@ -10,7 +10,7 @@ tags:
   - ai-product-building
   - non-engineer
   - case-study
-description: 一位幾十人公司的法務上完 Claude Code 課之後，把原本要好幾天的專利侵權查核壓到一天，而且真的抓到送上法律程序。這篇想記下這個案例，因為它讓「Claude Code 不是只給工程師用」這句話從口號變成事實。
+description: '一位幾十人公司的法務上完 Claude Code 課之後，把原本要好幾天的專利侵權查核壓到一天，而且真的抓到送上法律程序。這篇想記下這個案例，因為它讓「Claude Code 不是只給工程師用」這句話從口號變成事實。'
 ---
 
 法務查專利侵權，原本要好幾天。

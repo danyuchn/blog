@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: A heavy user with zero engineering background shares the Dunning-Kruger curve of Claude Code from day one to week three, and the workflow that finally clicked.
+description: 'A heavy user with zero engineering background shares the Dunning-Kruger curve of Claude Code from day one to week three, and the workflow that finally clicked.'
 ---
 
 I'm not an engineer by training, but over the past six months I've used Claude Code for database refactoring, front-end/back-end integration, multi-agent orchestration, and deployment. Here's what the journey actually looked like for a complete outsider.

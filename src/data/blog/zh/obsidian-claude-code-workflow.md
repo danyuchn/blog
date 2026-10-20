@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - productivity
-description: 把人生都放到 Obsidian，再讓 Claude Code 接入。日誌怎麼記、待辦怎麼管、為什麼本地 Markdown 勝過 Notion。
+description: '把人生都放到 Obsidian，再讓 Claude Code 接入。日誌怎麼記、待辦怎麼管、為什麼本地 Markdown 勝過 Notion。'
 ---
 
 我的 Obsidian vault 裡面存放了日記、工作日誌、靈感、想法、各專案的連結、所有大大小小待辦事項。然後用 Claude Code 接入，讓 AI 能直接讀寫這些資料。

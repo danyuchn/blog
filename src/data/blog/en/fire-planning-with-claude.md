@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - personal-finance
-description: I fed all my assets, liabilities, income, and expenses into Claude Code, then just asked "am I going broke?" A month of conversations turned into a full FIRE planning toolkit — and why I open-sourced it.
+description: 'I fed all my assets, liabilities, income, and expenses into Claude Code, then just asked "am I going broke?" A month of conversations turned into a full FIRE planning toolkit — and why I open-sourced it.'
 ---
 
 FIRE (Financial Independence, Retire Early) is exactly what it sounds like — save enough money, retire early. The concept is huge in online communities abroad, but figuring out how far you actually are from retirement used to mean either wrestling with Excel formulas yourself or using someone else's pre-built spreadsheet. The problem with those templates is they're rigid as hell: if you want to ask "what happens if the stock market drops 30% next year" or "how much later do I retire if I spend an extra 200K TWD per year," you'd have to rebuild the model yourself. The barrier is high.

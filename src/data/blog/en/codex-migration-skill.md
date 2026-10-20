@@ -10,7 +10,7 @@ tags:
   - codex
   - ai-coding
   - skills
-description: Migrating an entire personal harness from Claude Code to Codex is not trivial — claude.md / agents.md, MCP, hooks, settings each need their own translation. I packaged the workflow as a Skill on GitHub. Plus a note on why I keep reaching for Codex these days.
+description: 'Migrating an entire personal harness from Claude Code to Codex is not trivial — claude.md / agents.md, MCP, hooks, settings each need their own translation. I packaged the workflow as a Skill on GitHub. Plus a note on why I keep reaching for Codex these days.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/three-moves-between-claude-and-codex
 ---
 

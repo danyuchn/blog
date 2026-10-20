@@ -8,7 +8,7 @@ draft: true
 tags:
   - recommended-reading
   - ai-trends
-description: AI articles I read in early February 2026 — coding agents, AI's impact on work, the future of programming languages, and more.
+description: 'AI articles I read in early February 2026 — coding agents, AI''s impact on work, the future of programming languages, and more.'
 ---
 
 I've been reading a lot of AI-related pieces lately. Some of the ideas stuck with me, so here's what stood out from early February.

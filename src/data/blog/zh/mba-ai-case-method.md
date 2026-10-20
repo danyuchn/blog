@@ -9,7 +9,7 @@ tags:
   - ai-education
   - case-study
   - course-design
-description: 想做商業 AI 課程的案例教學，但 HBS / HBR cases 有授權風險。這篇整理 2026-05 調查的開源案例來源（UBC Open Case Studies、OpenCaseStudies.org、World Bank）、不能用的清單，以及訓練 MBA 背景種子教師的方向。
+description: '想做商業 AI 課程的案例教學，但 HBS / HBR cases 有授權風險。這篇整理 2026-05 調查的開源案例來源（UBC Open Case Studies、OpenCaseStudies.org、World Bank）、不能用的清單，以及訓練 MBA 背景種子教師的方向。'
 ---
 
 最近在規劃商業 AI 課程的案例教學。原本以為直接買 HBS / HBR cases 就好，仔細查授權條款之後發現踩到了一堆雷。這篇是 2026-05 的調查整理。

@@ -9,7 +9,7 @@ tags:
   - vibe-coding
   - ai-coding
   - opinion
-description: We shouldn't uniformly trash Vibe Coding, but we do need to recognize the traps in course quality. A teacher with 10+ years in the game shares how to tell the real deal from the fakes.
+description: 'We shouldn''t uniformly trash Vibe Coding, but we do need to recognize the traps in course quality. A teacher with 10+ years in the game shares how to tell the real deal from the fakes.'
 ---
 
 My Threads feed has been flooded with Vibe Coding content lately -- the algorithm just keeps pushing it at me. More and more people are launching courses on Vibe Coding. Since I've been a teacher for over 10 years myself, one glance is usually enough to tell who actually knows their stuff and who doesn't.

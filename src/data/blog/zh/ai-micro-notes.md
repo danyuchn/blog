@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - ai-tools
   - micro-notes
-description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐槽、開發踩坑、行業觀察、工具心得，每則不超過三行。
+description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐槽、開發踩坑、行業觀察、工具心得，每則不超過三行。'
 ---
 
 這是 2026 年起在 Threads 上累積的 AI 短碎念精選，改依**主題**分類（不再按月流水）。有些太短寫不成一篇完整的文章，但觀點或吐槽又捨不得丟。較零碎、時效性的碎念移到了[2026 時間軸存檔](/blog/posts/zh/ai-micro-notes-2026-archive)；2025 年下半年的碎念請見[2025 歸檔版](/blog/posts/zh/ai-micro-notes-2025)。

@@ -9,7 +9,7 @@ tags:
   - ai-education
   - ai-trends
   - opinion
-description: A 15-year teaching veteran shares how AI reignited his passion for teaching, how to build an AI clone of yourself, open-source your knowledge, and why "teachers who use AI" are the real threat.
+description: 'A 15-year teaching veteran shares how AI reignited his passion for teaching, how to build an AI clone of yourself, open-source your knowledge, and why "teachers who use AI" are the real threat.'
 ---
 
 I was among the first test-prep teachers in Taiwan to research end-user AI applications, integrate AI into my courses, and advocate for students to use AI. Over two years ago, people were flip-flopping between "AI will replace humans any day now" and "AI sucks, why would I bother." My thinking has stayed the same from then to now.

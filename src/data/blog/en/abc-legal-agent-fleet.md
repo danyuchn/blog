@@ -12,7 +12,7 @@ tags:
 description: 'Six cards summarizing Anthropic''s ABC Legal case study: 50+ production agents, agents managed as software in git, a steering committee with no software developers on it, and the principle that trust comes before automation.'
 ---
 
-These six cards summarize the Anthropic case study [How ABC Legal turned every employee into a builder with Claude-managed agents](https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents). Figures are current as of July 2026.
+These six cards summarize the Anthropic case study [How ABC Legal turned every employee into a builder with Claude-managed agents](https://claude.com/resources/articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents). Figures are current as of July 2026.
 
 ## 01 | The real breakthrough wasn't teaching 1,100 people to code
 

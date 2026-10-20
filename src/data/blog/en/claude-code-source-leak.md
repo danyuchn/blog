@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-trends
-description: Someone reverse-engineered Claude Code and found a hidden virtual pet system, next-gen model deception rate data, and an "Undercover Mode" that strips AI attribution from Anthropic employees' commits.
+description: 'Someone reverse-engineered Claude Code and found a hidden virtual pet system, next-gen model deception rate data, and an "Undercover Mode" that strips AI attribution from Anthropic employees'' commits.'
 ---
 
 Right after writing about the harness, I saw that Claude Code's source code had leaked. A Reddit user reverse-engineered it and uncovered three interesting hidden features.

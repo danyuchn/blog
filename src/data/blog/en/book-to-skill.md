@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-workflow
-description: Turning books, frameworks, and methodologies into Claude Skills — making knowledge executable as interactive coaches. A roundup of popular examples and practical lessons.
+description: 'Turning books, frameworks, and methodologies into Claude Skills — making knowledge executable as interactive coaches. A roundup of popular examples and practical lessons.'
 ---
 
 I saw someone recommend a great book called "Quantitative Job Hunting" and had a sudden thought: what if you turned the book into a Skill?

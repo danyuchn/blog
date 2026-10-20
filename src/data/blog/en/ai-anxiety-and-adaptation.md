@@ -9,7 +9,7 @@ tags:
   - ai-trends
   - career
   - mindset
-description: AI is iterating so fast that I can't see where I'll be in three years. The journey from anxiety to finding my footing, and why I believe AI is a Kingmaker.
+description: 'AI is iterating so fast that I can''t see where I''ll be in three years. The journey from anxiety to finding my footing, and why I believe AI is a Kingmaker.'
 ---
 
 ## The Moment I Couldn't See the Future

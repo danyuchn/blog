@@ -9,7 +9,7 @@ tags:
   - ai-tools
   - ai-workflow
   - productivity
-description: 普通的週回顧，你會幫自己找理由。Mirror System 不要肯定，不要安慰，只要事實——把本週 daily notes 餵給 Claude，看它反照出你不想正視的模式。
+description: '普通的週回顧，你會幫自己找理由。Mirror System 不要肯定，不要安慰，只要事實——把本週 daily notes 餵給 Claude，看它反照出你不想正視的模式。'
 ---
 
 普通的週回顧，你會幫自己找理由。

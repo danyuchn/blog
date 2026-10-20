@@ -8,7 +8,7 @@ draft: false
 tags:
   - developer-experience
   - productivity
-description: This week I exported a client proposal as HTML→PDF and split an internal report from PDF→images page by page. Both flows had a seemingly unsolvable trap. Each fix is one line of code, but tracking down that line cost me real time.
+description: 'This week I exported a client proposal as HTML→PDF and split an internal report from PDF→images page by page. Both flows had a seemingly unsolvable trap. Each fix is one line of code, but tracking down that line cost me real time.'
 ---
 
 Both traps share one thing: everything looks right in the browser, and what's wrong is the file you're about to send out.

@@ -9,7 +9,7 @@ tags:
   - ai-tools
   - ai-workflow
   - productivity
-description: Distilling my AI collaboration philosophy into two modes -- convergence and divergence. Plus how I build a personal knowledge base, and my day-to-day practice of running multiple agents in parallel.
+description: 'Distilling my AI collaboration philosophy into two modes -- convergence and divergence. Plus how I build a personal knowledge base, and my day-to-day practice of running multiple agents in parallel.'
 ---
 
 After working with AI long enough, I've realized the core philosophy boils down to two words: convergence and divergence. Constantly switching between these two modes -- that's my daily workflow.

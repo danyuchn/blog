@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-trends
   - ai-ethics
-description: 這週跟朋友閒聊時累積的幾則 AI 產業觀察——用 AI 自動化產貼文是用錯場景、Skill 是不是模型商套人類知識的陰謀、為什麼我從唾棄 OpenAI 轉成期待他們越做越好。
+description: '這週跟朋友閒聊時累積的幾則 AI 產業觀察——用 AI 自動化產貼文是用錯場景、Skill 是不是模型商套人類知識的陰謀、為什麼我從唾棄 OpenAI 轉成期待他們越做越好。'
 ---
 
 最近在 Threads 上累積了幾則對 AI 產業路線的觀察，單則都不夠長，但放一起看挺有意思的。整理一下。

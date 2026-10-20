@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: 與其訂十幾個 AI 工具，不如把一個用到極致。n8n、Lobster、fomofly 能做的，Claude Code 加一個 skill 就搞定了。
+description: '與其訂十幾個 AI 工具，不如把一個用到極致。n8n、Lobster、fomofly 能做的，Claude Code 加一個 skill 就搞定了。'
 ---
 
 我是那種 n8n 總是學不好、Claude Code 陣痛一小時後馬上上手、最終用它處理 95% 工作的人。

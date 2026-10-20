@@ -9,7 +9,7 @@ tags:
   - claude-code
   - harness
   - ai-workflow
-description: 從 3 月到 4 月，Claude Code 作為長時間運轉的 harness，踩過的幾個點：當機時的求生策略、我自己寫的 hook 清殭屍進程、2.1.86 的記憶體暴增修復、2.1.90 修好的 resume cache miss、還有 Plan Mode 問題太多的 4.7 癥結。
+description: '從 3 月到 4 月，Claude Code 作為長時間運轉的 harness，踩過的幾個點：當機時的求生策略、我自己寫的 hook 清殭屍進程、2.1.86 的記憶體暴增修復、2.1.90 修好的 resume cache miss、還有 Plan Mode 問題太多的 4.7 癥結。'
 ---
 
 把 Claude Code 當日常工具用半年後，我越來越有一個體會：這東西的模型能力已經夠用了，真正卡住效率的是 harness 本身。

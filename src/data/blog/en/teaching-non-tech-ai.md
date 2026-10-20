@@ -9,7 +9,7 @@ tags:
   - ai-education
   - claude-code
   - teaching
-description: One student was a seasoned HR consultant who managed all her files across several USB drives and had never heard of an API. Here are five knowledge gaps that show up constantly when teaching AI tools outside the tech world — and what actually works.
+description: 'One student was a seasoned HR consultant who managed all her files across several USB drives and had never heard of an API. Here are five knowledge gaps that show up constantly when teaching AI tools outside the tech world — and what actually works.'
 ---
 
 One of my students was a highly experienced enterprise HR consultant. Twenty-plus years of expertise. Day-to-day computer use: email, Word, Excel. File management: several USB drives. 

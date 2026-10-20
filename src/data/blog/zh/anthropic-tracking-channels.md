@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - claude
   - resources
-description: 從 2026 年 3 月開始我陸續記了一些追 Anthropic 的方法——官方來源、員工帳號、第三方拆解。整理成一篇，順便聊近期的 Mythos 系統卡爭議跟員工社群媒體沉寂的訊號。
+description: '從 2026 年 3 月開始我陸續記了一些追 Anthropic 的方法——官方來源、員工帳號、第三方拆解。整理成一篇，順便聊近期的 Mythos 系統卡爭議跟員工社群媒體沉寂的訊號。'
 ---
 
 從 2026 年 3 月開始，我陸續在 Threads 上記過一些追 Anthropic 動態的方法。這幾個月累積下來，可以整理成三條管道。

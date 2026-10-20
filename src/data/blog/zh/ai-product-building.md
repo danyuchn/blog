@@ -9,7 +9,7 @@ tags:
   - ai-product
   - developer-experience
   - opinion
-description: 一個教學從業者，從 GPT 自訂 Agent 起步，歷經四代 AI 工具開發，分享 RAG、平台架構、跨國部署、開源策略的真實踩坑紀錄。
+description: '一個教學從業者，從 GPT 自訂 Agent 起步，歷經四代 AI 工具開發，分享 RAG、平台架構、跨國部署、開源策略的真實踩坑紀錄。'
 ---
 
 我不是工程師出身。但過去兩年多，我從零開始做了四代 AI 產品，中間踩的坑比寫的程式碼還多。這篇不是教學文，是踩坑日記。

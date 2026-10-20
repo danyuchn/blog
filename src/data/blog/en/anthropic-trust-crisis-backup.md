@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-trends
-description: They quietly slashed quotas, went silent for a week, and only responded when they got caught. When your work is deeply tied to a service that can't even hit two nines of uptime, a backup plan isn't optional—it's essential.
+description: 'They quietly slashed quotas, went silent for a week, and only responded when they got caught. When your work is deeply tied to a service that can''t even hit two nines of uptime, a backup plan isn''t optional—it''s essential.'
 ---
 
 ## Timeline

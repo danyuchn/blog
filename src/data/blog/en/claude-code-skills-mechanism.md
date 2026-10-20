@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-description: Skills don't dump all their prompts into context by default. They load layer by layer on demand. But passive trigger rate is only 30-50%, so slash commands are your safest bet.
+description: 'Skills don''t dump all their prompts into context by default. They load layer by layer on demand. But passive trigger rate is only 30-50%, so slash commands are your safest bet.'
 ---
 
 I keep seeing people worry: if I install a bunch of skills, won't all those prompts get injected into context by default and dilute the model's attention?

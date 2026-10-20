@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-education
   - teaching
-description: When students have the wrong expectations, instructors are often also failing. After 15 years in cram schools and recent experience teaching Claude Code, a few thoughts on course quality basics, teacher responsibility, and the most practical one-word answer for a cram school going AI.
+description: 'When students have the wrong expectations, instructors are often also failing. After 15 years in cram schools and recent experience teaching Claude Code, a few thoughts on course quality basics, teacher responsibility, and the most practical one-word answer for a cram school going AI.'
 ---
 
 I saw a discussion online recently: "Too many students come in with unrealistic expectations. They think one class will make them master a skill." Plenty of instructors agreed in the comments.

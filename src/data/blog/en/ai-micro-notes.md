@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - ai-tools
   - micro-notes
-description: Short AI hot takes from 2026 onwards, accumulated from Threads and IG. Model roasts, dev pitfalls, industry observations, tool impressions — each no more than three lines.
+description: 'Short AI hot takes from 2026 onwards, accumulated from Threads and IG. Model roasts, dev pitfalls, industry observations, tool impressions — each no more than three lines.'
 ---
 
 A curated set of short AI hot takes I've been posting on Threads since 2026, now organized by **theme** rather than by month. Some are too short to turn into a full article, but the opinions or roasts feel too good to throw away. The more scattered, time-sensitive notes moved to the [2026 chronological archive](/blog/posts/en/ai-micro-notes-2026-archive); for 2025 takes, see the [2025 archive](/blog/posts/en/ai-micro-notes-2025).

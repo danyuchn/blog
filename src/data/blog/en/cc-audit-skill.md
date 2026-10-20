@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - token-optimization
-description: I turned my viral list of quota-saving tips into a skill. Hand the GitHub link to Claude Code to install, and it'll audit your settings, recent sessions, rules bloat, and context usage, then hand back an actionable fix list.
+description: 'I turned my viral list of quota-saving tips into a skill. Hand the GitHub link to Claude Code to install, and it''ll audit your settings, recent sessions, rules bloat, and context usage, then hand back an actionable fix list.'
 ---
 
 Claude has been messing with quotas lately and everyone's complaining. Complaining aside, Claude is still what I use to work. A while back I posted a long list of quota-saving tips on Threads, which ended up getting a thousand-plus likes. Someone suggested it should be a skill, so I built one.

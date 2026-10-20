@@ -9,7 +9,7 @@ tags:
   - ai-trends
   - ai-education
   - opinion
-description: AI won't replace your thinking, but it will expose the fact that you can't think. From rediscovering how to learn through AI interactions, to the growing demand for "AI collaboration skills" in exams and workplaces — observations from an educator.
+description: 'AI won''t replace your thinking, but it will expose the fact that you can''t think. From rediscovering how to learn through AI interactions, to the growing demand for "AI collaboration skills" in exams and workplaces — observations from an educator.'
 ---
 
 AI can help you find answers, but it can't find the questions you didn't know to ask. Through working with AI, I rediscovered something: the ability to think is the scarcest resource of our time.

@@ -9,7 +9,7 @@ tags:
   - claude-code
   - security
   - ai-tools
-description: When everyone is going wild with AI automation, I chose to understand my own capability boundaries first. Sharing Presidio for data privacy and my security practices with Claude Code.
+description: 'When everyone is going wild with AI automation, I chose to understand my own capability boundaries first. Sharing Presidio for data privacy and my security practices with Claude Code.'
 ---
 
 While everyone was going crazy over lobster, I was very clear about my own capability and lifestyle boundaries.

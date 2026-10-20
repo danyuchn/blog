@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - claude-code
-description: Skills 不會把全部提示詞預設注入上下文。它是一層一層按需載入的。但被動觸發率只有 30-50%，打 slash 才是最保險的。
+description: 'Skills 不會把全部提示詞預設注入上下文。它是一層一層按需載入的。但被動觸發率只有 30-50%，打 slash 才是最保險的。'
 ---
 
 常看到有人擔心：裝了一堆 skill，會不會把全部 skill 的提示詞預設注入上下文，導致記憶力稀疏？

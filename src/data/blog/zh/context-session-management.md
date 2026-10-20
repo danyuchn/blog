@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-workflow
-description: Claude Code 的 context window 從 200k 長到 1M，但更大不代表更好用。這篇整理五種 session 管理操作（Continue / rewind / clear / compact / Subagents）、四大策略、以及最容易踩的兩個坑。
+description: 'Claude Code 的 context window 從 200k 長到 1M，但更大不代表更好用。這篇整理五種 session 管理操作（Continue / rewind / clear / compact / Subagents）、四大策略、以及最容易踩的兩個坑。'
 ---
 
 ![1M Context 不是裝更多，而是管理更好](/blog/assets/posts/context-session-mgmt/slide-1.jpg)
@@ -114,4 +114,4 @@ Context window 的大小只是上限，管理品質才是實際表現的決定�
 
 ---
 
-Source: Anthropic 官方文章 [Using Claude Code Session Management and 1M Context](https://claude.com/blog/using-claude-code-session-management-and-1m-context)
+Source: Anthropic 官方文章 [Using Claude Code Session Management and 1M Context](https://claude.com/resources/articles/using-claude-code-session-management-and-1m-context)

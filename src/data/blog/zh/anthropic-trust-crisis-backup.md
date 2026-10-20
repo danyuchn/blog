@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-trends
-description: 偷改額度、裝死一週、被發現才滅火。當你的工作已經深度綁定一個不到兩個 9 uptime 的服務，備援方案不是選項，是必要。
+description: '偷改額度、裝死一週、被發現才滅火。當你的工作已經深度綁定一個不到兩個 9 uptime 的服務，備援方案不是選項，是必要。'
 ---
 
 ## 時間軸

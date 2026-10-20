@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - token-optimization
-description: A Reddit user reverse-engineered two official bugs, and combined with the compounding effect of 1M-token context, your quota might be silently burning at 20x the expected rate.
+description: 'A Reddit user reverse-engineered two official bugs, and combined with the compounding effect of 1M-token context, your quota might be silently burning at 20x the expected rate.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/claude-code-quota-incident-log
 ---
 

@@ -9,7 +9,7 @@ tags:
   - teaching
   - ai-education
   - personal
-description: This morning I ran a 200-person free online AI lecture. So happy. 450+ signups, attendance around 45%, but landing on Mother's Day midday and still hitting that—Zoom data showed average seat-time over 75%, and FAQ ran so long I answered for an extra half hour.
+description: 'This morning I ran a 200-person free online AI lecture. So happy. 450+ signups, attendance around 45%, but landing on Mother''s Day midday and still hitting that—Zoom data showed average seat-time over 75%, and FAQ ran so long I answered for an extra half hour.'
 ---
 
 This morning I ran a 200-person free online AI lecture. So happy.

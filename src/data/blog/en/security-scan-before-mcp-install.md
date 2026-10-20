@@ -9,7 +9,7 @@ tags:
   - mcp
   - security
   - claude-code
-description: This week AgentCrew Academy shipped a video about why you should run /security-scan before installing any MCP / npm / pip package. Tested a third-party MCP, Claude flagged 7 findings, then said "install is fine." This is the written companion to the video.
+description: 'This week AgentCrew Academy shipped a video about why you should run /security-scan before installing any MCP / npm / pip package. Tested a third-party MCP, Claude flagged 7 findings, then said "install is fine." This is the written companion to the video.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/ai-tools-as-attack-vector
 ---
 

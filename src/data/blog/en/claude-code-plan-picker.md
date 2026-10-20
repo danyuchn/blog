@@ -23,7 +23,7 @@ I checked prices and limits on the official pages on 2026-10-18. They will chang
 - Max 20x: 200 USD a month, with 20 times Pro's usage per session.
 - Both Max tiers include monthly API credits: 100 USD on 5x, 200 USD on 20x.
 - Limits come as a rolling five-hour window plus a weekly limit. The web app, desktop, mobile and Claude Code share one pool. On Max, Fable can use at most 50% of the weekly limit; on Pro, Fable needs separately purchased usage credits.
-- The [Claude Code help article](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan) gives no message counts, hours or token counts, and the actual weekly numbers aren't published.
+- The [Claude Code help article](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan) gives no message counts, hours or token counts, and the actual weekly numbers aren't published.
 
 That last point matters. Whenever I say below whether a plan is enough in practice, it's from my own testing or someone else's. There's no official number to check it against.
 

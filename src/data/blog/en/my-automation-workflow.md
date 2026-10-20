@@ -9,7 +9,7 @@ tags:
   - claude-code
   - automation
   - ai-workflow
-description: From /loop clocking in for me at ERP, to Monitor Tool as a background event gatekeeper, to Google Map MCP saving browser clicks, to Obsidian + Mirror framework for weekly reflection. Here's my six-month Claude Code automation stack, plus a clarification of how commands and skills actually split.
+description: 'From /loop clocking in for me at ERP, to Monitor Tool as a background event gatekeeper, to Google Map MCP saving browser clicks, to Obsidian + Mirror framework for weekly reflection. Here''s my six-month Claude Code automation stack, plus a clarification of how commands and skills actually split.'
 ---
 
 After six months my Claude Code workflow has accumulated an automation stack.

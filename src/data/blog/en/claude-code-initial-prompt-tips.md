@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: Six practical tips for writing effective initial prompts in Claude Code, from clarifying your goals to leveraging plan mode for better AI collaboration.
+description: 'Six practical tips for writing effective initial prompts in Claude Code, from clarifying your goals to leveraging plan mode for better AI collaboration.'
 ---
 
 I've recently had the chance to help some former colleagues and team members upgrade their workflows to work with AI. This got me thinking more intentionally about my own Claude Code habits.

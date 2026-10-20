@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: Claude released a redesigned desktop application — better looking, friendlier for newcomers. But if you ask me which one to use, the answer is still CLI. Not nostalgia, just feature gap and resource efficiency.
+description: 'Claude released a redesigned desktop application — better looking, friendlier for newcomers. But if you ask me which one to use, the answer is still CLI. Not nostalgia, just feature gap and resource efficiency.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/cli-vs-desktop-three-answers
 ---
 

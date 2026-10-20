@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - productivity
-description: Remotion skill 我下載好一陣子了，一開始只是玩玩。最近開始錄 Claude Code 免費教學系列才發現真的太好用——從口白討論到剪輯渲染，半小時出一支 15 分鐘影片，不 NG 也不費力。
+description: 'Remotion skill 我下載好一陣子了，一開始只是玩玩。最近開始錄 Claude Code 免費教學系列才發現真的太好用——從口白討論到剪輯渲染，半小時出一支 15 分鐘影片，不 NG 也不費力。'
 ---
 
 Remotion skill 我下載好一陣子了，一開始只是玩玩，沒有放在心上。最近開始想把我使用 Claude 的心得錄成免費教學系列分享出來，才發現這個 skill 真的太好用了。

@@ -9,7 +9,7 @@ tags:
   - ai-tools
   - ai-workflow
   - productivity
-description: Normal weekly reviews let you make excuses for yourself. Mirror System doesn't offer reassurance — just feed your daily notes to Claude and watch it surface the patterns you've been avoiding.
+description: 'Normal weekly reviews let you make excuses for yourself. Mirror System doesn''t offer reassurance — just feed your daily notes to Claude and watch it surface the patterns you''ve been avoiding.'
 ---
 
 In a normal weekly review, you'll make excuses for yourself.

@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: 一個非工程師背景的重度使用者，分享 Claude Code 從第一天到第三週的達克曲線效應，以及最終找到的高效互動方式。
+description: '一個非工程師背景的重度使用者，分享 Claude Code 從第一天到第三週的達克曲線效應，以及最終找到的高效互動方式。'
 ---
 
 我不是工程師出身，但過去半年我用 Claude Code 做了資料庫重構、前後端對接、多 Agent 協作、部署上線。以下是一個門外漢的真實使用歷程。

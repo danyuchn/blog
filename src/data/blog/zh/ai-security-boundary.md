@@ -9,7 +9,7 @@ tags:
   - claude-code
   - security
   - ai-tools
-description: 當所有人都在瘋 AI 自動化的時候，我選擇先搞清楚自己的能力邊界。分享 Presidio 隱私工具和用 Claude Code 工作的安全實踐。
+description: '當所有人都在瘋 AI 自動化的時候，我選擇先搞清楚自己的能力邊界。分享 Presidio 隱私工具和用 Claude Code 工作的安全實踐。'
 ---
 
 看到大家都在瘋龍蝦的時候，我很清楚自己的能力邊界跟生活邊界。

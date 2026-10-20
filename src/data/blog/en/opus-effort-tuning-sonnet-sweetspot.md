@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - ai-workflow
-description: Opus 4.7's default adaptive effort is a disaster—it turns into a lazy emperor. You have to crank it up to high or xhigh to avoid that, but token consumption goes nuts. After testing, Sonnet 4.6 medium is the sweet spot for non-coding work.
+description: 'Opus 4.7''s default adaptive effort is a disaster—it turns into a lazy emperor. You have to crank it up to high or xhigh to avoid that, but token consumption goes nuts. After testing, Sonnet 4.6 medium is the sweet spot for non-coding work.'
 ---
 
 A friend asked me recently: "Once I upgrade to Opus 4.7, am I set for everything?" The answer is no—at least not for non-coding tasks.

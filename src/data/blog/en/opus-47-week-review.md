@@ -9,7 +9,7 @@ tags:
   - claude-code
   - model-comparison
   - ai-trends
-description: Opus 4.7 launched on 4/16 and the Chinese and English communities ended up with opposite takes. The system card reads like a full win, but real usage burns quota at roughly 2x what Anthropic claimed, and Reddit spent the week roasting it. Here's what I saw, and why I rolled back to 4.6.
+description: 'Opus 4.7 launched on 4/16 and the Chinese and English communities ended up with opposite takes. The system card reads like a full win, but real usage burns quota at roughly 2x what Anthropic claimed, and Reddit spent the week roasting it. Here''s what I saw, and why I rolled back to 4.6.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/claude-code-quota-incident-log
 ---
 

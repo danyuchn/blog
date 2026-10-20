@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - meta
-description: Welcome to Dustin's AI Lab — a blog about practical AI workflows, tools, and insights for learning and productivity.
+description: 'Welcome to Dustin''s AI Lab — a blog about practical AI workflows, tools, and insights for learning and productivity.'
 ---
 
 Welcome to my blog.

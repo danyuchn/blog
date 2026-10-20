@@ -9,7 +9,7 @@ tags:
   - ai-workflow
   - enterprise-ai
   - claude-code
-description: If you want to make your manager or coworkers feel Agentic AI in one second—and then open the door to an internal training engagement—my three go-to moves are cleaning up messy desktops, reconciling conflicting meeting notes and emails, and producing multi-version drafts for different recipients. These three hit office workers right in the pain.
+description: 'If you want to make your manager or coworkers feel Agentic AI in one second—and then open the door to an internal training engagement—my three go-to moves are cleaning up messy desktops, reconciling conflicting meeting notes and emails, and producing multi-version drafts for different recipients. These three hit office workers right in the pain.'
 ---
 
 If you want to make your manager or coworkers **feel Agentic AI in one second**, and from there pull the company toward a small-group advanced course, my three go-to moves are these.
