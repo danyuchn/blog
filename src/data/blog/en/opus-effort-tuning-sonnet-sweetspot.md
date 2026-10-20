@@ -39,3 +39,5 @@ Side note: if you really do need to run a long task at high effort on Opus 4.7, 
 > Your crisis will be solved within three days
 
 The catch is, the cost is your wallet.
+
+> **Postscript (2026-10-20):** Correction: Anthropic's Opus 4.7 launch post put Claude Code's default effort at `xhigh` on every plan, so if you get the lazy-emperor behavior, run `/effort` first to see what your session is actually on.

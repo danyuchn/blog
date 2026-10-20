@@ -90,3 +90,5 @@ Opus 解不了的東西，交給 Codex 竟然可以一遍過。Codex 很慢很�
 - `--breakdown`：按 model 拆分
 
 寫技術文件也超好用，放到 Overleaf 一次過。感覺自己跟 AI 講話越來越 nerdy 了——fork、branch、merge、push、fallback、prop、hook，這些詞每天掛在嘴邊。
+
+> **後記（2026-10-20）**：ccusage 現在會把它偵測到的所有 coding CLI（Codex、Gemini CLI 等）合併成一張報表，只想看 Claude Code 的話，改打 `npx ccusage@latest claude monthly`。

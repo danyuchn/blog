@@ -145,7 +145,7 @@ codex 雙開中。。。
 
 ![harness 健診報告截圖，顯示官方比對用 WebFetch code.claude.com 加 WebSearch，無過時規則，全數低於 200 行，最大 92 行](/blog/assets/posts/silent-failures-and-confabulated-tool-results/harness-audit-92-lines.jpg)
 
-已經只剩 92 行了（官方建議低於 200 行），每週都跟官方文檔跟 `/insight` 對過一次，持續半年不間斷，能否分享你砍掉重練的好方法跟實績？claude.md 92 行算太多嗎⋯剛剛發生問題的時候 context 才用了 8%。我甚至還為了保留他的 context window 派 sonnet subagent 出去。就是他拉了一坨大便到我的對話中。
+已經只剩 92 行了（官方建議低於 200 行），每週都跟官方文檔跟 `/insights` 對過一次，持續半年不間斷，能否分享你砍掉重練的好方法跟實績？claude.md 92 行算太多嗎⋯剛剛發生問題的時候 context 才用了 8%。我甚至還為了保留他的 context window 派 sonnet subagent 出去。就是他拉了一坨大便到我的對話中。
 
 我在叫 claude-log CLI 去盤查，看 session log 拉了什麼賽。查了一下，原來 6/15 的 Opus 4.8 就有這問題，只是因為我一直在用 4.6 所以沒有遇到，但現在還是沒有修好。
 

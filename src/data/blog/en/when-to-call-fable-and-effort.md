@@ -80,6 +80,8 @@ Added non-original sentences (fidelity disclosure):
 1. "Someone asked me the other day whether to turn on ultracode." — type: connective (surfaces the reply context of the second post; the original was a reply to someone's question and had no such narration)
 -->
 
+> **Postscript (2026-10-20):** Since Claude Code v2.1.284, Ultracode is its own toggle in `/effort` and no longer forces xhigh; it stays on at whatever effort you've set.
+
 <!--
 2026-09-24 W40 補記兩節：① 2026-09-24 Threads 貼文（Fable 派 3 個 Fable subagent 燒乾額度→加 hook）與 2026-09-23 留言回覆（nested subagent、同時最多兩個、當員工在管）逐字併入；② 2026-09-19 貼文轉貼 r/ClaudeAI effort 成本表（原貼文僅圖片＋連結）。新增非原文句子：兩個小標（框架句）、「另外」（銜接）、「Reddit 上有人從 Claude Code 裡挖出……還自己實測了一輪」（框架句，內容取自截圖）。原文 emoji 依站台規範未保留。
 -->

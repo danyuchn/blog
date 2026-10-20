@@ -66,7 +66,7 @@ Sonnet 5.5 發布大概 15 小時的時候，我去 Reddit 翻了一下風向。
 
 ## 系統卡
 
-我在讀 Sonnet 5.5 的系統卡，這一段最有趣（請讀圖）。
+我在讀 Sonnet 5 的系統卡，這一段最有趣（請讀圖）。
 
 ![Gemini 整理的 Sonnet 5 系統卡模型福利段落截圖，第一張](/blog/assets/posts/opus-sonnet-fable-division-of-labor/1-system-card.jpg)
 

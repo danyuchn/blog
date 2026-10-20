@@ -48,3 +48,5 @@ Negative reviews go beyond pricing into capability regression:
 ## My Take
 
 The Flash line exists to be cheap and good enough. When the price approaches Pro territory but capabilities don't follow, the positioning collapses. If you need fast and cheap, DeepSeek v4 Flash or the older Gemini 3 Flash are more pragmatic choices right now. If you need quality, go straight to Opus or GPT-5.5. The 3.5 Flash sitting in the middle is an awkward product at the moment.
+
+> **Postscript (2026-10-20):** This model has since been deprecated; check Google's current model list.

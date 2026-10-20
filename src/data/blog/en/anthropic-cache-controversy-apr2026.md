@@ -25,7 +25,7 @@ You can have Claude Code scan your own JSONL to check:
 
 ```bash
 # Check cache tier distribution across recent session jsonl files
-grep -o '"ephemeral_[^"]*_input_tokens":[0-9]*' ~/.claude/projects/*/\*.jsonl | sort | uniq -c
+grep -o '"ephemeral_[^"]*_input_tokens":[0-9]*' ~/.claude/projects/*/*.jsonl | sort | uniq -c
 ```
 
 If `ephemeral_5m_input_tokens` has values, those conversations are hitting the 5-minute cache.

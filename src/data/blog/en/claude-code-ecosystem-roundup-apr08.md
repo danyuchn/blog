@@ -93,3 +93,5 @@ Enterprise systems have APIs (Microsoft Graph), so m365 exists. A Taiwan local s
 Whether you end up using Claude Code depends entirely on whether you've trained yourself to ask "does this thing have a CLI?" as a reflex. If yes, you can plug in. If no, you wait for someone else's POC or build your own.
 
 Probably more of these next week. This kind of weekly roundup might become a habit—collecting fragmented resources before I forget them, and treating the list as my "who's doing what" radar for the ecosystem.
+
+> **Postscript (2026-10-20):** Git is no longer a hard requirement on native Windows. Without Git for Windows, Claude Code falls back to PowerShell, but you still need Git Bash for the Bash and Monitor tools, so the one-liner above is still my recommendation.

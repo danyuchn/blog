@@ -157,3 +157,5 @@ Subtraction matters as much as addition. A workflow isn't "more tools = better."
 The piece I'm still missing is "long-term memory integration." Obsidian, auto memory, CLAUDE.md, and rules. These four knowledge sources run in parallel right now with no unified indexing.
 
 Ideal state is a meta-skill that can search across all four sources. Probably next month's project.
+
+> **Postscript (2026-10-20):** Two updates. `/loop` only runs while the session stays open, and recurring loops expire after 7 days, so for a clock-in that runs every workday use a cloud or Desktop scheduled task instead. And on commands: existing `.claude/commands/` files still work. If you do convert them to skills, project ones go in `.claude/skills/`; `~/.claude/skills/` is for personal ones.

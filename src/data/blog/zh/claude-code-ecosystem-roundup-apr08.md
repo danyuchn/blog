@@ -93,3 +93,5 @@ brew install --cask claude-code
 你會不會用 Claude Code 完全取決於你有沒有把「這個東西有 CLI 嗎？」變成反射問題。如果有，就能接；如果沒有，就等別人做 POC 或自己做一個。
 
 下週我大概會收更多。這類週盤點之後可能會變成例行——把碎片資源在被我忘記之前先整理出來，順便當作我的「有人在做什麼」雷達。
+
+> **後記（2026-10-20）**：原生 Windows 現在不一定要裝 Git 了。沒裝 Git for Windows 的話，Claude Code 會改用 PowerShell；但 Bash 跟 Monitor 工具還是要有 Git Bash，所以我還是建議用上面那條一行指令。

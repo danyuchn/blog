@@ -68,3 +68,5 @@ I used to do this by hand, cross-checking docs, and it took 30-40 minutes. As a 
 Hand this link to Claude Code: <https://github.com/danyuchn/cc-audit>
 
 It'll install and verify, then you just type `/cc-audit` to run.
+
+> **Postscript (2026-10-20):** Two things in the formulas above have moved. Cache TTL isn't split by Pro vs Team/Enterprise: on any Claude subscription the main conversation gets the 1-hour cache while you're within plan usage, and subagents or usage-credit turns get 5 minutes. And many sessions now run a 1M context window, so divide by 1,000,000 instead of 200,000 if that's what you're on.

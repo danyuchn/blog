@@ -145,7 +145,7 @@ Someone suggested I tear my CLAUDE.md down and rebuild it from scratch.
 
 ![Screenshot of the harness audit report showing the official comparison done via WebFetch on code.claude.com plus WebSearch, no stale rules, everything under 200 lines with the largest at 92](/blog/assets/posts/silent-failures-and-confabulated-tool-results/harness-audit-92-lines.jpg)
 
-It is already down to 92 lines (the official recommendation is under 200), and I have checked it against the official docs and `/insight` once a week, without a break, for half a year. Care to share your great method for tearing it down and rebuilding, and the results you got? Is 92 lines of claude.md really too much... Context was only 8% used when the problem happened. I had even dispatched a Sonnet subagent specifically to preserve its context window. He just dumped a giant turd into my conversation.
+It is already down to 92 lines (the official recommendation is under 200), and I have checked it against the official docs and `/insights` once a week, without a break, for half a year. Care to share your great method for tearing it down and rebuilding, and the results you got? Is 92 lines of claude.md really too much... Context was only 8% used when the problem happened. I had even dispatched a Sonnet subagent specifically to preserve its context window. He just dumped a giant turd into my conversation.
 
 I had the claude-log CLI go dig through the session log to see what crap he dumped. Looked it up, and it turns out Opus 4.8 had this problem back on 6/15. I just never hit it because I had been on 4.6 the whole time, and it still is not fixed.
 

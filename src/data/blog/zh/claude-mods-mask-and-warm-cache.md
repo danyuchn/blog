@@ -58,7 +58,7 @@ Claude Mod 正式登陸 Desktop App，大家都在討論，我看到每個人都
 
 系統會在快取要冷掉前，自動幫你壓縮對話，這樣你回來再聊就不會把大塊冷掉的上下文被迫重送模型計費。
 
-`idleCompact` 和 `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS` 這兩個參數可以決定是否啟用，以及上下文大於多少長度才自動閒置壓縮。
+`idleCompaction` 和 `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS` 這兩個參數可以決定是否啟用，以及上下文大於多少長度才自動閒置壓縮。
 
 ![Claude Code CLI 畫面顯示「Compacted while idle, before the prompt cache expired」，輸入框裡是「commit 吧」。](/blog/assets/posts/claude-mods-mask-and-warm-cache/3-idle-compact.jpg)
 

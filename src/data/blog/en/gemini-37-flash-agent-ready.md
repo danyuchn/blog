@@ -33,6 +33,8 @@ One more thing: for single-shot multimodal tasks, Gemini is still king.
 
 I deliberately screenshotted a photo of a non-chain restaurant twice to strip the location data, figuring the AI would never place it, since Bangkok is wall-to-wall with this kind of shabu. GPT matched it anyway. Gemini, the one sitting on Google Maps' own imagery, just guessed wrong.
 
+> **Postscript (2026-10-20):** This model has since been deprecated; check Google's current model list.
+
 <!--
 2026-08-28 W36 micro-note merge: the archive note "Stripping the Location Doesn't Save You" was folded in verbatim. It is a counterexample to this post's "Gemini is still king at single-shot multimodal work", so both sides now sit in the same piece. Removed from the zh/en archive. The only added non-original sentence is the subheading (framing).
 -->

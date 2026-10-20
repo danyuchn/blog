@@ -39,7 +39,7 @@ description: 台灣的個資格式沒有現成的去識別化工具。所以我�
 
 ## 給 API / Enterprise 用戶的補充
 
-Claude API 和 Enterprise 用戶可以參考官方的 ZDR（Zero Data Retention）政策，資料本來就不會留著。一般訂閱用戶除了用去識別化工具之外，也要記得去設定裡把「同意用我的資料訓練模型」關掉，這樣你的資料就只會在 Anthropic 存 30 天，而不是五年。
+Claude API 和 Enterprise 用戶可以參考官方的 ZDR（Zero Data Retention）方案，不過它不是預設開啟，要符合資格的組織另外申請啟用。一般訂閱用戶除了用去識別化工具之外，也要記得去設定裡把「同意用我的資料訓練模型」關掉，這樣你的資料就只會在 Anthropic 存 30 天，而不是五年。
 
 ## 補記：還沒解決的部分
 

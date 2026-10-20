@@ -45,3 +45,5 @@ Claude Code 推出的 Agent View 功能，可以一次管理好幾個 Session �
 這些功能單獨看都是小工具，但組合起來就是一個完整的工作流平台。Skill 封裝流程、Hook 強制規則、Agent 分工協作、Subagent 決定隔離或繼承。
 
 對於每天重度使用 Claude Code 的人來說，這些不是錦上添花，是基礎設施。
+
+> **後記（2026-10-20）**：fork subagent 已經不是實驗功能了，從 v2.1.232（2026 年 8 月）起預設就是開的，所以「要明確講要不要繼承上下文」這件事現在每個人都會遇到。要關掉 fork，就把 `CLAUDE_CODE_FORK_SUBAGENT` 設成 `0`。

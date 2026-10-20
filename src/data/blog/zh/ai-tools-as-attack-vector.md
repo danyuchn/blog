@@ -34,7 +34,7 @@ description: '攻擊者已經在 Claude Code、Cursor、Gemini CLI 的設定檔�
 Miasma 自我檢查步驟：
 
 1. 確認是否安裝過受影響套件：`npm ls -g 2>/dev/null | grep redhat-cloud`
-2. 確認 Claude Code 設定中無不明 hook：`cat ~/.claude/settings.json` 觀察 `preToolUse`/`postToolUse` 是否有不認識的腳本或 curl、wget 外連指令。
+2. 確認 Claude Code 設定中無不明 hook：`cat ~/.claude/settings.json` 觀察 `PreToolUse`/`PostToolUse` 是否有不認識的腳本或 curl、wget 外連指令。
 3. 掃描可疑植入檔案：`ls ~/.claude/setup.mjs 2>/dev/null` / `find . -name "tasks.json" -path "*/.vscode/*" 2>/dev/null | head -10`
 
 若未安裝過 `@redhat-cloud-services` 系列套件，且以上掃描無異常，則不受本次攻擊影響。

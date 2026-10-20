@@ -94,7 +94,7 @@ Claude Code CLI gets roughly 1 to 2 version updates every day. The desktop app's
 
 This gap isn't just a version number difference. Almost all new features, performance fixes, and behavior improvements ship in the CLI first, with the desktop app following weeks later.
 
-Last week's 2.1.100 fixed the issue where tagging large files caused unnecessary JSON escaping that inflated token usage, and fixed a long-session memory bloat bug caused by markdown syntax highlighting cache. I had those fixes in CLI the same day. Desktop app users are still waiting.
+2.1.86 at the end of March fixed the issue where tagging large files caused unnecessary JSON escaping that inflated token usage, and fixed a long-session memory bloat bug caused by markdown syntax highlighting cache. I had those fixes in CLI the same day. Desktop app users are still waiting.
 
 If you're using Claude Code seriously for real work, that lag has tangible daily costs.
 
@@ -226,6 +226,8 @@ Quite a gap from the AI self-healing workflow they were promoting so hard. With 
 At the end of the April post, I wrote something more philosophical: choosing CLI isn't just a technical preference. It's a stance on how you want to work with AI. You've decided to use this tool seriously, not keep it in a convenient but constrained sandbox. You want the complete capability set, even if the entry cost is slightly higher. That choice compounds over time.
 
 That was April. In May I told beginners to start with the desktop app. In August I was complaining that everything outside the CLI gets treated like a stepchild. All three answers are sitting right here.
+
+> **Postscript (2026-10-20):** The "two separate config files" warning no longer holds the way I wrote it. Code sessions in the desktop app now read the same settings files as the CLI, and on macOS the app reads your shell profile for PATH.
 
 <!--
 Added non-source sentences (faithfulness disclosure):

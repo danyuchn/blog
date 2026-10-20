@@ -39,7 +39,7 @@ Still very early stage—issues and PRs are welcome.
 
 ## A Note for API / Enterprise Users
 
-Claude API and Enterprise users can refer to Anthropic's official ZDR (Zero Data Retention) policy—your data isn't retained by default. For regular subscription users, besides using a de-identification tool, remember to go into your settings and turn off "Allow my data to be used for model training." That way your data is only stored by Anthropic for 30 days instead of five years.
+Claude API and Enterprise users can look into Anthropic's ZDR (Zero Data Retention) option—but it isn't on by default; it has to be enabled for eligible organizations. For regular subscription users, besides using a de-identification tool, remember to go into your settings and turn off "Allow my data to be used for model training." That way your data is only stored by Anthropic for 30 days instead of five years.
 
 ## Postscript: What Isn't Solved Yet
 

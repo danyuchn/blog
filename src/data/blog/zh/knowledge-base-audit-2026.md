@@ -95,7 +95,7 @@ Obsidian 的 wikilink 系統很好用，但相對應的，只要一個檔案被�
 
 最後整理成一個 checklist，大概每季做一次：
 
-- [ ] `claude cost` 或 `/context` 確認每次對話的起始 token count 是否超過 8,000，超過就做 lazy-load 重構
+- [ ] `/cost` 或 `/context` 確認每次對話的起始 token count 是否超過 8,000，超過就做 lazy-load 重構
 - [ ] 跑 wikilink broken link scan，找出斷連清單，依三層優先序處理
 - [ ] 待辦來源審計：每個 todo 必須明確知道它在哪一個唯一地點存在
 - [ ] 書籤 review：清理 `status: stale` 的，重新標記沒分類的

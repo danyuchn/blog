@@ -283,6 +283,8 @@ Cluster extraction from micro-notes, absorbing 5 original entries (OpenRouter pa
 Everything else is the original wording. Existing paragraphs unchanged. humanizer was run on the new section only.
 -->
 
+> **Postscript (2026-10-20):** Two corrections to the notes above. Per the current Claude Code docs, the main conversation gets a one-hour cache on any Claude subscription within plan usage (five minutes applies to subagents, usage credits and API keys). And the Help Center says the monthly API credit doesn't apply to interactive Claude Code, so switching `/login` to the API won't spend it; it's for the API, Agent SDK and similar use. Also, OpenAI shuts o1-pro down on October 23, 2026, so it won't hold the "most expensive" title much longer.
+
 <!--
 2026-08-28 merge addition: folded in three older subscription posts (claude-code-subscription-guide / ai-subscription-value / claude-subscription-economics), prose moved over as written, with only headings and minimal bridging added. Non-original sentences added this round:
 1. New H2 headings "When the Quota Runs Out, the Work Stops There", "A \"4x Upgrade\" That Isn't 4x", "The Night Market Steak and the Restaurant Steak" — headings drawn from the wording of the paragraphs beneath them, no new claim. All other headings are the originals.

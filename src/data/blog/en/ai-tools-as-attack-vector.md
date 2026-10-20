@@ -34,7 +34,7 @@ The stolen data includes AWS, GCP, and Azure IAM credentials, GitHub tokens, npm
 Miasma self-check steps:
 
 1. Check whether you have installed an affected package: `npm ls -g 2>/dev/null | grep redhat-cloud`
-2. Check for unknown hooks in your Claude Code settings: `cat ~/.claude/settings.json` and inspect whether `preToolUse`/`postToolUse` contain unfamiliar scripts or curl/wget outbound commands.
+2. Check for unknown hooks in your Claude Code settings: `cat ~/.claude/settings.json` and inspect whether `PreToolUse`/`PostToolUse` contain unfamiliar scripts or curl/wget outbound commands.
 3. Scan for suspicious planted files: `ls ~/.claude/setup.mjs 2>/dev/null` / `find . -name "tasks.json" -path "*/.vscode/*" 2>/dev/null | head -10`
 
 If you have never installed a `@redhat-cloud-services` package and the scans above show nothing abnormal, you are not affected by this attack.
