@@ -48,6 +48,8 @@ So good teaching is teaching that can thread various concepts through a single s
 
 I'm glad my 15 years of teaching gave me this kind of instinct and experience.
 
+> **Postscript (2026-10-20):** Antigravity's FAQ now says wrapping `agy` inside third-party tools like Claude Code or Codex isn't supported on consumer plans, and it can get the account suspended. For step 3, have beginners run `agy` themselves in the terminal, or give the SKILL a Google AI Studio API key.
+
 <!--
 Added non-source sentences (faithfulness disclosure):
 1. "The order goes roughly like this." — type: connective (bridges the opening line into the five numbered steps)

@@ -41,6 +41,6 @@ Security awareness is non-negotiable when working with Claude Code:
 
 **Hooks as safety nets**: I wrote security rules in Claude.md, but Claude once straight-up ignored them. After that, I switched to Hooks for enforcement — any external package installation triggers a security scan, any outbound message triggers a confirmation prompt. Unlike rules, Hooks can't be ignored. They're hardcoded.
 
-**Conversation history management**: History auto-deletes after 14 days. There's a JSON parameter to configure this. For sensitive operations, make sure this setting is where you want it.
+**Conversation history management**: History auto-deletes after 30 days by default. There's a JSON parameter (`cleanupPeriodDays`) to configure this. For sensitive operations, make sure this setting is where you want it.
 
 **Share methods, not products**: Some automation tools I've built with Claude Code, I have no plans to share publicly. Sharing the finished product could have legal implications, but sharing the methodology is safe.

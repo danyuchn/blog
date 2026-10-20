@@ -234,6 +234,8 @@ Dynamic workflow is basically Anthropic's in-house toy. You need unlimited token
 2026-08-28 W36 main-thread note: "The Token-Burning Perpetual Motion Machine" (2026-06-13) was merged in here and turned into a stub. That post is a rant rather than an incident record, which is why the 2026-08-22 merge pass left it out; it is kept as its own section here rather than folded into the four incidents, to preserve the difference in register. Kept verbatim; the only added non-original sentence is the subheading (framing).
 -->
 
+> **Postscript (2026-10-20):** The subagent knobs today: nesting defaults to three layers below the main conversation, and `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` turns it off. The per-session total cap was removed in v2.1.224, so the built-in setting that actually limits a fan-out is `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` (default 20).
+
 <!--
 Added non-original sentences (fidelity disclosure):
 1. "Your quota isn't burned by the words you type. ... Four incidents, in the order they happened." — framing (merged-post opening; all four examples cited are facts already present below)

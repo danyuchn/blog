@@ -55,6 +55,8 @@ So complex tasks still shouldn't be handed to it, but for the grunt work that ne
 
 In one line: it's not here to take Opus's spot, it's here to swap out the Sonnet 4.6 slot.
 
+> **Postscript (2026-10-20):** The launch promo turned out to be permanent. Anthropic made $2 / $10 per million tokens Sonnet 5's standard price, so the increase back to $3 / $15 never happened.
+
 <!--
 新增的非原文句子清單：
 1. 「Sonnet 5 is here. First, a screenshot of the model picker: Fable 5 is still stuck on Currently unavailable, while Sonnet 5 is right there ready to select.」— 銜接：開場 + 描述第一張圖，內容取自圖片 alt。

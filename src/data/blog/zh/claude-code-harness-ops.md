@@ -9,7 +9,7 @@ tags:
   - claude-code
   - harness
   - ai-workflow
-description: 從 3 月到 4 月，Claude Code 作為長時間運轉的 harness，踩過的幾個點：當機時的求生策略、我自己寫的 hook 清殭屍進程、2.1.90 修好的 resume cache miss、2.1.100 的記憶體暴增修復、還有 Plan Mode 問題太多的 4.7 癥結。
+description: 從 3 月到 4 月，Claude Code 作為長時間運轉的 harness，踩過的幾個點：當機時的求生策略、我自己寫的 hook 清殭屍進程、2.1.90 修好的 resume cache miss、2.1.86 的記憶體暴增修復、還有 Plan Mode 問題太多的 4.7 癥結。
 ---
 
 把 Claude Code 當日常工具用半年後，我越來越有一個體會：這東西的模型能力已經夠用了，真正卡住效率的是 harness 本身。
@@ -50,7 +50,7 @@ hook 的好處是「自動觸發」——我不需要記得清，只要我結束
 
 ## 2.1.90 終於修好 resume cache miss
 
-4 月中某天 30 分鐘前，Claude Code 推送了 2.1.90 更新。這次終於把 resume 導致 cache miss 的問題修好了。
+4 月初某天 30 分鐘前，Claude Code 推送了 2.1.90 更新。這次終於把 resume 導致 cache miss 的問題修好了。
 
 之前每次 resume 一個長對話，第一條訊息就會重建整包快取，等於付一次入場費才能繼續工作。一天 resume 五六次就飽了。
 
@@ -60,9 +60,9 @@ hook 的好處是「自動觸發」——我不需要記得清，只要我結束
 
 修好之後，我的長期專案 session 真的變得可以 resume 了。
 
-## 2.1.100 的兩個靜悄悄修復
+## 2.1.86 的兩個靜悄悄修復
 
-CC 2.1.100 有兩條修復值得注意：
+CC 2.1.86 有兩條修復值得注意：
 
 1. **tag 大型檔案時不再做 JSON 跳脫處理**，有效降低 token 消耗。之前如果你 `@` 了一個大檔，token 會莫名其妙膨脹，就是這個。
 2. **修掉了長 session 記憶體暴增 bug**，原因是 markdown 語法反白快取造成。

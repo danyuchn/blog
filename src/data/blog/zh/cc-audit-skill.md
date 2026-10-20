@@ -68,3 +68,5 @@ cc-audit 的輸出格式是可執行建議清單。每一條都對應到具體�
 丟這個連結給 Claude Code：<https://github.com/danyuchn/cc-audit>
 
 它會幫你裝好、驗證、然後你打 `/cc-audit` 就開始跑。
+
+> **後記（2026-10-20）**：上面公式有兩處已經變了。快取時效不是照 Pro 或 Team/Enterprise 分，而是只要用 Claude 訂閱、還在方案額度內，主對話就是 1 小時快取，subagent 或吃額外用量的部分才是 5 分鐘。另外現在很多 session 跑的是 1M context window，用的是這種的話，分母要改成 1,000,000，不是 200,000。

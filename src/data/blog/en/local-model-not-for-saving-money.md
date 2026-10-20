@@ -45,3 +45,5 @@ The second trap was the column I'd been treating as a capability score, which ac
 The third trap was using curl against the endpoint to check compatibility. System prompt, tools, streaming, everything came back fine, so I assumed the failure I had on record was out of date. Then I ran `claude -p` with a real tool loop and found the failure only fires on the path where a tool parser has to be generated on the fly, and a curl probe never gets there. Compatibility checks only count when you actually run the thing.
 
 The three traps add up to this: before you decide whether to spend NT$100,000, make sure the numbers you're deciding with are real.
+
+> **Postscript (2026-10-20):** Gemini 3.7 Flash was deprecated on October 8, 2026, and requests to it now go to Gemini 3.8 Flash. The math above still holds; just use `gemini-3.8-flash` if you set this up today.

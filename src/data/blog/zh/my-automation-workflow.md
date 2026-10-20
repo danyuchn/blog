@@ -157,3 +157,5 @@ Chrome MCP 又耗 token 又容易斷線，只能說是最後的備案。如果�
 我目前還缺一塊是「長期記憶整合」——Obsidian、auto memory、CLAUDE.md、rules 這四個知識源頭現在是平行的，沒有統一的 indexing。
 
 理想狀態是有一個 meta-skill 能跨這四個源頭檢索。這大概會是下個月的專案。
+
+> **後記（2026-10-20）**：兩點更新。`/loop` 只在 session 開著的時候跑，而且重複任務 7 天後會自動過期，真的要每個上班日自動打卡，改用雲端或 Desktop 的排程任務。另外 commands 那段：既有的 `.claude/commands/` 檔案照樣能用；真的要改寫成 skill，專案用的放 `.claude/skills/`，`~/.claude/skills/` 是放個人用的。

@@ -90,3 +90,5 @@ Other flags:
 - `--breakdown`: split by model
 
 Also fantastic for writing technical docs -- drop it into Overleaf and it passes first try. I'm noticing my conversations with AI are getting increasingly nerdy -- fork, branch, merge, push, fallback, prop, hook -- these words are in my mouth every single day now.
+
+> **Postscript (2026-10-20):** ccusage now combines every coding CLI it detects (Codex, Gemini CLI and others) into one report. If you only want Claude Code's numbers, run `npx ccusage@latest claude monthly`.

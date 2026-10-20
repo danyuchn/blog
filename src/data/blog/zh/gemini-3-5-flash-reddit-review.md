@@ -48,3 +48,5 @@ Gemini 3.5 Flash 發布後，Reddit 上的實測回報陸續出爐。整理三�
 ## 我的看法
 
 Flash 系列存在的意義是「便宜且夠用」。當價格逼近 Pro 等級但能力沒有跟上，定位就崩了。如果你需要快速且便宜，目前 DeepSeek v4 Flash 或舊版 Gemini 3 Flash 可能是更務實的選擇。如果你需要品質，那直接用 Opus 或 GPT-5.5。卡在中間的 3.5 Flash，目前看來是個尷尬的存在。
+
+> **後記（2026-10-20）**：Google 後來已經把 Gemini 3.5 Flash 列為 deprecated，打 `gemini-3.5-flash` 的 API 請求現在會自動導到 3.6 Flash，目前最新的 Flash 是 3.8。要選型請先看 Google 官方最新的模型與定價頁，別直接照這篇判斷。

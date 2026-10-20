@@ -45,3 +45,5 @@ One gotcha after enabling fork: you need to explicitly tell the main agent wheth
 Each of these features is a small tool on its own, but combined they form a complete workflow platform. Skills encapsulate processes, Hooks enforce rules, Agents divide labor, and Subagents decide between isolation and inheritance.
 
 For heavy daily Claude Code users, these aren't nice-to-haves. They're infrastructure.
+
+> **Postscript (2026-10-20):** Fork subagents aren't experimental anymore. Since v2.1.232 (August 2026) forking is on by default, so the "say explicitly whether to inherit context" gotcha now applies to everyone. To turn forking off, set `CLAUDE_CODE_FORK_SUBAGENT=0`.

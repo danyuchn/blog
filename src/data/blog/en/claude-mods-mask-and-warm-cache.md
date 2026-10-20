@@ -58,7 +58,7 @@ On 10/08 I noticed a new Claude Code CLI feature: "Compacted while idle, before 
 
 Before the cache goes cold, the system compacts the conversation for you, so when you come back you aren't forced to resend a big cold chunk of context to the model and get billed for it.
 
-`idleCompact` and `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS` decide whether it's enabled, and how long the context has to be before idle compact kicks in.
+`idleCompaction` and `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS` decide whether it's enabled, and how long the context has to be before idle compact kicks in.
 
 ![Claude Code CLI showing "Compacted while idle, before the prompt cache expired", with "commit 吧" typed in the input box.](/blog/assets/posts/claude-mods-mask-and-warm-cache/3-idle-compact.jpg)
 

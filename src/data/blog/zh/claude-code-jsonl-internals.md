@@ -26,7 +26,7 @@ JSONL 檔案在 `~/.claude/projects/<project-name>/<session-id>.jsonl`。每一�
 context_usage = (input_tokens + cache_creation_input_tokens + cache_read_input_tokens) / 200000
 ```
 
-分子是 assistant 訊息 `usage` 欄位裡的三個值。分母 200000 是 Claude 目前的 context window 大小。
+分子是 assistant 訊息 `usage` 欄位裡的三個值。分母 200000 是標準的 context window 大小；如果你的 session 用的是 1M context 的模型，分母要改成 1,000,000。
 
 算出來接近 1 代表你快撞牆了，接下來要嘛 `/compact`、要嘛 `/clear`、要嘛開新對話。
 
@@ -80,3 +80,5 @@ memory 是 hint，不是 source of truth。這是一個很容易被忽略但會�
 `/stats` 只是入口。真正的細節在 JSONL 裡，而且都可以用 Python + jq 自己抓。我寫的 [cc-audit skill](/blog/posts/zh/cc-audit-skill) 已經把這些邏輯全部打包好，但你如果想自己 hack，以上五個公式應該夠你開始。
 
 Claude Code 是一個開放的系統——所有資料都在你的硬碟上，格式是公開的 JSON。懂得挖這些，比只看 `/stats` 有用一百倍。
+
+> **後記（2026-10-20）**：第 2 節的 5 分鐘 vs 1 小時其實不是 Pro 跟 Team/Enterprise 的差別。只要是 Claude 訂閱、還在方案額度內，主對話就是 1 小時快取；subagent、吃額外用量或用 API key 的部分才是 5 分鐘。

@@ -26,7 +26,7 @@ To see how thick your session has gotten, don't just look at `input_tokens`—th
 context_usage = (input_tokens + cache_creation_input_tokens + cache_read_input_tokens) / 200000
 ```
 
-The numerator comes from the `usage` field on assistant messages. The denominator is Claude's current 200k context window.
+The numerator comes from the `usage` field on assistant messages. The denominator is the standard 200k context window; if your session runs on a 1M-context model, use 1,000,000 instead.
 
 When this value gets close to 1, you're hitting the wall—time to `/compact`, `/clear`, or start a new conversation.
 
@@ -80,3 +80,5 @@ Memory is a hint, not source of truth. This is the kind of trap that's easy to d
 `/stats` is just the entry point. The real detail lives in the JSONL, and everything is grep-able and Python-parseable. My [cc-audit skill](/blog/posts/en/cc-audit-skill) already bundles all this logic, but if you want to hack on your own, the five formulas above should get you started.
 
 Claude Code is an open system—all the data is on your own disk, in a documented JSON format. Learning to mine it is a hundred times more useful than just reading `/stats`.
+
+> **Postscript (2026-10-20):** The 5-minute vs 1-hour split in section 2 isn't Pro vs Team/Enterprise. On any Claude subscription the main conversation gets the 1-hour cache while you're within plan usage. Subagents, and turns billed to usage credits or an API key, get 5 minutes.

@@ -48,6 +48,8 @@ description: '帶 Claude Code / Codex 初學者裝 Gemini Antigravity CLI 的五
 
 我很開心我的 15 年教齡讓我有這樣的直覺跟經驗。
 
+> **後記（2026-10-20）**：Antigravity 的 FAQ 現在寫明，個人方案不支援讓 Claude Code、Codex 這類第三方工具包著 `agy` 呼叫，帳號還可能被停權。第 3 步請改成讓初學者自己在終端機跑 `agy`，或是讓 SKILL 改用 Google AI Studio 的 API key。
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「順序大概是這樣。」 — 類型：銜接（把開場句接到五個編號步驟）

@@ -285,6 +285,8 @@ Opus 5.5 發佈以來，額度就真的很省，5 小時窗口也擴增了額度
 其餘為原文逐字，僅補標點與數字前後空格。既有段落零改動。
 -->
 
+> **後記（2026-10-20）**：上面兩點要更正。依 Claude Code 目前的官方文件，只要是訂閱方案、還在方案額度內，主對話的快取就是 1 小時（subagent、usage credits 和 API key 才是 5 分鐘）。而 Help Center 寫明每月 API credit 不適用互動式 Claude Code，所以 `/login` 切到 API 不會吃到它，它是給 API、Agent SDK 這類用法的。另外 OpenAI 會在 2026 年 10 月 23 日關閉 o1-pro，「最貴模型」這個頭銜它也撐不久了。
+
 <!--
 2026-08-28 合併新增：併入三篇訂閱主題舊文（claude-code-subscription-guide / ai-subscription-value / claude-subscription-economics），散文逐字搬移，只補小標與最小銜接。本次新增的非原文句子清單：
 1. 新增 H2 小標「額度到了，工作就停在那裡」「「增加 4 倍」其實沒有 4 倍」「夜市牛排跟餐廳牛排」— 小標（語意取自原文段落，非新論點）。其餘小標（Pro 的額度其實很少／Max 到底值不值／Cowork 很燒 token，別用它替代 CLI／訂閱 cache reads 不計費／幾個實用工具／一個管理心態／訂閱制設計出來的焦慮／一個判斷框架／那要怎麼選？／美東尖峰時段：一小時就 hit limit／Skill 沒解決 hit limit，反而帶來 shutdown／反觀免費版 GPT，至今未 hit limit／串起來看）沿用原文標題。

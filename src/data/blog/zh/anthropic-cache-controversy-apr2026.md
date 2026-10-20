@@ -25,7 +25,7 @@ Anthropic 的 Boris 出來解釋，說只有 subagent 受影響，主 agent 還�
 
 ```bash
 # 找最近的 session jsonl 裡的 cache tier 分布
-grep -o '"ephemeral_[^"]*_input_tokens":[0-9]*' ~/.claude/projects/*/\*.jsonl | sort | uniq -c
+grep -o '"ephemeral_[^"]*_input_tokens":[0-9]*' ~/.claude/projects/*/*.jsonl | sort | uniq -c
 ```
 
 `ephemeral_5m_input_tokens` 有值就是被降到 5 分鐘快取的對話。

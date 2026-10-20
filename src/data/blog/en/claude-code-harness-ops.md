@@ -9,7 +9,7 @@ tags:
   - claude-code
   - harness
   - ai-workflow
-description: From March to April, running Claude Code as a long-running harness surfaced a bunch of issues. Survival tactics during the outage, my hook for cleaning up zombie processes, the resume cache-miss fix in 2.1.90, the silent memory bloat in 2.1.100, and the Plan-Mode-question-density problem after 4.7.
+description: From March to April, running Claude Code as a long-running harness surfaced a bunch of issues. Survival tactics during the outage, my hook for cleaning up zombie processes, the resume cache-miss fix in 2.1.90, the silent memory bloat fixed in 2.1.86, and the Plan-Mode-question-density problem after 4.7.
 ---
 
 After six months of using Claude Code as a daily driver, I've come to a realization: the model's capability is already enough. What actually bottlenecks efficiency is the harness itself.
@@ -50,7 +50,7 @@ This is textbook harness engineering: the model itself won't do this, so you hav
 
 ## 2.1.90 finally fixed resume cache miss
 
-Mid-April, 30 minutes before I wrote this paragraph, Claude Code shipped 2.1.90. It finally fixed the resume-causes-cache-miss problem.
+At the start of April, 30 minutes before I wrote this paragraph, Claude Code shipped 2.1.90. It finally fixed the resume-causes-cache-miss problem.
 
 Every time you resumed a long conversation, the first message would rebuild the entire cache. So you paid an "admission ticket" to continue working. Resume five or six times a day and you're cooked.
 
@@ -60,9 +60,9 @@ This bug existed for a long time. A lot of us got burned without knowing why. Yo
 
 Once fixed, my long-running project sessions became genuinely resumable.
 
-## 2.1.100: two quiet fixes worth noting
+## 2.1.86: two quiet fixes worth noting
 
-CC 2.1.100 had two fixes worth noting:
+CC 2.1.86 had two fixes worth noting:
 
 1. **Tagging large files no longer does JSON escape processing**, which meaningfully reduced token consumption. If you `@`-mentioned a large file and token usage mysteriously ballooned, this was it.
 2. **Fixed the long-session memory explosion bug**, caused by markdown syntax highlight cache.

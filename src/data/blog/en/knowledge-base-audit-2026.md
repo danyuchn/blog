@@ -93,7 +93,7 @@ The insight: documentation drift is a slow-accumulation problem, not a sudden-co
 
 What I now do every three months or so:
 
-- [ ] Run `claude cost` or `/context` — if starting context exceeds 8,000 tokens, restructure to lazy-load
+- [ ] Run `/cost` or `/context` — if starting context exceeds 8,000 tokens, restructure to lazy-load
 - [ ] Run a broken wikilink scan, process results using the three-tier priority system
 - [ ] Todo source audit: every task must have one unambiguous home
 - [ ] Bookmark review: clear `status: stale` items, categorize anything untagged
