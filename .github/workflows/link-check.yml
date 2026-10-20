@@ -1,0 +1,107 @@
+name: External link check
+
+# Advisory only: weekly + manual. Not triggered on push/PR, so it can never
+# block a merge or a deploy. Broken links are reported in one tracking issue.
+on:
+  schedule:
+    - cron: "17 1 * * 1" # Mondays 01:17 UTC (08:17 Bangkok)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: link-check
+  cancel-in-progress: true
+
+env:
+  ISSUE_LABEL: link-check
+  ISSUE_TITLE: "Broken external links (weekly link check)"
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.run_id }}
+          restore-keys: lychee-
+
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config .github/lychee.toml
+            --no-progress
+            'src/data/blog/**/*.md'
+          format: markdown
+          output: lychee/report.md
+          fail: false
+          jobSummary: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # higher GitHub rate limit
+
+      # lychee also caches failures (network errors carry no status code, so
+      # cache_exclude_status cannot drop them). Keep only 2xx entries so every
+      # failure is re-checked next week instead of sticking for max_cache_age.
+      - name: Keep only successes in cache
+        if: always()
+        run: |
+          if [ -f .lycheecache ]; then
+            grep -E ',2[0-9]{2},[0-9]+$' .lycheecache > .lycheecache.tmp || true
+            mv .lycheecache.tmp .lycheecache
+          fi
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: lychee/report.md
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Open, update, or close tracking issue
+        if: always() && steps.lychee.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          existing=$(gh issue list --state open --label "$ISSUE_LABEL" --json number --jq '.[0].number // empty')
+
+          if [ "$EXIT_CODE" = "0" ]; then
+            if [ -n "$existing" ]; then
+              gh issue close "$existing" --comment "All external links pass as of $RUN_URL. Closing."
+            fi
+            exit 0
+          fi
+
+          # exit code 2 = broken links found; anything else is a lychee/config error.
+          if [ "$EXIT_CODE" != "2" ]; then
+            echo "::warning::lychee exited with $EXIT_CODE (not a link failure); leaving tracking issue untouched."
+            exit 0
+          fi
+
+          {
+            echo "Automated weekly report from [the link check run]($RUN_URL) on $(date -u +%Y-%m-%d)."
+            echo "This issue is updated in place each week and closed automatically once all links pass."
+            echo "Config and excludes: \`.github/lychee.toml\`. Full report: the \`lychee-report\` artifact on the run."
+            echo
+            # Issue bodies are capped at 65536 chars.
+            head -c 60000 lychee/report.md
+          } > issue-body.md
+
+          gh label create "$ISSUE_LABEL" --color d93f0b --description "Weekly external link check" --force
+          if [ -n "$existing" ]; then
+            gh issue edit "$existing" --body-file issue-body.md
+          else
+            gh issue create --title "$ISSUE_TITLE" --label "$ISSUE_LABEL" --body-file issue-body.md
+          fi
