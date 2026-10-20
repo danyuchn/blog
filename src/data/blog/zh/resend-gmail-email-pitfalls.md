@@ -10,7 +10,7 @@ tags:
   - resend
   - gmail
   - workflow
-description: 這兩週密集用 Resend 批次寄信跟 Gmail draft 兩條路徑做課程通知、講座感謝信、BD outreach。整理七個踩坑：HTML inline style、scheduled_at 不生效、Cloudflare 1010、Click tracking、bad-recipients、Gmail thread 漏看、客製 vs 通用開信率對齊。
+description: '這兩週密集用 Resend 批次寄信跟 Gmail draft 兩條路徑做課程通知、講座感謝信、BD outreach。整理七個踩坑。'
 ---
 
 這七個坑裡最貴的一個是：你設了 5/18 的排程，那 40 封信在 5/11 就整批寄出去了，而 API 回應完全沒告訴你。

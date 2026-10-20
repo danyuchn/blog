@@ -12,7 +12,7 @@ tags:
 description: 'The gate was running and stopped nothing. Four rules: bind it to a field that cannot survive a no-op, counter-test both directions before trusting a zero, exit non-zero or it is not a gate, and never treat wording the prompt never specified as a contract.'
 ---
 
-I kept hitting the same thing these past few days: the gate was running, and it stopped nothing. I have written twice about the acceptance side already. [Don't Grade AI by Its Summary](/posts/en/dont-grade-ai-by-its-summary) is about not trusting a report that says everything is fine; [No Error Doesn't Mean Success](/posts/en/silent-failures-and-confabulated-tool-results) is about exit 0 and HTTP 200 not counting for anything. This one is the design side: if the report can't be trusted, how do you write a gate that actually blocks? I have four rules, and I paid for each one before writing it down.
+I kept hitting the same thing these past few days: the gate was running, and it stopped nothing. I have written twice about the acceptance side already. [Don't Grade AI by Its Summary](/blog/posts/en/dont-grade-ai-by-its-summary) is about not trusting a report that says everything is fine; [No Error Doesn't Mean Success](/blog/posts/en/silent-failures-and-confabulated-tool-results) is about exit 0 and HTTP 200 not counting for anything. This one is the design side: if the report can't be trusted, how do you write a gate that actually blocks? I have four rules, and I paid for each one before writing it down.
 
 ## Bind the gate to a field that can't survive a no-op
 

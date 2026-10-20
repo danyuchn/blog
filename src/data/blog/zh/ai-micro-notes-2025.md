@@ -13,7 +13,7 @@ tags:
 description: 2025 年下半年在 Threads 和 IG 上累積的 AI 短碎念。模型吐槽、開發踩坑、行業觀察、工具心得，每則不超過三行。
 ---
 
-這是 2025 年下半年的 AI 碎念歸檔。2026 年起的碎念請見[新版碎念日記](/posts/zh/ai-micro-notes)。
+這是 2025 年下半年的 AI 碎念歸檔。2026 年起的碎念請見[新版碎念日記](/blog/posts/zh/ai-micro-notes)。
 
 ---
 

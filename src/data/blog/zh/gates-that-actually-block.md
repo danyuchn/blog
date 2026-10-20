@@ -12,7 +12,7 @@ tags:
 description: '閘門明明在跑，卻什麼都沒擋住。四條判準：綁 no-op 下活不下來的欄位、回 0 前先兩邊反驗、只印訊息不改離開碼等於沒閘門、別把 prompt 沒規定的字面當契約。'
 ---
 
-這幾天連續踩到同一類東西：閘門明明在跑，卻什麼都沒擋住。我之前寫過兩篇談驗收端——[不要用 AI 的摘要驗收 AI](/posts/zh/dont-grade-ai-by-its-summary) 講的是別相信「沒問題」這個回報，[沒拋錯不代表成功](/posts/zh/silent-failures-and-confabulated-tool-results) 講的是 exit 0 跟 HTTP 200 都不算數。這一篇是設計端：既然回報不能信，那要怎麼寫出一個真的會擋下來的閘門。我手上有四條判準，每一條都是賠掉一次才寫下來的。
+這幾天連續踩到同一類東西：閘門明明在跑，卻什麼都沒擋住。我之前寫過兩篇談驗收端——[不要用 AI 的摘要驗收 AI](/blog/posts/zh/dont-grade-ai-by-its-summary) 講的是別相信「沒問題」這個回報，[沒拋錯不代表成功](/blog/posts/zh/silent-failures-and-confabulated-tool-results) 講的是 exit 0 跟 HTTP 200 都不算數。這一篇是設計端：既然回報不能信，那要怎麼寫出一個真的會擋下來的閘門。我手上有四條判準，每一條都是賠掉一次才寫下來的。
 
 ## 閘門要綁「no-op 下活不下來的欄位」
 
