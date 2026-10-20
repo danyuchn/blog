@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - ai-workflow
-description: Opus 4.7 預設的 adaptive effort 是場災難，會變成偷懶摸魚皇帝。要開到 high 或 xhigh 才能避免，但 token 就開始狂燒。實測下來，非編程任務停在 Sonnet 4.6 medium 反而是最好的選擇。
+description: 'Opus 4.7 預設的 adaptive effort 是場災難，會變成偷懶摸魚皇帝。要開到 high 或 xhigh 才能避免，但 token 就開始狂燒。實測下來，非編程任務停在 Sonnet 4.6 medium 反而是最好的選擇。'
 ---
 
 最近有朋友問我：「升上去 Opus 4.7 之後是不是就一勞永逸了？」答案是不是的，至少對非編程任務不是。

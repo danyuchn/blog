@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-education
   - ai-coding
-description: Designing a Claude Code workshop for non-engineers — from analyzing signup demand to crafting the curriculum, plus 15 quick-start tips for zero-coding-background learners.
+description: 'Designing a Claude Code workshop for non-engineers — from analyzing signup demand to crafting the curriculum, plus 15 quick-start tips for zero-coding-background learners.'
 ---
 
 In late February I started planning a very different kind of Claude Code workshop — the goal was to get people with zero coding background to walk out with their own working workflow in five hours.

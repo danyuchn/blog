@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - token-optimization
-description: Reddit 大神逆向工程挖出兩個官方 Bug，再加上百萬 token 上下文的複合效應，你的額度可能在背後被吃掉 20 倍。完整事件始末與修復紀錄。
+description: 'Reddit 大神逆向工程挖出兩個官方 Bug，再加上百萬 token 上下文的複合效應，你的額度可能在背後被吃掉 20 倍。完整事件始末與修復紀錄。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/claude-code-quota-incident-log
 ---
 

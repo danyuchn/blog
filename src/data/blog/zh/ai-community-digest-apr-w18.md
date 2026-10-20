@@ -9,7 +9,7 @@ tags:
   - ai-trends
   - claude-code
   - ai-tools
-description: 4/28–4/29 的 Reddit AI 社群熱門話題整理：r/ClaudeAI 的 agent 安全性爭議、r/ChatGPT 的 GPT 5.5 guardrail 爭議、r/LocalLLaMA 的本機 LLM 現況，以及 Anthropic 宣布 Claude for Creative Work。
+description: '4/28–4/29 的 Reddit AI 社群熱門話題整理：r/ClaudeAI 的 agent 安全性爭議、r/ChatGPT 的 GPT 5.5 guardrail 爭議、r/LocalLLaMA 的本機 LLM 現況，以及 Anthropic 宣布 Claude for Creative Work。'
 ---
 
 這週 Reddit AI 社群的討論量繼續往上，兩天的熱門話題放在一起整理。

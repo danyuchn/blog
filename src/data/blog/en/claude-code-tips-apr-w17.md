@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-workflow
-description: A handful of Claude Code settings and money-saving tricks I picked up this week — how Rules/Memory/Hooks offload CLAUDE.md, fixing cmd+click in Ghostty No Flicker mode, dispatching long-read work to Haiku for quota relief, and the cache difference between pasting images and editing prior messages after 4.7.
+description: 'A handful of Claude Code settings and money-saving tricks I picked up this week — how Rules/Memory/Hooks offload CLAUDE.md, fixing cmd+click in Ghostty No Flicker mode, dispatching long-read work to Haiku for quota relief, and the cache difference between pasting images and editing prior messages after 4.7.'
 ---
 
 A few Claude Code settings and tricks I accumulated this week. Nothing is brand new, but all of them are things I learned by running face-first into the wall. Organized by topic.

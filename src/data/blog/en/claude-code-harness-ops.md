@@ -9,7 +9,7 @@ tags:
   - claude-code
   - harness
   - ai-workflow
-description: From March to April, running Claude Code as a long-running harness surfaced a bunch of issues. Survival tactics during the outage, my hook for cleaning up zombie processes, the silent memory bloat fixed in 2.1.86, the resume cache-miss fix in 2.1.90, and the Plan-Mode-question-density problem after 4.7.
+description: 'From March to April, running Claude Code as a long-running harness surfaced a bunch of issues. Survival tactics during the outage, my hook for cleaning up zombie processes, the silent memory bloat fixed in 2.1.86, the resume cache-miss fix in 2.1.90, and the Plan-Mode-question-density problem after 4.7.'
 ---
 
 After six months of using Claude Code as a daily driver, I've come to a realization: the model's capability is already enough. What actually bottlenecks efficiency is the harness itself.

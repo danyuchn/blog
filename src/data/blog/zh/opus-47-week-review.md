@@ -9,7 +9,7 @@ tags:
   - claude-code
   - model-comparison
   - ai-trends
-description: Opus 4.7 上線一週，系統卡數據看起來全面超越 4.6，但實測下來燒 quota 是官方宣稱的 2 倍，Reddit 一片火烤文。整理這週的災情、逆向分析、以及我自己退回 4.6 的路徑。
+description: 'Opus 4.7 上線一週，系統卡數據看起來全面超越 4.6，但實測下來燒 quota 是官方宣稱的 2 倍，Reddit 一片火烤文。整理這週的災情、逆向分析、以及我自己退回 4.6 的路徑。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/claude-code-quota-incident-log
 ---
 

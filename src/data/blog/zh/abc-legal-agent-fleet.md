@@ -12,7 +12,7 @@ tags:
 description: '整理 Anthropic 官方 ABC Legal 案例的六張圖卡：50+ 生產環境代理人、把 agent 當軟體放進 git、非工程師組成的 steering committee，以及「可信任，才自動化」的營運原則。'
 ---
 
-以下六張圖卡整理自 Anthropic 官方 case study〈[How ABC Legal turned every employee into a builder with Claude-managed agents](https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents)〉，數據資料截至 2026 年 7 月。
+以下六張圖卡整理自 Anthropic 官方 case study〈[How ABC Legal turned every employee into a builder with Claude-managed agents](https://claude.com/resources/articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents)〉，數據資料截至 2026 年 7 月。
 
 ## 01｜真正的突破不是讓 1,100 人學會寫程式
 

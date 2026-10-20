@@ -10,7 +10,7 @@ tags:
   - claude
   - gemini
   - gpt
-description: Six months of daily-driving all three major AI models. Claude's reliability, Gemini's self-doubt spirals, GPT's decline, and what I ended up subscribing to.
+description: 'Six months of daily-driving all three major AI models. Claude''s reliability, Gemini''s self-doubt spirals, GPT''s decline, and what I ended up subscribing to.'
 ---
 
 For the past six months, I've been using Claude, Gemini, and GPT pretty much every single day. Not running benchmarks, not watching someone else's review videos -- actually using them to get things done: writing code, refactoring databases, deploying products, putting together teaching materials. Here's what it actually feels like.

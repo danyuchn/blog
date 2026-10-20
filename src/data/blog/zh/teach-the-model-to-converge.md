@@ -32,7 +32,7 @@ Opus 5 除了不講人話之外，還有過度寫作的習慣。（不講人話�
 
 同一週有人問我 overthinking 的問題。
 
-其實你的問題的答案，都藏在 Anthropic 的這篇文章裡（GPT 也適用）：<https://claude.com/blog/claude-model-and-effort-level-in-claude-code>
+其實你的問題的答案，都藏在 Anthropic 的這篇文章裡（GPT 也適用）：<https://claude.com/resources/articles/claude-model-and-effort-level-in-claude-code>
 
 雖然網友常常臭 A 家，但很少有人否定他們的技術文章，寫的真正是深度跟科普並具。
 

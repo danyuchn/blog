@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-trends
   - ai-tools
-description: 大家抱怨 Claude 變笨已經好幾個禮拜了，Anthropic 的回應一貫是「使用習慣問題」。終於有人從 JSONL 扒出數據，證明不是體感而是實測——但 Issue 還是被秒關。
+description: '大家抱怨 Claude 變笨已經好幾個禮拜了，Anthropic 的回應一貫是「使用習慣問題」。終於有人從 JSONL 扒出數據，證明不是體感而是實測——但 Issue 還是被秒關。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/claude-code-quota-incident-log
 ---
 

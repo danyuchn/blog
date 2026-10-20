@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: How much does Pro actually give you? Is Max worth it? Why does Cowork burn through tokens so fast? What does "2x usage" actually mean? These questions come up constantly — here's everything I've figured out over the past few months.
+description: 'How much does Pro actually give you? Is Max worth it? Why does Cowork burn through tokens so fast? What does "2x usage" actually mean? These questions come up constantly — here''s everything I''ve figured out over the past few months.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/ai-usage-economics
 ---
 

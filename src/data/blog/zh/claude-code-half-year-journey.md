@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-workflow
   - reflection
-description: 從 1 月到 4 月陪著 Claude Code 一起長大半年，我的心態從「PTT 世代對 CLI 的莫名好感」變成「20x 的猶豫」變成「AI detox」變成「泰國社群練泰語」。整理一下這半年的軌跡，連同那些對自己講越來越 nerdy、agent 幫我加班到凌晨五點的日子。
+description: '從 1 月到 4 月陪著 Claude Code 一起長大半年，我的心態從「PTT 世代對 CLI 的莫名好感」變成「20x 的猶豫」變成「AI detox」變成「泰國社群練泰語」。整理一下這半年的軌跡，連同那些對自己講越來越 nerdy、agent 幫我加班到凌晨五點的日子。'
 ---
 
 我 1 月第一次認真用 Claude Code 的時候，對它有一種 PTT 世代的莫名好感。

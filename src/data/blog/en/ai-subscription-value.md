@@ -9,7 +9,7 @@ tags:
   - ai-daily-use
   - claude-code
   - ai-trends
-description: A $7 night market steak versus a $70 restaurant steak — the expensive one isn't ten times better. AI subscriptions work the same way. A framework for deciding whether you're actually getting value.
+description: 'A $7 night market steak versus a $70 restaurant steak — the expensive one isn''t ten times better. AI subscriptions work the same way. A framework for deciding whether you''re actually getting value.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/ai-usage-economics
 ---
 

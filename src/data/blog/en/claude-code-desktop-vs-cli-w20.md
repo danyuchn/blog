@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - claude-app
-description: Two or three weeks ago Anthropic overhauled the desktop app. Over 90% of the features now match the CLI. If you're a beginner who's scared of the terminal, starting with the desktop app is fine.
+description: 'Two or three weeks ago Anthropic overhauled the desktop app. Over 90% of the features now match the CLI. If you''re a beginner who''s scared of the terminal, starting with the desktop app is fine.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/cli-vs-desktop-three-answers
 ---
 

@@ -10,7 +10,7 @@ tags:
   - resend
   - gmail
   - workflow
-description: Two weeks of heavy use across Resend batch sends and Gmail draft creation for course notifications, lecture thank-you emails, and BD outreach. Over 1,400 emails sent. Seven lessons worth writing down.
+description: 'Two weeks of heavy use across Resend batch sends and Gmail draft creation for course notifications, lecture thank-you emails, and BD outreach. Over 1,400 emails sent. Seven lessons worth writing down.'
 ---
 
 The most expensive one here: you set a schedule for 5/18, all 40 emails went out on 5/11 anyway, and the API response never told you.

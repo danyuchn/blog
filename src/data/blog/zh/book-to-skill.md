@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-workflow
-description: 把書籍、框架、方法論轉成 Claude Skill，讓知識變成可執行的互動式教練。國外的熱門案例整理和實作心得。
+description: '把書籍、框架、方法論轉成 Claude Skill，讓知識變成可執行的互動式教練。國外的熱門案例整理和實作心得。'
 ---
 
 下午看到有人推薦一本很棒的書「量化求職」，我突發奇想：如果把書做成 Skill 呢？

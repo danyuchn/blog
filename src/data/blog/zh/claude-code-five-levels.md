@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: 從 Raw Prompting 到 Orchestration，Reddit 上 778 個讚的框架——每一層存在的原因，是因為上一層壞掉了。
+description: '從 Raw Prompting 到 Orchestration，Reddit 上 778 個讚的框架——每一層存在的原因，是因為上一層壞掉了。'
 ---
 
 很多人說 Claude Code 不穩定，有時候又準又快，有時候就自己亂做。我以前也這樣覺得。

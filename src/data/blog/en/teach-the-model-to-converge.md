@@ -32,7 +32,7 @@ Put simply, it is Musk's "first principles." The skill itself lives here: <https
 
 Someone asked me about overthinking that same week.
 
-The answer to your question is buried in this Anthropic article (it applies to GPT too): <https://claude.com/blog/claude-model-and-effort-level-in-claude-code>
+The answer to your question is buried in this Anthropic article (it applies to GPT too): <https://claude.com/resources/articles/claude-model-and-effort-level-in-claude-code>
 
 People online trash-talk the A crowd all the time, but almost nobody denies their technical writing. It really does have both depth and accessibility.
 

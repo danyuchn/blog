@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-trends
-description: 4 月初起，部分 Max 以上帳號的 subagent 快取維持時間被偷偷從 1 小時改成 5 分鐘，零公告。同期有用戶發現 Claude 被注入固定的「剩餘 token 警告」，導致 Claude 提前縮短工作。怎麼自查，以及這件事代表什麼。
+description: '4 月初起，部分 Max 以上帳號的 subagent 快取維持時間被偷偷從 1 小時改成 5 分鐘，零公告。同期有用戶發現 Claude 被注入固定的「剩餘 token 警告」，導致 Claude 提前縮短工作。怎麼自查，以及這件事代表什麼。'
 ---
 
 這週 r/ClaudeAI 跑出兩個爭議，放在一起看挺耐人尋味的。

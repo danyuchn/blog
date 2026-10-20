@@ -9,7 +9,7 @@ tags:
   - vibe-coding
   - ai-coding
   - opinion
-description: 不該統一貶低 Vibe Coding，但也要認清課程品質的陷阱。一個教學從業十年以上的人，分享辨識有料與沒料的方法。
+description: '不該統一貶低 Vibe Coding，但也要認清課程品質的陷阱。一個教學從業十年以上的人，分享辨識有料與沒料的方法。'
 ---
 
 最近 Threads 的河道上，演算法一直推給我 Vibe Coding 相關的內容。越來越多人開課教 Vibe Coding。由於我自己也是從業 10 年以上的老師，一眼看過去有料沒料大概心裡有個數。

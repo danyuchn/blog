@@ -10,7 +10,7 @@ tags:
   - ai-product-building
   - non-engineer
   - case-study
-description: A legal counsel at a mid-sized company took our Claude Code course, then compressed a multi-day patent infringement audit into a single day — and actually caught a real case that is now in legal proceedings. This story finally turns "Claude Code is not just for engineers" from a slogan into a fact.
+description: 'A legal counsel at a mid-sized company took our Claude Code course, then compressed a multi-day patent infringement audit into a single day — and actually caught a real case that is now in legal proceedings. This story finally turns "Claude Code is not just for engineers" from a slogan into a fact.'
 ---
 
 Patent infringement audits used to take days for a legal counsel to run.

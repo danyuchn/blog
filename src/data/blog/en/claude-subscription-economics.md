@@ -10,7 +10,7 @@ tags:
   - ai-economics
   - subscription
   - opinion
-description: From W18 to W19 I accumulated half a dozen observations about Claude quota — reset times deliberately scattered, the 5x→20x math trap, hitting limit in one hour during US East peak, and somehow free GPT never running out. String them together and a real subscription economics emerges.
+description: 'From W18 to W19 I accumulated half a dozen observations about Claude quota — reset times deliberately scattered, the 5x→20x math trap, hitting limit in one hour during US East peak, and somehow free GPT never running out. String them together and a real subscription economics emerges.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/ai-usage-economics
 ---
 

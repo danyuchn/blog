@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: 終端機不只是另一種打開 Claude 的方式。它是讓 Claude 真正解放的環境。多視窗、速度、資源、Ghostty——這是一個 CLI 信徒的完整自白。
+description: '終端機不只是另一種打開 Claude 的方式。它是讓 Claude 真正解放的環境。多視窗、速度、資源、Ghostty——這是一個 CLI 信徒的完整自白。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/cli-vs-desktop-three-answers
 ---
 

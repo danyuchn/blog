@@ -11,7 +11,7 @@ tags:
   - gpt-image
   - ai-daily-use
   - prompting
-description: The "ugly crayon doodle" prompt that went viral overseas works because over-constraint kills GPT-image-2's creativity. Here is what I observed this week — including why routing prompts through Claude makes things worse, and why "consistency" matters more than raw image quality at work.
+description: 'The "ugly crayon doodle" prompt that went viral overseas works because over-constraint kills GPT-image-2''s creativity. Here is what I observed this week — including why routing prompts through Claude makes things worse, and why "consistency" matters more than raw image quality at work.'
 ---
 
 ## The viral "ugly crayon" prompt

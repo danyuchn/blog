@@ -9,7 +9,7 @@ tags:
   - productivity
   - claude-code
   - ai-workflow
-description: Covey《高效能人士的七個習慣》的時間矩陣是兩軸切四象限，重要 × 緊急。把 Claude Code 放進去之後，每一格的時間分配會被重新洗牌。Q1/Q3 被 AI 吃掉，多出來的時間搬到 Q2 才是 AI 協作的長期複利。
+description: 'Covey《高效能人士的七個習慣》的時間矩陣是兩軸切四象限，重要 × 緊急。把 Claude Code 放進去之後，每一格的時間分配會被重新洗牌。Q1/Q3 被 AI 吃掉，多出來的時間搬到 Q2 才是 AI 協作的長期複利。'
 ---
 
 Stephen Covey 在《高效能人士的七個習慣》（與成功有約）裡提出的時間管理矩陣，是兩軸切四象限：**重要 × 緊急**。

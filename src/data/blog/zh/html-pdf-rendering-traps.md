@@ -8,7 +8,7 @@ draft: false
 tags:
   - developer-experience
   - productivity
-description: 這禮拜寫了客戶提案的 HTML→PDF 和內部報告的 PDF→圖逐頁拆分，兩個流程都有一個看似無解的陷阱。解法都是一行事情，但找到那一行花了我一小時。
+description: '這禮拜寫了客戶提案的 HTML→PDF 和內部報告的 PDF→圖逐頁拆分，兩個流程都有一個看似無解的陷阱。解法都是一行事情，但找到那一行花了我一小時。'
 ---
 
 這兩個陷阱的共同點是，你在瀏覽器裡看起來都對，錯的是最後那份要寄出去的檔案。

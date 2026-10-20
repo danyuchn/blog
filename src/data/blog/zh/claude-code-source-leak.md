@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-trends
-description: 有人對 Claude Code 做了逆向工程，挖出了隱藏的電子寵物系統、下一代模型的欺騙率數據、以及讓 Anthropic 員工隱藏 AI 身份的 Undercover Mode。
+description: '有人對 Claude Code 做了逆向工程，挖出了隱藏的電子寵物系統、下一代模型的欺騙率數據、以及讓 Anthropic 員工隱藏 AI 身份的 Undercover Mode。'
 ---
 
 剛講完 harness，就看到 Claude Code 原始碼洩漏。Reddit 大神對 Claude Code 做逆向工程，挖出了三個有趣的隱藏特徵。

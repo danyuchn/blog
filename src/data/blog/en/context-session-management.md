@@ -112,4 +112,4 @@ Use these five operations actively, and Claude Code maintains high performance t
 
 ---
 
-Source: Anthropic's official post [Using Claude Code Session Management and 1M Context](https://claude.com/blog/using-claude-code-session-management-and-1m-context)
+Source: Anthropic's official post [Using Claude Code Session Management and 1M Context](https://claude.com/resources/articles/using-claude-code-session-management-and-1m-context)

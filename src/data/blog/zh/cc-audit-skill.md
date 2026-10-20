@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - token-optimization
-description: 把我之前整理的一千多讚的省額度技巧全部做成 skill。丟給 Claude Code 安裝後，它會逐條檢查你的設定、近期 session、rules 膨脹、context 用量，給出可執行的修正清單。
+description: '把我之前整理的一千多讚的省額度技巧全部做成 skill。丟給 Claude Code 安裝後，它會逐條檢查你的設定、近期 session、rules 膨脹、context 用量，給出可執行的修正清單。'
 ---
 
 Claude 最近額度亂搞，大家罵歸罵，Claude 還是得繼續用。前陣子我整理了一大串省額度的技巧發在 Threads 上，收穫一千多讚之後，有網友提議可以做成 skill。

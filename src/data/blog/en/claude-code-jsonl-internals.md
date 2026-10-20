@@ -9,7 +9,7 @@ tags:
   - claude-code
   - token-optimization
   - developer-experience
-description: Claude Code's `/stats` only tells you the total token count, but the JSONL files hide a lot more—cache types, compact triggers, image-triggered cache misses. Here are the useful formulas I collected while building cc-audit.
+description: 'Claude Code''s `/stats` only tells you the total token count, but the JSONL files hide a lot more—cache types, compact triggers, image-triggered cache misses. Here are the useful formulas I collected while building cc-audit.'
 ---
 
 Claude Code's `/stats` tells you "this session used X tokens," but that's an aggregate—it buries a lot of useful detail. While building the [cc-audit skill](/blog/posts/en/cc-audit-skill), I went through the JSONL format end-to-end and found a handful of really useful metrics hiding in plain sight, as long as you know where to look.

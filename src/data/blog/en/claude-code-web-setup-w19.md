@@ -10,7 +10,7 @@ tags:
   - claude-code
   - ai-coding
   - ai-workflow
-description: Web Claude Code has two completely different runtimes — cloud VM and remote-control. Here is what I learned setting up both, the small bugs I hit, and why some user-level configs simply cannot be lifted to the cloud as-is.
+description: 'Web Claude Code has two completely different runtimes — cloud VM and remote-control. Here is what I learned setting up both, the small bugs I hit, and why some user-level configs simply cannot be lifted to the cloud as-is.'
 ---
 
 **Dated**: this post is from May 2026. The bug described below, where typing a slash only surfaces the built-in commands and never your custom ones, has since been fixed — three months after remote control shipped, as covered in [A Year In, My Answer to "Terminal or Desktop App?" Has Changed Three Times](/blog/posts/en/cli-vs-desktop-three-answers). The cloud VM part further down (only project-level `.claude/` is readable, only remote MCP works) still holds.

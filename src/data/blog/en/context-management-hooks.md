@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: From Claude.md to Hooks — sharing the context management upgrade after heavy daily Claude Code usage. When rules pile up and compliance drops, Hooks become the perfect gatekeeper.
+description: 'From Claude.md to Hooks — sharing the context management upgrade after heavy daily Claude Code usage. When rules pile up and compliance drops, Hooks become the perfect gatekeeper.'
 ---
 
 Most people switching from chat windows to Claude Code hit a wall early on because they don't understand Claude.md. The next wall is understanding it but not knowing how to manage context.

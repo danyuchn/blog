@@ -9,7 +9,7 @@ tags:
   - ai-product
   - developer-experience
   - opinion
-description: A teacher-turned-builder shares the real story of four generations of AI tool development—RAG, platform architecture, cross-border deployment, and open-source strategy, with all the pitfalls along the way.
+description: 'A teacher-turned-builder shares the real story of four generations of AI tool development—RAG, platform architecture, cross-border deployment, and open-source strategy, with all the pitfalls along the way.'
 ---
 
 I'm not an engineer by training. But over the past two-plus years, I've built four generations of AI products from scratch, and the number of pitfalls I've stumbled into outnumbers the lines of code I've written. This isn't a tutorial. It's a field diary of everything that went wrong.

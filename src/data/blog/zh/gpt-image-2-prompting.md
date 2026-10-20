@@ -11,7 +11,7 @@ tags:
   - gpt-image
   - ai-daily-use
   - prompting
-description: 國外最近流行的「笨拙塗鴉風」prompt，越約束越糟，越放任越驚喜。這篇整理我這週對 GPT-image-2 的觀察：包括為什麼透過 Claude 轉交反而會壞事、以及在 Canva 場景下「保持一致性」這件事比生圖能力更值錢。
+description: '國外最近流行的「笨拙塗鴉風」prompt，越約束越糟，越放任越驚喜。這篇整理我這週對 GPT-image-2 的觀察：包括為什麼透過 Claude 轉交反而會壞事、以及在 Canva 場景下「保持一致性」這件事比生圖能力更值錢。'
 ---
 
 ## 笨拙塗鴉風的爆紅

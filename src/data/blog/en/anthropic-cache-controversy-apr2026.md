@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-trends
-description: Starting in early April, some Max and higher accounts had their subagent cache duration quietly reduced from 1 hour to 5 minutes — no announcement. Around the same time, users found a hardcoded "token remaining" warning being injected into Claude's context, causing it to cut work short prematurely. How to check your own setup, and what this pattern means.
+description: 'Starting in early April, some Max and higher accounts had their subagent cache duration quietly reduced from 1 hour to 5 minutes — no announcement. Around the same time, users found a hardcoded "token remaining" warning being injected into Claude''s context, causing it to cut work short prematurely. How to check your own setup, and what this pattern means.'
 ---
 
 Two controversies surfaced on r/ClaudeAI this week. Looking at them together, the picture is pretty interesting.

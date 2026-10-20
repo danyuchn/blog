@@ -10,7 +10,7 @@ tags:
   - claude
   - gemini
   - gpt
-description: 同時使用三大 AI 模型半年多的真實體感記錄。Claude 的穩定、Gemini 的自我懷疑、GPT 的退場，以及我最後的訂閱選擇。
+description: '同時使用三大 AI 模型半年多的真實體感記錄。Claude 的穩定、Gemini 的自我懷疑、GPT 的退場，以及我最後的訂閱選擇。'
 ---
 
 過去半年，我幾乎每天都在同時使用 Claude、Gemini、GPT 這三家的模型。不是跑 benchmark，不是看別人的評測影片，而是拿來做正事：寫程式、重構資料庫、部署產品、整理教學內容。以下是我的真實體感。

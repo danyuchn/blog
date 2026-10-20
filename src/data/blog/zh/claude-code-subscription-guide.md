@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: Pro 的額度到底有多少？Max 值不值？Cowork 為什麼很燒 token？週額度的「雙倍」到底是哪個雙倍？這些問題我都被問過不只一次，用這篇把幾個月來的觀察整理清楚。
+description: 'Pro 的額度到底有多少？Max 值不值？Cowork 為什麼很燒 token？週額度的「雙倍」到底是哪個雙倍？這些問題我都被問過不只一次，用這篇把幾個月來的觀察整理清楚。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/ai-usage-economics
 ---
 

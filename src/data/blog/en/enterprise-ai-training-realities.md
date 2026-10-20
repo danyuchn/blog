@@ -9,7 +9,7 @@ tags:
   - ai-consulting
   - enterprise-ai
   - teaching
-description: Four things I learned after running a handful of enterprise AI training sessions. Prep time is 3-5x the session itself. The client liaison decides everything. The instructor has to handle wildly different skill levels. And if you're looking to hire a trainer, the signals are like picking a pop star.
+description: 'Four things I learned after running a handful of enterprise AI training sessions. Prep time is 3-5x the session itself. The client liaison decides everything. The instructor has to handle wildly different skill levels. And if you''re looking to hire a trainer, the signals are like picking a pop star.'
 ---
 
 Four things I only learned after running a handful of enterprise AI training sessions:

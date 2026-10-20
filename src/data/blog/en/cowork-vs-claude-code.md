@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - developer-experience
-description: Same Max plan, same Claude — but Cowork burns through tokens ten times faster. Here's why, and when to use which.
+description: 'Same Max plan, same Claude — but Cowork burns through tokens ten times faster. Here''s why, and when to use which.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/cli-vs-desktop-three-answers
 ---
 

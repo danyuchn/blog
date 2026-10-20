@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-workflow
   - reflection
-description: From January to April, my state of mind with Claude Code went from "that PTT-generation affection for the CLI" to "20x hesitation" to "AI detox" to "practicing Thai at a Bangkok meetup." Here's the six-month arc, along with the nights agents worked overtime for me until 5 AM.
+description: 'From January to April, my state of mind with Claude Code went from "that PTT-generation affection for the CLI" to "20x hesitation" to "AI detox" to "practicing Thai at a Bangkok meetup." Here''s the six-month arc, along with the nights agents worked overtime for me until 5 AM.'
 ---
 
 When I first seriously used Claude Code in January, I had a vaguely PTT-generation affection for it.

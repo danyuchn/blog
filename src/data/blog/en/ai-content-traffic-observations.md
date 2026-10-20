@@ -9,7 +9,7 @@ tags:
   - ai-education
   - opinion
   - teaching
-description: Traffic observations after a few months of AI teaching content — the lecture overflowed, the job-search demo got the most questions, the concept I thought mattered most pulled the least, and the Obsidian video went against the wind.
+description: 'Traffic observations after a few months of AI teaching content — the lecture overflowed, the job-search demo got the most questions, the concept I thought mattered most pulled the least, and the Obsidian video went against the wind.'
 ---
 
 After a few months of making AI teaching content, lining up a few of those old notes side by side actually traces out a pattern: what gets traffic and what doesn't often doesn't line up with what I personally think matters.

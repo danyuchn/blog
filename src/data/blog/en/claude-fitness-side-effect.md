@@ -9,7 +9,7 @@ tags:
   - opinion
   - ai-daily-use
   - personal
-description: Lost 10 kg, complexion improved — a result I had failed to hit for ten years, finally achieved without willpower. Not from health drugs. From Claude burning my quota faster than I could finish my work. A half-joking but completely real chronicle of the silliest side effect of 2026.
+description: 'Lost 10 kg, complexion improved — a result I had failed to hit for ten years, finally achieved without willpower. Not from health drugs. From Claude burning my quota faster than I could finish my work. A half-joking but completely real chronicle of the silliest side effect of 2026.'
 ---
 
 I lost 10 kg recently. My complexion got noticeably better. A result I had failed to achieve for ten years finally landed — and it was not because of any wonder drug.

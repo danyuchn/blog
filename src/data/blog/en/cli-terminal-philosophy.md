@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: The terminal isn't just another way to open Claude. It's the environment where Claude actually gets to operate without constraints. Multi-window workflows, speed, resources, Ghostty — a full confession from a CLI believer.
+description: 'The terminal isn''t just another way to open Claude. It''s the environment where Claude actually gets to operate without constraints. Multi-window workflows, speed, resources, Ghostty — a full confession from a CLI believer.'
 canonicalURL: https://www.agentcrew.cc/blog/posts/en/cli-vs-desktop-three-answers
 ---
 

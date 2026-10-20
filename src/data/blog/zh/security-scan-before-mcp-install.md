@@ -9,7 +9,7 @@ tags:
   - mcp
   - security
   - claude-code
-description: 講座當週我拍了一支影片，講「裝任何 MCP / npm / pip / clone 之前先跑 /security-scan」這件事。實測了一個三方 MCP，Claude 掃出 7 個漏洞，但綜合評估後說「可以裝」。這篇是影片的補充文字版。
+description: '講座當週我拍了一支影片，講「裝任何 MCP / npm / pip / clone 之前先跑 /security-scan」這件事。實測了一個三方 MCP，Claude 掃出 7 個漏洞，但綜合評估後說「可以裝」。這篇是影片的補充文字版。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/ai-tools-as-attack-vector
 ---
 

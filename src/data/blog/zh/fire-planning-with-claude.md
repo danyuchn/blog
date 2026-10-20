@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - personal-finance
-description: 把資產、負債、收支全部餵進 Claude Code，直接用對話問「我會不會破產」。一個月下來累積的 FIRE 理財規劃工具，以及為什麼我把它開源了。
+description: '把資產、負債、收支全部餵進 Claude Code，直接用對話問「我會不會破產」。一個月下來累積的 FIRE 理財規劃工具，以及為什麼我把它開源了。'
 ---
 
 FIRE（Financial Independence, Retire Early）簡單說就是「存夠錢就提早退休」。這個概念在國外社群很紅，但以前要算自己離退休還有多遠，不是自己拉 Excel 套公式，就是用網路上別人做好的試算表。問題是那些模板通常很死板：你想問「如果明年股市跌三成我怎樣」或「我每年多花 20 萬會延後多久退休」，就得自己重新建模，門檻很高。

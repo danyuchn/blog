@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-trends
-description: Enterprise office tools, Taiwan local services, a hobby vertical, beginner onboarding—four different corners of the Claude Code ecosystem all shipped something this week. Each represents a use case that's still underexplored.
+description: 'Enterprise office tools, Taiwan local services, a hobby vertical, beginner onboarding—four different corners of the Claude Code ecosystem all shipped something this week. Each represents a use case that''s still underexplored.'
 ---
 
 Four new Claude Code resources landed in my bookmarks this week. Individually they look small, but lined up side by side you notice something: **Claude Code isn't just a coding axis anymore.** It's slowly filling in enterprise office tools, local services, hobby verticals, and beginner onboarding.

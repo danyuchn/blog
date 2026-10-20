@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - productivity
-description: Put your entire life into Obsidian, then let Claude Code tap in. How I do daily logs, manage to-dos, and why local Markdown beats Notion.
+description: 'Put your entire life into Obsidian, then let Claude Code tap in. How I do daily logs, manage to-dos, and why local Markdown beats Notion.'
 ---
 
 My Obsidian vault holds my diary, work logs, ideas, stray thoughts, links across all my projects, and every to-do item big and small. Then I hook Claude Code into it, so AI can directly read and write all of that data.

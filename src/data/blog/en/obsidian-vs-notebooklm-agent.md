@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-tools
   - obsidian
-description: These two tools get compared a lot, but they solve fundamentally different problems. From a Claude Agent automation perspective, the difference is even clearer — one is a local knowledge base your Agent reads and writes directly, the other's API stops at "managing the Notebook itself."
+description: 'These two tools get compared a lot, but they solve fundamentally different problems. From a Claude Agent automation perspective, the difference is even clearer — one is a local knowledge base your Agent reads and writes directly, the other''s API stops at "managing the Notebook itself."'
 ---
 
 Obsidian and NotebookLM get compared often, but most comparisons focus on "which one has better AI." Looking at it through "can Claude Agent automate operations on it" reveals a much cleaner distinction.

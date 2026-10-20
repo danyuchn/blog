@@ -10,7 +10,7 @@ tags:
   - obsidian
   - knowledge-management
   - ai-workflow
-description: I'd been wanting to make this video for a long time, but kept putting it off. Obsidian's flexibility is so high that it grows into a different shape in every person's hands. The payoff isn't immediate either—it's only after the vault has grown for a while that you realize you can't go back.
+description: 'I''d been wanting to make this video for a long time, but kept putting it off. Obsidian''s flexibility is so high that it grows into a different shape in every person''s hands. The payoff isn''t immediate either—it''s only after the vault has grown for a while that you realize you can''t go back.'
 ---
 
 I'd been wanting to make this video for a long time, but kept putting it off until today.

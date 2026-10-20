@@ -10,7 +10,7 @@ tags:
   - ai-economics
   - subscription
   - opinion
-description: 從 W18 到 W19 累積了好幾條關於 Claude 額度的觀察——重置時間打散、5x→20x 的數學陷阱、美東尖峰一小時就滿、免費 GPT 反而打不滿。把這些連起來，會看到 Claude 訂閱的真實經濟結構。
+description: '從 W18 到 W19 累積了好幾條關於 Claude 額度的觀察——重置時間打散、5x→20x 的數學陷阱、美東尖峰一小時就滿、免費 GPT 反而打不滿。把這些連起來，會看到 Claude 訂閱的真實經濟結構。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/ai-usage-economics
 ---
 

@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-trends
   - ai-ethics
-description: A handful of AI industry observations I piled up on Threads this week — automating social posts uses AI in the wrong place, whether Skills are a mechanism for model providers to extract human knowledge, and why I went from hating on OpenAI to genuinely hoping they get better.
+description: 'A handful of AI industry observations I piled up on Threads this week — automating social posts uses AI in the wrong place, whether Skills are a mechanism for model providers to extract human knowledge, and why I went from hating on OpenAI to genuinely hoping they get better.'
 ---
 
 This week on Threads I accumulated a few short takes on the AI industry's route choices. Each one is too short to stand alone, but together they form a picture. Organized below.

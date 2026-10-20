@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: Instead of subscribing to a dozen AI tools, master one. What n8n, Lobster, and fomofly can do, Claude Code handles with a single skill.
+description: 'Instead of subscribing to a dozen AI tools, master one. What n8n, Lobster, and fomofly can do, Claude Code handles with a single skill.'
 ---
 
 I'm the kind of person who could never get the hang of n8n, picked up Claude Code after an hour of growing pains, and now uses it for 95% of my work.

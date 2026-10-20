@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-education
   - ai-coding
-description: 規劃一場給非工程師的 Claude Code 工作坊，從報名需求分析到教學設計，再到 15 條速成心法的完整備課歷程。
+description: '規劃一場給非工程師的 Claude Code 工作坊，從報名需求分析到教學設計，再到 15 條速成心法的完整備課歷程。'
 ---
 
 二月底我開始規劃一場很不一樣的 Claude Code 工作坊——目標是讓零編程基礎的人，五個小時內帶走一套自己的工作流成品。

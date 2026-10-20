@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: 分享六個下 Claude Code 起始指令的實戰心法，從釐清目標到善用計畫模式，讓你的 AI 協作更高效。
+description: '分享六個下 Claude Code 起始指令的實戰心法，從釐清目標到善用計畫模式，讓你的 AI 協作更高效。'
 ---
 
 最近有機會幫一些以前的同事、團隊成員升級他們的工作流程，跟 AI 接軌。於是開始有意識地紀錄自己用 Claude Code 工作的習慣。

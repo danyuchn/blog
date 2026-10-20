@@ -9,7 +9,7 @@ tags:
   - claude-code
   - automation
   - ai-workflow
-description: 從 /loop 指令幫我打 ERP 卡、Monitor Tool 做背景事件守門員、Google Map MCP 省瀏覽器操作、到 Obsidian 搭 Mirror 框架做反思週報——整理這半年我家 Claude Code 的自動化架構，順便釐清 commands 跟 skills 到底怎麼分。
+description: '從 /loop 指令幫我打 ERP 卡、Monitor Tool 做背景事件守門員、Google Map MCP 省瀏覽器操作、到 Obsidian 搭 Mirror 框架做反思週報——整理這半年我家 Claude Code 的自動化架構，順便釐清 commands 跟 skills 到底怎麼分。'
 ---
 
 半年下來，我的 Claude Code 工作流累積了一套自動化架構。

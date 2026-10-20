@@ -8,6 +8,7 @@
  * Also guards the byte-identity of .claude/content-workflow.md vs .codex/content-workflow.md.
  *
  * Usage: npm run check:content   (exit 1 on any error; warnings never block)
+ *        node scripts/validate-content.mjs --blog-dir <dir>   (run against a fixture tree with {zh,en}/ subdirs)
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -15,7 +16,8 @@ import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const BLOG = path.join(ROOT, "src/data/blog");
+const blogDirArg = process.argv.indexOf("--blog-dir");
+const BLOG = blogDirArg > -1 ? path.resolve(process.argv[blogDirArg + 1]) : path.join(ROOT, "src/data/blog");
 const LANGS = ["zh", "en"];
 const MICRO_NOTES = [
   "ai-micro-notes.md",
@@ -157,6 +159,11 @@ for (const [key, body] of Object.entries(bodies)) {
   if (key in stubs) continue; // a stub linking to its own canonical target is correct
   const [lang, basename] = key.split("/");
   const rel = `src/data/blog/${lang}/${basename}.md`;
+  // root-relative /posts/... (or the site host without /blog) renders verbatim and 404s on GitHub Pages,
+  // because the site lives under the /blog base path
+  for (const m of body.matchAll(/(?:(?<![\w.\-/:%])|danyuchn\.github\.io)\/posts\/(zh|en)\/([a-z0-9-]+)/g)) {
+    err(rel, `internal link ${m[0]} is missing the /blog base path — write /blog/posts/${m[1]}/${m[2]}`);
+  }
   const seen = new Set();
   for (const m of body.matchAll(/\/blog\/posts\/(zh|en)\/([a-z0-9-]+)/g)) {
     const target = `${m[1]}/${m[2]}`;

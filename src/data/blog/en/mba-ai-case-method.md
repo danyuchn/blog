@@ -9,7 +9,7 @@ tags:
   - ai-education
   - case-study
   - course-design
-description: 2026-05 investigation into doing case-based AI teaching for business courses. HBS / HBR cases carry licensing risk. Maps the open alternatives (UBC Open Case Studies, OpenCaseStudies.org, World Bank), what's off-limits, and the direction of training MBA-background seed instructors.
+description: '2026-05 investigation into doing case-based AI teaching for business courses. HBS / HBR cases carry licensing risk. Maps the open alternatives (UBC Open Case Studies, OpenCaseStudies.org, World Bank), what''s off-limits, and the direction of training MBA-background seed instructors.'
 ---
 
 I've been planning case-based teaching for a business AI course. Initially I assumed buying HBS / HBR cases would just work. Reading the licensing terms revealed a minefield. This is the 2026-05 investigation.

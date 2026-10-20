@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-trends
   - claude-code
-description: I demonstrated Claude Code to friends and they were all amazed. Then I gave them free Pro trial passes — three of them. Not a single one was used. That told me a lot about how AI adoption actually works.
+description: 'I demonstrated Claude Code to friends and they were all amazed. Then I gave them free Pro trial passes — three of them. Not a single one was used. That told me a lot about how AI adoption actually works.'
 ---
 
 Before the New Year I demonstrated Claude Code to several friends — not coding, office work: organizing meeting notes, batch processing data, automating repetitive tasks. Every one of them said some version of "that's insane."

@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - skills
-description: Someone ported the entire NousResearch Hermes Agent into 46 native Claude Code Skills. No OAuth, no external processes, just restart CC and you're ready. The core philosophy is "procedures-as-prompt" — structured markdown instruction scripts drive AI behavior without writing a single line of code.
+description: 'Someone ported the entire NousResearch Hermes Agent into 46 native Claude Code Skills. No OAuth, no external processes, just restart CC and you''re ready. The core philosophy is "procedures-as-prompt" — structured markdown instruction scripts drive AI behavior without writing a single line of code.'
 ---
 
 Hermes Agent is an AI agent runtime built by NousResearch — it has its own memory system, tool routing, and cross-session learning capabilities. The original design runs it as an independent process with its own runtime.

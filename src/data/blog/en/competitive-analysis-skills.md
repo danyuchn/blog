@@ -10,7 +10,7 @@ tags:
   - skills
   - ai-workflow
   - competitive-analysis
-description: I saw a competitor selling well and my first reaction was anxiety. But before letting anxiety win, I wanted to actually understand what it was. Lately I have been pairing two Claude Skills for this — H/V analysis to see the outside, first-principles to see the inside.
+description: 'I saw a competitor selling well and my first reaction was anxiety. But before letting anxiety win, I wanted to actually understand what it was. Lately I have been pairing two Claude Skills for this — H/V analysis to see the outside, first-principles to see the inside.'
 ---
 
 I have been doing two things with Claude Code lately.

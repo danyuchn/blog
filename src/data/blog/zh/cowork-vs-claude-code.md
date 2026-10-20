@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - developer-experience
-description: 同樣是 Max 方案，Cowork 和 Claude Code CLI 的 token 消耗差距可以到十倍以上。這篇解釋為什麼，以及什麼時候用哪個。
+description: '同樣是 Max 方案，Cowork 和 Claude Code CLI 的 token 消耗差距可以到十倍以上。這篇解釋為什麼，以及什麼時候用哪個。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/cli-vs-desktop-three-answers
 ---
 

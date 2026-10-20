@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: From Raw Prompting to Orchestration — the 778-upvote Reddit framework where every level exists because the previous one broke.
+description: 'From Raw Prompting to Orchestration — the 778-upvote Reddit framework where every level exists because the previous one broke.'
 ---
 
 A lot of people say Claude Code is unstable. Works great sometimes, then suddenly goes off the rails. I used to think the same.

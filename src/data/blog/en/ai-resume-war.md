@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-trends
   - ai-daily-use
-description: Something slightly absurd is happening in the job market — candidates using AI to generate hundreds of tailored applications, HR using AI to filter them. In a bilateral arms race, who actually benefits?
+description: 'Something slightly absurd is happening in the job market — candidates using AI to generate hundreds of tailored applications, HR using AI to filter them. In a bilateral arms race, who actually benefits?'
 ---
 
 A comment I saw this week that stuck with me:

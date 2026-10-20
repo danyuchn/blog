@@ -9,7 +9,7 @@ draft: false
 tags:
   - ai-tools
   - security
-description: There's no off-the-shelf de-identification tool for Taiwan's PII formats. So I built one that keeps sensitive data on your machine while you send the rest to AI.
+description: 'There''s no off-the-shelf de-identification tool for Taiwan''s PII formats. So I built one that keeps sensitive data on your machine while you send the rest to AI.'
 ---
 
 I was recently using AI to process client data, and the client was clear: sensitive information should not be sent to AI servers. But when I went looking for de-identification tools, I hit a wall—Taiwan's PII formats (national ID numbers, local phone numbers, tax IDs) aren't supported by any existing tool.

@@ -9,7 +9,7 @@ tags:
   - claude-code
   - ai-tools
   - ai-workflow
-description: 本週 Claude Code 累積的幾個實用設定與省錢技巧——Rules/Memory/Hooks 如何分擔 CLAUDE.md、Ghostty No Flicker 模式下連結點擊的修法、長文本用 Haiku 分派省 quota、4.7 後貼圖片跟改訊息對快取的差別。
+description: '本週 Claude Code 累積的幾個實用設定與省錢技巧——Rules/Memory/Hooks 如何分擔 CLAUDE.md、Ghostty No Flicker 模式下連結點擊的修法、長文本用 Haiku 分派省 quota、4.7 後貼圖片跟改訊息對快取的差別。'
 ---
 
 這週 Claude Code 累積的幾個設定技巧，都不是很新的功能，但都是我自己撞到才知道的。按主題整理下來。

@@ -9,7 +9,7 @@ tags:
   - youtube
   - video-production
   - api-debugging
-description: 5/13 兩支影片用 YouTube Data API 上傳實測：216 MB 的法律 MCP 示範片成功、257 MB 的 AI 求職示範片卡死。同樣的 googleapiclient resumable upload，差別在檔案大小跟解析度。門檻約在 220-250 MB 之間。
+description: '5/13 兩支影片用 YouTube Data API 上傳實測：216 MB 的法律 MCP 示範片成功、257 MB 的 AI 求職示範片卡死。同樣的 googleapiclient resumable upload，差別在檔案大小跟解析度。門檻約在 220-250 MB 之間。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/automated-video-pipeline-gotchas
 ---
 

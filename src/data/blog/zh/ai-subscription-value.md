@@ -9,7 +9,7 @@ tags:
   - ai-daily-use
   - claude-code
   - ai-trends
-description: 兩百塊夜市牛排 vs 兩千塊餐廳牛排，差十倍的價格未必差十倍的體驗。AI 訂閱也一樣。一個判斷 AI 訂閱費有沒有在「賺」的框架。
+description: '兩百塊夜市牛排 vs 兩千塊餐廳牛排，差十倍的價格未必差十倍的體驗。AI 訂閱也一樣。一個判斷 AI 訂閱費有沒有在「賺」的框架。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/ai-usage-economics
 ---
 

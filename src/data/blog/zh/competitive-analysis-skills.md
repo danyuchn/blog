@@ -10,7 +10,7 @@ tags:
   - skills
   - ai-workflow
   - competitive-analysis
-description: 偶然看到一個競品賣得很好，第一反應是焦慮。但焦慮之前，我想先搞清楚它到底是什麼。最近用兩個 Claude Skill 把這件事做透——橫縱分析法看外面，第一性原理看裡面。
+description: '偶然看到一個競品賣得很好，第一反應是焦慮。但焦慮之前，我想先搞清楚它到底是什麼。最近用兩個 Claude Skill 把這件事做透——橫縱分析法看外面，第一性原理看裡面。'
 ---
 
 最近用 Claude Code 做了兩件事。

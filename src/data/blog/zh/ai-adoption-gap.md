@@ -8,7 +8,7 @@ draft: false
 tags:
   - ai-trends
   - claude-code
-description: 我把 Claude Code 示範給朋友看，他們都說驚艷。然後我把免費的 Pro 體驗 pass 發給他們——三張，一張都沒被用過。這件事讓我想清楚了很多關於 AI 採用的事。
+description: '我把 Claude Code 示範給朋友看，他們都說驚艷。然後我把免費的 Pro 體驗 pass 發給他們——三張，一張都沒被用過。這件事讓我想清楚了很多關於 AI 採用的事。'
 ---
 
 年前我把 Claude Code 的花式應用示範給幾個朋友看——不是寫程式，是辦公室工作：整理會議記錄、批次處理資料、自動化重複流程。無一例外，他們都說「哇這也太猛了吧」。

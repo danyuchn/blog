@@ -23,7 +23,7 @@ Pro 20 美元，適合偶爾問問題、還沒讓 Claude Code 自己跑多步驟
 - Max 20x：每月 200 美元，每個 session 的用量是 Pro 的 20 倍。
 - Max 兩檔都附每月 API 額度，5x 是 100 美元，20x 是 200 美元。
 - 額度分五小時的滾動視窗跟週額度。網頁、桌面、手機、Claude Code 共用同一個池。Fable 在 Max 最多只能用到週額度的 50%，Pro 要用 Fable 得另外買 usage credits。
-- [Claude Code 的說明頁](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan)沒有給訊息數、小時數或 token 數，週額度的實際數字也沒公布。
+- [Claude Code 的說明頁](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan)沒有給訊息數、小時數或 token 數，週額度的實際數字也沒公布。
 
 最後這點很重要，下面幾段講到的「實際夠不夠用」，都是我自己或別人實測的，官方沒有數字可以對。
 

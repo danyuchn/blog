@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
   - ai-tools
-description: Claude 推出了改版的桌面應用程式，設計更漂亮、對新手更友善。但如果你問我要用哪個，答案還是 CLI。不是情懷，是功能差距和資源效率的問題。
+description: 'Claude 推出了改版的桌面應用程式，設計更漂亮、對新手更友善。但如果你問我要用哪個，答案還是 CLI。不是情懷，是功能差距和資源效率的問題。'
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/cli-vs-desktop-three-answers
 ---
 
