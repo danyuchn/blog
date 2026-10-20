@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-20T04:00:00Z
+pubDatetime: 2026-10-20T13:31:00Z
 title: 卡住你的是預設開著的那道牆：Codex 沙盒、ENV_SCRUB、Vercel 保護、官方 connector
 slug: zh/default-guardrails-that-block-you
 featured: false
-draft: true
+draft: false
 tags:
   - developer-experience
   - security
@@ -29,16 +29,3 @@ description: '內網 NAS 讀不到、AUTOMODE 回不去、外部訪客拿到 401
 ## 雲端只吃官方 connector
 
 之前好幾位客戶就是卡在想設置雲端排程寄每日市場週報、或寫入 Google Sheet 表單——雲端 server 只吃官方 connector，以前最多只能寫草稿或在 Drive 創立全新檔案。現在官方 MCP 開放了寄送信件跟更新現有檔案。
-
-<!--
-素材來源（碎念，未刪除原條目）：
-- live「Codex 沙盒讀不到內網 NAS」
-- live「ENV_SCRUB 打開，AUTOMODE 就回不去」
-- live「Vercel 臨時公開頁的兩個坑」
-- 2026-archive W38「Connector 終於能寄信了」
-
-新增非原文句子清單（忠實度自首）：
-1. 「這幾個坑的共通點是：卡住你的不是程式寫錯，是某個預設開著的保護。」 — 類型：框架句（四則碎念各自成立，此歸納為 AI 新增）
-2. H2「Codex 的沙盒」「ENV_SCRUB 打開，AUTOMODE 就回不去」「Vercel 臨時公開頁」「雲端只吃官方 connector」 — 類型：框架句（多取自原條目標題）
-title 與 description 為 AI 擬寫：類型：改寫（濃縮原文事實）
--->

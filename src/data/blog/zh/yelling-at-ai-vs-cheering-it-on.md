@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-20T04:00:00Z
+pubDatetime: 2026-10-20T13:30:00Z
 title: 每八次就有一次在罵他：罵 AI，還是幫 AI 加油
 slug: zh/yelling-at-ai-vs-cheering-it-on
 featured: false
-draft: true
+draft: false
 tags:
   - claude
   - opinion
@@ -30,23 +30,3 @@ description: '統計過去一個月跟 Claude 的對話，每 8 次就有一次�
 Claude Code 正在嘗試對我本人跟 Codex 進行一場深刻的伴侶諮商：先從我過去跟 Codex 的實際對話撈出「被氣到」的片段，當作探測腳本的依據。
 
 七月底 Opus 5 上線前，聽說 Codex 要把最近那個可以雙向對話的即時語音模型拉進來了。以後就真的是張嘴就罵 AI Agent 了。
-
-<!--
-素材來源（碎念，未刪除原條目）：
-- 2026-archive W38「每八次就有一次在罵他」
-- 2026-archive W41「LLM 不會即時記仇」
-- 2026-archive W41「Claude 掛電話技能」
-- live「黎曼猜想那次，提示詞只是加油打氣」
-- 2026-archive W38「我現在對 Fable 的態度」
-- 2026-archive W43「Claude Code 當伴侶諮商師」
-- 2026-archive W31「張嘴就罵 AI Agent 的未來」
-
-新增非原文句子清單（忠實度自首）：
-1. H2「罵了他會記得嗎」「另一個極端：一直加油打氣」「Codex 也沒逃過」 — 類型：框架句
-2. 「不會。」 — 類型：銜接
-3. 「罵過頭的話，Claude 現在也有自己的出口。」 — 類型：銜接
-4. 「黎曼猜想那次，」 — 類型：銜接（取自原條目標題）
-5. 「我現在對 Fable 的態度也差不多：」 — 類型：銜接（原文為條列「1. … 2. …」，改寫成一句）
-6. 「七月底 Opus 5 上線前，聽說…」 — 類型：改寫（原文「聽說今晚有 Opus 5，另外聽說…」，依存檔 W31 時間改成過去式）
-title 與 description 為 AI 擬寫：類型：改寫（濃縮原文事實，無新論點）
--->

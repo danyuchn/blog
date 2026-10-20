@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-20T04:00:00Z
+pubDatetime: 2026-10-20T13:31:00Z
 title: "The Wall That Was On by Default: Codex Sandbox, ENV_SCRUB, Vercel Protection, Official Connectors"
 slug: en/default-guardrails-that-block-you
 featured: false
-draft: true
+draft: false
 tags:
   - developer-experience
   - security
@@ -29,17 +29,3 @@ A fresh project's deploy URL ships with Deployment Protection (Vercel Authentica
 ## The cloud only accepts official connectors
 
 Several of my clients were stuck wanting a cloud schedule that mails them a daily market brief or writes to a Google Sheet. Cloud servers only accept the official connector, and until now the most you could do was save a draft or create a brand-new file in Drive. The official MCP now sends mail and updates existing files.
-
-<!--
-素材來源（碎念，未刪除原條目）：
-- live "Codex's Sandbox Couldn't See the Office NAS"
-- live "Turn On ENV_SCRUB and AUTOMODE Won't Come Back"
-- live "Two Traps in Vercel Throwaway Public Pages"
-- 2026-archive W38 "Connectors Can Finally Send Mail"
-
-新增非原文句子清單（忠實度自首）：
-內文句子沿用 en 碎念檔既有譯文；新增句子對應 zh 版自首清單：
-1. "What these traps have in common: the thing blocking you isn't a bug in your code, it's some protection that was on by default." — 類型：框架句
-2. H2 "Codex's sandbox" / "Turn on ENV_SCRUB and AUTOMODE won't come back" / "Vercel throwaway public pages" / "The cloud only accepts official connectors" — 類型：框架句（多取自原條目標題）
-title 與 description 為 AI 擬寫：類型：改寫（濃縮原文事實）
--->
