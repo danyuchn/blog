@@ -87,14 +87,6 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > The cure for Meta's back office and the LINE Official Account back office is Codex's browser control. Mom, I will never get lost in these garbage admin panels again!
 
-**A Cron Job Watching the Radar**
-
-> During rainy season I have Codex watch the Bangkok city weather bureau's page, which posts a radar echo image every 15 to 20 minutes. The moment Codex judges there's a 50%+ chance of rain within the hour, it pings me and I run to the balcony to pull the laundry in. No need to wait for an official API.
-
-**Four Moves for When You Leave Your Desk**
-
-> 1. Send out more subagents. 2. Use the history-find skill to dig up past sessions easily. 3. Set up a /loop 30m tick to poll while you're away from the desk. 4. /status shows you what's burning tokens, plus the API cost and token count per session.
-
 **Editing a Six-Day Vlog With Astra**
 
 > I used Astra + DaVinci Resolve to cut a six-day vlog. The material was my iCloud items, my Google Maps timeline, and my email. It guessed what my six days looked like on its own, wrote the text, ordered everything, imported it, and found the music. Honestly it did the most tedious 90% of the editing. It used about 40% of the weekly quota on the 20 USD plan.

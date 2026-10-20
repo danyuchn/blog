@@ -87,14 +87,6 @@ description: 2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型吐
 
 > Meta 後台、LINE 官方帳號後台的剋星，就是 Codex 的瀏覽器操作功能：媽媽，我從此再也不會在這些狗屎後台迷路了！
 
-**盯雷達回波的排程**
-
-> 雨季時讓 Codex 盯著曼谷市政府氣象單位的粉專，該粉專每 15-20 分鐘會發佈一次雷達回波圖。只要 Codex 判斷一小時內有 50%+ 機率會下雨，立刻通知我，我就要趕快去陽台收衣服了。這樣甚至不用等官方開 API。
-
-**離開座位時的四招**
-
-> 1. 多派一些 subagent 2. 用 history-find skill 輕鬆找到過去的 session 3. 弄一個 /loop 30m tick 在離開座位時自動輪詢 4. /status 可以看到耗費 token 原因跟每個 session 的 api 成本 token 量
-
 **用 Astra 剪六天的 vlog**
 
 > 用 Astra + DaVinci Resolve 剪六天的 vlog，素材是 iCloud 項目＋Google 地圖時間軸軌跡＋我的 email。他自己去猜我六天的行程長怎樣，自己寫文字、編排順序、匯入、找音樂。老實說已經把剪接最費工的 90% 都做完了吧，20 USD 月費的週用量大約花 40%。
