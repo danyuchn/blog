@@ -1,0 +1,49 @@
+# lychee config for the weekly external link check (.github/workflows/link-check.yml).
+# Docs: https://lychee.cli.rs/usage/config/
+# Run locally: lychee --config .github/lychee.toml 'src/data/blog/**/*.md'
+
+# External links only. Internal /blog/... links are validated by
+# `npm run check:content`. Root-relative links are resolved against the
+# production origin so lychee can parse them, then excluded below.
+scheme = ["https", "http"]
+base_url = "https://danyuchn.github.io/"
+exclude_all_private = true
+include_verbatim = false # skip links inside code blocks / inline code
+
+# Be polite and tolerant: this check is advisory, not a gate.
+max_concurrency = 16
+max_retries = 2
+retry_wait_time = 4
+timeout = 20
+user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+
+# 429 = rate limited, not dead. 403 is usually bot-blocking (Cloudflare etc.);
+# treat it as "unverifiable" rather than broken to keep the tracking issue signal-only.
+accept = ["100..=103", "200..=299", "403", "429"]
+
+# Cache results between runs (restored by actions/cache in CI).
+cache = true
+max_cache_age = "3d"
+# Only cache successes so a transient failure is re-checked next run.
+cache_exclude_status = ["400..=599"]
+
+exclude = [
+  # Local / placeholder hosts
+  '^https?://localhost',
+  '^https?://127\.0\.0\.1',
+  '^https?://0\.0\.0\.0',
+  '^https?://([a-z0-9-]+\.)*example\.(com|org|net)',
+  '^https?://…',
+  # Our own site (internal links; covered by check:content)
+  '^https://danyuchn\.github\.io/blog/',
+  # Hosts that rate-limit or block unauthenticated crawlers; results are noise
+  '^https?://([a-z0-9-]+\.)*x\.com',
+  '^https?://([a-z0-9-]+\.)*twitter\.com',
+  '^https?://([a-z0-9-]+\.)*linkedin\.com',
+  '^https?://([a-z0-9-]+\.)*threads\.(com|net)',
+  '^https?://([a-z0-9-]+\.)*facebook\.com',
+  '^https?://([a-z0-9-]+\.)*instagram\.com',
+  '^https?://([a-z0-9-]+\.)*reddit\.com',
+  # API endpoints shown as examples, not pages
+  '^https?://[a-z0-9.-]*googleapis\.com',
+]

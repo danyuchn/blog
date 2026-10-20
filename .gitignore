@@ -35,3 +35,7 @@ scripts/classified_posts.json
 
 public/pagefind
 scripts/categories/
+
+# lychee link check (local runs)
+.lycheecache
+lychee/
