@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-19T04:00:00Z
+pubDatetime: 2026-10-20T00:00:00Z
 title: I Asked My AI "Now What?" 41 Times in Two Weeks
 slug: en/progress-asks-status-board
 featured: false
@@ -41,13 +41,3 @@ If the process dies or goes quiet for too long, the registry marks it as stuck a
 Monitoring is the AI watching things for itself. I can't see what it's watching, so I keep asking. A status board is something I can read. Next I'll hook it up to the batches I run most, then count again and see if I still ask.
 
 That's it.
-
-<!--
-AI-added sentences (faithfulness disclosure): same list as the zh version. Source material is the author's two micro-notes (four tricks for leaving the desk; radar-echo watch), the author's own message quotes, and counted figures from the 2026-10-19 repeat-work audit.
-1. "Getting the AI to keep working on its own is easy now. When I come back, though, I often have no idea how far it got." (framing)
-2. "The funny part: 12 of them came after I had already told it to set up monitoring." (transition; figure is counted)
-3. "When I split them up, I was asking three things ... nowhere to look for the first two." (rewrite; categories from the audit)
-4. The "So I built a tiny job registry" section (rewrite; describes what jobreg.py actually does)
-5. "Monitoring is the AI watching things for itself ... A status board is something I can read." (framing; core claim, marked as inference in the audit)
-6. "Next I'll hook it up to the batches I run most, then count again and see if I still ask." (framing; the registry is not wired in yet, which is true)
--->

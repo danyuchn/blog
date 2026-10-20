@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-19T04:00:00Z
+pubDatetime: 2026-10-20T00:10:00Z
 title: I Had a Second AI Blind-Solve My Entire Question Bank
 slug: en/ai-question-bank-blind-solve-audit
 featured: false
-draft: true
+draft: false
 tags:
   - ai-workflow
   - case-study
@@ -69,24 +69,3 @@ When a sample is too small, you can also scan the whole bank with code for struc
 AI can write the questions, and it can help me check them, but signing off can't be outsourced. When this bank goes live, the name on it is still mine.
 
 That's it.
-
-<!--
-AI-added sentences (faithfulness disclosure): same list as the zh version. Please review this part first.
-Source material: the nine blind-solve audit files dated 2026-10-18 onward and the pdt-platform.md progress log, 10/18-10/20. The following are AI-written inferences, framing or transitions, not things Dustin said and not things the audit files state:
-1. "If an AI wrote the questions, who checks them?" (framing)
-2. "Question writing makes this worse ... can't inherit the context from when the question was written." (inference; the core argument, not in the audit files, only extends Dustin's 5/29 post on AI self-audit blind spots. The audit files do not say whether the generating model and the solving model are the same; the only related note says the solver was the same model across rounds.)
-3. "I had expected the blind solve to mostly catch wrong answers." (framing; Dustin's expectation, written on his behalf)
-4. "said it was only the option with the fewest contradictions" (rewrite; the audit says the solver picked C but judged it did not hold up; "fewest contradictions" is the audit's phrase)
-5. "small enough that a human eye would miss it"; "tap water" (transition / rewrite; the audit suggests changing it to tap water)
-6. "Always picking C gets you nearly half right"; "teaches a habit that doesn't help on the real exam" (rewrite of the audit's C-0 impact section)
-7. "The solving AI is not a judge." (framing)
-8. "So the call goes to a person who sits down with the question." (framing; the audit only says two independent solves disagreeing is itself a sign of B/E ambiguity. The 10/18 audit judged E correct and B as strengthening the argument; including the 10/20 B pick is my editorial choice, please confirm.)
-9. "A bigger sample lowers the bound, but it never reaches zero." (framing; general statistics, not an audit line)
-10. "I went ahead with the plan, and if answer data later shows ... I'll go back" (rewrite; the audit says the three questions are not multi-answer, can proceed per plan, and to revisit if distractor pick rates look abnormal)
-11. The whole "If you use AI to write questions too" section (inference / rewrite; generalizes the audit appendix methods for teachers and tutoring operators; the structure-scan items come from the audit's full-bank scan)
-12. "AI can write the questions ... the name on it is still mine." (framing; echoes Dustin's 7/31 post on verification as human responsibility, but this sentence is mine)
-13. "deliberately over-sampled the small question types" (rewrite of the CR audit appendix A quota design)
-14. The solving AI is only called "a second AI". The audit files repeatedly say Claude did the blind solving, and do not say which model wrote the questions; the article names no model.
-16. "In the early-September backup" and the shuffle sentence with 4,766 / about 32%: facts added by the main session (2,662 is the 9/3 backup count; 4,766 and 1,523 C keys come from the read-only production export of 2026-10-20 01:23; the shuffle going live is in the pdt-platform.md 10/20 entry, "option shuffle 3,842").
-15. Number sources: 2,662 / 2,624 (verbal audit L120); 112 questions and 2.7% (L45, L50); 0.94% and 319 (CR audit L69); PS 250 / DS 250 / CR 200 / RC 240 with 0 wrong keys (pdt-platform.md progress log, 2026-10-18 entry); 9 attempts, 11% (verbal L84); only record (verbal L127-L131); 4 options (verbal L134); still water (verbal L138); 38 questions, 10 of them (DS audit L73); 48% / 38% / 5% / 1% (verbal L120); DS missed "cost can't be negative" (DS audit L62, L158); first pick D on the tobacco question (low-accuracy audit L45); 13/13 and three medium-confidence (verbal L35-L40); 10/20 blind solve picked B (pdt-platform.md progress log, 2026-10-20 entry); same solving model across rounds (PS audit L114).
--->
