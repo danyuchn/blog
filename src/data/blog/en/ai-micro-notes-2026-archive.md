@@ -13,7 +13,7 @@ tags:
 description: "The more scattered, time-sensitive AI micro-notes from 2026, in chronological order. Curated notes (by theme) live on the main page."
 ---
 
-The more scattered, time-sensitive AI micro-notes from 2026, archived in chronological order. For the curated, theme-organized notes, see the [main page](/posts/en/ai-micro-notes).
+The more scattered, time-sensitive AI micro-notes from 2026, archived in chronological order. For the curated, theme-organized notes, see the [main page](/blog/posts/en/ai-micro-notes).
 
 ---
 

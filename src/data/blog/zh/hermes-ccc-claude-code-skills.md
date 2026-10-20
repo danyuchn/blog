@@ -70,4 +70,4 @@ hermes-CCC 值得看不只是因為你可以直接把 46 個 Skill 拿來用。
 
 如果你在設計自己的 Skill 系統，hermes-CCC 是目前社群裡最完整的一份「如何設計 Skill 架構」的參考實作。
 
-GitHub：https://github.com/AlexAI-MCP/hermes-CCC（安裝前建議先跑 `/security-scan`）
+GitHub：<https://github.com/AlexAI-MCP/hermes-CCC>（安裝前建議先跑 `/security-scan`）

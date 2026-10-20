@@ -13,7 +13,7 @@ tags:
 description: Short AI hot takes from the second half of 2025, accumulated from Threads and IG. Model roasts, dev pitfalls, industry observations, tool impressions — each no more than three lines.
 ---
 
-This is the archived AI micro-notes from the second half of 2025. For 2026 onwards, see the [updated micro-notes diary](/posts/en/ai-micro-notes).
+This is the archived AI micro-notes from the second half of 2025. For 2026 onwards, see the [updated micro-notes diary](/blog/posts/en/ai-micro-notes).
 
 ---
 
