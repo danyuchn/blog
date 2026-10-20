@@ -66,7 +66,7 @@ The Reddit consensus at the time:
 
 ## The System Card
 
-I am reading the Sonnet 5.5 system card, and this section is the most interesting (look at the images).
+I am reading the Sonnet 5 system card, and this section is the most interesting (look at the images).
 
 ![The first screenshot of the model welfare section of the Sonnet 5 system card, as summarized by Gemini](/blog/assets/posts/opus-sonnet-fable-division-of-labor/1-system-card.jpg)
 

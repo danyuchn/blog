@@ -16,7 +16,7 @@ Anthropic had a genuinely funny week. They did two completely opposite, contradi
 
 First, they patted themselves on the back and published a safety report, and it backfired the moment people realized: wait, you've been casually looking at customer conversations this whole time? Palantir and NVIDIA both went pale.
 
-Second, they shipped a powerful Claude Mod that let me finally push my [de-identification tool, pii-guard-tw](/blog/posts/en/pii-guard-tw) to its full auto-block form. You don't need to touch anything by hand anymore, just install the updated plugin. From then on, on Anthropic's servers, the model only ever sees `<PERSON_1>`, `<TW_MOBILE_1>`, `<TW_ID_1>`. What comes back to you is always the restored, real content.
+Second, they opened early access to Claude Mods, which are powerful enough to let me finally push my [de-identification tool, pii-guard-tw](/blog/posts/en/pii-guard-tw) to its full auto-block form. You don't need to touch anything by hand anymore, just install the updated plugin. From then on, on Anthropic's servers, the model only ever sees `<PERSON_1>`, `<TW_MOBILE_1>`, `<TW_ID_1>`. What comes back to you is always the restored, real content.
 
 Here's the mechanism:
 

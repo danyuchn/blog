@@ -12,7 +12,7 @@ tags:
 description: '讓 AI 在背景跑長任務很簡單，難的是回來時一眼看懂它跑到哪。翻完自己兩週 1,053 則訊息，我發現缺的不是監控，是一張自己能看的狀態表。'
 ---
 
-我很常讓 Claude 在我離開座位的時候繼續做事。之前碎念寫過離開座位時的四招：多派一些 subagent、用 history-find skill 找到過去的 session、弄一個 /loop 30m tick 自動輪詢、用 /status 看每個 session 的 token 花在哪。雨季時我還讓 Codex 盯著曼谷市政府氣象單位的粉專，判斷一小時內有 50% 以上機率下雨就通知我，我就趕快去陽台收衣服。
+我很常讓 Claude 在我離開座位的時候繼續做事。之前碎念寫過離開座位時的四招：多派一些 subagent、用 history-find skill 找到過去的 session、弄一個 /loop 30m tick 自動輪詢、用 /usage 看每個 session 的 token 花在哪。雨季時我還讓 Codex 盯著曼谷市政府氣象單位的粉專，判斷一小時內有 50% 以上機率下雨就通知我，我就趕快去陽台收衣服。
 
 讓 AI 自己跑已經很順了，但我回來的時候，常常不知道它跑到哪。
 

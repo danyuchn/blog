@@ -12,7 +12,7 @@ tags:
 description: 'Letting an AI run long jobs in the background is easy. Knowing where it got to when you come back is not. I counted two weeks of my own messages and found I was missing a status board, not more monitoring.'
 ---
 
-I often leave Claude working while I'm away from my desk. I once jotted down my four tricks for that: dispatch more subagents, use the history-find skill to dig up old sessions, set a /loop 30m tick so it polls on its own, and check /status to see where each session's tokens went. In rainy season I even had Codex watch the Bangkok city weather office's page, and ping me whenever it judged a 50%+ chance of rain within the hour, so I could run out and bring the laundry in.
+I often leave Claude working while I'm away from my desk. I once jotted down my four tricks for that: dispatch more subagents, use the history-find skill to dig up old sessions, set a /loop 30m tick so it polls on its own, and check /usage to see where each session's tokens went. In rainy season I even had Codex watch the Bangkok city weather office's page, and ping me whenever it judged a 50%+ chance of rain within the hour, so I could run out and bring the laundry in.
 
 Getting the AI to keep working on its own is easy now. When I come back, though, I often have no idea how far it got.
 

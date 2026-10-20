@@ -50,7 +50,7 @@ ABC Legal 集結 15 人 steering committee，來自 finance、marketing、operat
 
 AI Code Reviewer：檢查 4 個 codebase 的每個 pull request，找 security bugs、performance regressions 與 committed credentials。
 
-EvidenceChain™ Delivery Agent：每天抓出符合條件的資料、取得 PDF，再送到客戶的 FTP server。一位 account manager 約 1 小時做出第一版，而且過去從未自動化。
+EvidenceChain™ Delivery Agent：每天抓出符合條件的資料、取得 PDF，再送到客戶的 FTP server。一位過去從沒做過任何自動化的 account manager，約 1 小時做出第一版。
 
 eFiling Rejection Diagnoser：法院退件後自動讀取工作細節與 court rules，約 1 分鐘把 diagnosis 貼到 Slack。
 

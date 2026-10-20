@@ -50,7 +50,7 @@ Each agent handles one measurable job.
 
 AI Code Reviewer: checks every pull request across 4 codebases for security bugs, performance regressions, and committed credentials.
 
-EvidenceChain™ Delivery Agent: pulls qualifying records each day, fetches the PDFs, and sends them to the client's FTP server. One account manager built the first version in about an hour, and this had never been automated before.
+EvidenceChain™ Delivery Agent: pulls qualifying records each day, fetches the PDFs, and sends them to the client's FTP server. An account manager who had never automated anything before built the first version in about an hour.
 
 eFiling Rejection Diagnoser: after a court rejection, reads the job details and court rules and posts a diagnosis to Slack in about a minute.
 

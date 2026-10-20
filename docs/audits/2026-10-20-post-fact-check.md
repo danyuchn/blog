@@ -83,6 +83,14 @@ Each one is a single blockquote at the end of the body, `**Postscript (2026-10-2
 - **cli-vs-desktop-three-answers:** the zh copy shows a real local path (`/Users/danyuchn/...`) where en uses `/Users/yourname/...`. A privacy consistency point, not a fact issue.
 - **One Haiku prediction** ("Haiku will probably stop at 4.5") has since been overtaken by Haiku 5.5. It is an opinion, so it was not edited.
 
+## Resolved from the flagged list before merge
+
+- progress-asks-status-board: `/status` changed to `/usage` (zh + en).
+- abc-legal-agent-fleet: "never automated" now attributed to the account manager, matching the customer story (zh + en).
+- anthropic-two-opposite-moves-week: "shipped" changed to "opened early access to" Claude Mods (zh + en).
+- opus-sonnet-fable-division-of-labor: text now names the Sonnet 5 system card, matching the link and captions (zh + en).
+- Left as written: five-layer nesting (postscript already gives current numbers), `/low-priority` (attributed to Reddit), sensitive-data "API logs: 7 days" (refers to API log retention, which differs from Claude Code transcript retention), idle-compaction version (already hedged), Haiku prediction (opinion).
+
 ## Per-post claim tables
 
 Verdict tallies across all rows: OK ≈ 278, WRONG-AT-PUB 17, OUTDATED-ACTIONABLE 20, UNVERIFIABLE 115. Each WRONG/OUTDATED row is either applied above or listed under "Flagged". Posts with no checkable tool claims get one line each.
