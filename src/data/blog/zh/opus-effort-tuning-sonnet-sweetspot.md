@@ -40,4 +40,4 @@ Claude Code 現在除了選 model 之外，還可以調整 `effort`。預設值�
 
 只是這個解法的代價，是你的錢包。
 
-> **後記（2026-10-20）**：更正：`adaptive` 不是 effort 等級，而是 Opus 4.7 本來就固定採用的推理方式，effort 決定它推多深。Anthropic 的 Opus 4.7 發布文寫的是 Claude Code 所有方案預設 effort 都是 `xhigh`，所以如果你遇到懶惰皇帝，先跑 `/effort` 看看自己的 session 實際開在哪一級。
+> **後記（2026-10-20）**：更正：Anthropic 的 Opus 4.7 發布文寫的是 Claude Code 所有方案預設 effort 都是 `xhigh`，所以如果你遇到懶惰皇帝，先跑 `/effort` 看看自己的 session 實際開在哪一級。

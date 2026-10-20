@@ -14,6 +14,18 @@ Scope: every published post under `src/data/blog/{zh,en}/` that makes claims abo
 - Codex and Gemini CLI claims were checked against their GitHub source and docs (raw.githubusercontent.com) and npm.
 - **Source-access caveat:** developers.openai.com, openai.com, ai.google.dev, antigravity.google and github.com HTML pages were blocked from the audit sandbox. Claims that depend on those were checked through web-search results restricted to the vendor's own domain, and are marked "search snippet" in the notes. Those verdicts carry less weight than the ones sourced from the docs directly.
 
+## Trimmed before merge
+
+Applied to both zh and en copies after review:
+
+1. `voice-input-two-modes`, `teach-beginners-with-gemini-cli`: reverted the Antigravity FAQ postscripts entirely (the source was only a search snippet, and it changed the author's recommendation).
+2. `opus-effort-tuning-sonnet-sweetspot`: kept the xhigh-default correction; removed the sentence claiming `adaptive` is not an effort level.
+3. `model-vendors-take-turns-failing`: removed the Codex deprecation postscript.
+4. `gemini-3-5-flash-reddit-review`, `gemini-37-flash-agent-ready`, `local-model-not-for-saving-money`: replaced unverified dates and "current version" claims with a neutral deprecation note pointing to Google's current model list.
+5. `when-to-call-fable-and-effort`: removed the first-person advice sentence from the postscript; the factual note stays.
+6. `claude-code-harness-ops`: kept the 2.1.86 and "start of April" corrections; reordered the two sections and the description so versions read chronologically (2.1.86, then 2.1.90).
+7. `cli-vs-desktop-three-answers` (zh): replaced the literal `/Users/danyuchn/` path with `~/`. The en copy has no such path.
+
 ## Edits applied (zh and en copies, identical in substance)
 
 ### Factual fixes (WRONG-AT-PUB)

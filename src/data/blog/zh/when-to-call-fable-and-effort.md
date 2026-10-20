@@ -80,7 +80,7 @@ Reddit 上有人從 Claude Code 裡挖出一張各模型、各 effort 等級的 
 1. 「那天有人問我要不要開 ultracode。」 — 類型：銜接（把第二則貼文的回覆情境交代出來，原文為回覆他人提問，無此敘述句）
 -->
 
-> **後記（2026-10-20）**：Claude Code v2.1.284 之後，Ultracode 變成 `/effort` 裡獨立的開關，不再強制 xhigh，開著時就跑在你設定的 effort 上。我的建議不變：關掉它，Opus 開到 med 就好。
+> **後記（2026-10-20）**：Claude Code v2.1.284 之後，Ultracode 變成 `/effort` 裡獨立的開關，不再強制 xhigh，開著時就跑在你設定的 effort 上。
 
 <!--
 2026-09-24 W40 補記兩節：① 2026-09-24 Threads 貼文（Fable 派 3 個 Fable subagent 燒乾額度→加 hook）與 2026-09-23 留言回覆（nested subagent、同時最多兩個、當員工在管）逐字併入；② 2026-09-19 貼文轉貼 r/ClaudeAI effort 成本表（原貼文僅圖片＋連結）。新增非原文句子：兩個小標（框架句）、「另外」（銜接）、「Reddit 上有人從 Claude Code 裡挖出……還自己實測了一輪」（框架句，內容取自截圖）。原文 emoji 依站台規範未保留。

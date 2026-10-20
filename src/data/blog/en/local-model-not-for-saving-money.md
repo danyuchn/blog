@@ -46,4 +46,4 @@ The third trap was using curl against the endpoint to check compatibility. Syste
 
 The three traps add up to this: before you decide whether to spend NT$100,000, make sure the numbers you're deciding with are real.
 
-> **Postscript (2026-10-20):** Gemini 3.7 Flash was deprecated on October 8, 2026, and requests to it now go to Gemini 3.8 Flash. The math above still holds; just use `gemini-3.8-flash` if you set this up today.
+> **Postscript (2026-10-20):** This model has since been deprecated; check Google's current model list.

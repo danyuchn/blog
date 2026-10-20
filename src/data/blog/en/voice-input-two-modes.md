@@ -56,9 +56,8 @@ I recommend pairing it with another AI agent. When I'm reviewing a long document
 2026-10-09 W42 postscript: translated from a 10-05 17:05 Threads post. Added non-source sentences: heading only.
 -->
 
-> **Postscript (2026-10-20):** Antigravity's FAQ now says wrapping `agy` inside third-party tools isn't supported on consumer plans and can get your account suspended, so I no longer recommend having Claude Code or Codex call it on the quota that comes with Google Drive. For this kind of setup Google recommends a Google AI Studio API key.
-
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「Back in March I was still wishing for it:」「The tools have since filled that in, and now the question is just how to use them.」 — 類型：併入碎念（Voice Input Please，2026-08-14 週報併入）
 -->
+

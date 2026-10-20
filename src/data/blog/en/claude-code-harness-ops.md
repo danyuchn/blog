@@ -9,7 +9,7 @@ tags:
   - claude-code
   - harness
   - ai-workflow
-description: From March to April, running Claude Code as a long-running harness surfaced a bunch of issues. Survival tactics during the outage, my hook for cleaning up zombie processes, the resume cache-miss fix in 2.1.90, the silent memory bloat fixed in 2.1.86, and the Plan-Mode-question-density problem after 4.7.
+description: From March to April, running Claude Code as a long-running harness surfaced a bunch of issues. Survival tactics during the outage, my hook for cleaning up zombie processes, the silent memory bloat fixed in 2.1.86, the resume cache-miss fix in 2.1.90, and the Plan-Mode-question-density problem after 4.7.
 ---
 
 After six months of using Claude Code as a daily driver, I've come to a realization: the model's capability is already enough. What actually bottlenecks efficiency is the harness itself.
@@ -48,6 +48,17 @@ The beauty of a hook is that it auto-triggers. I don't have to remember to clean
 
 This is textbook harness engineering: the model itself won't do this, so you have to add the mechanism externally.
 
+## 2.1.86: two quiet fixes worth noting
+
+CC 2.1.86 had two fixes worth noting:
+
+1. **Tagging large files no longer does JSON escape processing**, which meaningfully reduced token consumption. If you `@`-mentioned a large file and token usage mysteriously ballooned, this was it.
+2. **Fixed the long-session memory explosion bug**, caused by markdown syntax highlight cache.
+
+Both bugs silently ate resources. After the fix, the same work consumes noticeably less token.
+
+This category of "silent bug" is the hardest to catch at the harness layer. The model appears to be operating normally, but resource management underneath is quietly leaking.
+
 ## 2.1.90 finally fixed resume cache miss
 
 At the start of April, 30 minutes before I wrote this paragraph, Claude Code shipped 2.1.90. It finally fixed the resume-causes-cache-miss problem.
@@ -59,17 +70,6 @@ After the fix, the improvement was immediately felt.
 This bug existed for a long time. A lot of us got burned without knowing why. You'd wonder "why does my first message after resuming burn so much token" and assume you wrote too-long prompts. Actually, the resume mechanism was doing the damage.
 
 Once fixed, my long-running project sessions became genuinely resumable.
-
-## 2.1.86: two quiet fixes worth noting
-
-CC 2.1.86 had two fixes worth noting:
-
-1. **Tagging large files no longer does JSON escape processing**, which meaningfully reduced token consumption. If you `@`-mentioned a large file and token usage mysteriously ballooned, this was it.
-2. **Fixed the long-session memory explosion bug**, caused by markdown syntax highlight cache.
-
-Both bugs silently ate resources. After the fix, the same work consumes noticeably less token.
-
-This category of "silent bug" is the hardest to catch at the harness layer. The model appears to be operating normally, but resource management underneath is quietly leaking.
 
 ## Plan Mode's question density (the 4.7 issue)
 

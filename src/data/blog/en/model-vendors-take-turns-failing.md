@@ -127,8 +127,6 @@ Two of Codex's original sentences, rewritten as a test:
 2026-10-09 W42 merged from micro-notes: two archive notes added to the 'wind blew the other way' section, and the Codex defensive-writing note added to the top of the tone section; all three removed from the archive.
 -->
 
-> **Postscript (2026-10-20):** Codex's config schema now marks `personality = "friendly"` and `"pragmatic"` as deprecated; they no longer select a style. So that line 3 isn't doing anything anymore, which only makes the point above stronger.
-
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「On the morning of 10/06 I taught a class with Codex, ...」 — 類型：改寫（原文「今天早上」改為日期；移除 emoji）
