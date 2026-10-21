@@ -7,7 +7,7 @@ input="$(cat)"
 file="$(printf '%s' "$input" | jq -r '.tool_input.file_path // empty' 2>/dev/null)"
 [ -n "$file" ] || exit 0
 case "$file" in
-  */src/data/blog/*.md) ;;
+  */src/data/blog/*.md|src/data/blog/*.md) ;;
   *) exit 0 ;;
 esac
 root="${CLAUDE_PROJECT_DIR:-$(cd "$(dirname "$0")/../.." && pwd)}"
