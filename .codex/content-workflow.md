@@ -39,7 +39,7 @@
 多篇全交 subagent 寫、主對話只驗證時，寫手 prompt 一律由 `.claude/templates/fanout-writer-prompt.md` 生成，不可自行簡化。三條鐵則（事故驅動，模板內有完整版）：
 
 - **忠實度自首清單**：每個寫手必回報「新增非原文句子」逐句清單，主對話逐句裁決——比盲讀全篇快且不漏。
-- **派工前 working tree 清乾淨、圖片主對話先複製**：W25 曾有寫手違規 `git add -A && commit && push`，把既有變更一併掃走。
+- **派工前 working tree 清乾淨、圖片主對話先複製**。
 - **收尾 commit 主對話自己做**：逐檔 `git add <path>`，禁 `git add -A`，等使用者指令。
 
 ## 語意去重工具
