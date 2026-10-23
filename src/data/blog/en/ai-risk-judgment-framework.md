@@ -58,3 +58,5 @@ Both answers in the "reversible + isolated" zone? Let AI run.
 Any answer touching "irreversible" or "production"? Insert a human checkpoint — draft, preview, dry-run, however you implement it. But do not let AI run end-to-end.
 
 This framework prevents more incidents than any amount of prompt engineering.
+
+Postscript: I later made this table into a short, "Can AI email outside people on its own? One 2×2 table tells you": <https://youtube.com/shorts/auv3m6usc0M>

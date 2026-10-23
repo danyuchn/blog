@@ -84,3 +84,28 @@ AI can already do too many things. Anything you can think of, just go ask it -- 
 If you mistakenly hand that over to AI, you'll dilute your own uniqueness and competitiveness. Every article, every piece of content you share should be written by hand. Don't use AI-generated illustrations. At most, use AI to help rearrange your article structure or crunch large datasets. Because what you want is to personally reach your students.
 
 I'm not just a teacher -- I'm an architect of educational products. I hope more educators will join me in moving toward this vision.
+
+## October 2026: five things I've done or am doing
+
+For anyone else in education who's using AI, here's what I've tried so far in bringing AI into my teaching:
+
+1. I turned ten years of my teaching videos into transcripts and, together with my handouts and the teaching articles I've shared online, distilled them into a knowledge base of my own teaching system.
+2. I plugged that knowledge base into a large model as RAG. At first it was my behind-the-scenes advisor, helping me iterate on handouts and draft answers to questions. Later I put it directly in front of students, so their day-to-day error reviews line up with how I, their teacher, actually think.
+3. For the non-knowledge side, the advisory work of personal study planning, I had an agent help me build templates and a planning database. Add the months I spent personally correcting the model's first drafts, and the planning database now matches about 95% of what I'd plan on the first pass. I only need to polish the last 5%.
+4. I ran statistics on hundreds of students' score reports and reverse-engineered the algorithm to find easier paths to a high score, including time management and question-allocation strategy.
+
+And what I'm working on lately:
+
+5. Using Colab and a large amount of my past teaching material to fine-tune two small open-source models. One is a TTS model so it can produce my voice. The other is an LLM so it can use my tone and style, plug into the RAG, and answer students' questions as me.
+
+Put those two together, and with streaming interactive voice models sure to improve fast over the next six months, a complete Dustin-the-teacher clone should be ready.
+
+Meanwhile, where are you as a teacher? Still negative and dismissive about AI? Or curious but stuck, not sure where to start?
+
+My advice: keep the pain and the cost low, and learn as you go.
+
+<!--
+2026-10-23 W44: added the "October 2026: five things" section (Threads thread from 10-22). Sentences not in the original:
+1. Section heading — type: framing
+2. "My advice: keep the pain and the cost low, and learn as you go." — type: rewrite (original ends with a follow-me CTA, removed)
+-->

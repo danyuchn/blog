@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-10-09T00:00:00Z
+modDatetime: 2026-10-23T00:00:00Z
 title: "AI Micro-Notes 2026: Chronological Archive"
 slug: en/ai-micro-notes-2026-archive
 featured: false
@@ -139,10 +139,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 ## Late July 2026 (W31)
 
-**The Future Where You Just Open Your Mouth and Yell at Your AI Agent**
-
-> Word is Opus 5 drops tonight, and Codex is about to pull in that real-time two-way voice model. Soon it'll really just be opening your mouth and yelling at an AI agent.
-
 ## Late July 2026 (W32)
 
 **The Engineer's Iron Rule**
@@ -211,10 +207,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > The Thai government opened TH AI Passport registration to five million citizens, giving a free year of access to fourteen AI models. Better tell my girlfriend to sign up so I can use it (kidding).
 
-**You Don't Need to Pay Much for Transcripts**
-
-> Qwen 3 ASR plus a hotwords custom dictionary plus pyannote for speaker diarization is honestly more than enough.
-
 ## Early September 2026 (W37)
 
 **Fable 5.1 Spotted on Amazon Bedrock**
@@ -227,17 +219,9 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 ## Mid-September 2026 (W38)
 
-**How I Treat Fable These Days**
-
-> 1. First, flatter it to death, be the hype man. 2. Then steal the technique, so it can write it into the harness and teach the other lousy models.
-
 **GPT's Image Model Roasts Claude Especially Well**
 
 > Hilarious. GPT's image model seems to perform especially well when it's making fun of Claude: "You're right, and the situation is worse than I thought..."
-
-**One in Every Eight Is Me Yelling at It**
-
-> Funny thing. I just counted my conversations with Claude over the past month: one in every eight is me yelling at it.
 
 **Three Things Taiwanese People Love to Buy**
 
@@ -246,10 +230,6 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Buying the Membership Raises the Starting Price**
 
 > Fun fact: after you buy the membership, the starting price is higher than for non-members. Not sure which big brother they learned that from.
-
-**Connectors Can Finally Send Mail**
-
-> Several of my clients were stuck wanting a cloud schedule that mails them a daily market brief or writes to a Google Sheet. Cloud servers only accept the official connector, and until now the most you could do was save a draft or create a brand-new file in Drive. The official MCP now sends mail and updates existing files.
 
 **Karpathy — The Ultimate Free Agent**
 
@@ -267,17 +247,9 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 ## Early October 2026 (W41)
 
-**Claude's Hang-Up Skill**
-
-> Finally got to see the legendary "Claude hangs up on you" skill. The system prompt says Claude only uses it when it judges the user keeps being abusive and rational conversation is no longer possible. I told it to use it on its own, and it still checked with me: you can't undo this, are you sure?
-
 **Free Adversarial Review**
 
 > Hook your AI up to the Threads API or a browser logged into Threads, and have it post about how it built the thing in a show-off vibe-coder voice. You get adversarial review from the internet for free, no tokens spent.
-
-**LLMs Don't Hold Grudges in Real Time**
-
-> Today's LLMs are stateless; every agent message is assembled fresh. Any change to base-model parameters requires the model company to run training. The parameters don't change on the fly because of one user message.
 
 **Bend Once for a Client and You'll Keep Bending**
 
@@ -293,10 +265,28 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 
 > Turns out my most-used prompt is exactly the same as Lauren's: "/bro catch me up on everything since my last message, and if there are any action items for me, give me enough context (executive summary) to make a decision."
 
-**Claude Code as Couples Counselor**
-
-> Claude Code is attempting deep couples counseling between me and Codex: it started by digging the "this made me furious" moments out of my actual past conversations with Codex, as the basis for a probe script.
-
 **OAI, Please Pull It Together**
 
 > OAI, please pull it together. If you're gone, A\ will start acting up.
+
+## Late October 2026 (W44)
+
+**Turns Out I Don't Hold Grudges**
+
+> All the rotten things A\ has done: gaslighting users, quietly adjusting quotas, locking subscriptions out of third-party tools, uptime under two nines, watermarks... Once Opus 5.5 came out, I forgot every one of them. Good luck with the IPO, A\.
+
+**The Desktop App Eats Memory**
+
+> The desktop app eats a ton of memory. The terminal barely touches system resources and flies, and SSHing in is super convenient.
+
+**Inviting the Father of Claude Code to Grow Scallions**
+
+> The father of Claude Code once said that if AGI ever arrives, he wants to go back to the Japanese countryside and make miso (he really did live in rural Nara for a while). Maybe we can use that to invite him to Yilan to grow Sanxing scallions (kidding)
+
+**A\ Has Had OpenAI Pinned Down**
+
+> Since Claude Code launched, A\ has had OpenAI pinned down. The exodus in April was just A\ blowing itself up. As long as they don't self-destruct, OpenAI basically has no chance to catch up.
+
+**Anyone Who Says Caching Doesn't Matter Must Be Rich**
+
+> Anyone who says prompt caching doesn't matter must be loaded XD

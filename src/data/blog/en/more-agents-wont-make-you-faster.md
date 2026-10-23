@@ -79,6 +79,8 @@ Saw this post first thing in the morning and couldn't stop laughing. Fable 5.1 h
 
 If you've run into this too, the original thread has people sharing fixes — mainly changing the config, adding a hook, and editing the frontmatter. <https://www.reddit.com/r/ClaudeAI/comments/1w52pbu/gone_in_60_seconds/>
 
+Postscript: I later made this into a short, "Why more AI clones won't make you faster": <https://youtube.com/shorts/o9OrZOHCRiQ>
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「It's a joke, but the joke already contains the whole problem.」— 類型：銜接

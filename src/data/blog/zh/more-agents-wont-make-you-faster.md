@@ -79,6 +79,8 @@ description: '從想派 13 個 subagent 代聊、一個人操控 1000 個，到�
 
 如果你也有這困擾，原討論串裡大家都分享了解法，具體來說就是改 config、加 hook、改 frontmatter。<https://www.reddit.com/r/ClaudeAI/comments/1w52pbu/gone_in_60_seconds/>
 
+補記：這篇後來拍成一支短片，〈派更多 AI 分身，為什麼不會更快？〉：<https://youtube.com/shorts/o9OrZOHCRiQ>
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「這句話是玩笑，但它其實把問題講完了。」— 類型：銜接

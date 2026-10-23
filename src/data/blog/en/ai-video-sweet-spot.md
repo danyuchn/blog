@@ -19,6 +19,14 @@ I used Astra + DaVinci Resolve to cut a six-day vlog. The material was my iCloud
 
 I also noted this in a postscript to [the Luna Max post](/blog/posts/en/gpt-5-6-luna-max-grunt-work): DaVinci Resolve Studio wired up to MCP and driven by Luna Max is the god of video post-production in this new world.
 
+## The first thing I do when I get home from a trip
+
+Every phone and the DJI get plugged into the Mac mini. Claude Code pulls out everything I shot, dedupes it, and sorts the footage, then exports my Google Maps GPS timeline plus what's in Gmail and my calendar and cross-checks them all. The end goal is a vlog. Meanwhile I go unpack and do the laundry.
+
+![Terminal screenshot: while the DJI copies in the background, Claude Code reads the Google timeline to lay out the itinerary; I remind it that when the timeline looks off it should trust the photos, so it switches to the photos' GPS and image content and runs EXIF analysis on files from both phones](/blog/assets/posts/ai-video-sweet-spot/travel-vlog-timeline.jpg)
+
+Usually by the time the suitcase is unpacked, the vlog is done too.
+
 ## You don't need to pay much for transcripts
 
 Qwen 3 ASR plus a hotwords custom dictionary plus pyannote for speaker diarization is honestly more than enough.

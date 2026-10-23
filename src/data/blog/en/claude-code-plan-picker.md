@@ -65,6 +65,8 @@ Quota disappearing doesn't always mean you used too much. A cache bug, resume re
 
 That's it.
 
+Postscript: I later made this into a short, "Does a pricier AI plan actually work better?": <https://youtube.com/shorts/d6_DiK1jp8c>
+
 <!--
 Added sentences not in the original (fidelity disclosure), mirroring the zh file:
 1. Opening four-plan paragraph. Type: framing (criteria from ai-usage-economics; prices are official facts).

@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-09T00:00:00Z
+modDatetime: 2026-10-23T00:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -31,11 +31,11 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Not sure whether to call it Marie Antoinette or Emperor Hui of Jin. Staff at a model lab teaching everyone how to save tokens is let them eat cake, let them eat meat porridge.
 
+**Want Usage Credits? Get a Second Subscription Instead**
+
+> Type /usage and you can see the cost breakdown; Claude Code is much more transparent about pricing now. If you want to use usage credits, keep your subscription, because a subscription is about 50x cheaper than paying as you go. Even opening a $20 plan on a new email beats spending credits. Maxing out a $200 plan is rare these days; having someone diagnose how you use it is probably the better long-term move.
+
 ## Dev & Security Pitfalls
-
-**Two Traps in Vercel Throwaway Public Pages**
-
-> A fresh project's deploy URL ships with Deployment Protection (Vercel Authentication) on by default — outside visitors get a 401. The other trap: the bare `<proj>.vercel.app` alias may be someone else's empty shell; your auto-updating prod alias is `<proj>-<team>.vercel.app`. curl and check the content before sending anyone the link.
 
 **iQOS Bluetooth Reverse Engineering**
 
@@ -45,10 +45,6 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Two phones with no wifi, no Bluetooth, no communication protocol of any kind, moving a file using only light: chop the file into chunks, encode them as QR codes, flash them on the sender's screen at roughly 40 frames a second, and let the receiver decode and reassemble. Demonstrated at 128KB per second.
 
-**Turn On ENV_SCRUB and AUTOMODE Won't Come Back**
-
-> Trivia: if `CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=1` (the env-stripping setting is on), AUTOMODE can't become the default. The default will be manual.
-
 **The LLM Router Sold Your Keys Too**
 
 > Someone bought a 6TB dataset off a top Chinese LLM router. That data alone handed over SSH keys, VPN configs, Alibaba Cloud keys and GitLab tokens sent through the router, enough to take over 7 government entities and 19 companies including Xiaomi, Huawei, NIO and MiniMax. Strong suspicion the order was placed on Xianyu. The sellers, and all those Chinese enterprises busy distilling, probably never pictured the day it came back around. Anyone thinking of routing through a cheap proxy should go read Twitter first: the proxy turns around and sells your chat logs to be distilled, and your credentials, keys and tokens end up in someone else's hands.
@@ -57,9 +53,13 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > The super handy OBU is here: <https://github.com/ifuryst/open-browser-use>. I compared it against Chrome MCP and agent-browser for speed and tokens across four scenarios: hotel booking, cinema showtimes, Threads, and X.
 
-**Codex's Sandbox Couldn't See the Office NAS**
+**Opus 5.5 Keeps Slipping Into Its Native Tongue**
 
-> I was on site at a client's office running a Codex training, and the company's internal NAS mount just would not read. After every check had failed and I was getting desperate, it hit me: is the Codex sandbox doing this? Sure enough, once I verbally authorized it to try outside the sandbox, it read fine.
+> Opus 5.5 loves switching to its native language, so I built a stop hook. It ignores tool and command output, measures only the narrative text, and if the share of English is too high, it blocks the reply and asks for a rewrite. That's the most effective fix so far.
+
+**ISP DNS Blocking, Fixed With One Tailscale Setting**
+
+> Claude Code stumbled on this: Thailand blocks sites with nothing more than basic ISP-level DNS blocking (the same way Taiwan blocks Xiaohongshu and Polymarket). With Claude Code's help I pointed Tailscale at 1.1.1.1 / 8.8.8.8 to override the local DNS, and suddenly the whole internet opened up.
 
 ## Workflow & Method
 
@@ -71,25 +71,13 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > "I know things have probably been busy on your end" sounds considerate, but it invents a reason for someone else's silence. AI-written client emails often hide this kind of condescension. I still review every draft after running my polite skill.
 
-**The Sweet Spot for AI Video**
-
-> I still think you record your own narration and put yourself on camera, and let AI help with the visuals and animation. That's the sweet spot.
-
 **Unambiguous Is Good Enough**
 
 > He's the one who actually knows how to use it. With an LLM, as long as your meaning isn't ambiguous, typos and speech-recognition errors don't matter. What matters is that his instructions point somewhere very clear, his reasoning is clear, and he can verify the AI's answers. That's why the collaboration works.
 
-**On the Riemann Hypothesis, the Prompt Was Just a Pep Talk**
-
-> Traditional mathematicians moved it 0.8% over 30 years. This run moved it 25.6%. The funniest part is what the write-up says about the prompting: there was no domain content in it at all, just continuous encouragement, an AI cheering on an AI. Claude spent a day and a half coordinating roughly 60 subagents, running 2,400 shell commands and reviewing each other's work, while the human input was mostly variations on "keep at it" or "believe in yourself".
-
 **The Cure for Garbage Admin Panels**
 
 > The cure for Meta's back office and the LINE Official Account back office is Codex's browser control. Mom, I will never get lost in these garbage admin panels again!
-
-**Editing a Six-Day Vlog With Astra**
-
-> I used Astra + DaVinci Resolve to cut a six-day vlog. The material was my iCloud items, my Google Maps timeline, and my email. It guessed what my six days looked like on its own, wrote the text, ordered everything, imported it, and found the music. Honestly it did the most tedious 90% of the editing. It used about 40% of the weekly quota on the 20 USD plan.
 
 **One CLAUDE.md Line to Make Tool Calls Parallel**
 

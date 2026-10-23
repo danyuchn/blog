@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-09T00:00:00Z
+modDatetime: 2026-10-23T00:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -31,11 +31,11 @@ description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型�
 
 > 不知道要說是現代版瑪麗皇后還是晉惠帝了。模型廠商的員工教大家怎麼省 token，等於何不吃蛋糕，何不食肉糜。
 
+**要用 usage credit，不如開小號訂閱**
+
+> 打 /usage 就可以看到費用組成了，現在 Claude Code 在費用結構這塊透明很多。想用 usage credit 的時候請記得繼續訂閱，因為訂閱比單買便宜 50 倍，找一個新 email 花 20 USD 當小號都比用 credit 划算。200 USD 打滿現在真的不常見，找個人診斷你的使用方式可能是長遠下來更好的策略。
+
 ## 開發・資安踩坑
-
-**Vercel 臨時公開頁的兩個坑**
-
-> 新 project 部署出來的 URL 預設開著 Deployment Protection（Vercel Authentication），外部訪客拿到 401。另一坑：`<proj>.vercel.app` 裸別名可能是別人佔走的空殼，自家自動更新的 prod 別名是 `<proj>-<team>.vercel.app`。發連結前先 curl 驗內容。
 
 **iQOS 藍牙逆向工程**
 
@@ -45,10 +45,6 @@ description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型�
 
 > 讓兩台手機無 wifi、無藍牙、無任何通訊協定，只透過光線傳檔案：把檔案拆成一堆 chunk 轉碼成 QR code，發送端在螢幕上一秒 40 幀快速顯示，接收端再快速解碼拼回。已實證達到每秒 128KB。
 
-**ENV_SCRUB 打開，AUTOMODE 就回不去**
-
-> 冷知識：如果 `CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=1`（變數剝離這個設定打開），AUTOMODE 就無法變成 default，default 會是 manual。
-
 **LLM 路由器把你的金鑰一起賣了**
 
 > 有人從一個頂尖的中國 LLM 路由器那裡買到 6TB 資料集，光靠那批資料就能拿到發送到路由器的 SSH 金鑰、VPN 配置、阿里雲金鑰、GitLab 令牌，接管 7 個政府實體與小米、華為、蔚來、MiniMax 這樣 19 家公司。高度懷疑是在閒魚下單的。賣家跟中國忙著蒸餾的大企業們，應該沒想過有一天會被反殺。所有想用中轉站省錢的建議都去看看推特——中轉站轉手把你的聊天記錄賣去給人蒸餾，你的憑證、金鑰、token 都到別人手裡。
@@ -57,9 +53,13 @@ description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型�
 
 > 超好用的 OBU 在這邊：<https://github.com/ifuryst/open-browser-use>。我拿它跟 Chrome MCP、agent-browser 在訂房、影城場次、Threads、X 四個場景比過速度跟 token。
 
-**Codex 沙盒讀不到內網 NAS**
+**Opus 5.5 動不動就說母語**
 
-> 去客戶公司現場做 Codex 培訓，公司內網 NAS 掛載磁碟讀不到就是讀不到。各種排查都沒用很絕望時，突然想起：是不是 Codex 的沙盒在搞鬼？果然，口頭授權在沙盒外面嘗試，就讀到了。
+> Opus 5.5 喜歡動不動就說母語，所以我做了一個 stop hook，排除工具指令輸出，只量測敘述類文字，如果英文比例過高就自動擋下來要求重寫。這是目前最有效的方式。
+
+**電信商 DNS 封鎖，Tailscale 一招解**
+
+> 被 Claude Code 意外發現，泰國封鎖網站只是用最基本的電信商 DNS 封鎖而已（就像台灣封鎖小紅書跟 Polymarket）。在 Claude Code 的幫助下讓 Tailscale 走 1.1.1.1 / 8.8.8.8 override local DNS，瞬間海闊天空。
 
 ## 工作流・方法論
 
@@ -71,25 +71,13 @@ description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型�
 
 > 「I know things have probably been busy on your end」看似體貼，其實是在替對方的沉默編一個他沒說過的理由。AI 寫客戶信常有這種隱性的居高臨下，套過 polite skill 還是要自己看。
 
-**AI 影片的甜蜜點**
-
-> 我覺得還是自己錄旁白出鏡，但是畫面動畫用 AI 輔助，會是甜蜜點。
-
 **語意不模糊就夠了**
 
 > 他才是真正知道怎麼用的。LLM 只要你今天語義不模糊，拼字錯誤、語音辨識錯誤都沒有關係。重點是他的下指令方向非常清楚，邏輯思路也清楚，可以驗證 AI 的回答，所以才能夠這樣協作。
 
-**黎曼猜想那次，提示詞只是加油打氣**
-
-> 傳統數學家持續 30 年只能推進 0.8%，這一次推進了 25.6%。最有趣的是文裡面寫，提示詞根本沒有下什麼專業內容，就只是一直鼓勵 AI 幫 AI 加油。Claude 花了一天半協調大約 60 個子代理，執行了 2,400 個 shell 指令並互相審查，而人類的輸入大多限於「繼續堅持」或「相信自己」。
-
 **狗屎後台的剋星**
 
 > Meta 後台、LINE 官方帳號後台的剋星，就是 Codex 的瀏覽器操作功能：媽媽，我從此再也不會在這些狗屎後台迷路了！
-
-**用 Astra 剪六天的 vlog**
-
-> 用 Astra + DaVinci Resolve 剪六天的 vlog，素材是 iCloud 項目＋Google 地圖時間軸軌跡＋我的 email。他自己去猜我六天的行程長怎樣，自己寫文字、編排順序、匯入、找音樂。老實說已經把剪接最費工的 90% 都做完了吧，20 USD 月費的週用量大約花 40%。
 
 **CLAUDE.md 加一行，讓 tool call 並行**
 

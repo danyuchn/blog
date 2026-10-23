@@ -47,3 +47,5 @@ The third trap was using curl against the endpoint to check compatibility. Syste
 The three traps add up to this: before you decide whether to spend NT$100,000, make sure the numbers you're deciding with are real.
 
 > **Postscript (2026-10-20):** This model has since been deprecated; check Google's current model list.
+
+Postscript: I later turned this math into a short, "Buying hardware to run a local model doesn't save money": <https://youtube.com/shorts/8TP4HssU0Ow>
