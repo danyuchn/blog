@@ -1,5 +1,6 @@
 ---
 author: Dustin Yuchen Teng
+modDatetime: 2026-10-25T04:00:00Z
 pubDatetime: 2026-10-23T01:01:00Z
 title: "Letting Claude Dig Through a Month of My AI Chats: Habits, Mods, and Auto Mode Rules"
 slug: en/mine-a-month-of-ai-chats
@@ -29,21 +30,7 @@ Here's the short: <https://youtube.com/shorts/5g1jYJ3DZRE>
 
 ## Turning catchphrases into switchable Mods
 
-Here's one way to design a personal Claude Mod: have Claude Code read your conversations from the past month, find the patterns you fall into most often with AI, and write them up as Mods you can switch on and off.
-
-For example, the things I said to AI most often over the past month were:
-
-1. Don't ask me. Decide whatever you can on your own; I'm giving you full autonomy. Leave whatever you can't decide for me at the end.
-2. Use headless agy / codex as much as you can for the grunt work, to save your quota.
-3. I want to wrap this conversation up. Tell me what I still haven't decided.
-
-The AI turned those into the auto/out/wrap modes you see here:
-
-![The Tempo mode menu in the terminal, currently AUTO + OUT, with options for off, auto (don't ask midway), out (delegate to agy/codex), and wrap (converge, no new directions)](/blog/assets/posts/mine-a-month-of-ai-chats/tempo-modes.jpg)
-
-Once you switch a mode on, that conversation gets the matching prompt injected. Auto mode steers around the hooks I set up to block certain actions (it doesn't bypass them; it just tells the model to avoid doing things the hooks would block). Out mode adds a hook that checks whether any big batch job the model wants to take on itself should be delegated instead, and picks the best delegate based on how much quota each outside service has left.
-
-So when I want it to run on its own, I switch to auto. When a big job should save quota, I switch to out. When I want to finish, I switch to wrap. Give it a try!
+I turned the three things I say to AI most often (don't ask me, delegate more, let's wrap up) into switchable auto / out / wrap modes. I later wrote it up in full, with a week of measurements and the prompts I used to build it: [Switching Your AI's Working Mode with One Command](/blog/posts/en/work-mode-ai-working-modes).
 
 The two other Mods I built earlier are here: [a recording mask and a warm-cache plugin](/blog/posts/en/claude-mods-mask-and-warm-cache).
 
@@ -59,4 +46,5 @@ Sentences not in the original (faithfulness log):
 4. "Someone complained that auto mode's automatic review kept blocking them." — type: transition (original was a reply to someone's complaint)
 5. Emoji in the original replaced with XD — type: rewrite (no-emoji rule)
 6. Image alt — type: description (image attached to the original post)
+7. The catchphrase list, mode-menu screenshot and mechanism notes in this section moved to "Switching Your AI's Working Mode with One Command" on 2026-10-25; replaced with a one-line summary and link — type: cut (avoid duplicating the newer post)
 -->

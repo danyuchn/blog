@@ -1,5 +1,6 @@
 ---
 author: Dustin Yuchen Teng
+modDatetime: 2026-10-25T04:00:00Z
 pubDatetime: 2026-10-23T01:01:00Z
 title: 讓 Claude 翻我自己一個月的 AI 對話：挖出的習慣、Mod 和自動模式規則
 slug: zh/mine-a-month-of-ai-chats
@@ -29,21 +30,7 @@ description: '請 Claude Code 讀我過去一個月三百多場對話紀錄，�
 
 ## 把口頭禪寫成可切換的 Mod
 
-教大家一個個人 Claude Mod 設計的方式：讓 Claude Code 去讀你過去一個月的對話，找出你最常跟 AI 互動的幾種模式，然後寫成可切換的 Mod。
-
-比如我過去一個月最常跟 AI 對話的口頭禪就是：
-
-1. 你不要問我，能決定的就儘量自己決定，我給你充分的自主權，不能決定的就最後留給我。
-2. 儘可能多使用 headless agy / codex 幫你分擔雜工，節省你的額度。
-3. 我想把這個對話收起來了，告訴我還有哪些我還沒決定的事情。
-
-AI 就幫我寫成以下你看到的 auto/out/wrap 模式：
-
-![終端機裡的 Tempo 模式選單，目前是 AUTO + OUT，可選 off 關閉、auto 自主（中途不問）、out 外派（agy／codex）、wrap 收斂（不開新方向）](/blog/assets/posts/mine-a-month-of-ai-chats/tempo-modes.jpg)
-
-切到該模式後，該對話就會被注入以上提示詞。自主模式會避開我原本設定的卡動作的 hook（但不會繞過，純粹就是叫模型避免做會被 hook 卡住的事情）；外派模式會插入 hook 檢查每個模型自己想抄起來做的大批量工作是否適合外派，也會根據外部服務額度來選擇最適合的外派對象。
-
-所以想自動就切自動，大工作想省額度就切外派，想結束對話就收斂。你也可以試試看！
+我把最常跟 AI 講的三句口頭禪（不要問我、多外派、準備收尾）做成可以切換的 auto／out／wrap 模式。後來整理成完整的一篇，包含一週實測和開發時下的提示詞：[用一個指令切換 AI 的工作模式](/blog/posts/zh/work-mode-ai-working-modes)。
 
 之前做過的另外兩個 Mod 在這：[錄課遮罩與暖快取](/blog/posts/zh/claude-mods-mask-and-warm-cache)。
 
@@ -59,4 +46,5 @@ AI 就幫我寫成以下你看到的 auto/out/wrap 模式：
 4. 「有人抱怨 auto mode 的自動審查一直擋，」— 類型：銜接（原文是回覆別人抱怨的留言，補上下文）
 5. 原文 emoji 改為 XD — 類型：改寫（全域禁 emoji）
 6. 圖片 alt — 類型：描述（原貼文附圖）
+7. 本段原有的口頭禪清單、模式選單截圖與機制說明，2026-10-25 併入〈用一個指令切換 AI 的工作模式〉，改為一句摘要加連結 — 類型：刪減（避免兩篇重複）
 -->
