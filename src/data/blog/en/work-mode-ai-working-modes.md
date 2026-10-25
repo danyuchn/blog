@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-24T04:00:00Z
+pubDatetime: 2026-10-25T03:00:00Z
 title: 'Switching Your AI''s Working Mode with One Command: Building work-mode and a Week of Testing'
 slug: en/work-mode-ai-working-modes
 featured: false
-draft: true
+draft: false
 tags:
   - claude-code
   - harness

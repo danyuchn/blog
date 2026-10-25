@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-24T04:00:00Z
+pubDatetime: 2026-10-25T03:00:00Z
 title: 用一個指令切換 AI 的工作模式：work-mode 開發與一週實測
 slug: zh/work-mode-ai-working-modes
 featured: false
-draft: true
+draft: false
 tags:
   - claude-code
   - harness
