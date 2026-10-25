@@ -9,12 +9,12 @@ tags:
   - claude-code
   - harness
   - ai-workflow
-description: 'I built work-mode, a Claude Code plugin with autonomous, delegate and wrap-up modes plus desktop/phone reply formats. The pain points, how it evolved, numbers from 151 sessions, and prompts you can copy.'
+description: 'I built work-mode, a Claude Code plugin with autonomous, delegate and wrap-up modes plus desktop/phone reply formats. The pain points, how it evolved, numbers from 136 sessions, and prompts you can copy.'
 ---
 
 I recently built a Claude Code plugin called work-mode. With a single command, you can switch the AI's working mode. There are separate toggles for letting it work autonomously, delegating bulk tasks to other AIs, or helping wrap things up. There is also an `/at` command that tells it whether I am at my computer or on my phone, and it adjusts its response format accordingly.
 
-This post covers four things in order: where I was getting stuck, how I wanted the AI to behave, specific data from a week of testing, and the actual prompts I used during development. At the end, I included a starter template so anyone building their own version can adapt it directly.
+This post covers four things in order: where I was getting stuck, how I wanted the AI to behave, specific data from a week of testing, and the actual prompts I used during development. At the end, I included a starter template so anyone building their own version can adapt it directly. If you want the technical details, jump to [Appendix: how it is built](#appendix-how-it-is-built).
 
 ## The Original Issues
 
@@ -38,11 +38,11 @@ What I really wanted was a set of working modes I could switch at any time, with
 
 Here is how the development unfolded. Below are the key adjustments made along the way:
 
-**10/21, /tempo is born.** The earliest name was `/tempo`. I initially wanted `/mode`, but the input field auto-completed to the built-in `/model`, so I had to pick another word. That same day, I asked whether we should add a "don't ask me along the way" mode, having it search my history to verify how often I said it. It surfaced the 28 messages mentioned earlier, which is how auto was added. The codename was originally autonomous, but I found that too long and shortened it to auto.
+**10/21, the first version.** The same day the first version was working, I asked whether we should add a "don't ask me along the way" mode, having it search my history to verify how often I said it. It surfaced the 28 messages mentioned earlier, which is how auto was added.
 
 **10/21 afternoon, switching to "execution speed first."** That day, I felt the AI had gotten clumsy, so I asked it to compare recent conversation logs. The model itself hadn't changed. The issue stemmed from too many delegation rule changes over those two days. Multiple prompts were telling it to "delegate first," so even tasks I was actively waiting on were being sent out. When an external service stalled, 14 full minutes passed without a single update. After discussing it, we set a core principle: take the fastest path for tasks I'm waiting on and deliver immediately; delegate only bulk, background tasks I'm not waiting on. From then on, out became the sole delegation toggle. Leaving it off by default keeps things fast.
 
-**10/23, renamed to work-mode.** I renamed `/tempo` to `/work-mode`. I also discovered why out felt ineffective: external quotas were nearly exhausted, causing calls to be blocked. So out was updated to attach the remaining quotas on both sides every time, routing to the other service whenever one exceeded 90% usage.
+**10/23, out shows the quotas.** I discovered why out felt ineffective: external quotas were nearly exhausted, causing calls to be blocked. So out was updated to attach the remaining quotas on both sides every time, routing to the other service whenever one exceeded 90% usage.
 
 **10/25, version 0.4.1 after a week of testing.** This version followed a week of real-world use, bringing three key shifts:
 
@@ -54,7 +54,7 @@ Here is how the development unfolded. Below are the key adjustments made along t
 
 ## One Week of Testing
 
-On 10/25, I asked the AI to measure behavior changes using my conversation history. The dataset covered 151 conversations and 1,097 turns involving my direct interaction between 10/18 and 10/25, excluding automated night jobs. I used turns with modes turned off as a baseline to compare against turns with each mode active.
+On 10/25, I asked the AI to measure behavior changes using my conversation history. The dataset covered 136 conversations and 1,098 turns involving my direct interaction between 10/18 and 10/25, excluding automated night jobs. I used turns with modes turned off as a baseline to compare against turns with each mode active.
 
 ![Key numbers from a week of testing: with wrap active, responses ending in a decision list jumped from 10% to 86%; with out active, turns involving delegation rose from 11% to 34%–55%](/blog/assets/posts/work-mode-ai-working-modes/3-results-en.jpg)
 
@@ -116,10 +116,10 @@ Adapt it to your situation: Every time the AI wants to add a rule, ask: "If I re
 
 **5. Validate effectiveness with conversation history**
 
-> I want to know if this mod genuinely altered model behavior. Use /history-find to pull conversations from the past week for analysis (note that this mod was previously named tempo before changing to work-mode).
+> I want to know if this mod genuinely altered model behavior. Use /history-find to pull conversations from the past week for analysis.
 > (translated from Chinese)
 
-Adapt it to your situation: After changing any configuration, wait a week and have the AI pull conversation logs to compare behavior before and after. Remember to mention any legacy names to avoid missing data.
+Adapt it to your situation: After changing any configuration, wait a week and have the AI pull conversation logs to compare behavior before and after. If the command was ever renamed, give it the old name too, or it will miss data.
 
 **6. Adapt the interface to your habits**
 
@@ -157,4 +157,16 @@ I want to build a working mode switch for Claude Code that toggles via a single 
 6. After one week of use, compare behavior differences before and after toggling modes using conversation history, and estimate how much quota was saved.
 ```
 
-That's it.
+## Appendix: how it is built
+
+This part is for readers who want to build their own. work-mode is a Claude Code plugin made of four pieces.
+
+**1. One command, one state file.** Typing `/work-mode` with no arguments opens Claude Code's built-in question menu (up to four options, multi-select). With arguments, the modes are set directly, in any order. The chosen modes are written to a small file named after the conversation ID, and every other piece reads that file to see what is on. If out and wrap are both chosen, only wrap is kept, and the reply says why out was dropped.
+
+**2. Reminders ride along with the message, not in the opening instructions.** The plugin hooks the moment a message is sent (Claude Code's `UserPromptSubmit` event) and appends a short reminder to my message. It does not edit the system instructions the AI reads at the start, because changing those invalidates the prompt cache for the whole conversation so far, and it all gets billed again. wrap and out attach their reminder to every message; auto attaches it once after being turned on; `/at` sends it once after a device switch, a compaction, or a restart. The desktop reply format lives in the fixed opening instructions as the default; the phone format overrides it with one reminder that says "this applies until the next one."
+
+**3. auto changes how the checkpoints react.** I already had a set of check scripts that run before the AI executes a command (shell scripts on the `PreToolUse` event); on a suspicious action they ask the user to confirm. With auto on, those scripts read the same state file and block instead of asking, with instructions on how to fix it alone. Checks for outgoing messages, reading credentials, installing packages, destructive git operations, payments and production never read the state file: they always stop, whether auto is on or not.
+
+**4. out reads a shared quota table.** Another script checks agy and Codex usage on a schedule and writes a shared table. Before attaching its reminder, out reads that table, includes the remaining quota, and tells the AI to route to the other service once one side passes 90%.
+
+The measurement is simple too: Claude Code stores each conversation as a JSONL file. I had the AI write a script that reads each turn to see which modes were on, whether the reply ended with a decision list, whether work was delegated, and how many tools were used, then compared against turns with every mode off.
