@@ -152,15 +152,169 @@ description: '我做了 work-mode 外掛，讓 Claude Code 切換自主、外派
 
 ## 附錄：技術做法
 
-這段寫給想自己動手的人。work-mode 是一個 Claude Code 外掛，由四個零件組成：
+本節提供給有意自行實作的開發者，內容直接使用 Claude Code 外掛（mod）的事件與欄位名稱，並以 work-mode 0.4.1 的原始碼為基準。
 
-**1. 一個指令、一個狀態檔。** 打 `/work-mode` 不帶參數，會跳出 Claude Code 內建的提問選單（最多四個選項，可以複選）；帶參數就直接設定，順序不限。選好的模式寫進一個以對話編號命名的小檔案，其他零件都讀這個檔案判斷現在開了什麼。out 和 wrap 同時出現時只留 wrap，並在回覆裡說明為什麼拿掉 out。
+### 整體架構：一個 mod、五個事件
 
-**2. 提醒附在訊息後面，不改開場說明。** 外掛掛在「使用者送出訊息」這個時間點（Claude Code 的 `UserPromptSubmit` 事件），把一段提醒文字附在我的訊息後面送給 AI。之所以不寫進 AI 每次開場讀的系統說明，是因為系統說明一改，前面整段對話的提示快取（prompt cache）就會失效、要重新計費。wrap 和 out 每則訊息都附；auto 只在開啟後附一次；`/at` 只在切換裝置、對話壓縮或重開之後附一次。電腦版的回覆格式寫在固定不變的開場說明裡當預設值，手機版用一則提醒蓋過去，提醒裡寫明「以這則為準，直到下一則」。
+work-mode 是一個 mod，進入點僅有 `register.tsx` 一個檔案。同一個 mod 內雖另含畫面遮蔽與快取面板兩項元件，但不在本文討論範圍。與工作模式相關的程式碼分布於三個檔案：`tempo.ts` 負責 `/work-mode`、`device/device.tsx` 負責 `/at`，`nudge.ts` 則負責外派提醒。若有多個元件共用同一事件，則統一在 `register.tsx` 註冊一次，再依序呼叫各元件。
 
-**3. auto 改的是檢查關卡的反應。** 我原本就有一批在 AI 執行指令前跑的檢查腳本（`PreToolUse` 事件的 shell 腳本），遇到可疑動作會回「請使用者確認」。auto 開著時，這些腳本讀同一個狀態檔，把「確認」改成「擋下」，並附上該怎麼自己修。對外發送、讀取憑證、安裝套件、會毀掉資料的 git 操作、付款、正式環境這幾類關卡不讀狀態檔，不管開不開 auto 都一定停下來。
+| 事件 | 什麼時候觸發 | work-mode 做什麼 |
+|---|---|---|
+| `session.start` | 對話開始 | 註冊 `/work-mode` 與 `/at` 兩個指令，將 auto 的「已送出」旗標歸零，更新狀態列，並將當前模式寫入狀態檔 |
+| `prompt.compose` | 組系統提示 | 加入一段固定不變的「電腦版回覆格式」區段 |
+| `classic.SessionStart`（`clear`、`resume`、`fork`） | 清空、接續或分岔對話 | 重設 auto 與 `/at` 的「已送出」狀態，讓下一則訊息重新發送 |
+| `session.compact` | 對話壓縮 | 主對話壓縮完成後同樣重設；`precompute` 或被略過的壓縮不算 |
+| `classic.UserPromptSubmit` | 使用者送出訊息 | 將各模式的提醒文字加入 `additionalContext` |
 
-**4. out 讀一份共用的額度表。** 另一支腳本定時查 agy 和 Codex 的用量，寫進一份共用表。out 附提醒前先讀這份表，把剩餘額度寫進提醒，用過九成的那邊就叫 AI 改派另一邊。
+此外，`nudge.ts` 自行監聽了 `classic.PostToolUse`，僅在 out 啟用時生效，細節將於後文 out 的章節說明。
 
-實測的方法也不複雜：Claude Code 會把每場對話存成一個 JSONL 檔，我請 AI 寫一支腳本逐回合讀出當時開了哪些模式、回覆結尾有沒有決策清單、有沒有外派、用了幾次工具，再拿模式關閉的回合當基準比較。
+![work-mode 的架構：左邊是 Claude Code 的五個事件，中間是 register.tsx 分派到 tempo.ts、device.tsx、nudge.ts，右邊是三處狀態與 PreToolUse shell 閘門讀取的狀態檔](/blog/assets/posts/work-mode-ai-working-modes/6-architecture.jpg)
 
+### 一則訊息的生命週期
+
+送出一則訊息後，處理流程依序如下：
+
+1. **`classic.UserPromptSubmit`。** mod 會先等待其他 hook 執行完畢（`next(e)`），再檢視處理結果。若該則訊息被其他 hook 攔截（`block` 或 `preventContinuation`），或由 subagent 發出（帶有 `agent_id`），便原樣放行且不附加任何內容。由於被攔截的訊息不會傳送給模型，若此時記錄為「已送出」，後續重試的訊息便無法收到提醒；因此此步驟直接跳過，所有待發送的提醒皆保留給下一則訊息。
+2. **組出 `additionalContext`。** 依據當前啟用的模式決定附加內容：wrap（內部名稱為 `converge`）每則訊息皆會附加；out（`dispatch`）每則訊息皆會附加，後方緊接著一行額度資訊；auto（`autonomous`）僅在啟用後的第一則訊息附加一次，並透過 `autoSent` 旗標記錄；`/at` 則僅在當前裝置與上次回報模型不一致時附加一次。這些文字會串接在使用者訊息後方，成為對話紀錄的一部分。
+3. **模型推論。** 系統提示與先前的對話紀錄皆未改變，僅結尾處增加了新訊息與提醒，因此前半段對話依然能命中提示快取。
+4. **`PreToolUse` 閘門。** 當模型欲呼叫工具時，shell 閘門會讀取狀態檔，決定回傳 ask 還是 deny（詳見後文閘門段落）。
+5. **回覆。** 狀態列（`$.ui.status`）會顯示如 `AUTO + WRAP` 的標籤。
+
+為何不透過 `prompt.compose` 將模式說明寫入系統提示？原因有兩點。首先，系統提示僅在對話壓縮時才會重新建立，若在對話途中切換模式，系統提示並不會即時更新。第一版的 `/at` 即採用此做法，導致切換回電腦一個半小時後，模型仍持續依手機格式回覆。其次，系統提示位於快取前綴的最前端，只要修改一個字，後續整段對話的快取皆必須重新寫入。因此，`prompt.compose` 僅放置一段固定不變的預設值（電腦版格式，`scope: 'session'`），所有具變動性的內容則一律透過 `additionalContext` 傳遞。
+
+![一則訊息的時序：使用者送出後，UserPromptSubmit 附上 additionalContext，系統提示與既有對話這段快取前綴不變，模型呼叫工具時經過 PreToolUse 閘門讀狀態檔，最後回覆](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence.jpg)
+
+### 狀態放在哪裡
+
+狀態儲存於三處：
+
+| 位置 | 內容 | 誰寫 | 誰讀 |
+|---|---|---|---|
+| `$.state`（每場對話各一份） | `tempo`（目前模式）、`autoSent`、`deviceTold` | mod | mod |
+| `$.store`（所有對話共用） | `device` | `/at` | 每場對話在開始與送出訊息時同步 |
+| `~/.claude/state/tempo/<session_id>` | `{"modes":["autonomous","converge"]}` | mod | `PreToolUse` shell 閘門 |
+
+模式設定保存在 `$.state` 中，因此不會影響到同時開啟的其他對話。然而，shell 閘門無法直接讀取 mod 的 `$.state`，因此 mod 會另外將模式寫入以 `session_id` 命名的 JSON 檔案。寫入檔案的時機共有三個：對話開始、每則訊息送出，以及切換模式之時。當模式全部關閉時，系統會直接刪除檔案而不留空檔；若刪除失敗，才會寫入 `{"modes":[]}`，這對閘門而言效果相同。寫入檔案失敗時不會拋出錯誤，閘門若找不到檔案，便會維持預設的 ask 行為，遵循安全優先原則。檔案內部採用 `autonomous`、`dispatch`、`converge` 等內部名稱，並固定依照此順序排序。
+
+`/at` 所記錄的裝置資訊則儲存於 `$.store`，因此在某個 herdr 分頁切換裝置後，其他分頁於送出下一則訊息時也會隨之同步。每場對話會額外維護一個 `deviceTold` 變數，代表模型最近一次獲知的裝置為何。新對話初始值設為 `mini`，因系統提示預設即為電腦版格式。當送出訊息時，若當前裝置與 `deviceTold` 不一致，便會附加一則 `[at: …]` 通知，並同步更新 `deviceTold`。而在對話歷經壓縮、resume 或 fork 後，歷史紀錄中可能殘留任一裝置的舊通知，因此 `deviceTold` 會被重設為 `unknown`，確保下一則訊息一定會重新發送通知，即使使用者目前位於電腦前亦不例外。
+
+![兩個只送一次的狀態機：/at 的 deviceTold 在切換裝置或壓縮、resume、fork 後進入待送，下一則訊息送出通知後回到已告知；auto 的 autoSent 在任何一次 /work-mode 設定或壓縮、重開後進入待送，下一則訊息附上提醒後變成已送出；被擋下的訊息不改變狀態](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state.jpg)
+
+### 參數解析與互斥規則
+
+`/work-mode` 後方傳入的參數會先轉換為小寫，並以空白、逗號或 `+` 切開，順序不拘：
+
+```ts
+// tempo.ts parseTempo（節錄）
+const words = arg.toLowerCase().split(/[\s,+]+/).filter(Boolean)
+if (words.length === 0) return { kind: 'status' }   // 不帶參數：開選單
+for (const w of words) {
+  if (w === 'off') continue                         // off 和其他字並存時不加任何東西
+  const mode = WORDS[w]                             // auto→autonomous、out→dispatch、wrap→converge
+  if (!mode) return { kind: 'error', message: `Unknown mode "${w}".` }
+  picked.add(mode)
+}
+if (picked.has('converge') && picked.has('dispatch')) {
+  picked.delete('dispatch')                         // out + wrap：wrap 勝
+  note = 'out dropped: wrap and out exclude each other, wrap wins (jobs already out still finish).'
+}
+const modes = ORDER.filter(m => picked.has(m))      // 固定排序：autonomous、dispatch、converge
+```
+
+解析結果一律會覆蓋當前設定，而非進行疊加。因此單獨輸入 `off` 即為全部關閉，輸入 `off out` 則等同於僅啟用 out。若模式發生互斥，相關說明（`note`）會附加於指令的回傳訊息中。
+
+若未帶任何參數，mod 會呼叫 `$.ui.ask` 開啟複選選單。選單最多包含四個選項，其中 `off` 僅在有模式處於開啟狀態時才會顯示。使用者勾選的結果會轉換回字串，再傳遞給 `parseTempo` 處理，因此手動輸入指令與透過選單選取的核心邏輯完全一致。
+
+### auto 的閘門：ask 改成 deny
+
+閘門是掛載於 `PreToolUse` 事件上的 shell 腳本，共用 `hooks/lib/tempo-auto.sh` 函式庫：
+
+```bash
+tempo_mode_on() {  # tempo_mode_on "$INPUT" <mode>
+  local sid f
+  sid=$(printf '%s' "$1" | jq -r '.session_id // ""' 2>/dev/null) || return 1
+  case "$sid" in ""|*/*|*..*) return 1;; esac   # 擋掉空值與路徑跳脫
+  f="${TEMPO_STATE_DIR:-$HOME/.claude/state/tempo}/$sid"
+  [ -f "$f" ] || return 1
+  jq -e --arg m "$2" '((.modes // []) | index($m)) != null' "$f" >/dev/null 2>&1
+}
+tempo_auto_on() { tempo_mode_on "$1" autonomous; }
+tempo_deny() {
+  jq -n --arg r "$1" '{hookSpecificOutput:{hookEventName:"PreToolUse",
+    permissionDecision:"deny",permissionDecisionReason:$r}}'
+}
+```
+
+已接入此機制的閘門，會在原先回傳 ask 的邏輯前加入一段判斷：
+
+```bash
+. "$(dirname "$0")/lib/tempo-auto.sh" 2>/dev/null || tempo_auto_on() { return 1; }
+# …
+if tempo_auto_on "$INPUT"; then
+  tempo_deny "[scratch-doc-guard][tempo:autonomous] 要新建 $FP。…不要停下來問：內容該進哪個既有主檔就寫進去…"
+  exit 0
+fi
+# auto 沒開：照原本的方式回 ask
+```
+
+ask 與 deny 的差別在模型那一側。ask 會彈出確認視窗，整個流程停下來等使用者確認；deny 則不會彈出視窗，而是將 `permissionDecisionReason` 直接回傳給模型作為工具執行結果。原因說明中會註明「不要停下來問，改成這樣做」，模型照著修完再送一次。若函式庫載入失敗，`tempo_auto_on` 一律回傳 false，閘門將維持原本的 ask 行為。
+
+目前已接入此機制的閘門包括：新建文件（`scratch-doc-guard`）、同時派出超過兩個 subagent（`agent-dispatch-guard`）、`git commit` 帶有 pathspec、`git add` 含有其他未 stage 修改的檔案、從外部啟動 `claude` 卻未指定 `--model`、推送至會自動部署的 main 分支前缺乏 Codex 審查紀錄、背景指令未重導 log，以及磁碟空間不足。
+
+屬於強制暫停（硬停）類型的閘門則完全不載入 `tempo-auto.sh`，例如：對外發送訊息（Slack、LINE、Gmail）、讀取或寫入憑證、疑似洩漏機密的指令、安裝套件與 `git clone`、具破壞性的 `rm` 與 `git reset --hard` 等。這類閘門該 ask 就 ask、該 deny 就 deny，不受 auto 是否開啟影響。目前付款行為尚未設立專屬閘門，主要仰賴 auto 提醒文字中的硬停清單進行約束。
+
+![PreToolUse 閘門的判斷流程：工具呼叫先看是否屬於硬停類，是就照原規則 ask 或 deny；否則看狀態檔裡有沒有 autonomous，有就 deny 並附修法，沒有就 ask](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision.jpg)
+
+### out：額度表、九成改派、外派提醒
+
+out 模式會在每則訊息附加兩段內容：外派原則與一行額度資訊。額度資料取自 `~/.claude/usage-cache/ai-quota.json`，該檔案由另一個獨立的 `ai-quota` 腳本於每次執行時重新寫入。改派門檻（`FLOOR = 90`）僅定義在 `ai-quota` 中，腳本會在各額度池的紀錄標註 `route` 狀態：`open`、`floor_5h` 或 `floor_7d`。mod 本身不計算門檻，僅判斷 `route` 是否以 `floor_` 開頭；若該列的 `route_reset_ts` 時間已過，代表該週期已經重置、只是額度表還沒更新，此時仍視為開放狀態。
+
+綜合雙方的狀態，額度提示列會得出四種結論：若兩方皆開放，則依照既定原則派工；若 agy 超過門檻，則改派至 codex；若 codex 超過門檻，則改派至 agy，若仍無法處理則交由 sonnet subagent；若兩方皆超過門檻，則保留於主線執行，不呼叫 `ext-run`。若無法讀取額度表，則僅附加外派原則，且 `ext-run` 在實際送出前亦會自行再次檢查門檻。
+
+`nudge.ts` 掛載於 `classic.PostToolUse` 事件。當主線在當前回合中，Read、Bash、Grep 的輸出累積達到 20,000 字元（可用 `DISPATCH_NUDGE_CHARS` 調整），且尚未進行任何派工（未呼叫 Agent 或 Workflow，且 Bash 指令中亦未包含 `ext-run`、`codex exec` 或 `agy`），便會附加一次外派提醒。每個回合最多觸發一次，並於送出新訊息時重設為零；subagent 所發起的工具呼叫則不列入計算。
+
+### 測試與驗證
+
+mod 的測試採用 Claude Code 外掛專用的測試框架（`claude-code/testing`），無需開啟真實對話。測試會先把引擎事件換成假的：`fs.write` 寫入記憶體中的物件，`process.run` 接收到 `rm` 時便自物件中移除，`ui.status` 記錄各次的狀態列內容，`classic.UserPromptSubmit` 則回傳受測試控制的預設結果。隨後直接呼叫 `$.command.run`、`$.classic.UserPromptSubmit`、`$.session.compact` 與 `$.classic.SessionStart`，檢查 `additionalContext` 陣列的內容與順序。
+
+測試案例包括：auto 於第一則訊息附加、第二則不附加，手動壓縮後再次附加，但在 `precompute` 之後不附加；`/at` 的通知在遇到被攔截的訊息時依然保留，resume 之後即便使用者位於電腦前亦會重新發送；切換為 off 之後狀態檔隨即被刪除、狀態列清空。執行 `check.sh` 即可一次完成型別檢查、`claude plugin validate` 與 `claude plugin test`。
+
+為期一週的實測回合統計，則是透過腳本逐一讀取 Claude Code 所儲存的 JSONL 對話紀錄，逐回合分析當時啟用的模式、回覆結尾是否包含決策清單、是否進行外派，以及工具呼叫次數，再以模式全關的回合當基準比較。
+
+### 想自己做：只做 wrap 的最小版本
+
+若僅實作 wrap，只需以下四個元件：
+
+1. 一個指令（`command.run`），用以切換 `$.state` 內的一個布林值。
+2. 一個 `classic.UserPromptSubmit` handler：當值為 true 時，將一段固定文字加入 `additionalContext`，若訊息被攔截或來自 subagent 則直接略過。
+3. 一段提醒文字：提示不開展新工作，回覆結尾列出待決策事項並附帶建議，無待辦事項時則建議收尾。
+4. 一次 `$.ui.status` 呼叫，使狀態列顯示 WRAP。
+
+wrap 本身不需要狀態檔，因為沒有任何 shell 閘門需要讀取它；同時亦不需要一次性旗標，因為它本來就是每則訊息皆會附加。唯有在加入 auto 模式時，才需要引入狀態檔與閘門機制。以下為參照 work-mode 實作精簡而成的程式碼草稿，未經額外測試驗證：
+
+```ts
+import { atom, read, update } from 'claude-code'
+import type { Register } from 'claude-code'
+
+// 另外要在 types 裡宣告 PluginState['my-wrap'] = { on: boolean }，hooks.json 指向這支檔案
+const wrapOn = atom({ plugin: 'my-wrap', key: 'on' } as const, false)
+const TEXT = '[wrap] 不開新工作，把手上的收完。回覆結尾列出需要使用者決定的事，每項附建議；沒事了就建議收尾。'
+
+export const register: Register = on => {
+  on('session.start', async ($, e, next) => {
+    await $.command.register({ name: 'wrap', description: 'wrap on | off', immediate: true })
+    return next(e)
+  })
+  on('command.run', { command: 'wrap' }, async ($, e) => {
+    const v = e.args.trim() !== 'off'
+    await update($, wrapOn, () => v)
+    $.ui.status(v ? 'WRAP' : undefined)
+    return { text: v ? 'wrap on' : 'wrap off' }
+  })
+  on('classic.UserPromptSubmit', async ($, e, next) => {
+    const r = await next(e)
+    if (e.agent_id || r.block || r.preventContinuation || !(await read($, wrapOn))) return r
+    return { ...r, additionalContext: [...(r.additionalContext ?? []), TEXT] }
+  })
+}
+```

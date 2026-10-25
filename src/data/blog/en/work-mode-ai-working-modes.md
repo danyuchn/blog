@@ -159,14 +159,169 @@ I want to build a working mode switch for Claude Code that toggles via a single 
 
 ## Appendix: how it is built
 
-This part is for readers who want to build their own. work-mode is a Claude Code plugin made of four pieces.
+This part is for readers who want to build their own. It uses the event and field names of Claude Code plugins (mods) directly, and follows the work-mode 0.4.1 source.
 
-**1. One command, one state file.** Typing `/work-mode` with no arguments opens Claude Code's built-in question menu (up to four options, multi-select). With arguments, the modes are set directly, in any order. The chosen modes are written to a small file named after the conversation ID, and every other piece reads that file to see what is on. If out and wrap are both chosen, only wrap is kept, and the reply says why out was dropped.
+### Architecture: one mod, five events
 
-**2. Reminders ride along with the message, not in the opening instructions.** The plugin hooks the moment a message is sent (Claude Code's `UserPromptSubmit` event) and appends a short reminder to my message. It does not edit the system instructions the AI reads at the start, because changing those invalidates the prompt cache for the whole conversation so far, and it all gets billed again. wrap and out attach their reminder to every message; auto attaches it once after being turned on; `/at` sends it once after a device switch, a compaction, or a restart. The desktop reply format lives in the fixed opening instructions as the default; the phone format overrides it with one reminder that says "this applies until the next one."
+work-mode is a single mod with one entry file, `register.tsx`. The same mod also holds a screen mask and a cache panel, which this post leaves out. The working modes live in three files: `tempo.ts` handles `/work-mode`, `device/device.tsx` handles `/at`, and `nudge.ts` handles the delegation nudge. Any event that several parts need is hooked once in `register.tsx`, which then calls each part in turn.
 
-**3. auto changes how the checkpoints react.** I already had a set of check scripts that run before the AI executes a command (shell scripts on the `PreToolUse` event); on a suspicious action they ask the user to confirm. With auto on, those scripts read the same state file and block instead of asking, with instructions on how to fix it alone. Checks for outgoing messages, reading credentials, installing packages, destructive git operations, payments and production never read the state file: they always stop, whether auto is on or not.
+| Event | When it fires | What work-mode does |
+|---|---|---|
+| `session.start` | A conversation starts | Registers the `/work-mode` and `/at` commands, resets auto's "sent" flag, updates the status line, writes the current modes to the state file |
+| `prompt.compose` | The system prompt is assembled | Adds one fixed "desktop reply format" section |
+| `classic.SessionStart` (`clear`, `resume`, `fork`) | A conversation is cleared, resumed or forked | Resets the "sent" state of auto and `/at`, so the next message sends them again |
+| `session.compact` | The conversation is compacted | Same reset once the main thread's compaction completes; `precompute` and skipped compactions do not count |
+| `classic.UserPromptSubmit` | The user sends a message | Puts each mode's reminder into `additionalContext` |
 
-**4. out reads a shared quota table.** Another script checks agy and Codex usage on a schedule and writes a shared table. Before attaching its reminder, out reads that table, includes the remaining quota, and tells the AI to route to the other service once one side passes 90%.
+`nudge.ts` also hooks `classic.PostToolUse` on its own. It only acts while out is on; the out section below covers it.
 
-The measurement is simple too: Claude Code stores each conversation as a JSONL file. I had the AI write a script that reads each turn to see which modes were on, whether the reply ended with a decision list, whether work was delegated, and how many tools were used, then compared against turns with every mode off.
+![work-mode architecture: the five Claude Code events on the left, register.tsx dispatching to tempo.ts, device.tsx and nudge.ts in the middle, and on the right the three places state lives plus the state file the PreToolUse shell gates read](/blog/assets/posts/work-mode-ai-working-modes/6-architecture-en.jpg)
+
+### The life of one message
+
+After a message is sent, it goes through these steps:
+
+1. **`classic.UserPromptSubmit`.** The mod lets the other hooks run first (`next(e)`) and then looks at the result. If another hook blocked the message (`block` or `preventContinuation`), or a subagent sent it (it carries `agent_id`), the mod passes it through and attaches nothing. A blocked message never reaches the model; marking a reminder as "sent" at this point would mean the retried message never gets it. So this step is skipped, and every pending reminder waits for the next message.
+2. **Build `additionalContext`.** What gets attached depends on the modes: wrap (internal name `converge`) on every message; out (`dispatch`) on every message, followed by one quota line; auto (`autonomous`) only on the first message after it is turned on, tracked by the `autoSent` flag; `/at` only once, when the device differs from the one the model was last told about. These texts follow the user's message and become part of the conversation history.
+3. **Model inference.** The system prompt and earlier turns are unchanged; only the new message and its reminders are added at the end, so everything before them still hits the prompt cache.
+4. **`PreToolUse` gates.** When the model calls a tool, the shell gates read the state file and return ask or deny (see the gate section below).
+5. **Reply.** The status line (`$.ui.status`) shows a label such as `AUTO + WRAP`.
+
+Why not use `prompt.compose` to put the mode instructions into the system prompt? Two reasons. First, the system prompt is only rebuilt at compaction, so a mode switch mid-conversation would not reach it. The first version of `/at` worked this way, and an hour and a half after I switched back to the desktop, the model was still replying in phone format. Second, the system prompt sits at the very front of the cache prefix: change one character and the cache for the whole conversation after it has to be rewritten. So `prompt.compose` carries only one default that never changes (the desktop format, `scope: 'session'`), and everything that changes goes through `additionalContext`.
+
+![One message in sequence: after the user sends it, UserPromptSubmit attaches additionalContext, the cache prefix of system prompt and earlier turns stays unchanged, tool calls pass through the PreToolUse gate which reads the state file, then the reply](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence-en.jpg)
+
+### Where state lives
+
+State lives in three places:
+
+| Location | Contents | Written by | Read by |
+|---|---|---|---|
+| `$.state` (one per conversation) | `tempo` (current modes), `autoSent`, `deviceTold` | the mod | the mod |
+| `$.store` (shared by all conversations) | `device` | `/at` | every conversation, synced at start and on each message |
+| `~/.claude/state/tempo/<session_id>` | `{"modes":["autonomous","converge"]}` | the mod | `PreToolUse` shell gates |
+
+The modes live in `$.state`, so they never leak into other conversations open at the same time. Shell gates cannot read a mod's `$.state`, though, so the mod also writes the modes to a JSON file named after the `session_id`. It writes at three points: when the conversation starts, on every message, and on every mode change. When all modes are off, the file is deleted rather than left empty; only if deletion fails does it write `{"modes":[]}`, which means the same thing to the gates. A failed write raises no error: a gate that finds no file keeps asking, which is the safe direction. The file uses the internal names `autonomous`, `dispatch` and `converge`, always in that order.
+
+The `/at` device, by contrast, lives in `$.store`, so a switch made in one herdr pane reaches the other panes with their next message. Each conversation also keeps a `deviceTold`: the device the model was last told about. A new conversation starts at `mini`, because the system prompt's default is already the desktop format. On each message, if the current device differs from `deviceTold`, the mod attaches an `[at: …]` notice and updates `deviceTold`. After a compaction, resume or fork, the old history may still hold a notice for any device, so `deviceTold` is set to `unknown` and the next message always sends the notice again, even when I am at the desktop.
+
+![Two send-once state machines: /at's deviceTold goes pending after a device switch or a compaction, resume or fork, and returns to told once the next message carries the notice; auto's autoSent goes pending after any /work-mode set or a compaction or restart, and becomes sent once the next message carries the reminder; a blocked message changes neither](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state-en.jpg)
+
+### Argument parsing and the exclusion rule
+
+The words after `/work-mode` are lowercased and split on spaces, commas or `+`, in any order:
+
+```ts
+// tempo.ts parseTempo (excerpt)
+const words = arg.toLowerCase().split(/[\s,+]+/).filter(Boolean)
+if (words.length === 0) return { kind: 'status' }   // no arguments: open the menu
+for (const w of words) {
+  if (w === 'off') continue                         // off next to other words adds nothing
+  const mode = WORDS[w]                             // auto→autonomous, out→dispatch, wrap→converge
+  if (!mode) return { kind: 'error', message: `Unknown mode "${w}".` }
+  picked.add(mode)
+}
+if (picked.has('converge') && picked.has('dispatch')) {
+  picked.delete('dispatch')                         // out + wrap: wrap wins
+  note = 'out dropped: wrap and out exclude each other, wrap wins (jobs already out still finish).'
+}
+const modes = ORDER.filter(m => picked.has(m))      // fixed order: autonomous, dispatch, converge
+```
+
+The result always replaces the current setting; it never adds to it. So `off` on its own turns everything off, and `off out` is the same as just out. When the exclusion rule applies, the explanation (`note`) is appended to the command's reply.
+
+With no arguments, the mod calls `$.ui.ask` to open a multi-select menu. The menu holds at most four options, and `off` only appears when some mode is on. The ticked labels are mapped back to the same words and handed to `parseTempo`, so typing and clicking take the same path.
+
+### The auto gates: ask becomes deny
+
+The gates are shell scripts on the `PreToolUse` event, sharing one library, `hooks/lib/tempo-auto.sh`:
+
+```bash
+tempo_mode_on() {  # tempo_mode_on "$INPUT" <mode>
+  local sid f
+  sid=$(printf '%s' "$1" | jq -r '.session_id // ""' 2>/dev/null) || return 1
+  case "$sid" in ""|*/*|*..*) return 1;; esac   # reject empty ids and path escapes
+  f="${TEMPO_STATE_DIR:-$HOME/.claude/state/tempo}/$sid"
+  [ -f "$f" ] || return 1
+  jq -e --arg m "$2" '((.modes // []) | index($m)) != null' "$f" >/dev/null 2>&1
+}
+tempo_auto_on() { tempo_mode_on "$1" autonomous; }
+tempo_deny() {
+  jq -n --arg r "$1" '{hookSpecificOutput:{hookEventName:"PreToolUse",
+    permissionDecision:"deny",permissionDecisionReason:$r}}'
+}
+```
+
+A gate wired to auto adds one check in front of the place where it used to return ask:
+
+```bash
+. "$(dirname "$0")/lib/tempo-auto.sh" 2>/dev/null || tempo_auto_on() { return 1; }
+# …
+if tempo_auto_on "$INPUT"; then
+  tempo_deny "[scratch-doc-guard][tempo:autonomous] About to create $FP. … Do not stop to ask: put the content in the existing master file it belongs to …"
+  exit 0
+fi
+# auto is off: return ask as before
+```
+
+The difference between ask and deny is on the model's side. Ask opens a confirmation prompt, and the whole run stops until the user answers. Deny opens nothing; `permissionDecisionReason` goes straight back to the model as the tool result. The reason says "do not stop to ask, do this instead", and the model fixes the call as told and sends it again. If the library fails to load, `tempo_auto_on` always returns false and the gate keeps asking.
+
+Gates wired to auto today: creating a new document (`scratch-doc-guard`), dispatching more than two subagents at once (`agent-dispatch-guard`), `git commit` with a pathspec, `git add` on a file that already has other unstaged edits, launching `claude` externally without `--model`, pushing to a main branch that auto-deploys without a Codex review on record, background commands without a log, and low disk space.
+
+Hard-stop gates never load `tempo-auto.sh`: outgoing messages (Slack, LINE, Gmail), reading or writing credentials, commands that look like secret leaks, installing packages and `git clone`, and destructive `rm` and `git reset --hard`. These gates ask or deny exactly as before, whether auto is on or not. Payments have no dedicated gate yet; they are held back by the hard-stop list in auto's reminder text.
+
+![PreToolUse gate decision flow: a tool call first checks whether the gate is a hard stop, which asks or denies as always; otherwise it checks the state file for autonomous, denying with a how-to if present and asking if not](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision-en.jpg)
+
+### out: the quota table, the 90% handoff, and the nudge
+
+out attaches two parts to every message: the delegation rules and one quota line. The quota comes from `~/.claude/usage-cache/ai-quota.json`, which a separate `ai-quota` script rewrites every time it runs. The handoff threshold (`FLOOR = 90`) lives only in `ai-quota`, which marks each pool's row with a `route`: `open`, `floor_5h` or `floor_7d`. The mod does not compute the threshold itself; it only checks whether `route` starts with `floor_`. If that row's `route_reset_ts` has already passed, the window has reset and the table is simply stale, so the pool counts as open.
+
+From the two pools' states, the quota line reaches one of four conclusions: both open, route as the rules say; agy past the threshold, send its work to codex; codex past the threshold, send its work to agy, or else to a sonnet subagent; both past, keep the work in the main thread and do not call `ext-run`. If the table cannot be read, only the delegation rules are attached, and `ext-run` checks the threshold again before it sends anything.
+
+`nudge.ts` hooks `classic.PostToolUse`. Once the main thread's Read, Bash and Grep output in the current turn adds up to 20,000 characters (adjustable with `DISPATCH_NUDGE_CHARS`), and nothing has been delegated yet (no Agent or Workflow call, and no `ext-run`, `codex exec` or `agy` in any Bash command), it attaches one nudge. It fires at most once per turn and resets when a new message is sent; subagent tool calls do not count.
+
+### Tests and verification
+
+The mod's tests use the Claude Code plugin test framework (`claude-code/testing`) without opening a real conversation. Each test first replaces the engine events with fakes: `fs.write` writes into an in-memory object, `process.run` deletes from that object when it receives `rm`, `ui.status` records every status line, and `classic.UserPromptSubmit` returns a result the test controls. The test then calls `$.command.run`, `$.classic.UserPromptSubmit`, `$.session.compact` and `$.classic.SessionStart` directly and checks the contents and order of the `additionalContext` array.
+
+For example: auto is attached on the first message and not the second, attached again after a manual compaction, but not after `precompute`; the `/at` notice survives a blocked message and is sent again after a resume even at the desktop; after off, the state file is deleted and the status line cleared. `check.sh` runs type checking, `claude plugin validate` and `claude plugin test` in one go.
+
+The turn counts from the week of testing came from a script that reads the JSONL conversation files Claude Code stores, turn by turn: which modes were on, whether the reply ended with a decision list, whether work was delegated, and how many tools were used. Turns with every mode off served as the baseline.
+
+### Build your own: wrap alone, the minimum version
+
+wrap alone needs four pieces:
+
+1. A command (`command.run`) that flips one boolean in `$.state`.
+2. A `classic.UserPromptSubmit` handler: while the value is true, it puts a fixed text into `additionalContext`, skipping blocked messages and subagents.
+3. The reminder text: open no new work, end each reply with the decisions that need the user, each with a recommendation, and suggest wrapping up once nothing is open.
+4. One `$.ui.status` call so the status line shows WRAP.
+
+wrap needs no state file, because no shell gate reads it, and no one-shot flag, because it goes out on every message anyway. The state file and gates only come in when you add auto. Below is a draft condensed from the work-mode code; it has not been run through tests on its own:
+
+```ts
+import { atom, read, update } from 'claude-code'
+import type { Register } from 'claude-code'
+
+// Also declare PluginState['my-wrap'] = { on: boolean } in your types, and point hooks.json at this file
+const wrapOn = atom({ plugin: 'my-wrap', key: 'on' } as const, false)
+const TEXT = '[wrap] Open no new work; finish what is open. End each reply with the decisions that need the user, each with a recommendation; once nothing is open, suggest wrapping up.'
+
+export const register: Register = on => {
+  on('session.start', async ($, e, next) => {
+    await $.command.register({ name: 'wrap', description: 'wrap on | off', immediate: true })
+    return next(e)
+  })
+  on('command.run', { command: 'wrap' }, async ($, e) => {
+    const v = e.args.trim() !== 'off'
+    await update($, wrapOn, () => v)
+    $.ui.status(v ? 'WRAP' : undefined)
+    return { text: v ? 'wrap on' : 'wrap off' }
+  })
+  on('classic.UserPromptSubmit', async ($, e, next) => {
+    const r = await next(e)
+    if (e.agent_id || r.block || r.preventContinuation || !(await read($, wrapOn))) return r
+    return { ...r, additionalContext: [...(r.additionalContext ?? []), TEXT] }
+  })
+}
+```
