@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=block');
+:root{--accent:#C8371E;--ink:#151312;--paper:#FFFFFF;--wash:#F6F5F2;--hair:#DDD9D3;--muted:#6E675F;--faint:#9A938A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink)}
+body{width:720px;font-family:'Noto Sans TC',sans-serif;font-size:16px;line-height:1.7;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
+.page{position:relative;padding:44px 32px 64px}
+.eyebrow{font-family:'Noto Sans TC';font-weight:500;font-size:13px;letter-spacing:.18em;color:var(--muted);margin-bottom:14px}
+h1{font-family:'Noto Serif TC','Source Serif 4',serif;font-weight:700;font-size:29px;line-height:1.4;letter-spacing:.01em;text-wrap:balance}
+h1.en{font-family:'Source Serif 4',serif}
+.sub{color:var(--muted);font-size:15.5px;line-height:1.65;margin-top:10px}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.num{font-family:'IBM Plex Mono';color:var(--accent);font-weight:500}
+.rule{border-top:1px solid var(--ink);margin:36px 0 0}
+.hair{border-top:1px solid var(--hair)}
+.signoff{position:absolute;right:32px;bottom:28px;width:22px;height:22px;background:var(--accent)}
+.foot{margin-top:36px;font-size:13px;line-height:1.6;padding-right:40px;color:var(--muted)}
+.term{background:var(--wash);font-family:'IBM Plex Mono','Noto Sans TC',monospace;font-size:15px;line-height:1.75;padding:20px 22px;white-space:pre-wrap;color:var(--ink)}
+.term .cjk{font-family:'Noto Sans TC'}
+.label{font-weight:500;font-size:15px;letter-spacing:.14em;color:var(--muted)}
+.v .cjk{font-family:"Noto Sans TC"}
