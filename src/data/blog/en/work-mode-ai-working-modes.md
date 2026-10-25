@@ -34,7 +34,7 @@ What I really wanted was a set of working modes I could switch at any time, with
 - **out (delegate)**: Reminds the AI on every prompt to offload batch tasks to agy or Codex first. The prompt also includes remaining quotas on both sides.
 - **wrap (converge)**: Stop taking on new tasks and focus purely on finishing current work. Every response ends with a list of decisions requiring my sign-off, each paired with its recommendation. Once everything is clear, it reminds me to run the wrap-up command.
 
-![How the three modes and /at affect each stage of the AI: auto modifies hook gate behavior, out and wrap attach reminders to every message, and /at sends a single notification after switching devices](/blog/assets/posts/work-mode-ai-working-modes/1-how-it-works-en.jpg)
+[![How the three modes and /at affect each stage of the AI: auto modifies hook gate behavior, out and wrap attach reminders to every message, and /at sends a single notification after switching devices](/blog/assets/posts/work-mode-ai-working-modes/1-how-it-works-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/1-how-it-works-en.jpg)
 
 Here is how the development unfolded. Below are the key adjustments made along the way:
 
@@ -50,17 +50,17 @@ Here is how the development unfolded. Below are the key adjustments made along t
 2. Arguments can be combined freely in any order, such as `/work-mode wrap auto`. When both out and wrap are selected, wrap takes precedence. Selecting both usually means work is winding down, so launching new delegated tasks should stop.
 3. The approach for `/at` was completely overhauled. Originally, device instructions were placed in the static system prompt loaded at conversation start. However, that prompt doesn't update mid-conversation, taking effect only after compaction or a restart. In one session, after switching back to my computer, the AI assumed I was still on mobile for an hour and a half. Now, reminders are sent only once after switching devices or after context compaction, without attaching to every message. This saves tokens.
 
-![Multi-select menu in work-mode 0.4.1: auto, out, wrap, and off can be toggled in combination, displaying AUTO + WRAP in the status line after selection](/blog/assets/posts/work-mode-ai-working-modes/2-menu-en.jpg)
+[![Multi-select menu in work-mode 0.4.1: auto, out, wrap, and off can be toggled in combination, displaying AUTO + WRAP in the status line after selection](/blog/assets/posts/work-mode-ai-working-modes/2-menu-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/2-menu-en.jpg)
 
 ## One Week of Testing
 
 On 10/25, I asked the AI to measure behavior changes using my conversation history. The dataset covered 136 conversations and 1,098 turns involving my direct interaction between 10/18 and 10/25, excluding automated night jobs. I used turns with modes turned off as a baseline to compare against turns with each mode active.
 
-![Key numbers from a week of testing: with wrap active, responses ending in a decision list jumped from 10% to 86%; with out active, turns involving delegation rose from 11% to 34%–55%](/blog/assets/posts/work-mode-ai-working-modes/3-results-en.jpg)
+[![Key numbers from a week of testing: with wrap active, responses ending in a decision list jumped from 10% to 86%; with out active, turns involving delegation rose from 11% to 34%–55%](/blog/assets/posts/work-mode-ai-working-modes/3-results-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/3-results-en.jpg)
 
 **wrap had the clearest impact.** The share of responses ending with a decision list jumped from 10% to 86%. Recommendations to run wrap-up commands rose from 3.5% to 26%. Replies also got shorter, dropping from an average of 878 characters down to 647 characters.
 
-![Comparison of wrap-up summaries before and after enabling wrap: on the left, with the mode off, decisions needed from me are not listed separately; on the right, with wrap on, two pending decisions are listed at the end with recommendations](/blog/assets/posts/work-mode-ai-working-modes/4-wrap-before-after-en.jpg)
+[![Comparison of wrap-up summaries before and after enabling wrap: on the left, with the mode off, decisions needed from me are not listed separately; on the right, with wrap on, two pending decisions are listed at the end with recommendations](/blog/assets/posts/work-mode-ai-working-modes/4-wrap-before-after-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/4-wrap-before-after-en.jpg)
 
 **out worked, but it saved quota, not time.** Turns involving delegation rose from the 11% baseline to between 34% and 55%. However, I mostly toggled out on when facing batch tasks, so task selection itself pushed this number up. The actual effect was likely a bit lower than the raw figures suggest.
 
@@ -74,7 +74,7 @@ As for external service performance: agy ran 506 tasks that week with a 91% comp
 
 After updating `/at`, I tested switching twice within the same conversation. When switching to mobile, it replied in three lines with no tables. When switching back to desktop, the next response returned to diagrams and tables.
 
-![Two consecutive replies in the same conversation after switching /at: the mobile version has only three lines of concise text, while the desktop version includes an ASCII flowchart and a comparison table](/blog/assets/posts/work-mode-ai-working-modes/5-at-desktop-phone-en.jpg)
+[![Two consecutive replies in the same conversation after switching /at: the mobile version has only three lines of concise text, while the desktop version includes an ASCII flowchart and a comparison table](/blog/assets/posts/work-mode-ai-working-modes/5-at-desktop-phone-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/5-at-desktop-phone-en.jpg)
 
 The video below demonstrates how the response format changes after switching modes.
 
@@ -175,7 +175,7 @@ work-mode is a single mod with one entry file, `register.tsx`. The same mod also
 
 `nudge.ts` also hooks `classic.PostToolUse` on its own. It only acts while out is on; the out section below covers it.
 
-![work-mode architecture: the five Claude Code events on the left, register.tsx dispatching to tempo.ts, device.tsx and nudge.ts in the middle, and on the right the three places state lives plus the state file the PreToolUse shell gates read](/blog/assets/posts/work-mode-ai-working-modes/6-architecture-en.jpg)
+[![work-mode architecture: the five Claude Code events on the left, register.tsx dispatching to tempo.ts, device.tsx and nudge.ts in the middle, and on the right the three places state lives plus the state file the PreToolUse shell gates read](/blog/assets/posts/work-mode-ai-working-modes/6-architecture-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/6-architecture-en.jpg)
 
 ### The life of one message
 
@@ -189,7 +189,7 @@ After a message is sent, it goes through these steps:
 
 Why not use `prompt.compose` to put the mode instructions into the system prompt? Two reasons. First, the system prompt is only rebuilt at compaction, so a mode switch mid-conversation would not reach it. The first version of `/at` worked this way, and an hour and a half after I switched back to the desktop, the model was still replying in phone format. Second, the system prompt sits at the very front of the cache prefix: change one character and the cache for the whole conversation after it has to be rewritten. So `prompt.compose` carries only one default that never changes (the desktop format, `scope: 'session'`), and everything that changes goes through `additionalContext`.
 
-![One message in sequence: after the user sends it, UserPromptSubmit attaches additionalContext, the cache prefix of system prompt and earlier turns stays unchanged, tool calls pass through the PreToolUse gate which reads the state file, then the reply](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence-en.jpg)
+[![One message in sequence: after the user sends it, UserPromptSubmit attaches additionalContext, the cache prefix of system prompt and earlier turns stays unchanged, tool calls pass through the PreToolUse gate which reads the state file, then the reply](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence-en.jpg)
 
 ### Where state lives
 
@@ -205,7 +205,7 @@ The modes live in `$.state`, so they never leak into other conversations open at
 
 The `/at` device, by contrast, lives in `$.store`, so a switch made in one herdr pane reaches the other panes with their next message. Each conversation also keeps a `deviceTold`: the device the model was last told about. A new conversation starts at `mini`, because the system prompt's default is already the desktop format. On each message, if the current device differs from `deviceTold`, the mod attaches an `[at: …]` notice and updates `deviceTold`. After a compaction, resume or fork, the old history may still hold a notice for any device, so `deviceTold` is set to `unknown` and the next message always sends the notice again, even when I am at the desktop.
 
-![Two send-once state machines: /at's deviceTold goes pending after a device switch or a compaction, resume or fork, and returns to told once the next message carries the notice; auto's autoSent goes pending after any /work-mode set or a compaction or restart, and becomes sent once the next message carries the reminder; a blocked message changes neither](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state-en.jpg)
+[![Two send-once state machines: /at's deviceTold goes pending after a device switch or a compaction, resume or fork, and returns to told once the next message carries the notice; auto's autoSent goes pending after any /work-mode set or a compaction or restart, and becomes sent once the next message carries the reminder; a blocked message changes neither](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state-en.jpg)
 
 ### Argument parsing and the exclusion rule
 
@@ -270,7 +270,7 @@ Gates wired to auto today: creating a new document (`scratch-doc-guard`), dispat
 
 Hard-stop gates never load `tempo-auto.sh`: outgoing messages (Slack, LINE, Gmail), reading or writing credentials, commands that look like secret leaks, installing packages and `git clone`, and destructive `rm` and `git reset --hard`. These gates ask or deny exactly as before, whether auto is on or not. Payments have no dedicated gate yet; they are held back by the hard-stop list in auto's reminder text.
 
-![PreToolUse gate decision flow: a tool call first checks whether the gate is a hard stop, which asks or denies as always; otherwise it checks the state file for autonomous, denying with a how-to if present and asking if not](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision-en.jpg)
+[![PreToolUse gate decision flow: a tool call first checks whether the gate is a hard stop, which asks or denies as always; otherwise it checks the state file for autonomous, denying with a how-to if present and asking if not](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision-en.jpg)](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision-en.jpg)
 
 ### out: the quota table, the 90% handoff, and the nudge
 

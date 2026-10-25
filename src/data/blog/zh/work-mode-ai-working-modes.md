@@ -34,7 +34,7 @@ description: '我做了 work-mode 外掛，讓 Claude Code 切換自主、外派
 - **out（外派）**：每次我送出訊息，都提醒它批次工作先交給 agy 或 Codex。提示裡也會附上當下兩邊還剩多少額度。
 - **wrap（收斂）**：不開新的工作，只把手上的事情收完。每則回覆結尾列出需要我拍板的事，每項附上它的建議。沒事了就提醒我跑收尾指令。
 
-![三種模式加上 /at 各自影響 AI 的哪個環節：auto 改變檢查關卡的反應，out 與 wrap 在每則訊息後附上提醒，/at 只在切換裝置後送一次通知](/blog/assets/posts/work-mode-ai-working-modes/1-how-it-works.jpg)
+[![三種模式加上 /at 各自影響 AI 的哪個環節：auto 改變檢查關卡的反應，out 與 wrap 在每則訊息後附上提醒，/at 只在切換裝置後送一次通知](/blog/assets/posts/work-mode-ai-working-modes/1-how-it-works.jpg)](/blog/assets/posts/work-mode-ai-working-modes/1-how-it-works.jpg)
 
 開發過程大概是這樣。我把幾次關鍵的調整整理在下面：
 
@@ -50,17 +50,17 @@ description: '我做了 work-mode 外掛，讓 Claude Code 切換自主、外派
 2. 參數可以任意組合、順序不限，例如 `/work-mode wrap auto`。out 和 wrap 同時選時，wrap 生效。因為會同時選這兩個，通常代表工作要收尾了，該停的是開新的外派工作。
 3. `/at` 的做法整個換掉。原本是把裝置說明寫進 AI 每次開場讀的固定說明裡，結果發現這段說明在對話中途不會更新，要等對話被壓縮或重開才生效。有一場對話我切回電腦之後，它還以為我在用遠端，持續了一個半小時。現在改成只在切換裝置後、或對話壓縮後送一次提醒，不用每則訊息都附上，比較省。
 
-![work-mode 0.4.1 的複選選單：auto、out、wrap、off 四個選項可以勾選組合，選完後狀態列顯示 AUTO + WRAP](/blog/assets/posts/work-mode-ai-working-modes/2-menu.jpg)
+[![work-mode 0.4.1 的複選選單：auto、out、wrap、off 四個選項可以勾選組合，選完後狀態列顯示 AUTO + WRAP](/blog/assets/posts/work-mode-ai-working-modes/2-menu.jpg)](/blog/assets/posts/work-mode-ai-working-modes/2-menu.jpg)
 
 ## 一週實測
 
 10/25 我請 AI 用對話紀錄量量看，確認它到底有沒有改變行為。範圍是 10/18 到 10/25 我本人互動的 136 場對話、1,098 個回合，排除夜間排程這類自動跑的對話。我拿模式關閉的回合當基準，去跟各模式開著的回合比。
 
-![一週實測的主要數字：wrap 開啟後回覆結尾附決策清單從 10% 升到 86%，out 開啟後有外派的回合從 11% 升到 34% 至 55%](/blog/assets/posts/work-mode-ai-working-modes/3-results.jpg)
+[![一週實測的主要數字：wrap 開啟後回覆結尾附決策清單從 10% 升到 86%，out 開啟後有外派的回合從 11% 升到 34% 至 55%](/blog/assets/posts/work-mode-ai-working-modes/3-results.jpg)](/blog/assets/posts/work-mode-ai-working-modes/3-results.jpg)
 
 **wrap 的效果最明顯。** 回覆結尾附上決策清單的比例，從 10% 升到 86%。建議我跑收尾指令的比例，從 3.5% 升到 26%。回覆也變短了，平均從 878 字降到 647 字。
 
-![同類的收工回報，開 wrap 前後的對照：左邊是模式關閉時，要我決定的事沒有單獨列出；右邊是開 wrap 後，結尾列出兩項待決事項並各附建議](/blog/assets/posts/work-mode-ai-working-modes/4-wrap-before-after.jpg)
+[![同類的收工回報，開 wrap 前後的對照：左邊是模式關閉時，要我決定的事沒有單獨列出；右邊是開 wrap 後，結尾列出兩項待決事項並各附建議](/blog/assets/posts/work-mode-ai-working-modes/4-wrap-before-after.jpg)](/blog/assets/posts/work-mode-ai-working-modes/4-wrap-before-after.jpg)
 
 **out 有效，省下的是額度，但沒有省到時間。** 有外派的回合，從基準的 11% 升到 34% 到 55%。不過我多半是遇到批次工作才開 out，工作類型本身也會拉高這個數字。實際的效果應該比表面低一些。
 
@@ -74,7 +74,7 @@ description: '我做了 work-mode 外掛，讓 Claude Code 切換自主、外派
 
 `/at` 改版後，我在同一場對話裡切了兩次測試。切到手機後，它回了三行、沒有表格。切回電腦後，下一則就恢復成圖加表格的格式。
 
-![同一場對話裡切換 /at 後的兩則回覆：手機版只有三行精簡文字，電腦版附上切換流程的 ASCII 圖與對照表](/blog/assets/posts/work-mode-ai-working-modes/5-at-desktop-phone.jpg)
+[![同一場對話裡切換 /at 後的兩則回覆：手機版只有三行精簡文字，電腦版附上切換流程的 ASCII 圖與對照表](/blog/assets/posts/work-mode-ai-working-modes/5-at-desktop-phone.jpg)](/blog/assets/posts/work-mode-ai-working-modes/5-at-desktop-phone.jpg)
 
 下面這段影片示範切換模式之後，回覆格式怎麼跟著改。
 
@@ -168,7 +168,7 @@ work-mode 是一個 mod，進入點僅有 `register.tsx` 一個檔案。同一�
 
 此外，`nudge.ts` 自行監聽了 `classic.PostToolUse`，僅在 out 啟用時生效，細節將於後文 out 的章節說明。
 
-![work-mode 的架構：左邊是 Claude Code 的五個事件，中間是 register.tsx 分派到 tempo.ts、device.tsx、nudge.ts，右邊是三處狀態與 PreToolUse shell 閘門讀取的狀態檔](/blog/assets/posts/work-mode-ai-working-modes/6-architecture.jpg)
+[![work-mode 的架構：左邊是 Claude Code 的五個事件，中間是 register.tsx 分派到 tempo.ts、device.tsx、nudge.ts，右邊是三處狀態與 PreToolUse shell 閘門讀取的狀態檔](/blog/assets/posts/work-mode-ai-working-modes/6-architecture.jpg)](/blog/assets/posts/work-mode-ai-working-modes/6-architecture.jpg)
 
 ### 一則訊息的生命週期
 
@@ -182,7 +182,7 @@ work-mode 是一個 mod，進入點僅有 `register.tsx` 一個檔案。同一�
 
 為何不透過 `prompt.compose` 將模式說明寫入系統提示？原因有兩點。首先，系統提示僅在對話壓縮時才會重新建立，若在對話途中切換模式，系統提示並不會即時更新。第一版的 `/at` 即採用此做法，導致切換回電腦一個半小時後，模型仍持續依手機格式回覆。其次，系統提示位於快取前綴的最前端，只要修改一個字，後續整段對話的快取皆必須重新寫入。因此，`prompt.compose` 僅放置一段固定不變的預設值（電腦版格式，`scope: 'session'`），所有具變動性的內容則一律透過 `additionalContext` 傳遞。
 
-![一則訊息的時序：使用者送出後，UserPromptSubmit 附上 additionalContext，系統提示與既有對話這段快取前綴不變，模型呼叫工具時經過 PreToolUse 閘門讀狀態檔，最後回覆](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence.jpg)
+[![一則訊息的時序：使用者送出後，UserPromptSubmit 附上 additionalContext，系統提示與既有對話這段快取前綴不變，模型呼叫工具時經過 PreToolUse 閘門讀狀態檔，最後回覆](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence.jpg)](/blog/assets/posts/work-mode-ai-working-modes/7-message-sequence.jpg)
 
 ### 狀態放在哪裡
 
@@ -198,7 +198,7 @@ work-mode 是一個 mod，進入點僅有 `register.tsx` 一個檔案。同一�
 
 `/at` 所記錄的裝置資訊則儲存於 `$.store`，因此在某個 herdr 分頁切換裝置後，其他分頁於送出下一則訊息時也會隨之同步。每場對話會額外維護一個 `deviceTold` 變數，代表模型最近一次獲知的裝置為何。新對話初始值設為 `mini`，因系統提示預設即為電腦版格式。當送出訊息時，若當前裝置與 `deviceTold` 不一致，便會附加一則 `[at: …]` 通知，並同步更新 `deviceTold`。而在對話歷經壓縮、resume 或 fork 後，歷史紀錄中可能殘留任一裝置的舊通知，因此 `deviceTold` 會被重設為 `unknown`，確保下一則訊息一定會重新發送通知，即使使用者目前位於電腦前亦不例外。
 
-![兩個只送一次的狀態機：/at 的 deviceTold 在切換裝置或壓縮、resume、fork 後進入待送，下一則訊息送出通知後回到已告知；auto 的 autoSent 在任何一次 /work-mode 設定或壓縮、重開後進入待送，下一則訊息附上提醒後變成已送出；被擋下的訊息不改變狀態](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state.jpg)
+[![兩個只送一次的狀態機：/at 的 deviceTold 在切換裝置或壓縮、resume、fork 後進入待送，下一則訊息送出通知後回到已告知；auto 的 autoSent 在任何一次 /work-mode 設定或壓縮、重開後進入待送，下一則訊息附上提醒後變成已送出；被擋下的訊息不改變狀態](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state.jpg)](/blog/assets/posts/work-mode-ai-working-modes/9-send-once-state.jpg)
 
 ### 參數解析與互斥規則
 
@@ -263,7 +263,7 @@ ask 與 deny 的差別在模型那一側。ask 會彈出確認視窗，整個流
 
 屬於強制暫停（硬停）類型的閘門則完全不載入 `tempo-auto.sh`，例如：對外發送訊息（Slack、LINE、Gmail）、讀取或寫入憑證、疑似洩漏機密的指令、安裝套件與 `git clone`、具破壞性的 `rm` 與 `git reset --hard` 等。這類閘門該 ask 就 ask、該 deny 就 deny，不受 auto 是否開啟影響。目前付款行為尚未設立專屬閘門，主要仰賴 auto 提醒文字中的硬停清單進行約束。
 
-![PreToolUse 閘門的判斷流程：工具呼叫先看是否屬於硬停類，是就照原規則 ask 或 deny；否則看狀態檔裡有沒有 autonomous，有就 deny 並附修法，沒有就 ask](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision.jpg)
+[![PreToolUse 閘門的判斷流程：工具呼叫先看是否屬於硬停類，是就照原規則 ask 或 deny；否則看狀態檔裡有沒有 autonomous，有就 deny 並附修法，沒有就 ask](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision.jpg)](/blog/assets/posts/work-mode-ai-working-modes/8-gate-decision.jpg)
 
 ### out：額度表、九成改派、外派提醒
 
