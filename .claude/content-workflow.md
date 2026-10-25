@@ -11,6 +11,7 @@
 | 維護碎念三檔（上限、配對、抽取） | `.claude/specs/micro-notes-spec.md` |
 | 選 tag / 新增 tag | `.claude/specs/tags.md`（白名單，CI 強制） |
 | 新文章起手 | 複製 `.claude/templates/article.md` |
+| 原創技術分享文（自己做的工具／流程的痛點、實測、提示詞、附錄） | `.claude/specs/tech-share-post-spec.md`＋`.claude/skills/tech-share-post/SKILL.md` |
 | 多篇並行寫作（fan-out） | `.claude/templates/fanout-writer-prompt.md`（含派工前/回收 checklist） |
 | 每週週報全流程 | `.claude/checklists/weekly-roundup.md` |
 | 機器驗證 | `npm run check:content`（CI blocking；錯誤訊息會指回對應 spec） |
@@ -26,7 +27,7 @@
 2. **Aggregate**：聚類提案。**提案分批（全跑 vs Top N）時必說每個未選篇章的去處**（micro-notes / 留下週 / 棄寫），否則會補開重做。
 3. **Write**：zh 先寫（照 article-spec + template）。
 4. **Translate**：en 版，檔名與 zh 完全相同。
-5. **Humanize**：en 全部過 `/humanizer` skill。
+5. **Humanize**：en 全部過 `/humanizer` skill。**例外**：原創技術分享文（`tech-share-post-spec.md`）的 en 版以 agy 翻譯＋核對數字、引言、程式碼為準，不另跑 humanizer。
 6. **Build & Verify**：`npm run check:content` → `npm run build` → `npm run dev` 抽查。
 7. **Deploy**：停下等使用者明說「commit & push」。
 

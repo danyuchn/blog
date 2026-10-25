@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../base.css"><style>
+body{width:1280px;height:720px;overflow:hidden;background:#fff}
+.frame{position:relative;width:1280px;height:720px;display:grid;grid-template-columns:128px 1fr}
+.spine{border-right:1px solid #9A938A;writing-mode:vertical-rl;padding:40px 0;display:flex;align-items:center;justify-content:space-between;font-weight:500;font-size:18px;letter-spacing:.2em;color:#6E675F}
+.spine .pg{text-combine-upright:all;font-family:'IBM Plex Mono'}
+.main{padding:48px 72px 40px 56px;display:flex;flex-direction:column}
+.cap{font-family:'Noto Serif TC';font-weight:700;font-size:34px;line-height:1.3;min-height:48px}
+.capsub{font-size:20px;color:#6E675F;margin-top:6px;min-height:30px}
+.term{margin-top:22px;flex:1;background:#171310;color:#EDEAE4;font-family:'IBM Plex Mono','Noto Sans TC',monospace;font-size:20px;line-height:1.65;padding:24px 28px;white-space:pre-wrap;position:relative;overflow:hidden}
+.cjk{font-family:'Noto Sans TC'}
+.dim{color:#9A938A}.hi{color:#E05138;font-weight:500}
+.status{position:absolute;left:28px;right:28px;bottom:16px;border-top:1px solid #4a443e;padding-top:8px;font-size:18px}
+.phone{width:400px;margin:0 auto;border:1px solid #6E675F;padding:16px 18px;min-height:250px}
+.cursor{display:inline-block;width:11px;height:22px;background:#EDEAE4;vertical-align:-4px}
+.end{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;justify-content:center;padding-left:184px}
+.end h2{font-family:'Noto Serif TC';font-weight:700;font-size:56px;line-height:1.3}
+.end p{font-size:24px;color:#6E675F;margin-top:16px}
+.sq{position:absolute;right:72px;bottom:48px;width:72px;height:72px;background:#C8371E}
+table{border-collapse:collapse;font-size:17px;margin-top:6px}td,th{padding:3px 22px 3px 0;text-align:left;border-bottom:1px solid #4a443e}
+</style></head><body>
+<div class="frame"><div class="spine"><span>WORK-MODE</span><span class="pg" id="pg">01</span></div>
+<div class="main"><div class="cap" id="cap"></div><div class="capsub" id="sub"></div><div class="term" id="term"></div></div></div>
+<div class="end" id="end" style="display:none"><h2>用一個指令<br>切換 AI 的工作模式</h2><p>auto 自主 · out 外派 · wrap 收斂 · /at 裝置</p><p style="font-size:18px">依實際對話紀錄重建</p><div class="sq"></div></div>
+<script>
+const typed=(s,t0,t,cps=14)=>s.slice(0,Math.max(0,Math.floor((t-t0)*cps)));
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function picker(t,t0){
+  const a=t>t0+1.0, w=t>t0+1.8, cur=t<t0+1.4?1:3;
+  const row=(n,on,label)=>`${cur===n?'❯':' '} ${n}. ${on?'<span class="hi">[x]</span>':'[ ]'} <span class="cjk">${label}</span>`;
+  return `<span class="cjk">Work mode 目前：off。勾選要開的模式（可複選）：</span>\n${row(1,a,'auto 自主（中途不問）')}\n${row(2,false,'out 外派（agy／codex）')}\n${row(3,w,'wrap 收斂（不開新方向）')}`;
+}
+const WRAP=`分析的完整報告回來了，跟我剛才講的一致，沒有要更正的數字。
+
+<span class="hi">要你決定的</span>
+1. 要不要調整哪個檢查？我建議都不動：擋下來的也都是真的寫錯。
+2. 今天新加的守門還看不出效果。我建議下次週維護時再跑一次分析。
+
+除了這兩項，沒有其他沒收尾的事了，可以跑 /checkpoint lite。`;
+const PHONE=`有生效，這則訊息就收到了 iPhone 通知。
+1. 這次回覆照手機格式寫：短、沒有表格
+2. 之後只在切換或壓縮後再送一次
+3. 打 /at mini 就會切回電腦格式`;
+const DESK=`有，這則訊息收到了 [at: mini] 通知，已經恢復電腦版格式。
+<span class="dim">next prompt: told != device ?
+   |-- yes --> inject [at: &lt;device&gt;] notice
+   |-- no  --> inject nothing (0 extra tokens)</span>`;
+function render(t){
+  const T=document.getElementById('term'),C=document.getElementById('cap'),S=document.getElementById('sub'),P=document.getElementById('pg');
+  document.getElementById('end').style.display=t>=25?'flex':'none';
+  let h='',st='',cap='',sub='',pg='01';
+  if(t<7){cap='01　打 /work-mode，勾 auto 和 wrap';sub='選單可以複選，兩個模式一起開';
+    h='<span class="dim">&gt;</span> '+esc(typed('/work-mode',0.4,t))+(t<1.6?'<span class="cursor"></span>':'');
+    if(t>1.6&&t<4.6)h+='\n\n'+picker(t,1.8);
+    if(t>=4.6){h+='\n\n<span class="dim">Work mode auto + wrap: no mid-task questions on internal reversible steps; no new branches; replies end with decisions plus recommendations.</span>';}
+    st=t>=4.6?'AUTO + WRAP':'';
+  } else if(t<13){pg='02';cap='02　wrap 開著時的收工回報';sub='結尾列出要你拍板的事，每項附建議';
+    h='<span class="dim">&gt;</span> <span class="cjk">分析報告回來了嗎？</span>\n\n'+'<span class="cjk">'+WRAP.slice(0,Math.floor((t-7.6)*60))+'</span>';st='AUTO + WRAP';
+  } else if(t<19){pg='03';cap='03　/at iphone：切到手機';sub='下一則回覆變成五行內，沒有表格';
+    h='<span class="dim">&gt;</span> '+esc(typed('/at iphone',13.3,t));
+    if(t>14.6)h+='\n<span class="dim">&gt;</span> <span class="cjk">'+typed('所以現在有生效了嗎？',14.6,t,10)+'</span>';
+    if(t>16)h+='\n\n<div class="phone cjk">'+PHONE.slice(0,Math.floor((t-16)*40))+'</div>';st='AUTO + WRAP | @ iphone';
+  } else {pg='04';cap='04　/at mini：回到電腦';sub='恢復流程圖與表格的寬螢幕格式';
+    h='<span class="dim">&gt;</span> '+esc(typed('/at mini',19.3,t));
+    if(t>20.4)h+='\n<span class="dim">&gt;</span> <span class="cjk">'+typed('那這樣有切回來了嗎？',20.4,t,10)+'</span>';
+    if(t>21.8)h+='\n\n'+DESK;
+    if(t>22.8)h+='\n<table class="cjk"><tr><th>時點</th><th>回覆格式</th></tr><tr><td>切到 iPhone 後的第一則</td><td>手機版：3 行、沒有表格</td></tr><tr><td>切回 mini 後的第一則</td><td>電腦版：ASCII 圖加表格</td></tr></table>';
+    st='AUTO + WRAP | @ mini';}
+  T.innerHTML=h+(st?`<div class="status">${st}</div>`:'');C.textContent=cap;S.textContent=sub;P.textContent=pg;
+}
+window.render=render;render(new URLSearchParams(location.search).get('t')||0);
+</script></body></html>
