@@ -57,8 +57,6 @@ There are now ten questions I use most, each standing for one kind of work I rea
 
 [![The ten questions on the exam, the kind of work each one stands for, and the trap it carries](/blog/assets/posts/personal-model-exam/1-exam-map-en.jpg)](/blog/assets/posts/personal-model-exam/1-exam-map-en.jpg)
 
-Compared with what I wrote on Threads, I should be honest: my category names don't match the actual questions exactly, and each category has only one question for now, run 2 to 3 times to see whether it's stable. "5 to 8 questions per category" is the size I'd suggest you aim for. I haven't got there myself.
-
 Every question shares three things. First, the answer key is computed before anything runs. Second, each question has a trap, and the grader knows what wrong answer the trap produces. Third, runs happen in an empty folder with read-only permissions, and the model under test can't read the answer keys.
 
 The exam has been used for several rounds in three weeks:
@@ -78,19 +76,17 @@ Scope first. Every question in every setting ran at least twice, and most Claude
 
 **For Claude's main models, low is enough.** In the 10 October round, Opus and Fable scored full marks on all seven questions at all three levels. Opus cost $1.79, $1.89 and $1.96 for the seven at low, medium and high, and high took about 1.8 times as long as low. Fable scored the same at 3.2 times Opus's cost. On 16 October I tested for variance: Opus low and medium three times each, 36 runs, all full marks. On questions that need many file lookups, low was 1.5 to 2.4 times faster, for example 36 seconds against 67 on finding the bug, and 23 against 55 on to-do routing. The only thing medium added was depth: in two of three runs on finding the bug, it reported extra issues that didn't count toward the score.
 
-The limits are obvious. The questions are too easy for Opus; both levels get full marks, so the exam can't show the occasional miss I see from low in real work. Each run is also a fresh short conversation, so the exam can't measure whether things get worse once a long conversation fills up with context.
-
 **In agy, Flash is the workhorse and Argon is rarely worth it.** 6 settings, 6 questions, two runs each, 72 runs in all. Flash at medium or above got full marks on everything except long-file extraction; at low it lost points on finding the bug and on to-do routing, and once produced no output at all for to-do routing. Argon scored the same but used 5 to 20 times the quota of Flash, and this round took Argon's weekly quota from 2.5% to 55.9%. Long-file extraction was the only question that separated them: Argon medium 0.86, Flash high 0.80. I also caught a trap: Flash medium timed out on long-file extraction and returned an empty string, while the status said success.
 
 **Codex's Astra suits review, not fact-checking.** On finding the bug, red-teaming and the dead-link scan, Astra low got full marks. High actually lost points on finding the bug, took about 1.6 times as long as low (105 seconds against 65), and produced about twice the output. On the fact-check question Astra scored 0 at all three levels, and 5 of 6 runs gave exactly the same answer, wrong in the same place. On the three real code fixes, Sol low, Sol medium and Astra low fixed all 18 attempts, and none of them touched the test files. Astra also fixed everything, but used about 1.6 times the tokens.
 
-This round also showed that quota is the real bottleneck. Codex's five-hour window filled up after about 14 Astra review questions. Most Codex numbers come from two runs, and the quota estimate is mixed with other work on the same account, so I only treat them as a direction.
+This round also showed that quota is the real bottleneck. Codex's five-hour window filled up after about 14 Astra review questions.
 
 **Open models work as batch tools, not always-on helpers.** I put Qwen3.8-27B on Colab and connected it back to my local Claude Code as a subagent. It averaged 0.882 over six questions, close to agy Flash medium at 0.897. But once it ran away on long-file extraction, a single reply blew past the output limit, and the question scored 0. The small model running on my own machine averaged only 0.567, and on payment reconciliation fell into the "amounts are in cents, divide by 100" trap both times. Colab takes 3 to 5 minutes to start, so it only makes sense to collect a batch of work, start the machine, run it and shut it down.
 
 **Sometimes the gap comes from the prompt, not the model.** On 21 October I wanted to replace a routine local check with a fine-tuned model and tested it on 61 items. The original model with the production prompt scored 0.458 and the fine-tuned one 0.602, so fine-tuning looked useful. But the original model with three added lines of criteria reached 0.856, higher than the fine-tuned model with the same three lines at 0.835. So I kept the model and only added those three lines.
 
-**Finally, check on real work.** On 24 October Haiku did an offline calculation: re-scoring the difficulty of 6,836 questions matched Sonnet's earlier result 98% of the time, for about $0.16. The other job was closing work: writing the log, updating the master file and cleaning up files were all correct, and it missed only one small question. Each ran once, so I only put them on trial and didn't rewrite rules on that basis.
+**Finally, check on real work.** On 24 October Haiku did an offline calculation: re-scoring the difficulty of 6,836 questions matched Sonnet's earlier result 98% of the time, for about $0.16. The other job was closing work: writing the log, updating the master file and cleaning up files were all correct, and it missed only one small question.
 
 [![What changed in the routing rules after the exams: checks moved to Haiku, main-loop effort down to low or medium, Argon and Astra narrowed to specific uses](/blog/assets/posts/personal-model-exam/3-routing-changes-en.jpg)](/blog/assets/posts/personal-model-exam/3-routing-changes-en.jpg)
 
@@ -182,7 +178,7 @@ For your situation: the exam costs quota too. Pick the work the model is most li
 
 ## Appendix: how it is built
 
-This section is for people who want to build their own. My questions and graders live on my machine and aren't public; the method is packaged as a public kit, [model-bench-kit](https://github.com/danyuchn/model-bench-kit), with three synthetic example questions.
+This section is for people who want to build their own. The method is packaged as a public kit, [model-bench-kit](https://github.com/danyuchn/model-bench-kit), with three synthetic example questions.
 
 ### Overall structure
 
