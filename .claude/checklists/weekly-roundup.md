@@ -20,18 +20,19 @@
 ## 3. 寫作（zh 先行）
 
 - [ ] 每篇從 `.claude/templates/article.md` 起手，遵守 `.claude/specs/article-spec.md`。
-- [ ] 多篇並行時：寫手 prompt 用 `.claude/templates/fanout-writer-prompt.md` 生成，**派工前 working tree 清乾淨、圖片由主對話先複製**。
+- [ ] 寫手一律是 agy：prompt 用 `.claude/templates/fanout-writer-prompt.md` Prompt A 生成，經 ext-run 改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。
 - [ ] 回收：照自首清單逐句裁決忠實度，砍 AI 補述（模板內有完整回收 checklist）。
 
 ## 4. 翻譯與去 AI 腔
 
 - [ ] en 版檔名與 zh 完全相同、段落一一對應。
-- [ ] en 全部過 `/humanizer` skill。
+- [ ] en 由 agy 讀 `~/.claude/skills/humanizer/SKILL.md` 去 AI 腔（Prompt A 第 3 步）；主對話抽查口語、粗話沒被潤掉。
 
 ## 5. Micro-notes 維護（規格：`.claude/specs/micro-notes-spec.md`）
 
 - [ ] 新碎念分流：有可複用洞見 → live；純反應/玩笑 → 2026-archive；短暫感想、猜測、時事梗不收錄。
 - [ ] **併入掃描每週都跑，不等超過上限**：`semantic_dedup.py --micro --threshold 0.78`，逐條看碎念（含本週剛新增的）能否併進既有文章或本週新文，能併就併、併後從碎念刪除。高分但只是「都在講 Claude」的不算。
+- [ ] **併入照 article-spec「併入既有文章」**：交 agy 用模板 Prompt B 織進正文（不准文末加節、不准「併入：」標題），zh 驗過再派 en；併完對動過的文章跑 Prompt C 拼接審查，怪異度 ≥3 退回重做。
 - [ ] live 檔 ≤35 條；超過就聚類抽取成文（要有清楚觀點或具體讀者問題；同主題 3+ 條只是提醒，不是門檻）或搬 archive，被吸收條目 zh/en 都刪。
 - [ ] zh/en 條目數、順序完全同步。
 

@@ -1,9 +1,18 @@
-# Fan-out 寫手 subagent prompt 模板
+# 寫手 prompt 模板（agy）
 
-多篇並行寫作時，每個寫手 agent 的 prompt 都從本模板生成。`{...}` 為 placeholder。
-歷史事故驅動的條款請勿刪減：禁 git（W25 寫手擅自 commit+push）、必填 frontmatter（subagent 曾略過 description 導致 astro check 炸）、自首清單（W23 起的忠實度審查機制）。
+**寫稿、改稿、併入、翻譯、去 AI 腔一律交給 agy；Claude 主對話只負責派工與驗收，不親自寫內文**（Dustin 2026-10-26：agy 寫作比較強）。`{...}` 為 placeholder。
+歷史事故驅動的條款請勿刪減：禁 git（W25 寫手擅自 commit+push）、必填 frontmatter（寫手曾略過 description 導致 astro check 炸）、自首清單（W23 起的忠實度審查機制）、併入不准在文末加節（2026-10-26 全站 80 篇拼接順稿）。
 
-## Prompt 本體（複製後填空）
+## 派工方式（三種 prompt 共用）
+
+1. **給複本，不給 repo 原檔**：要改的文章先複製到 scratchpad（例：`<scratchpad>/zh/`、`<scratchpad>/en/`），prompt 只寫複本路徑。agy 即使被告知只寫 scratchpad，也可能就地改寫它讀到的 repo 檔。
+2. **用 ext-run 背景跑**：在 scratchpad 目錄下執行（agy 會把暫存檔丟在 cwd），一批約 10 篇或 6–7 萬字，最多 8 批並行：
+   `~/.claude/scripts/ext-run --name <名稱> --timeout 3000 --marker <結尾標記> agy --effort high --dangerously-skip-permissions --add-dir <複本目錄> -p "$(cat <prompt 檔>)"`
+   用 Bash `run_in_background` 跑，並掛 Monitor 涵蓋完成、失敗與逾時。
+3. **3 分鐘沒進展就換路**：檔案沒變、只有 request 數在漲，就改成「只把譯文／段落印到標準輸出、不准動檔」，由主對話原樣插回。
+4. 驗收通過後，主對話才把複本拷回 repo。
+
+## Prompt A：社群素材 → 新文章
 
 ```text
 你要把以下社群貼文素材改寫成一篇雙語部落格文章。
@@ -11,20 +20,20 @@
 【素材（原文，逐字）】
 {原始貼文全文，含日期}
 
-【產出】
-1. src/data/blog/zh/{slug-basename}.md（先寫）
-2. src/data/blog/en/{slug-basename}.md（zh 定稿後翻譯，檔名與 zh 完全相同）
-3. en 定稿後，用 Skill 工具載入 `humanizer` skill，就地把 en 檔過一次去 AI 腔。
+【產出（只寫這兩個檔，路徑是複本目錄）】
+1. {複本目錄}/zh/{slug-basename}.md（先寫）
+2. {複本目錄}/en/{slug-basename}.md（zh 定稿後翻譯，檔名與 zh 完全相同、段落一一對應）
+3. en 定稿後，讀 ~/.claude/skills/humanizer/SKILL.md 的規則，就地把 en 檔過一次去 AI 腔。
    只改英文散文句子——frontmatter、圖片語法與路徑、video-embed HTML、code block、
    blockquote 裡的中文原文、檔末自首註解，一律不准動。忠實度優先於文筆：
    作者的口語、粗話、自嘲、括號內心話不准被「潤飾」掉。
 
 【規格（必讀必遵守）】
-- 讀 .claude/specs/article-spec.md 並完全遵守。
-- frontmatter 從 .claude/templates/article.md 複製起手。必填欄位一個都不能少：
+- 讀 {repo}/.claude/specs/article-spec.md 並完全遵守。
+- frontmatter 從 {repo}/.claude/templates/article.md 複製起手。必填欄位一個都不能少：
   author / pubDatetime（{YYYY-MM-DD}T04:00:00Z，已過去的日期）/ title / slug（{lang}/{slug-basename}）/
   featured: false / draft: false / tags / description（無條件單引號包住）。
-- tags 只准從 .claude/specs/tags.md 白名單挑 2–3 個。
+- tags 只准從 {repo}/.claude/specs/tags.md 白名單挑 2–3 個。
 - 目標長度：{短文保持短 / 約 N 字}。**素材短就讓文章短**，禁止展開成長論述。
 
 【忠實度（最重要）】
@@ -35,28 +44,77 @@
   一律改成角色描述（「一位與會者」「客戶」），自首註解裡也不准出現；公眾人物不受限。
 
 【回報格式（必須）】
-完成後回報：
 1. 兩個檔案路徑
 2. 「新增非原文句子」逐句清單：每一句原貼文沒有、由你新增的句子，
    逐條列出並標註類型（框架句/銜接/改寫）。同一份清單也要以 HTML 註解留在文章檔末尾。
    一句都沒加就明說「零新增」。
+最後一行印 WRITE_DONE。
 
 【禁止事項】
-- 禁止執行任何 git 指令（add/commit/push/stash 全部禁止）。
-- 禁止跑 npm run build / dev（由主對話統一跑）。
-- 禁止複製或搬動圖片檔（圖片由主對話處理，你只在文中寫好引用路徑：
-  /blog/assets/posts/{slug-basename}/{檔名}）。
+- 禁止執行任何 git 指令、npm 指令。
+- 禁止複製或搬動圖片檔（只在文中寫好引用路徑：/blog/assets/posts/{slug-basename}/{檔名}）。
 - 除了上述兩個文章檔，禁止建立或修改任何其他檔案。
 ```
 
-## 主對話回收 checklist（fan-out 前後必做）
+## Prompt B：把新素材併入既有文章
 
-- [ ] **派工前**：working tree 清乾淨（既有變更先 commit 或 stash）——W25 事故：寫手違規 `git add -A` 把開場既有變更掃進它的 commit。
-- [ ] **派工前**：圖片資產先由主對話複製到 `public/assets/posts/<basename>/`。
-- [ ] **回收**：照每篇的自首清單**逐句裁決**（保留/砍/改寫），不盲讀全篇。
-- [ ] **回收**：逐篇對照原始貼文，砍 AI 補述——短貼文被膨脹是 fan-out 最常見失敗模式。
-- [ ] **回收**：subagent 的「已完成」回報不可盡信，逐檔 Read 親驗 frontmatter 與內文。
-- [ ] **回收**：確認每篇 en 真的過了 `humanizer`（W32 事故：本模板漏寫這步，8 篇全部漏做、事後才補派 agent 補跑；清單與模板不同步時，被執行的是模板）。
-- [ ] `npm run check:content` → `npm run build` 全綠。
-- [ ] `npm run check:private` 0 hits（私人姓名攔截；名單在 repo 外，缺檔即 exit 1）。
-- [ ] 收尾 commit 由主對話自己做，**逐檔 `git add <path>`，禁 `git add -A`**，且等使用者明說 commit 才動。
+規則本體在 `.claude/specs/article-spec.md`「併入既有文章」段。
+
+```text
+你是一位資深中文編輯。把下列新素材併進既有文章，併完之後要讀起來像一次寫成，不是在文末再接一節。
+
+【既有文章（直接修改這個複本）】{複本目錄}/zh/{slug-basename}.md
+【新素材（原文，逐字，含日期）】
+{素材}
+
+可以做的事：
+1. 把新素材放進同主題的既有章節，或排在結論之前；全文只能有一個收尾，放在最後。
+2. 需要新章節時，標題寫內容。禁止「併入：」「補記：」「補充：」「附帶一條：」這類標記。
+3. 新素材跟原文講同一件事時，只留最完整的一處；保留的那處原文措辭不改。
+4. 接縫處加一兩句短的過渡句，交代「為什麼接著講這個」，口語、第一人稱。
+5. 「剛剛／今天／這週／明天」等時間詞若和 frontmatter 的 pubDatetime 或前後文矛盾，改成一致的說法。
+6. description 與內文對不上時一起改；一律單引號包住，內部單引號寫成兩個單引號。
+
+絕對不可以：
+- 新增原文與素材都沒有的論點、事實、原因、動機、場景。除了過渡句，不寫任何新內容。
+- 改任何數字、日期、模型名稱與版本號、指令、程式碼、引用、連結、圖片、嵌入、表格。
+- 刪掉只出現一次的內容。
+- 改寫接縫以外的句子；作者的口語、俚語、比喻、斷句逐字保留。
+- 加「小結」「結語」章節，或排比、昇華式收尾。只用 H2。
+- 改 description 以外的 frontmatter 欄位；寫入真實人名、客戶名、公司名；建立其他檔案。
+
+檔尾 HTML 註解保留原內容，加一段：
+{YYYY-MM-DD} 併入：
+- 「<每一句新增的過渡句>」— 類型：銜接
+（一句話寫出結構調整）
+
+完成後印一行：<檔名> | <做了哪些調整> | 新增過渡句 <N> 句。最後一行印 MERGE_DONE。
+```
+
+zh 驗收通過後，en 用同一套做法派第二輪：給 agy 原 zh、新 zh、en 複本三個路徑，要它照 zh 的變動在 en 做同樣的搬移與去重，只翻新增的過渡句，其他英文句子不動。最後一行印 EN_DONE。
+
+## Prompt C：拼接審查（併入之後、或抽查舊文）
+
+```text
+你是一位資深中文編輯。逐篇完整讀完下列文章（{複本目錄}），判斷「拼接怪異程度」。只審查，不修改任何檔案。
+類型：A 斷裂（接上的章節沒有過渡）／B 重複（同一論點或例子講兩次）／C 時間錯亂（相對時間詞、版本、數字前後矛盾）／D 結構錯位（多個收尾、標題或 description 對不上內容）／E 文體不一（殘留拼貼標記、語氣突變）／F 其他拼接痕跡。
+每審完一篇就附加寫入 {partial 檔}：
+### <檔名> | 怪異度 <1-5>
+- [類型][高/中/低] 位置：「<逐字引用 10–20 字>」— 問題：<一句> — 建議：<一句>
+怪異度 1 只寫標題行。引用必須逐字，找不到就不報；不報錯字、風格、資訊正確性等非拼接問題。
+全部審完印出怪異度 ≥3 的清單，最後一行印 REVIEW_DONE。
+```
+
+怪異度 ≥3 的退回 Prompt B 重做。
+
+## 主對話驗收 checklist
+
+- [ ] **派工前**：repo working tree 清乾淨；圖片資產由主對話先複製到 `public/assets/posts/<basename>/`。
+- [ ] **回收**：逐篇 diff 複本與原檔（`git diff --no-index --word-diff`），不採信 agy 的回報。
+- [ ] **回收**：每一句被刪的內容，確認文中另有出處；只出現一次就退回。
+- [ ] **回收**：每一句新增的句子，確認沒有原文沒有的原因、動機、事實、場景；照自首清單逐句裁決。
+- [ ] **回收**：數字、連結、圖片、嵌入數量前後一致；frontmatter 除 description 外沒變；新文逐篇對照原始貼文，砍膨脹出來的補述。
+- [ ] **回收**：en 段落與 zh 一一對應（H2 數量與順序相同），新文的 en 確實過了 humanizer 規則。
+- [ ] 違規的寫成逐條修正清單，退回 agy 再跑一輪；修正後再驗一次。
+- [ ] 複本拷回 repo，`npm run check:content` → `npm run check:private` → `npm run build` 全綠。
+- [ ] 收尾 commit 由主對話自己做，**逐檔 `git add <path>`，禁 `git add -A`**。

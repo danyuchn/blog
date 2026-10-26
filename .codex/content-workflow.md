@@ -12,7 +12,7 @@
 | 選 tag / 新增 tag | `.claude/specs/tags.md`（白名單，CI 強制） |
 | 新文章起手 | 複製 `.claude/templates/article.md` |
 | 原創技術分享文（自己做的工具／流程的痛點、實測、提示詞、附錄） | `.claude/specs/tech-share-post-spec.md`＋`.claude/skills/tech-share-post/SKILL.md` |
-| 多篇並行寫作（fan-out） | `.claude/templates/fanout-writer-prompt.md`（含派工前/回收 checklist） |
+| 寫稿、併入既有文章、拼接審查（agy 寫、主對話驗） | `.claude/templates/fanout-writer-prompt.md`（Prompt A／B／C＋驗收 checklist） |
 | 每週週報全流程 | `.claude/checklists/weekly-roundup.md` |
 | 機器驗證 | `npm run check:content`（CI blocking；錯誤訊息會指回對應 spec） |
 | 品牌調性 / 讀者輪廓 | `.impeccable.md` |
@@ -25,9 +25,9 @@
    - **Threads-only 匯出**（無 IG `posts_1.json`）會讓腳本報錯：跳過腳本、為當週日期範圍寫一次性分類 snippet，不要為單次案例改腳本。
    - **匯出視窗與上週重疊必去重**：匯出開頭一兩天的貼文常已收進上週週報，提案前對照上週 micro-notes 區段剔除。
 2. **Aggregate**：聚類提案。**提案分批（全跑 vs Top N）時必說每個未選篇章的去處**（micro-notes / 留下週 / 棄寫），否則會補開重做。
-3. **Write**：zh 先寫（照 article-spec + template）。
-4. **Translate**：en 版，檔名與 zh 完全相同。
-5. **Humanize**：en 全部過 `/humanizer` skill。**例外**：原創技術分享文（`tech-share-post-spec.md`）的 en 版以 agy 翻譯＋核對數字、引言、程式碼為準，不另跑 humanizer。
+3. **Write**：由 agy 寫 zh（照 article-spec＋template，用模板 Prompt A），主對話只派工與驗收。
+4. **Translate**：同一個 agy 工作接著翻 en，檔名與 zh 完全相同。
+5. **Humanize**：agy 讀 `~/.claude/skills/humanizer/SKILL.md` 把 en 過一次去 AI 腔（Prompt A 第 3 步）。**例外**：原創技術分享文（`tech-share-post-spec.md`）的 en 版以 agy 翻譯＋核對數字、引言、程式碼為準，不另跑 humanizer。
 6. **Build & Verify**：`npm run check:content` → `npm run build` → `npm run dev` 抽查。
 7. **Deploy**：停下等使用者明說「commit & push」。
 
@@ -37,7 +37,10 @@
 
 ## Fan-out 寫作協議
 
-多篇全交 subagent 寫、主對話只驗證時，寫手 prompt 一律由 `.claude/templates/fanout-writer-prompt.md` 生成，不可自行簡化。三條鐵則（事故驅動，模板內有完整版）：
+寫稿、改稿、併入、翻譯、去 AI 腔一律交給 agy（經 `~/.claude/scripts/ext-run`），Claude 主對話只派工與驗收、不親自寫內文。prompt 一律由 `.claude/templates/fanout-writer-prompt.md` 生成，不可自行簡化。四條鐵則（事故驅動，模板內有完整版）：
+
+- **agy 只改 scratchpad 複本**，驗收通過才由主對話拷回 repo。
+- **併入既有文章不准在文末加節**：用 Prompt B 織進正文，併完跑 Prompt C 拼接審查，怪異度 ≥3 退回重做（規則見 article-spec「併入既有文章」）。
 
 - **忠實度自首清單**：每個寫手必回報「新增非原文句子」逐句清單，主對話逐句裁決——比盲讀全篇快且不漏。
 - **派工前 working tree 清乾淨、圖片主對話先複製**。
