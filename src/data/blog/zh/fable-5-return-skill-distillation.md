@@ -12,7 +12,7 @@ tags:
 description: 'Fable 5 限時回歸一週，我沒拿去做日常小事，而是拿去做高槓桿判斷、蒸餾成便宜模型可照做的 skills。'
 ---
 
-Fable 5 從明天起回歸一週，所以我要用 Sonnet 5 保護我的週額度，其他全部灌給 Fable。
+Fable 5 限時回歸一週，所以我要用 Sonnet 5 保護我的週額度，其他全部灌給 Fable。
 
 ![Anthropic 官方公告：Fable 5 與 Mythos 5 出口管制解除，7/1 起回歸](/blog/assets/posts/fable-5-return-skill-distillation/announcement.jpg)
 
@@ -38,12 +38,7 @@ Fable 5 從明天起回歸一週，所以我要用 Sonnet 5 保護我的週額�
 
 ![圖卡：Skill Distillation 的 Prompt 骨架](/blog/assets/posts/fable-5-return-skill-distillation/card-4-prompt-skeleton.jpg)
 
-真實驗證來自一個在寫論文的朋友。他早上借用我的帳號，說 Fable 寫出來的數學證明既自然又簡潔優雅，而且一次過完全不會錯，他從無到有寫了兩篇，已經準備投出去，折合 API 成本 200 USD。這次我們是所有 subagent 都用 Fable，也就是故意開到滿；但事後討論，其實最佳搭配應該是 plan / architecture / final verification 用 Fable，寫 transcript 用 Opus 4.8，跑實驗寫 code 用 composer 2.5，畫圖用 gpt-image-2。他說 100 USD 寫一篇其實真的不貴，所以就算未來用 API 也划算。
-
-一週的限時額度，我沒拿去做小事。把最貴模型的判斷，變成便宜模型的工作規範——這是我這一週真正留下、之後每天還在用的東西。
-
-
-## 併入：拿教授朋友的論文 repo 試 Fable 的能力邊界
+## 拿教授朋友的論文 repo 試 Fable 的能力邊界
 
 一覺醒來，肥勃（Mythos 的護欄版本）就上了。我趕緊呼叫我的教授朋友，請他把正在寫的論文 prompt 跟 repo 給我，讓我來測試一下它的能力邊界。只有幾天可以用訂閱額度，之後 API 調用價格高到堪比台灣國旅。
 
@@ -53,7 +48,11 @@ Fable 5 從明天起回歸一週，所以我要用 Sonnet 5 保護我的週額�
 
 他做的是 federated learning 相關的題目，應該沒有碰到 guardrail。
 
+他早上借用我的帳號，說 Fable 寫出來的數學證明既自然又簡潔優雅，而且一次過完全不會錯，他從無到有寫了兩篇，已經準備投出去，折合 API 成本 200 USD。這次我們是所有 subagent 都用 Fable，也就是故意開到滿；但事後討論，其實最佳搭配應該是 plan / architecture / final verification 用 Fable，寫 transcript 用 Opus 4.8，跑實驗寫 code 用 composer 2.5，畫圖用 gpt-image-2。他說 100 USD 寫一篇其實真的不貴，所以就算未來用 API 也划算。
+
 至於 effort 開多少，reddit 上有網友說開 high 是不夠的，xhigh 才有明顯增益——這條留著之後自己驗。
+
+一週的限時額度，我沒拿去做小事。把最貴模型的判斷，變成便宜模型的工作規範——這是我這一週真正留下、之後每天還在用的東西。
 
 <!--
 2026-08-28 W36 主對話補記：〈拿教授朋友的論文 repo 試 Fable 的能力邊界〉（2026-06-10，344 字）併入本文並轉為 stub。全文逐字保留（含教授原話「Opus 會漏幾條規則，Fable 完全不漏」），新增非原文句子僅小標一則（框架句）。
@@ -69,4 +68,8 @@ Fable 5 從明天起回歸一週，所以我要用 Sonnet 5 保護我的週額�
 6. 「步驟細節我整理在卡片上，讓卡片自己講。」— 指向圖卡的銜接句（避免複述卡面文字）
 7. 「真實驗證來自一個在寫論文的朋友。」— 引入論文朋友段落的銜接句
 8. 「一週的限時額度，我沒拿去做小事。把最貴模型的判斷，變成便宜模型的工作規範——這是我這一週真正留下、之後每天還在用的東西。」— 收束句，改寫自卡1核心論點，非喊話式小結
+
+2026-10-26 拼接順稿：
+無新增過渡句。
+（將論文測試案例整合為「拿教授朋友的論文 repo 試 Fable 的能力邊界」章節、移除「併入：」標記，並將全文結論移至文末收尾；首段時間詞「從明天起」依 pubDatetime 修正為「限時」）
 -->

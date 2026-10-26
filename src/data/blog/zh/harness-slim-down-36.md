@@ -73,6 +73,18 @@ description: '半夜拿到 Opus 4.8、額度剛好重置，我做的第一件事
   <iframe src="https://www.youtube.com/embed/OFAPR52Zwd4" title="如何管理自己的 Claude Code harness" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## 別把上一個對話的 JSON 餵給它
+
+除了常態規則的減肥，另一個常見的上下文污染源，是隨手把前一次對話的歷史紀錄整包餵進去。
+
+不是，為什麼要給它上一個對話的上下文 JSON。
+
+harness 有好幾種，AGENTS.md、rule、skill、hook 這些都能分擔，把前一個對話的重點總結成臨時文檔也很好。
+
+純 session history 裡面含有太多 tool call、output、flag 是無用的，就連 auto compact 的時候這些都會被摘除。
+
+建議先重新體檢 harness。
+
 ## 給愛說「不如去用 Codex」的人
 
 最後補幾句給喜歡路過補一句「搞那麼多有的沒的，不如來用 Codex」的人：
@@ -83,16 +95,10 @@ description: '半夜拿到 Opus 4.8、額度剛好重置，我做的第一件事
 
 這個時代有人願意分享就不容易了。開卷有益，少點 troll，多點動手。
 
-## 併入：別把上一個對話的 JSON 餵給它
-
-不是，為什麼要給它上一個對話的上下文 JSON。
-
-harness 有好幾種，AGENTS.md、rule、skill、hook 這些都能分擔，把前一個對話的重點總結成臨時文檔也很好。
-
-純 session history 裡面含有太多 tool call、output、flag 是無用的，就連 auto compact 的時候這些都會被摘除。
-
-建議先重新體檢 harness。
-
 <!--
 2026-08-28 W36 主對話補記：〈別把上一個對話的 JSON 餵給它，先體檢 harness〉（2026-06-09，172 字）併入本文並轉為 stub。全文逐字保留，新增非原文句子僅小標一則（框架句）。
+
+2026-10-26 拼接順稿：
+- 「除了常態規則的減肥，另一個常見的上下文污染源，是隨手把前一次對話的歷史紀錄整包餵進去。」— 類型：銜接
+將「別把上一個對話的 JSON 餵給它」移除拼貼標記並移至「給愛說不如去用 Codex 的人」之前，確保全篇單一收尾在最後。
 -->

@@ -24,7 +24,7 @@ description: '從 /loop 指令幫我打 ERP 卡、Monitor Tool 做背景事件�
 
 以後統一叫 skill 就對了。
 
-如果你還在 `.claude/commands/` 裡寫 `.md` 檔，官方建議遷移到 `~/.claude/skills/`。遷移不複雜，主要是加 frontmatter。
+如果你還在 `.claude/commands/` 裡寫 `.md` 檔，官方建議遷移到 skill。既有的 `.claude/commands/` 檔案照樣能用；遷移不複雜，主要是加 frontmatter，專案用的放 `.claude/skills/`，`~/.claude/skills/` 是放個人用的。
 
 這個釐清對我整個工作流的分層架構影響很大——以前我把一些「指令式」的東西放在 commands、「知識式」的放在 skills，現在可以統一用 skill 結構管理。
 
@@ -40,7 +40,7 @@ Claude Code 最新版本的 `/loop` 指令是我這半年覺得最實用的新�
 /loop 1d 幫我在 ERP 打卡
 ```
 
-恭喜你，收穫全自動上下班。
+恭喜你，收穫全自動上下班。不過有一點要注意：`/loop` 只在 session 開著的時候跑，而且重複任務 7 天後會自動過期，真的要每個上班日自動打卡，改用雲端或 Desktop 的排程任務。
 
 **案例 B：Messenger 私訊中繼**
 
@@ -158,4 +158,9 @@ Chrome MCP 又耗 token 又容易斷線，只能說是最後的備案。如果�
 
 理想狀態是有一個 meta-skill 能跨這四個源頭檢索。這大概會是下個月的專案。
 
-> **後記（2026-10-20）**：兩點更新。`/loop` 只在 session 開著的時候跑，而且重複任務 7 天後會自動過期，真的要每個上班日自動打卡，改用雲端或 Desktop 的排程任務。另外 commands 那段：既有的 `.claude/commands/` 檔案照樣能用；真的要改寫成 skill，專案用的放 `.claude/skills/`，`~/.claude/skills/` 是放個人用的。
+<!--
+2026-10-26 拼接順稿：
+- 「既有的 `.claude/commands/` 檔案照樣能用；遷移不複雜，主要是加 frontmatter，專案用的放 `.claude/skills/`，`~/.claude/skills/` 是放個人用的。」— 類型：銜接
+- 「不過有一點要注意：`/loop` 只在 session 開著的時候跑，而且重複任務 7 天後會自動過期，真的要每個上班日自動打卡，改用雲端或 Desktop 的排程任務。」— 類型：銜接
+移除文末獨立「後記」，將 /loop 限制與 commands/skills 放置位置修回正文第 1 層與前提章節。
+-->

@@ -81,7 +81,7 @@ Obsidian 的 wikilink 系統很好用，但相對應的，只要一個檔案被�
 
 ---
 
-## 工具補充：neat-freak
+## 社群工具 neat-freak
 
 健檢做到一半，在 GitHub 上發現一個社群 skill 叫 [neat-freak](https://github.com/KKKKhazix/khazix-skills)，它的介紹很像在戳痛點：「代碼都迭代了七八輪，文檔還是最初那一版；記憶裡寫著 SQLite，其實你早換 PostgreSQL 了。」
 
@@ -102,3 +102,8 @@ Obsidian 的 wikilink 系統很好用，但相對應的，只要一個檔案被�
 - [ ] Skill 清單 review：是否有重複功能的 skill、或者已經沒在用的 skill 還掛著
 
 這五件事一次花兩到三小時。不做的話，問題不是不存在，是不知道在哪裡。
+
+<!--
+2026-10-26 拼接順稿：
+（將小節標題「## 工具補充：neat-freak」改為「## 社群工具 neat-freak」，移除拼貼標記）
+-->

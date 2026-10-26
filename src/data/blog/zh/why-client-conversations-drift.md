@@ -9,14 +9,14 @@ tags:
   - ai-workflow
   - consulting
   - skills
-description: '一次客戶診斷的隨筆：三條病狀根因、五條解方，外加主副 agent 反過來搭的模型組合，以及只有 hook 治得了的話癆。'
+description: '一次客戶診斷的隨筆：三條病狀根因、四條解方，外加主副 agent 反過來搭的模型組合，以及只有 hook 治得了的話癆。'
 ---
 
 隨筆記一下今天客戶學到的東西。
 
 ## 客戶的病狀根因
 
-- 沒有訂好 spec，context 太亂，long-context 模型產出 drift。
+- 沒有訂好 spec、結論沒落成檔案，context 太亂，long-context 模型產出 drift。
 - model tier 與 effort 設定錯，模型沒有 budget 做 verification。
 - 沒有發散收斂的節奏：想延伸時模型收斂，想收斂時模型發散。
 
@@ -30,15 +30,15 @@ description: '一次客戶診斷的隨筆：三條病狀根因、五條解方，
 
 小廟不一定要一直供著大佛。
 
-**二、對話飄掉的兩個根因**：結論沒落成檔案、model tier/effort 沒設對。
+**二、用 grill-me 把模糊感受逼問成具體規劃**：known-knowns / known-unknowns / unknown-unknowns。
 
-**三、用 grill-me 把模糊感受逼問成具體規劃**：known-knowns / known-unknowns / unknown-unknowns。
+**三、診斷 prompt 寫法**：要求 AI 先 pinpoint root cause，再建 traceable/observable infrastructure（每個節點留 log）。
 
-**四、診斷 prompt 寫法**：要求 AI 先 pinpoint root cause，再建 traceable/observable infrastructure（每個節點留 log）。
+**四、四個工具**：explain（白話重講）、history-find（跨工具語意搜尋）、stt（語音輸入）、Codex plugin（對抗式覆核）。
 
-順著 prompt 跟 rules 講下去，還有一件事：只有好的 hook 才能治得了 Opus 5 的話癆，望周知。官方建議說 5 代模型的 rules 要精簡，但是 5 代模型本身並不知道這件事。
+## 模型治理：只有 Hook 治得了話癆
 
-**五、四個工具**：explain（白話重講）、history-find（跨工具語意搜尋）、stt（語音輸入）、Codex plugin（對抗式覆核）。
+在幫客戶梳理 prompt 與 rules 時，我也再次印證了一件事：只有好的 hook 才能治得了 Opus 5 的話癆，望周知。官方建議說 5 代模型的 rules 要精簡，但是 5 代模型本身並不知道這件事。
 
 <!--
 新增非原文句子清單（忠實度自首）：
@@ -50,4 +50,8 @@ description: '一次客戶診斷的隨筆：三條病狀根因、五條解方，
 
 <!--
 主對話回收（2026-09-11）：砍掉收尾句「就這樣，隨筆一則。」——與開場「隨筆記一下」重複，且為原素材沒有的框架句。
+
+2026-10-26 拼接順稿：
+- 「在幫客戶梳理 prompt 與 rules 時，我也再次印證了一件事：」— 類型：銜接
+（把誤植於解方的根因併回病狀節並去重，解方重整為四條並獨立模型治理章節，同步更新 description）
 -->

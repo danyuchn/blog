@@ -42,6 +42,8 @@ cache_creation:
 
 如果你是 Pro 訂戶又看到 `ephemeral_1h_input_tokens` 有值，那就是官方給你的 bug（或隱藏福利，看心情）。反過來也一樣。
 
+> **後記（2026-10-20）**：第 2 節的 5 分鐘 vs 1 小時其實不是 Pro 跟 Team/Enterprise 的差別。只要是 Claude 訂閱、還在方案額度內，主對話就是 1 小時快取；subagent、吃額外用量或用 API key 的部分才是 5 分鐘。
+
 ## 3. 偵測 `/compact` 有沒有被觸發
 
 `/compact` 會留下痕跡：它會在 JSONL 產生一條 `type=system` 的訊息，裡面有 `summary` 關鍵字。用 grep 就能掃：
@@ -75,10 +77,11 @@ grep -c '"type":"system".*summary' session.jsonl
 
 memory 是 hint，不是 source of truth。這是一個很容易被忽略但會反覆踩到的坑。
 
-## 結尾
-
 `/stats` 只是入口。真正的細節在 JSONL 裡，而且都可以用 Python + jq 自己抓。我寫的 [cc-audit skill](/blog/posts/zh/cc-audit-skill) 已經把這些邏輯全部打包好，但你如果想自己 hack，以上五個公式應該夠你開始。
 
 Claude Code 是一個開放的系統——所有資料都在你的硬碟上，格式是公開的 JSON。懂得挖這些，比只看 `/stats` 有用一百倍。
 
-> **後記（2026-10-20）**：第 2 節的 5 分鐘 vs 1 小時其實不是 Pro 跟 Team/Enterprise 的差別。只要是 Claude 訂閱、還在方案額度內，主對話就是 1 小時快取；subagent、吃額外用量或用 API key 的部分才是 5 分鐘。
+<!--
+2026-10-26 拼接順稿：
+將文末的快取類型後記移至第 2 節正文下方對齊脈絡；移除生硬的「## 結尾」標題使文末自然收束。
+-->

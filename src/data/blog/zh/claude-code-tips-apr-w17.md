@@ -93,6 +93,8 @@ description: '本週 Claude Code 累積的幾個實用設定與省錢技巧—�
 
 ## 還有一個意料外的實例：Xoogler 幫我長流量
 
+除了自己用 Claude Code 產影片，這週教課時還碰上一個意料外的應用實例。
+
 前幾天教一個學員用 Claude Code 的時候，意外得知他之前在 Google 工作 8 年，負責 YouTube 相關業務。
 
 我順便說「我們新創的頻道流量都漲不起來怎麼辦」，他也很熱心跟我分享幾個 YouTube 頻道要漲流量的內容心法（這樣是內線嗎？）
@@ -115,3 +117,9 @@ You've hit your rate limit.
 這就是 Opus 4.7 之後的日常。如果你還沒看過我寫的[額度事故簿](/blog/posts/zh/claude-code-quota-incident-log)，裡面那一節記的就是 Opus 4.7 上線那一週，可以配著一起看。
 
 官方 changelog 在這：<https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md>
+
+<!--
+2026-10-26 拼接順稿：
+- 「除了自己用 Claude Code 產影片，這週教課時還碰上一個意料外的應用實例。」— 類型：銜接
+（在「Xoogler 幫我長流量」節開頭補上一句銜接，交代從影片製作延伸到教學應用）
+-->

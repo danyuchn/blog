@@ -41,7 +41,9 @@ Skill 的部分有五個：
 
 ![Claude Code 輸入框截圖，一句話裡串起五個 skill：請派 fable subagent 用 /first-principles 思考目前計劃的合理性，思考完後用 /explain 解釋，審核通過後 /checkpoint 紀錄進度並用 /neat-freak 審查跨檔內容，最後用 /polite 寫一封訊息通知甲方](/blog/assets/posts/harness-starter-kit-release/1-skills-demo.jpg)
 
-## 併入：先用開箱即用的 harness
+## 工具選擇：先用開箱即用的 harness
+
+如果你才剛要開始搭自己的工作環境，工具選擇上也有個簡單原則：
 
 建議直接 codex。除非你非常瞭解 hermes 的原理跟架構，不然 codex 或 claude code 的 harness 目前來說是開箱即用最穩定的。
 
@@ -54,4 +56,8 @@ Skill 的部分有五個：
 註：原貼文第一則的 hook 清單在第 2 點後被截斷、第 3 點沒說完，未替作者補寫。第三則（YouTube／部落格／Threads 的 CTA）依 article-spec 改寫原則第 4 條刪除。
 
 2026-09-11 W38 碎念併入：live 碎念「先用開箱即用的 harness」逐字併入，已從 zh/en live 檔刪除。新增非原文句子：小標（框架句）。
+
+2026-10-26 拼接順稿：
+- 「如果你才剛要開始搭自己的工作環境，工具選擇上也有個簡單原則：」— 類型：銜接
+移除標題中的「併入：」拼貼標記，改為自然標題並加入短過渡句。
 -->

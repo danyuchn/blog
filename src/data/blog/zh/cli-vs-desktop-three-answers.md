@@ -203,15 +203,7 @@ Boris（Claude Code 的主要維護者）說過：「雖然我自己在用 iTerm
 
 他們全都是 Anthropic 原生，但親生的孩子也是有偏心。CLI 一天一更最頻繁（因為員工自己就在用），Desktop 以前很慢、後來大改版更新變勤了，其他的就都慢吞吞。看 CHANGELOG 打 remote control，你就可以看到跟他相關的修復頻率了。
 
-那如果平常在家電腦都用慣 CLI 的情況下，直接讓 CLI 鏡像到移動設備不是最方便的嗎？
-
-![手機上透過 mosh 連回 Mac mini 跑 CLI，畫面是 agent 正在把一批 gog CLI 的工具陷阱寫進文件的 diff](/blog/assets/posts/cli-vs-desktop-three-answers/1-remote-control.jpg)
-
-為什麼不用官方 Claude / Codex 的雲端控制手機 App？
-
-因為他們不知道何時才會出 split pane⋯
-
-![手機畫面上下同時開著兩個 pane，各自是一個獨立的 CLI session](/blog/assets/posts/cli-vs-desktop-three-answers/2-no-split-pane.jpg)
+話說回來，雖然 CLI 更新最頻繁，八月這時候也碰上一個怪現象：
 
 還有一個非常奇怪的事情：以前一天一更的 Claude Code CLI，竟然已經 8 天沒有更新了。經過機器人強力去重後的 Issues 仍然穩定在五千上下，所以不代表沒 bug 可修。
 
@@ -220,6 +212,16 @@ Boris（Claude Code 的主要維護者）說過：「雖然我自己在用 iTerm
 是不是在蹲一波什麼大的，還是內部發生了什麼劇烈的調整，目前未知。
 
 跟他們之前大力宣傳的 AI 自我修復工作流，差別很大吧。只能說這家公司，說的跟做的要分兩套來看。
+
+既然官方 remote control 更新這麼慢，連在手機上我也乾脆直接用 CLI。那如果平常在家電腦都用慣 CLI 的情況下，直接讓 CLI 鏡像到移動設備不是最方便的嗎？
+
+![手機上透過 mosh 連回 Mac mini 跑 CLI，畫面是 agent 正在把一批 gog CLI 的工具陷阱寫進文件的 diff](/blog/assets/posts/cli-vs-desktop-three-answers/1-remote-control.jpg)
+
+為什麼不用官方 Claude / Codex 的雲端控制手機 App？
+
+因為他們不知道何時才會出 split pane⋯
+
+![手機畫面上下同時開著兩個 pane，各自是一個獨立的 CLI session](/blog/assets/posts/cli-vs-desktop-three-answers/2-no-split-pane.jpg)
 
 ## 四月那段哲學收尾，現在讀起來
 
@@ -240,4 +242,9 @@ Boris（Claude Code 的主要維護者）說過：「雖然我自己在用 iTerm
 7. cli-is-the-firstborn 三張圖片路徑改為 `/blog/assets/posts/cli-vs-desktop-three-answers/`，alt 文字沿用原文 — 改寫（合併後資產目錄變更）
 其餘所有段落、表格、清單、數據、GitHub issue 編號、引用連結與判準均逐字取自五篇原文（cowork-vs-claude-code、claude-desktop-vs-cli、cli-terminal-philosophy、claude-code-desktop-vs-cli-w20、cli-is-the-firstborn），未新增原文沒有的論點或結論，五篇各自的立場原樣並陳、未做調和。
 8. cli-terminal-philosophy「## 速度和資源效率」一節的第二段（M2 MacBook Air、3 視窗 3-4 pane、5-6 session、Desktop App 卡頓）未重複搬移 — 改寫（該段與同日稍早 claude-desktop-vs-cli「資源效率的差距」一節為同一組事實的重述，逐字保留在該節內；本節只留其獨有的第一段「VSCode 這類的 IDE 吃的資源是它的好幾倍」，無事實遺失）
+
+2026-10-26 拼接順稿：
+- 「話說回來，雖然 CLI 更新最頻繁，八月這時候也碰上一個怪現象：」— 類型：銜接
+- 「既然官方 remote control 更新這麼慢，連在手機上我也乾脆直接用 CLI。」— 類型：銜接
+結構調整：將八月章節中討論 CLI 停止更新的段落移至更新頻率討論之後，並在行動端連線前補上銜接句。
 -->

@@ -213,8 +213,9 @@ Opus 4.7 已經爛到吹噓的聲音都快沒了，堪稱當年 GPT-5 災難級�
 
 要小心的就是這個。除了壓縮窗口要自己設置之外，記得要關掉 nested subagent、限制總 subagent 的個數。
 
+### 燒 token 永動機：官方的 dynamic workflow
 
-## 併入：燒 token 永動機
+不只我自己寫的編排腳本會出事，官方後來推出的功能也一樣。
 
 沒開 ultracode，它也給我自動觸發 dynamic workflow。一回神，103 個 agent 已經在路上了，氣死。看來我得研究有什麼參數可以把它強制關掉。不過老實說，我這個 request 只是在殺雞，所以也看不出來牛刀的優越性在哪。
 
@@ -228,6 +229,8 @@ Claude Code subagent 正式進入俄羅斯娃娃時代——subagent 可以再�
 
 dynamic workflow 這東西屬於 Anthropic 內部的御用玩具，要無限 token 才能放心用。沒事最好別用，不然就是在設定中限制 subagent 的數量。
 
+> **後記（2026-10-20）**：subagent 現在的設定：巢狀預設最多到主對話以下三層，要關掉就設 `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1`。每個 session 的 subagent 總數上限已在 v2.1.224 拿掉，所以內建真正能壓住爆量的是並行上限 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`（預設 20）。
+
 <!--
 2026-10-09 W42 併入碎念：「dynamic workflow 沒事別用」（10-09 Threads 回覆）接在本節末，自碎念存檔刪除。
 -->
@@ -235,8 +238,6 @@ dynamic workflow 這東西屬於 Anthropic 內部的御用玩具，要無限 tok
 <!--
 2026-08-28 W36 主對話補記：〈燒 token 永動機：Anthropic 真的很努力〉（2026-06-13，364 字）併入本文並轉為 stub。該篇是吐槽而非事故紀錄，故 2026-08-22 那輪合併未收；本次仍以獨立一節收入、不與四起事故混寫，維持語域區隔。全文逐字保留，新增非原文句子僅小標一則（框架句）。
 -->
-
-> **後記（2026-10-20）**：subagent 現在的設定：巢狀預設最多到主對話以下三層，要關掉就設 `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1`。每個 session 的 subagent 總數上限已在 v2.1.224 拿掉，所以內建真正能壓住爆量的是並行上限 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`（預設 20）。
 
 <!--
 新增非原文句子清單（忠實度自首）：
@@ -247,4 +248,8 @@ dynamic workflow 這東西屬於 Anthropic 內部的御用玩具，要無限 tok
 5. 原 opus-47-week-review 的「## 結論」段與「## 100 美元方案 15 分鐘爆 50% quota」段被移位（結論併入 4.7 段末、15 分鐘那段移到實測落差段之後），文字未改 — 改寫（順序重排）
 6. 原 claude-getting-dumber-data 的「## 然後 Issue 就被關了」標題刪去，該節文字接在數據表之後 — 改寫（避免合併後標題層級過碎）
 其餘所有段落、表格、數據、引用連結與判準均逐字取自四篇原文（claude-code-cache-crisis、claude-getting-dumber-data、opus-47-week-review、ccx-quota-surge-forensics），僅做標題層級調整與順序重排，未新增原文沒有的數據或結論。原四篇各自的收尾句於合併時保留在所屬段落內，未另加新的總收尾。
+
+2026-10-26 拼接順稿：
+- 「不只我自己寫的編排腳本會出事，官方後來推出的功能也一樣。」— 類型：銜接
+將「併入：燒 token 永動機」移除拼貼標記並整併為事故四轄下的「### 燒 token 永動機：官方的 dynamic workflow」小節，後記移至文末收尾。
 -->

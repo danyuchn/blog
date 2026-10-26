@@ -41,7 +41,7 @@ Miasma 自我檢查步驟：
 
 ### 第二波：Hades（6/11）
 
-上個月 Miasma 攻擊（紅帽 npm 套件後門）還沒平息，同一個攻擊組織 TeamPCP/UNC6780 又升級武器，推出代號 Hades 的新一波攻擊。這次他們跨到 Python 生態系，並直接把 Claude Code、Cursor、Copilot、Gemini CLI 等 14 款 AI 工具當成攻擊媒介。目前已確認有 294,842 個 secrets 從 6,943 台機器外洩。
+兩天前的 Miasma 攻擊（紅帽 npm 套件後門）還沒平息，同一個攻擊組織 TeamPCP/UNC6780 又升級武器，推出代號 Hades 的新一波攻擊。這次他們跨到 Python 生態系，並直接把 Claude Code、Cursor、Copilot、Gemini CLI 等 14 款 AI 工具當成攻擊媒介。目前已確認有 294,842 個 secrets 從 6,943 台機器外洩。
 
 攻擊有哪些新手法：
 
@@ -168,4 +168,7 @@ MCP server 的數量在過去幾個月暴增。Twinkle Hub、mcp-taiwan-legal-db
 6. Hades 段的 `rm -rf ~/` 字面改為描述「整個家目錄的遞迴刪除」— 改寫（避免文章帶可直接複製的破壞性指令，事實未變）
 7. 原文的 ①②③④ 圈號序改為純文字箭頭串接 — 改寫（符號替換，語意不變）
 其餘所有段落、指令、finding 清單、案號與資料來源均逐字取自三篇原文（supply-chain-miasma-hades、codex-argues-with-google-support、security-scan-before-mcp-install），僅做標題層級調整與少量段落合併（如「為什麼讓 AI 自己評估」的兩個 H3 併為兩段），未新增原文沒有的建議或數據。
+
+2026-10-26 拼接順稿：
+（將 Hades 節「上個月 Miasma 攻擊」修正為「兩天前的 Miasma 攻擊」以消除前後文時間矛盾，其餘依規則逐字保留作者口語與接縫外文字）
 -->

@@ -46,11 +46,7 @@ Claude Mod 正式登陸 Desktop App，大家都在討論，我看到每個人都
 
 ![遮罩 Mod 的實際效果：Claude Code 輸出的整理內容裡，人名與聯絡方式都被黑條遮住，其餘文字照常顯示。](/blog/assets/posts/claude-mods-mask-and-warm-cache/2-mask-mod-demo.jpg)
 
-## 開源
-
-暖快取外掛修了一些小 bug，然後正式開源。因為我平常沒有用 Desktop App 的習慣，所以目前只有 CLI 版，徵求有在用的幫忙順手改一下、測一下、發 PR。
-
-兩個 mod 都在這個 repo：[claude-mods](https://github.com/danyuchn/claude-mods)。
+做完之後我才發現，Claude Code 原生就有類似的機制。
 
 ## Claude Code 原生的閒置壓縮
 
@@ -68,6 +64,12 @@ Claude Mod 正式登陸 Desktop App，大家都在討論，我看到每個人都
 - Ollama 一次判一批時，回傳格式不能用陣列，模型會漏項，後面全部錯行。要每個候選一個固定 key 的 JSON schema。
 - 第一次在全螢幕模式下，剛串流完的回覆沒套用遮蔽；重開對話或下一題就正常，原因未查明。上課前先問一題確認黑條出來。
 
+## 開源
+
+暖快取外掛修了一些小 bug，然後正式開源。因為我平常沒有用 Desktop App 的習慣，所以目前只有 CLI 版，徵求有在用的幫忙順手改一下、測一下、發 PR。
+
+兩個 mod 都在這個 repo：[claude-mods](https://github.com/danyuchn/claude-mods)。
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「後來我又做了兩個，這篇講這兩個，以及 Claude Code 自己加進來的一個功能。」 — 類型：框架句
@@ -78,4 +80,8 @@ Claude Mod 正式登陸 Desktop App，大家都在討論，我看到每個人都
 6. 「10/08 發現…」 — 類型：改寫（原文「剛剛發現」，加上貼文日期）
 7. 各 H2 標題（暖快取外掛／錄課用的遮罩 Mod／開源／Claude Code 原生的閒置壓縮／做的時候踩到的坑） — 類型：框架句
 8. 三張圖片的 alt 文字 — 類型：改寫（依截圖內容轉述，非原貼文句子）
+
+2026-10-26 拼接順稿：
+- 「做完之後我才發現，Claude Code 原生就有類似的機制。」— 類型：銜接
+結構調整：將「## 開源」小節移至文末踩坑紀錄之後作為收尾，並在官方閒置壓縮章節前加入過渡句。
 -->

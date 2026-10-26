@@ -39,8 +39,6 @@ Gemini 2.5 Flash 一直回 `{}` 空回應，根因是 `thinking.budget_tokens: -
 
 設定 `scheduled_at` 排程後，batch 送出時的 response 不能信。回讀 `GET /emails/{id}` 才是真實狀態。如果欄位回讀 null，代表排程沒成功、信已經立刻寄出去了。
 
-這五個坑橫跨自己的程式碼、函式庫、CLI、API，唯一可靠的應對方式都一樣：不要相信「沒有錯誤」這個訊號，主動回讀或探測一次真實狀態再往下走。
-
 ### 6. Git：squash merge 讓 `--is-ancestor` 必然誤判成「沒併」
 
 判斷 PR 是否併入 main 前忘了先 `git fetch`，直接用 `git merge-base --is-ancestor` 判斷，得到「沒併進去」的錯誤結論，還據此在過期的 main 上多做一次合併——push 被 non-fast-forward 擋下才沒釀事。真相是那兩個 PR 都是 squash merge：squash 之後原始 commit 永遠不會是 main 的祖先，`--is-ancestor` 因此必然回報未合併，跟內容有沒有進去無關。要判斷內容在不在，改用 `gh pr view <n>` 或直接 `git diff <squash-commit> <branch>` 比內容。
@@ -181,9 +179,9 @@ codex 雙開中。。。
 
 這次連敗 8 天，沒有任何一行紅字救我。launchd 那邊看不出異狀，YouTube 後台沒有失敗任務，因為根本沒有任務送到那裡。整件事最便宜的偵測點，其實就是那句 `launchctl list | grep <label>` 看一眼退出碼——只是我 8 天都沒去看。
 
-## 補記：精簡環境裡的守衛，看起來有跑、其實沒守
+## 精簡環境裡的守衛，看起來有跑、其實沒守
 
-這週工作日誌裡又累積了一串同類型的坑，全部都是 rc=0、沒有任何錯誤訊息：
+後來工作日誌裡又累積了一串同類型的坑，全部都是 rc=0、沒有任何錯誤訊息：
 
 - `ssd-swap-guard.sh` 在 launchd 精簡 PATH 下找不到 `sysctl`，swap 欄位一直是空的，等於沒守 swap。已在守衛腳本內補 `/usr/sbin`。
 - `~/.claude/` 是受保護路徑：headless 跑的模型即使 allowedTools 放行 Write／Edit 仍寫不進去。評測腳本 10/08 起 B1 全部因此沒產出，產出資料夾要放 `~/.claude` 外。
@@ -228,4 +226,8 @@ codex 雙開中。。。
 其餘所有段落、數據、引用、截圖與判準均逐字取自七篇原文（silent-failures-verify-real-state、opus-48-tool-call-parse-bug、opus-48-confabulation-four-days、opus-worktree-race-false-prompt-injection、opus-5-thinking-only-empty-turns、launchd-silent-failure-streak、pending-guard-hook-against-confabulation），僅做標題層級調整與順序重排。原文中指涉「上一篇／這篇」的句子（如 pending-guard 開頭的「上次寫過⋯這篇講我後來做了什麼」）於合併時刪去。圖片改引用合併後的資產目錄，檔案本身未更動。
 
 2026-09-04 週例行補記：第一層新增 6-9 四個案例（squash merge `--is-ancestor` 誤判、Firestore 型別回 0、抽取器缺篇零錯誤複發、QA 閾值誤判轉錄素材），素材取自 09-01～09-03 daily notes 踩坑段（pdt-platform／harness 專案），逐案例精簡改寫、隱去內部檔名與確切人名。新增銜接句：「這九個坑橫跨自己的程式碼、函式庫、CLI、API、資料庫查詢、抽取腳本到品管規則，共同的結構都一樣：檢查通過、零錯誤、回傳成功，這幾種訊號沒有一個能代表『東西是對的』。」原第一層結尾句「這五個坑…」保留不動，新結尾句為框架句延伸。
+
+2026-10-26 拼接順稿：
+無新增過渡句。
+（刪去第 5 點後重複的舊版五項總結段落，移除文末章節的「補記：」標記，並修正「這週」時間詞為「後來」）
 -->

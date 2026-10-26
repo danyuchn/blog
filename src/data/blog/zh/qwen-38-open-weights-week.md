@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - model-comparison
   - open-source
-description: '從 Qwen 3.8 27B 模型卡放出、實測體感、到 35B A3B 在 Modelscope 註冊又被刪掉，一週之內的完整過程。'
+description: '從 Qwen 3.8 27B 模型卡放出、實測體感、35B A3B 被刪，到八月底 Flash Next 登場的完整過程。'
 ---
 
 之前寫《[最需要 CLI 的電腦，主人最不可能學會 CLI](/blog/posts/zh/cli-resource-paradox-local-models)》的時候，裡面寫了一句期待：希望 27B 開放權重後可以有人出量化版，也希望之後能夠有 MOE 版本的小模型。這篇就是那個期待的後續。
@@ -43,8 +43,9 @@ description: '從 Qwen 3.8 27B 模型卡放出、實測體感、到 35B A3B 在 
 
 需要 a3b 這種 moe。
 
+本以為只能繼續乾等。
 
-## 補記：Qwen 3.8 Flash Next
+## 等到了 Qwen 3.8 Flash Next
 
 八月二十五日晚上，續集來了。
 
@@ -69,4 +70,8 @@ description: '從 Qwen 3.8 27B 模型卡放出、實測體感、到 35B A3B 在 
 
 <!--
 2026-08-21 W35 主對話補記：語意去重掃出 archive 碎念「該關注的是下週的開放權重」與本文相似度 0.809，該條正是本文這一週的預告。已逐字併入本文開頭，並從 ai-micro-notes-2026-archive 的 zh/en 刪除（池子縮減）。新增非原文句子：「上週我在碎念裡就先講了該關注什麼：」— 銜接。
+
+2026-10-26 拼接順稿：
+- 「本以為只能繼續乾等。」— 類型：銜接
+結構調整：移除小標「補記：」字樣，更新 description 納入 Flash Next，並在 A3B 遭刪與續篇之間補上過渡句。
 -->

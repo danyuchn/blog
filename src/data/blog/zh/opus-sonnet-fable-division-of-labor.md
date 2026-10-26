@@ -12,6 +12,8 @@ tags:
 description: 'Opus 5.5、Sonnet 5.5、Fable 5.1 都有了之後，我自己的分工是 Opus 親自指揮驗證部署、Sonnet 當 subagent 實作、Fable 偶爾請出場當顧問。'
 ---
 
+手頭上同時有了 Opus 5.5、Sonnet 5.5 和 Fable 5.1 之後，大家最常問的大概就是怎麼分工。
+
 ## Fable 的意義
 
 很多人都在說，Opus 5.5 跟 Fable 5.1 都有了，而且 Opus 的能力又比 Fable 強，那 Fable 的意義到底是什麼？
@@ -19,8 +21,6 @@ description: 'Opus 5.5、Sonnet 5.5、Fable 5.1 都有了之後，我自己的�
 講一下我自己的觀察：
 
 我感覺 Fable 的預訓練參數量可能更大，所以它的世界觀比較廣。同一件事丟給它，常常會看到一些我自己都不知道的邊界問題，就是那種我根本沒想到要問，它自己先提出來的東西。
-
-所以我現在的分工大概是這樣：實作交給 Opus，比較大的架構或策略，交給 Fable 看。
 
 像我這幾天在整理 GMAT 的服務流程規格，是 Sonnet 先抽 61 份資料、Opus 寫，最後 Fable 審。每週例行要砍掉哪些步驟，我也是先讓 Fable 做一輪對抗式審查，看完再自己拍板。這種時候 Fable 的視野對我來說更像一個導師。
 
@@ -46,6 +46,8 @@ Sonnet 5.5 實測完了，幾個懶人結論：
 - Sonnet 實作。5.5 能力夠，但是需要有強模型驗證跟偶爾搭手介入，適合讓主 agent 跟他對話就好，親自對話會因為讀心能力弱而搞得人類有點煩
 - Fable 作為顧問，給 Opus 策略面上的第二意見。他的知識邊界明顯比 Opus 更廣，更適合看到 unknown unknowns。雖然也適合親自對話，但奈何實在太貴，偶爾 /advisor 請出場就好
 
+順帶一提，Claude Code CLI 有個冷知識：`/model opusplan` 是一個特殊的代號，用了之後會自動進入 Opus 5.5 Plan Mode，但是實作轉 Sonnet。
+
 ## Reddit 風向
 
 Sonnet 5.5 發布大概 15 小時的時候，我去 Reddit 翻了一下風向。
@@ -66,7 +68,7 @@ Sonnet 5.5 發布大概 15 小時的時候，我去 Reddit 翻了一下風向。
 
 ## 系統卡
 
-我在讀 Sonnet 5 的系統卡，這一段最有趣（請讀圖）。
+除了社群討論，我也去翻了官方系統卡。我在讀 Sonnet 5 的系統卡，這一段最有趣（請讀圖）。
 
 ![Gemini 整理的 Sonnet 5 系統卡模型福利段落截圖，第一張](/blog/assets/posts/opus-sonnet-fable-division-of-labor/1-system-card.jpg)
 
@@ -82,19 +84,15 @@ Gemini 給出的總結好鮮活也好到位：
 
 系統卡原文在這：[Claude Sonnet 5 System Card](https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf)
 
-## 補充：適度讀心
+## 適度讀心
 
-補充一點：會思考使用者的真實意圖（適度讀心）。
+至於為什麼主力指揮依然留給 Opus 5.5？會思考使用者的真實意圖（適度讀心），這對我很重要。
 
-這對我很重要，我下 prompt 都會給脈絡，GPT 6.1 sol 看不懂只會按字面（6 更不用說），但是 Opus 5.5 掌握得很好。
+我下 prompt 都會給脈絡，GPT 6.1 sol 看不懂只會按字面（6 更不用說），但是 Opus 5.5 掌握得很好。
 
 當然也有嚴格要按字面來的任務，或許那裡 GPT 比較適合也說不定。
 
 甚至在長上下文壓縮後，這個讀心的準確度也沒有跑掉多少，這個就不知道是 base model 強還是 claude code harness 強了。
-
-## 補充：opusplan
-
-Claude Code CLI 冷知識：`/model opusplan` 是一個特殊的代號，用了之後會自動進入 Opus 5.5 Plan Mode，但是實作轉 Sonnet。
 
 <!--
 2026-10-09 W42 併入碎念：「opusplan」（10-02 Threads 貼文）新增為一節，小標為框架句，自碎念存檔刪除。
@@ -112,4 +110,11 @@ Claude Code CLI 冷知識：`/model opusplan` 是一個特殊的代號，用了�
 8. 三張圖片的 alt 句子 — 類型：框架句
 9. 「Sonnet 5.5 實測完了，幾個懶人結論：」由兩行合為一句；多處斷句／標點微調；刪除原文末尾的表情符號 — 類型：改寫
 10. 「調查行子代理」更正為「調查型子代理」 — 類型：改寫（錯字）
+
+2026-10-26 拼接順稿：
+- 「手頭上同時有了 Opus 5.5、Sonnet 5.5 和 Fable 5.1 之後，大家最常問的大概就是怎麼分工。」— 類型：框架
+- 「順帶一提，Claude Code CLI 有個冷知識：」— 類型：銜接
+- 「除了社群討論，我也去翻了官方系統卡。」— 類型：銜接
+- 「至於為什麼主力指揮依然留給 Opus 5.5？」— 類型：銜接
+增加開頭導言呼應標題分工，刪除前文與 Sonnet 實作矛盾的舊分工句，將 opusplan 併入實測章節並移除補充小標。
 -->

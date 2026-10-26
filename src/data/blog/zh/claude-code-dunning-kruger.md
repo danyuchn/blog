@@ -58,6 +58,8 @@ description: '一個非工程師背景的重度使用者，分享 Claude Code �
 
 光是看新舊 schema 欄位對照，我就想放火燒了資料庫。真的很好奇，沒有 AI 的那幾年，工程師們是怎麼、花多久完成這一切的。
 
+寫技術文件也超好用，放到 Overleaf 一次過。感覺自己跟 AI 講話越來越 nerdy 了——fork、branch、merge、push、fallback、prop、hook，這些詞每天掛在嘴邊。
+
 ## Skills 與 MCP 的白話解釋
 
 很多人搞不清楚 Skills 跟 MCP 的差別，我用秘書來比喻：
@@ -89,6 +91,10 @@ Opus 解不了的東西，交給 Codex 竟然可以一遍過。Codex 很慢很�
 - `--since YYYYMMDD --until YYYYMMDD`：指定日期範圍
 - `--breakdown`：按 model 拆分
 
-寫技術文件也超好用，放到 Overleaf 一次過。感覺自己跟 AI 講話越來越 nerdy 了——fork、branch、merge、push、fallback、prop、hook，這些詞每天掛在嘴邊。
-
 > **後記（2026-10-20）**：ccusage 現在會把它偵測到的所有 coding CLI（Codex、Gemini CLI 等）合併成一張報表，只想看 Claude Code 的話，改打 `npx ccusage@latest claude monthly`。
+
+<!--
+2026-10-26 拼接順稿：
+無新增過渡句。
+（將混在成本管理小節中的技術文件與術語感觸段落移至「一天完成大型工程」節末，並將 ccusage 後記歸位至成本管理小節內）
+-->

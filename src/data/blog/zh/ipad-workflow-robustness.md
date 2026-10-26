@@ -23,9 +23,11 @@ description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是
 
 連線層我用 Tailscale 配 MOSH 協定。安全、不容易斷，重點是切換網路不用重連——從家裡 wifi 走出門變行動網路，session 還活著。
 
-終端機 app 我從 Termius 換成了 Moshi。Moshi 原生就是為 AI agent CLI 設計的，方塊字 render 不容易破碎。Termius 我實測 CJK render 有 bug，中文字會跑掉。
+終端機 app 我從 Termius 換成了 Moshi。Moshi 原生就是為 AI agent CLI 設計的，方塊字 render 不容易破碎。Termius 我實測 CJK render 有 bug，中文字會跑掉。我最愛的遠端終端機 App Moshi，後來竟然出了網頁版介面，搭配 Herdr 如有神助。開發者好像是日本人旅居曼谷數位遊牧，不愧是我大曼谷。
 
 後備方案：Chrome 遠端桌面或 AnyDesk。SSH 終端能處理九成的事，但偶爾要看終端機以外的東西——某個 GUI app、某張圖——這時候用遠端桌面墊一下。它不是主力，是備胎。
+
+另外是在手機上看家裡電腦的任何檔案：Markdown 直接內建渲染預覽、HTML 直接網頁版檢視、300 多頁的電子書 PDF 秒速開啟、1GB 多的影片也沒有延遲。拿 copyparty 配 tailscale 來搭配 remote control 的 Claude Code 或 Codex，簡直是一絕。
 
 ## Mac mini 端的穩健性
 
@@ -38,6 +40,16 @@ description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是
 - **插一個假 HDMI 欺騙接頭**。出門把螢幕關了，系統還以為有一台螢幕接著，會保留一個虛擬桌面，遠端進去畫面是正常的。
 
 另外兩個小設定：電腦要防休眠，我用 `caffeinate` 指令頂著；tmux 要給 full disk access，不然有些路徑它讀不到。
+
+這套穩健性的邏輯，出差在旅館也完全適用。回台北入住旅館，出門跟朋友吃飯前做的 SOP：
+
+1. 拿隨便一張晶片卡插著取電。
+2. 電腦保持充電連網。
+3. 咖啡因指令防休眠。
+4. 開 tailscale。
+5. 遠端桌面試一下有通，當備案。
+
+然後就可以邊吃飯邊偷用 Claude Code。
 
 ## iPad 端的輸入策略
 
@@ -55,25 +67,6 @@ description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是
 
 最後兩個好用的小東西：右上角有個小按鈕可以直接看 diff；另一個按鈕能預覽 localhost。再裝個 fileviewer 套件，iPad 就變成檔案總管，各種文檔、圖片、影片都能開。
 
-
-## 併入：出門吃飯前，讓 Claude Code 在旅館背景偷跑的五步 SOP
-
-回台北入住旅館，出門跟朋友吃飯前做的 SOP：
-
-1. 拿隨便一張晶片卡插著取電。
-2. 電腦保持充電連網。
-3. 咖啡因指令防休眠。
-4. 開 tailscale。
-5. 遠端桌面試一下有通，當備案。
-
-然後就可以邊吃飯邊偷用 Claude Code。
-
-## 併入：兩個遠端工具
-
-在手機上看家裡電腦的任何檔案：Markdown 直接內建渲染預覽、HTML 直接網頁版檢視、300 多頁的電子書 PDF 秒速開啟、1GB 多的影片也沒有延遲。拿 copyparty 配 tailscale 來搭配 remote control 的 Claude Code 或 Codex，簡直是一絕。
-
-我最愛的遠端終端機 App Moshi，竟然出了網頁版介面，搭配 Herdr 如有神助。開發者好像是日本人旅居曼谷數位遊牧，不愧是我大曼谷。
-
 <!--
 2026-08-28 W36 碎念併入：live 碎念「copyparty 配 tailscale」與 archive 碎念「Moshi 出網頁版」逐字併入本節，兩條都屬本文的遠端工作流主題。已從 zh/en 對應檔刪除。新增非原文句子僅小標一則（框架句）與「拿 copyparty 配 tailscale 來」的主詞還原（原碎念標題即主詞）。
 -->
@@ -85,5 +78,8 @@ description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「整組就是」 — 類型：併入碎念（iPad 加鍵盤是旅遊生產力最佳組合，2026-08-14 週報併入）
--->
 
+2026-10-26 拼接順稿：
+- 「這套穩健性的邏輯，出差在旅館也完全適用。」— 類型：銜接
+（移除兩個「併入：」標題，將遠端工具併入「連線基礎設施」，將旅館背景偷跑 SOP 作為差旅情境併入「Mac mini 端的穩健性」）
+-->
