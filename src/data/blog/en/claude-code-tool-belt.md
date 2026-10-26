@@ -28,4 +28,10 @@ Conversations from the past 30 days are stored in jsonl. You can install <https:
 
 ## Systematic Understanding: how-claude-code-works
 
+Beyond command-line tools, if you want to understand how it works under the hood, this learning resource is well worth reading.
+
 I've been scrolling Threads less and reading this site more: <https://windy3f3f3f3f.github.io/how-claude-code-works/>. Systematic learning beats scattered posts by a mile.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): added bridge sentence transitioning from CLI tools to systematic learning resources; new bridge sentences: "Beyond command-line tools, if you want to understand how it works under the hood, this learning resource is well worth reading."
+-->

@@ -21,6 +21,8 @@ While everyone was going crazy over lobster, I was very clear about my own capab
 
 Claude Code plus remote control already achieves a good balance between these two constraints, and it's deeply integrated into 90% of my work. I'm content with that. Get the multi-agent project management right during work hours, and spend the rest of the time living an unplugged human life. What's wrong with that?
 
+Beyond guarding the boundaries between life and operations, there is also a hard defensive line for data privacy at work.
+
 ## Company Data Can't Touch AI? Presidio Can Help
 
 This is probably a pain point for many: you know Claude is great, but company privacy policies forbid sending any data to AI.
@@ -44,3 +46,7 @@ Security awareness is non-negotiable when working with Claude Code:
 **Conversation history management**: History auto-deletes after 30 days by default. There's a JSON parameter (`cleanupPeriodDays`) to configure this. For sensitive operations, make sure this setting is where you want it.
 
 **Share methods, not products**: Some automation tools I've built with Claude Code, I have no plans to share publicly. Sharing the finished product could have legal implications, but sharing the methodology is safe.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): no sections moved or merged, added transition sentence bridging personal operational boundaries into workplace data privacy; new bridge sentences: "Beyond guarding the boundaries between life and operations, there is also a hard defensive line for data privacy at work."
+-->

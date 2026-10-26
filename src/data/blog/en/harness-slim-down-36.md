@@ -73,6 +73,18 @@ The full process, plus my own tricks for writing prompts and follow-up messages,
   <iframe src="https://www.youtube.com/embed/OFAPR52Zwd4" title="How to manage your own Claude Code harness" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## Don't Dump the Last Conversation's JSON Into It
+
+Beyond slimming down standard rules, another common source of context pollution is dumping the entire history of the previous session straight in.
+
+Wait, why would you feed it the context JSON from the last conversation?
+
+The harness comes in several kinds — AGENTS.md, rules, skills, hooks — and they can all carry the load. Summarizing the key points from the previous conversation into a temporary doc works well too.
+
+Raw session history holds too many tool calls, outputs, and flags that are useless; even auto compact strips those out.
+
+I'd suggest doing a fresh checkup on your harness first.
+
 ## For the folks who love to drop "just use Codex instead"
 
 A few words for the people who love to swing by and add "why bother with all this fuss, just use Codex":
@@ -83,16 +95,8 @@ A few words for the people who love to swing by and add "why bother with all thi
 
 It's not easy finding someone willing to share these days. Reading is its own reward — less trolling, more hands-on.
 
-## Merged in: Don't Dump the Last Conversation's JSON Into It
-
-Wait, why would you feed it the context JSON from the last conversation?
-
-The harness comes in several kinds — AGENTS.md, rules, skills, hooks — and they can all carry the load. Summarizing the key points from the previous conversation into a temporary doc works well too.
-
-Raw session history holds too many tool calls, outputs, and flags that are useless; even auto compact strips those out.
-
-I'd suggest doing a fresh checkup on your harness first.
-
 <!--
 2026-08-28 W36 main-thread note: "Don't Dump the Last Conversation's JSON Into It, Check Your Harness First" (2026-06-09) was merged in here and turned into a stub. Kept verbatim; the only added non-original sentence is the subheading (framing).
+
+2026-10-26 splice cleanup (mirrors zh): removed "Merged in" marker and moved "Don't Dump the Last Conversation's JSON Into It" before the closing section on Codex comments; new bridge sentences: "Beyond slimming down standard rules, another common source of context pollution is dumping the entire history of the previous session straight in."
 -->

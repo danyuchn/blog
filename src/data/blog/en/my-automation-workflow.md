@@ -24,7 +24,7 @@ I finally figured it out after reading the official docs: custom commands is the
 
 Going forward, just call everything a skill.
 
-If you're still writing `.md` files in `.claude/commands/`, the official guidance is to migrate to `~/.claude/skills/`. Migration isn't complex, mainly adding frontmatter.
+If you're still writing `.md` files in `.claude/commands/`, the official guidance is to migrate to skills. Existing `.claude/commands/` files still work; migration isn't complex, mainly adding frontmatter: project ones go in `.claude/skills/`, and `~/.claude/skills/` is for personal ones.
 
 This clarification mattered for my stack's layering. I used to put "command-like" things in commands and "knowledge-like" things in skills. Now I can manage both under a unified skill structure.
 
@@ -40,7 +40,7 @@ Real uses:
 /loop 1d clock me in on the ERP
 ```
 
-Congratulations, you've earned fully automatic work days.
+Congratulations, you've earned fully automatic work days. One thing to note, though: `/loop` only runs while the session stays open, and recurring loops expire after 7 days, so for a clock-in that runs every workday use a cloud or Desktop scheduled task instead.
 
 **Case B: Messenger DM relay**
 
@@ -158,4 +158,6 @@ The piece I'm still missing is "long-term memory integration." Obsidian, auto me
 
 Ideal state is a meta-skill that can search across all four sources. Probably next month's project.
 
-> **Postscript (2026-10-20):** Two updates. `/loop` only runs while the session stays open, and recurring loops expire after 7 days, so for a clock-in that runs every workday use a cloud or Desktop scheduled task instead. And on commands: existing `.claude/commands/` files still work. If you do convert them to skills, project ones go in `.claude/skills/`; `~/.claude/skills/` is for personal ones.
+<!--
+2026-10-26 splice cleanup (mirrors zh): removed standalone postscript and integrated /loop limitations and commands/skills placement back into the body; new bridge sentences: "One thing to note, though:", "Existing `.claude/commands/` files still work; migration isn't complex, mainly adding frontmatter: project ones go in `.claude/skills/`, and `~/.claude/skills/` is for personal ones."
+-->

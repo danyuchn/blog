@@ -42,7 +42,7 @@ After the fix, I ran the recorded commands through the new hook: asks dropped fr
 
 What I fixed was ask. Deny rules still scan the raw command, so a heredoc that merely mentions `git reset --hard` still gets blocked outright. That's a known limitation for now.
 
-Even while the weekly draft was being put together, the heredoc false block happened again.
+Even while putting together this record, the heredoc false block happened again.
 
 ## Two side effects
 
@@ -50,7 +50,7 @@ Even while the weekly draft was being put together, the heredoc false block happ
 
 **A missing cwd exclusion pointed at the wrong project.** The stakeholder-context hook had no cwd exclusion. A contact with the same name inside GMAT-skills got pointed at a different client project. I added a third column for cwd exclusion, and that stopped.
 
-What these share is what I wrote in my weekly draft: a guard hook should match the command position, not the whole string. After it ships, count the hook events in the transcript instead of replaying commands, and check before and after with a control set.
+What these share: a guard hook should match the command position, not the whole string. After it ships, count the hook events in the transcript instead of replaying commands, and check before and after with a control set.
 
 I wrote about other guard-hook design earlier, in [how to write a gate that actually blocks](/blog/posts/en/gates-that-actually-block).
 
@@ -80,4 +80,6 @@ Numbers (14 days, 159, ~70%, 135->50, 27/27), filenames and flags come from the 
 
 <!--
 Main-thread review (W41): cut inference/framing sentences (#2 second half, #3, #12); fixed the replay contradiction (counting uses transcript events; 135->50 is the result of re-running recorded commands through the new hook); #14 refers to the weekly draft; removed the 'used to match only on the contact' inference.
+
+2026-10-26 splice cleanup (mirrors zh): removed "weekly draft" splice artifacts in favor of general principles; new bridge sentences: "Even while putting together this record, the heredoc false block happened again.", "What these share: a guard hook should match the command position, not the whole string. After it ships, count the hook events in the transcript instead of replaying commands, and check before and after with a control set."
 -->

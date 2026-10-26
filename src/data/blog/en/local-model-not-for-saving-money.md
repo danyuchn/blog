@@ -28,6 +28,8 @@ If what you want is a local model to handle grunt work, there are better options
 
 That's 3.7 Flash, released last night, already wired into Claude Code and good enough for real work.
 
+> **Postscript (2026-10-20):** This model has since been deprecated; check Google's current model list.
+
 ## Privacy is the one advantage nothing else replaces
 
 The one advantage a local model has that nothing else replaces is protecting confidential data. If you genuinely have that need, hardware that just barely runs a small redaction model is about all you need. Let the data get redacted by the local model during idle hours at night, send it to a commercial AI during the workday, then restore it locally. That's the arrangement that actually pays off.
@@ -46,6 +48,8 @@ The third trap was using curl against the endpoint to check compatibility. Syste
 
 The three traps add up to this: before you decide whether to spend NT$100,000, make sure the numbers you're deciding with are real.
 
-> **Postscript (2026-10-20):** This model has since been deprecated; check Google's current model list.
+I later turned this math into a short, "Buying hardware to run a local model doesn't save money": <https://youtube.com/shorts/8TP4HssU0Ow>
 
-Postscript: I later turned this math into a short, "Buying hardware to run a local model doesn't save money": <https://youtube.com/shorts/8TP4HssU0Ow>
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved Gemini 3.7 Flash deprecation note right after image description, and removed postscript prefix from closing video link; new bridge sentences: none
+-->

@@ -21,10 +21,14 @@ Luckily, the first such thing was studying and taking exams. Hence a perfect bas
 
 So at the end of the day, I teach AI not to rake in cash, but entirely because aside from the things I'm obsessively interested in, ADHD basically makes me a useless person. And right now my interests are AI and teaching.
 
+After starting with new tools, this trait got magnified even further. The biggest trouble after I started using Claude Code was discovering that the ADHD symptoms that weren't obvious in my childhood had been completely unleashed by AI.
+
 The upside is that with the things I'm obsessed with, I dig in deep very easily. Compared to certain instructors who just run a course to fence off money, I've got an extra layer of respect for the things I'm obsessed with, plus a self-imposed demand to be exceptional at them. It's the positive feedback after reaching excellence that loops back to stimulate my dopamine.
 
 Hard to describe this feeling. Not sure if anyone else with ADHD has gone through the same thing.
 
-(You have to look at childhood. ADHD isn't acquired later in life; the vast majority is congenital, and the clinical diagnostic standard requires symptoms to appear in childhood. So asking family, or your teachers and classmates and friends from when you were a kid, will be more accurate.)
+If you want to look back and check yourself, you actually have to look at childhood: ADHD isn't acquired later in life; the vast majority is congenital, and the clinical diagnostic standard requires symptoms to appear in childhood. So asking family, or your teachers and classmates and friends from when you were a kid, will be more accurate.
 
-By the way, the biggest trouble after I started using Claude Code was discovering that the ADHD symptoms that weren't obvious in my childhood had been completely unleashed by AI.
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved Claude Code note into the body under the AI obsession paragraph, and connected the childhood diagnosis note to the closing question; new bridge sentences: "After starting with new tools, this trait got magnified even further.", "If you want to look back and check yourself, you actually have to look at childhood:"
+-->

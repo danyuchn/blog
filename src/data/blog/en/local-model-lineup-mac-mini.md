@@ -32,9 +32,11 @@ Speech transcription splits two ways: Qwen3 ASR for pure Chinese, and a cross-li
 
 As for image recognition, speech-to-text, and data cleanup and labeling, none of which touch privacy, I hand all of it to Gemini Flash in the cloud. Cheap, plenty of compute, and the tedious stuff gets outsourced. This kind of material has no privacy concerns to begin with, so even a commercial API from a Chinese model house would be fine. I just happen to prefer this cloud option.
 
-Someone asked what local models are actually good for. My list: speech transcription, periodic knowledge-base cleanup and link repair, OCR, data de-identification, video generation (very challenging, still trying), and music and image generation (far better than I expected).
+Beyond the transcription and recognition mentioned earlier, someone asked what local models are actually good for. My list: periodic knowledge-base cleanup and link repair, data de-identification, video generation (very challenging, still trying), and music and image generation (far better than I expected).
 
 There's also one trick on the model-selection side. Gemini is the strictest about recitation errors (the guardrail that halts generation when a model starts reciting copyrighted content), and Qwen is the loosest. So running Qwen through a US-based provider on OpenRouter is the best answer: deployed in a US data center, so the data never goes to China, and the model only blocks politically sensitive content, not copyright.
+
+Selection doesn't always have to chase huge parameter counts either. A few days back someone brought up small models under one of my posts, and I replied: smart. Everyone's racing on big models right now, but small models are what blooms everywhere in the future.
 
 ## The Real Bottleneck Isn't Model Choice
 
@@ -46,7 +48,7 @@ The same batch of logs holds two other trip-ups. One: qwen3-coder:30b was alread
 
 On the morning of 31 July I was watching swap. The day before I'd accidentally loaded two models at once, burned through a pile of swap, and the SSD was writing at 1TB/H. Scared the life out of me. Now I watch swap usage strictly.
 
-The Mac mini M4 Pro migration did hand me one pleasant surprise. Machine-to-machine transfer with Migration Assistant carried the TCC permissions across, which saved me re-authorizing everything one by one.
+Beyond day-to-day monitoring, there was a small hardware win too. The Mac mini M4 Pro migration did hand me one pleasant surprise. Machine-to-machine transfer with Migration Assistant carried the TCC permissions across, which saved me re-authorizing everything one by one.
 
 On the cost of the machine itself: Mac mini M4 Pro with 48GB. I paid a bit over NT$50,000 in May including AppleCare, and that was pre-price-hike plus employee pricing. Go look now and it's over NT$90,000. A computer is a production tool, and the line about still holding its value after a few years turns out to be true.
 
@@ -73,10 +75,10 @@ On the night of 30 July I confessed on Threads what these two weeks had turned m
 
 For English readers, the three habits are: (1) 慣老闆, the sweatshop boss: I work the Mac even while I sleep, with a pile of local-model schedules handling tasks; if there's an idle slot, I go pull a few more models off Hugging Face to benchmark. My girlfriend asked why the study is hotter than it used to be, and I'm not sure whether I should tell them it's because models are running non-stop. (2) 免費蕭貪仔, the freebie glutton: open-source models cost nothing to pull, so pull as many as possible and test as many as possible; the Mac mini's power draw is negligible anyway. (3) 吃到飽不吃撐不甘心, the all-you-can-eat compulsion: if I don't use up the quota a reset hands me, I regret it enough to 錘心肝 (pound my chest); so the moment it resets I go hard, and this month's tokens would have passed ten thousand US dollars on API pricing. Reflecting on all three.
 
-A few days back someone brought up small models under one of my posts, and I replied: smart. Everyone's racing on big models right now, but small models are what blooms everywhere in the future.
-
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「On the cost of the machine itself:」 — 類型：併入碎念（The Mac Mini Holds Its Value, No Joke，2026-08-14 週報併入）
+
+2026-10-26 splice cleanup (mirrors zh): moved small-model note to task selection section, de-duplicated transcription and OCR mentions, and added bridges; new bridge sentences: "Beyond the transcription and recognition mentioned earlier,", "Selection doesn't always have to chase huge parameter counts either.", "Beyond day-to-day monitoring, there was a small hardware win too."
 -->
 

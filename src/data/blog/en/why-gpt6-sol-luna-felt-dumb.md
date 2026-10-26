@@ -52,13 +52,7 @@ Continuing from above, I had Opus 5.5 take over the mess left by 6 Sol / Luna. I
 
 **3. It forgot the original intent of the whole task.** I stated the intent clearly: the teaching videos are being transcribed "to integrate my teaching thinking in the future." 6 Sol / Luna doesn't think about the implication behind that. What teaching-thinking analysis needs most is separating who is speaking, student or teacher. GPT only read the literal words, knew it had to transcribe, and never went on to interpret the intent and context.
 
-**4. Too much safety, not enough efficiency.** Most of a script of over two thousand lines was a network-blocking sandbox, layer upon layer of SHA-256 comparison, and defense against symlink attacks. I was just handling my own videos in my own account. Does that kind of thief-proofing need to exist?
-
-## In Codex it talks like a different person
-
-ChatGPT's chat mode and Codex (agent mode) talk like heaven and earth...
-
-Inside Codex, GPT's speech is defended like a brass wall:
+**4. Too much safety, not enough efficiency.** Most of a script of over two thousand lines was a network-blocking sandbox, layer upon layer of SHA-256 comparison, and defense against symlink attacks. I was just handling my own videos in my own account. Does that kind of thief-proofing need to exist? That over-defensiveness even bled into its tone of voice. ChatGPT's chat mode and Codex (agent mode) talk like heaven and earth... Inside Codex, GPT's speech is defended like a brass wall:
 
 > 我會A，不會B，我也會C，接下來D，不會把E當作F，也不會把G當成唯一的H。
 
@@ -66,7 +60,7 @@ Inside Codex, GPT's speech is defended like a brass wall:
 
 ## How 6.1 Sol feels
 
-How GPT 6.1 Sol feels:
+Later, they officially released 6.1. How GPT 6.1 Sol feels:
 
 1. It really does save quota (and that only holds for now, no guarantee in a few days)
 2. Its ability is about the same as 5.6 Sol, or slightly better
@@ -99,4 +93,6 @@ In my mind, Codex is now left with computer operation and image generation, and 
 5. 四個失敗模式的粗體小標 — 類型：改寫（排版）
 6. blockquote 後的括號英譯「(In English: ...)」 — 類型：框架句（原文中文句式的英文讀者輔助翻譯）
 7. 刪除原文兩處 emoji — 類型：改寫（刪除）
+
+2026-10-26 splice cleanup (mirrors zh): merged over-defensive talking style into failure mode 4 and added a timeline bridge before 6.1 Sol; new bridge sentences: "That over-defensiveness even bled into its tone of voice.", "Later, they officially released 6.1."
 -->

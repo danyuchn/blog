@@ -21,6 +21,8 @@ Anywhere that involves large amounts of text, I use OpenRouter — meeting trans
 
 A subscription suits people who lean hard on the same few models every day. But if your heavy lifting is "occasional, token-hungry, and not fussy about the priciest model," pay-as-you-go doesn't waste money on quota you never touch.
 
+On the pay-as-you-go side, GPT-5.6-Luna is cheap to the point of absurdity. I'm running it in two places: a browser extension like immersive translation, one-click translating 50-80 foreign-language pages a day; and a voice-input tool like Typeless called "Say It," used 100-150 times a day to clean up text. After 10 days, daily spend is under $0.01, and the cost dashboard just shows 0.0.
+
 ## Usage Inflates on Its Own, and You Never Feel It
 
 A tokenizer rewrite is the real shocker — 1.4x usage.
@@ -47,14 +49,18 @@ Just the facts, no comment on any individual:
 
 Each vendor's own subscription plan is basically the best deal you can get. The subsidy multiple runs as high as 10~50x. For example, I pay $100 USD for Claude, and in a month I get through an amount of usage that would cost about $5,000 USD at API rates. If you set up a big routing platform, you very likely have to run on API rates... is that really such a good idea?
 
-The same day, the same math showed up in another form. Three-way sharing. That's the funniest thing I've heard today, funnier than the mayoral candidate's big all-in-one AI portal. Have you never used Claude? Three-way sharing = three people going to ban hell together.
+The same day, the same math showed up in another form. Three-way sharing. That was the funniest thing I heard back then, funnier than the mayoral candidate's big all-in-one AI portal. Have you never used Claude? Three-way sharing = three people going to ban hell together.
 
 Want to feel a quota from the opposite direction? There's a way for that too: go into Claude Code, take the $6,000 plan, then turn on fable + ultracode, and you get to feel what it's like to be not just a manager but the boss. Of course the first thing you'll feel is the quota running out and payroll not going through.
+
+Speaking of extreme pricing, trivia pointing the other way: the most expensive model by API pricing right now isn't Claude Fable, it's GPT-o1-pro, at 150/600, about 12-15x Fable/Mythos (10/50). Released March 2025, currently deprecated but not yet retired.
 
 
 ## When the Quota Runs Out, the Work Stops There
 
 Claude Code isn't an occasional tool for me — it's running from the moment I open my laptop every morning. So when Rate Limit hits, the sense of loss is real. More frustrating than losing internet, because the work literally stops there.
+
+A later version finally added this: auto-resume once your quota resets. Genuinely great. What I actually want more, though, is for caches older than an hour to survive.
 
 That dependency made me pay close attention to quotas. Here's what months of daily use taught me.
 
@@ -65,6 +71,8 @@ Someone measured it: the "4x upgrade" from 5x to 20x is only on the 5-hour quota
 Pay more, get less than expected. This is not a personal impression, it is the design. If you are upgrading to run long batch jobs, confirm whether you actually need 5-hour capacity or weekly capacity.
 
 This gap rarely gets discussed, but it matters depending on your usage pattern. If you work in short, scattered sessions across the week, the 5x plan's improvement to your weekly budget is more limited than the marketing suggests. The people who benefit most from the session quota increase are those who do intensive multi-hour work in single sittings.
+
+It's a similar logic over on Codex. Tibo's heads-up about a back-to-back reset let me accidentally measure how the $20 plan's 5-hour window relates to its 7-day window: the 7-day quota works out to roughly five 5-hour rounds, plus a bit more. If you want to seriously max out your quota, going hard from the moment it's announced is the move.
 
 ## Pro's Quota Is Actually Quite Limited
 
@@ -80,25 +88,63 @@ I started at 20x, realized I couldn't actually keep up (while Claude is running 
 
 At $100/month for Max, amortized over working days, it's a reasonable tool cost for serious use.
 
+## What One 5-Hour Window Is Actually Worth
+
+Ever since Opus 5.5 shipped, quota has gone a long way, and the 5-hour window got bigger too. One morning I finally managed to burn through a whole window inside 5 hours, so I got curious how many tokens that window is worth, and pulled it apart with the claude log CLI and an agent-session tool:
+
+- The window ran 8:00-13:00, with 6 main sessions I opened by hand, at most 3 running at once, plus 2 more running on a schedule
+- Model turns in the main sessions: Opus 5.5 746 turns, Sonnet 5 187 turns
+- 32 subagents dispatched: 23 Sonnet / 6 Opus / 3 Fable
+- Total output about 710K tokens, cache reads about 440M tokens
+
+The split: the main thread runs Opus 5.5 for decisions and sign-off, the bulk execution goes to Sonnet subagents, and Fable only comes out when I want a second opinion.
+
+That whole window was roughly 12% of my weekly quota, worth $156.69 at API prices, which puts a week at about $1,276. Scale that up and if I maxed the weekly quota all month, that's $5,469. In other words, a 55x subsidy!
+
+That's about it, for what it's worth.
+
+## Use the monthly API credit
+
+A reminder: use the API credit Claude gives you each month, equal to your subscription fee. Right now I plug it straight into the scheduled jobs I run every night: the to-do morning-brief dashboard, newsletter material collection, and weekly harness maintenance.
+
+I also used this as a chance to tune those scheduled jobs. When I first took stock, I found some of them were running on Opus, and the hidden cost was pretty high. Because scheduled jobs run where you can't see them, that invisible quota burn is easy to miss. So I switched to Sonnet 5.5 and adjusted effort and the prompts, and ended up replacing the model with Sonnet: same quality, half the cost.
+
+Next step: figure out how to use up the Cloud Session credit that expires in early November...
+
+People asked what else I use it for and how I hook it up (I plug the API key in under -p mode):
+
+1. I designed my own eval set based on my tasks and use it to test different models at different effort levels, to find the most fine-grained dispatch settings for subagents.
+2. Once a week, capped at 25 USD, I let it clear low-risk to-dos that can run autonomously.
+3. The things mentioned above.
+
+But actually, switching /login over to the API also draws on that 100 USD. So if you can't think of anything to use it on, switch to API mode a few days before the credit expires and it gets used up. As long as you don't attach a card for billing on the API Console side, you lose nothing.
+
 ## Cowork Burns More Tokens Than CLI
 
 Cowork is Claude's sandboxed UI version. Its token consumption runs significantly faster than direct CLI use — community benchmarks show a meaningful difference. Multiple reasons: interface wrapper overhead, default safety injections, different context management patterns.
 
 If you're using Cowork and feel like Pro disappears instantly, switching to CLI for the same tasks will stretch your quota noticeably. Cowork is the right onboarding experience, not the right production environment.
 
-## Subscription Cache Reads Are Free
+## Cache Facts a Lot of People Don't Know
 
 Most people don't know this: **only API billing charges for cache reads. Subscription plan cache reads are free.**
 
 If you have a long system prompt or CLAUDE.md, your subscription won't get charged when it's read from cache. API users pay a small fee on every cache hit. This matters if you're deciding between subscription and API access for your usage patterns.
 
-## Two Useful Tools
+Beyond billing, there are two practical cache details:
+
+1. If you want to save money, protect your cache. On the $20 plan the cache lasts 5 minutes; on $100 and up it's 1 hour. Type `/usage` any time and the last line shows your cache hit rate. Beyond not walking away too long, don't keep switching models.
+2. Switching effort mid-conversation on Opus 5.5 finally doesn't break the cache. Want the model more careful and autonomous, turn effort up; want it faster with you stepping in more, turn it down. I switched effort once or twice in that conversation and the cache definitely held.
+
+## A Few Useful Tools
 
 **ccusage**: `!npx ccusage@latest monthly` shows a detailed breakdown of token usage. If you want to know where your tokens are actually going, this is essential.
 
 **Rate Limit Statusline**: Since Claude Code 2.1.80, you can display remaining rate limit in your terminal statusline. No more typing `/usage` to check — just glance at the bottom of your terminal.
 
-With both tools, you'll have much better awareness of your usage rhythm. When you know how much time until reset and how much quota remains, you can make better decisions about pacing.
+**/low-priority**: lets you keep going after your five-hour quota is maxed out, just slower, since it runs on off-peak compute. It still eats into your weekly quota. I learned that one from Reddit.
+
+With these tools, you'll have much better awareness of your usage rhythm. When you know how much time until reset and how much quota remains, you can make better decisions about pacing.
 
 ## One Mindset Note
 
@@ -205,55 +251,7 @@ This is a mature subscription economics model, not a simple "capacity tier" syst
 
 The tool is good. You should know what you are buying.
 
-## Postscript: Auto-Resume After the Quota Resets
-
-Must have shipped a few days ago: it finally auto-resumes once your quota resets. Genuinely great. What I actually want more, though, is for caches older than an hour to survive.
-
-## Folded In: Four Notes on Quota and Pricing
-
-`/low-priority` lets you keep going after your five-hour quota is maxed out, just slower, since it runs on off-peak compute. It still eats into your weekly quota. I learned that one from Reddit.
-
-Over on Codex, Tibo's heads-up about a back-to-back reset let me accidentally measure how the $20 plan's 5-hour window relates to its 7-day window: the 7-day quota works out to roughly five 5-hour rounds, plus a bit more. If you want to seriously max out your quota, going hard from the moment it's announced is the move.
-
-On the pay-as-you-go side, GPT-5.6-Luna is cheap to the point of absurdity. I'm running it in two places: a browser extension like immersive translation, one-click translating 50-80 foreign-language pages a day; and a voice-input tool like Typeless called "Say It," used 100-150 times a day to clean up text. After 10 days, daily spend is under $0.01, and the cost dashboard just shows 0.0.
-
-Trivia pointing the other way: the most expensive model by API pricing right now isn't Claude Fable, it's GPT-o1-pro, at 150/600, about 12-15x Fable/Mythos (10/50). Released March 2025, currently deprecated but not yet retired.
-
-## What One 5-Hour Window Is Actually Worth
-
-Ever since Opus 5.5 shipped, quota has gone a long way, and the 5-hour window got bigger too. One morning I finally managed to burn through a whole window inside 5 hours, so I got curious how many tokens that window is worth, and pulled it apart with the claude log CLI and an agent-session tool:
-
-- The window ran 8:00-13:00, with 6 main sessions I opened by hand, at most 3 running at once, plus 2 more running on a schedule
-- Model turns in the main sessions: Opus 5.5 746 turns, Sonnet 5 187 turns
-- 32 subagents dispatched: 23 Sonnet / 6 Opus / 3 Fable
-- Total output about 710K tokens, cache reads about 440M tokens
-
-The split: the main thread runs Opus 5.5 for decisions and sign-off, the bulk execution goes to Sonnet subagents, and Fable only comes out when I want a second opinion.
-
-That whole window was roughly 12% of my weekly quota, worth $156.69 at API prices, which puts a week at about $1,276. Scale that up and if I maxed the weekly quota all month, that's $5,469. In other words, a 55x subsidy!
-
-That's about it, for what it's worth.
-
-## Two Cache Facts a Lot of People Don't Know
-
-1. If you want to save money, protect your cache. On the $20 plan the cache lasts 5 minutes; on $100 and up it's 1 hour. Type `/usage` any time and the last line shows your cache hit rate. Beyond not walking away too long, don't keep switching models.
-2. Switching effort mid-conversation on Opus 5.5 finally doesn't break the cache. Want the model more careful and autonomous, turn effort up; want it faster with you stepping in more, turn it down. I switched effort once or twice in that conversation and the cache definitely held.
-
-## Use the monthly API credit
-
-A reminder: use the API credit Claude gives you each month, equal to your subscription fee. Right now I plug it straight into the scheduled jobs I run every night: the to-do morning-brief dashboard, newsletter material collection, and weekly harness maintenance.
-
-I also used this as a chance to tune those scheduled jobs. When I first took stock, I found some of them were running on Opus, and the hidden cost was pretty high. Because scheduled jobs run where you can't see them, that invisible quota burn is easy to miss. So I switched to Sonnet 5.5 and adjusted effort and the prompts, and ended up replacing the model with Sonnet: same quality, half the cost.
-
-Next step: figure out how to use up the Cloud Session credit that expires in early November...
-
-People asked what else I use it for and how I hook it up (I plug the API key in under -p mode):
-
-1. I designed my own eval set based on my tasks and use it to test different models at different effort levels, to find the most fine-grained dispatch settings for subagents.
-2. Once a week, capped at 25 USD, I let it clear low-risk to-dos that can run autonomously.
-3. The things mentioned above.
-
-But actually, switching /login over to the API also draws on that 100 USD. So if you can't think of anything to use it on, switch to API mode a few days before the credit expires and it gets used up. As long as you don't attach a card for billing on the API Console side, you lose nothing.
+> **Postscript (2026-10-20):** Two corrections to the notes above. Per the current Claude Code docs, the main conversation gets a one-hour cache on any Claude subscription within plan usage (five minutes applies to subagents, usage credits and API keys). And the Help Center says the monthly API credit doesn't apply to interactive Claude Code, so switching `/login` to the API won't spend it; it's for the API, Agent SDK and similar use. Also, OpenAI shuts o1-pro down on October 23, 2026, so it won't hold the "most expensive" title much longer.
 
 <!--
 2026-10-16 W43 merge: one section from a 10-10 15:55 Threads post and two replies (10-10 16:17, 16:31). Translated from the zh, which is verbatim. Added non-original sentences: subheading (framing); "People asked what else I use it for and how I hook it up" (transition giving the reply context).
@@ -268,22 +266,11 @@ But actually, switching /login over to the API also draws on that 100 USD. So if
 -->
 
 <!--
-Cluster extraction from micro-notes, absorbing 5 original entries (OpenRouter pay-as-you-go / tokenizer 1.4x / staggered quota resets / Claude Design quota pooling / $1,346 anesthetic bill), original wording preserved verbatim. Non-original bridging sentences:
-1. Opening paragraph "Over the past few months... into one piece." — bridge: frames this as a collection of notes.
-2. "A subscription suits people who lean hard... quota you never touch." — bridge: spells out the author's pay-as-you-go logic.
-3. "You change nothing... how fast your quota drains." — bridge: explains what 1.4x means.
-4. "Separate quotas get pulled into the main pool one by one... how much of this feature do I actually have left." — bridge: adds the implication of pooling.
-5. Closing paragraph "Usage inflates on its own... not necessarily paying for what you produced." — rewrite: pulls the three threads back to the author's original "anesthetic bill" point, no new claims.
--->
-
-<!--
 2026-08-21 W35 merge addition: added one section, "Platform Math, and the Ban Hell of Sharing One Account Three Ways," absorbing two Threads posts from 2026-08-19 and one from 08-15, wording preserved ("is that really such a good idea?", "three people going to ban hell together", "payroll not going through"). Non-original sentences added this round:
 1. "The same day, the same math showed up in another form." — bridge joining the two posts, no new claim.
 2. "Want to feel a quota from the opposite direction? There's a way for that too:" — bridge introducing the third post, no new claim.
 Everything else is the original wording. Existing paragraphs unchanged. humanizer was run on the new section only.
 -->
-
-> **Postscript (2026-10-20):** Two corrections to the notes above. Per the current Claude Code docs, the main conversation gets a one-hour cache on any Claude subscription within plan usage (five minutes applies to subagents, usage credits and API keys). And the Help Center says the monthly API credit doesn't apply to interactive Claude Code, so switching `/login` to the API won't spend it; it's for the API, Agent SDK and similar use. Also, OpenAI shuts o1-pro down on October 23, 2026, so it won't hold the "most expensive" title much longer.
 
 <!--
 2026-08-28 merge addition: folded in three older subscription posts (claude-code-subscription-guide / ai-subscription-value / claude-subscription-economics), prose moved over as written, with only headings and minimal bridging added. Non-original sentences added this round:
@@ -298,4 +285,6 @@ No new claims, numbers or criteria were introduced. Duplicated material removed:
 Nothing else from the three sources was dropped; every other paragraph moved over intact.
 
 2026-09-11 W38 micro-note merge: four live notes (`/low-priority`, Codex 5h vs 7d windows, GPT-5.6-Luna API spend, o1-pro being the priciest) folded in verbatim as one section and removed from the zh/en live file. Added non-source sentences: the heading (framing) and two bridging phrases.
+
+2026-10-26 splice cleanup (mirrors zh): moved summary section to the end, removed "Folded In" and "Postscript" splice markers, integrated four standalone notes and auto-resume into relevant sections, and merged cache paragraphs into a single section; new bridge sentences: "Speaking of extreme pricing,", "It's a similar logic over on Codex.", "Beyond billing, there are two practical cache details:"
 -->

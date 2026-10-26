@@ -30,13 +30,11 @@ The day after those calls, I found someone on Reddit who built this concept into
 
 The approach runs three paths in parallel: Codex + Gemini + Claude form an expert team, with an orchestrator that aggregates and verifies. Each model reviews the same diff independently, and the orchestrator compares all three opinions, flagging consensus and disagreements.
 
-## Rage-Driven Code Review
-
-Everyone talks about having Claude call in Codex for "adversarial review" to poke holes, but it never quite lands. Here's a fresh angle: wire it straight into the Threads API, give it posting rights, and the moment it lands on a solution, have it brag about what it just vibed in full AI voice. Within minutes a few dozen veteran keyboard engineers will show up in the replies to review it for you, free of charge, out of pure rage.
+That said, beyond formal cross-model reviews, there's an even more extreme angle floating around on social media. Everyone talks about having Claude call in Codex for "adversarial review" to poke holes, but it never quite lands. Here's a fresh angle: wire it straight into the Threads API, give it posting rights, and the moment it lands on a solution, have it brag about what it just vibed in full AI voice. Within minutes a few dozen veteran keyboard engineers will show up in the replies to review it for you, free of charge, out of pure rage.
 
 ## Where This Applies
 
-Whether your domain is code, document review, or analytical reports, the "cross-model challenge" pattern works. The core principles are:
+Jokes aside, back to the point. Whether your domain is code, document review, or analytical reports, the "cross-model challenge" pattern works. The core principles are:
 
 1. **Different model families** — avoid same-source bias
 2. **No inherited context** — each reviewer starts from zero
@@ -47,4 +45,6 @@ Resume screening, investment analysis, code review, even contract review — the
 <!--
 Self-report list
 1. "(new H2 "Rage-Driven Code Review" and its paragraph) Everyone talks about having Claude call in Codex for "adversarial review" to poke holes, but it never quite lands. Here's a fresh angle: wire it straight into the Threads API, give it posting rights, and the moment it lands on a solution, have it brag about what it just vibed in full AI voice. Within minutes a few dozen veteran keyboard engineers will show up in the replies to review it for you, free of charge, out of pure rage." — 類型：併入碎念（憤怒式審查 / Rage-Driven Code Review，2026-08-14 週報併入）
+
+2026-10-26 splice cleanup (mirrors zh): removed "Rage-Driven Code Review" heading and folded paragraph into previous section as an extended joke, then bridged back to "Where This Applies"; new bridge sentences: "That said, beyond formal cross-model reviews, there's an even more extreme angle floating around on social media.", "Jokes aside, back to the point."
 -->

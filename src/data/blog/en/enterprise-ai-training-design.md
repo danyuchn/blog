@@ -80,6 +80,18 @@ Now I say this at the start of every session: "We'll be sharing work materials s
 
 One sentence. Prevents a lot of problems.
 
+## Four takeaways on classroom pacing
+
+Beyond the curriculum itself, running several in-person classes has left me with a few direct takeaways on pacing:
+
+1. In-person classes are much easier to pace than online ones.
+
+2. For my teaching style, fewer slides work better. Cut things. Do not assume that stuffing everything into a class makes it better. Sometimes it only restricts my freedom to improvise when an idea comes to me.
+
+3. When teaching smart people, show them the result first and explain the process afterward. Otherwise, they lose patience.
+
+4. Let students work on it themselves. This echoes the third step mentioned earlier: my strongest teaching skill is guiding people to ask questions and think, because that is how I talk to myself every day.
+
 ---
 
 Three questions worth answering before you design an enterprise AI training:
@@ -90,16 +102,8 @@ Three questions worth answering before you design an enterprise AI training:
 
 If any of those are hard to answer, the course design needs another pass.
 
-## Merged in: Four Things I Learned Teaching AI Recently
-
-1. In-person classes are much easier to pace than online ones.
-
-2. For my teaching style, fewer slides work better. Cut things. Do not assume that stuffing everything into a class makes it better. Sometimes it only restricts my freedom to improvise when an idea comes to me.
-
-3. When teaching smart people, show them the result first and explain the process afterward. Otherwise, they lose patience.
-
-4. Let students work on it themselves. My strongest teaching skill is guiding people to ask questions and think, because that is how I talk to myself every day.
-
 <!--
 2026-08-28 W36 main-thread note: "Four Things I Learned Teaching AI Recently" (2026-07-10) was merged in here and turned into a stub. All four points kept verbatim; the only added non-original sentence is the subheading (framing).
+
+2026-10-26 splice cleanup (mirrors zh): removed 'Merged in:' tag, retitled and moved classroom pacing section before closing self-check questions, and tied hands-on practice takeaway back to third mistake; new bridge sentences: "Beyond the curriculum itself, running several in-person classes has left me with a few direct takeaways on pacing:", "This echoes the third step mentioned earlier:"
 -->

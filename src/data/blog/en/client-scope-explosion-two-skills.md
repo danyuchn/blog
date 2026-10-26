@@ -10,12 +10,12 @@ tags:
   - case-study
   - skills
   - ai-workflow
-description: 'One prompt asked about revenue, a dashboard, and strategy all at once. The AI answered all of it in one go and my client could not follow a word. Two skills, /explain and /first-principles, pulled the conversation back.'
+description: 'Asking about revenue, metrics, and decisions in a single prompt, or never persisting conclusions after brainstorming. Two real-world cases of client drift with AI, and the fieldwork of using /explain, /first-principles, Grill-me, and checkpoint to rein their workflows back in.'
 ---
 
-I used to think I was the only one who hits information overload talking to Claude and stops understanding what it's saying. Today I found out I'm not alone. My client has the same problem.
+I used to think I was the only one who hits information overload talking to Claude and stops understanding what it's saying. Later I found out I'm not alone. My client has the same problem.
 
-Today we opened up his very long conversation with Claude about the company's internal monthly report, and that's when we found the problem. His very first message asked: how much revenue do we need by the end of this year to not lose money. He also dumped in a pile of data and ideas. I skimmed it and thought, well, that's a pretty detailed prompt.
+That day, we opened up his very long conversation with Claude about the company's internal monthly report, and that's when we found the problem. His very first message asked: how much revenue do we need by the end of this year to not lose money. He also dumped in a pile of data and ideas. I skimmed it and thought, well, that's a pretty detailed prompt.
 
 But scroll down one or two rounds and the AI is already discussing with him whether to restart the ad spend.
 
@@ -37,9 +37,7 @@ He came back with a loaded line:
 
 > Now I finally understand why my old employees said "working with me is exhausting."
 
-What I gave him today was a skill that gives the AI the courage to pull his scattered thinking back.
-
-If you want to try the same skills: <https://github.com/agentcrew-academy/harness-starter-kit>
+What I gave him that day was a skill that gives the AI the courage to pull his scattered thinking back.
 
 ## Another Client, Same Problem: CEO-Level Drift
 
@@ -53,6 +51,8 @@ What we did that day was "set the rules." Made him use the Grill-me skill to pin
 
 My takeaway afterward: all of this is common knowledge if you're an engineer or a software developer. But outside the programming world, plenty of people don't know it and genuinely need it. The curse of knowledge never goes away — what feels obvious to you is a valuable skill to everyone outside your bubble.
 
+If you want to try the same skills: <https://github.com/agentcrew-academy/harness-starter-kit>
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「第一個是 /explain。」「第二個是 /first-principles。」對應之 "The first is /explain." "The second is /first-principles." — 類型：改寫（原文為編號清單，改為段落式序數句以符合純段落格式，語意未增減）
@@ -62,4 +62,6 @@ My takeaway afterward: all of this is common knowledge if you're an engineer or 
 5. en 版已過 humanizer：只動散文句的縮寫（it is → it's 等）與一句「他回了我一句意味深長的話」的譯法（改為 "He came back with a loaded line:"，更貼原文的「意味深長」）。frontmatter、連結、blockquote 引言未動。
 
 2026-09-04 週例行補記：新增 "Another Client, Same Problem: CEO-Level Drift" 一節，為 zh 版新增段落的翻譯，忠實度自首同 zh 版。新增句對應：標題（框架句）；"I ran into the same problem with another client, at an even higher level."（銜接句）。其餘逐句翻譯自 zh 版新增內容，未新增 zh 版沒有的論點。
+
+2026-10-26 splice cleanup (mirrors zh): Moved starter-kit link to the end of the post, updated time references from "today" to "that day" / "later", and updated description to cover both cases; new bridge sentences: none
 -->

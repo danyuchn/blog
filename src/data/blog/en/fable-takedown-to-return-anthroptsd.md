@@ -19,10 +19,14 @@ After the takedown came a period of wait-and-see. I've got my own modern version
 
 To understand this whole thing, you have to lay out the timeline. Someone on Reddit put together an "OpenAI wins by default timeline": the Pentagon first labeled Anthropic a "supply chain risk," and a few hours later that same day, OpenAI signed its own Pentagon contract; later a federal court ruled that the label was "punitive retaliation"; then Anthropic's valuation overtook OpenAI's; then the Commerce Department pulled two models citing "national security," with zero detail in the letter, while GPT-5.5 has the same capabilities and was completely unaffected. So funny.
 
-So the return itself is an indicator. There will always be models stronger than Fable, but for every day Fable stays gone, the frontier of model development slows down because of the uncertainty in commercial returns. The other significance of Fable's return is that it sets a precedent: it proves a model vendor can successfully deal with the current administration and break through the first-ever compliance stalemate. Sure, to the Trump administration a precedent is worth about as much as a fart, but for model vendors facing similar political predicaments in the future, they'll be more experienced and more adept at it.
-
 Then we got to the apparent-return moment. "Fable 5, after its apparent return, will be put into the subscription quota as standard" — my first reaction to seeing this kind of apparent good news was, of all things, to free-associate to some dirty trick. Is that normal? Like A\ butchering Fable 5 to the point it's unrecognizable, like the quota getting consumed disproportionately, like every future outage getting pinned on Fable. I think I've caught a case of AnthroPTSD.
 
 And this jumpiness isn't without reason. The independent sonnet-only quota progress bar disappeared, and it was pulled from both the CLI and the Desktop App — feels like A\ is about to crouch down for another weird move, like cooking up a Fable-only thing. A while back they were shipping a new feature a day, hyping themselves up so much they got high on it, and then, sure enough, most of it ended in a botched mess.
 
+Stepping back from that fear, though, the return itself is an indicator. There will always be models stronger than Fable, but for every day Fable stays gone, the frontier of model development slows down because of the uncertainty in commercial returns. The other significance of Fable's return is that it sets a precedent: it proves a model vendor can successfully deal with the current administration and break through the first-ever compliance stalemate. Sure, to the Trump administration a precedent is worth about as much as a fart, but for model vendors facing similar political predicaments in the future, they'll be more experienced and more adept at it.
+
 At the end of the day, for any company bigger than mid-sized this isn't a capability question at all. yes, true for companies larger than mid, compliance >>> capability.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved compliance analysis after the AnthroPTSD section and adjusted the transition; new bridge sentences: "Stepping back from that fear, though, the return itself is an indicator."
+-->

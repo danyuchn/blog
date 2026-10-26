@@ -203,15 +203,7 @@ Uh, let me give an example. In the early days of the remote control environment,
 
 They're all Anthropic-native, but parents play favorites even among their own kids. The CLI updates most often, roughly daily (because the staff use it themselves). Desktop used to be slow, then the big revamp came and updates picked up. Everything else just crawls. Search the CHANGELOG for remote control and you'll see how often anything related to it gets fixed.
 
-So if you're already used to the CLI on your machine at home, isn't mirroring that CLI straight to a mobile device the most convenient thing?
-
-![A phone connected back to a Mac mini over mosh, running the CLI; on screen is an agent writing up a batch of gog CLI gotchas into a doc](/blog/assets/posts/cli-vs-desktop-three-answers/1-remote-control.jpg)
-
-Why not use the official Claude / Codex cloud control apps on the phone?
-
-Because who knows when they'll ever ship split pane...
-
-![A phone screen with two panes stacked top and bottom, each one a separate CLI session](/blog/assets/posts/cli-vs-desktop-three-answers/2-no-split-pane.jpg)
+That said, even though the CLI updates most frequently, August also ran into a strange anomaly:
 
 And here's another odd thing. The Claude Code CLI, which used to update daily, has now gone 8 days without an update. Issues are still holding steady around five thousand even after the bot's aggressive deduping, so it's not like there are no bugs left to fix.
 
@@ -220,6 +212,16 @@ And here's another odd thing. The Claude Code CLI, which used to update daily, h
 Are they sitting on something big, or did something drastic shift internally? No idea at this point.
 
 Quite a gap from the AI self-healing workflow they were promoting so hard. With this company, what they say and what they do are two separate accounts.
+
+Since official remote control updates so slowly, I just use the CLI directly even on my phone. So if you're already used to the CLI on your machine at home, isn't mirroring that CLI straight to a mobile device the most convenient thing?
+
+![A phone connected back to a Mac mini over mosh, running the CLI; on screen is an agent writing up a batch of gog CLI gotchas into a doc](/blog/assets/posts/cli-vs-desktop-three-answers/1-remote-control.jpg)
+
+Why not use the official Claude / Codex cloud control apps on the phone?
+
+Because who knows when they'll ever ship split pane...
+
+![A phone screen with two panes stacked top and bottom, each one a separate CLI session](/blog/assets/posts/cli-vs-desktop-three-answers/2-no-split-pane.jpg)
 
 ## That philosophical ending from April, read now
 
@@ -240,4 +242,6 @@ Added non-source sentences (faithfulness disclosure):
 7. The three images from cli-is-the-firstborn repointed to `/blog/assets/posts/cli-vs-desktop-three-answers/`, alt text unchanged — type: rewrite (asset directory changed by the merge)
 8. The second paragraph of cli-terminal-philosophy's "## Speed and Resource Efficiency" (M2 MacBook Air, 3 windows of 3-4 panes, 5-6 sessions, sluggish Desktop App) is not carried a second time — type: rewrite (that paragraph restates the same facts as "The resource efficiency gap" from claude-desktop-vs-cli earlier the same day, kept verbatim in that section; this section keeps only its unique first paragraph, "IDEs like VSCode consume multiple times more system resources." No fact lost)
 Every other paragraph, table, list, figure, GitHub issue number, quotation, link and judgment is verbatim from the five originals (cowork-vs-claude-code, claude-desktop-vs-cli, cli-terminal-philosophy, claude-code-desktop-vs-cli-w20, cli-is-the-firstborn). No argument or conclusion absent from the originals was added, and the five positions stand side by side without reconciliation.
+
+2026-10-26 splice cleanup (mirrors zh): moved section discussing CLI update halt right after update frequency discussion, and added bridge sentences before mobile connection; new bridge sentences: "That said, even though the CLI updates most frequently, August also ran into a strange anomaly:", "Since official remote control updates so slowly, I just use the CLI directly even on my phone."
 -->

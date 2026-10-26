@@ -26,11 +26,11 @@ Only then do you set up a validator yourself — let the AI create an independen
 
 Once you're at that point, then go pursue gradually letting go and automating.
 
-## On "Isolation," a Note I've Made Before
+## The Safety Boundary of Local Generation
 
 If it just generates files on your computer, it's safer than downloading random files from the internet. The moment your computer is online, attackers can find a way in. Claude Code is no worse than other applications, and arguably patches faster than most. Beginners should worry less about Claude Code and more about version control, permission management, and snapshot backups.
 
-## On "Permissions," Another Note
+## Connector Permission Scope and Risks
 
 I once looked into an evil idea: the official Claude App Connector's OAuth is nearly fully scoped — Gmail read/send/delete, Drive read/write/delete, Calendar, YouTube, all passing. But MCP only uses a small slice of it. In theory you could borrow those credentials to build a more capable MCP yourself. The reason I called it evil: this violates the Terms of Service and is unauthorized use. The legitimate path is setting up OAuth in Google Cloud Console yourself, or using the [gog CLI](https://youtu.be/Ymzp6hF8ZBc).
 
@@ -38,6 +38,8 @@ I once looked into an evil idea: the official Claude App Connector's OAuth is ne
 
 Lay this table out and you can see how wide the default permission scope of a single agent really is. That's exactly why I said above: first understand the commands and permissions each operation needs.
 
-## One Last Simple Analogy
+To make a simple analogy: even with a newly hired human, you wouldn't hand over your full set of bankbooks, seals, and passwords to operate on their own. So don't, from the very start, expect the lobster to automatically do all of this for you.
 
-Even with a newly hired human, you wouldn't hand over your full set of bankbooks, seals, and passwords to operate on their own. So don't, from the very start, expect the lobster to automatically do all of this for you.
+<!--
+2026-10-26 splice cleanup (mirrors zh): retitled "Isolation" and "Permissions" headings to remove collage phrasing, and turned the closing analogy into a natural concluding paragraph; new bridge sentences: none
+-->

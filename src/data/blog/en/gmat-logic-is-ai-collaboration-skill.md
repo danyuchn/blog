@@ -67,16 +67,6 @@ Answers: B, A.
 
 Anyone who prepped for the GMAT feeling PTSD yet? That's right. The logical thinking you learned on the GMAT is something you still need in the AI era.
 
-## While I'm at it, a thought on education
-
-This reminds me of a view on education I put forward a long time ago.
-
-Teachers don't need to ban students from using AI on assignments, because you'll never catch them all. As a teacher you should take the longer view: if a student genuinely absorbs and internalizes things while working with AI, what's wrong with that?
-
-So my suggestion is to take the Italian tradition of examining everyone one-on-one, orally, and put it together with the Buddhist rules of debate. You don't ask whether the report a student hands in was written by AI, but the teacher questions them about it on the spot, and they have to answer fluently.
-
-If they can answer fluently, whether it came from AI no longer matters.
-
 ## A Confirmation From a Hedge Fund Client
 
 I got another live confirmation of this recently. I applied GMAT-style critical thinking coaching to AI coaching, and this time I finally saw a genuinely positive result. Critical-thinking coaching works especially well on people who are sharp and hands-on. This client works at an overseas hedge fund, and his ability to draw connections across domains is very strong — a light nudge at the point where his thinking hits a dead end is all it takes to unstick him.
@@ -87,6 +77,18 @@ I'm grateful for the strong logic and structured-thinking training that 15 years
 
 Sticking with writing and sharing has also mattered a lot. Across 15 years of GMAT teaching I never stopped writing blog posts and uploading videos, sharing my teaching methods and new research, and built up over 400 complete pieces of material. Cross-analyzing that material is how I realized I already had a core philosophy and methodology that had grown past GMAT and could carry over into AI applications — something I also wrote about in [Teaching Non-Technical People AI](/blog/posts/en/teaching-non-tech-ai).
 
+That same focus on logic and internalization applies just as directly to education today.
+
+## The point is internalization, not catching AI
+
+This reminds me of a view on education I put forward a long time ago.
+
+Teachers don't need to ban students from using AI on assignments, because you'll never catch them all. As a teacher you should take the longer view: if a student genuinely absorbs and internalizes things while working with AI, what's wrong with that?
+
+So my suggestion is to take the Italian tradition of examining everyone one-on-one, orally, and put it together with the Buddhist rules of debate. You don't ask whether the report a student hands in was written by AI, but the teacher questions them about it on the spot, and they have to answer fluently.
+
+If they can answer fluently, whether it came from AI no longer matters.
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「I mentioned this once in Responsibility Is What AI Cannot Do, where I only talked about the logical training the GMAT gave me and never turned it into questions.」 — 類型：銜接（站內互引，任務指定）
@@ -96,4 +98,6 @@ Sticking with writing and sharing has also mattered a lot. Across 15 years of GM
 5. 「These questions test the logical thinking you use when working with AI.」 — 類型：改寫（原文為一句「試試看，以下你能做對幾題？這些題目會考驗你跟AI協作的邏輯思維」，拆為標題＋句子）
 
 2026-09-04 週例行補記：新增 "A Confirmation From a Hedge Fund Client" 與 "Where This Method Actually Came From" 兩節，為 zh 版新增段落的翻譯，忠實度自首同 zh 版。連結改指向站內英文版 `/blog/posts/en/teaching-non-tech-ai`。
+
+2026-10-26 splice cleanup (mirrors zh): moved education section to the end under a new heading and added a bridge sentence; new bridge sentences: "That same focus on logic and internalization applies just as directly to education today."
 -->

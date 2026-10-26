@@ -46,11 +46,7 @@ I'd built a more mature one before, made specifically to stop AI from seeing per
 
 ![The mask Mod in action: in Claude Code's summary output, people's names and contact details are covered by black bars while the rest of the text shows normally.](/blog/assets/posts/claude-mods-mask-and-warm-cache/2-mask-mod-demo.jpg)
 
-## Open source
-
-I fixed a few small bugs in the warm-cache plugin and open-sourced it. I don't normally use the Desktop App, so for now there's only a CLI version. If you use the Desktop App, I'd love for you to tweak it, test it, and send a PR.
-
-Both mods live in this repo: [claude-mods](https://github.com/danyuchn/claude-mods).
+After building it, I realized Claude Code already has a similar built-in mechanism.
 
 ## Claude Code's built-in idle compact
 
@@ -68,6 +64,12 @@ Before the cache goes cold, the system compacts the conversation for you, so whe
 - When Ollama judges a batch at once, the response format can't be an array. The model skips items and every row after that is off by one. Give each candidate its own fixed-key JSON schema.
 - The first time in fullscreen mode, a reply that had just finished streaming wasn't masked. Reopening the conversation or asking the next question fixed it. I haven't found the cause. Before class, ask one question to confirm the black bars show up.
 
+## Open source
+
+I fixed a few small bugs in the warm-cache plugin and open-sourced it. I don't normally use the Desktop App, so for now there's only a CLI version. If you use the Desktop App, I'd love for you to tweak it, test it, and send a PR.
+
+Both mods live in this repo: [claude-mods](https://github.com/danyuchn/claude-mods).
+
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「After that I made two more. This post covers those two, plus one feature Claude Code added by itself.」 — 類型：框架句
@@ -78,4 +80,6 @@ Before the cache goes cold, the system compacts the conversation for you, so whe
 6. 「On 10/08 I noticed…」 — 類型：改寫（原文「剛剛發現」，加上貼文日期）
 7. 各 H2 標題（The warm-cache plugin／The recording mask Mod／Open source／Claude Code's built-in idle compact／Pitfalls I hit while building these） — 類型：框架句
 8. 三張圖片的 alt 文字 — 類型：改寫（依截圖內容轉述，非原貼文句子）
+
+2026-10-26 splice cleanup (mirrors zh): moved the "Open source" section to the end after the pitfalls; new bridge sentences: "After building it, I realized Claude Code already has a similar built-in mechanism."
 -->

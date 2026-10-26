@@ -93,6 +93,8 @@ Plan to open source this as a Skill eventually. Sample video: <https://youtu.be/
 
 ## And an unexpected case: a Xoogler grew my channel
 
+Beyond using Claude Code to produce videos myself, an unexpected use case came up while teaching this week.
+
 A few days ago I was teaching a student how to use Claude Code and accidentally learned he'd worked at Google for 8 years on YouTube-related products.
 
 I casually said, "Our startup channel's traffic won't grow, it's so frustrating," and he generously shared a few content strategies for growing YouTube channels (is that insider information?).
@@ -115,3 +117,7 @@ You've hit your rate limit.
 That's daily life after Opus 4.7. If you haven't read [my quota incident log](/blog/posts/en/claude-code-quota-incident-log), one of its sections covers Opus 4.7's launch week. Pair it with this one.
 
 Official changelog: <https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md>
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): no sections moved or merged, bridged video production into teaching use case in Xoogler section; new bridge sentences: "Beyond using Claude Code to produce videos myself, an unexpected use case came up while teaching this week."
+-->

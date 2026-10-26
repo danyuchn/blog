@@ -12,7 +12,7 @@ tags:
 description: 'Someone on Twitter chained Codex, Hyperframes, IndexTTS2 and HeyGen into a one-person media pipeline. I pulled the repo, tried it, played with a local TTS model, then rebuilt a video days later on Claude Code.'
 ---
 
-This afternoon I saw someone on Twitter chain Codex + Hyperframes + IndexTTS2 + HeyGen into a one-person media pipeline, and open-source it as a repo with 50-something SKILLs. So I pulled it down and gave it a go (I happened to have a HeyGen Avatar I made a year ago). The repo is Pluviobyte's rnskill; the original author's tweet is [here](https://x.com/Pluvio9yte/status/2081328645524668636).
+The other day I saw someone on Twitter chain Codex + Hyperframes + IndexTTS2 + HeyGen into a one-person media pipeline, and open-source it as a repo with 50-something SKILLs. So I pulled it down and gave it a go (I happened to have a HeyGen Avatar I made a year ago). The repo is Pluviobyte's rnskill; the original author's tweet is [here](https://x.com/Pluvio9yte/status/2081328645524668636).
 
 The results were unexpectedly good. Lip sync landed, the speech was clear, and the animation was genuinely impressive. The voiceover still has that AI feel, though maybe that's also how I sound when I read a script slowly in real life (?).
 
@@ -26,7 +26,7 @@ I'm considering using this for some of my concept explainers and short talking-h
 
 ## Bilibili's Index TTS 2
 
-Another local open-source find these past few days: Index TTS 2. It's a speech synthesis model built by Bilibili, with zero-shot voice cloning and enough parameters to tune for different emotions. After trying it I find it very lifelike, and the important part is that my machine can actually run it.
+Index TTS 2, the local open-source gem used in this pipeline, is worth highlighting on its own. It's a speech synthesis model built by Bilibili, with zero-shot voice cloning and enough parameters to tune for different emotions. After trying it I find it very lifelike, and the important part is that my machine can actually run it.
 
 Bilibili really does keep doing me favors in all sorts of ways. I go to Bilibili for knowledge videos, I go to Bilibili for dubbed course content, and now I go to Bilibili for models too.
 
@@ -34,6 +34,10 @@ Someone later recommended a different TTS to me, and I said I'd pull it and test
 
 ## Handing It to Another Model
 
-The AI pipeline video from a few days ago was made with Codex. Now I'm balancing my quota (infuriating, still hasn't reset), so today's video was made with Claude Code. Luckily the workflow, skills and built-in project-level harness in that open-source repo are already written well enough, and they're compatible with my own harness, so switching models was no obstacle at all. Claude Sonnet 5 on high effort also got it in one pass.
+The first AI pipeline video from a few days ago was made with Codex; later, to balance quota (infuriating, still hasn't reset), another video was made with Claude Code. Luckily the workflow, skills and built-in project-level harness in that open-source repo are already written well enough, and they're compatible with my own harness, so switching models was no obstacle at all. Claude Sonnet 5 on high effort also got it in one pass.
 
 Which is why maintaining your own harness still matters. Whichever tool you switch to, the model can pick up your task and take over fast. That's roughly what "a wily hare has three burrows" means.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): adjusted section opening to bridge from the pipeline components above, and aligned retrospective time references across the post; new bridge sentences: "Index TTS 2, the local open-source gem used in this pipeline, is worth highlighting on its own."
+-->

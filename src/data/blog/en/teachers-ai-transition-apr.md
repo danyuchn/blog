@@ -45,6 +45,8 @@ I've recently started teaching Claude Code, and I know my depth isn't where I wa
 
 This has nothing to do with ability. It's pure responsibility. I've seen plenty of capable people with no responsibility, and learners who are still building their capability but have strong responsibility. Students feel the difference clearly.
 
+With the teaching mindset covered, back to the tools: plenty of cram school peers have also been asking me which AI they should use to assist their teaching.
+
 ## Cram school AI transition: the one-word answer
 
 I've been a cram school teacher for 15 years, and I've also consulted for humanities/sciences cram schools on their AI transition.
@@ -55,10 +57,16 @@ Not Gemini, not GPT, not some locally-hosted small model. The reason deserves a 
 
 I've tested the others. Choosing Claude isn't faith.
 
-## A side story about a thrown-out book
+At the end of the day, whether it's a teacher teaching or a child learning on their own, the biggest trap is turning a tool or a theory into an article of faith.
+
+## Protecting Curiosity in Learning
 
 A few days ago I made a decision: I threw out my kid's copy of "Attention Is All You Need."
 
 The kid cried. But I hope this was the right call. I hope he rediscovers his curiosity for learning across the board, instead of treating some specific book as a "must master" article of faith. In the AI era, for a beginner, understanding architecture matters less than keeping your curiosity alive. Papers are always findable; curiosity, once lost, is much harder to recover.
 
 Hope it's not too late.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): retitled side story heading to "Protecting Curiosity in Learning" and added transitions between teaching mindset, model choice, and the book story; new bridge sentences: "With the teaching mindset covered, back to the tools: plenty of cram school peers have also been asking me which AI they should use to assist their teaching.", "At the end of the day, whether it's a teacher teaching or a child learning on their own, the biggest trap is turning a tool or a theory into an article of faith."
+-->

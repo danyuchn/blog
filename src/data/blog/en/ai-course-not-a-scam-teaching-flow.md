@@ -40,25 +40,25 @@ So the transcript helps the teacher far, far more than it helps the student. The
 
 More importantly, what the student recorded is always your yesterday. The transcripts you keep accumulating help you build your tomorrow faster. What they learn will never catch up with your system.
 
-I think doing it this way is responsible. Would anyone call a course like this chive-harvesting?
+## Deepening the Service: Coaching 18 Students Solo
 
-So what I think you should actually look at is how much the teacher has put into the course, and whether the course planning and design is complete and carefully made.
-
-So why do I have such a complete structure? Simple: for a while I felt that I was extremely successful teaching GMAT, riding high and doing it with my eyes closed, every consultation dense with information and not a dull moment. But teaching AI, I was back to being the me of 15 years ago, just starting out on GMAT.
-
-So I asked Fable to distill my 15 years of GMAT teaching experience, to find out how my teaching-material specs had been polished all along, and then transfer them in parallel to AI teaching.
-
-All in all, if this is a teacher with experience, passion and the drive to make the product good, why criticize them for no reason?
-
-All I can say is that people who talk from the comfort of the sidelines have it too easy. They deserve a slap.
-
-## Addendum: the video on running 18 students solo
+Once this flow is running smoothly, the most direct result is that service scale and attention to detail can hold at the same time.
 
 I never used to think I could coach 18 students on my own and still handle all of it myself: teaching, answering questions, custom study plans, progress adjustments, designing homework, grading homework. Fully personalized service, and more detailed than what I used to give when I only had a handful of students.
 
 With Claude Code, all of that is doable now. It sounds easy, but pulling it off takes some technique:
 
 <div class="video-embed"><iframe src="https://www.youtube.com/embed/Hm05AErsUs8" title="一個人帶 18 位學生，怎麼一個都不漏掉？家教用 AI 管學生的 6 個方法" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+So why do I have such a complete structure? Simple: for a while I felt that I was extremely successful teaching GMAT, riding high and doing it with my eyes closed, every consultation dense with information and not a dull moment. But teaching AI, I was back to being the me of 15 years ago, just starting out on GMAT.
+
+So I asked Fable to distill my 15 years of GMAT teaching experience, to find out how my teaching-material specs had been polished all along, and then transfer them in parallel to AI teaching.
+
+I think doing it this way is responsible. Would anyone call a course like this chive-harvesting? So what I think you should actually look at is how much the teacher has put into the course, and whether the course planning and design is complete and carefully made.
+
+All in all, if this is a teacher with experience, passion and the drive to make the product good, why criticize them for no reason?
+
+All I can say is that people who talk from the comfort of the sidelines have it too easy. They deserve a slap.
 
 <!--
 2026-10-09 W42 addendum: translation of a 10-07 21:32 Threads post; video uploaded to the AgentCrew Academy channel on 10-07. Added non-source sentences: heading only.
@@ -71,4 +71,6 @@ With Claude Code, all of that is doable now. It sounds easy, but pulling it off 
 3. 圖片 alt 全句 — 類型：框架句（依主對話提供的圖片描述撰寫）
 4. 文章標題與 description — 類型：框架句
 5. 其餘為 zh 版逐句翻譯，標點與斷句合併屬改寫
+
+2026-10-26 splice cleanup (mirrors zh): removed addendum tag from 18-student section and moved it before conclusion so the slap line remains the sole ending; new bridge sentences: "Once this flow is running smoothly, the most direct result is that service scale and attention to detail can hold at the same time."
 -->

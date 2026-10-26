@@ -12,9 +12,7 @@ tags:
 description: 'JEV is a new model that only does probability judgments and formatted output, fast and cheap. I swapped it into the semantic gates I used to run on luna and flash-lite, plus harness slimming, news filtering, and exam-question QA.'
 ---
 
-The most interesting news this week, to me, was the JEV model: extremely fast, and it only does probability judgments and formatted output. I've already seen all kinds of applications on X, and I got early access. About to try it myself. I already have a bunch of pipeline nodes in mind that I want to swap over to JEV.
-
-Been using it. Very impressive. A lot of the semantic-judgment gates I used to jam luna or flash-lite into: benchmarks come out close, but JEV is faster and cheaper, so I'm swapping them out.
+The most interesting news this week, to me, was the JEV model: extremely fast, and it only does probability judgments and formatted output. After seeing all kinds of applications on X, I got early access, and actually running it has been very impressive. A lot of the semantic-judgment gates I used to jam luna or flash-lite into: benchmarks come out close, but JEV is faster and cheaper, so I'm swapping them out.
 
 ## Four Places I Use It
 
@@ -47,7 +45,9 @@ As for the flashier stuff on X, using it to check flight tickets, play Mario, wh
 2. Is there a judgment that only needs a fixed-format answer, not a big wall of output?
 3. Is there something that doesn't need multi-layer, high-level reasoning — just a quick confidence-based routing decision?
 
-Someone said JEV is finally our glimpse of AGI, and I found that pretty funny. These days everything gets "one thing, everyone reads it their own way," and AGI is unsurprisingly no exception. Too bad JEV can't take images. There's also this one going around online, probably the most creative imagined use case for JEV I've seen:
+## Aside: one AGI, everyone reads it their own way
+
+Beyond serious engineering deployments, the discussions in the community have been pretty entertaining too. Someone said JEV is finally our glimpse of AGI, and I found that pretty funny. These days everything gets "one thing, everyone reads it their own way," and AGI is unsurprisingly no exception. Too bad JEV can't take images. There's also this one going around online, probably the most creative imagined use case for JEV I've seen:
 
 ![A LINE chat meme someone made online, where every line the girlfriend sends has JEV's probability judgment attached underneath — for example, "did you forget what I told you again today?" is judged 93% angry.](/blog/assets/posts/jev-where-it-fits/jev-line-chat-meme.jpg)
 
@@ -58,4 +58,6 @@ List of added non-original sentences (fidelity disclosure):
 3. "There's also this one going around online, probably the most creative imagined use case for JEV I've seen:" — type: bridge (rewritten from post #31's caption to lead into the image)
 4. Alt text on all four images — type: rewrite (verbatim transcription of what's already printed on the cards/screenshot, no information added beyond the source material)
 5. The numbered application list (1–4) and sub-steps (1)–(5) from post #8, and the three judgment criteria, mirror the original post's own structure; multiple posts and a reply were merged into continuous paragraphs, with no added meaning at the merge points.
+
+2026-10-26 splice cleanup (mirrors zh): merged opening duplicate paragraphs and split community AGI chatter into its own aside section; new bridge sentences: "Beyond serious engineering deployments, the discussions in the community have been pretty entertaining too."
 -->

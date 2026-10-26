@@ -23,6 +23,8 @@ Scanned `~/.codex/shell_snapshots/` and found one snapshot exporting 16+ API key
 
 Nobody attacked me. I did this to myself, just by using the tool. To restore the shell environment it writes everything that was exported into the snapshot, and the keys end up lying there, readable by anything running on that machine. Whether the model behaved has nothing to do with whether that file exists.
 
+This kind of oversight doesn't just happen with shell snapshots: would you really let an agent register an API key itself and leave that key sitting in plaintext in the session log? Also: next up, scan the company website pages daily to see whether a manager has hardcoded an API key into the front end.
+
 ## Layer two: the permission flag you waved through
 
 There are already plenty of horror stories about `rm -rf` online. Never run that with `dangerously skip permission` enabled.
@@ -34,6 +36,20 @@ That reads like common sense, but it's the same underlying problem as the previo
 Ordinary folks don't need to reach for Mythos — Sonnet 4.6 wired up to an MCP can help analyze suspicious malicious emails too. "The email was crudely made, the template placeholders weren't even swapped out" — I wouldn't have noticed that if it hadn't pointed it out. Just remember to tell the model not to click unfamiliar links, unless you have a proper sandbox.
 
 This layer is the capability and the risk at once. I pointed the model at an email I didn't trust, and it caught something my eyes had skipped. Unswapped template placeholders really are the kind of thing you don't notice unless someone says it out loud. But that same move means I fed untrusted content to something holding tool permissions. So the reminder isn't a formality: don't click unfamiliar links, or else give it a proper sandbox.
+
+That's also why when I have Codex read my mail, the habit I set for it is that every external file gets isolated in a sandbox first. So when I see other people getting burned by something attached to an email, nothing happened on my end.
+
+## Don't brute-force sites that need a login
+
+Beyond reading emails and external files, another workflow that easily steps on landmines on your own machine is having an agent scrape websites that require a login.
+
+Honestly, for sites that need a login, I always tell regular users not to go head-to-head with them—just find a third-party scraping database API.
+
+The reason is simple: your token is your account. Push it too far, and the moment the admin drops a "two-dimensional foil" on you, your account is gone. The two-dimensional foil is a reference from *The Three-Body Problem*. It means a dimensional-reduction strike—the other side doesn't argue with you, it just flattens you. I had a precious old account I'd used since 2012, and I lost it because I got reckless myself.
+
+Use a throwaway, you say? The time cost of producing throwaways could go toward plenty of other things. So hand it to a professional scraping API, pay a little, and offload the risk. Throwaway-account scraping is their specialty, and going toe-to-toe with anti-scraping doesn't scare them.
+
+Technically you can of course have an agent log into a backend and crawl it page by page—but being able to do it isn't the same as it being something you should do yourself.
 
 ## The three layers add up to one checklist
 
@@ -50,26 +66,6 @@ None of the three asks you to understand how the model works inside, or to judge
 I wrote earlier about [capability boundaries and de-identifying private data](/blog/posts/en/ai-security-boundary/), which was about what shouldn't go out. This one points the other way: even if you send nothing out, the residue, the flags, and the input are still sitting on your machine.
 
 Whether the model says the wrong thing isn't up to me. These three are.
-
-## One more: don't brute-force sites that need a login
-
-Honestly, for sites that need a login, I always tell regular users not to go head-to-head with them—just find a third-party scraping database API.
-
-The reason is simple: your token is your account. Push it too far, and the moment the admin drops a "two-dimensional foil" on you, your account is gone. The two-dimensional foil is a reference from *The Three-Body Problem*. It means a dimensional-reduction strike—the other side doesn't argue with you, it just flattens you. I had a precious old account I'd used since 2012, and I lost it because I got reckless myself.
-
-Use a throwaway, you say? The time cost of producing throwaways could go toward plenty of other things. So hand it to a professional scraping API, pay a little, and offload the risk. Throwaway-account scraping is their specialty, and going toe-to-toe with anti-scraping doesn't scare them.
-
-Technically you can of course have an agent log into a backend and crawl it page by page—but being able to do it isn't the same as it being something you should do yourself.
-
-## Merged in: Two Everyday API Key Habits
-
-Would you really let an agent register an API key itself and leave that key sitting in plaintext in the session log?
-
-Also: next up, scan the company website pages daily to see whether a manager has hardcoded an API key into the front end.
-
-## Folded In: Every External File Goes to the Sandbox First
-
-When I have Codex read my mail, the habit I set for it is that every external file gets isolated in a sandbox first. So when I see other people getting burned by something attached to an email, nothing happened on my end.
 
 <!--
 2026-08-28 W36 micro-note merge: the live notes "Don't Let the Agent Sign Up for Its Own API Key" and "Scan Your Own Company's Front End Every Day" were folded in verbatim; both are about API key exposure and neither is enough for its own post. Removed from the zh/en live files. Added non-original text is limited to the subheading (framing) and "Also:" (connective).
@@ -93,4 +89,6 @@ When I have Codex read my mail, the habit I set for it is that every external fi
 14. 「## One more: don't brute-force sites that need a login」(H2) and the paragraph merges inside it — 類型：小標＋改寫（本節內容原為獨立文章 dont-scrape-login-sites，合併時只做段落併合與刪去原文的兩個 H2 小標，字句未改；英文版另刪去括號補述「(the banhammer comes down)」以配合段落併合）
 
 2026-09-11 W38 micro-note merge: the live note "Every External File Goes to the Sandbox First" was folded in verbatim and removed from the zh/en live file. It is the practice version of the third layer above. Added non-source sentence: the heading (framing).
+
+2026-10-26 splice cleanup (mirrors zh): moved checklist to the very end as single conclusion, removed "One more" and "Merged in" markers, integrated API key notes and sandbox practice into layers one and three, and moved scraping section before conclusion; new bridge sentences: "This kind of oversight doesn't just happen with shell snapshots:", "That's also why", "Beyond reading emails and external files, another workflow that easily steps on landmines on your own machine is having an agent scrape websites that require a login."
 -->

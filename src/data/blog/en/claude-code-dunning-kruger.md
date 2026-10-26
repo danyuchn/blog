@@ -58,6 +58,8 @@ When it was done, I realized it hadn't even been 24 hours.
 
 Just looking at the old vs. new schema field mappings made me want to set the database on fire. I'm genuinely curious -- in the years before AI, how did engineers do all this, and how long did it take them?
 
+Also fantastic for writing technical docs -- drop it into Overleaf and it passes first try. I'm noticing my conversations with AI are getting increasingly nerdy -- fork, branch, merge, push, fallback, prop, hook -- these words are in my mouth every single day now.
+
 ## Skills vs. MCP in Plain English
 
 A lot of people can't tell Skills and MCP apart. Let me use a secretary analogy:
@@ -89,6 +91,8 @@ Other flags:
 - `--since YYYYMMDD --until YYYYMMDD`: specify a date range
 - `--breakdown`: split by model
 
-Also fantastic for writing technical docs -- drop it into Overleaf and it passes first try. I'm noticing my conversations with AI are getting increasingly nerdy -- fork, branch, merge, push, fallback, prop, hook -- these words are in my mouth every single day now.
-
 > **Postscript (2026-10-20):** ccusage now combines every coding CLI it detects (Codex, Gemini CLI and others) into one report. If you only want Claude Code's numbers, run `npx ccusage@latest claude monthly`.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved technical docs and nerdy vocabulary paragraph to the end of the full-scale project section; new bridge sentences: none
+-->

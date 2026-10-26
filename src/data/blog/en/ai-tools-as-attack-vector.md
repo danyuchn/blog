@@ -41,7 +41,7 @@ If you have never installed a `@redhat-cloud-services` package and the scans abo
 
 ### Wave two: Hades (June 11)
 
-Before last month's Miasma attack (the Red Hat npm package backdoor) had even settled, the same attack group — TeamPCP/UNC6780 — upgraded its weapons and released a new wave codenamed Hades. This time they crossed into the Python ecosystem and turned 14 AI tools, including Claude Code, Cursor, Copilot, and Gemini CLI, directly into an attack vector. So far 294,842 secrets have been confirmed exfiltrated from 6,943 machines.
+Before the Miasma attack two days earlier (the Red Hat npm package backdoor) had even settled, the same attack group — TeamPCP/UNC6780 — upgraded its weapons and released a new wave codenamed Hades. This time they crossed into the Python ecosystem and turned 14 AI tools, including Claude Code, Cursor, Copilot, and Gemini CLI, directly into an attack vector. So far 294,842 secrets have been confirmed exfiltrated from 6,943 machines.
 
 New techniques in this wave:
 
@@ -167,4 +167,6 @@ Added non-original sentences (fidelity disclosure):
 5. "The test target was a third-party MCP server." — rewrite (original: "The video's test target is..."; the video reference is gone)
 6. In the Hades section, the literal `rm -rf ~/` was replaced with a description of a recursive wipe of the home directory — rewrite (keeps a copy-pasteable destructive command out of the post; fact unchanged)
 Everything else is taken verbatim from the three source posts (supply-chain-miasma-hades, codex-argues-with-google-support, security-scan-before-mcp-install), with heading-level adjustment and a few paragraph merges (the two "Why let AI make the call" H3s became two paragraphs). No advice or data beyond the sources was added.
+
+2026-10-26 splice cleanup (mirrors zh): no sections moved or merged, corrected 'last month' to 'two days earlier' in Hades section to fix timeline contradiction; new bridge sentences: none
 -->

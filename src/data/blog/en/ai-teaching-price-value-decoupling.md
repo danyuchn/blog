@@ -28,7 +28,7 @@ Exactly one thing on that chain has been verified, and it's the referral.
 
 Let me put two things of my own next to it. Not to rank them. It's just that with these two I can say exactly what gets delivered.
 
-First one. Wrapping up a GMAT consult just now, the test-taker asked me how to use Claude Code to prep. So I quietly handed over the SKILL I distilled from my own 200-plus articles and 100-plus hours of video courses built up over fifteen years. Their Claude is probably the strongest GMAT teacher in history now (?)
+First one. Wrapping up a GMAT consult earlier, the test-taker asked me how to use Claude Code to prep. So I quietly handed over the SKILL I distilled from my own 200-plus articles and 100-plus hours of video courses built up over fifteen years. Their Claude is probably the strongest GMAT teacher in history now (?)
 
 Second one. Built a system that fully replicates the professional exam interface for students to practice on. Standalone subscription revenue is now past a thousand USD a month.
 
@@ -48,7 +48,7 @@ I've written before about the baseline of teaching quality: how sections connect
 
 ## Which Side Time Is On
 
-In the AI era, if you learn slowly enough, you can skip learning anything at all. By the time you finish, that thing has already been automated. Flip side: people who learn fast enough keep finding they can do more and more.
+Faced with this anxiety in the market over the shelf life of new tech, I often think of a line: In the AI era, if you learn slowly enough, you can skip learning anything at all. By the time you finish, that thing has already been automated. Flip side: people who learn fast enough keep finding they can do more and more.
 
 That line was aimed at learners, but it holds for course sellers too. Anything held up by marketing is held up by a window: the one where this skill is hot right now. Close the window and the thing goes with it. Output you can check doesn't live off that window. The SKILL distills fifteen years. The mock exam interface solves the fact that test-takers really do have to drill every day.
 
@@ -72,4 +72,6 @@ That's it.
 12. 「就這樣。」 — 類型：收束
 標題與 description 為新寫（類型：框架句）。H2 小標全部為新寫（類型：銜接）。
 本文未出現任何可辨識的個人／公司／課程名稱；原碎念亦無指名。
+
+2026-10-26 splice cleanup (mirrors zh): changed relative time word "just now" to "earlier", and added a bridge sentence before the time-sensitivity quote to ease into it; new bridge sentences: "Faced with this anxiety in the market over the shelf life of new tech, I often think of a line:"
 -->

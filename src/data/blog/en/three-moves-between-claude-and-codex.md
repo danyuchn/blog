@@ -10,10 +10,10 @@ tags:
   - codex
   - claude-code
   - token-optimization
-description: 'Moving the whole harness to Codex in May, switching my daily driver in July, a honeymoon where the quota would not run out, a subsidy-war July that ledgered 57.5x, and an August where the quota got quietly cut by 50% and 77%. One chronological log.'
+description: 'Moving the whole harness to Codex in May, switching my daily driver in July, a honeymoon where the quota would not run out, a subsidy-war July that ledgered 57.5x, to August quota cuts, and moving back to Claude in September. One chronological log.'
 ---
 
-I've moved back and forth between Claude Code and Codex three times. Here it is in order: moving the whole harness over in May, switching my daily driver in July, the honeymoon, the July full of resets, and then the honeymoon ending.
+I've moved back and forth between Claude Code and Codex three times. Here it is in order: moving the whole harness over in May, switching my daily driver in July, the honeymoon, the July full of resets, the honeymoon ending in August, to September when the dust settled and moving back to Claude.
 
 ## May: Building a Skill to move the harness first
 
@@ -138,11 +138,7 @@ Another gut feeling: the weekly quota on Codex's 100 USD plan seems smaller than
 
 One more thing worth noting: Anthropic's latest post lists only Fable, Opus, and Sonnet, with no mention of Haiku at all. Sonnet looks like it's taking over the slot Haiku used to hold, which is a price increase nobody's calling a price increase. Haiku will probably stop at 4.5.
 
-The last few days of the month were even better: frantic resets on one side and frantic account bans on the other. Easily the most absurd scene I've witnessed.
-
-Anthropic, so stingy.
-
-When the quota runs out, go leave a comment on X praying to Tibo. When the reset comes, `/model sol max`. When it's truly gone, pull out the credit card and cry while paying the 200.
+The last few days of the month were even better: frantic resets on one side and frantic account bans on the other. Easily the most absurd scene I've witnessed. Anthropic, so stingy. When the quota runs out, go leave a comment on X praying to Tibo. When the reset comes, `/model sol max`. When it's truly gone, pull out the credit card and cry while paying the 200.
 
 ## August 20: The honeymoon ends
 
@@ -180,7 +176,7 @@ The main reason is Fable. The secondary reason is OpenAI's quota policy. My work
 
 ## Late September: The Fall From the Pedestal Comes True
 
-I can clearly feel every model in the lineup getting dumber ahead of OpenAI's launch event, not just Astra.
+Not long after downgrading, late September brought a new situation: I can clearly feel every model in the lineup getting dumber ahead of OpenAI's launch event, not just Astra.
 
 A simple task: browser automation to look at a single page (login state already set up) plus some file changes (fixed spec, with a SKILL). Luna Max used to finish it in about 6 minutes. This time it ran for an hour and still wasn't done. It kept going in circles, checking the browser extension status over and over, and where a simple write/edit would do, it insisted on writing a throwaway script to change the file...
 
@@ -202,4 +198,6 @@ Every other paragraph, figure, blockquote, link, and image alt is carried over v
 
 <!--
 2026-09-24 W40 postscript: 2026-09-21 Threads post merged verbatim as a new section. Added non-source sentences: section heading (framing).
+
+2026-10-26 splice cleanup (mirrors zh): updated intro and description to include September progress, and merged community chatter into preceding paragraph; new bridge sentences: "Not long after downgrading, late September brought a new situation:"
 -->

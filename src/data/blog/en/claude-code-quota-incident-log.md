@@ -211,8 +211,9 @@ The fix was to bump CLIProxyAPI from 7.2.73 to 7.2.91, then add a few guardrails
 
 That's the thing to watch out for. Besides setting the compaction window yourself, remember to turn off nested subagents and cap the total number of subagents.
 
+### The token-burning perpetual motion machine: official dynamic workflow
 
-## Merged in: The Token-Burning Perpetual Motion Machine
+It's not just my own orchestration scripts that run into trouble; the features shipped officially later do the same thing.
 
 I didn't even turn on ultracode, and it still auto-triggered a dynamic workflow on me. By the time I looked up, 103 agents were already on their way. Infuriating. Looks like I need to figure out which parameter forcibly shuts this off. Though honestly, my request was just killing a chicken, so I can't really tell where the ox-cleaver's superiority lies.
 
@@ -226,6 +227,8 @@ When it comes to encouraging users to burn tokens, Anthropic really is trying ha
 
 Dynamic workflow is basically Anthropic's in-house toy. You need unlimited tokens to use it without worrying. Best to leave it alone, or else cap the number of subagents in your settings.
 
+> **Postscript (2026-10-20):** The subagent knobs today: nesting defaults to three layers below the main conversation, and `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` turns it off. The per-session total cap was removed in v2.1.224, so the built-in setting that actually limits a fan-out is `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` (default 20).
+
 <!--
 2026-10-09 W42 merged from micro-notes: dynamic-workflow note appended to this section and removed from the archive.
 -->
@@ -233,8 +236,6 @@ Dynamic workflow is basically Anthropic's in-house toy. You need unlimited token
 <!--
 2026-08-28 W36 main-thread note: "The Token-Burning Perpetual Motion Machine" (2026-06-13) was merged in here and turned into a stub. That post is a rant rather than an incident record, which is why the 2026-08-22 merge pass left it out; it is kept as its own section here rather than folded into the four incidents, to preserve the difference in register. Kept verbatim; the only added non-original sentence is the subheading (framing).
 -->
-
-> **Postscript (2026-10-20):** The subagent knobs today: nesting defaults to three layers below the main conversation, and `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1` turns it off. The per-session total cap was removed in v2.1.224, so the built-in setting that actually limits a fan-out is `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` (default 20).
 
 <!--
 Added non-original sentences (fidelity disclosure):
@@ -246,4 +247,6 @@ Added non-original sentences (fidelity disclosure):
 6. The original claude-getting-dumber-data "## Then the Issue Got Closed" heading was dropped and its text follows the data tables — rewrite (avoids over-fragmented headings after the merge)
 7. "Reddit's greatest hits that week" / "Alternatives people floated that week" — rewrite ("this week" changed to "that week" now that the post is no longer written in the same week)
 Everything else is taken verbatim from the four source posts (claude-code-cache-crisis, claude-getting-dumber-data, opus-47-week-review, ccx-quota-surge-forensics), with heading-level adjustment and reordering only. No numbers or conclusions were added. Each original closing stayed inside its own section; no new overall ending was written.
+
+2026-10-26 splice cleanup (mirrors zh): Integrated "Merged in: The Token-Burning Perpetual Motion Machine" as subsection "### The token-burning perpetual motion machine: official dynamic workflow" under Incident 4, moved postscript to end of section; new bridge sentences: "It's not just my own orchestration scripts that run into trouble; the features shipped officially later do the same thing."
 -->

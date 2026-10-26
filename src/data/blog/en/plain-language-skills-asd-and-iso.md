@@ -12,6 +12,8 @@ tags:
 description: 'A skill I threw together three weeks ago got passed around by people overseas and picked up three PRs, so I shipped a second one I use every single day.'
 ---
 
+## ASD-STE100: Grammar and Word Choice
+
 Good grief. I woke up to a reply notification from a GitHub issue thread, clicked in, and found out a SKILL I threw together three weeks ago was getting passed around like crazy by people overseas, with three PRs sitting on it.
 
 <https://github.com/danyuchn/asd-ste100-skill>
@@ -26,7 +28,9 @@ Someone from overseas asked in that thread whether to install it. I answered him
 
 I'm just a liberal arts SKILL guy.
 
-The next day, here's another SKILL I use every single day: make your AI AGENT talk like a human.
+## ISO 24495: Logic and Structure
+
+With grammar sorted, the next day, here's another SKILL I use every single day: make your AI AGENT talk like a human.
 
 <https://github.com/danyuchn/iso-24495-skill>
 
@@ -41,4 +45,6 @@ The difference from ASD: ASD governs grammar and word choice, ISO governs logic 
 其餘句子皆為原素材逐字或僅去除 emoji／裸連結格式化。
 en 版已過 humanizer（僅調整既有句子的口語措辭，未新增句子；作者自嘲「文組 SKILL 仔」與英文原文 blockquote 未動）。
 3. The parenthetical pointing back to the W31 ASD-STE100 post — type: internal cross-link (added by the main thread on 2026-08-14 after semantic dedup flagged 0.874 similarity; read both and judged not duplicative, added a back-reference instead)
+
+2026-10-26 splice cleanup (mirrors zh): added two H2 headings categorizing materials by grammar vs structure, and smoothed timeline transition; new bridge sentences: "With grammar sorted,"
 -->

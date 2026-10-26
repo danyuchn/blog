@@ -64,6 +64,8 @@ What's relatively less important? Long-form reading comprehension — you can us
 
 So here's my bold prediction: future exams and competency assessments will shift toward "AI collaboration scenarios." They won't test how much knowledge you've memorized. They'll test whether you can give AI the right instructions in a complex situation, then critically evaluate what it produces.
 
+In fact, this isn't just about facing changes in testing; it's also my consistent attitude when dealing with outside competition and AI anxiety.
+
 ## Focus on the Product, Not the Competition
 
 Someone once asked me: "When competitors keep coming after you, how do you hold up?"
@@ -77,3 +79,7 @@ This attitude is even more relevant in the AI era. Instead of anxiously wonderin
 The ability to think isn't a talent — it's an attitude. Playing dumb and asking relentlessly is an attitude. The Feynman method is an attitude. Critical reasoning is an attitude. Focusing on the product is an attitude.
 
 AI won't replace your thinking. But it will expose the fact that you can't think.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): added bridge sentence before the competition section to connect exam shifts with mindset on competition and AI anxiety; new bridge sentences: "In fact, this isn't just about facing changes in testing; it's also my consistent attitude when dealing with outside competition and AI anxiety."
+-->

@@ -12,7 +12,7 @@ tags:
 description: 'Fable 5 came back for one week only. I did not spend it on daily busywork — I spent it on high-leverage judgment, distilled into skills that cheap models can follow.'
 ---
 
-Fable 5 comes back for one week starting tomorrow, so I'm going to protect my weekly quota with Sonnet 5 and pour everything else into Fable.
+Fable 5 is back for a limited one-week window, so I'm going to protect my weekly quota with Sonnet 5 and pour everything else into Fable.
 
 ![Anthropic official announcement: export controls on Fable 5 and Mythos 5 lifted, returning July 1](/blog/assets/posts/fable-5-return-skill-distillation/announcement.jpg)
 
@@ -38,12 +38,7 @@ I also turned that prompt skeleton into a card: ask the high-end model to play a
 
 ![Card: the prompt skeleton for Skill Distillation](/blog/assets/posts/fable-5-return-skill-distillation/card-4-prompt-skeleton.jpg)
 
-The real test came from a friend writing academic papers. He borrowed my account this morning and said the math proofs Fable wrote were natural, clean, and elegant, and completely correct on the first pass — he wrote two papers from scratch, already ready to submit, at an equivalent API cost of 200 USD. This time we ran every subagent on Fable, i.e. deliberately maxed out; but afterward we discussed it, and the best combination is really: Fable for plan / architecture / final verification, Opus 4.8 for writing the transcript, composer 2.5 for running experiments and writing code, and gpt-image-2 for drawing. He said 100 USD per paper honestly isn't expensive, so even paying via API down the road is worth it.
-
-One week of time-limited quota, and I didn't spend it on small things. Turning the most expensive model's judgment into working rules for cheap models — that's what I actually kept from this week, and what I'm still using every day since.
-
-
-## Merged in: Testing Fable's Limits on a Professor Friend's Paper Repo
+## Testing Fable's Limits on a Professor Friend's Paper Repo
 
 I woke up and Fei-bo (the guardrailed build of Mythos) was already live. I quickly pinged my professor friend and asked him to hand over the prompt and repo for the paper he's writing, so I could test where its limits are. Only a few days of subscription quota to play with — after that the API call pricing gets high enough to rival a Taiwan domestic-travel bill.
 
@@ -53,7 +48,11 @@ The result, in his own words: Opus would miss a few rules, Fable missed none and
 
 He's working on something federated-learning related, so it probably didn't run into any guardrails.
 
+He borrowed my account this morning and said the math proofs Fable wrote were natural, clean, and elegant, and completely correct on the first pass — he wrote two papers from scratch, already ready to submit, at an equivalent API cost of 200 USD. This time we ran every subagent on Fable, i.e. deliberately maxed out; but afterward we discussed it, and the best combination is really: Fable for plan / architecture / final verification, Opus 4.8 for writing the transcript, composer 2.5 for running experiments and writing code, and gpt-image-2 for drawing. He said 100 USD per paper honestly isn't expensive, so even paying via API down the road is worth it.
+
 As for what effort level to set — someone on reddit said high isn't enough, only xhigh gives a clear boost. I'll leave that one to verify myself later.
+
+One week of time-limited quota, and I didn't spend it on small things. Turning the most expensive model's judgment into working rules for cheap models — that's what I actually kept from this week, and what I'm still using every day since.
 
 <!--
 2026-08-28 W36 main-thread note: "Testing Fable's Limits on a Professor Friend's Paper Repo" (2026-06-10) was merged in here and turned into a stub. Kept verbatim, including the professor's own words; the only added non-original sentence is the subheading (framing).
@@ -69,4 +68,6 @@ Non-original sentences added (minimal AI bridging, not the author's original tex
 6. "The step details are on the card; I'll let the card speak for itself." — pointer to the card (avoids restating card text)
 7. "The real test came from a friend writing academic papers." — bridge into the paper-friend section
 8. "One week of time-limited quota, and I didn't spend it on small things. Turning the most expensive model's judgment into working rules for cheap models — that's what I actually kept from this week, and what I'm still using every day since." — closing, rewritten from card 1's core point, not a hortatory wrap-up
+
+2026-10-26 splice cleanup (mirrors zh): Retitled professor repo section without "Merged in:", moved paper testing paragraph into that section, moved closing paragraph to the end, and updated time wording in the opening sentence; new bridge sentences: none
 -->

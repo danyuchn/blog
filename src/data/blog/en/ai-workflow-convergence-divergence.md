@@ -37,7 +37,7 @@ Your flexible thinking is what unlocks AI's power as a strategist.
 
 ## Personal Knowledge Base: The Maniac Recording Method
 
-I now document how I do everything. The method is simple and a little insane: I talk to myself out loud while working and record it. In situations involving other people, I record with their permission. Then I transcribe all of it.
+I use this mindset of convergence and divergence most often to build my own personal knowledge base. I now document how I do everything. The method is simple and a little insane: I talk to myself out loud while working and record it. In situations involving other people, I record with their permission. Then I transcribe all of it.
 
 Within roughly ten samples, you can build a personal know-how knowledge base assistant. From that point on, your productivity skyrockets, because your AI is no longer a generic language model -- it's a clone that actually understands how you work.
 
@@ -47,7 +47,7 @@ The last step is going back to compare against the originals to make sure nothin
 
 ## Running Multiple Agents in Parallel
 
-Four terminal windows running simultaneously is now my normal. One handling video migration, one doing video translation, one running website SEO optimization, and the fourth running personal finance simulations. Each window might have multiple sub-agents running in parallel on top of that.
+Once your personal know-how has been distilled into a knowledge base, the next step is handing it over to multiple agents running in parallel. Four terminal windows running simultaneously is now my normal. One handling video migration, one doing video translation, one running website SEO optimization, and the fourth running personal finance simulations. Each window might have multiple sub-agents running in parallel on top of that.
 
 The $200/month Claude subscription? In terms of felt value, I'm getting $2,000 or more out of it.
 
@@ -60,3 +60,7 @@ With AI in the picture, the boundary between work and life gets blurry. You can 
 What I do personally: I let AI agents work overtime for me until 5 AM, but I'm in bed by 11 PM. The time when the AI is running and I'm not idle, I spend thinking about how to evaluate the output, how to give clearer instructions, trying to understand the logic behind its changes. But when it's time to rest, I rest.
 
 What to hand off to AI, what to keep for yourself -- the entire workflow needs constant, dynamic restructuring. This isn't a one-time decision. It's a judgment call you make every single day.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): no sections moved or merged, added transition sentences connecting convergence/divergence mindset to personal knowledge base and multi-agent execution; new bridge sentences: "I use this mindset of convergence and divergence most often to build my own personal knowledge base.", "Once your personal know-how has been distilled into a knowledge base, the next step is handing it over to multiple agents running in parallel."
+-->

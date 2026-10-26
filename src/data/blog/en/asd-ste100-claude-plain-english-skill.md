@@ -29,13 +29,15 @@ So I turned it into a skill, and every time Claude starts showing off its vocabu
 
 <https://github.com/danyuchn/asd-ste100-skill>
 
-## Postscript: A Month Later, Same Problem
+## A Month Later, Same Problem
 
-The moment I finished typing a certain prompt, I felt an endless wave of exasperation. Claude, once the model with the best writing chops, has now become the worst offender for not talking like a human. I have to ask Gemini to fix the tone for me these days, and I have to warn it not to change it back.
+A specification manual is one thing, though — everyday writing is still beyond saving. The moment I finished typing a certain prompt, I felt an endless wave of exasperation. Claude, once the model with the best writing chops, has now become the worst offender for not talking like a human. I have to ask Gemini to fix the tone for me these days, and I have to warn it not to change it back.
 
 <!--
 新增非原文句子清單（忠實度自首）：
 零新增。全篇為原 Threads 貼文的英文翻譯，忠實對應 zh 版段落與順序；before/after 例子維持原英文原文不譯、以 blockquote 呈現。無任何 AI 新增的句子或論點。
 
 2026-09-04 週例行補記：新增 "Postscript: A Month Later, Same Problem" 一節，為 zh 版新增段落的翻譯，忠實度自首同 zh 版。
+
+2026-10-26 splice cleanup (mirrors zh): stripped 'Postscript:' prefix from heading and added a transition between the specification and everyday writing; new bridge sentences: "A specification manual is one thing, though — everyday writing is still beyond saving."
 -->

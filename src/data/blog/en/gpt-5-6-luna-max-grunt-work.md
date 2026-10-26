@@ -15,7 +15,7 @@ description: 'Using Luna Max for grunt work after the price cut: statements pull
 
 I just tried using the post-price-cut GPT-5.6 Luna MAX for grunt work, and it's fucking good.
 
-I handed it two jobs. One: use the browser to go to every bank and payment platform (after I logged in for it) and pull down the statements I was missing — deliberately no API, no MCP, no CLI. Two: sync the harness from the Claude Code side over to Codex (a SKILL already exists for this). I ran `/goal` on both. The first one finished cleanly in 22 minutes; the other has been running for an hour and is still going, in good order. So far it's burned 1% of the weekly quota — converted to API pricing by tokens, that's roughly 3.14 USD.
+I handed it two jobs. One: use the browser to go to every bank and payment platform (after I logged in for it) and pull down the statements I was missing — deliberately no API, no MCP, no CLI. Two: sync the harness from the Claude Code side over to Codex (a SKILL already exists for this). I ran `/goal` on both. The first one finished cleanly in 22 minutes; the other has been running for an hour and is still going, in good order. /goal and /loop: those two commands solve most problems. So far it's burned 1% of the weekly quota — converted to API pricing by tokens, that's roughly 3.14 USD.
 
 ![Terminal showing the agent reporting four financial statements downloaded and cross-checked for format and dates, with Worked for 21m 49s at the bottom](/blog/assets/posts/gpt-5-6-luna-max-grunt-work/1-luna-max-goal.jpg)
 
@@ -33,6 +33,10 @@ A few scenarios where I use LUNA most. One: scraping social media posts to monit
 
 Thank you GPT 5.6 Luna Max. Two days ago it snagged me two business class award seats, Bangkok to Tokyo. Only people who've used ANA know how bad their award system is and how complicated the rules are.
 
+Also, a notice to Cathay Pacific: your CAPTCHA may be advanced, but GPT Luna max still cracked them one by one right in front of me.
+
+![Cathay Pacific's image CAPTCHA asking to identify all things eaten for breakfast, with several tiles already selected](/blog/assets/posts/gpt-5-6-luna-max-grunt-work/cathay-captcha.jpg)
+
 People who sit around trashing some model "across the board" just have too narrow an imagination, and want to look knowledgeable by putting models down. Every model has use cases it fits. It depends on whether you have the imagination. In my eyes, even Gemini has its place.
 
 I tell everyone GPT 5.6 Sol is a mad dog. Give it the /狗死 (dog-die) command, and I usually play LISA's "dog-die~dog-die~" alongside it, and it clamps onto the target and won't let go until the job's done.
@@ -42,7 +46,7 @@ Lately, besides 5.6 Sol, my favorite is 5.6 Terra high. It's the top pick for gr
 For social sites like X and Threads, direct WebFetch from Claude and Codex often gets blocked and you have to route through a browser, while Gemini can just read them. Reddit is especially unfriendly to Claude; Codex and Gemini go through fine. Models aren't only competing on how smart they are. It also comes down to what data they can get in the door.
 
 
-## Postscript: A Twenty-Minute Video With Luna Max
+## Long-Form Video and Post-Production With Luna Max
 
 Sticking to the principle that every model is good for something, I kept throwing different kinds of work at Luna Max. Eventually I made a twenty-minute long-form video entirely with Luna Max plus HyperFrames.
 
@@ -50,15 +54,11 @@ For work like that, Luna Max is passable if you pair it with a pipeline whose sp
 
 After finishing, my read is this: next time, pair it with a higher-tier Terra or Sol model for the final review and it should go smoother.
 
-## Postscript: Two Commands Cover Most of It
-
-/goal and /loop. Those two commands solve most problems.
-
-## Postscript: The God of Video Post-Production
+It's the same story with editing and post-production:
 
 DaVinci Resolve Studio wired up to MCP and driven by Luna Max is the god of video post-production in this new world. For grunt work like this, Luna Max is genuinely first in the world.
 
-## Postscript: GPT 6 Luna Max Tagging 100+ LINE Customers
+## Using GPT 6 Luna Max to Tag 100+ LINE Customers
 
 Anyone else hate this sidebar you get when managing a LINE Official Account?
 
@@ -66,13 +66,9 @@ Anyone else hate this sidebar you get when managing a LINE Official Account?
 
 Customer sign-up data lives in a form on Google Drive, and each customer's folder is scattered around Google Drive too. I used to go through them one by one, add tags, and write notes to cross-check.
 
-Just now I had GPT 6 Luna Max do this kind of grunt work. For 100-odd customers it finished tagging and syncing in about an hour, and only used 5% of the 5-hour quota on the 20 USD plan, 1% of the weekly quota...
+Later I had GPT 6 Luna Max do this kind of grunt work. For 100-odd customers it finished tagging and syncing in about an hour, and only used 5% of the 5-hour quota on the 20 USD plan, 1% of the weekly quota...
 
 It really is cheap. Slow is the only downside. When it was done I had Opus give it a quick pass and nothing was missed. Feels pretty good!
-
-Also, a notice to Cathay Pacific: your CAPTCHA may be advanced, but GPT Luna max still cracked them one by one right in front of me.
-
-![Cathay Pacific's image CAPTCHA asking to identify all things eaten for breakfast, with several tiles already selected](/blog/assets/posts/gpt-5-6-luna-max-grunt-work/cathay-captcha.jpg)
 
 <!--
 2026-08-28 W36 micro-note merge: the live note "The God of Video Post-Production" was folded in verbatim; it is about exactly this post's subject (Luna Max on grunt work). Removed from the zh/en live files. No sentences added (the subheading is the note's own title).
@@ -92,4 +88,6 @@ Also, a notice to Cathay Pacific: your CAPTCHA may be advanced, but GPT Luna max
 
 <!--
 2026-09-24 W40 補記：2026-09-24 Threads 貼文（LINE 官方帳號客戶標註）與 2026-09-20 貼文（國泰人機驗證）逐字併入。新增非原文句子：小標（框架句）、「另外，」（銜接）。截圖中客戶姓氏已由主對話遮蔽。原文 emoji 依站台規範未保留。
+
+2026-10-26 splice cleanup (mirrors zh): merged long-form video and post-production under one heading, moved Cathay CAPTCHA after ANA award seats, folded two-command section into earlier paragraph, and changed "Just now" to "Later"; new bridge sentences: "It's the same story with editing and post-production:"
 -->

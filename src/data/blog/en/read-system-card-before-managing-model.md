@@ -42,7 +42,7 @@ With Sonnet, I cut down the context and state the criteria very clearly, but sti
 
 And once a task is stable enough to be written as a very standard, reusable workflow SKILL, I'll assign Sonnet to run it directly. I'm still measuring whether that's really cheaper in the long run, and what effort level is the sweet spot.
 
-All in all, I think understanding a model's personality is an important part of the picture. A lot of how I interact with agents seems to come from my background and experience as an educator. I feel I should give a talk called "An Ordinary Person's Philosophy of Agent Education" one of these days.
+A lot of how I interact with agents seems to come from my background and experience as an educator. I feel I should give a talk called "An Ordinary Person's Philosophy of Agent Education" one of these days.
 
 I've also collected some of my past sharing on AI pedagogy here, if you're interested: [Two Mindsets for Getting Unstuck: Think in Logic, and an AI Pedagogy of "Never Repeat the Mistake"](/blog/posts/en/debugging-mindset-logic-ai-pedagogy)
 
@@ -72,8 +72,6 @@ I've written before about how I usually divide work among the three models and w
 
 When I work with Opus 5.5, I'm not only thinking about my task. I also ask, "Given this model's personality, how should I interact with it?"
 
-As I said earlier, Opus 5.5 is a gentle advisor with opinions, and its mind-reading is strong too, so you can tell it your inner thoughts honestly and let it explore freely.
-
 The screenshot is a classic example. You explain your context and intent and hint at what directions it can explore, but you give it plenty of room for how to get there, no micromanaging.
 
 ![A Claude Code screen inside herdr: Opus 5.5 set to high effort with auto mode on, the author explains the context, target audience and intent for making a video, asks it to check first when a decision is needed, allows at most two Sonnet agents at once, and leaves the rest to it.](/blog/assets/posts/read-system-card-before-managing-model/3-delegation-prompt.jpg)
@@ -88,9 +86,9 @@ I've been stressing this before: "Treat the model like a coworker. There's no se
 
 Now the bald guy himself is speaking up. Convinced yet?
 
-Plenty of people explain their problem to me just fine. Then I paste the exact same words into the AI in front of them, and they freeze: that works? Business owners can just use their normal everyday language.
-
 ![A screenshot of Boris Cherny's post: Talk to Claude the way you would a coworker. There's no secret to prompting. What matters is telling it what you want it to do, how much effort you want it to spend, and how it should verify that it did the right thing, with a Traditional Chinese translation below.](/blog/assets/posts/read-system-card-before-managing-model/4-boris-cherny-coworker.jpg)
+
+Plenty of people explain their problem to me just fine. Then I paste the exact same words into the AI in front of them, and they freeze: that works? Business owners can just use their normal everyday language.
 
 ## Haiku 5.5: just put it in the dispatch rules
 
@@ -128,4 +126,6 @@ I've written separately about how Haiku 5.5 actually performed on my own dispatc
 12. 「官方系統卡在這裡：[anthropic.com/claude-haiku-5-5-system-card](…)」 — 類型：銜接（素材原為只有網址的貼文，補一句引導）
 13. 四張圖的 alt 文字 — 類型：框架句（依截圖內容照實描述）
 刪除項目（非新增，供審查）：結尾的笑臉 emoji；「等等來看他做得如何。」；「參考閱讀：請了解模型的個性」；「---」分隔線改為段落空行；原連結的 utm 參數。
+
+2026-10-26 splice cleanup (mirrors zh): removed duplicate transition sentences at the end of section 1 and start of section 3, and moved Boris Cherny screenshot before the anecdote; new bridge sentences: none
 -->

@@ -25,15 +25,17 @@ That's also why I think shadow AI is a sore spot at a lot of companies. Rather t
 
 Two related pieces: [The 2.5 Stage of AI Adoption](/blog/posts/en/ai-adoption-stage-2-5-automation) on where adoption stalls, and [Designing Enterprise AI Training](/blog/posts/en/enterprise-ai-training-design) on how the training side gets arranged.
 
-This week's video: "The AI Collaboration Methodology Distilled From Nearly a Hundred Workshops, Courses and Enterprise Rollouts" <https://youtu.be/ST_v4UdC-Wc>
+Related video: "The AI Collaboration Methodology Distilled From Nearly a Hundred Workshops, Courses and Enterprise Rollouts" <https://youtu.be/ST_v4UdC-Wc>
 
-## An Anonymized Case, Plus a New Video
+## Don't Adopt AI Just to Adopt It
 
-(An anonymized case from a past client.) Short version: a lot of what you'd call an efficiency gain doesn't actually come from AI — it comes from restructuring the process and pruning it. Don't adopt AI just to adopt it, or you end up polishing a turd.
+Don't adopt AI just to adopt it, or you end up polishing a turd.
 
 The new video is about exactly this: "Want to Adopt AI? Look at How Much AI Can Actually Help Across These Seven Steps First" <https://youtu.be/KgimZ5n3mC0>
 
-## The Grocery Store Hire, Plus a New Video
+Beyond not sorting out the process first, another common mistake is having completely unrealistic expectations of AI.
+
+## Treat AI Like a Grocery Store Hire
 
 You open a grocery store and hire someone. At first you only let them stock shelves, put on labels and carry heavy things, all within your line of sight. Only later do you let them work the register, place orders, reconcile the books, mind the store.
 
@@ -43,7 +45,7 @@ Much, much later, once you're sure they know every rule and you've walked them t
 
 So how the hell do you start using AI and immediately fantasize about one-shotting everything, automating all of it? What is wrong with you?
 
-This week's video happens to be about the other side of that, the not-daring: "Three Months Into AI Adoption, Why Does Nobody Dare Actually Use It?" <https://youtu.be/TIuu5uMrhnE>
+Another video happens to be about the other side of that, the not-daring: "Three Months Into AI Adoption, Why Does Nobody Dare Actually Use It?" <https://youtu.be/TIuu5uMrhnE>
 
 The follow-up is about finding out why you are stuck: "AI Adoption Still Stuck? First Figure Out Which Layer It Is Stuck On" <https://youtu.be/8sLBM7xg9U0>
 
@@ -61,4 +63,6 @@ Added non-source sentences (fidelity disclosure):
 
 <!--
 2026-09-24 W40 postscript: linked the 2026-09-22 video. Added non-source sentence: the lead-in line (bridging, paraphrased from the video title).
+
+2026-10-26 splice cleanup (mirrors zh): removed "plus video" from headings, deleted duplicate summary, and changed time words "This week's video" to "Related video" and "Another video"; new bridge sentences: "Beyond not sorting out the process first, another common mistake is having completely unrealistic expectations of AI."
 -->

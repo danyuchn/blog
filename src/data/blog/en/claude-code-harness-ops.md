@@ -61,7 +61,7 @@ This category of "silent bug" is the hardest to catch at the harness layer. The 
 
 ## 2.1.90 finally fixed resume cache miss
 
-At the start of April, 30 minutes before I wrote this paragraph, Claude Code shipped 2.1.90. It finally fixed the resume-causes-cache-miss problem.
+At the start of April, Claude Code shipped 2.1.90. It finally fixed the resume-causes-cache-miss problem.
 
 Every time you resumed a long conversation, the first message would rebuild the entire cache. So you paid an "admission ticket" to continue working. Resume five or six times a day and you're cooked.
 
@@ -73,7 +73,7 @@ Once fixed, my long-running project sessions became genuinely resumable.
 
 ## Plan Mode's question density (the 4.7 issue)
 
-Six questions. Is that Claude Code Plan Mode asking? I'm in auto mode. Why is the question density higher than plan mode?
+Beyond cache and resource management, interruptions to the conversation flow are just as annoying. Once, while running a task in auto mode, I got hit with a barrage of questions: Six questions. Is that Claude Code Plan Mode asking? I'm in auto mode. Why is the question density higher than plan mode?
 
 After 4.7, this tendency got noticeably worse. My guess:
 
@@ -101,12 +101,14 @@ Problems at this layer include but aren't limited to:
 
 These don't make the model smarter, but each one directly affects real-world usability. Anthropic's recent versions have been chipping away at these, but progress is slow.
 
-## The real model limits are elsewhere
-
-One last observation: I think the actual ceiling on model capability is how to transition from stateless to stateful, and how to update weights during use.
+At the end of the day, I think the actual ceiling on model capability is how to transition from stateless to stateful, and how to update weights during use.
 
 Those are the genuine differences between humans and current AI.
 
 Right now the harness layer is faking statefulness with engineering tricks: memory files, CLAUDE.md, auto memory, session JSONL. All of these are prosthetic memory systems bolted on from outside. The real breakthrough should be when the model itself can maintain state and learn continuously, rather than leaning on an external filesystem as a crutch.
 
 But until that day comes, harness engineering is the public infrastructure project those of us in it for the long haul have to keep maintaining together.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): removed contradictory time phrase, and merged model stateless limit into preceding section to keep a single ending; new bridge sentences: "Beyond cache and resource management, interruptions to the conversation flow are just as annoying. Once, while running a task in auto mode, I got hit with a barrage of questions:", "At the end of the day,"
+-->

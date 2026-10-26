@@ -40,9 +40,11 @@ Using its headless mode, called out by codex or claude code to eat the subscript
 
 Someone asked whether this transcription method is accurate. The error rate is about the same, but it is very, very fast, and it comes with speaker identification built in. The quota came free with Drive.
 
-Someone else recommended another STT model. I tried it before. What it is strongest at is recognizing Taiwanese; for Chinese, accuracy is a touch behind qwen.
+Someone else recommended another STT model. I tried one of them before. What it is strongest at is recognizing Taiwanese; for Chinese, accuracy is a touch behind qwen.
 
-## Postscript: if you don't want to set anything up, Gemini on the web
+## The Zero-Setup Option: Gemini on the Web
+
+If running a CLI feels like too much trouble, there's actually an even simpler, zero-setup alternative.
 
 The one thing Gemini's web app is still miles ahead at: transcribing audio into a transcript.
 
@@ -59,5 +61,7 @@ I recommend pairing it with another AI agent. When I'm reviewing a long document
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「Back in March I was still wishing for it:」「The tools have since filled that in, and now the question is just how to use them.」 — 類型：併入碎念（Voice Input Please，2026-08-14 週報併入）
+
+2026-10-26 splice cleanup (mirrors zh): removed "Postscript" from heading, clarified reference to recommended STT models, and added bridge sentence; new bridge sentences: "If running a CLI feels like too much trouble, there's actually an even simpler, zero-setup alternative."
 -->
 

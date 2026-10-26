@@ -73,13 +73,9 @@ How can you tell a model company is about to hit a headwind? When it keeps pushi
 
 Just realize these two will take turns failing, and keep a level head.
 
-## Build a backup
-
-In class I also said it plainly: these model vendors are itching for trouble, taking turns screwing up and getting spat on. If a company plans to rely on commercial AI to run agents, it has to build a backup, or when the model goes down the company goes down with it.
-
 ## Another Codex problem: defensive tone
 
-I once saw a parody that cracked me up, and this kind of defensive writing looks very much like Codex: "Understood, I will honestly disclose my sleep state. I will distinguish between 'resting with eyes closed,' 'light sleep' and 'deep sleep' and will not merge the three. I will also use SHA-256 to verify that sleep duration matches dream content."
+Beyond services and quotas taking turns failing, Codex brings another headache in day-to-day use. I once saw a parody that cracked me up, and this kind of defensive writing looks very much like Codex: "Understood, I will honestly disclose my sleep state. I will distinguish between 'resting with eyes closed,' 'light sleep' and 'deep sleep' and will not merge the three. I will also use SHA-256 to verify that sleep duration matches dream content."
 
 I asked Claude to dispatch a subagent to use /history-find and hunt down Codex's defensive writing tic. I really dislike how it over-stresses "can't, must not, not... doesn't mean..." as a way of talking. I wanted to know whether it's a harness problem or a base model problem, why the same sync harness doesn't make Claude do this but does make Codex do it, and whether I need a Codex-only patch on top of sync so it stops talking like that.
 
@@ -123,6 +119,10 @@ Two of Codex's original sentences, rewritten as a test:
 
 ![A terminal screenshot: Claude suggests putting the tone setting in developer_instructions in config.toml, with a draft and a before-and-after rewrite of two Codex sentences](/blog/assets/posts/model-vendors-take-turns-failing/6-codex-tone-fix.jpg)
 
+## Build a backup
+
+In class I also said it plainly: these model vendors are itching for trouble, taking turns screwing up and getting spat on. If a company plans to rely on commercial AI to run agents, it has to build a backup, or when the model goes down the company goes down with it.
+
 <!--
 2026-10-09 W42 merged from micro-notes: two archive notes added to the 'wind blew the other way' section, and the Codex defensive-writing note added to the top of the tone section; all three removed from the archive.
 -->
@@ -139,4 +139,6 @@ Two of Codex's original sentences, rewritten as a test:
 8. 「In class I also said it plainly: ...」 — 類型：改寫（原文「我也明確地說」加「在課堂上」；移除 emoji）
 9. 「I asked Claude to dispatch a subagent ...」、調查結果與證據各段、建議做法與兩句改寫示例 — 類型：改寫（照實轉述圖四至圖六）
 10. 「The draft reads: ...」段（toml 草稿的英文意譯） — 類型：改寫（en 版新增，因草稿本體為中文原文）
+
+2026-10-26 splice cleanup (mirrors zh): moved "Build a backup" section to the end of the post; new bridge sentences: "Beyond services and quotas taking turns failing, Codex brings another headache in day-to-day use."
 -->

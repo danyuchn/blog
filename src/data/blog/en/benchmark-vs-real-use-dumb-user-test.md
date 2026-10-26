@@ -27,7 +27,7 @@ Someone should design a dumb-user benchmark. Take the beginner who is worst at w
 
 ## How GPT 6 actually feels
 
-Here's how GPT 6 has felt to me.
+Take GPT 6: here's how it's actually felt to me:
 
 I don't know how much longer I can last on these 28 days. I feel like I'm out of options.
 
@@ -60,4 +60,6 @@ I've been reduced to asking Opus to clean up the mess...
 6. 「還有一件事：」（One more thing:） — 類型：銜接
 7. 「所以我的結論是，退訂改 Claude⋯」（原文僅「退訂改claude⋯」；前綴為新增） — 類型：銜接
 8. 改寫：原貼文 (3) 的換行句改為條列；(2)(3)(4) 順序重排並併入同一段落流；移除 emoji；「出來分享」提問移到文末前。 — 類型：改寫
+
+2026-10-26 splice cleanup (mirrors zh): Updated transition sentence introducing GPT 6 impressions; new bridge sentences: "Take GPT 6: here's how it's actually felt to me:"
 -->

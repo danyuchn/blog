@@ -98,6 +98,16 @@ When I got up, it had already sorted everything that needed my call into ten ite
 
 **Making the AI read less every time.** Before every conversation, the AI first reads a stack of rules and background I've written for it, and the more it reads, the more it costs. I did two things. First, long conversations now compress earlier; comparing before and after, each conversation reads about 30% less. Second, I split out rules that only matter for specific tasks so they're read only when needed. In the free settings pack I publish, the part that gets read every time shrank by more than 80%.
 
+To run the numbers for the 11 days before and after: I have Opus 5.5 set to auto-compact at 400k, and here is how the 11 days before and after compared:
+
+![Table of Opus 5.5 costs for the 11 days from 10/8 to 10/19: actual total after the change was $1,007 to $1,234, versus an estimated $1,293 to $1,462 without it, saving $228 to $286, about 16% to 22%, mostly on cache reads, or roughly $620 to $780 over 30 days](/blog/assets/posts/burn-and-save-ai-quota/compact-400k-cost.jpg)
+
+![Table comparing 11 days before and after: compactions per 100 messages went from 1.6 to 10.0, corrections per 100 messages from 2.4 to 1.4 with no significant difference, the correction rate within 10 messages of a compaction was no different from normal, and manual /compact runs dropped from 12 to 1](/blog/assets/posts/burn-and-save-ai-quota/compact-400k-metrics.jpg)
+
+Why it saves money: every call resends the whole context. Once 1M context arrived, the ceiling that used to force a compaction was gone, so when a conversation grows to 500k, even a short reply eats 500k tokens. I wrote up the full story when I logged the quota incidents: [Where the quota actually goes](/blog/posts/en/claude-code-quota-incident-log).
+
+I think 400k is the sweet spot.
+
 **Too many rules made things slower.** On 10/21 it felt like Opus had gotten dumber, so I asked Claude to go through that day's conversations and find out why. The model hadn't gotten worse. My own "outsource whenever possible" rule was fighting with my other rules. I removed it and replaced it with "if I'm waiting on something, do it the fastest way."
 
 **Keeping my data from getting messier.** I use both Claude Code and Codex, and their settings drift apart easily. My notes also tended to record the same fact in two places, and later one would get updated while the other didn't. Now a weekly scheduled job compares and fixes these automatically, and rolls back anything a fix breaks.
@@ -143,18 +153,6 @@ Even after this round, some is left, and a few pools are about to expire:
 
 That said, I won't use quota just for the sake of using it up. Rushing to max out usage before a reset is mostly anxiety that subscription pricing is designed to create. I wrote about this in [Which Claude Code plan to pick](/blog/posts/en/claude-code-plan-picker). If there's no work that qualifies, I let it expire.
 
-## Addendum: auto-compact at 400k, 11 days before and after
-
-Above I mentioned "letting long conversations auto-compact earlier." I now have Opus 5.5 set to auto-compact at 400k. Comparing the 11 days before and after:
-
-![Table of Opus 5.5 costs for the 11 days from 10/8 to 10/19: actual total after the change was $1,007 to $1,234, versus an estimated $1,293 to $1,462 without it, saving $228 to $286, about 16% to 22%, mostly on cache reads, or roughly $620 to $780 over 30 days](/blog/assets/posts/burn-and-save-ai-quota/compact-400k-cost.jpg)
-
-![Table comparing 11 days before and after: compactions per 100 messages went from 1.6 to 10.0, corrections per 100 messages from 2.4 to 1.4 with no significant difference, the correction rate within 10 messages of a compaction was no different from normal, and manual /compact runs dropped from 12 to 1](/blog/assets/posts/burn-and-save-ai-quota/compact-400k-metrics.jpg)
-
-Why it saves money: every call resends the whole context. Once 1M context arrived, the ceiling that used to force a compaction was gone, so when a conversation grows to 500k, even a short reply eats 500k tokens. I wrote up the full story when I logged the quota incidents: [Where the quota actually goes](/blog/posts/en/claude-code-quota-incident-log).
-
-I think 400k is the sweet spot.
-
 ## If you want to try it: prompts you can use
 
 I did every step above by talking to Claude Code normally, without writing any special code. These are the lines I think matter most. Adapt them to your own situation and paste them in.
@@ -186,3 +184,7 @@ I did every step above by talking to Claude Code normally, without writing any s
 > Every scheduled job needs a way to notify me when it fails, and any job using an outside model should fall back to Claude automatically when that quota runs out.
 
 That's it.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): removed "Addendum: auto-compact at 400k" heading and moved the 11-day metrics section under "Making the AI read less every time"; new bridge sentences: "To run the numbers for the 11 days before and after: I have Opus 5.5 set to auto-compact at 400k, and here is how the 11 days before and after compared:"
+-->

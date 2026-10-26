@@ -12,6 +12,8 @@ tags:
 description: 'With Opus 5.5, Sonnet 5.5 and Fable 5.1 all out, my split is: Opus leads, verifies and deploys, Sonnet implements as a subagent, and Fable gets called in now and then as an advisor.'
 ---
 
+With Opus 5.5, Sonnet 5.5, and Fable 5.1 all in hand, the question people ask most is probably how to divide the work.
+
 ## What Fable Is For
 
 A lot of people are saying: Opus 5.5 and Fable 5.1 are both out, and Opus is the stronger one, so what is Fable even for?
@@ -19,8 +21,6 @@ A lot of people are saying: Opus 5.5 and Fable 5.1 are both out, and Opus is the
 Here is what I have observed myself.
 
 I suspect Fable has more pretraining parameters, so its view of the world is wider. When I hand it the same task, it often surfaces edge-case problems I did not know about. These are things I never thought to ask, and it raises them first.
-
-So my split right now is roughly this: implementation goes to Opus, and the bigger architecture or strategy questions go to Fable.
 
 For example, these past few days I have been working on the GMAT service-process spec. Sonnet pulled out 61 documents first, Opus wrote it, and Fable reviewed it at the end. For the weekly routine, deciding which steps to cut, I also have Fable run one round of adversarial review first, then I read it and make the call myself. In those moments Fable's vantage point feels more like a mentor to me.
 
@@ -46,6 +46,8 @@ This is also the closest thing to the division of labor I have in mind:
 - Sonnet implements. 5.5 is capable enough, but it needs a strong model to verify and an occasional hand stepping in. It is best to let the main agent talk to it. Talking to it directly gets a bit annoying, because its mind-reading is weak
 - Fable acts as an advisor, giving Opus a second opinion on strategy. Its knowledge boundary is clearly wider than Opus's, so it is better at seeing unknown unknowns. It would also be good for direct conversation, but it is just too expensive, so calling it in with /advisor once in a while is enough
 
+As a side note, Claude Code CLI has a bit of trivia: `/model opusplan` is a special alias. Use it and Plan Mode automatically runs on Opus 5.5, while implementation switches to Sonnet.
+
 ## What Reddit Thinks
 
 About 15 hours after Sonnet 5.5 launched, I went through Reddit to see which way the wind was blowing.
@@ -66,7 +68,7 @@ The Reddit consensus at the time:
 
 ## The System Card
 
-I am reading the Sonnet 5 system card, and this section is the most interesting (look at the images).
+Beyond the community discussions, I also went through the official system card. I am reading the Sonnet 5 system card, and this section is the most interesting (look at the images).
 
 ![The first screenshot of the model welfare section of the Sonnet 5 system card, as summarized by Gemini](/blog/assets/posts/opus-sonnet-fable-division-of-labor/1-system-card.jpg)
 
@@ -82,19 +84,15 @@ Isn't that just me (?
 
 The original system card is here: [Claude Sonnet 5 System Card](https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf)
 
-## One More Thing: It Thinks About What the User Really Means
+## A Moderate Amount of Mind-Reading
 
-One more point: it thinks about the user's real intent (a moderate amount of mind-reading).
+As for why main command is still left to Opus 5.5? It thinks about the user's real intent (a moderate amount of mind-reading)—this matters a lot to me.
 
-This matters a lot to me. I always give context in my prompts. GPT 6.1 sol doesn't get it and only goes by the literal words (6 even more so), but Opus 5.5 handles it very well.
+I always give context in my prompts. GPT 6.1 sol doesn't get it and only goes by the literal words (6 even more so), but Opus 5.5 handles it very well.
 
 Of course, some tasks do need to be followed strictly to the letter, and maybe GPT is better suited for those.
 
 Even after long-context compression, the accuracy of this mind-reading has not slipped much. I can't tell whether that is the base model being strong or the Claude Code harness being strong.
-
-## One More Thing: opusplan
-
-Claude Code CLI trivia: `/model opusplan` is a special alias. Use it and Plan Mode automatically runs on Opus 5.5, while implementation switches to Sonnet.
 
 <!--
 2026-10-09 W42 merged from micro-notes: 'opusplan' added as a section (heading is framing) and removed from the archive.
@@ -111,4 +109,6 @@ Claude Code CLI trivia: `/model opusplan` is a special alias. Use it and Plan Mo
 7. 「The original system card is here: …」 — 類型：改寫
 8. 三張圖片的 alt 句子 — 類型：框架句
 9. 其餘為 zh 版的忠實翻譯；zh 版自首清單的項目同樣適用
+
+2026-10-26 splice cleanup (mirrors zh): added opening intro on model division of labor, deleted conflicting older split sentence, folded opusplan into testing section, and removed supplemental headings; new bridge sentences: "With Opus 5.5, Sonnet 5.5, and Fable 5.1 all in hand, the question people ask most is probably how to divide the work.", "As a side note, Claude Code CLI has a bit of trivia:", "Beyond the community discussions, I also went through the official system card.", "As for why main command is still left to Opus 5.5?"
 -->

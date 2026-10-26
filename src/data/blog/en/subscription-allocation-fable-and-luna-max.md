@@ -19,7 +19,9 @@ Claude first. On the same plan, quota usage feels relatively durable to me, as l
 
 Then Codex. 20 USD is enough, no need to go higher. Luna Max inside it, used for browser automation and computer-use tasks, is the best cost-performance combo I've used. I occasionally open Sol for adversarial review, and 20 USD covers that plenty. If it's not enough, I just bet on a Tibo reset. When it hits, it's a great day again.
 
-## Postscript: I Chose to Bravely Downgrade
+## I Chose to Bravely Downgrade
+
+Making this kind of trade-off with my budget actually took some mental adjustment.
 
 I used to feel so embarrassed about it. Everyone's tokenmaxxing, showing off how many 200U plans they're burning through. If I can't use all of mine, does that mean I'm useless and my productivity is too low?
 
@@ -38,4 +40,6 @@ Give a bit more time back to yourself. Tokens will always be there if you subscr
 
 <!--
 2026-09-24 W40 postscript: 2026-09-19 Threads reply merged verbatim. Added non-source sentences: none (heading taken from the reply's first line).
+
+2026-10-26 splice cleanup (mirrors zh): Removed "Postscript:" from heading and bridged budget recommendations into usage anxiety with a mindset adjustment sentence; new bridge sentences: "Making this kind of trade-off with my budget actually took some mental adjustment."
 -->

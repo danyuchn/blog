@@ -30,7 +30,7 @@ The reason for all this trouble: I'm heading out on a long trip, and my laptop d
 
 Unlike the [five-step SOP I wrote for letting Claude Code run in the background from a hotel room before dinner](/blog/posts/en/ipad-workflow-robustness), that one was a short backup plan for stepping out for dinner while still in Taiwan; this time I'm leaving the whole country, and the Mac Mini has to hold up as home base for days.
 
-## Postscript: Field Results and Pitfalls After Leaving
+## Field Results and Pitfalls After Leaving
 
 Test numbers from a random hotel Wi-Fi in Taiwan, connecting straight through Tailscale to the host in Bangkok: no noticeable lag in actual use. After checking from both Hanoi and Taipei, I'm confident that keeping the Mac mini at home in Bangkok and reaching it over mosh/ssh plus the Tailscale network is the stable, correct call. Extra data point: a Louisa Coffee in Taipei started out routed through a Hong Kong relay, then went direct after 1-2 minutes, with round-trip latency of 87-92 ms, about 89 ms on average.
 
@@ -45,9 +45,9 @@ The remote rehearsal before leaving also turned up a few pitfalls, all of which 
 2026-10-02 W41 postscript: one new section. The first paragraph merges two Threads posts (09-30 21:33 and 10-01 12:29); the list is trimmed from the author's 09-28 work-log pitfalls (internal addresses removed). Added non-original sentences: the subheading (framing) and "The remote rehearsal before leaving also turned up a few pitfalls, all of which went into the runbook:" (connective).
 -->
 
-## Postscript: SSH to mosh, and moving images across machines
+## Flaky Networks: Switching to mosh and Moving Images Across Machines
 
-I just switched the protocol I use to reach Claude Code CLI on my home machine from SSH to mosh. On hotel Wi-Fi that drops packets like crazy, mosh is unbelievably smooth. I'm genuinely moved.
+Later I switched the protocol I use to reach Claude Code CLI on my home machine from SSH to mosh. On hotel Wi-Fi that drops packets like crazy, mosh is unbelievably smooth. I'm genuinely moved.
 
 One catch: when I'm on the mini through mosh, Markdown links don't get colored and can't be clicked (official mosh doesn't forward OSC 8).
 
@@ -64,11 +64,11 @@ When I need to actually look at things, I still pair this with copyparty. It's a
 2026-10-09 W42 addendum: translated from a 10-06 23:39 Threads post, a 10-07 work-log note, and a 10-07 07:39 Threads reply. Added non-source sentences: heading; "The other problem is sending images." (transition).
 -->
 
-## Postscript: clicking file links remotely, and asking AI over ssh on a China eSIM
+## Clicking File Links Remotely and Weak Network Fallbacks
 
 For the past two weeks I've been traveling, mostly working by remote-controlling Claude Code CLI on the Mac mini at home from my laptop and phone. Every time I clicked a file link, nothing happened. Then I'd remember the link is a local path, so clicking it only opens the file on the mini back home, and I'd have to hurriedly add: open it on my laptop/phone through tailscale.
 
-Just now I had an idea and built a switcher with a Claude Mod. When I'm on the laptop or phone, I flip the mode, and the Mod intercepts the local paths in the model's output, rewrites them as LAN addresses, and injects a prompt: the user is currently on remote device XX; if the user asks to open a file, use tailscale to do it on that device.
+Later I had an idea and built a switcher with a Claude Mod. When I'm on the laptop or phone, I flip the mode, and the Mod intercepts the local paths in the model's output, rewrites them as LAN addresses, and injects a prompt: the user is currently on remote device XX; if the user asks to open a file, use tailscale to do it on that device.
 
 Aren't I clever!
 
@@ -87,4 +87,6 @@ Someone asked whether to route all traffic through an exit node. No need. With c
 <!--
 List of added non-original sentences (fidelity disclosure):
 1. "Unlike the [five-step SOP I wrote for letting Claude Code run in the background from a hotel room before dinner], that one was a short backup plan for stepping out for dinner while still in Taiwan; this time I'm leaving the whole country, and the Mac Mini has to hold up as home base for days." — Type: framing sentence (the one framing sentence explicitly authorized by the dispatch instructions, pointing out the difference from the existing article and linking to it)
+
+2026-10-26 splice cleanup (mirrors zh): retitled three H2 headings to remove "Postscript:" markers, and changed contradictory time words "just" and "Just now" to "later" and "Later"; new bridge sentences: none
 -->

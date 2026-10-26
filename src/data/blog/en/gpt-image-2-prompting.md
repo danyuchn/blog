@@ -45,15 +45,7 @@ You have probably hit these:
 
 That is the consistency problem. The "creativity" of an image model is exactly its "uncontrollability" — at work, that is a double-edged sword.
 
-## Pairing with Canva
-
-This is why Canva still matters in this era. It lets you put "AI-generated material" inside a "human-controlled layout."
-
-Loose at the generation stage to leverage GPT-image-2's strength. Tight at the layout stage to lock down consistency with Canva.
-
-Detailed walkthrough video: <https://www.youtube.com/watch?v=hzrBXjgCLG8>
-
-## Postscript: Ten Images in One Shot
+## Ten Images in One Shot
 
 After GPT image 2.5 shipped in September 2026, the blurry-background problem is gone. Send the output through magic layer and you can edit it much more freely.
 
@@ -75,10 +67,16 @@ Five of the ten:
 
 This lines up with the "fewer constraints is better" section above: a one-sentence prompt, and across ten images the figures, clothing and lighting all match.
 
-## Postscript: That Viral Doodle Prompt
+## Pairing with Canva
 
-The hottest GPT image prompt overseas right now: "Please redraw the attached image in the most clumsy, doodled, worthless way possible. Use a white background, and make it look like it was drawn with a mouse in MS Paint."
+This is why Canva still matters in this era. It lets you put "AI-generated material" inside a "human-controlled layout."
+
+Loose at the generation stage to leverage GPT-image-2's strength. Tight at the layout stage to lock down consistency with Canva.
+
+Detailed walkthrough video: <https://www.youtube.com/watch?v=hzrBXjgCLG8>
 
 <!--
 2026-08-28 W36 micro-note merge: the archive note "The Viral Crayon Doodle Prompt" was folded in verbatim (semantic dedup 0.806) and removed from the zh/en archive. The bare Reddit gallery link was filtered out per article-spec rewrite rule 4. The only added non-original sentence is the subheading (framing).
+
+2026-10-26 splice cleanup (mirrors zh): moved 'Ten Images in One Shot' before 'Pairing with Canva' without the 'Postscript:' prefix, and removed the duplicate doodle prompt section; new bridge sentences: none
 -->

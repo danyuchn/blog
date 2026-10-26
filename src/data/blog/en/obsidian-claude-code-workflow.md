@@ -30,6 +30,8 @@ Then, in the gaps between my conversations with Claude Code, it automatically ha
 
 ## The Quota Reset Day Ritual
 
+Beyond keeping daily logs and clearing to-dos, every week I also use the quota reset to run a full-system maintenance pass.
+
 When your weekly quota is about to reset within a day and you're temporarily a "single-day token millionaire," that's the time to go into planning mode:
 
 One, give it full computer access, scan every project that uses Claude Code, and get recommendations for archiving outdated and temp files.
@@ -40,6 +42,8 @@ Trust me, this will make the following week significantly smoother.
 
 ## Why Obsidian Beats Notion
 
+The underlying reason this whole workflow runs so smoothly comes down to the nature of the tool itself.
+
 One word: local.
 
 Your data lives in local Markdown files. If Obsidian vanishes tomorrow, your data is still there. Notion's data lives in the cloud—export formats are limited, and you never know when they'll change their API, pricing, or policies.
@@ -47,3 +51,7 @@ Your data lives in local Markdown files. If Obsidian vanishes tomorrow, your dat
 More importantly, local Markdown files can be read and written by Claude Code directly, with zero middleware. Notion requires API integration—one more layer means one more point of failure.
 
 Simple, reliable, no vendor lock-in. That's what a knowledge management tool should look like.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): added transitions between daily logging, periodic maintenance, and the tool's underlying philosophy; new bridge sentences: "Beyond keeping daily logs and clearing to-dos, every week I also use the quota reset to run a full-system maintenance pass.", "The underlying reason this whole workflow runs so smoothly comes down to the nature of the tool itself."
+-->

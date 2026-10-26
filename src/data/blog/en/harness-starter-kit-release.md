@@ -41,7 +41,9 @@ Here's what it looks like in use:
 
 ![Screenshot of the Claude Code input box chaining five skills in one sentence: send a fable subagent to use /first-principles on whether the current plan makes sense, then /explain it to me, and once I approve, /checkpoint the progress and /neat-freak for out-of-sync cross-file content, then use /polite to write a message notifying the client](/blog/assets/posts/harness-starter-kit-release/1-skills-demo.jpg)
 
-## Folded In: Start With a Harness That Works Out of the Box
+## Tool Choice: Start With a Harness That Works Out of the Box
+
+If you're just starting to set up your own working environment, there's a simple principle for choosing tools:
 
 Just go with codex. Unless you really understand how hermes works under the hood, the codex or claude code harness is the most stable thing you can run out of the box right now.
 
@@ -54,4 +56,6 @@ Just go with codex. Unless you really understand how hermes works under the hood
 註：原貼文第一則的 hook 清單在第 2 點後被截斷、第 3 點沒說完，未替作者補寫。第三則（YouTube／部落格／Threads 的 CTA）依 article-spec 改寫原則第 4 條刪除。
 
 2026-09-11 W38 micro-note merge: the live note "Start With a Harness That Works Out of the Box" was folded in verbatim and removed from the zh/en live file. Added non-source sentence: the heading (framing).
+
+2026-10-26 splice cleanup (mirrors zh): removed "Folded In" prefix from heading, changed to natural heading, and added short bridge sentence; new bridge sentences: "If you're just starting to set up your own working environment, there's a simple principle for choosing tools:"
 -->

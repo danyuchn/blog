@@ -18,13 +18,13 @@ I've been trying to explain it simply: AI models like Claude are stateless. Ever
 
 Someone asked me the real difference between Cowork and Code. My answer: you can move everything to Code. Code has permission to read your Chat project conversation history and build claude.md from it. Code is Cowork with more permissions and more freedom. Use Cowork long enough and you'll feel the sandbox limitations. Code doesn't have that problem — as long as you have security awareness, backups, and basic version control knowledge. The final form is leaving the app entirely and going to terminal Claude Code. That smoothness can be described in one phrase: unchained. There's no going back.
 
-## Too Many Rules, Compliance Crashes
-
-After heavy daily use, I found that stuffing too many rules into Claude.md, Rules, and memory just doesn't work. No amount of restructuring or trimming helps — instruction compliance drops hard.
-
-There's been extensive discussion about this internationally. The consensus is that Cowork loads entire files into context — unlike CLI, which can precisely control what gets loaded — and its context maintenance is poor, carrying the full history of every previous step. A single complex Cowork session consumes quota equivalent to dozens of normal chat messages. Max 5x's "225+ messages" translates to roughly 10-20 substantive Cowork operations.
+There's also been extensive discussion internationally about the reasons behind this. The consensus is that Cowork loads entire files into context — unlike CLI, which can precisely control what gets loaded — and its context maintenance is poor, carrying the full history of every previous step. A single complex Cowork session consumes quota equivalent to dozens of normal chat messages. Max 5x's "225+ messages" translates to roughly 10-20 substantive Cowork operations.
 
 CLI's advantages become clear: prompt caching under subscription doesn't double-charge, precise context control, on-demand progressive injection. In short, CLI context is cleaner and more focused — no sandbox noise to process.
+
+## Too Many Rules, Compliance Crashes
+
+But even after switching to the CLI, heavy daily use eventually hits a new bottleneck: I found that stuffing too many rules into Claude.md, Rules, and memory just doesn't work. No amount of restructuring or trimming helps — instruction compliance drops hard.
 
 Claude.md is still important, but use indexing to keep it under 200 lines.
 
@@ -43,3 +43,7 @@ I set up hooks for everything that absolutely cannot be ignored:
 No more worrying after that. Hooks are the perfect gatekeeper.
 
 If you feel like Claude.md isn't doing much for you, it's time to learn Hooks.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved Cowork vs CLI context comparison up into the intro comparison, focusing the rules section on context overload and Hooks; new bridge sentences: "There's also been extensive discussion internationally about the reasons behind this.", "But even after switching to the CLI, heavy daily use eventually hits a new bottleneck:"
+-->

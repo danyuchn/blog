@@ -29,7 +29,7 @@ Put simply, it hands the Dharma to the agent and lets the agent use the Dharma t
 
 **Upekkhā / equanimity (捨)**: when the user pushes back hard, or a tool fails three times in a row, ask first: did the evidence actually change, or did the emotional pressure just go up? If it's only pressure, don't change your position so easily.
 
-I have to say, it works weirdly well. Paired with the Grill me SKILL it's even better, like a great Confucian scholar debating scripture with me. Install a /grill-me skill and you grow fast.
+I have to say, it works weirdly well. Paired with the Grill me SKILL it's even better, like a great Confucian scholar debating scripture with me; install it and you grow fast.
 
 Went and looked, and the developer is Thai. Of course. Another point for my great Thailand.
 
@@ -40,4 +40,6 @@ Added non-source sentences (faithfulness disclosure):
 1. "Install a /grill-me skill and you grow fast." — type: bridge (from the author's separate 2026-08-26 reply, folded in as a clause connected to the preceding sentence)
 2. Pali/English glosses for the six terms (Kalama Sutta, Yoniso manasikara / wise attention, Sati-sampajañña / mindfulness and clear comprehension, Anattā / non-self, Pahāna / abandoning, Upekkhā / equanimity) with the original Chinese terms kept in parentheses — type: rewrite (translation convention required by the task; the definition sentences themselves are translated verbatim, nothing added)
 3. Terminal punctuation and spacing normalization on the six items — type: rewrite (punctuation only, no wording changed)
+
+2026-10-26 splice cleanup (mirrors zh): smoothed the recommendation combining Grill me and the Buddhist method skill by removing the repeated skill name; new bridge sentences: none
 -->

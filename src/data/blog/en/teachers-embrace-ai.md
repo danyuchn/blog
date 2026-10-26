@@ -77,15 +77,7 @@ Another surprise: going open-source made me more creative than guarding everythi
 
 So I open-sourced Teaching Copilot too. It's my first product designed with teachers as the primary users. Fellow educators are welcome to try it out.
 
-## What We Need to Study Isn't Just What AI Can Do
-
-AI can already do too many things. Anything you can think of, just go ask it -- more often than not, the answer exceeds your expectations. What we need to study now is the value of human-to-human connection -- what are the core tasks we should keep in our own hands.
-
-If you mistakenly hand that over to AI, you'll dilute your own uniqueness and competitiveness. Every article, every piece of content you share should be written by hand. Don't use AI-generated illustrations. At most, use AI to help rearrange your article structure or crunch large datasets. Because what you want is to personally reach your students.
-
-I'm not just a teacher -- I'm an architect of educational products. I hope more educators will join me in moving toward this vision.
-
-## October 2026: five things I've done or am doing
+## Teaching Experiments I've Done and Am Doing
 
 For anyone else in education who's using AI, here's what I've tried so far in bringing AI into my teaching:
 
@@ -100,6 +92,14 @@ And what I'm working on lately:
 
 Put those two together, and with streaming interactive voice models sure to improve fast over the next six months, a complete Dustin-the-teacher clone should be ready.
 
+## What We Need to Study Isn't Just What AI Can Do
+
+AI can already do too many things. Anything you can think of, just go ask it -- more often than not, the answer exceeds your expectations. What we need to study now is the value of human-to-human connection -- what are the core tasks we should keep in our own hands.
+
+If you mistakenly hand that over to AI, you'll dilute your own uniqueness and competitiveness. Every article, every piece of content you share should be written by hand. Don't use AI-generated illustrations. At most, use AI to help rearrange your article structure or crunch large datasets. Because what you want is to personally reach your students.
+
+I'm not just a teacher -- I'm an architect of educational products. I hope more educators will join me in moving toward this vision.
+
 Meanwhile, where are you as a teacher? Still negative and dismissive about AI? Or curious but stuck, not sure where to start?
 
 My advice: keep the pain and the cost low, and learn as you go.
@@ -108,4 +108,6 @@ My advice: keep the pain and the cost low, and learn as you go.
 2026-10-23 W44: added the "October 2026: five things" section (Threads thread from 10-22). Sentences not in the original:
 1. Section heading — type: framing
 2. "My advice: keep the pain and the cost low, and learn as you go." — type: rewrite (original ends with a follow-me CTA, removed)
+
+2026-10-26 splice cleanup (mirrors zh): Removed month from section heading, moved teaching experiments section before "What We Need to Study Isn't Just What AI Can Do", and placed the closing call at the end; new bridge sentences: none
 -->

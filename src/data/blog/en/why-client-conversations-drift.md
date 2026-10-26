@@ -9,14 +9,14 @@ tags:
   - ai-workflow
   - consulting
   - skills
-description: 'Notes from a client diagnosis: three root causes, five prescriptions, plus the main/sub agent pairing run backwards and the rambling only a hook can cure.'
+description: 'Notes from a client diagnosis: three root causes, four prescriptions, plus the main/sub agent pairing run backwards and the rambling only a hook can cure.'
 ---
 
 Quick notes on what I picked up from a client today.
 
 ## The client's root causes
 
-- No spec settled, context too messy, long-context model output drifts.
+- No spec settled, conclusions never written to a file, context too messy, long-context model output drifts.
 - Wrong model tier and effort setting, so the model has no budget left for verification.
 - No rhythm of diverging and converging: the model converges when you want to extend, and diverges when you want to close in.
 
@@ -30,15 +30,15 @@ I think of it as hiring a consultant for a one-off piece of advice. It works wel
 
 A small temple doesn't have to keep a big Buddha on the altar year-round.
 
-**2. Two root causes behind drifting conversations**: conclusions never written to a file, and model tier/effort set wrong.
+**2. Use grill-me to press vague feelings into a concrete plan**: known-knowns / known-unknowns / unknown-unknowns.
 
-**3. Use grill-me to press vague feelings into a concrete plan**: known-knowns / known-unknowns / unknown-unknowns.
+**3. How to write a diagnostic prompt**: ask the AI to pinpoint the root cause first, then build traceable/observable infrastructure (a log at every node).
 
-**4. How to write a diagnostic prompt**: ask the AI to pinpoint the root cause first, then build traceable/observable infrastructure (a log at every node).
+**4. Four tools**: explain (re-explain in plain language), history-find (semantic search across tools), stt (voice input), Codex plugin (adversarial review).
 
-Still on prompts and rules, one more thing: only a good hook can cure Opus 5's rambling, just so you know. The official advice is that rules for the 5-series models should be lean, but the 5-series models themselves have no idea about this.
+## Model governance: only a hook can cure rambling
 
-**5. Four tools**: explain (re-explain in plain language), history-find (semantic search across tools), stt (voice input), Codex plugin (adversarial review).
+While helping the client sort out prompts and rules, I confirmed one thing all over again: only a good hook can cure Opus 5's rambling, just so you know. The official advice is that rules for the 5-series models should be lean, but the 5-series models themselves have no idea about this.
 
 <!--
 新增非原文句子清單（忠實度自首）：
@@ -51,4 +51,6 @@ Still on prompts and rules, one more thing: only a good hook can cure Opus 5's r
 
 <!--
 Main-thread recycle (2026-09-11): cut the closing line, matching the zh version.
+
+2026-10-26 splice cleanup (mirrors zh): Folded orphaned root cause into the root causes section, renumbered prescriptions to four, spun off model governance into its own section, and updated description; new bridge sentences: "While helping the client sort out prompts and rules, I confirmed one thing all over again:"
 -->

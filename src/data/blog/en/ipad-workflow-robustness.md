@@ -23,9 +23,11 @@ Three parts: connection infrastructure, host-side robustness, and the iPad input
 
 For the connection layer I run Tailscale with the MOSH protocol. It's secure, hard to drop, and the key point is it doesn't need to reconnect when the network switches — walk out the door, go from home wifi to cellular, and the session is still alive.
 
-For the terminal app I switched from Termius to Moshi. Moshi was natively designed for AI agent CLIs, and it doesn't break the rendering of CJK block characters. In my testing, Termius's CJK rendering has a bug — Chinese characters get garbled.
+For the terminal app I switched from Termius to Moshi. Moshi was natively designed for AI agent CLIs, and it doesn't break the rendering of CJK block characters. In my testing, Termius's CJK rendering has a bug — Chinese characters get garbled. Moshi, my favorite remote terminal app, later even shipped a web interface. Paired with Herdr it's a godsend. The developer appears to be a Japanese digital nomad living in Bangkok. Of course he is.
 
 Backup plan: Chrome Remote Desktop or AnyDesk. An SSH terminal handles 90% of what I do, but occasionally you need to look at something outside the terminal — some GUI app, some image. That's when remote desktop fills the gap. It's not the main act, it's the spare tire.
+
+Also, every file on my home machine, readable from my phone: Markdown renders natively, HTML opens as a real web page, a 300-page ebook PDF opens instantly, and a 1GB video plays with no lag. Pair copyparty and tailscale with remote-controlled Claude Code or Codex and it's a killer combination.
 
 ## Host-Side Robustness
 
@@ -38,6 +40,16 @@ This part is the core of the outage plan, because when you're out and the host g
 - **Plug in a dummy HDMI dongle.** When I leave and turn off the monitor, the system still thinks a display is attached and keeps a virtual desktop alive, so the screen looks normal when I remote in.
 
 Two more small settings: stop the machine from sleeping — I keep it up with the `caffeinate` command — and give tmux full disk access, or it can't read some paths.
+
+This robustness logic holds up completely when traveling and staying in hotels, too. Back in Taipei, checked into a hotel. The SOP I ran before heading out to dinner with friends:
+
+1. Stick any chip card in the slot to draw power.
+2. Keep the laptop charging and online.
+3. Caffeinate command to stop it from sleeping.
+4. Fire up tailscale.
+5. Test that remote desktop connects, as a backup.
+
+Then I can sneak in some Claude Code over dinner.
 
 ## The iPad Input Strategy
 
@@ -55,25 +67,6 @@ A note on hardware: I'm using a 2018 iPad Pro. Eight years old and it still runs
 
 Finally, two handy little things: there's a small button in the top-right corner that shows the diff directly, and another button that previews localhost. Add a fileviewer extension and the iPad turns into a file manager — documents, images, videos, all openable.
 
-
-## Merged in: The Five-Step SOP for Leaving Claude Code Running at the Hotel
-
-Back in Taipei, checked into a hotel. The SOP I ran before heading out to dinner with friends:
-
-1. Stick any chip card in the slot to draw power.
-2. Keep the laptop charging and online.
-3. Caffeinate command to stop it from sleeping.
-4. Fire up tailscale.
-5. Test that remote desktop connects, as a backup.
-
-Then I can sneak in some Claude Code over dinner.
-
-## Merged in: Two Remote Tools
-
-Every file on my home machine, readable from my phone: Markdown renders natively, HTML opens as a real web page, a 300-page ebook PDF opens instantly, and a 1GB video plays with no lag. Pair copyparty and tailscale with remote-controlled Claude Code or Codex and it's a killer combination.
-
-Moshi, my favorite remote terminal app, shipped a web interface. Paired with Herdr it's a godsend. The developer appears to be a Japanese digital nomad living in Bangkok. Of course he is.
-
 <!--
 2026-08-28 W36 micro-note merge: the live note "copyparty Plus tailscale" and the archive note "Moshi Has a Web Version Now" were folded into this section verbatim; both belong to this post's remote-workflow theme. Removed from the corresponding zh/en files. Added non-original text is limited to the subheading (framing) and restoring "copyparty and tailscale" as the subject (it was the note's title).
 -->
@@ -85,5 +78,7 @@ Moshi, my favorite remote terminal app, shipped a web interface. Paired with Her
 <!--
 新增非原文句子清單（忠實度自首）：
 1. 「The setup is」 — 類型：併入碎念（iPad Plus Keyboard Is the Best Travel Productivity Combo，2026-08-14 週報併入）
+
+2026-10-26 splice cleanup (mirrors zh): removed two "Merged in" headings, merged remote tools into "Connection Infrastructure", and merged hotel background SOP into "Host-Side Robustness"; new bridge sentences: "This robustness logic holds up completely when traveling and staying in hotels, too."
 -->
 

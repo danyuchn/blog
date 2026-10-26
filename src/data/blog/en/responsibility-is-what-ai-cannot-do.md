@@ -16,15 +16,13 @@ description: 'Since generative AI arrived I have been asking what AI can never d
 
 Someone asked me how long before AI takes over the whole thing. From what I'm seeing right now, two years is optimistic. Five years isn't even a sure thing.
 
-But the timeline isn't the real point. Everybody keeps circling back to data and judgment, and I don't think that's the point. Accountability is the most important human ability. However powerful AI gets, it will never go to jail for you. So the abilities tied to accountability are the ones that last.
+But the timeline isn't the real point. Everybody keeps circling back to data and judgment, and I don't think that's the point.
 
 ## Taste might not be the point either
 
 The other answer people keep offering is taste. I think taste might not be the point in the end either.
 
 Look at those AI short dramas. They reek of AI, and it doesn't stop them from blowing up. You know it, I know it, everyone knows those are AI, and most of society doesn't care. They still sell. Never mind that the next generation grows up alongside AI, so their taste getting assimilated is easy to imagine.
-
-I've been thinking about this for a while now: what it is about a person that AI won't replace. So far I have one answer. Responsibility. Because AI will never go to jail for a person. So the abilities tied to responsibility are the ones that last.
 
 ## I finally worked out what I want to do
 
@@ -38,21 +36,17 @@ I came up through teaching GMAT. GMAT gave me a lot of training in logical think
 
 But I also know that teaching how to catch errors and how to be accountable isn't going to be popular. It's not attractive the way vibe coding is. So what I want to ask is this: if I taught this, would anyone actually be interested?
 
-## Why I posted it
+## Adversarial review from the community
 
-After it went up, someone came back at me from the angle of governance and risk premium. Here's what I said to them.
+After I posted these thoughts, someone reminded me from the angle of governance and risk premium.
 
 One of the reasons I put this post out is that I felt like I'd walked into deep water in my own thinking. I thought my logic had closed into a loop, but I was starting to get a faint sense that I was drifting into overconfidence, and talking to AI about it any longer would only feed the positive signal back to me. So I posted it for adversarial review (?). And now I do know there's a lot left to think through and fill in.
 
-On governance, I wasn't originally trying to push it that far. My intent isn't to train people into dedicated AI governance roles. What I want to build is the literacy and ability of ordinary people at the ground level to use AI responsibly. But the uneven risk premium that lands on those people is genuinely something I hadn't thought about. Thank you for the reminder.
+On the governance people brought up, I wasn't originally trying to push it that far. My intent isn't to train people into dedicated AI governance roles. What I want to build is the literacy and ability of ordinary people at the ground level to use AI responsibly. But the uneven risk premium that lands on those people is genuinely something I hadn't thought about.
 
-I'm going to rethink where the whole argument sits. I might also start by sharing hands-on practice instead, pushing it out at a small, careful, responsible pace while I watch what comes back, and correct direction from the actual response.
+What I mean is actually smaller — that everybody who ships AI output, top or bottom of the org, can check and correct their own work before letting it through. Maybe I wrote the post too abstractly; this genuinely isn't macro AI governance.
 
-## What I mean is smaller than that
-
-Agreed, this isn't AI governance. What I mean is smaller. It's that everybody who ships AI output, top or bottom of the org, can check and correct their own work before letting it through.
-
-Maybe I wrote the post too abstractly. This was a reminder for me.
+This was a reminder for me. I'm going to rethink where the whole argument sits, starting by sharing hands-on practice at a small, careful, responsible pace while I watch what comes back, and correcting direction from the actual response.
 
 <!--
 新增非原文句子清單（忠實度自首）：
@@ -64,4 +58,6 @@ Maybe I wrote the post too abstractly. This was a reminder for me.
 6. 「This was a reminder for me.」 — 類型：改寫（原文「這篇對我是個提醒，謝謝。」，去掉平台化的收尾致謝）
 其餘全文皆為素材逐字翻譯，僅做段落切分與 H2 分節。
 7. The parenthetical pointing to the alignment-gap post — type: internal cross-link (added by the main thread on 2026-08-14)
+
+2026-10-26 splice cleanup (mirrors zh): removed duplicate accountability/jail lines from the first two sections and merged the final community replies into a coherent adversarial review section; new bridge sentences: "After I posted these thoughts, someone reminded me from the angle of governance and risk premium.", "On the governance people brought up, I wasn't originally trying to push it that far."
 -->

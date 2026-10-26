@@ -27,6 +27,12 @@ How I treat Fable these days is about the same: first, flatter it to death and b
 
 ## Codex didn't escape either
 
+Claude isn't the only one I yell at, though — Codex didn't escape either.
+
 Claude Code is attempting deep couples counseling between me and Codex: it started by digging the "this made me furious" moments out of my actual past conversations with Codex, as the basis for a probe script.
 
-In late July, before Opus 5 dropped, word was that Codex was about to pull in that real-time two-way voice model. Soon it'll really just be opening your mouth and yelling at an AI agent.
+In late July, before Opus 5 dropped, word was that Codex was about to pull in that real-time two-way voice model from back then. Soon it'll really just be opening your mouth and yelling at an AI agent.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): added a bridge sentence between cheering on AI and the Codex section, and aligned the past-tense voice model reference; new bridge sentences: "Claude isn't the only one I yell at, though — Codex didn't escape either."
+-->

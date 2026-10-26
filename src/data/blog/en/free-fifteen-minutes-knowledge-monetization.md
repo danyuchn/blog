@@ -23,17 +23,15 @@ I've been teaching for 15 years. I started out answering anything for free, and 
 
 The best ideas usually aren't the ones you thought up alone. They come from being deep in a community and solving its problems.
 
-Stop trying to monetize every idea. Be the generous, enthusiastic person who shares things, and once you have roots in that community, those people become your first customers.
+Stop trying to monetize every idea. Be the generous, enthusiastic person who shares things, and once you have roots in that community, those people become your first customers. And sharing publicly in the community is also the most direct stress test: Threads really is the most brutal adversarial review tool vibe coding has.
 
 ## The Curse of Knowledge
 
 Information you think anyone could google is information plenty of people are genuinely grateful someone collected for them. If they can sell it, that's a skill, and as long as nobody gets hurt there's nothing to criticize.
 
-Threads really is the most brutal adversarial review tool vibe coding has.
-
 ## Instructors Who Sell Convenience and Skip the Risk
 
-Any instructor who talks about convenience and never about risk, security, permissions, or review can basically be treated as a scam.
+But there's one situation where you can never compromise: any instructor who talks about convenience and never about risk, security, permissions, or review can basically be treated as a scam.
 
 <!--
 2026-08-28 W36 micro-note cluster extraction: this post was extracted from four live notes, all kept verbatim, unrewritten and unexpanded:
@@ -44,4 +42,6 @@ New non-original sentences (fidelity disclosure):
 1. The four `##` subheadings — type: framing (each heading is the note's own title; no meaning added)
 2. Paragraph breaks inside the longer notes (the first, second and third notes each split into two paragraphs) — type: rewrite (line breaks only, not a word added or removed)
 Nothing else was added. There is deliberately no opening thesis and no closing section; the four rules side by side are the whole post.
+
+2026-10-26 splice cleanup (mirrors zh): moved the vibe coding review sentence to the community section with a bridge sentence, and added a transition before the instructor rule; new bridge sentences: "And sharing publicly in the community is also the most direct stress test:", "But there's one situation where you can never compromise:"
 -->

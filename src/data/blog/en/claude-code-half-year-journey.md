@@ -26,14 +26,6 @@ I figured out why later: I'm a PTT-generation boomer. CLI feels like playing PTT
 
 This observation later shaped how I onboard non-engineering students. I'll ask: "Have you used PTT / BBS / Mutt / Vim?" People who have immediately get the aesthetic of Claude Code. People who haven't need more scaffolding.
 
-## Late January: the 20x hesitation
-
-The community was hyping the 20x Max plan. My reaction was: "I'm afraid 20x will leave me behind."
-
-When AI runs I'm not idle either. I think about how to verify the output, how to give precise instructions, and try to understand the logic behind its changes. If Claude Code runs 20 parallel agents at once, my brain bandwidth simply can't keep up with the verification pace.
-
-That hesitation is still with me. I ended up picking the Max $100 plan, not because I'm unwilling to pay more, but because I know my bottleneck isn't tokens. It's me.
-
 ## January: agents working overtime until 5 AM
 
 My operating style back then was: assign a batch of tasks to agents before sleep (organize docs, batch refactor, run data processing), then let them work overtime until 5 AM. I'd wake up and check the results.
@@ -41,6 +33,14 @@ My operating style back then was: assign a batch of tasks to agents before sleep
 It felt great. Great enough that at some point I realized I'd become the agent's boss rather than the agent's colleague. The human was peeling off from the labor.
 
 This thrill and the "20x hesitation" are actually two sides of the same coin. The more you let AI run, the more verification brainpower you yourself need, otherwise you're rubber-stamping hallucinated output.
+
+## Late January: the 20x hesitation
+
+The community was hyping the 20x Max plan. My reaction was: "I'm afraid 20x will leave me behind."
+
+When AI runs I'm not idle either. I think about how to verify the output, how to give precise instructions, and try to understand the logic behind its changes. If Claude Code runs 20 parallel agents at once, my brain bandwidth simply can't keep up with the verification pace.
+
+That hesitation is still with me. I ended up picking the Max $100 plan, not because I'm unwilling to pay more, but because I know my bottleneck isn't tokens. It's me.
 
 ## January: getting nerdier by the day
 
@@ -132,3 +132,7 @@ From January to April my changes distill into:
 These six points in some sense map to a maturity curve: the typical transition from excitement to stability. Six months to walk through this feels fast to me.
 
 My prediction for the second half: I'll shift more time from "interacting with Claude Code" to "outputting the products of interacting with Claude Code." The tool is already fluent. It's time to convert capacity into artifacts.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved "Late January: the 20x hesitation" after "January: agents working overtime until 5 AM" to align chronology with the reference to the 20x hesitation; new bridge sentences: none
+-->

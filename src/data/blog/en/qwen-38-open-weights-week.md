@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - model-comparison
   - open-source
-description: 'Qwen 3.8 27B open weights land, I run it, the 35B A3B shows up registered on Modelscope, and then it gets deleted. All within one week.'
+description: 'From the Qwen 3.8 27B model card dropping and hands-on testing, to 35B A3B getting deleted and Flash Next arriving in late August.'
 ---
 
 When I wrote [The Machines That Need the CLI Most Belong to People Least Likely to Learn It](/blog/posts/en/cli-resource-paradox-local-models), I put a wish in there: that someone would ship a quantized build once the 27B weights were out, and that a MOE version of the small model would follow. This is what happened next.
@@ -43,8 +43,9 @@ Next morning, August 16: Qwen 3.8 35B A3B got deleted. Everyone can go home now.
 
 We need an a3b, a MOE like that.
 
+I figured I'd just have to keep waiting.
 
-## Postscript: Qwen 3.8 Flash Next
+## Finally, Qwen 3.8 Flash Next
 
 The evening of August 25, the sequel showed up.
 
@@ -56,4 +57,6 @@ Let's see whether it can properly take over from 3.6 35B A3B.
 
 <!--
 2026-08-21 W35 主對話補記：同 zh 檔。碎念「What to Watch Is Next Week's Open Weights」逐字併入本文開頭，並從 en archive 刪除。新增非原文句子：「Last week I already said in my micro-notes what to watch:」— 銜接。
+
+2026-10-26 splice cleanup (mirrors zh): retitled heading to remove "Postscript:", updated description to include Flash Next, and added a bridge sentence between the A3B deletion and the sequel; new bridge sentences: "I figured I'd just have to keep waiting."
 -->

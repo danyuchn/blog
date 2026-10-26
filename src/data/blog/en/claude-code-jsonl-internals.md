@@ -42,6 +42,8 @@ cache_creation:
 
 If you're on Pro and see `ephemeral_1h_input_tokens`, congratulations—it's either a bug or a hidden perk, depending on your mood. The reverse also applies.
 
+> **Postscript (2026-10-20):** The 5-minute vs 1-hour split in section 2 isn't Pro vs Team/Enterprise. On any Claude subscription the main conversation gets the 1-hour cache while you're within plan usage. Subagents, and turns billed to usage credits or an API key, get 5 minutes.
+
 ## 3. Detecting `/compact`
 
 `/compact` leaves a trace: it writes a `type=system` message with a `summary` keyword. A grep catches it:
@@ -75,10 +77,10 @@ Takeaway: **If `git status` shows `??` or `M` files at session start, Read them 
 
 Memory is a hint, not source of truth. This is the kind of trap that's easy to dismiss and easy to fall into again.
 
-## Closing
-
 `/stats` is just the entry point. The real detail lives in the JSONL, and everything is grep-able and Python-parseable. My [cc-audit skill](/blog/posts/en/cc-audit-skill) already bundles all this logic, but if you want to hack on your own, the five formulas above should get you started.
 
 Claude Code is an open system—all the data is on your own disk, in a documented JSON format. Learning to mine it is a hundred times more useful than just reading `/stats`.
 
-> **Postscript (2026-10-20):** The 5-minute vs 1-hour split in section 2 isn't Pro vs Team/Enterprise. On any Claude subscription the main conversation gets the 1-hour cache while you're within plan usage. Subagents, and turns billed to usage credits or an API key, get 5 minutes.
+<!--
+2026-10-26 splice cleanup (mirrors zh): Moved postscript on cache types under section 2 and removed the "## Closing" heading; new bridge sentences: none
+-->

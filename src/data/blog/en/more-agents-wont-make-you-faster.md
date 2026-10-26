@@ -37,7 +37,17 @@ These are three drawings of the same thing. Thirteen agents, 1000 agents, both s
 
 This is a different problem from burning through quota. That time it was subagents breeding recursively, [some of them grandfathers by then](/blog/posts/en/claude-code-quota-incident-log), and what burned was money. This time what burns is me.
 
+## Dedupe and Resolve Conflicts First, Then Send In the Agent Team
+
+The order that actually works: feed in the material first, split it into chunks, run semantic vector comparison to dedupe and surface conflicts (I make the calls). Then hand the cleaned-up material to an agent team — agents that can talk to each other — to argue about structure and ordering, and I do the final pass myself.
+
+The first half is the point. Deduping and conflict resolution happen before dispatch, and that step drives down how much is left for me to rule on. Only then does the agent team mean anything. Flip the order, dispatch a pile of agents first and then go back and deal with the duplicates and contradictions each one dragged home, and you land in the three fantasies above.
+
+The calls stay with me, twice: once in the middle, once at the end. That part doesn't outsource.
+
 ## The Multi-Agent Empire: Can You Actually Afford It?
+
+It's not just personal workflows that fall into this trap. When engineers at major labs show off multi-agent architectures, everyone is asking the exact same question.
 
 Interesting thread on Reddit recently. An Anthropic engineer named Daisy showed off her setup and got hit with the "out of touch, let them eat tokens" treatment.
 
@@ -65,21 +75,15 @@ The version you can actually copy is: shrink the governance first, then add agen
 
 So the conclusion is the same one: more agents doesn't mean more output. Ask three things first. Is the state traceable? Are errors independently verified? Do failures get reported loudly? Answer those and you've earned the right to scale. Can't answer them, and all you're scaling is token cost and the speed of your mistakes. What's worth copying isn't the dozens of agents. It's one workflow you can trust.
 
-## Dedupe and Resolve Conflicts First, Then Send In the Agent Team
-
-The order that actually works: feed in the material first, split it into chunks, run semantic vector comparison to dedupe and surface conflicts (I make the calls). Then hand the cleaned-up material to an agent team — agents that can talk to each other — to argue about structure and ordering, and I do the final pass myself.
-
-The first half is the point. Deduping and conflict resolution happen before dispatch, and that step drives down how much is left for me to rule on. Only then does the agent team mean anything. Flip the order, dispatch a pile of agents first and then go back and deal with the duplicates and contradictions each one dragged home, and you land in the three fantasies above.
-
-The calls stay with me, twice: once in the middle, once at the end. That part doesn't outsource.
-
 ## Fable 5.1 Burned a 5-Hour Quota in One Minute
+
+If you force parallelism without proper governance, beyond cognitive overload, the most immediate disaster is watching your quota evaporate in an instant.
 
 Saw this post first thing in the morning and couldn't stop laughing. Fable 5.1 had just come out, and someone ran Ultracode with it. It dispatched roughly 300 subagents in one go, and every single one inherited the main agent's model (meaning all 300 were Fable). The 5-hour quota was gone in one minute, and the weekly quota immediately dropped to 43%.
 
 If you've run into this too, the original thread has people sharing fixes — mainly changing the config, adding a hook, and editing the frontmatter. <https://www.reddit.com/r/ClaudeAI/comments/1w52pbu/gone_in_60_seconds/>
 
-Postscript: I later made this into a short, "Why more AI clones won't make you faster": <https://youtube.com/shorts/o9OrZOHCRiQ>
+I later made this into a short, "Why more AI clones won't make you faster": <https://youtube.com/shorts/o9OrZOHCRiQ>
 
 <!--
 新增非原文句子清單（忠實度自首）：
@@ -105,4 +109,6 @@ Postscript: I later made this into a short, "Why more AI clones won't make you f
 
 <!--
 2026-09-04 weekly-routine addendum: added "Fable 5.1 Burned a 5-Hour Quota in One Minute" section, from a 09-03 Threads post. Added sentence: the heading (framing). Everything else is a sentence-level rewrite of the original post, with no facts or conclusions added.
+
+2026-10-26 splice cleanup (mirrors zh): moved 'Dedupe and Resolve Conflicts First' section up after 'The Bottleneck Isn't the Model' to resolve dangling fantasy reference, reordered multi-agent demo before quota incident, and dropped 'Postscript:' prefix from the closing short video link; new bridge sentences: "It's not just personal workflows that fall into this trap. When engineers at major labs show off multi-agent architectures, everyone is asking the exact same question.", "If you force parallelism without proper governance, beyond cognitive overload, the most immediate disaster is watching your quota evaporate in an instant."
 -->

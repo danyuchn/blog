@@ -79,7 +79,7 @@ With these four, search accuracy improved noticeably. The bigger change: there's
 
 ---
 
-## neat-freak
+## Community Tool neat-freak
 
 Partway through the audit I found a community skill on GitHub called [neat-freak](https://github.com/KKKKhazix/khazix-skills). Its pitch hits the exact problem: "Your code has gone through seven or eight iterations, but your documentation is still the original version. Your memory says SQLite, but you switched to PostgreSQL months ago."
 
@@ -100,3 +100,7 @@ What I now do every three months or so:
 - [ ] Skill inventory: remove duplicates and anything no longer in use
 
 Takes two to three hours. Skip it and the problems don't disappear — you just don't know where they are.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): retitled neat-freak heading to Community Tool neat-freak; new bridge sentences: none
+-->

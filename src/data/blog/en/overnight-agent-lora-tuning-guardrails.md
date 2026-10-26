@@ -31,9 +31,9 @@ One `/goal` and I don't mind at all letting it run all night on something that i
 
 As for why I bother making rules for the SSD's sake, go look up SWAP and SSD writes & lifespan. It's going to be quite a read.
 
-## Postscript: A Prompt for Letting the Model Run All Night
+## A Prompt for Letting the Model Run All Night
 
-Plenty of people probably know this already, but here's an example prompt for having the model run an overnight task:
+This approach of zero human intervention, built-in acceptance checks, and drift prevention isn't just for local tuning; it works just as well for long tasks in the cloud. Plenty of people probably know this already, but here's an example prompt for having the model run an overnight task:
 
 > 由於我等等要去睡覺，會長時間離開電腦，所以我打算讓你在很長一段無我干預的時間去做________。請寫給我看你的完整計劃，計畫中間都不需要經過我干預跟核准，我的目的是醒來就可以看到好的成果。你現在不用開計畫模式，直接把完整計劃寫出來（內部要包含步驟、目標完成的標準、進度回寫紀錄區等等，為了預防長任務長上下文中的 agent 執行飄移）。
 >
@@ -54,4 +54,6 @@ Then open a fresh session and fire off `/goal`. Opus 5.5 is supposedly really, r
 
 <!--
 2026-09-24 W40 postscript: 2026-09-23 Threads post merged verbatim. Added non-source sentences: section heading (framing); the English rendering of the prompt (translation, original Chinese kept in blockquote).
+
+2026-10-26 splice cleanup (mirrors zh): removed "Postscript:" from heading and bridged local hardware guardrails into the overnight cloud prompt; new bridge sentences: "This approach of zero human intervention, built-in acceptance checks, and drift prevention isn't just for local tuning; it works just as well for long tasks in the cloud."
 -->

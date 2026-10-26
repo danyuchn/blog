@@ -16,7 +16,7 @@ This post collects the notes I jotted on Threads at different times, all answeri
 
 ## Codex: Complex Bugs
 
-Using Codex. Codex is genuinely god-tier for solving complex bugs. (But slow.)
+When running into a really tricky bug: use Codex. Codex is genuinely god-tier for solving complex bugs. (But slow.)
 
 ## Sonnet: Good Enough for Documents
 
@@ -24,7 +24,7 @@ As for everyday document work, someone recently brought up "which model should I
 
 ## Haiku 4.5: Full-Stack Dev
 
-Most pretentious flex of 2026: doing full-stack development with Haiku 4.5. Not bravado — only Haiku has the cost-and-speed combination to sustain a "tweak, verify, tweak again" full-stack rhythm.
+If you switch to full-stack development where you need to balance speed and cost: most pretentious flex of 2026: doing full-stack development with Haiku 4.5. Not bravado — only Haiku has the cost-and-speed combination to sustain a "tweak, verify, tweak again" full-stack rhythm.
 
 ## DeepSeek: The Best Value Alternative
 
@@ -36,8 +36,12 @@ Another one worth watching, though I'm still on the sidelines, is Qwen. After th
 
 ## Small Models for Local Deployment: Depends on the Scenario
 
-If we're talking 3B parameters, the biggest appeal is lightweight plus local deployment. After all, many OCR scenarios involve highly sensitive data that can't leave the premises. Add federated learning architecture on top and it gets even better.
+Heading back to local machines, if we're talking about small models at the 3B level, the biggest appeal I'd guess is lightweight plus local deployment. After all, many OCR scenarios involve highly sensitive data that can't leave the premises. Add federated learning architecture on top and it gets even better.
 
 ## Gemini Supports Skills Now: Staying on the Sidelines
 
 Last, Gemini. Now Gemini supports Skills too. But given Gemini's track record, I'm staying on the sidelines.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): added situational transition phrases for Codex, Haiku, and local small models; new bridge sentences: "When running into a really tricky bug:", "If you switch to full-stack development where you need to balance speed and cost:", "Heading back to local machines, if we're talking about small models at the 3B level,"
+-->

@@ -49,14 +49,14 @@ I mentioned in [an earlier post](/blog/posts/en/five-ways-past-agent-attention-b
 
 In the screenshot I say that working with the one on the left is exhausting, that after it makes its edits I don't trust the result at all, and I ask Opus to take over and get the task back on track. It loads the herdr skill and says the left side is the Codex pane in the same tab, the pane's scrollback is limited, so it reads the full session log file directly. The background is in this post: [Why GPT 6 Sol / Luna felt so dumb](/blog/posts/en/why-gpt6-sol-luna-felt-dumb).
 
-All I can say is:
+Watching them go back and forth across panes, my biggest takeaway wasn't just the multitasking — it was the gap between the models themselves. All I can say is:
 
 1. herdr is great. It lets an agent jump into another pane and rescue things.
 2. A model's real performance can't be shown by benchmark scores.
 3. What's precious about Claude (only lately) is that it really gets you (a bit of mind-reading). Give it more context and it performs above what you expected.
 4. Where GPT needs to step up: don't only do RL for coding and development. We knowledge workers need it too.
 
-I haven't used Orca, but herdr is mature. herdr is designed natively for agents. It's an upgraded tmux, and I highly recommend it.
+Pulling back to the tooling level, though: I haven't used Orca, but herdr is mature. herdr is designed natively for agents. It's an upgraded tmux, and I highly recommend it.
 
 <!--
 新增非原文句子清單（忠實度自首）：
@@ -69,4 +69,6 @@ I haven't used Orca, but herdr is mature. herdr is designed natively for agents.
 7. 結尾「我沒用過 Orca，但是 herdr 很成熟。herdr 就是原生為 agent 設計的，tmux 的升級版，非常推薦。」 — 類型：改寫（把 10/05 20:27、10/06 07:08、10/07 07:40 三則回覆的 herdr 相關句子併成一段；回覆原文為「我沒用過Orca，但是Herdr很成熟」「herdr就是原生為agent設計的」「tmux的升級版，非常推薦」；省略「Codex 隨時 OHCA」「cc省出天際」等他題）
 8. 貼文 10/05 第 4 點（GPT 要加油）保留逐字，未刪。
 9. 把四個工作區／燈號列表從貼文換行排成 markdown 清單、粗體標出三個工作區名 — 類型：改寫（排版）
+
+2026-10-26 splice cleanup (mirrors zh): Added bridge sentences connecting the cross-pane rescue scenario to model comparison and the tool recommendation ending; new bridge sentences: "Watching them go back and forth across panes, my biggest takeaway wasn't just the multitasking — it was the gap between the models themselves.", "Pulling back to the tooling level, though:"
 -->

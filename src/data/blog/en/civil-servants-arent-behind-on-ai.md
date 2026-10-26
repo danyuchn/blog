@@ -51,7 +51,7 @@ Here's the bullet summary of the ten pages of written comments I gave them.
 - Learning pace is set by individual motivation, not by how fast the tools update.
 - Seed personnel are selected on motivation, logical reasoning, and communication ability.
 
-## Postscript: why the public sector is actually doing better
+## Why the public sector is actually doing better
 
 Here's another counterintuitive one: the best AI adoption results I've seen so far are in the public sector, and the biggest pushback actually comes from young frontline staff.
 
@@ -59,4 +59,6 @@ I think there's another reason too. In the private sector, finish early and your
 
 <!--
 2026-10-09 W42 merged from micro-notes: two 10-08 Threads replies, formerly the live micro-note 'The Public Sector Is Getting the Most Out of AI'; heading is framing.
+
+2026-10-26 splice cleanup (mirrors zh): removed "Postscript: " tag from public sector heading; new bridge sentences: none
 -->

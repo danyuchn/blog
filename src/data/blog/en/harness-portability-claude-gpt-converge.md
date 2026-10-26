@@ -65,16 +65,6 @@ The AI pipeline video from a few days ago was made with Codex. Now I am balancin
 
 So personal maintenance of your harness still matters a lot. Whichever tool you switch to, the model can pick up and take over your task right away. A wily rabbit keeps three burrows. That is roughly what this means.
 
-## Teaching Non-Engineers Follows the Same Order
-
-Someone asked me how to build a sense of safety for non-engineers. My teaching order is very basic, but this is it:
-
-First I have them copy every file they will be working on into a new folder. That is the easiest thing to explain and the thing that reassures them most. Then I teach the different permission modes, so they feel both extremes: how annoying the strictest one is, and how uneasy the loosest one feels. Only then do I bring out version control and auto mode, and by that point they can understand it: auto guards the dangerous commands for me, and if I break something, version control can restore it.
-
-Otherwise, teaching git on day one guarantees a pile of question marks hahahaha.
-
-That order is the same idea as the layering above: boundaries first, degrees of freedom second.
-
 ## What I Am Tuning Next
 
 Six things on my own list:
@@ -104,8 +94,24 @@ The second card in that set is one line from them, and I think it is worth keepi
 
 That line also puts a boundary around everything above: a harness is worth your time to maintain, but it will not grow a capability the model does not already have.
 
+## Teaching Non-Engineers Follows the Same Order
+
+Someone asked me how to build a sense of safety for non-engineers. My teaching order is very basic, but this is it:
+
+First I have them copy every file they will be working on into a new folder. That is the easiest thing to explain and the thing that reassures them most. Then I teach the different permission modes, so they feel both extremes: how annoying the strictest one is, and how uneasy the loosest one feels. Only then do I bring out version control and auto mode, and by that point they can understand it: auto guards the dangerous commands for me, and if I break something, version control can restore it.
+
+Otherwise, teaching git on day one guarantees a pile of question marks hahahaha.
+
+That order is the same idea as the layering above: boundaries first, degrees of freedom second.
+
+I brought this way of thinking into the in-person class, too.
+
 On August 2 I am running a workshop called "Switch Models, Not Methodology," subtitled "take your rules, habits, and working environment with you." It is aimed at AI users without an engineering background, capped at 30 people. On the poster I wrote a note by hand: the method is in my hands, the environment travels with me.
 
 ![Workshop poster: Switch Models, Not Methodology, subtitled take your rules, habits, and working environment with you.](/blog/assets/posts/harness-portability-claude-gpt-converge/workshop-poster.jpg)
 
 Fewer prompts is not less control. It is putting the control in the right place.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved "Teaching Non-Engineers" section after "A Set of Numbers That Are Not Mine" and merged workshop poster under it; new bridge sentences: "I brought this way of thinking into the in-person class, too."
+-->

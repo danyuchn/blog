@@ -26,21 +26,25 @@ The order goes roughly like this.
 
 5. Close it out by teaching data protection: where the data goes, how it's handled, how long it's kept. If they have concerns, we go looking together for a local-mode alternative and modify the SKILL so it has both a cloud mode and a local mode. In this step they learn the idea of data governance, they learn that a SKILL can be modified at any time, and they learn the difference between local and cloud AI.
 
-## Someone asked whether transcription hallucinates
-
-If you mean hallucination, that's easy to solve. In practice you run AGY 2-3 times independently in parallel and compare. That keeps hallucination from mattering. It doesn't burn much quota. An ordinary Google Workspace weekly allowance is plenty. Where the runs differ, you list those spots for the user to check against their memory and make the call, which takes under five minutes. (Compared to other models, ordinary Whisper transcription needs this step too, because every vendor's model gets speaker identification wrong quite often.)
-
-I think practical problems like this can all be patched with the small fixes above. And it doubles as a good teachable moment: independent verification, and when to put a human in the loop. From experience: what a student wants to hear is never "this doesn't work," it's "so how should I solve it?"
-
-Of course if what you mean is privacy, that's a different matter. Local models are always first for privacy.
-
 ## Where Gemini stands right now
+
+Some might wonder: if the tool has its flaws, why start by walking them through installing Gemini in the first place?
 
 For coding, or agentic tasks, Gemini has fallen behind.
 
 But on native multimodal, Gemini is still the strongest of the three. While GPT-5.6 is still calling out to whisper for transcription, Gemini has already started spitting out text, and it can identify speakers and keep up with timestamps. While Claude is telling you it needs to extract frames from the video first and look at them one by one, Gemini already has 1fps sampling built in. As a rule, for single-point tasks involving multimodal, calling out to gemini won't steer you wrong.
 
 That said, I don't have many kind words for the tool itself. When gemini can't scrape something, it fills the gap with hallucination — terrifying… agy really is a strange one. I ended up only using its headless mode for voice transcription, which is probably one of the few things it's still fine for.
+
+## Someone asked whether transcription hallucinates
+
+Since it's mainly used for voice transcription, people often ask about accuracy as well.
+
+If you mean hallucination, that's easy to solve. In practice you run AGY 2-3 times independently in parallel and compare. That keeps hallucination from mattering. It doesn't burn much quota. An ordinary Google Workspace weekly allowance is plenty. Where the runs differ, you list those spots for the user to check against their memory and make the call, which takes under five minutes. (Compared to other models, ordinary Whisper transcription needs this step too, because every vendor's model gets speaker identification wrong quite often.)
+
+I think practical problems like this can all be patched with the small fixes above. And it doubles as a good teachable moment: independent verification, and when to put a human in the loop. From experience: what a student wants to hear is never "this doesn't work," it's "so how should I solve it?"
+
+Of course if what you mean is privacy, that's a different matter. Local models are always first for privacy.
 
 ## Back to teaching
 
@@ -57,4 +61,6 @@ Added non-source sentences (faithfulness disclosure):
 5. "That said, I don't have many kind words for the tool itself." — type: connective (brings in the two negative-assessment source posts)
 6. "## Back to teaching" — type: framing (H2 heading)
 All other sentences are the source material verbatim, with only punctuation normalization, line-broken post text rejoined into paragraphs, and a semicolon added to the "good teaching… bad teaching…" sentence.
+
+2026-10-26 splice cleanup (mirrors zh): moved 'Where Gemini stands right now' before transcription hallucination section to improve narrative flow into voice transcription; new bridge sentences: "Some might wonder: if the tool has its flaws, why start by walking them through installing Gemini in the first place?", "Since it's mainly used for voice transcription, people often ask about accuracy as well."
 -->

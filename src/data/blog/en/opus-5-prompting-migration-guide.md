@@ -91,3 +91,7 @@ Opus 5 has thinking on by default. Turn it off and two visible output side effec
 The main mitigation the guide recommends is to keep thinking on and use low or medium effort to bring the cost down. If you can avoid turning it off, control cost with low effort instead. If you really must turn it off, explicitly ask it to say one line first, to state plainly when no suitable tool exists, and not to emit internal tags.
 
 That's the nine cards.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): no sections moved or merged, prose already matched zh transition; new bridge sentences: "As for how high to set effort, here's how I use it:"
+-->

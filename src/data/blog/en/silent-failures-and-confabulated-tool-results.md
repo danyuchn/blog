@@ -39,8 +39,6 @@ Gemini 2.5 Flash kept returning an empty `{}`. The root cause: `thinking.budget_
 
 After setting `scheduled_at`, don't trust the response from the batch send call. The read-back from `GET /emails/{id}` is the source of truth. If the field comes back null, the schedule didn't take and the email is already out the door.
 
-These five traps span your own code, libraries, CLIs, and APIs, and the only reliable response is the same every time: don't trust the "no error" signal — actively read back or probe the real state once before you move on.
-
 ### 6. Git: squash merges make `--is-ancestor` misjudge things as "not merged"
 
 Before checking whether a PR had made it into main, I forgot to `git fetch` first and just ran `git merge-base --is-ancestor`. It said the PR hadn't merged, and I acted on that wrong conclusion by doing another merge on top of a stale main — only a non-fast-forward push rejection kept it from causing real damage. The truth was that both PRs had been squash-merged: after a squash, the original commit can never be an ancestor of main, so `--is-ancestor` will always report "not merged," regardless of whether the content actually made it in. To check whether content is present, use `gh pr view <n>` or diff the squash commit directly against the branch instead.
@@ -181,9 +179,9 @@ Once the paths were fixed and I went to re-render, I hit a second landmine: the 
 
 Eight days of failure, and not a single line of red text saved me. Nothing looked off on the launchd side. The YouTube backend showed no failed jobs, because no job ever reached it. The cheapest place to catch all of this was that one `launchctl list | grep <label>` to glance at the exit code — I just didn't look for eight days.
 
-## Postscript: guards in stripped-down environments that look like they ran but guarded nothing
+## Guards in stripped-down environments that look like they ran but guarded nothing
 
-This week's work log piled up another batch of the same kind of trap. Every one of them returned rc=0 with no error message:
+Later, the work log piled up another batch of the same kind of trap. Every one of them returned rc=0 with no error message:
 
 - `ssd-swap-guard.sh` couldn't find `sysctl` under launchd's minimal PATH, so the swap field stayed empty the whole time. In effect, swap wasn't being guarded. Fixed by adding `/usr/sbin` inside the guard script.
 - `~/.claude/` is a protected path: a model running headless still can't write there even when allowedTools permits Write/Edit. Because of this, every B1 run in my eval script produced nothing from 10/08 on. Output folders have to live outside `~/.claude`.
@@ -228,4 +226,6 @@ Added non-original sentences (fidelity disclosure):
 Everything else is taken verbatim from the seven source posts (silent-failures-verify-real-state, opus-48-tool-call-parse-bug, opus-48-confabulation-four-days, opus-worktree-race-false-prompt-injection, opus-5-thinking-only-empty-turns, launchd-silent-failure-streak, pending-guard-hook-against-confabulation), with heading-level adjustment and reordering only. Sentences referring to "the last post / this post" (such as the pending-guard opener) were dropped in the merge. Images now point at the merged asset directory; the files themselves are unchanged.
 
 2026-09-04 weekly-routine addendum: added cases 6-9 to layer one (the squash-merge `--is-ancestor` misjudgment, the Firestore type-mismatch zero, the extraction script's recurring silent drop, and the QA threshold misfiring on transcription material). Source: the 09-01 through 09-03 daily-note pitfall sections (pdt-platform / harness projects), condensed and rewritten per case, with internal filenames and specific names left out. Added bridge sentence: "These nine traps span your own code, libraries, CLIs, APIs, database queries, extraction scripts, and QA rules, and they all share the same shape: a check passing, zero errors, a call reporting success — none of those signals ever means the thing is actually correct." The original layer-one closer ("These five traps...") was left unchanged; the new closer is a framing extension.
+
+2026-10-26 splice cleanup (mirrors zh): removed duplicate 5-item summary paragraph after item 5, stripped 'Postscript:' prefix from final section heading, and changed 'This week\'s' to 'Later'; new bridge sentences: none
 -->

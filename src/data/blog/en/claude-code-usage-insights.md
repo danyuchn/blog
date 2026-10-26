@@ -45,7 +45,9 @@ So now I interrupt before AI starts:
 
 This does two things. One, you catch if AI's plan is off track. Two, you can tell it directly "don't overcomplicate, just edit this file."
 
-Once AI wanted to use WebFetch to scrape web pages for traffic analysis. I interrupted: "you can use GA4 MCP to read Google Analytics directly, no need to scrape." Saved 5 minutes and a bunch of error handling.
+I learned this the hard way: I once told AI directly to delete files, deploy code, send emails without checking lists first. Result: deleted important data, deployed wrong version, sent test emails to production customers. Learned my lesson there. Always check the list before critical operations.
+
+Once AI wanted to use WebFetch to scrape web pages for traffic analysis. I interrupted: "you can use GA4 MCP to read Google Analytics directly, no need to scrape." Saved 5 minutes and a bunch of error handling. When you know a better approach, tell AI directly. Like "don't use WebFetch to scrape, just read my local docs at /docs/api-reference.md," or "use WordPress MCP tool, don't scrape web pages for data." AI listens.
 
 You're in charge here. AI is a tool, not the boss.
 
@@ -108,8 +110,6 @@ But sometimes I don't want parallelization. Like when I need AI to read files fi
 
 AI defaults to parallelizing when possible, but you can force single-thread execution. Your choice.
 
-Another trick: when you know a better approach, tell AI directly. Like "don't use WebFetch to scrape, just read my local docs at /docs/api-reference.md," or "use WordPress MCP tool, don't scrape web pages for data." AI listens.
-
 ## Seventh Discovery: The Biggest Trap Is Expecting AI to Read Minds
 
 This is the pit I fell into most often.
@@ -133,10 +133,6 @@ Another trap: descriptions that are too vague. "Optimize my website" — optimiz
 
 Change to: "My website's first paint time exceeds 5 seconds. Please analyze performance bottlenecks, goal is to bring it under 2 seconds." Now AI knows where to start.
 
-Another mistake I often made: not providing error messages. "Execution failed, what do I do?" AI needs to see error content to diagnose. It's not a fortune teller.
-
-Last trap: skipping verification steps. I once told AI directly to delete files, deploy code, send emails without checking lists first. Result: deleted important data, deployed wrong version, sent test emails to production customers. Learned my lesson there. Always check the list before critical operations.
-
 ## What I Want to Try Next
 
 After these 46 days, I've gotten used to Claude Code's rhythm, but there are still things I haven't figured out:
@@ -154,3 +150,7 @@ These 7,843 conversations taught me one thing: AI isn't magic, it's a tool. When
 Get that right, and you can actually use it well.
 
 > **Postscript (2026-10-20):** The Task tool I listed above was renamed Agent in Claude Code 2.1.63 (end of February 2026). Same job, spawning a sub-agent, just a new name on screen; old `Task(...)` rules in settings still work as aliases.
+
+<!--
+2026-10-26 splice cleanup (mirrors zh): moved better-approach tip from section 6 and verification checklist from section 7 into section 2, and removed duplicate error-message paragraph in section 7; new bridge sentences: "I learned this the hard way:"
+-->

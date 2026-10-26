@@ -46,14 +46,18 @@ Then he throws out an interesting question: to what extent is this actually righ
 >
 > The unit tests it writes are unbelievably bad.
 
-## Quite the pair
+The phenomenon is even showing up in objective benchmarks. VulcanBench, the well-known benchmark, published how Astra and Fable did on [their new evaluation set](https://vulcanbench.com/benchmarks/swe-v4-astra-fable51-v34.html). Fable leads clearly at every tier, but takes longer to run.
+
+The biggest difference in this version of the set is that it puts more weight on code quality and maintainability.
+
+## Complaints Aside, You Still Have to Use Them
+
+At the end of the day, complaints aside, back in daily work you still have to face reality.
 
 Opus and Astra are quite the pair. The first one doesn't talk like a human. The second one doesn't consider humans at all.
 
 Doesn't mean I stop using them. Right now I'm having Astra teach the other models how to use computer use and Chrome.
 
-## The new VulcanBench
-
-VulcanBench, the well-known benchmark, published how Astra and Fable did on [their new evaluation set](https://vulcanbench.com/benchmarks/swe-v4-astra-fable51-v34.html). Fable leads clearly at every tier, but takes longer to run.
-
-The biggest difference in this version of the set is that it puts more weight on code quality and maintainability.
+<!--
+2026-10-26 splice cleanup (mirrors zh): merged VulcanBench benchmark into code quality section and retitled the closing section; new bridge sentences: "The phenomenon is even showing up in objective benchmarks.", "At the end of the day, complaints aside, back in daily work you still have to face reality."
+-->
