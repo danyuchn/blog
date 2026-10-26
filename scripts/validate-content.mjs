@@ -127,6 +127,14 @@ for (const lang of LANGS) {
       if (!fs.existsSync(publicPath)) err(rel, `image reference ${r[1]} has no file at public/${r[1].replace(/^\/blog\//, "")}`);
     }
 
+    // splice markers in headings: material merged into an existing post must be woven in,
+    // not bolted on as "## 併入：…" (2026-10-26 cleanup of 80 zh + 77 en posts)
+    if (!MICRO_NOTES.includes(fn)) {
+      for (const m of body.matchAll(/^##+\s*((?:併入|補記|補充|附帶一條|追記|Merged in|Postscript|Addendum|P\.S\.)\s*[：:].*)$/gim)) {
+        err(rel, `heading "${m[1].trim()}" is a splice marker — weave the material into the post (see "併入既有文章" in .claude/specs/article-spec.md)`);
+      }
+    }
+
     if (MICRO_NOTES.includes(fn)) {
       microEntryCounts[`${lang}/${fn}`] = (body.match(/^\*\*.+\*\*\s*$/gm) ?? []).length;
     }
