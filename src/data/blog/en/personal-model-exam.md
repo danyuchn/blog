@@ -4,7 +4,7 @@ pubDatetime: 2026-10-26T04:00:00Z
 title: I Built an Exam From My Own Chat Logs and Retake It With Every New Model
 slug: en/personal-model-exam
 featured: false
-draft: true
+draft: false
 tags:
   - model-comparison
   - ai-workflow

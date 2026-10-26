@@ -4,7 +4,7 @@ pubDatetime: 2026-10-26T04:00:00Z
 title: 用自己的對話紀錄出一份考卷，每次新模型出來就重考一次
 slug: zh/personal-model-exam
 featured: false
-draft: true
+draft: false
 tags:
   - model-comparison
   - ai-workflow
