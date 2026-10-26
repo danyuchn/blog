@@ -21,7 +21,7 @@ description: 把作者自己做的工具、外掛、流程寫成技術分享長�
 9. **技術附錄**（可另派一個寫手）：brief 要求以原始碼為準、回報每個技術陳述的 檔案:行；圖至少時序、流程、狀態各一。
 10. **驗收**：`npm run check:private`、`npm run check:content`、`npm run build`；本地開頁面截整頁圖看圖與影片載入。
 11. **作者審稿**：以 `draft: true` 給作者看，依回饋改（作者常見回饋：拿掉對讀者沒用的歷史、要更多技術與圖、圖字太小、en 圖不得有中文）。
-12. **發布**：作者明說後改 `draft: false`、pubDatetime 設已過去時間、push、等 CI、curl 驗證線上網址；查舊文是否主題重複；寫回 KB 主檔。
+12. **發布**：作者明說後改 `draft: false`、pubDatetime 設已過去時間、push、等 CI、curl 驗證線上網址；查舊文是否主題重複；寫回 KB 主檔。上線後的社群分享短文走 `threads-voice`，連結帶 UTM，並問要不要配圖卡（`social-card`）。
 
 ## 派寫手的注意
 
