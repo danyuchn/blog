@@ -40,7 +40,7 @@ The third problem is quota. I pay for Claude, agy and Codex subscriptions at the
 
 ## What the exam looks like and how it grew
 
-Every question comes from my own work. The first version was built on 8 October, the day Haiku 5.5 came out, and I wrote that up in [Can Haiku 5.5 Take Over Sonnet's Work?](/blog/posts/en/haiku-55-own-task-benchmark). In short, AI went through 761 delegations over 45 days, picked work that was frequent and currently went to an expensive model, and turned it into 8 hard questions and 5 regression questions.
+Every question comes from my own work. The first version was built on 8 October, the day Haiku 5.5 came out, and I wrote that up in [Can Haiku 5.5 Take Over Sonnet's Work?](/blog/posts/en/haiku-55-own-task-benchmark). In short, AI went through 761 delegations over 45 days, picked work that was frequent and currently went to an expensive model, and turned it into 8 hard questions and 5 questions that check nothing has slipped.
 
 There are now ten questions I use most, each standing for one kind of work I really do:
 
