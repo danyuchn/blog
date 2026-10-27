@@ -34,6 +34,8 @@ Required frontmatter（validator 要求顯式寫出）: `author`, `pubDatetime`,
 
 GitHub Actions (`.github/workflows/deploy.yml`) auto-deploys on push to `main`. Build uses Node 22 — **push 等於發布**。
 
+**發布後要宣傳**：新文章上線當天發社群宣傳（圖卡、UTM、連結放第一則留言），步驟見 `.claude/specs/promo-spec.md`，規則本體在 `~/claude-course/marketing/promo/README.md`。
+
 ## API Key Management
 
 憑證放 `~/.credentials/<project>/`（全域慣例）。本 repo 的 `.env` 為 gitignored 的執行期副本，不是存放位置。
