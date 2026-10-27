@@ -16,19 +16,17 @@ OpenAI 在 2026-10-26 發布了 GPT-6.1 Terra，主打快速高效的電腦操�
 
 ## 官方怎麼介紹 Terra
 
-[OpenAI 官網公告頁](https://openai.com/index/introducing-gpt-6-1-terra/)擋爬蟲，我抓不到，所以以下用 [Artificial Analysis 的整理](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)和官網 RSS 摘要。
+OpenAI 的[發布文](https://openai.com/index/introducing-gpt-6-1-terra/)把 Terra 定位成「快速、高效，結合細緻的視覺推理和精準的電腦操作，寫作也更清楚自然」的模型，主打填表、編輯影片、解讀技術圖面、寫提案這類一整天的工作內容。價格是標準 API 每百萬 token 輸入 $1、快取輸入 $0.05、輸出 $5，比 GPT-5.6 Terra 和 GPT-6.1 Sol 都低 50%。在 ChatGPT Work 和 Codex 裡，同樣的用量額度能做的事比 GPT-5.6 Terra 多，比 GPT-6.1 Sol 或 GPT-6 Astra 多更多。Plus、Pro、Enterprise、Edu 都能用，API 型號是 `gpt-6.1-terra`。
 
-根據官網 RSS 摘要（經我的每日資料整理轉述，摘要在這裡被截斷，原文沒讀到），GPT-6.1 Terra 在 2026-10-26 發布，官方給它的定位是快速高效的電腦操作與視覺推理模型，標準 API 定價比上一代 GPT-5.6 Terra 和同代的 GPT-6.1 Sol 都低 50%（[官網公告頁](https://openai.com/index/introducing-gpt-6-1-terra/)）。
+官方拿來比的對象很明確，Astra 和 Claude Opus 5.5 都在裡面（以下都是官方自己的測試）：
 
-具體的 API 價格，每百萬 token 輸入是 $1、輸出 $5、快取輸入 $0.05、寫入快取 $1.25；對比上一代 GPT-5.6 Terra 的輸入 $2、輸出 $12、快取輸入 $0.20，輸入價砍一半、輸出從 $12 降到 $5（[Artificial Analysis](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)）。[Artificial Analysis 的評測文章](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)直接給了一句評價，說它「比上一代 Terra 更聰明，成本不到三分之一」，而且在 low 與 medium effort 兩個檔位落在智慧與成本的 Pareto 前沿，其他 effort 檔位則落在前沿後面。
+- 電腦操作（Agents' Last Exam，medium effort）：比 GPT-5.6 Terra 高 15 個百分點，成本約三分之一；和 GPT-6 Astra 持平，每 token 價格只有它的十分之一。
+- max effort 下，token 效率是 Claude Opus 5.5 的三倍以上，每 token 價格是它的四分之一，每個任務成本低約 9 倍。完成任務的速度比 Astra 和 Sol 快三倍以上。
+- Terminal-Bench 4.0（max effort）解 50.3%，GPT-5.6 Terra 公布的是 21.5%。但官方自己寫了：最複雜的程式工作，GPT-6.1 Sol 和 GPT-6 Astra 仍是更好的選擇。
+- Terminal-Bench-Science 0.1（max effort）超過 Sol，離 Opus 5.5 不到 5 分，估計成本不到它的五分之一。
+- 幻覺：官方內部的誘錯題組，low effort 的錯誤率從 53.6% 降到 16.7%，max effort 降 18 個百分點到 4.3%。
 
-如果看各項基準測試的分數（[Artificial Analysis](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)）：
-- 在 max effort 下，Terra 的 Intelligence Index 比 GPT-6.1 Sol 低 4 分；Coding Agent Index v2.0 拿到 48 分，比 Sol 的 54 分低 6 分。
-- 跟自家的輕量或前代模型比，Terra 的 Intelligence Index 比 GPT-6 Luna 高 10 分，Coding Agent Index 高 17 分（48 對 31）；跟上一代 GPT-5.6 Terra 在 max effort 下相比，Intelligence Index 高了 6 分，而且每個任務成本從 $1.40 降到 $0.40。
-- 在 AA-Omniscience 測試裡，Terra 的幻覺率是 38%，上一代 Terra 是 88%，但準確率只升了 2 分。
-- 在 Terminal-Bench 4.0 上，Terra 進步約 20 分，[Artificial Analysis](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier) 說它「已追上 max effort 的 GPT-6.1 Sol」。
-
-Artificial Analysis 的文章沒有拿 Terra 跟 GPT-6 Astra 或 Claude 比。Astra 的對比來自 [OpenRouter 的上架貼文](https://x.com/OpenRouter/status/2114791584755839168)的摘要轉述：Terra 在 Agents' Last Exam 上和 GPT-6 Astra 得分相當，而且每 token 價格大約只有 Astra 的十分之一。
+第三方的數字可以看 [Artificial Analysis](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier) 的評測：low 與 medium effort 落在智慧與成本的 Pareto 前沿，他們說 Terra「比上一代 Terra 更聰明，成本不到三分之一」。max effort 下，Intelligence Index 比 Sol 低 4 分，Coding Agent Index v2.0 是 48，比 Sol 的 54 低 6 分，比 GPT-6 Luna 的 31 高 17 分。AA-Omniscience 幻覺率 38%，上一代是 88%，準確率只升 2 分。
 
 ## 我怎麼測、測到什麼
 
@@ -79,11 +77,11 @@ Artificial Analysis 的文章沒有拿 Terra 跟 GPT-6 Astra 或 Claude 比。As
 
 先看 Terra 對 Codex 裡的自家人 Sol 和 Astra：
 - **對上 GPT-6.1 Sol**：官方標準 API 定價 Terra 比 Sol 低 50%（[官網公告頁](https://openai.com/index/introducing-gpt-6-1-terra/)）。在 max effort 下，Terra 的 Intelligence Index 比 Sol 低 4 分、Coding Agent Index v2.0 低 6 分（48 對 54），但 Terminal-Bench 4.0 進步約 20 分追上了 max effort 的 Sol（[Artificial Analysis](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)）。在我的實測裡，10 到 20 行的小型真實修補回放，Terra low 跟 Sol low 一樣是 6/6 全過，而且 Terra 只要約 50 秒（Sol 要 60 到 105 秒）；看畫面題兩者的分數表現一樣（簡體字那題都拿 0.67，聊天截圖 Sol 拿 0.75、Terra low 拿 0.92、medium 拿 0.75），但 Terra 每次只花約 0.6% 額度，比 Sol 的 2.3% 省得多。
-- **對上 GPT-6 Astra**：[OpenRouter 上架貼文](https://x.com/OpenRouter/status/2114791584755839168)的轉述說兩者在 Agents' Last Exam 得分相當，而 Terra 每 token 價格約只有 Astra 的十分之一。在我測的四種對抗式審查題裡，Terra low 跟 Astra low 一樣全拿 1.00，但前三個項目 Terra 的速度都快上一截，每次消耗的 5 小時額度更是從 Astra 的約 7% 降到約 1.5%（看畫面題也是 0.6% 對 2.3%）。而且還有一個很實用的差別是「防禦語氣」：我統計了回答內容，Terra 每千字大約只有 0.6 個保留語，而 Astra low 有 5.1 個、Astra high 高達 16.1 個；在 62 份回答裡，Terra 只出現過 1 次範圍免責聲明，Astra 則是在 28 份回答裡就出現了 5 次。Terra 的格式遵循率是 100%，回答平均只有約 110 字，讀起來乾脆很多。
+- **對上 GPT-6 Astra**：[官方發布文](https://openai.com/index/introducing-gpt-6-1-terra/)說兩者在 Agents' Last Exam 持平，Terra 每 token 價格約只有 Astra 的十分之一，速度快三倍以上。在我測的四種對抗式審查題裡，Terra low 跟 Astra low 一樣全拿 1.00，但前三個項目 Terra 的速度都快上一截，每次消耗的 5 小時額度更是從 Astra 的約 7% 降到約 1.5%（看畫面題也是 0.6% 對 2.3%）。而且還有一個很實用的差別是「防禦語氣」：我統計了回答內容，Terra 每千字大約只有 0.6 個保留語，而 Astra low 有 5.1 個、Astra high 高達 16.1 個；在 62 份回答裡，Terra 只出現過 1 次範圍免責聲明，Astra 則是在 28 份回答裡就出現了 5 次。Terra 的格式遵循率是 100%，回答平均只有約 110 字，讀起來乾脆很多。
 
 接著看 Terra 對 Claude 家族的 Haiku、Sonnet、Opus：
 - **對上 Haiku**：在看畫面的 8 題裡，Terra 跟 Haiku 的表現幾乎落在同一區間——6 題基本題都滿分，簡體字「错题本」都沒看到（0.67），聊天截圖算未回覆問題也常把追問算成兩題（Haiku 0.75、Terra low 0.92 / medium 0.75）。速度上 Terra 是 7 到 50 秒，Haiku 是 13 到 43 秒（每次成本約 $0.01）。不過在 12 題單題的難題組上，Haiku 全部拿到 1.00，而 Terra low 錯了 2 處（11 題 1.00）。
-- **對上 Sonnet 與 Opus**：在看畫面需要抓出導覽列簡體字「错题本」、以及從深夜與隔天早上的對話脈絡判斷未回覆問題數時，Sonnet（每次約 $0.17、11 到 48 秒）跟 Opus（每次約 $0.37、16 到 26 秒）都是 1.00 全對，這塊是 Terra 即使拉高 effort 也追不上的；在難題組的 12 題單題與 2 題長任務上，Sonnet 跟 Opus 也都是 1.00 全過，沒有像 Terra 出現歸錯人或改錯同數值參數的失誤；回答長度上，Terra 平均約 110 字，比 Sonnet 的約 300 字短很多。至於 Sonnet 跟 Opus 之間的差別，我另外有一組 GMAT 批判推理難題 8 題，Sonnet 只拿 0.29、Opus 拿 0.96，只有在這種要細比兩個強選項的難題上兩者才分得開，讀長檔、格式、審查、算數目前測不出差距，所以 Claude 這邊要升級到 Opus 的情況很窄。
+- **對上 Sonnet 與 Opus**：官方只拿 Opus 5.5 比（[發布文](https://openai.com/index/introducing-gpt-6-1-terra/)）：max effort 每個任務成本低約 9 倍。下面是我自己的題目。在看畫面需要抓出導覽列簡體字「错题本」、以及從深夜與隔天早上的對話脈絡判斷未回覆問題數時，Sonnet（每次約 $0.17、11 到 48 秒）跟 Opus（每次約 $0.37、16 到 26 秒）都是 1.00 全對，這塊是 Terra 即使拉高 effort 也追不上的；在難題組的 12 題單題與 2 題長任務上，Sonnet 跟 Opus 也都是 1.00 全過，沒有像 Terra 出現歸錯人或改錯同數值參數的失誤；回答長度上，Terra 平均約 110 字，比 Sonnet 的約 300 字短很多。至於 Sonnet 跟 Opus 之間的差別，我另外有一組 GMAT 批判推理難題 8 題，Sonnet 只拿 0.29、Opus 拿 0.96，只有在這種要細比兩個強選項的難題上兩者才分得開，讀長檔、格式、審查、算數目前測不出差距，所以 Claude 這邊要升級到 Opus 的情況很窄。
 
 ## 建議
 
