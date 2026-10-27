@@ -16,7 +16,7 @@ OpenAI 在 2026-10-26 發布了 GPT-6.1 Terra，主打快速高效的電腦操�
 
 ## 官方怎麼介紹 Terra
 
-老實說，[OpenAI 官網公告頁](https://openai.com/index/introducing-gpt-6-1-terra/)我這邊抓不到（被擋爬蟲，HTTP 403），以下用 [Artificial Analysis 的整理](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)和官網 RSS 摘要。
+[OpenAI 官網公告頁](https://openai.com/index/introducing-gpt-6-1-terra/)擋爬蟲，我抓不到，所以以下用 [Artificial Analysis 的整理](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)和官網 RSS 摘要。
 
 根據官網 RSS 摘要（經我的每日資料整理轉述，摘要在這裡被截斷，原文沒讀到），GPT-6.1 Terra 在 2026-10-26 發布，官方給它的定位是快速高效的電腦操作與視覺推理模型，標準 API 定價比上一代 GPT-5.6 Terra 和同代的 GPT-6.1 Sol 都低 50%（[官網公告頁](https://openai.com/index/introducing-gpt-6-1-terra/)）。
 
@@ -28,13 +28,13 @@ OpenAI 在 2026-10-26 發布了 GPT-6.1 Terra，主打快速高效的電腦操�
 - 在 AA-Omniscience 測試裡，Terra 的幻覺率是 38%，上一代 Terra 是 88%，但準確率只升了 2 分。
 - 在 Terminal-Bench 4.0 上，Terra 進步約 20 分，[Artificial Analysis](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier) 說它「已追上 max effort 的 GPT-6.1 Sol」。
 
-不過 [Artificial Analysis 的文章](https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier)裡沒有提到 GPT-6 Astra，也沒有跟 Claude 各模型做比較。關於 Astra 的對比，我只有從 [OpenRouter 的上架貼文](https://x.com/OpenRouter/status/2114791584755839168)讀到一點資訊（原貼文 x.com 我這邊抓不到，這是經每日資料整理轉述，非原文）：轉述的說法是 Terra 在 Agents' Last Exam 上和 GPT-6 Astra 得分相當，而且每 token 價格大約只有 Astra 的十分之一。
+Artificial Analysis 的文章沒有拿 Terra 跟 GPT-6 Astra 或 Claude 比。Astra 的對比來自 [OpenRouter 的上架貼文](https://x.com/OpenRouter/status/2114791584755839168)的摘要轉述：Terra 在 Agents' Last Exam 上和 GPT-6 Astra 得分相當，而且每 token 價格大約只有 Astra 的十分之一。
 
 ## 我怎麼測、測到什麼
 
 官方跟第三方數字看完，還是得看放進自己的工作流裡表現怎樣。為了測 Terra 值不值得換上去，我用全合成資料設計了四組仿真實場景的測試：對抗式審查、真實程式修補回放、看畫面與操作瀏覽器、還有從歷史錯誤挖出來的難題組。
 
-先講清楚測試的限制：這批實測的樣本很小，每題 Terra 只跑了 1 到 3 次，拿來對照的 Haiku、Sonnet、Opus 多半只跑 1 到 2 次。而且題目整體偏容易，看畫面的 8 題在 Sonnet 以上全部滿分，能分出高下的結論主要靠其中兩題各跑 2 到 4 次的結果。另外，Codex 內建的 computer_use 我沒測，100 行以上的大型修補也沒測；我的測試素材裡甚至有一處自己弄錯的地方——有一張截圖把週一標成了週日，Opus、Sonnet、Haiku 在作答時都有主動指出這個錯誤（這處不影響評分）。所以在看下面的數據時，拿到一樣的滿分只代表在這些題目上都過關，不代表兩個模型一樣強。
+樣本不大：每題 Terra 跑 1 到 3 次，Haiku、Sonnet、Opus 多半 1 到 2 次，看畫面的結論主要靠兩題各 2 到 4 次。Codex 內建的 computer_use 和 100 行以上的大型修補我沒測。
 
 第一部分是審查與程式修補。這部分的結論很明確：Terra low 可以直接接手 Sol low 與 Astra low 的工作，而且把 Terra 開到 medium 並沒有比 low 好。
 
@@ -52,7 +52,7 @@ OpenAI 在 2026-10-26 發布了 GPT-6.1 Terra，主打快速高效的電腦操�
 
 為了確認是不是推理深度的問題，我試著拉高 Terra 的 effort，結果完全沒用（聊天截圖那題 medium 甚至只有 0.75）。因為這裡的落差在於看不看得出字形跟對話脈絡，不在推理。雖然官方主打 Terra「看懂畫面」，但在這組題目上，它的表現並沒有比 Sol 或 Astra 強，它真正的優勢是快跟超便宜——看畫面題每次只耗約 0.6% 的 5 小時額度，而 Sol 跟 Astra 大約要 2.3%。
 
-第三部分是難題組。我從近 75 天的對話紀錄裡，挖出 20 個模型真的做錯過的案例，先做成 12 題單題；接著再把其中 5 個陷阱藏進包含 7 件日常工作、200 多個檔案的長任務裡（共 2 題）。先說一個插曲：難題組在試做階段出現的所有失分，後來查出來全都是評分器或環境的 bug（總共 13 處，都已修好並重評），試做時沒有一格是模型真的答錯。而且我發現這組題目靠加重檔案負荷是沒用的，因為模型在 headless 跑測時會直接用 grep 找到相關檔案，60 到 105 秒就做完了；真實世界裡的出錯，往往發生在對話很長、上下文被壓縮過、同時做很多件事的情況，單次 headless 跑測模擬不出那種狀態。
+第三部分是難題組。我從近 75 天的對話紀錄裡，挖出 20 個模型真的做錯過的案例，先做成 12 題單題；接著再把其中 5 個陷阱藏進包含 7 件日常工作、200 多個檔案的長任務裡（共 2 題）。試做時的失分全是評分器或環境的 bug（共 13 處，修好重評），沒有一格是模型真的答錯。加重檔案負荷也沒用：模型用 grep 直接找到檔案，60 到 105 秒做完。
 
 重評之後，Haiku、Sonnet、Opus 在 12 題單題全拿 1.00，長任務 Sonnet 跟 Opus 也是 1.00。Terra low 我讓它各跑 1 次，12 題單題裡有 11 題拿到 1.00，長任務也拿到 1.00，但有 2 處真的答錯：
 - 一題是在讀紀錄時，把一句提議歸錯人，拿到 0.88。
