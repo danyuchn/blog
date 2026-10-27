@@ -4,7 +4,7 @@ pubDatetime: 2026-10-26T04:00:00Z
 title: GPT-6.1 Terra 實測：又快又省，但看字形和對話脈絡還是交給 Sonnet
 slug: zh/gpt-6-1-terra-review
 featured: false
-draft: true
+draft: false
 tags:
   - model-comparison
   - codex
