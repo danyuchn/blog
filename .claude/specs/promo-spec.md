@@ -16,15 +16,16 @@
 
 1. **上線驗證**：`curl -sL -o /dev/null -w '%{http_code}'` 查 `https://www.agentcrew.cc/blog/posts/<slug>/` 的 zh、en 都回 200，再往下。
 2. **建貼文正本**：`~/claude-course/marketing/promo/posts/YYYY-MM-DD-blog-<slug去掉語言前綴>.md`，內容照範例：正文、第一則留言連結（Threads 與 FB 各一條）、發布狀態表。
-3. **擬正文**：用 `threads-voice` 模式 A（宣傳模式、主帳）。正文不放連結、不放規格與數字，說法要跟文章對得上（發前對一次）。跑 `check_draft.py`（必改歸零）與 `jev_check.py`，在正文下加一行 `- threads-voice：宣傳模式 主帳；check_draft 必改 0；JEV 已跑（日期）`，沒有這行不給 Dustin 審。
+3. **擬正文**：用 Skill 工具呼叫 `threads-voice`（不是只讀風格檔），模式 A（宣傳模式、主帳），第 3 步「取同模式範例」不可跳過，完稿後過 `/humanizer-zh` 自審一輪。稿子寫得比本人乾淨是穿幫點：保留口語退路與隨性用字。正文不放連結、不放規格與數字，說法要跟文章對得上（發前對一次）。跑 `check_draft.py`（必改歸零）與 `jev_check.py`，在正文下加一行 `- threads-voice：宣傳模式 主帳；check_draft 必改 0；JEV 已跑（日期）`，沒有這行不給 Dustin 審。
 4. **連結**：只用 agentcrew.cc 網域，帶 UTM：
    - Threads：`?utm_source=threads&utm_medium=social&utm_campaign=blog-<slug>`
    - FB 社團：`?utm_source=fb-agentcrew-academy&utm_medium=social&utm_campaign=blog-<slug>`（A2GMAT 受眾不同，用 `fb-a2gmat`，兩個社團不合併）
    - IG 不放連結。
    - 連結放第一則留言，貼上後確認有預覽卡。
-5. **圖卡**：正文配圖卡，走 `social-card`：先出文字草稿給 Dustin 核可，才渲染。圖卡內容只用文章裡有的數字與結論。發出後複製到 `~/claude-course/marketing/promo/cards/YYYYMMDD-<slug>.png`。
+5. **圖卡**：正文配圖卡，走 `social-card`：先出文字草稿給 Dustin 核可，才渲染。圖卡內容只用文章裡有的數字與結論。發出後複製到 `~/claude-course/marketing/promo/cards/YYYYMMDD-<slug>-NN.png`；同時複製一份到 `~/Downloads/待傳/` 讓 Dustin 手動貼。
 6. **Dustin 核可後才發**。瀏覽器代發細節看 `social-promo` skill。
-7. **發後**：貼文網址寫回狀態表；跑 `cd ~/claude-course && python3 tools/promo_check.py coverage`，確認這篇不在漏網清單。
+7. **Dustin 貼回定稿時**：照 `threads-voice` 改稿紀錄流程跑 `edit_learning.py record`，並把貼文正本的正文換成定稿。
+8. **發後**：貼文網址寫回狀態表；跑 `cd ~/claude-course && python3 tools/promo_check.py coverage`，確認這篇不在漏網清單。
 
 ## 3. 不做
 

@@ -20,7 +20,7 @@ Blog posts are Markdown with YAML frontmatter. Slugs must include language prefi
 
 Required frontmatter（validator 要求顯式寫出）: `author`, `pubDatetime`, `title`, `slug`, `featured`, `draft`, `description`，外加 `tags`（2–3 個、限白名單）。Optional: `modDatetime`, `canonicalURL`。逐欄規則見 article-spec。
 
-**動筆前先讀 `.claude/specs/article-spec.md`**（frontmatter 逐欄位規則、內文/圖片/embed 慣例、改寫七原則）。新文章從 `.claude/templates/article.md` 複製起手；tags 只准用 `.claude/specs/tags.md` 白名單。機器可查規則由 `npm run check:content` 在 CI 強制。原創技術分享文（自己做的工具或流程）另讀 `.claude/specs/tech-share-post-spec.md`，流程走 `tech-share-post` skill。
+**動筆前先讀 `.claude/specs/article-spec.md`**（frontmatter 逐欄位規則、內文/圖片/embed 慣例、改寫七原則）。新文章從 `.claude/templates/article.md` 複製起手；tags 只准用 `.claude/specs/tags.md` 白名單。機器可查規則由 `npm run check:content` 在 CI 強制。原創技術分享文（自己做的工具或流程）另讀 `.claude/specs/tech-share-post-spec.md`，流程走 `tech-share-post` skill。評測別人的模型或工具另讀 `.claude/specs/review-post-spec.md`（篇幅上限、技術細節放附錄、配圖、禁防禦語氣）。
 
 **pubDatetime：** 用已過去的 UTC 時間，例如 `T04:00:00Z`。
 
