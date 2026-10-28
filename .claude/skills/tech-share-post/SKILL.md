@@ -10,7 +10,7 @@ description: 把作者自己做的工具、外掛、流程寫成技術分享長�
 
 ## 流程
 
-1. **確認素材**：量化資料的分析檔（或先請 AI 用對話紀錄量一次）、作者原話出處（session id）、原始碼路徑。缺哪個先補，不自創數字。
+1. **確認素材**：量化資料的分析檔（或先請 AI 用對話紀錄量一次）、作者原話出處（session id）、原始碼路徑。缺哪個先補，不自創數字。原話要用 `history-find` 從還在的對話紀錄撈（Claude Code 對話約 30 天後清除）；撈不到 6 則原話的題材不選，不拿 AI 寫的句子充當原話（2026-10-28 案：減法檢視題材原始對話已清除）。正文以讀者情境為主，作者內部的步驟編號與改版沿革不進正文。
 2. **寫 brief**：複製 `references/brief-template.md`，把括號換成這篇的內容，存成 `.claude/tmp-brief-<名>.md`（不 commit，完成後刪）。多個寫手時一份 brief 一個任務。
 3. **載入風格**：寫手先載入 `threads-voice`（正式語氣）與 `ui-visual-defaults`（圖與影片），再讀 `article-spec.md`、`tags.md`、`templates/article.md`。
 4. **寫 zh 草稿**（`draft: true`，在 feature 分支，不 push）。原話逐字、數字只用素材。
