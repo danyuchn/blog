@@ -4,7 +4,7 @@ pubDatetime: 2026-10-28T04:00:00Z
 title: "Turning Years of Teaching into a Knowledge Base AI Can Look Up: Catching AI's Fake Quotes with Code, and Settling My Own Contradictions"
 slug: en/teaching-knowledge-distill
 featured: false
-draft: true
+draft: false
 tags:
   - teaching
   - ai-education

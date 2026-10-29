@@ -4,7 +4,7 @@ pubDatetime: 2026-10-28T04:00:00Z
 title: 把十幾年的教學整理成 AI 查得到的知識庫：用程式抓 AI 的假引用，講法打架由我拍板
 slug: zh/teaching-knowledge-distill
 featured: false
-draft: true
+draft: false
 tags:
   - teaching
   - ai-education
