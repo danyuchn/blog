@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-28T04:00:00Z
+pubDatetime: 2026-10-26T04:00:00Z
 title: "How a Teacher Gives Spoken Instructions to AI: Notes From 30 Classes and 751 Commands"
 slug: en/teacher-oral-instructions-to-ai
 featured: false
-draft: true
+draft: false
 tags:
   - teaching
   - ai-education

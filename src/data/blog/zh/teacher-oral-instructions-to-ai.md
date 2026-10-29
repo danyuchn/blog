@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-28T04:00:00Z
+pubDatetime: 2026-10-26T04:00:00Z
 title: 老師怎麼用口語對 AI 下指令：30 場課堂與 751 則指令的整理
 slug: zh/teacher-oral-instructions-to-ai
 featured: false
-draft: true
+draft: false
 tags:
   - teaching
   - ai-education
