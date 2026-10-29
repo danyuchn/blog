@@ -36,7 +36,7 @@ The fourth problem was my own time. My time belongs on making decisions, not on 
 
 The division of labor I wanted: pulling the key points out of transcripts, drafting, and fault-finding all go to AI, split across different AIs so that no AI writes and reviews its own work. I appear only at the decision step, on a single page, one decision per row.
 
-[![The seven steps of spec generation and who does each: symptom and yardstick, rebuild from transcripts, draft, attack, ruling, turn into mechanism, next-lesson test; only step five, the ruling, is mine](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)
+[![The seven steps from transcripts to a spec and who does each: measure the problem, see what really happened, draft, another AI finds the flaws, I decide, write it into the rules, use it in the next lesson; only step five is mine](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)
 
 The key turns, by date:
 

@@ -34,7 +34,7 @@ description: '我的一對一課實際超時 51%。我回頭讀逐字稿找原�
 
 我要的分工是這樣：從逐字稿整理重點、起草、挑錯，全部交給 AI，而且分給不同的 AI 做，不讓同一個 AI 自己寫自己審。我只出現在做決定那一步，在一張頁面上，一列一個決定。
 
-[![規格生成的七個步驟與各步驟由誰做：症狀與尺、回逐字稿重建、起草、攻擊、裁決、落成機制、下一堂課實測，只有第五步裁決由我做](/blog/assets/posts/teaching-spec-from-transcripts/1-loop.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/1-loop.jpg)
+[![從逐字稿整理規格的七個步驟與各步驟由誰做：先量出問題、回逐字稿看實際發生什麼、起草、另一個 AI 挑錯、我做決定、寫成規則、下一堂課實際用，只有第五步由我做](/blog/assets/posts/teaching-spec-from-transcripts/1-loop.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/1-loop.jpg)
 
 幾個關鍵轉折，按日期是這樣：
 
