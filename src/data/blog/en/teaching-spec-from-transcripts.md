@@ -68,6 +68,10 @@ What I measured is how the spec grew: two one-on-one lines (an AI-tutor line and
 
 **My time goes to ruling.** The GMAT service spec had two rulings, with review pages of 17 and 11 items. The second round was not planned in advance; it grew out of the comments I added in the first. Four of those comments needed research before they could be decided, and the answers became the 11 items of round two. One of them, "activation delay", turned out to be all activation dates the students had chosen themselves, so it was closed on the spot. For version five I replied with one message. The first version of the review page used too much jargon; after I questioned it, it was rewritten in plain language.
 
+[![Review page schematic: 17 items in round 1; my notes raised four questions to check, which became the 11 items of round 2; each row is adopt, adopt with exceptions, or reject, with a one-line reason; items that need no call from me stay off the page](/blog/assets/posts/teaching-spec-from-transcripts/6-review-page-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/6-review-page-en.jpg)
+
+The figure above is rebuilt from the real review-page format.
+
 **The gates were tested in reverse.** The check that blocks writes containing undefined codes was verified before launch with seven cases: all four kinds of violation blocked, all three legitimate cases allowed.
 
 After the spec went live, whether lessons run closer to time and whether students improve are two things I have not measured yet. What I have measured is whether the spec matches actual practice.
