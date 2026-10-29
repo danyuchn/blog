@@ -9,7 +9,7 @@ tags:
   - teaching
   - ai-education
   - ai-workflow
-description: 'I went through 30 transcripts of one-on-one and company classes plus 751 commands I typed to Claude Code, to see how I actually open a request, steer midway and close it. Includes 8 original lines and a starter prompt you can paste to an AI.'
+description: 'I went through 30 transcripts of one-on-one and company classes plus 751 commands I typed to AI in my own work, to see how I actually open a request, steer midway and close it. Includes 8 original lines and a starter prompt you can paste to an AI.'
 ---
 
 This post is about how I give spoken instructions to AI. The point is not precise wording. It is a few fixed moves: say why, draw a line around what it may and may not touch, let it ask first, and tell it to write things down when you are done.
@@ -32,7 +32,7 @@ The second snag was an AI that keeps stopping to ask, so a person has to keep wa
 
 The third snag was students who do not dare say they don't understand. Most are too embarrassed to admit they cannot follow an AI's output. In class I once said out loud, "I don't understand this, is it mahjong?", and only after that did students start speaking up.
 
-The fourth snag was the same mistake coming back. Something I corrected once showed up again in a new conversation, because nobody wrote it down. But writing every complaint into a rule makes the rules pile up and get messy. My line in class was that no country amends its laws every day.
+The fourth snag was the same mistake coming back. Something I corrected once showed up again in a new conversation, because nobody wrote it down. What I do now is keep a list of rules the AI must always follow, which it reads before every job. But writing every complaint into that list makes the rules pile up and get messy. My line in class was that no country amends its laws every day.
 
 ## What I wanted, and how it changed
 
@@ -50,25 +50,25 @@ So what works is not the wording. It is the 13 fixed moves in the four stages be
 
 The turning points of the last few months, limited to what helps a reader:
 
-**9/18.** Three things happened the same day. I could not follow an AI's explanation and asked for an example: "I still don't get change two, the dual track. Give me an example with one or two imaginary test takers and 5 questions so I can understand." I later turned that into a standing command that tells it to explain again in plain language a high schooler could follow. The same day I asked for long discussions to converge: "Our conversation needs to converge more and more, so you need to keep a document. The parts I agree with and have no doubts about, write to the file." I also started asking a second AI for an adversarial review, with no hints given.
+**9/18.** Three things happened the same day. First, an AI was explaining a revision plan to me and I could not follow, so I asked for an example ("change two" and "dual track" in the quote are item names from that plan): "I still don't get change two, the dual track. Give me an example with one or two imaginary test takers and 5 questions so I can understand." I later turned that into a line I can call up any time, telling it to explain again in plain language a high schooler could follow. Second, when a discussion dragged on, I had it write what we had settled into a document as we went: "Our conversation needs to converge more and more, so you need to keep a document. The parts I agree with and have no doubts about, write to the file." Third, for checking the work I started bringing in a second AI whose only job is to find faults, without telling it where I think the problems are.
 
-**10/1.** For work on a live system I set the priorities first: "Please remember, first priority is the site must not go down, second priority is don't lose data."
+**10/1.** Before touching a website that is already live and in use, I set the priorities first: "Please remember, first priority is the site must not go down, second priority is don't lose data."
 
 **10/4.** Before closing a session I now always ask: "What did I correct you on this time?"
 
-**10/6 to 10/21.** I started doubting the rules themselves. On 10/6 I asked, "Will this make the rules more bloated?" On 10/19 I asked for "write it in one place only." On 10/21 I added a test: "If the model already knows it, don't include it (the test is: would it know without this)." The same day I put my line on letting go into one sentence: "Outward messages are the last thing I let go of. Everything else can be let go first, and I'll fix it if something goes wrong."
+**10/6 to 10/21.** I started doubting the rules themselves. On 10/6 I asked, "Will this make the rules more bloated?" On 10/19 I asked that each rule be written in only one place: "write it in one place only." On 10/21 I added a test: anything the AI already knows does not belong in the rules ("the model" in the quote just means the AI): "If the model already knows it, don't include it (the test is: would it know without this)." The same day I put my line on letting go into one sentence: messages to other people and promises made to them are the last things I hand to the AI. "Outward messages are the last thing I let go of. Everything else can be let go first, and I'll fix it if something goes wrong."
 
 ## What these records show
 
-First the scope and baseline. There are two sets of material: transcripts of 30 one-on-one and company classes from April to October 2026, and 751 commands I typed to Claude Code myself from June to October. For the transcripts, I had an AI pull out the commands I demonstrated in class, about 1,350 items. Then a script checked each original quote against the transcript, and 13 did not match. All 13 were dropped. I did not run a before-and-after comparison, so what follows is what came out of the sorting.
+First the scope and baseline. There are two sets of material: transcripts of 30 one-on-one and company classes from April to October 2026, and 751 commands I typed to AI myself in my own work from June to October. For the transcripts, I had an AI pull out the commands I demonstrated in class, about 1,350 items. Then a script checked each original quote against the transcript, and 13 did not match. All 13 were dropped. I did not run a before-and-after comparison, so what follows is what came out of the sorting.
 
-**Slips of the tongue do not hurt.** My commands in the transcripts are full of filler and slips, and they still worked. The mistake new teachers make most is thinking a command must be precise. What to practice is whether the 13 moves above show up.
+**Slips of the tongue do not hurt.** My commands in the transcripts are full of filler and slips, and they still worked. The mistake people new to AI make most is thinking a command must be precise. What to practice is whether the 13 moves above show up.
 
-**Commands in class are short, my own are long.** In class it is mostly one thing at a time, because students must follow it and copy it. In my own work one message often hands off four or five jobs, separated by `//` or numbers, and the range I authorize is much larger.
+**Commands in class are short, my own are long.** In class it is mostly one thing at a time, because students must follow it and copy it. In my own work one message often hands off four or five jobs, separated by slashes or numbers, and the range I authorize is much larger.
 
 [![In class versus on my own: command length, number of jobs at once, scope of authority, when to ask, and attitude toward rules](/blog/assets/posts/teacher-oral-instructions-to-ai/3-class-vs-own-en.jpg)](/blog/assets/posts/teacher-oral-instructions-to-ai/3-class-vs-own-en.jpg)
 
-**In class I mostly ask first, on my own I list decisions at the end.** Students are still building trust, so in class I mostly tell the AI to ask me first. I have a setup that blocks dangerous steps, so I dare to hold decisions until the end. A student's scope of authority should grow with their own safeguards. Don't copy how freely I let go today.
+**In class I mostly ask first, on my own I list decisions at the end.** Students are still building trust, so in class I mostly tell the AI to ask me first. I have settings that automatically block dangerous steps, so I dare to hold decisions until the end. A student's scope of authority should grow with their own safeguards. Don't copy how freely I let go today.
 
 **Later, one more move appears: questioning the rules themselves.** In class records, a correction usually becomes a rule. In my own commands, later on, I more often ask whether there are too many rules. That question only shows up after some time of use, so it can wait until a student is in their second or third month.
 
@@ -124,6 +124,8 @@ Swap in your situation: not understanding is the AI's problem, not yours. You ca
 
 **6. Odd result: find the cause before changing**
 
+The AI kept making the same mistake. I suspected one of two things: the conversation had run so long that it forgot what was said earlier, or it never read the rules I wrote for it.
+
 > Let's not change anything first, let's find the cause first. Is it that the context got too long and polluted, so the model forgot, or is it that the model never read those rules?
 
 > (translated from Chinese)
@@ -131,6 +133,8 @@ Swap in your situation: not understanding is the AI's problem, not yours. You ca
 Swap in your situation: when an AI keeps getting it wrong, say "don't change anything," tell it to go back to the original data, report the cause, then discuss the fix.
 
 **7. Keep the doer and the checker separate**
+
+The sub agent in this line is a second AI I call up only to check the work.
 
 > I send an independent sub agent to judge it, and what it is not sure about it tells me, and I check that myself.
 
@@ -144,7 +148,7 @@ Swap in your situation: when it is done, have another AI review it, without tell
 
 > (translated from Chinese)
 
-Swap in your situation: before you finish, ask once what I corrected this time. Keep only what it would get wrong again, and write it in the one file where it fits best.
+Swap in your situation: before you finish, ask once what I corrected this time. Keep only what it would get wrong again, and write it where it will read before the next job (such as the tool's custom instructions, or a rules note), each rule in one place only.
 
 ## Starter prompt
 
@@ -166,7 +170,7 @@ This section covers how I got from two sets of records to the lines above, for a
 
 ### Two sets of material
 
-The first is 30 transcripts from April to October 2026, covering one-on-one classes and company classes. The second is my own conversation records in Claude Code from June to October 2026, filtered down to 751 messages I typed myself and long enough to matter. Commands an AI sent to sub-agents and auto-suggested text were excluded.
+The first is 30 transcripts from April to October 2026, covering one-on-one classes and company classes. The second is my own conversation records in Claude Code (an AI tool that reads and writes files directly on a computer) from June to October 2026, filtered down to 751 messages I typed myself and long enough to matter. Commands an AI sent to sub-agents and auto-suggested text were excluded.
 
 ### Extraction, checking, dropping
 
