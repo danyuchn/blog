@@ -62,99 +62,86 @@ The scope is the interview transcripts: a sample of 22 from 202, 12 unread inter
 
 ## The prompts I gave while building it
 
-These are the words I used with the AI during this period, mostly from one conversation on Oct 3. Some words in them are shorthand I use with the AI, so I give the background before each one, and after each I add a line on how to adapt it.
+Below are the exact words I said to the AI during development, mostly from the same conversation on 10/3. Some phrasing reflects how I normally talk to AI. Before each quote, I explain the background. After each quote, I show how you can adapt it to your own situation.
 
-**1. Do not read everything, sample first**
+**1. Sample First, Avoid Reading Everything**
 
-An AI can send out many small helpers to read files in parallel (the "subagents" in the quote are these helpers). It planned to send one per transcript, and I told it to change course:
+The AI can dispatch several helpers at once to read files separately (the "subagents" in the quote are these helpers). At the time, it planned to send one helper per transcript. I told it to take a different approach:
 
-> You should be smart about this. Don't dispatch so many subagents.
-
+> You should use a smart approach and avoid dispatching too many subagents.
 > (translated from Chinese)
 
-Adapt it: for any job that means reading a lot of files, first ask the AI whether sampling would work.
+In your situation: whenever you have a task that involves reading many files, ask the AI first if there is a way to sample them.
 
-**2. Ask how much it covers**
+**2. Ask How Much It Covered**
 
-> So how much of my teaching method does this small set of transcripts cover? Can we spot-check from outside the sample?
+After the AI finishes its first round of sorting, avoid assuming it caught everything accurately. I asked it directly how much ground it covered:
 
+> So how much of my teaching methodology does this small batch of transcripts cover right now? Can we spot-check outside this scope?
 > (translated from Chinese)
 
-Adapt it: when the AI finishes summarizing, do not trust it yet. Ask it to check against material it has not read, and see how much is covered.
+In your situation: hold off on trusting the results immediately after the AI finishes organizing. Ask it to spot-check against unread materials to see how much the current results actually cover.
 
-**3. Make the checking cheap too**
+**3. Save on Checking Too**
 
-The AI proposed sending six helpers to read one interview each, and I asked whether it could be cheaper:
+The AI originally proposed sending six helpers to read one session each. I asked if it could save a bit more:
 
-> Go and actually spot-check outside the sample, but do you really need to dispatch six? Can't one agent just sample six sessions?
-
+> Spot-check outside the actual scope. Do we really need to dispatch six helpers? Can we just dispatch one to sample six sessions?
 > (translated from Chinese)
 
-Adapt it: when the AI's plan costs too much, ask directly for a cheaper one, for example one helper handling several files.
+In your situation: when an AI approach is too expensive, ask directly if there is a more economical way, such as having one helper handle multiple files.
 
-**4. Separate thinking from labor**
+**4. Separate Brainwork from Heavy Lifting**
 
-"Tokens" here is the AI usage unit from earlier:
+The word "token" here refers to the AI usage unit mentioned earlier. I split the heavy lifting from the thinking when assigning tasks:
 
-> You handle direction and verification. Subagents handle investigation and reading files. Anything that needs a lot of tokens goes to subagents, but you handle the key direction, thinking and verification. Okay?
-
+> You handle directing and verifying. Subagents handle researching or reading files. Use subagents for any execution requiring large amounts of tokens. Meanwhile, you stay responsible for key direction, thinking, and verification, okay?
 > (translated from Chinese)
 
-Adapt it: hand the heavy file reading to cheaper helpers, and keep the expensive model for planning and the final check.
+In your situation: hand off heavy reading tasks to cheaper helpers. Keep the primary AI focused on planning and final checks.
 
-**5. Settle an old piece of advice**
+**5. Make the Call on Outdated Phrasing**
 
-The background is the prep-time contradiction from earlier: "percentile slope" is the old advice and "sweet spot" is the new one:
+The context here was the earlier contradiction about "how much time each subject requires." "Percentage slope" was the old phrasing, and "sweet spot" is the new phrasing:
 
-> The percentile-slope allocation has been dropped. Now it is all the sweet spot. I agree with the rest.
-
+> Percentage slope distribution is retired. Everything uses sweet spot now. I agree with the rest.
 > (translated from Chinese)
 
-Adapt it: when the AI lists old advice, say directly which one is dropped and what is used now, and cover the rest with "I agree."
+In your situation: when you see outdated phrasing listed by the AI, tell it directly which item is retired and what to use now. Wrap up the rest with a simple "I agree."
 
-**6. Write the condition when you say no**
+**6. State Your Conditions When Declining**
 
-This was my reply to one of the 10 suggested material changes from the AI. A "quasi mock exam" is a full practice run done to the real test's format before the exam:
+This was my reply to one of the 10 curriculum revision suggestions from the AI. A "quasi-mock exam" refers to a full practice test taken under exact exam conditions before test day:
 
-> Not adopted | I rarely bring up quasi mock exams lately. Only if the student has six weeks do I schedule one week of quasi mock exams (in the second-to-last week before the test). If there are not six weeks, I take them out. I agree with the rest.
-
+> Decline | I rarely bring up quasi-mock exams lately. I only schedule one week of quasi-mock exams (the second-to-last week before the test) if a student has six weeks. Without six weeks, I remove quasi-mock exams entirely. I agree with everything else.
 > (translated from Chinese)
 
-Adapt it: when you disagree, do not just say no. Write the condition under which you actually do it, because that sentence is what the knowledge base needs.
+In your situation: when you disagree, avoid simply saying no. Spell out the exact conditions of what you actually do. That specific rule is what the knowledge base needs.
 
-**7. Too many things to review**
+**7. Push Back When There Is Too Much to Review**
 
-The AI turns items it needs me to confirm into web pages I tick through, and the "review pages" in the quote are those:
+The AI created a webpage for items requiring my confirmation, packed with checkboxes for me to click page by page. I told it directly to take it back and reorganize:
 
-> There are too many review pages. Cut them down and merge them. I can't review that many.
-
+> There are too many review pages. Consolidate and cut them down. I cannot review this many.
 > (translated from Chinese)
 
-Adapt it: your time is the most expensive. Ask the AI to filter first and leave only the items that need your judgment.
+In your situation: avoid letting the AI dump every minor detail on you to check off. Tell it to filter and consolidate first, keeping only decisions that truly require your judgment.
 
-**8. What you make must go where it will be used**
+**8. Put What You Create Where It Will Be Used**
 
-The "spec" in the quote means the lesson-prep rules I wrote for the AI to read:
+The word "spec" in my quote refers to the lesson preparation rules I wrote for the AI:
 
-> Have the things you produced been connected to the existing spec? If they are not connected, they just become orphans and never get used.
-
+> Have the items you generated connected to our existing specs yet? Without that connection, they will become orphans and never get used.
 > (translated from Chinese)
 
-Adapt it: every time something new is produced, ask whether it has gone into a place that actually gets read, such as lesson prep, answering students or the syllabus.
+In your situation: whenever a new document is produced, ask the AI whether it was placed where it will actually be read, such as lesson prep, student Q&A, or the syllabus.
 
 ## Starter prompt template
 
-Paste this to an AI that can read folders on your computer. It does the reading, counting and checking; you only look at the results and decide which items to carry out. Replace the parentheses with your situation:
+You can copy and paste this template directly to an AI that can access your computer folders. Let it handle reading files, calculating statistics, and cross-checking. You only need to review the findings and decide which items to adopt. Replace the bracketed text with your own details:
 
 ```text
-I want to turn (my folder of teaching transcripts / handouts / articles) into a teaching knowledge base that you will look up when preparing lessons and answering students' questions.
-
-1. First count how many transcripts the folder holds and how long each is, and estimate how many tokens reading all of them would take. If that exceeds (my budget), switch to stratified random sampling and tell me how many you will sample and why that is enough.
-2. Pick one to three transcripts for a pilot. Every item must carry my original words (copied verbatim, 20 to 120 characters) and a timestamp, with fields for (my judgment / method / explanation / estimate). When done, check with a program that each quote appears word for word in the source, and report the mismatch count the program actually printed. Do not just say they match.
-3. After the pilot passes, process the sampled transcripts with the same rules. Check every item by program again. Drop any item whose quote does not match, and do not edit it.
-4. When summarizing, write only what the transcripts contain. Add no expertise of your own and make no judgments of good or bad. After each statement, mark "appears in X of N files."
-5. Turn contradictory advice (different years, different situations) into a list for me to decide: for each item, show both versions with their quotes and dates, and put the list at the top of the document. I will answer adopt or not adopt item by item. Record my reasons beside each in my own words, and mark dropped old advice "kept as a record only."
-6. Then draw (a number of) transcripts you have not read, check how much the knowledge base covers, and tell me which places it should go into where I will use it (lesson prep, answering students, syllabus), and under what condition an item should be removed.
+I want to organize (my teaching transcripts / handouts / article folder) into a teaching knowledge base so you can reference it later when helping me prepare lessons and answer student questions. In the final output, please only summarize the exact words and practices that actually appear in the materials (including my judgments, practices, phrasing, and estimates). Avoid adding your own domain knowledge, and avoid rating anything as good or bad. If you find contradictory statements from different periods or contexts, compile them into a pending decision list for my review. If reading everything will exceed (my budget), switch to sampling instead. Please check the folder first and give me an action plan. I will review it before you begin.
 ```
 
 ## Appendix: how it is built
