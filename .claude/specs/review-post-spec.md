@@ -51,7 +51,7 @@
 
 ## 7. 發布後
 
-上線當天走 `promo-spec.md` 的宣傳步驟。
+上線當天走 `promo-spec.md`（指向 `social-promo` skill）的宣傳流程。
 
 ## 8. 雙語
 
