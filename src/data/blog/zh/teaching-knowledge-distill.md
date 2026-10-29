@@ -50,7 +50,7 @@ description: '我把兩百多份學生面談的錄音逐字稿交給 AI，整理
 
 **程式核對原話，抓得到 AI 自己說沒問題的錯。** 同一份逐字稿、同一份規則，最便宜的模型整理出 44 筆，程式查出 6 筆原話對不上、4 筆時間點不存在，它自己卻說全部相符。貴一級的模型整理出約 100 筆，程式查出 0 筆不符。家教對照表的量更大：1,028 條逐條核對，有 89 條（約 9%）沒通過。這些留著，但不能單靠它們撐起一個教法。
 
-[![引句驗證的結果：Haiku 44 筆中 6 筆原話對不上、4 筆時間點不存在；Sonnet 約 100 筆全部通過；處方表 1,028 張卡中 89 張不過](/blog/assets/posts/teaching-knowledge-distill/2-verify.jpg)](/blog/assets/posts/teaching-knowledge-distill/2-verify.jpg)
+[![引句驗證的結果：最便宜的模型 44 筆中 6 筆原話對不上、4 筆時間點不存在；貴一級的模型約 100 筆全部通過；家教對照表 1,028 條中 89 條不過](/blog/assets/posts/teaching-knowledge-distill/2-verify.jpg)](/blog/assets/posts/teaching-knowledge-distill/2-verify.jpg)
 
 **抽樣比全部讀划算，而且可以回頭檢查。** 全部讀要約 2,600 萬 token，抽 22 場就夠整理出 464 組說法。我拿 12 場沒讀過的面談回頭檢查，涵蓋率落在 65% 到 80%。負責整理的 AI 自己提醒過，它判定「有涵蓋」的標準偏寬，真實的涵蓋率可能比這個再低一些。
 

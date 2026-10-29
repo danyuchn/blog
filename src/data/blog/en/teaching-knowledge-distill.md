@@ -50,7 +50,7 @@ The scope is the interview transcripts: a sample of 22 from 202, 12 unread inter
 
 **A program checking the quotes catches errors the AI says are not there.** On the same transcript with the same rules, the cheapest model produced 44 items. The program found 6 quotes that did not match and 4 timestamps that did not exist, while the model said everything matched. The next model up produced about 100 items and the program found 0 mismatches. The tutoring table was bigger: 1,028 rows checked one by one, and 89 (about 9%) failed. They are kept, but none of them can carry a teaching method on its own.
 
-[![Quote verification results: Haiku had 6 of 44 quotes not found and 4 timestamps that do not exist; Sonnet's roughly 100 items all passed; 89 of the prescription table's 1,028 cards failed](/blog/assets/posts/teaching-knowledge-distill/2-verify-en.jpg)](/blog/assets/posts/teaching-knowledge-distill/2-verify-en.jpg)
+[![Quote verification results: the cheapest model had 6 of 44 quotes not found and 4 timestamps that do not exist; the next tier up had roughly 100 items that all passed; 89 of the tutoring table's 1,028 rows failed](/blog/assets/posts/teaching-knowledge-distill/2-verify-en.jpg)](/blog/assets/posts/teaching-knowledge-distill/2-verify-en.jpg)
 
 **Sampling is cheaper than reading everything, and you can check it afterwards.** Reading everything would cost about 26 million tokens, and 22 interviews were enough to produce 464 groups. I checked against 12 unread interviews, and coverage fell between 65% and 80%. The AI doing the work warned me itself that its standard for "covered" was loose, so real coverage may be somewhat lower.
 
