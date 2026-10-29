@@ -74,94 +74,82 @@ First the scope and baseline. There are two sets of material: transcripts of 30 
 
 ## Commands I have actually used
 
-These are 8 lines I actually said. After each, one sentence on how to swap in your own situation.
+Below are 8 exact quotes I actually used with AI. After each one, I added a sentence explaining how you can adapt it to your own situation.
 
-**1. Say your concern, your goal and your context**
+**1. State your concerns, goal, and context first**
 
-> Okay, you tell it what your concern is, what your goal is, and what your context is.
-
+> All right, you need to tell it what your concerns are, what your goal is, and what your context is.
 > (translated from Chinese)
 
-Swap in your situation: before opening, add three sentences: what I want to do, why, and what I will use it for. Leave the steps to the AI to propose.
+How to adapt it to your situation: Before speaking, add 3 sentences: "what I want to do," "why I am doing it," and "what I will use the result for." You can leave the steps for the AI to suggest.
 
-**2. Let go, but draw the boundary first**
+**2. Let go, but set boundaries first**
 
-> Please check my computer for places where I can safely free 15 GB, then tell me, don't act yet.
-
-> Just give me the list, right, just the list.
-
+> Please check my computer and see where I can safely clear 15GB. Tell me first, and do not take action yet.
 > (translated from Chinese)
 
-Swap in your situation: after the authorization, always attach a boundary, such as "list it for me first" or "keep one copy of the original." If it can be undone, let it run. If it cannot be undone (deleting files, outward messages, live systems), keep it in your own hands.
-
-[![Before handing over, ask whether it can be undone: undoable things are let go, irreversible ones are kept or listed first](/blog/assets/posts/teacher-oral-instructions-to-ai/2-boundary-en.jpg)](/blog/assets/posts/teacher-oral-instructions-to-ai/2-boundary-en.jpg)
-
-**3. Cannot say it clearly? Ask it to interview you**
-
-> I have this idea, but it's hard for me to describe, that's fine, please ask me questions,
-
-> If you are not sure, please ask me, don't decide on your own.
-
+> Yes, just give me the list.
 > (translated from Chinese)
 
-Swap in your situation: when the need is not formed yet, say "I can't say it clearly yet, please interview me." For anything about your own internal details, add: ask if unsure.
+How to adapt it to your situation: When asking AI to do something, set a boundary right away, such as "show me a list first" or "keep a copy of the original file." If a mistake can be undone, let it work freely. If a mistake cannot be undone (like deleting files or sending messages), ask for a list first and keep control yourself.
 
-**4. After it starts, no stopping**
+[![Before delegating, ask if a mistake can be undone: let go if it can be reversed, or ask for a list and keep control if it cannot](/blog/assets/posts/teacher-oral-instructions-to-ai/2-boundary-en.jpg)](/blog/assets/posts/teacher-oral-instructions-to-ai/2-boundary-en.jpg)
 
-> Anything I need to decide, tell me all together at the end, no need to stop in the middle.
+**3. If you cannot explain it clearly, ask it to interview you**
 
+> I have this idea, though it is hard for me to describe it to you right now. That is fine, please ask me questions.
 > (translated from Chinese)
 
-Swap in your situation: put it on the last line. Ask all questions before starting, and after starting, hold the decisions for one list at the end.
-
-**5. Don't understand? Say so**
-
-> I don't understand, write it in plain language.
-
+> If you are not sure, ask me directly. Do not make decisions on your own.
 > (translated from Chinese)
 
-Swap in your situation: not understanding is the AI's problem, not yours. You can ask for one concrete example too.
+How to adapt it to your situation: When you do not know how to explain something clearly, just say, "I cannot explain it clearly yet, please interview me." If it involves school or internal details, add, "If you are not sure, ask me directly."
 
-**6. Odd result: find the cause before changing**
+**4. Once work starts, do not stop**
 
-The AI kept making the same mistake. I suspected one of two things: the conversation had run so long that it forgot what was said earlier, or it never read the rules I wrote for it.
-
-> Let's not change anything first, let's find the cause first. Is it that the context got too long and polluted, so the model forgot, or is it that the model never read those rules?
-
+> If anything needs my decision, tell me all at once at the end. You do not need to pause along the way.
 > (translated from Chinese)
 
-Swap in your situation: when an AI keeps getting it wrong, say "don't change anything," tell it to go back to the original data, report the cause, then discuss the fix.
+How to adapt it to your situation: You can put this sentence at the very end of your instruction. Ask all questions at once before starting. Once work begins, have it list everything that needs your decision at the end. It does not need to keep stopping to ask along the way.
 
-**7. Keep the doer and the checker separate**
+**5. If you do not understand, say so directly**
 
-The sub agent in this line is a second AI I call up only to check the work.
-
-> I send an independent sub agent to judge it, and what it is not sure about it tells me, and I check that myself.
-
+> I do not understand this. Write it in plain language.
 > (translated from Chinese)
 
-Swap in your situation: when it is done, have another AI review it, without telling it where you think the problem is. Whatever it cannot settle, it lists for you to check yourself.
+How to adapt it to your situation: If you do not understand, tell it directly to rewrite in plain language, or ask it to explain with a concrete example.
 
-**8. At the end, tell it to write it down**
+**6. If the result looks strange, find the cause before changing it**
 
-> Why did you make the mistake? Right, and how do you think you can avoid it in future? Then, write it down.
+At the time, the AI kept making the same mistake. I suspected 2 possibilities: the conversation became too long and it forgot earlier context, or it never read the rules I gave it.
 
+> Let us not change anything yet. Let us find the cause first. Did the model forget because the context got too long and polluted? Or did it fail to read those rules?
 > (translated from Chinese)
 
-Swap in your situation: before you finish, ask once what I corrected this time. Keep only what it would get wrong again, and write it where it will read before the next job (such as the tool's custom instructions, or a rules note), each rule in one place only.
+How to adapt it to your situation: When the AI repeatedly makes mistakes, tell it "do not change anything yet." Have it check the original source material, explain the cause clearly, and then discuss how to fix it.
+
+**7. Separate doing from checking**
+
+The "sub agent" mentioned here is simply another AI I opened that is only responsible for checking.
+
+> I assign an independent sub agent to judge for me. Tell me what is uncertain, and I will verify it myself.
+> (translated from Chinese)
+
+How to adapt it to your situation: After finishing the task, open another chat and ask a different AI to review the work. Avoid telling it where you think the problems are beforehand. Have it list anything it is unsure about, and you can verify those points yourself.
+
+**8. Wrap up by having it write things down**
+
+> Why did you make this mistake? Right. How do you think we can avoid this mistake in the future? And then, write that down.
+> (translated from Chinese)
+
+How to adapt it to your situation: Before ending the chat, always ask, "What parts did I correct you on this time?" Pick only the mistakes that might happen again. Have it record them where it reads before starting next time (such as custom instructions or rule notes). Keep each rule recorded in only 1 place.
 
 ## Starter prompt
 
-Paste this to an AI that can read your conversation records. Replace the brackets with your situation. The AI does the rest, and you only look at the result and decide which lines to adopt.
+If you want to check how you usually give instructions to AI, you can start with this prompt. Replace the brackets with your details, and paste it directly to an AI that can read your chat history. It will handle the rest on its own. You only need to review the results and decide which sentences to use.
 
 ```text
-Please check how I usually give instructions to AI.
-
-1. Read my conversation records from (last week / last month), looking only at instructions I typed myself. (Records are at: __)
-2. Mark each instruction for whether these four moves appear: stating purpose and use; drawing a boundary when authorizing (don't act yet, keep the original); letting you ask first or asking you to interview me; asking you at the end to write down my corrections.
-3. Make a table: how often each move appears, with one quote of mine for each. For moves that should have appeared but did not, point to which instruction and what was missing.
-4. The next thing I want to do is (__). Using the moves that were missing, write one opening instruction draft in my usual voice. Spoken is fine, do not make it precise.
-5. Show me the draft, and I will decide which lines to adopt.
+I want to check how I usually give instructions to AI. Please read my chat history from (last week / the past month) (file path: __). Look only at the instructions I typed myself, and see whether I did these 4 things: stated the goal and purpose, set boundaries when delegating, allowed you to ask first or requested an interview, and recorded corrections at wrap-up. Please put together a table showing how many times each action appeared, quote 1 exact sentence for each, and point out what is missing. Then, based on what is missing, write a draft opening instruction for my next task (__) in my usual voice. Keep it conversational. Give me a plan first, and I will review it before you begin.
 ```
 
 ## Appendix: how I pulled this together
