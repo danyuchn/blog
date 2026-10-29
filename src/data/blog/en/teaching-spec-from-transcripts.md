@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-28T04:00:00Z
+pubDatetime: 2026-10-27T04:00:00Z
 title: "Turning Lesson Transcripts into a Teaching Spec: One AI Drafts, Another Finds Faults, I Only Decide"
 slug: en/teaching-spec-from-transcripts
 featured: false
-draft: true
+draft: false
 tags:
   - ai-workflow
   - teaching

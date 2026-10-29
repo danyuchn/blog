@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-10-28T04:00:00Z
+pubDatetime: 2026-10-27T04:00:00Z
 title: 從課堂逐字稿整理出教學規格：一個 AI 起草、另一個 AI 挑錯，我只負責拍板
 slug: zh/teaching-spec-from-transcripts
 featured: false
-draft: true
+draft: false
 tags:
   - ai-workflow
   - teaching
