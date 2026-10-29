@@ -12,173 +12,162 @@ tags:
 description: 'My one-on-one lessons ran 51% over schedule. I went back to the lesson transcripts, had one AI write up my teaching rules and another hunt for faults, and only made decisions on a single checklist myself. The method, the numbers, what I actually told the AI, and a prompt you can paste.'
 ---
 
-I teach one-on-one lessons. Recently I had an AI write down "how I actually teach" as a set of rules, so that whenever an AI helps me prepare a lesson or write the notes afterwards, it follows them. I call it my teaching spec. The spec grew out of lesson transcripts: one AI goes back to the transcripts, rebuilds what really happened in class and drafts the spec; a second AI only hunts for faults; and I only make decisions, item by item, on a single checklist. Once written, the spec can still be overturned and rewritten by the next lesson.
+I teach one-on-one tutoring sessions regularly. Recently, I asked an AI to organize how I actually teach into a set of rules. Moving forward, I follow these rules whenever I prep for class or write post-class notes. I call this my teaching spec. This spec was extracted directly from lesson transcripts. One AI looked back through the transcripts, reconstructed what actually happened in class, and drafted the rules. A second AI focused entirely on catching mistakes. My only job was to go down a web checklist and make decisions line by line. Even once a rule is set, it is never carved in stone. If something comes up in the next class, we might toss it out and rewrite it on the spot.
 
-This post covers four things in order: where I was stuck, how I wanted the spec to grow, the numbers I measured, and what I actually told the AI along the way. A starter prompt you can paste to an AI comes last. If you want the flow charts and the mechanics, jump to the [appendix: how it is built](#appendix-how-it-is-built).
+This post walks through where I was originally stuck, how this spec evolved, the numbers I measured, and the exact words I used with AI. At the end, I also included a starter prompt you can paste directly into an AI. If you want to see the flowcharts and technical details, feel free to jump straight to [Appendix: Technical Approach](#appendix-technical-approach).
 
-## Where I was stuck
+## Where I Was Stuck
 
-The first problem was overtime. I pulled the transcripts of 15 one-on-one lessons and compared the times: 1,320 minutes scheduled, about 1,990 minutes actual. That is 51% over, about 11 hours unbilled. The cause was that the lesson time itself had no protection at all: nobody checked before the lesson whether the student was ready, what we had agreed to cover got pushed aside, I filled the time with my own demonstrations, nobody checked whether anything was learned, and there was no contact between one lesson and the next.
+The most obvious issue was that my classes ran over time. I pulled up transcripts from 15 one-on-one sessions to check the actual time spent: 1,320 minutes scheduled, roughly 1,990 minutes delivered. That was 51% over schedule, meaning about 11 unbilled hours. When I looked into why, I realized my class time had zero protection. I never checked before class whether the student was ready. Topics we had agreed to cover got pushed aside. Whenever I demonstrated something, I ended up taking up all the time. Nobody checked whether the student actually understood the material. Between sessions, the student and I had no contact at all.
 
-The second problem was that the spec said one thing and the lessons did another. Some time after the spec was set, I noticed my actual practice and the written clauses drifting apart. This is what I told the AI at the time ("spec" is this spec):
+Another issue was that even with a spec written down, classes continued as usual. After the spec had been in place for a while, my actual teaching drifted further and further from the written rules. Here is what I told the AI at the time (the "spec" mentioned here refers to this teaching spec):
 
-> 自從定了 spec 以來飄移蠻多
-
+> Things have drifted quite a bit since we set the spec.
 > (translated from Chinese)
 
-Checking showed that some clauses had never happened in a lesson, and things I did all the time were missing from the spec.
+When I compared them side by side, I found that some rules in the spec had never once happened in class. Meanwhile, things I did constantly never made it into the spec.
 
-The third problem was letting an AI write the spec directly. What comes out is an ideal lesson that does not match mine. Without "go back to the raw record first and see what actually happened" and "have a second AI hunt for faults independently", the AI's first draft goes wrong. Once, while tidying an appendix, an AI quietly dropped real steps and invented a command that does not exist.
+If you simply ask an AI to write a spec, it usually describes an "ideal class" that bears no resemblance to how you actually teach. Without two crucial steps—first reading the original records to see what actually happened, and bringing in a second AI to independently poke holes—the AI's initial draft always runs into trouble. For example, when the AI was compiling an appendix once, it quietly omitted real steps and even hallucinated a command that never existed.
 
-The fourth problem was my own time. My time belongs on making decisions, not on writing clauses by hand. The AI lists what I need to decide as a web page, one item per row; I will call it the review page. That review page keeps getting longer too. I complained more than once that it was too long, and every item on it is time I have to spend.
+Finally, there was the issue of my own time. My time belongs on making decisions. I should not spend it drafting rules myself. The AI would list items requiring my decision on a web checklist, one item per row, which I call the review page below. Still, this review page kept growing longer and longer. Several times I pushed back because it was simply too long and had too many items. The more items listed there, the more of my time it took up.
 
-## What I wanted, and how it changed
+## What I Wanted, and How It Evolved
 
-The division of labor I wanted: pulling the key points out of transcripts, drafting, and fault-finding all go to AI, split across different AIs so that no AI writes and reviews its own work. I appear only at the decision step, on a single page, one decision per row.
+The division of labor I wanted was actually very simple. Extracting key points from transcripts, drafting rules, and catching mistakes should all be handled by AI. These tasks had to be split across different AIs so that the same AI was never drafting and grading its own work. I should only step in at the decision-making stage, opening a web checklist and making one decision per row.
 
-[![The seven steps from transcripts to a spec and who does each: measure the problem, see what really happened, draft, another AI finds the flaws, I decide, write it into the rules, use it in the next lesson; only step five is mine](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)
+[![The seven steps for turning transcripts into a spec and who handles each step: measure the problem first, review transcripts to see what actually happened, draft, have a second AI catch errors, I make decisions, codify into rules, and apply in the next class, with only step five handled by me](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/1-loop-en.jpg)
 
-The key turns, by date:
+Here are the key turning points, arranged by date:
 
-**8/29, measure first.** I went through the transcripts of 15 one-on-one lessons and found that 51% overrun. The spec was on its third version then, and that version started from this number, not from "what an ideal lesson should look like".
+**8/29: Measure first.** I went through transcripts from 15 one-on-one sessions and measured that 51% overtime mentioned above. The spec was on its third version at the time. This version started directly with this number. It did not start from an ideal picture of what a class should look like.
 
-**9/25, the measurement overturned itself.** I recomputed where the lesson time went, over 8 lesson transcripts. The first pass said the time I spent "taking the topic off on my own tangents" was 34%. With a new criterion, only 15.6% remained. My own recount overturned the first result, and I recorded the new number in my lesson-prep notes.
+**9/25: The measurement overturned itself.** I took transcripts from 8 sessions and recalculated where class time went. The first calculation showed that time spent on tangents I initiated accounted for 34%. After switching to a new criterion and recalculating, that dropped to 15.6%. Since the initial result was overturned, I recorded the new figure in my lesson prep materials.
 
-**9/26, a round of corrections after class.** That day I edited six places in the lesson notes the AI had written for me, then asked it to look back:
+**9/26: A post-class revision cycle.** That day, the AI drafted class notes for me. I manually made changes in 6 places, and then immediately told it to review:
 
-> 回顧這次我改了哪裡、規格有沒有涵蓋、你會怎麼修
-
+> Review what I changed this time, check whether the spec covers it, and suggest how you would revise it.
 > (translated from Chinese)
 
-The AI produced a table of suggested changes, I confirmed it, and it went straight to editing the spec, along with the instructions it follows whenever it writes lesson notes.
+The AI generated a table of proposed revisions. Once I approved them, it updated the spec directly, along with the operational guide it usually follows when writing notes.
 
-**10/8, version five.** I felt practice and spec had drifted too far apart again, so I opened 4 AIs at once to read in parallel, each reading a whole transcript of 110,000 to 160,000 characters. The AI pulling it all together picked out the timestamp for every conclusion and checked it against the source before accepting it, and in passing caught one after-lesson review that still used the standard from before it was relaxed. The AI sorted the changes into three groups: remove outright, right purpose but wrong wording so change the phrasing, and things I always did that the spec never said. I answered with a single message: "all three groups agreed".
+**10/8: Moving to the fifth version.** I felt my actual teaching had drifted too far from the spec again. So I ran 4 AIs in parallel, having each read an entire transcript of 110,000 to 160,000 characters. The coordinating AI matched each finding to its timestamp, verifying it sentence by sentence against the source before adopting it. Along the way, it even caught that one post-class review had used old criteria before they were relaxed. In the end, the AI sorted the changes into three categories: items to remove outright, items with the right intent that needed rephrasing, and things I did constantly that were missing from the spec. I replied with a single message: "I agree with all three categories."
 
-## Measured results
+## Real-World Testing
 
-What I measured is how the spec grew. I teach two kinds of one-on-one lessons: one teaches people to use AI, the other prepares students for the GMAT (the exam used for business school admissions), and each has its own spec. Within two months the spec went from version three to version five, and the GMAT spec went through two rounds of decisions. The baseline is what actually happened in the transcripts.
+What I measured here was how the spec grew. I teach two types of one-on-one classes: one on using AI, and one for the GMAT (the exam for business school admissions). I maintain a separate spec for each. Over two months, the specs moved from version three to version five, with the GMAT spec going through two thorough rounds of decisions. Every single baseline was aligned directly with what actually happened in the transcripts.
 
-[![Two sets of numbers computed from transcripts: 15 lessons scheduled 1,320 minutes, actual about 1,990 minutes, 51% over; lesson density 34% under the first criterion, 15.6% recomputed with the new one](/blog/assets/posts/teaching-spec-from-transcripts/2-numbers-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/2-numbers-en.jpg)
+[![Two sets of numbers calculated from transcripts: 15 sessions scheduled for 1,320 minutes took roughly 1,990 minutes, 51% over schedule; class density was 34% under the initial criteria, dropping to 15.6% after recalculating with new criteria](/blog/assets/posts/teaching-spec-from-transcripts/2-numbers-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/2-numbers-en.jpg)
 
-**Measurements overturn themselves.** The lesson-time number came out at 34% the first time and 15.6% under the new criterion. Without the recount against the transcripts, that 34% would have gone straight into the spec.
+**Measurements can overturn themselves.** For the class time figures, the first calculation came out to 34%. After recalculating under the new standard, it dropped to 15.6%. If I had never gone back to the transcripts to recalculate, that 34% would have been written straight into the spec.
 
-**Independent fault-finding catches real errors.** The draft of the GMAT spec went to the strongest AI model available for review: 17 items, 15 accepted, 2 partly accepted, and the spec's appendix records how each was handled and why. For the documents students read, I had an AI play a non-technical student in each round and walk through them from the start: the first round found 25 rough spots, 7 of which would stop a student completely.
+**Independent critique actually catches mistakes.** When the draft of the GMAT spec was reviewed by the strongest current AI model, it flagged 17 items at once. In the end, 15 were adopted and 2 were partially adopted. How each item was handled and the reasoning behind it are fully documented in the spec's appendix. For the student-facing guide, I asked the AI to roleplay a non-technical student in each round and follow the steps from scratch. The first round alone uncovered 25 friction points, 7 of which would have left a student completely stuck.
 
-**More review rounds do not make it better; change the structure.** Reviewed this way, every round of the student documents turned up about 6 new blockers, and it was still happening in round five. Digging in found three structural causes: one fact was spread across 5 documents, 2 languages and 12 cross-references; the reviewing AI remembered nothing from the previous round; and "would a beginner be confused" has no natural end. The fix was to keep a single template as the master copy and generate the other documents from it automatically, add an automatic check that blocks mistakes as they are written, distill about 100 review findings into a checklist that is rerun every time, and agree on a pass condition: zero blockers passes, minor issues do not block. It settled down by round seven. Another example: after-lesson reviews were sorted by file name, so the automatic check missed some; after switching to sorting by content, the checked set grew from 11 files to 21, and all 21 turned out to be missing three required fields.
+**Running more review rounds will not fix the issue; you need to change the structure.** When reviewing student documents this way, about 6 new blockers popped up in every round, continuing all the way through the fifth round. Looking deeper, I found three structural root causes: the same information was scattered across 5 documents, 2 languages, and 12 cross-references; the reviewing AI had no memory of previous rounds; and asking whether a beginner might get confused has no natural end. The eventual solution was keeping just one master template from which all other files are automatically generated, backed by an automated check that blocks errors immediately. I also consolidated about 100 review findings into a single checklist to rerun every time, while setting clear exit criteria: pass when critical blockers hit zero, without blocking on minor issues. As a result, the findings converged by the seventh round. Another example was the post-class reviews: previously categorized by filename, some were missed by automated checks. Once categorized by content, the scope expanded from 11 files to 21 files, immediately revealing that all 21 were missing three required items.
 
-**My time goes to making decisions.** The GMAT spec had two rounds of decisions, with review pages of 17 and 11 items. The second round was not scheduled in advance; it grew out of the comments I added in the first. Four of those comments raised questions that needed research before they could be decided, and the answers became the 11 items of round two. One of them, "delayed course activation", turned out to be all activation dates the students had chosen themselves, so it was closed on the spot. For version five I replied with one message. The first version of the review page used too much jargon; after I questioned it, the AI rewrote it in plain language.
+**My time went toward making decisions.** The GMAT spec went through two decision rounds, with review pages containing 17 and 11 items respectively. The second round was not scheduled in advance. It grew out of comments I added in round one: four questions required factual lookups before deciding, and those lookups yielded the 11 items for round two. One item was "delays in course access." Checking the records showed that every single case was on a date requested by the student, so we closed it immediately. By the time we reached the fifth version, I completed the update with a single message. The first version of the review page contained too much jargon. After I pushed back, the AI rewrote it using plain language.
 
-[![Review page schematic: 17 items in round 1; my notes raised four questions to check, which became the 11 items of round 2; each row is adopt, adopt with exceptions, or reject, with a one-line reason; items that need no call from me stay off the page](/blog/assets/posts/teaching-spec-from-transcripts/6-review-page-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/6-review-page-en.jpg)
+[![Review page layout: 17 items in round one spawned four lookup tasks from my feedback, which became 11 items in round two; each row lets you choose adopt, adopt with exceptions, or reject, with a one-sentence rationale; items that do not require my judgment never enter the review page](/blog/assets/posts/teaching-spec-from-transcripts/6-review-page-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/6-review-page-en.jpg)
 
-The figure above is rebuilt from the real review-page format.
+The graphic above was reconstructed from the actual review page format.
 
-**Automatic checks need testing in reverse too.** One check blocks anything containing internal codes that have not been explained. Before launch I verified it in reverse with seven cases: all four kinds that should be blocked were blocked, and all three that should pass passed.
+**Automated checks also need reverse testing.** One check specifically catches content containing unexplained internal code names. Before putting it into production, I tested it with 7 test cases: all 4 cases that should have been blocked were blocked, and all 3 cases that should have passed were allowed through.
 
-After the spec went live, whether lessons run closer to time and whether students improve are two things I have not measured yet. What I have measured is whether the spec matches what I actually do.
+Once the spec went live, whether classes ran more punctually and whether students improved are two things I honestly have not started measuring yet. What I have actually measured so far is simply whether the spec aligns with how I teach in practice.
 
-## What I told the AI along the way
+## Exact Words I Said to AI Along the Way
 
-Below are a few things I told the AI during this process, in my own words. After each one, a line on how to adapt it to your situation.
+Below are a few exact quotes I said to AI throughout this process. After each quote, I added a line explaining how to adapt it to your own situation.
 
-**1. Do not decide in the chat; move it to a page**
+**1. Move decisions out of the chat and onto a page**
 
-The AI had been throwing a long list of questions at me in the chat, and I answered (the "ruling page" is the review page above):
+Originally, the AI sent long strings of multiple-choice questions right inside the chat. I pushed back immediately (the "ruling page" mentioned here is the review page described above):
 
-> 改裁決頁，我在裁決頁裡決定
-
+> Move this to a review page. I'll make my decisions there.
 > (translated from Chinese)
 
-Adapt it: when an AI throws a long list of questions at you to answer in the chat, tell it to turn them into one page, one decision per row, and decide on the page.
+For your own situation: When an AI dumps a long list of multiple-choice questions for you to answer in chat, tell it to build a web page instead, with one decision per row so you can just click through it.
 
-**2. Ask directly when it is too long**
+**2. Push back if it gets too long**
 
-When the review page grew long again, I asked:
+Whenever the review page grew too long, I asked:
 
-> 要我裁的你確定要寫那麼多嗎
-
+> Are you sure I really need to rule on this many items?
 > (translated from Chinese)
 
-Adapt it: when the review page is longer than you are willing to read, ask this. Items should be filtered first, keeping only what needs your judgement.
+For your own situation: When the review page exceeds what you are willing to read, ask this question. Items presented to you should be filtered beforehand, keeping only those that actually require your judgment.
 
 **3. Decide in batches**
 
-This is the 10/8 round above: the AI had sorted the changes into three groups, and I replied:
+This was the 10/8 update mentioned earlier, where the AI grouped changes into three categories. I replied:
 
-> 三類都同意
-
+> I agree with all three categories.
 > (translated from Chinese)
 
-Adapt it: ask the AI to sort the changes into groups and state the purpose and reason for each. If the grouping is good, you can answer everything in one message.
+For your own situation: Ask the AI to group proposed changes into categories, clearly stating the purpose and rationale for each. When grouped cleanly, you can resolve everything with a single reply.
 
-**4. Add one line of why**
+**4. Add a quick reason why**
 
-One item was about how my lesson-prep hours should be recorded, and when I decided it I added:
+During a discussion on how to log my lesson prep hours, I added a quick rationale while deciding:
 
-> 標準就是要反映真實準備時間，方向是把準備時間縮短，不是少算
-
+> The standard must reflect actual prep time. The goal is shortening preparation time, rather than counting fewer hours.
 > (translated from Chinese)
 
-Adapt it: add a reason when you decide. That sentence later shaped how several clauses on "how prep hours are recorded" were written; the reason travels to the next situation better than "which option" does.
+For your own situation: Add an extra line explaining your reasoning when you make a choice. That single sentence later shaped multiple rules on how prep hours are recorded. The reasoning carries over to future scenarios far better than a simple choice.
 
-**5. Ask for a review after you edit**
+**5. Tell it to review after you make edits**
 
-> 回顧這次我改了哪裡、規格有沒有涵蓋、你會怎麼修
+Every time I manually edit something the AI generated, I send this line:
 
+> Review what I changed this time, check whether the spec covers it, and suggest how you would revise it.
 > (translated from Chinese)
 
-Adapt it: after you edit an AI's output, ask it to compare your changes against the current spec and add whatever the spec does not cover.
+For your own situation: After you tweak an AI's output, tell it to compare your edits against the current spec and fill in whatever was missing.
 
-**6. Ask directly when you are unsure about your own practice**
+**6. Ask directly when unsure about your own practice**
 
-> 我的教學方法是不是還沒成形？
+Whenever I was uncertain about my approach, I asked directly:
 
+> Is my teaching methodology still not fully formed?
 > (translated from Chinese)
 
-Adapt it: put this question to an AI and ask it to answer against your records. The answer I got was that the teaching itself was stable; what changed were the spec, the course plans and the kinds of students, and what was still undecided was "does it work" and "did I deliver what I promised students". On the spot, that produced a new list just for tracking what I promised students and whether it was done.
+For your own situation: Feed this question to an AI and ask it to answer based on your actual records. The answer I got was that my teaching methods were stable. What kept changing were the specs, lesson packages, and student profiles. What remained unverified was whether the methods were effective and whether promises to students were kept. So we created a dedicated checklist on the spot to track what I promised each student and whether it was delivered.
 
-## Starter prompt
+## Starter Prompt Template
 
-To grow a spec from your own lesson records, start from this, replace the parentheses with your situation, and paste it to an AI that can read the files on your computer:
+If you want to grow a spec out of your own class records, you can start with this prompt. Replace the bracketed text with your own details, and paste it directly into an AI that can access your local files:
 
 ```text
-I want to turn my lesson transcripts into a teaching spec (a set of teaching rules written for an AI to follow). The transcripts are in (folder location).
-
-1. Measure first, do not write the spec yet. Read (how many) transcripts and compute (the symptom I want to improve, e.g. minutes of overtime, how many times an agreed thing was not done). Attach the file name and location for every number. If you cannot compute it, tell me what data is missing.
-2. Rebuild "how I actually teach now" from the transcripts. Every item carries a verbatim quote and timestamp; anything backed by only one lesson goes in a separate "to verify" list, not the main text.
-3. Open a separate AI that has not seen the conclusions so far as the attacker: do not assume the results are correct, check every quote against the transcript, report only errors and things you cannot decide; stop when you find nothing new.
-4. Draft the spec from the checked results: direction only, no scripted wording, no minute-by-minute limits; mark each item with the number of lessons backing it.
-5. Turn the items that need my judgement into one review page, one decision per row, with options and a comment box. Handle the items that do not need my judgement yourself and keep a log; do not send them up. The reasons I add are written beside the clause in my own words.
-6. Once the spec is settled, mark it "first use" and remind me on (date) to check back: look at whether it actually runs, not whether it is written down.
+I want to turn my lesson transcripts into a teaching spec—a set of teaching rules for an AI to follow when prepping classes and writing post-class notes. The transcripts are in (folder path). Please read (number) transcripts first, calculate (the symptom I want to improve, such as how many minutes classes ran overtime or how many times promised tasks were skipped), reconstruct how I actually teach from the transcripts, and draft a set of rules. Flag anything uncertain, and organize items requiring my input into a single list. Give me a plan first, and I will review it before you begin.
 ```
 
-## Appendix: how it is built
+## Appendix: Technical Approach
 
-This section is for people who want to build one themselves; the technical terms, file shapes and rules are all here.
+This section is for anyone looking to build a similar setup themselves. Technical terms, file formats, and rules are gathered here.
 
-### Technical terms behind the plain wording
+### Plain-Language Terms and Their Technical Equivalents
 
-- "A set of rules written for an AI to follow": the teaching spec, the rules file the AI reads before preparing a lesson or writing notes.
-- "The instructions it follows whenever it writes lesson notes": a Claude Code skill.
-- "Opened 4 AIs at once to read in parallel": 4 parallel sub-agents.
-- "The AI pulling it all together": the lead, meaning the session you are talking to.
-- "A second AI only hunts for faults": the attacker below, opened as a separate session without earlier conclusions.
-- "The strongest AI model available": drafting and attacking use a stronger model; extraction can use a cheaper one.
-- "An automatic check that blocks mistakes as they are written": hooks and lint checks that run before a write.
-- "Lesson-prep notes": the asset file where measurement results are recorded.
+- "A set of teaching rules for AI": The teaching spec—the rule file an AI reads before prepping classes or drafting notes.
+- "The operational guide it follows when writing notes": A Claude Code skill.
+- "Running 4 AIs in parallel to read transcripts": 4 parallel subagents.
+- "The coordinating AI": The main session—the conversation you are actively interacting with.
+- "A second AI dedicated to catching mistakes": The attacker described below, run in a separate session without prior conclusions.
+- "The strongest current AI model": High-tier models for drafting and attacking; extraction can use inexpensive models.
+- "Automated checks that block errors immediately": Pre-write hook and lint checks.
+- "Lesson prep materials": Asset files recording measurement results.
 
-### The overall flow: who hands what to whom
+### Overall Workflow: Who Hands What to Whom
 
-One round of spec generation has six roles: the read-only transcripts, an extractor (can be a cheaper model), a drafter and an attacker (each a stronger model), the lead (your conversation), and me. The three AI roles are dispatched in three separate runs, not merged into "write it and check it yourself".
+One spec generation cycle involves 6 roles: the read-only transcripts, an extractor (which can use an inexpensive model), a drafter and an attacker (each using a high-tier model), the main session (your active chat), and myself. The 3 AI roles are dispatched in three separate steps, avoiding the trap of letting an AI draft and review its own work in one go.
 
-[![Sequence of one round of spec generation: the extractor reads the transcripts, passes extract files with quote and location to the lead, the lead spot-checks timestamps and gives only the extract files to the drafter, the draft goes to an attacker that has no earlier conclusions, the attacker reports errors and undecidable items, the lead hands me the filtered review page, I return a ruling and one line of why, and the lead turns it into a mechanism marked first use](/blog/assets/posts/teaching-spec-from-transcripts/3-sequence-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/3-sequence-en.jpg)
+[![Sequence diagram for one spec generation cycle: transcripts are read by the extractor; extraction files with verbatim quotes and locations are handed to the main session; after spot-checking timestamps, the main session passes only extraction files to the drafter; the draft goes to an attacker free of prior conclusions; the attacker reports errors and undetermined areas; the main session delivers a filtered review page to me; I return decisions with a one-sentence rationale; the main session codifies the rules and flags them for initial trial](/blog/assets/posts/teaching-spec-from-transcripts/3-sequence-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/3-sequence-en.jpg)
 
-The drafter reads only the extracted results, and the attacker is opened separately, without the conclusions of earlier rounds.
+The drafter reads only extraction results. The attacker runs in a fresh session, carrying zero conclusions from earlier rounds.
 
-### Extracting from transcripts
+### Transcript Extraction
 
-Extraction uses one fixed set of questions, and every item must carry a verbatim quote and a location. For the GMAT spec, a cheaper model read the records of 47 students and 14 consultation contacts in 11 batches and produced 61 extract files, and then a stronger model wrote the spec reading only those extract files.
+Extraction uses a standardized questionnaire where every entry must include a verbatim quote and its exact location. For the GMAT spec, an inexpensive model ran in 11 batches, reading records from 47 students and 14 consultation clients to generate 61 extraction files. A high-tier model then drafted the spec by reading only those extraction files.
 
-The first line of the extraction spec says: every item carries `quote` (20 to 120 characters, verbatim) and `pos` (timestamp or line number). When the lead receives the files, a program checks that each `quote` really is a substring of the original. Any item whose quote does not match is discarded in full. The smallest version looks like this:
+The first rule in the extraction spec states: every entry must include a `quote` (verbatim, 20 to 120 words) and a `pos` (timestamp or line number). Upon receiving the entries, the main session runs a script to verify that `quote` is an exact substring of the original text. Any entry with a mismatched quote is discarded entirely. Here is the minimal version:
 
 ```python
 import json, sys
@@ -198,49 +187,49 @@ if __name__ == "__main__":
     check(sys.argv[1], sys.argv[2])
 ```
 
-Run `python3 -I verify_quotes.py extract.json transcript.txt`. This script only checks that the quote is there; it cannot tell whether the sentence was misunderstood, so the lead still spot-checks timestamps against the source to read the context. That is what was done for version five, and it caught the retrospective that used the pre-relaxation standard.
+Run `python3 -I verify_quotes.py extract.json transcript.txt`. This script verifies whether the quote is present. It cannot detect whether a statement was taken out of context. For that reason, the main session must also spot-check timestamps to inspect context in the original text. That is how we caught a post-class review using old criteria before they were relaxed during the version five update.
 
-Every rule needs at least two cases behind it, so the rule table gets an extra column, "number of supporting cases", and any row below 2 moves to "to verify".
+Every rule must be backed by at least 2 real cases. Therefore, the rule table includes a column for "Supporting Case Count." Any row with fewer than 2 cases is moved to "Pending Verification."
 
-### Drafting and attacking
+### Drafting and Attacking
 
-The drafter reads only the extract files. The attacker is opened separately, without earlier conclusions and without the drafter's reasoning. The attacker's instructions must state that it may not assume the results are correct, that it reports only errors and things it cannot decide, and a pass condition, or it will always find something new. An example follows, with parentheses for you to fill in:
+The drafter reads only extraction files. The attacker runs in a separate session without prior conclusions, completely blind to the drafter's reasoning. The attacker's instructions must explicitly forbid assuming the draft is correct, restrict reporting to errors and undetermined areas, and state the exit criteria. Otherwise, it will keep finding new issues forever. Here is an example, with brackets left for you to fill in:
 
 ```text
-You are the attacker. Below are a spec draft and the matching transcript.
-Do not assume the draft is correct. Check it item by item against the transcript.
-Report only two kinds of things: errors, and things you cannot decide.
-Pass condition: (for example: zero blockers). Stop once it is met; do not list minor issues.
+You are the attacker. Below are the draft spec and the corresponding transcripts.
+Do not assume the draft is correct. Check each item against the transcripts.
+Report only two categories: actual errors, and areas you cannot determine.
+Exit criteria: (for example: zero critical blockers). Stop once achieved; do not list secondary issues.
 ```
 
-The attacker's role can also be swapped for the reader: ask a stronger model to play a non-technical student in each round and walk through the student documents step by step.
+Alternatively, the attacker role can be swapped for a reader: ask a high-tier model to roleplay a non-technical student in each round, walking step-by-step through the student documentation.
 
-### The review page and the ruling log
+### Review Pages and Decision Logs
 
-Not every item should reach me. They are filtered before they are sent up:
+Not every item belongs in front of me. Everything is filtered before reaching my screen:
 
-[![Decision flow for one item left after the attack: backed by only one case goes to to-verify; needs a lookup becomes a verification question for the next round; if it needs no judgement from me the AI handles and logs it; what remains becomes a review-page row, I rule, the reason is written beside the clause in my words, dated with who decided, marked first use with a review date](/blog/assets/posts/teaching-spec-from-transcripts/4-decision-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/4-decision-en.jpg)
+[![Decision tree for an item surviving the attack: items backed by only one case move to pending verification; items requiring lookups turn into verification tasks for the next round; items needing no judgment from me are resolved by AI with a log entry; remaining items become a row on the review page for my decision, with verbatim reasoning recorded next to the rule, tagged with date, author, first-trial status, and review date](/blog/assets/posts/teaching-spec-from-transcripts/4-decision-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/4-decision-en.jpg)
 
-Each row on the review page is one decision: with options (accept, accept with exceptions, reject) and a comment box, and at the bottom only the items with exceptions, copied back into the chat with one click. I generate the page with a skill called `review-page`. When a ruling is written back into the spec, the ruling log has four fixed columns:
+Each row on the review page represents a single decision, complete with options (Adopt, Adopt with Exceptions, Reject) and a comments box. The bottom lists only items with exceptions, allowing one-click copying back into the chat. I generate this page using a skill called `review-page`. When decisions are written back to the spec, the decision log uses four fixed columns:
 
-| Ruling | Added reason (my words) | Done | To do |
+| Decision | Added Rationale (Verbatim) | Completed | Todo |
 |---|---|---|---|
-| Accepted | The line I added in passing | Which clause changed | What needs a later check |
+| Adopt | My offhand remark | Rule updated | Items for follow-up review |
 
-Every revision carries a date and who decided it. A clause that has been overturned is marked "void" and stays in the ruling log; it is not silently deleted.
+Every amendment includes a date and an author tag. Overruled rules are marked as "deprecated" and retained in the decision log, rather than silently deleted.
 
-### The life of a rule
+### The Lifecycle of a Rule
 
-A new rule is not final right away. Mark it "first use, watching" and attach a dated follow-up. At the review, look at whether it actually runs, and drop it if it does not. A practice that departs from the spec is first recorded as a "known variant", and promoted only after a third occurrence or once it is proven useful.
+New rules are never treated as final right away. They are tagged as "Initial Trial: Under Observation," accompanied by a scheduled follow-up task with a due date. During follow-up, we check whether the rule is actually functioning. If it fails in practice, we drop it. Teaching practices that drift from the spec are logged as "known variations," promoted to official rules only after appearing three times or proving effective.
 
-[![State diagram of one rule: a draft rule that passes the ruling becomes first use, watching, with a review date; if the review shows it runs it is settled, if not it is dropped; a known variant is promoted to settled after a third occurrence or once proven useful; a settled rule overturned by actual practice becomes void and stays in the ruling log](/blog/assets/posts/teaching-spec-from-transcripts/5-state-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/5-state-en.jpg)
+[![State diagram of a rule: an approved draft becomes an initial trial under observation with a review date; it becomes finalized if running smoothly on review, or dropped if impractical; known variations are promoted to final rules upon appearing three times or proving effective; finalized rules overturned by actual practice become deprecated, preserved in the decision log](/blog/assets/posts/teaching-spec-from-transcripts/5-state-en.jpg)](/blog/assets/posts/teaching-spec-from-transcripts/5-state-en.jpg)
 
-Enforcement has three levels: gates that block a write (hooks, lint, fields owned by a script), after-the-fact reminders, and written rules with a periodic re-check. Whatever can be automated should be made to block the wrong write at the moment it happens, and once a gate is written it needs a reverse test proving that what should be blocked is blocked and what should pass passes. When the same kind of problem shows up a third time, stop and ask "what structure keeps producing it", and put the answer in the commit message.
+Rule enforcement falls into three levels: write-blocking gates (hooks, linter checks, script-owned fields), post-hoc reminders, and written rules paired with periodic audits. Anything that can be automated should be built to block errors the moment they happen. Once a gate is configured, reverse testing verifies that it catches what it should catch and allows what it should allow. When the same type of issue surfaces for the third time, stop and ask what structural flaw causes it to keep appearing, then record that answer in the commit message.
 
-### Build it yourself: the smallest version
+### Building It Yourself: The Minimal Version
 
-1. One symptom and one number you can compute (minutes of overtime, how many times an agreed thing was not done).
-2. One extract file, each item with `quote` and `pos`, checked with the script above.
-3. Dispatch drafting and attacking once each; the attacker does not see earlier conclusions, and its instructions state the pass condition.
-4. Turn the items that need your judgement into one page, one decision per row, and keep the reason you add beside the clause in your own words.
-5. Mark a settled rule "first use" and set a review date.
+1. One symptom, paired with a measurable number (how many minutes classes ran overtime, or how many times promised tasks were skipped).
+2. One extraction file, where every entry has a `quote` and a `pos`, verified using the script above.
+3. One round each of drafting and attacking, with the attacker blind to earlier conclusions and given explicit exit criteria.
+4. One review page collecting items that require your judgment, one decision per row, keeping your verbatim rationale next to each rule.
+5. Tag finalized rules as "Initial Trial" and set a follow-up review date.
