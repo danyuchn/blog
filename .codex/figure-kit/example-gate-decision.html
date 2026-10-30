@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.flow{margin-top:30px}
+.box{border:1px solid var(--ink);padding:12px 16px;font-size:15.5px;line-height:1.55}
+.dec{border:1px solid var(--ink);border-left:4px solid var(--ink);padding:12px 16px;font-weight:500;font-size:16px}
+.dec .m,.box .m,.out .m{display:block;font-weight:400;font-size:15px;color:var(--muted);margin-top:4px}
+.vline{height:36px;margin-left:28px;border-left:1px solid var(--ink);font-size:15px;color:var(--muted);padding-left:10px;line-height:36px}
+.br{margin-left:28px;border-left:1px solid var(--ink);padding:10px 0 4px 18px;display:grid;grid-template-columns:54px 1fr;gap:6px}
+.bl{font-size:15px;color:var(--muted);padding-top:10px;white-space:nowrap}
+.out{padding:9px 14px;font-size:15.5px;line-height:1.55;border-left:3px solid var(--hair);background:var(--wash)}
+.deny{border:1px solid var(--accent);padding:12px 16px}
+.deny .k{font-family:'IBM Plex Mono';font-weight:500;color:var(--accent);font-size:15px}
+.deny .m{font-size:15px;margin-top:4px}
+.mono14{font-family:'IBM Plex Mono';font-size:15px;font-weight:500}
+.lower{margin-top:36px}
+.lh{font-weight:500;font-size:16px;letter-spacing:.04em;border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:12px}
+.lower > div + div{margin-top:32px}
+.term{font-size:14px;white-space:pre}
+.wl{font-size:15.5px;line-height:1.85}
+</style></head><body><div class="page">
+<div class="eyebrow">WORK-MODE 0.4.1 · PRETOOLUSE GATE</div><h1 class="">閘門收到工具呼叫之後：ask 還是 deny</h1><div class="sub">硬停類閘門不讀狀態檔；其餘閘門在 auto 開著時，把確認框換成附修法的 deny</div>
+<div class="flow">
+ <div class="box">模型送出工具呼叫 → PreToolUse</div>
+ <div class="vline"></div>
+ <div class="dec">這支閘門的條件成立嗎？</div>
+ <div class="br"><div class="bl">否 →</div><div class="out">放行<br><span class="m">不輸出，exit 0</span></div></div>
+ <div class="vline">是</div>
+ <div class="dec">是硬停類嗎？</div>
+ <div class="br"><div class="bl">是 →</div><div class="out">照原規則 ask 或 deny，與 auto 無關<br><span class="m">對外發送、憑證、外洩秘密、安裝與 git clone、毀損性 rm／<span style="white-space:nowrap">git reset --hard</span></span></div></div>
+ <div class="vline">否</div>
+ <div class="dec"><span class="mono14">tempo_auto_on &quot;$INPUT&quot;</span><span class="m">session_id 合法 · 狀態檔存在 · modes 含 autonomous</span></div>
+ <div class="br"><div class="bl">否 →</div><div class="out">ask：跳出確認框，流程停下等人<br><span class="m">函式庫載入失敗、檔案缺漏、JSON 壞掉都走這裡</span></div></div>
+ <div class="vline">是</div>
+ <div class="deny"><div class="k">deny ＋ permissionDecisionReason</div><div class="m">「不要停下來問：改成這樣做」，以工具結果回給模型</div></div>
+ <div class="vline"></div>
+ <div class="box">↺ 模型照原因修正，重送工具呼叫</div>
+</div>
+<div class="lower"><div><div class="lh">tempo_deny 輸出的 JSON</div><div class="term">{
+  &quot;hookSpecificOutput&quot;: {
+    &quot;hookEventName&quot;: &quot;PreToolUse&quot;,
+    &quot;permissionDecision&quot;: &quot;deny&quot;,
+    &quot;permissionDecisionReason&quot;: &quot;[…][tempo:autonomous] …&quot;
+  }
+}</div></div>
+<div><div class="lh">有接上的閘門</div><div class="wl">新建文件<br>超過兩個 subagent<br>git commit 帶 pathspec<br>git add 已有他人修改的檔<br>外部啟動 claude 沒帶 --model<br>推 main 前沒有 Codex 審查<br>背景指令沒導出 log<br>磁碟空間不足</div></div></div>
+<div class="foot">依 hooks/lib/tempo-auto.sh 與各閘門腳本整理。</div><div class="signoff"></div></div></body></html>
