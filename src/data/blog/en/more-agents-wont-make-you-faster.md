@@ -83,6 +83,16 @@ Saw this post first thing in the morning and couldn't stop laughing. Fable 5.1 h
 
 If you've run into this too, the original thread has people sharing fixes — mainly changing the config, adding a hook, and editing the frontmatter. <https://www.reddit.com/r/ClaudeAI/comments/1w52pbu/gone_in_60_seconds/>
 
+## When to Call a Subagent
+
+Later someone was talking to me about an Anthropic article on subagents, and I replied: wait, that's not what they said at all. I'm guessing you mean this piece: <https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop>. It does say current models can do everything in one go, finishing tasks directly on their own, and having the full context makes the execution more dependable.
+
+But the article also says subagents are valuable for parallel work (speed), keeping the main agent's context clean (temporary intermediate steps don't need to stay in memory forever), dealing with too many tools, handling permission or rule conflicts (different agents responsible for different boundaries), and independent review (getting a second opinion with a clean context).
+
+After reading it, I actually felt subagents are even more useful, because the article lays out a very clear standard: "Tasks suitable for handing off shouldn't need to know the details of other work, and they can return a compact, usable result." So I started overhauling the subagent dispatch rules in my harness too.
+
+I think once you understand how context affects model behavior, you understand half of what matters about subagents. There are plenty of research papers out there on how context influences model behavior. If those ideas were more widely popularized, people would have a much clearer standard for when to call a subagent. As for putting it into practice, I write it into my harness and let the model decide whether to dispatch a subagent or a headless session.
+
 I later made this into a short, "Why more AI clones won't make you faster": <https://youtube.com/shorts/o9OrZOHCRiQ>
 
 <!--
@@ -111,4 +121,9 @@ I later made this into a short, "Why more AI clones won't make you faster": <htt
 2026-09-04 weekly-routine addendum: added "Fable 5.1 Burned a 5-Hour Quota in One Minute" section, from a 09-03 Threads post. Added sentence: the heading (framing). Everything else is a sentence-level rewrite of the original post, with no facts or conclusions added.
 
 2026-10-26 splice cleanup (mirrors zh): moved 'Dedupe and Resolve Conflicts First' section up after 'The Bottleneck Isn't the Model' to resolve dangling fantasy reference, reordered multi-agent demo before quota incident, and dropped 'Postscript:' prefix from the closing short video link; new bridge sentences: "It's not just personal workflows that fall into this trap. When engineers at major labs show off multi-agent architectures, everyone is asking the exact same question.", "If you force parallelism without proper governance, beyond cognitive overload, the most immediate disaster is watching your quota evaporate in an instant."
+
+2026-10-30 merged (mirrors zh):
+- "Later someone was talking to me about an Anthropic article on subagents, and I replied:" — type: transition
+- "As for putting it into practice," — type: transition
+Added a section discussing Anthropic's criteria for folding back subagents, context effects, and harness rules, moving the short video closing to the very end of the post.
 -->

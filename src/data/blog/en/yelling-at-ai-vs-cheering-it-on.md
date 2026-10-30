@@ -33,6 +33,22 @@ Claude Code is attempting deep couples counseling between me and Codex: it start
 
 In late July, before Opus 5 dropped, word was that Codex was about to pull in that real-time two-way voice model from back then. Soon it'll really just be opening your mouth and yelling at an AI agent.
 
+## Talk to an agent the way you talk to people
+
+Besides yelling and cheering, I often see people get hung up on how they talk to agents:
+
+Someone said before: there's no need to be polite when prompting an agent. Saying thank you is completely unnecessary — it doesn't improve performance, it just wastes tokens. And don't use voice input, because your spoken filler words waste tokens too.
+
+What I'd say to that: saying thank you is literally 1 or 2 tokens. Even with spoken filler words thrown in, that's still less than 0.1% of your overall token spend (the bulk of it is tool outputs anyway).
+
+On the other hand, if you can express your thoughts using natural, everyday speech (saying thank you is just my normal habit when talking to people, pet phrases included), that lets a smart model pick up your context and makes the whole interaction smooth and comfortable. That payoff easily beats whatever tokens you're nickel-and-diming over.
+
+Bottom line: talk to an agent the way you talk to people. That's all there is to it.
+
 <!--
 2026-10-26 splice cleanup (mirrors zh): added a bridge sentence between cheering on AI and the Codex section, and aligned the past-tense voice model reference; new bridge sentences: "Claude isn't the only one I yell at, though — Codex didn't escape either."
+
+2026-10-30 merged (mirrors zh):
+- "Besides yelling and cheering, I often see people get hung up on how they talk to agents:" — type: transition
+Added a new section discussing the token myth around saying thank you to agents and using voice input, using it to close the piece.
 -->

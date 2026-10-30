@@ -24,6 +24,8 @@ I suspect Fable has more pretraining parameters, so its view of the world is wid
 
 For example, these past few days I have been working on the GMAT service-process spec. Sonnet pulled out 61 documents first, Opus wrote it, and Fable reviewed it at the end. For the weekly routine, deciding which steps to cut, I also have Fable run one round of adversarial review first, then I read it and make the call myself. In those moments Fable's vantage point feels more like a mentor to me.
 
+Especially when getting stuck: even though Fable 5.1 hasn't been updated in a while and I'm very happy with Opus 5.5 day to day, I don't know if anyone else feels the same way: whenever Opus 5.5 runs into trouble, Fable 5.1 is always the model that can step outside the box and come up with a more elegant, simpler solution. Its insight is just on another level.
+
 For me both models are still necessary. That said, since Opus 5.5 came out, the old habit of not speaking plainly has improved, and it uses quota more efficiently. I think the overall direction is a good one.
 
 ## Testing Sonnet 5.5
@@ -111,4 +113,8 @@ Even after long-context compression, the accuracy of this mind-reading has not s
 9. 其餘為 zh 版的忠實翻譯；zh 版自首清單的項目同樣適用
 
 2026-10-26 splice cleanup (mirrors zh): added opening intro on model division of labor, deleted conflicting older split sentence, folded opusplan into testing section, and removed supplemental headings; new bridge sentences: "With Opus 5.5, Sonnet 5.5, and Fable 5.1 all in hand, the question people ask most is probably how to divide the work.", "As a side note, Claude Code CLI has a bit of trivia:", "Beyond the community discussions, I also went through the official system card.", "As for why main command is still left to Opus 5.5?"
+
+2026-10-30 merged (mirrors zh):
+- "Especially when getting stuck:" — type: transition
+In the section on what Fable is for, added observations on thinking outside the box when stuck and its positioning as a guru model.
 -->

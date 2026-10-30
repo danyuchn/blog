@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-23T00:00:00Z
+modDatetime: 2026-10-30T00:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -60,6 +60,10 @@ description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型�
 **電信商 DNS 封鎖，Tailscale 一招解**
 
 > 被 Claude Code 意外發現，泰國封鎖網站只是用最基本的電信商 DNS 封鎖而已（就像台灣封鎖小紅書跟 Polymarket）。在 Claude Code 的幫助下讓 Tailscale 走 1.1.1.1 / 8.8.8.8 override local DNS，瞬間海闊天空。
+
+**形式化驗證抓併發 Bug 真的有用**
+
+> 做牽涉到多重 race condition/concurrent cache 的腳本，原本讓 subagent 做多輪測試跟對抗式審查，bug 怎麼抓都抓不完。改用 TLA+ pstack 裡的 skill，竟然獨立抓到前面燒了好幾輪 token 找到的所有問題，還讓測試完整通過。看了一篇文章實證真的有用，Claude 也分享了如何把形式化驗證用在 agent 對大型代碼庫的審查上。
 
 ## 工作流・方法論
 
@@ -146,3 +150,7 @@ description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型�
 **我只是不喜歡人**
 
 > 從小我一直以為自己天生不擅長也不喜歡領導人，不能當主管帶團隊；AI Agent 出現之後我才發現，我只是不喜歡人。
+
+**Claude Code 量測行動電源健康度**
+
+> 發現 Claude Code 新用法：不用買測電儀，直接行動電源接 MacBook，跟他說型號，他就會自己寫測試腳本跑耗電運算從 100% 放電到 0%，持續監控總輸出並上網抓數據換算健康度。我這顆 Anker Powercore III 26000 竟然撐了五年依然頭好壯壯，除了過機場安檢總被抓出來看標示（接近 100Wh）沒什麼缺點，堪稱數位遊牧最佳良伴。

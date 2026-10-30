@@ -83,6 +83,16 @@ description: '從想派 13 個 subagent 代聊、一個人操控 1000 個，到�
 
 如果你也有這困擾，原討論串裡大家都分享了解法，具體來說就是改 config、加 hook、改 frontmatter。<https://www.reddit.com/r/ClaudeAI/comments/1w52pbu/gone_in_60_seconds/>
 
+## 什麼時候該調用 subagent
+
+後來有人跟我聊到 Anthropic 一篇談 subagent 的文章，我回他：不是吧，人家不是這樣說的。我猜你說的是這篇 <https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop>。他的確是說現在的模型能力可以做到一波流，直接自己完成，而且吃上下文脈絡完整做事也比較穩妥。
+
+但文章也有講 subagent的價值是平行工作（加速）、保持主agent上下文的整潔（有些臨時過程不需要一直被記得）、工具太多、權限或者規則衝突（不同agent負責不同邊界範圍）、獨立審查（用乾淨的上下文提供第二思路）。
+
+我個人看完文章之後 感覺subagent更有用了，因為文章就給出了一個非常明確的標準：「適合交出去的工作，應該不太需要知道其他工作的細節，而且能交回精簡、可用的結果」。所以我也開始重整我的harness中的subagent派工規範。
+
+我覺得 了解上下文對模型行為的影響，對subagent就算是了解一半了。國外有很多研究上下文對模型行為影響的論文，如果這些觀念都能被科普，那subagent什麼時候該調用的判準應該會更明確。至於落地，我是寫在 harness 裡，讓模型自己判斷派出 subagent 或者無頭 session。
+
 這篇後來拍成了一支短片，〈派更多 AI 分身，為什麼不會更快？〉：<https://youtube.com/shorts/o9OrZOHCRiQ>
 
 <!--
@@ -114,4 +124,9 @@ description: '從想派 13 個 subagent 代聊、一個人操控 1000 個，到�
 - 「不只個人工作流容易有這種迷思，大廠工程師展示多代理架構時，大家也都在問一樣的問題。」— 類型：銜接
 - 「要是治理沒做好就硬開並行，除了認知過載，最直接的災情就是額度瞬間蒸發。」— 類型：銜接
 把「先去重去衝突」章節移至「瓶頸不在模型」之後解決幻想指涉脫節，調整多代理案例與額度事故順序，並移除文末短片連結的「補記：」標記作為全文收尾。
+
+2026-10-30 併入：
+- 「後來有人跟我聊到 Anthropic 一篇談 subagent 的文章，我回他：」— 類型：銜接
+- 「至於落地，」— 類型：銜接
+新增章節討論 Anthropic 對收回 subagent 的標準、上下文影響與 harness 規範，並將短片收尾移至全篇最後。
 -->

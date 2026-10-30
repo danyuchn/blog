@@ -84,6 +84,18 @@ All test items are synthetic data I built myself; I ran each item 1 to 3 times o
 - Catching typos, distinguishing simplified from traditional Chinese, and reading conversation context: send these to Sonnet.
 - Send the most complex coding work to Sol or Astra; send final-stage reviews to Opus.
 
+## After working with it myself
+
+Beyond the benchmarks, I also spent some time working with it myself:
+
+The biggest problems with OpenAI's current models still haven't changed. Hyper-defensive, takes everything literally, gives up halfway through troubleshooting, only moves when nudged...
+
+So it's still only suited for isolated tasks. Collaborating with it as a human will just piss you off.
+
+I can see why Anthropic is in no hurry to release new models. None of the competition can even put up a fight.
+
+And what I want to say to Tibo at OpenAI: resets won't save you anymore. What's the point of constantly topping up quota? The prerequisite is that the model can actually get things done. If it can't get anything done and just burns tokens for nothing, leaving people begging the vendor for pity resets, I doubt most people are having a good time.
+
 ## Appendix: technical details
 
 ### Review and patching
@@ -133,3 +145,9 @@ Here are the numbers from the third-party [Artificial Analysis evaluation](https
 - **AA-Omniscience and Terminal-Bench 4.0**: AA-Omniscience hallucination rate is 38% (down from 88% in the previous generation) while accuracy rises by only 2 points; Terminal-Bench 4.0 improves by about 20 points.
 
 That is all.
+
+<!--
+2026-10-30 merged (mirrors zh):
+- "Beyond the benchmarks, I also spent some time working with it myself:" — type: transition; added H2 "After working with it myself" (after splice review)
+At the end of the recommendations section, added personal observations from interacting with it, explaining the collaboration experience and limitations to point tasks.
+-->

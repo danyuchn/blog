@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-23T00:00:00Z
+modDatetime: 2026-10-30T00:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -60,6 +60,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **ISP DNS Blocking, Fixed With One Tailscale Setting**
 
 > Claude Code stumbled on this: Thailand blocks sites with nothing more than basic ISP-level DNS blocking (the same way Taiwan blocks Xiaohongshu and Polymarket). With Claude Code's help I pointed Tailscale at 1.1.1.1 / 8.8.8.8 to override the local DNS, and suddenly the whole internet opened up.
+
+**Formal Verification for Concurrency Bugs Actually Works**
+
+> Working on a complex script with multiple race conditions and concurrent caching, subagents running multi-round testing and adversarial reviews just couldn't catch all the bugs. Switching to the TLA+ pstack skill caught every issue we'd burned rounds of tokens finding, and got all tests to pass. An article proved it really works — Claude also shared how to use formal verification for agent reviews on large codebases too.
 
 ## Workflow & Method
 
@@ -146,3 +150,7 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **I Just Don't Like People**
 
 > All my life I assumed I was naturally bad at leading people and didn't enjoy it, that I couldn't manage a team. Then AI Agents showed up and I realized I just don't like people.
+
+**Using Claude Code to Measure Power Bank Health**
+
+> Found a funny new use for Claude Code: measuring power bank health. No tester needed — plug it into the MacBook, give Claude Code the model, and it writes a test script running power-hungry compute to drain it from 100% to 0%, monitoring total output and looking up specs online to calculate health. My Anker Powercore III 26000 has lasted five years strong; aside from airport security inspecting the label every time (near 100Wh), it's the ultimate digital nomad companion.

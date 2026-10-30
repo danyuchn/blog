@@ -54,6 +54,8 @@ Later someone shared that they find Claude Code better than Codex, and I replied
 
 Doesn't reading that make you want to kill someone XD
 
+Later I explained in the comments: I was being sarcastic about Codex, couldn't anyone tell? Codex loves beating up straw men.
+
 I once had Claude count Codex's defensive sentence patterns too. The numbers are in [the last section of this post](/blog/posts/en/model-vendors-take-turns-failing).
 
 <!--
@@ -63,4 +65,8 @@ Sentences not in the original (faithfulness log):
 3. "How I use Codex now:" — type: transition (original came from the 10-20 quota-allocation thread)
 4. "Later someone shared that they find Claude Code better than Codex, and I replied with a contest entry in Codex's voice:" — type: transition (original was a reply; the other person's point inferred from the reply)
 5. "I once had Claude count Codex's defensive sentence patterns too. The numbers are in the last section of this post." — type: transition (internal link)
+
+2026-10-30 merged (mirrors zh):
+- "Later I explained in the comments:" — type: transition
+Between the contest demo and the closing stats link, merged the author's later clarification regarding the sarcastic tone and the strawman tendency.
 -->

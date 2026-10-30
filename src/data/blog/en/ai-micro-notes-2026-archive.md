@@ -290,3 +290,13 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Anyone Who Says Caching Doesn't Matter Must Be Rich**
 
 > Anyone who says prompt caching doesn't matter must be loaded XD
+
+## Late October 2026 (W45)
+
+**Ultrathink Is Back**
+
+> God, Ultrathink is back!!!!
+
+**Major Ghostty Update**
+
+> Super satisfied with this major Ghostty update — it's blazingly fast now, with even lower system resource usage. Claude Code CLI paired with ghostty is the undisputed king!
