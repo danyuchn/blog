@@ -42,6 +42,8 @@ As for how high to set effort, here's how I use it:
 
 > How high should effort go? Above high it over-thinks easily. The official recommendation is that if medium/low thinking can finish the task, don't go higher.
 
+Switch models or switch effort? My one-line rule of thumb: "Start low, then go high. If the direction is wrong, switch models; if the direction is right but not deep enough, switch effort."
+
 ## Agent narration: three-stage progress updates
 
 ![Card four: agent narration with three-stage progress updates, split into before starting, during, and at the end](/blog/assets/posts/opus-5-prompting-migration-guide/card-04.jpg)
@@ -94,4 +96,8 @@ That's the nine cards.
 
 <!--
 2026-10-26 splice cleanup (mirrors zh): no sections moved or merged, prose already matched zh transition; new bridge sentences: "As for how high to set effort, here's how I use it:"
+
+2026-11-07 併入：
+- 新增過渡句：無（直接以原句問句承接前段 effort 討論）
+- 結構調整：於「Response length: control it explicitly, not through effort」節末兩段引言後，併入切模型與切 effort 的一句話口訣。
 -->
