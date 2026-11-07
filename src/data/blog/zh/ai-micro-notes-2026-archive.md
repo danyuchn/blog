@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-10-23T00:00:00Z
+modDatetime: 2026-11-07T00:00:00Z
 title: AI 碎念日記 2026：時間軸存檔
 slug: zh/ai-micro-notes-2026-archive
 featured: false
@@ -300,3 +300,13 @@ description: "2026 年較零碎、時效性的 AI 碎念，依時間排列。精
 **Ghostty 大更新**
 
 > 這一次的 Ghostty 大更新超級滿意，現在速度快到飛起，系統資源佔用也更少。Claude Code CLI 搭配 ghostty 才是永遠的王！
+
+## 2026 年 11 月上旬（W46）
+
+**魔改視訊會議助手拿來講課**
+
+> GitHub 上有很多視訊會議／面試作弊神器，現成的改起來應該很容易。我自己也魔改了一個，用在講課跟諮詢上：串流轉錄、一鍵知識庫檢索跟網路查核。
+
+**理想中的模型，跟現實拿到的模型**
+
+> 每天我都在許願：如果有一個模型能夠兼顧 Gemini 說話的活人感、Claude 的靈活主動、GPT 的深度細心就好了⋯但怎麼現實生活中，比較常拿到的是 Gemini 的幻覺、Claude 的小細節偷懶、GPT 的防禦語氣。

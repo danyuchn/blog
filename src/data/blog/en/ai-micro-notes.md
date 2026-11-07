@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-30T00:00:00Z
+modDatetime: 2026-11-07T00:00:00Z
 title: "AI Micro-Notes 2026: Thoughts Too Short to Trash"
 slug: en/ai-micro-notes
 featured: false
@@ -94,6 +94,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **One Line on Managing It All in Docs**
 
 > One-off results go in a file, a workflow you'll do a second time becomes a skill, shared house rules go in agents.md, and if it still won't listen after you've told it, hang a hook on it.
+
+**The Curse of Knowledge Is Real**
+
+> Teach anyone once and you'll see most people get stuck just installing things... so the "curse of knowledge" really is a thing. We can never picture how the common sense we take for granted is "knowledge" plenty of people are willing to pay for.
 
 ## AI Industry & Business Observations
 

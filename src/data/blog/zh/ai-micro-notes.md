@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-01-01T04:00:00Z
-modDatetime: 2026-10-30T00:00:00Z
+modDatetime: 2026-11-07T00:00:00Z
 title: "AI 碎念日記 2026：那些太短但捨不得丟的觀點"
 slug: zh/ai-micro-notes
 featured: false
@@ -94,6 +94,10 @@ description: '2026 年起在 Threads 和 IG 上累積的 AI 短碎念。模型�
 **文檔化管理一句口訣**
 
 > 單次成果存檔案、會做到第二次的工作流做 skill、默契規矩放 agents.md、講了還不聽掛 hook。
+
+**知識的詛咒是真的存在**
+
+> 真的教過就知道，大部分的人安裝都會卡關⋯所以「知識的詛咒」是真的存在。我們永遠無法想像自己早就掌握的常識，在很多人眼裡是值得對價的「知識」。
 
 ## AI 產業・商業觀察
 

@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
-modDatetime: 2026-10-23T00:00:00Z
+modDatetime: 2026-11-07T00:00:00Z
 title: "AI Micro-Notes 2026: Chronological Archive"
 slug: en/ai-micro-notes-2026-archive
 featured: false
@@ -300,3 +300,13 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **Major Ghostty Update**
 
 > Super satisfied with this major Ghostty update — it's blazingly fast now, with even lower system resource usage. Claude Code CLI paired with ghostty is the undisputed king!
+
+## Early November 2026 (W46)
+
+**Modding a Meeting-Cheat Tool for Teaching**
+
+> GitHub is full of video-call and interview cheat tools, and an off-the-shelf one should be easy to tweak. I modded one myself for teaching and consulting: streaming transcription, one-click knowledge-base lookup, and web fact-checking.
+
+**The Model I Wish For vs. the Model I Get**
+
+> Every day I make the same wish: if only one model combined Gemini's human-sounding voice, Claude's initiative and flexibility, and GPT's depth and care... Yet in real life what I mostly get is Gemini's hallucinations, Claude cutting corners on small details, and GPT's defensive tone.
