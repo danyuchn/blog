@@ -55,6 +55,10 @@ I hit the same trap twice. The first time, a page-turn character wasn't handled 
 
 I ran a fixed minimum-length rule over a batch of transcription-style material, flagged 8 out of 37 articles as "content got cut short," and every single one of those 8 flags was wrong — the short answer options were verbatim from the source text, and the source articles themselves were genuinely only a couple hundred characters long. Switching to "compare against its own source, flag it only if it falls below some ratio of that" took the pass rate from 14% to 48%, with not a single word of the writers' output changed. Before applying any QA rule, ask one question first: is this measuring creative quality, or transcription fidelity?
 
+Twice more after that, I took a proxy metric (a watcher's exit code, a character count) as "done." A merge-watcher script still exited 0 when CI failed, and the "delete branch" step chained after it with && deleted a PR's branch and auto-closed the PR. I took "the watcher script finished" as "merged." Later I recovered the branch from local commits, reopened the PR, and changed the merge script to confirm the state is MERGED before deleting.
+
+The other time was transcribing long audio: the check only looked at character count, and segments still dropped even when the count passed; splitting into 5-minute chunks in agy made it invent fake endings in a row. Later I switched to 3-minute chunks, per-chunk caching, and comparing text across the seams.
+
 These nine traps span your own code, libraries, CLIs, APIs, database queries, extraction scripts, and QA rules, and they all share the same shape: a check passing, zero errors, a call reporting success — none of those signals ever means the thing is actually correct. The only reliable response is still the same: actively read back or probe the real state before you move on.
 
 ## Layer two: the model didn't error, it just never called the tool
@@ -228,4 +232,9 @@ Everything else is taken verbatim from the seven source posts (silent-failures-v
 2026-09-04 weekly-routine addendum: added cases 6-9 to layer one (the squash-merge `--is-ancestor` misjudgment, the Firestore type-mismatch zero, the extraction script's recurring silent drop, and the QA threshold misfiring on transcription material). Source: the 09-01 through 09-03 daily-note pitfall sections (pdt-platform / harness projects), condensed and rewritten per case, with internal filenames and specific names left out. Added bridge sentence: "These nine traps span your own code, libraries, CLIs, APIs, database queries, extraction scripts, and QA rules, and they all share the same shape: a check passing, zero errors, a call reporting success — none of those signals ever means the thing is actually correct." The original layer-one closer ("These five traps...") was left unchanged; the new closer is a framing extension.
 
 2026-10-26 splice cleanup (mirrors zh): removed duplicate 5-item summary paragraph after item 5, stripped 'Postscript:' prefix from final section heading, and changed 'This week\'s' to 'Later'; new bridge sentences: none
+
+2026-11-07 併入：
+- "Twice more after that, I took a proxy metric (a watcher's exit code, a character count) as \"done.\"" — bridge sentence (folds the shared takeaway into the opening transition)
+- "The other time was" — bridge phrase (connects the second case)
+(Inserted the merge-watcher and long-audio transcription cases after item 9 of layer one, before the section closer.)
 -->
