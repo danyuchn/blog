@@ -38,6 +38,10 @@ I have finished testing Sonnet 5.5. A few quick conclusions:
 
 I think this model's cost-effectiveness sweet spot is very narrow (because Opus 5.5 is already too good a deal...), so point two above is the most important. As for what it means for A\, it is probably a slap across 6 Sol's face across the face at the same price.
 
+I mentioned earlier that most of the time I would still just run Opus 5.5 directly. I had not tried talking directly to Sonnet 5.5 in a long time, and when I tried it later I switched right back to Opus 5.5. Not that Sonnet is bad; it still finishes my tasks. But compared with the 4.6 era, when the gap between Sonnet and Opus was pure intelligence, what stands out most to me with the two 5.5 models now is the difference in initiative.
+
+Sonnet is smart and resignedly gets the job done, but only up to the literal wording of what you asked for. Its tone is also colder (though not that annoying defensive kind of cold). Opus does more lateral thinking, asking itself "what else might you need, and how else might you do this down the road." Put simply, one is a smart, world-weary junior staffer, and the other is a seasoned chief of staff. The description in the system card is spot on.
+
 Later I also had Sonnet 5.5 (effort high) build a full product demo video with no SKILL and no tools, just writing code. The conclusion: it can produce a good result, but it clearly considered fewer details along the way, took more rounds, and burned more tokens. Compared with Opus using tools on its own, Sonnet clearly reaches for human intervention more eagerly.
 
 By habit I should have kept raising the effort level, but I did not want to waste tokens testing it for now. I think the best use is as a subagent that gets assigned work.
@@ -117,4 +121,9 @@ Even after long-context compression, the accuracy of this mind-reading has not s
 2026-10-30 merged (mirrors zh):
 - "Especially when getting stuck:" — type: transition
 In the section on what Fable is for, added observations on thinking outside the box when stuck and its positioning as a guru model.
+
+2026-11-07 併入：
+- "I mentioned earlier that most of the time I would still just run Opus 5.5 directly." — type: transition
+- "I had not tried talking directly to Sonnet 5.5 in a long time, and when I tried it later I switched right back to Opus 5.5." — type: rewrite (aligned "today" to "later")
+In the Testing Sonnet 5.5 section, added subjective impressions of talking directly to Sonnet 5.5 and contrasted its initiative with Opus 5.5.
 -->
