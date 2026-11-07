@@ -43,7 +43,9 @@ Spread over the working days, 100 USD is a reasonable tool cost for me. On Max I
 
 Here's a real number. One morning I used up a full five-hour window: 6 main sessions I opened by hand and 32 subagents. Opus 5.5 on the main line made decisions and did acceptance checks, Sonnet subagents did the bulk of the execution, and Fable only showed up when I wanted a second opinion. That window took about 12% of the weekly limit and was worth 156.69 USD at API rates. I also ran ccusage over the last 30 days. The API-equivalent total is around 6,000 USD, against a 100 USD monthly fee, so the subsidy is huge.
 
-Max also comes with a monthly API credit worth the same as the fee, and you should use it. I plug mine into the morning dashboard that runs every night, newsletter material collection, and a weekly harness maintenance job. If you're thinking of splitting one Max among three people to save money: three people sharing means three people heading into ban hell together.
+Max also comes with a monthly API credit worth the same as the fee, and you should use it. I plug mine into the morning dashboard that runs every night, newsletter material collection, and a weekly harness maintenance job. One more reminder: the Cloud Session credit is use-it-or-lose-it and expires when the time is up. If you don't know what to do with it, have your local Claude Code open a cloud session and watch it for you.
+
+If you're thinking of splitting one Max among three people to save money: three people sharing means three people heading into ban hell together. I looked into the ToS and user tests on this later: multiple people sharing one account is definitely out, while one person using multiple accounts is fine, and Claude provides an official UI for one person to switch accounts (you can see it in the bottom-left corner of the Desktop App).
 
 ## Max 20x: skip it for now
 
@@ -57,7 +59,9 @@ When I decide whether to upgrade, I ask first: are you pushing hard before every
 
 I use it two ways. One is large text jobs that only run occasionally, like cleaning up meeting notes. I run those pay-as-you-go through OpenRouter, and a 10 USD top-up lasts a long time. The other is automated schedules, where I connect an API key in `-p` mode and spend the API credit that comes with Max.
 
-One trap to remember: the official help page says that if an `ANTHROPIC_API_KEY` environment variable is set, Claude Code uses the API key instead of your subscription, and you get billed API charges. When you hit the limit, the official options are to wait, upgrade, or turn on usage credits, which bill at standard API rates.
+One trap to remember: the official help page says that if an `ANTHROPIC_API_KEY` environment variable is set, Claude Code uses the API key instead of your subscription, and you get billed API charges. When you hit the limit, the official options are to wait, upgrade, or turn on usage credits, which bill at standard API rates. But when you run out of quota and feel like topping up usage-credit, just buy a second Pro account instead, or upgrade, otherwise you're being a sucker.
+
+Take my current 100 USD account: after maxing out every week last month, I checked the equivalent API cost with ccusage and it came out to 5,600 USD in value. That means topping up 20 USD of credit gets me less than 1% of a week's usage, and topping up 100 USD gets me only 2%. Better to put that money toward switching to a new 20 USD account and keep working, or upgrading from 100 to 200. That upgrade is especially generous: it resets the quota in your hand right away without changing your next reset date (unlike the neighbor).
 
 ## Before you buy
 
@@ -89,4 +93,9 @@ Added sentences not in the original (fidelity disclosure), mirroring the zh file
 18. "burn it. Unused quota is just wasted." Type: rewrite.
 19. Closing "That's it." Type: framing (closer from article spec).
 20. All H2 headings. Type: framing.
+
+2026-11-07 併入：
+- "One more reminder: the Cloud Session credit is use-it-or-lose-it and expires when the time is up." — Type: transition + time-word alignment (names the Cloud Session credit and aligns "expires the day after tomorrow" to "expires when the time is up").
+- Leading "But" in "But when you run out of quota and feel like topping up usage-credit..." — Type: transition.
+- 結構調整：將每月 Cloud Session credit 到期提醒與單人多帳號 ToS 實測說明併入「Max 5x: what I use」段（拆為兩段），並將額度用完改買第二個 Pro 帳號或升級的試算併入「When to use the API」段末。
 -->
