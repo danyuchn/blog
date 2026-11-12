@@ -18,6 +18,8 @@ const ui: Record<string, Record<Lang, string>> = {
     zh: "AgentCrew 課程與一對一陪跑",
   },
   "home.fact3": { en: "A weekly newsletter", zh: "每週電子報" },
+  "home.start": { en: "Start here", zh: "從這裡開始" },
+  "home.startBack": { en: "← Back to home", zh: "← 回首頁" },
   "home.featured": { en: "Featured", zh: "精選文章" },
   "home.recent": { en: "Recent Posts", zh: "最新文章" },
   "home.allPosts": { en: "All Posts", zh: "所有文章" },

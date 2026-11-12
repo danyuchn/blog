@@ -1,0 +1,49 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import type { StartEntry } from "@/data/start-here";
+import Card from "@/components/Card.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
+import { t } from "@/i18n/ui";
+import { SITE } from "@/config";
+import { getListedPosts } from "@/utils/getSortedPosts";
+import { filterByLang, type Lang } from "@/utils/i18n";
+import { withBase } from "@/utils/withBase";
+
+type Props = {
+  lang: Lang;
+  entry: StartEntry;
+};
+
+const { lang, entry } = Astro.props;
+const title = lang === "zh" ? entry.title_zh : entry.title_en;
+const description = lang === "zh" ? entry.desc_zh : entry.desc_en;
+
+const posts = filterByLang(
+  getListedPosts(await getCollection("blog")),
+  lang
+);
+const bySlug = new Map(
+  posts.map(post => [post.id.split("/").pop() ?? post.id, post])
+);
+const curated = entry.slugs
+  .map(slug => bySlug.get(slug))
+  .filter((post): post is CollectionEntry<"blog"> => Boolean(post));
+---
+
+<Layout title={`${title} | ${SITE.title}`} description={description} language={lang}>
+  <Header />
+  <Main pageTitle={title} pageDesc={description}>
+    <p class="mb-6 text-sm">
+      <a href={withBase(lang === "en" ? "/en/" : "/")} class="text-accent">
+        {t("home.startBack", lang)}
+      </a>
+    </p>
+    <ul>
+      {curated.map(post => <Card {...post} />)}
+    </ul>
+  </Main>
+  <Footer />
+</Layout>

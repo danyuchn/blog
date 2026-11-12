@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import StartHere from "@/components/StartHere.astro";
 import Card from "@/components/Card.astro";
 import GridCard from "@/components/GridCard.astro";
 import { getListedPosts } from "@/utils/getSortedPosts";
@@ -77,6 +78,13 @@ const recentPosts = (["zh", "en"] as const).flatMap(lang =>
         </ul>
       </div>
     </section>
+
+    <div data-lang="zh">
+      <StartHere lang="zh" />
+    </div>
+    <div data-lang="en">
+      <StartHere lang="en" />
+    </div>
 
     {
       featuredPosts.length > 0 && (

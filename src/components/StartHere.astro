@@ -1,0 +1,35 @@
+---
+import { START_HERE, startPath } from "@/data/start-here";
+import { t } from "@/i18n/ui";
+import type { Lang } from "@/utils/i18n";
+import { withBase } from "@/utils/withBase";
+
+type Props = { lang: Lang };
+
+const { lang } = Astro.props;
+---
+
+<section id="start-here" class="border-b border-border pt-8 pb-8">
+  <p class="mb-6 text-sm font-semibold tracking-widest text-accent uppercase">
+    {t("home.start", lang)}
+  </p>
+  <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+    {
+      START_HERE.map(entry => (
+        <li>
+          <a
+            href={withBase(startPath(entry.key, lang))}
+            class="block h-full border border-border p-4 text-foreground no-underline transition-colors duration-150 hover:bg-accent-surface"
+          >
+            <span class="block font-display text-lg leading-snug font-bold">
+              {lang === "zh" ? entry.title_zh : entry.title_en}
+            </span>
+            <span class="mt-2 block text-sm leading-relaxed text-foreground/75">
+              {lang === "zh" ? entry.desc_zh : entry.desc_en}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
