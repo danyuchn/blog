@@ -34,6 +34,7 @@ const {
   timezone,
   tags,
   hideEditPost,
+  archived,
 } = post.data;
 
 const { Content, headings } = await render(post);
@@ -83,6 +84,7 @@ const layoutProps = {
 /* ========== Prev/Next Posts (same language only) ========== */
 
 const sameLangPosts = posts
+  .filter(p => !p.data.archived || p.id === post.id)
   .filter(p => getLangFromPost(p) === postLang)
   .map(({ data: { title }, id, filePath }) => ({
     id,
@@ -106,9 +108,18 @@ const nextPost =
   <main
     id="main-content"
     class:list={["app-layout pb-12", { "mt-8": !SITE.showBackButton }]}
-    data-pagefind-body
+    data-pagefind-body={archived ? undefined : ""}
     data-translation-url={translationUrl}
   >
+    {
+      archived && (
+        <p class="mb-6 border-l-4 border-accent pl-3 text-sm opacity-80">
+          {postLang === "zh"
+            ? "這篇文章已封存：內容可能過時，保留原網址供參考。"
+            : "This post is archived: it may be out of date and is kept for reference."}
+        </p>
+      )
+    }
     <div
       class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm tracking-wide"
     >

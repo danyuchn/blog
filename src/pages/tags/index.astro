@@ -16,7 +16,7 @@ const posts = await getCollection("blog");
 const tags = getUniqueTags(posts);
 
 /* 每語言各算一次計數（LangSwitcher 以 display:none 只顯示當前語言的數字） */
-const visiblePosts = posts.filter(postFilter);
+const visiblePosts = posts.filter(p => postFilter(p) && !p.data.archived);
 const countFor = (tagSlug: string, lang: Lang) =>
   filterByLang(visiblePosts, lang).filter(p =>
     (p.data.tags ?? []).some(t => slugifyStr(t) === tagSlug)

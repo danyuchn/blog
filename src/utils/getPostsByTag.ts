@@ -1,9 +1,9 @@
 import type { CollectionEntry } from "astro:content";
-import getSortedPosts from "./getSortedPosts";
+import { getListedPosts } from "./getSortedPosts";
 import { slugifyAll } from "./slugify";
 
 const getPostsByTag = (posts: CollectionEntry<"blog">[], tag: string) =>
-  getSortedPosts(
+  getListedPosts(
     posts.filter(post => slugifyAll(post.data.tags).includes(tag))
   );
 

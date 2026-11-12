@@ -7,7 +7,7 @@ import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import GridCard from "@/components/GridCard.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
+import { getListedPosts } from "@/utils/getSortedPosts";
 import { filterByLang } from "@/utils/i18n";
 import IconRss from "@/assets/icons/IconRss.svg";
 import { SOCIALS } from "@/constants";
@@ -17,7 +17,7 @@ const RECENT_COUNT = 6;
 
 const posts = await getCollection("blog");
 
-const sortedPosts = getSortedPosts(posts);
+const sortedPosts = getListedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 // 雙語各取最新 N 篇再合併渲染（LangSwitcher 以 display:none 過濾另一語言）。
 // 不可在 zh/en 混合陣列上 slice——每語言可見篇數會不可控。

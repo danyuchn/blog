@@ -15,4 +15,8 @@ const getSortedPosts = (posts: CollectionEntry<"blog">[]) => {
     );
 };
 
+/** Posts shown in lists: published and not archived. */
+export const getListedPosts = (posts: CollectionEntry<"blog">[]) =>
+  getSortedPosts(posts).filter(p => !p.data.archived);
+
 export default getSortedPosts;
