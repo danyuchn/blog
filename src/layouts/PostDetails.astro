@@ -36,6 +36,7 @@ const {
   tags,
   hideEditPost,
   archived,
+  tldr,
 } = post.data;
 
 const { Content, headings } = await render(post);
@@ -200,6 +201,18 @@ const relatedPosts = posts
         <p class="mt-6 border-y border-border py-4 text-base leading-relaxed text-foreground/75 sm:text-lg">
           {description}
         </p>
+      )
+    }
+    {
+      tldr && (
+        <aside class="mt-6 border border-border p-4">
+          <p class="text-xs font-semibold tracking-widest text-foreground/60 uppercase">
+            {t("post.tldr", postLang)}
+          </p>
+          <p class="mt-2 text-sm leading-relaxed text-foreground sm:text-base">
+            {tldr}
+          </p>
+        </aside>
       )
     }
     <article

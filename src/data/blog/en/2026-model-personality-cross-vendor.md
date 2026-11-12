@@ -13,6 +13,7 @@ tags:
   - model-comparison
   - opinion
 description: 'With benchmark gaps narrowing, daily experience with AI models comes down to temperament. A breakdown of flagship models across transparency, dialogue stability, and conversational logic to help you find a partner you can actually work with long term.'
+tldr: 'The benchmark gaps are small now. What you feel every day is the model temperament. Gemini performs its reasoning out loud, Claude went through a very chatty phase, and Codex stays closer to a coworker with no mood. Try each for a week and keep the one you can stand working with every day.'
 ---
 
 When people debate which AI model subscription to pay for, the first instinct is usually to look at benchmark scores. But over the past year, those gaps have shrunk dramatically. What actually shapes your day-to-day experience is something much more subjective: temperament.
