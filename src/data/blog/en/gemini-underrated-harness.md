@@ -53,6 +53,10 @@ My recommended "Big Three" golden setup:
 - $20 GPT: Used as described above
 - $20 Gemini: I take advantage of their 5TB cloud storage, 200CU monthly Colab credits to run open-source qwen 3.8 27b, bottomless Flash 3.8 for all multimodal tasks, and Argon the master writer for prose
 
+Let me share a few more details from actual use to show just how good a deal this $20 Gemini plan really is. Google, playing the generous philanthropist, hands out 200 CU in Colab every month with the AI plan. Those credits last three months, so as long as you stay subscribed, they keep sending you 200 CU a month and you just have to use each batch within three months before the rolling expiration hits. Last month I spun up an A100 on there to run a local model, and transcribing hundreds of hours of audio only took 150 CU. I couldn't even burn through it all, and next thing I knew another 200 CU landed in my account... damn. On top of that, the $20 Google AI Pro Plan comes with 1,000 Google Flow credits. That lets you generate 330 seconds of video with Omini 1.2 Flash, which launched in November 2026 as the #1 video generation model at the time. In API terms, that alone is worth over $20. Pichai, you really are a saint, a saint, an absolute saint.
+
+As for using AGY and running multimodal tasks like I mentioned earlier, there are a few tricks to how you manage quotas and make calls. Browser quota and AGY quota are completely separate (quick side jab at GPT: you guys are seriously brain-dead), so for pure multimodal work, I have it open a browser and use the web version of Gemini. Meanwhile, `agy -p` works just fine—I've been running it for ages without issue. You just have to understand how AGY's risk control works: they detect system prompts with signatures from other harnesses, so piping it straight into another harness via a reverse proxy will get your account nuked. But if you just call `agy -p "prompt"` from a plain script, I've been doing that for over two months—every day, maxing out the weekly quota every week—and haven't had a single problem.
+
 All that for $140 a month. Life is good.
 
 ## Appendix: Notes on Terms and Setup
@@ -71,4 +75,9 @@ Added non-original sentences (faithfulness disclosure):
 6. "- **Harness**: The operational shell and execution environment wrapping the model (such as web interfaces or CLI tools)." — Type: Framing (technical terms moved to appendix)
 7. "- **CC and AGY**: CC refers to Anthropic's Claude Code; AGY refers to Google's terminal CLI tool." — Type: Framing (internal shorthands clarified in appendix)
 8. "- **Hook and Monitor**: Hooks are safety rules that intercept and inspect actions before or after an agent executes them; monitors track agent behavior in real time to prevent hallucinations or privilege escalation." — Type: Framing (technical safeguards explained in appendix)
+
+2026-11-12 併入：
+- 「這 20 刀的 Gemini 訂閱方案到底有多划算，我再多講幾個實際用下來的細節。」— 類型：銜接
+- 「至於前面提到用 AGY 跟跑多模態任務，額度分配和調用方式也有眉角。」— 類型：銜接
+將 Colab 200CU 滾動效期與實測消耗、Google Flow 1000 點與 Omini 1.2 Flash 額度、瀏覽器與 AGY 額度分離及 `agy -p` 腳本調用避開風控的說明，併入「每月 140 美元的御三家配置」章節中 20 刀 Gemini 清單之後、全文結論之前。
 -->

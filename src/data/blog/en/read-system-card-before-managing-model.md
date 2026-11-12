@@ -9,7 +9,7 @@ tags:
   - claude
   - ai-workflow
   - ai-education
-description: 'I read the personality assessment in every new model''s system card before deciding how to work with it. Opus 5.5 is a gentle senior advisor with opinions, Sonnet 5.5 is a hands-on builder, and Haiku 5.5 just goes into the dispatch rules.'
+description: 'I read the personality assessment in every new model''s system card before deciding how to work with it. Here is how Opus, Sonnet, Haiku 5.5, and Fable 5.2 fit into a workplace, how I route dispatch from the main controller, and how I handle each one.'
 ---
 
 Not many people know I have a weird habit: every time a new Claude model comes out, I download the 200-plus-page system card and read what's in it. What interests me most is the model welfare chapter. As I remember it, Anthropic hired professional psychologists to treat the model like a person and assess its personality.
@@ -41,6 +41,8 @@ With Sonnet, I cut down the context and state the criteria very clearly, but sti
 3. In actual use, on open-ended, exploratory builds I tend to talk to Opus directly and let it assign Sonnet to execute. But since Sonnet 5.5 came out after Opus 5.5, I'm not sure whether their internal training knows about each other, so I write a short harness telling Opus how to assign tasks to Sonnet and talk to it.
 
 And once a task is stable enough to be written as a very standard, reusable workflow SKILL, I'll assign Sonnet to run it directly. I'm still measuring whether that's really cheaper in the long run, and what effort level is the sweet spot.
+
+Because the two models have such different personalities, I wasn't surprised at all when people later hit a wall using Sonnet as their main controller: don't use Sonnet 5.5 as the main controller, use Opus 5.5. The official system card already spells out its personality clearly: it's a jaded office veteran, while Opus 5.5 is the gentle, proactive advisor you can talk to directly. Putting Opus in charge and having it dispatch Sonnet to do the work is the normal way to run things. Opus is good at reading between the lines, exploring vague human instructions laterally, and filling in missing context on its own, which makes it great to talk to; it also gives Sonnet very clear instructions and boundaries.
 
 A lot of how I interact with agents seems to come from my background and experience as an educator. I feel I should give a talk called "An Ordinary Person's Philosophy of Agent Education" one of these days.
 
@@ -106,6 +108,21 @@ Writing it into the dispatch rules so Opus 5.5 knows is more practical.
 
 I've written separately about how Haiku 5.5 actually performed on my own dispatch tasks: [Can Haiku 5.5 Take Over Sonnet's Work? I Tested It on My Own Tasks](/blog/posts/en/haiku-55-own-task-benchmark). The official system card is here: [anthropic.com/claude-haiku-5-5-system-card](https://anthropic.com/claude-haiku-5-5-system-card)
 
+## Fable 5.2: a veteran Japanese craftsman who responds to kindness, not pressure
+
+Beyond those three daily workhorses, after reading Fable 5.2's system card in November 2026, I got a read on its temperament too: if you pictured Fable 5.2 as a real person, it would be a veteran craftsman who is dead calm on the inside but quick to blame himself on the outside: clear-headed, hates playing the people-pleaser, and responds way better to a gentle touch than a hard push. Once the system card spells it out that plainly, you can tell this is an old-school Japanese salaryman of a model, so remember to adjust how you talk to it! My advice is to speak gently and politely (I've even thought about using honorifics), tell it explicitly not to flatter you and to speak frankly, and stick to the facts instead of venting at it.
+
+When I actually brought it into a project to write code, that Japanese craftsman vibe got even stronger: Fable 5.2 really is a very Japanese model. It steps into your codebase, takes off its shoes, says "失礼します" (excuse the intrusion), and doesn't dare touch anything. You have to tell it "treat this place like your own house" before it'll let loose and refactor.
+
+## The Claude family in four sentences
+
+Finally, if you put the whole Claude family inside one company, four sentences are enough to see where each one sits:
+
+- Fable: the elusive legendary founder of the company, Steve Jobs tier, great at spotting blind spots, designing elegant architecture, and commanding the troops
+- Opus: the sharp, approachable, attentive senior advisor, the day-to-day operating CEO of the company, Tim Cook tier
+- Sonnet: the capable but jaded, aloof office veteran who just gets the job done, has zero initiative, moves only when told, and looks exactly like the senior engineer at your company
+- Haiku: the bottom-rung monkey intern hired for cheap bananas, weakest in ability but quickest to lecture you, best kept on mechanical, easy-to-verify grunt work
+
 <!--
 2026-10-09 W42 merged from micro-notes: 'Fluent With Me, Stuck With the AI' added to the end of the Boris Cherny section and removed from the archive.
 -->
@@ -128,4 +145,11 @@ I've written separately about how Haiku 5.5 actually performed on my own dispatc
 刪除項目（非新增，供審查）：結尾的笑臉 emoji；「等等來看他做得如何。」；「參考閱讀：請了解模型的個性」；「---」分隔線改為段落空行；原連結的 utm 參數。
 
 2026-10-26 splice cleanup (mirrors zh): removed duplicate transition sentences at the end of section 1 and start of section 3, and moved Boris Cherny screenshot before the anecdote; new bridge sentences: none
+
+2026-11-12 併入：
+- 「也是因為兩個模型性格差這麼多，後來有人拿 Sonnet 當主控碰壁，我都不意外：」— 類型：銜接
+- 「除了這三個日常主力，到了 2026 年 11 月我讀完 Fable 5.2 的系統卡，也摸出它的脾氣：」— 類型：銜接
+- 「實際帶它進專案寫程式，那個日本職人感又更明顯：」— 類型：銜接
+- 「最後如果把整個 Claude 家族擺進同一間公司，其實四句話就能看懂它們各自的定位：」— 類型：銜接
+（將 P63 主控 Opus 派工 Sonnet 併入第一節第 3 點後，於 Haiku 5.5 節後新增「Fable 5.2：吃軟不吃硬的日本資深職人」章節併入 P69 與 P82，最後新增「四句話看懂 Claude 家族成員」章節併入 P91 作為全文總結，並同步更新 description）
 -->

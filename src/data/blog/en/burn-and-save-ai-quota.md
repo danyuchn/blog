@@ -9,7 +9,7 @@ tags:
   - claude-code
   - token-optimization
   - ai-workflow
-description: 'I found seven separate AI quota pools. I burned the ones about to expire on work that can check itself, and spent the surplus on things that will save quota later. Includes the inventory, my allocation rules, results, and prompts you can copy.'
+description: 'I found seven separate AI quota pools. I burned the ones about to expire on work that can check itself, and spent the surplus on things that will save quota later, then wired up a routing script and switched to dispatching by remaining quota before setting rules from the conversation logs. Includes the inventory, my allocation rules, results, and prompts you can copy.'
 ---
 
 Over the past two weeks I did two things that pull in opposite directions.
@@ -153,6 +153,31 @@ Even after this round, some is left, and a few pools are about to expire:
 
 That said, I won't use quota just for the sake of using it up. Rushing to max out usage before a reset is mostly anxiety that subscription pricing is designed to create. I wrote about this in [Which Claude Code plan to pick](/blog/posts/en/claude-code-plan-picker). If there's no work that qualifies, I let it expire.
 
+## Wiring a quota dashboard to a routing script, then dropping pre-run benchmarks for quota-first dispatch
+
+By November 2026, I had reworked this whole quota and dispatch setup again.
+
+Inside the terminal tool I use to run multiple AI tabs, I threw together a very simple quota dashboard. I have no plans to open-source it because it really is that simple. Show a screenshot of it to an AI and it can build you one in five minutes.
+
+The dashboard is just the display up front; the part that actually matters is the routing script wired up behind it. Whenever the main AI in charge hands off a task, it checks live quota balances first, combines that with what my earlier benchmarks showed each model is good or bad at, and decides who should take the job and how high to set the thinking effort.
+
+That's why I still don't get why some people talk down the terminal to hype up the desktop app. The terminal lets you customize anything, keeps your hands on the keyboard, uses fewer resources, and gets every new feature in the CLI first while the desktop app catches up later. Sure, the desktop app looks nice and is easy to use, but there's no need to trash one just to praise the other.
+
+Even so, after running this benchmark-driven routing for a few days, I decided to scrap it.
+
+My original way of splitting work across models was to turn my own tasks into a benchmark. Every time a model updated, I'd test it across all its effort settings and write my dispatch rules based on quota used, time taken, and output quality. Before long I ran into two problems:
+
+1. Models update so fast now that re-testing every time just isn't worth the cost.
+2. Quota across the different providers still wasn't getting fully used before each reset.
+
+That led to a new idea:
+
+1. Drop the benchmarks and stop pre-assigning detailed roles. Dispatch purely by quota instead: whichever pool has balance left and is closest to resetting gets the job first. The main AI in charge just reviews everything that comes back. That way every pool actually gets used.
+2. Because the resets stagger across the week, as long as I'm running enough work, every model gets plenty of turns and builds up an even sample.
+3. After a week, I go straight back to that week's conversation logs and measure each model's success rate, quota used, and time spent on the jobs it was handed. That shows clearly who fits which task, and I write the dispatch rules from there. Any model that didn't get enough runs becomes the priority to test the following week.
+
+That's the kind of idea only Anthropic's top-tier Fable model could come up with, right? (Bragging, obviously.) Human creativity still wins.
+
 ## If you want to try it: prompts you can use
 
 I did every step above by talking to Claude Code normally, without writing any special code. These are the lines I think matter most. Adapt them to your own situation and paste them in.
@@ -187,4 +212,11 @@ That's it.
 
 <!--
 2026-10-26 splice cleanup (mirrors zh): removed "Addendum: auto-compact at 400k" heading and moved the 11-day metrics section under "Making the AI read less every time"; new bridge sentences: "To run the numbers for the 11 days before and after: I have Opus 5.5 set to auto-compact at 400k, and here is how the 11 days before and after compared:"
+
+2026-11-12 併入：
+- 「到了 2026 年 11 月，這套額度分工跟派工方式又改了一輪。」— 類型：銜接
+- 「我在自己用來開多個 AI 分頁的終端機工具裡」「負責指揮的主要 AI」「思考強度要開多少」— 類型：定義（將 Herdr、主線、effort 改為白話）
+- 「不過這套靠 benchmark 決定分工的做法，跑沒幾天我就決定改掉了。」— 類型：銜接
+- 「這種靈感是 Anthropic 最頂級的 Fable 模型才會想出來的吧！（自誇）」— 類型：定義（補充 Fable 為 Anthropic 最頂級模型）
+在收尾提示詞章節前新增「額度儀表板接上路由腳本，再從預跑 benchmark 改成按額度派工」H2 章節，依時序串接 P13 額度儀表板與路由腳本、P118 捨棄預跑 benchmark 改按剩餘額度派工與事後統計紀錄。
 -->
