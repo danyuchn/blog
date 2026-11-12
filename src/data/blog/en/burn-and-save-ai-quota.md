@@ -153,7 +153,9 @@ Some payoffs take time to show up. I scheduled review check-ins for October 29, 
 
 By November 2026, my approach to task delegation and quota allocation went through another evolution.
 
-Inside the terminal tool I use to manage multiple AI tabs, I put together a simple quota dashboard. I am not open-sourcing it because it is dead simple—show the screenshot to any model and it can build it in five minutes.
+Inside the terminal tool I use to manage multiple AI tabs, I put together a simple quota dashboard. I am not open-sourcing it because it is dead simple—show the screenshot below to any model and it can build it in five minutes.
+
+[![Terminal AI quota dashboard: 5-hour and 7-day quotas for Claude, Codex, and Gemini, 7-day quota for Argon, and Grok cycles, each displaying percentage used, time until reset, and reset date](/blog/assets/posts/burn-and-save-ai-quota/quota-dashboard.jpg)](/blog/assets/posts/burn-and-save-ai-quota/quota-dashboard.jpg)
 
 But the visual dashboard is just the front end; what matters is the routing script plugged into it. When delegating tasks, the primary orchestrating AI checks real-time quota balances alongside benchmarked model strengths to decide who gets the job and how much reasoning effort to dial in.
 
@@ -210,11 +212,11 @@ When running this system, keep several practical boundaries in mind:
 
 First, managing leftover balances:
 
-- **Console promo:** Three scheduled jobs consume roughly $40 a month, leaving about $60 to expire each cycle. Before November 9, I check the balance and burn the remainder on batch jobs using the Batch API.
-- **Colab CUs:** Around 135–185 CUs expire by November 18. Following my priority queue, I first re-transcribe older recordings using the newly trained speech model, then offload synthetic queries for retrieval models onto Colab.
-- **Cloud credits:** Expiring November 5, this is a one-time pool, so I won't build permanent automations around it. When local quota runs tight, I use it for large batch jobs that don't need local credentials.
-- **Codex:** Because it resets unpredictably, I don't micromanage the balance—I just use it whenever available. The hard rule is that outputs must be verifiable by tests or reviewed by Claude.
-- **Local idle window:** The 02:15–05:45 early morning block runs rough transcription processing, document classification, and de-identification—resumable batches that will get a second human review later anyway.
+- **One-time credits:** Use them once without building recurring automations around them; when local quota runs tight, use them for large batches that don't need local credentials.
+- **Monthly API promos:** Pick batch workloads that can run through the Batch API to absorb the compute.
+- **Rolling expiring compute units:** Follow a prioritized queue to run heavy batches like model training, re-transcribing older recordings, or synthetic queries.
+- **Subscriptions that reset unpredictably:** Use them whenever available without worrying about remaining balance, with the hard rule that outputs must be verifiable by tests or reviewed by Claude.
+- **Local overnight idle window:** Run rough transcription processing, document classification, and de-identification—resumable batches that will get a second human review later anyway.
 
 Second, avoid subscription anxiety. I never spend compute just to hit zero. Rushing to max out usage before a reset is usually a trap built into subscription pricing, which I covered in [how to pick a subscription](/blog/posts/en/claude-code-plan-picker). If no tasks qualify under the decision filters, let the quota expire.
 
@@ -244,4 +246,6 @@ Details regarding the internal tools and technical environment referenced in thi
 
 2026-11-12 整篇重寫：
 重構全文敘事主軸，將零散拼貼的貼文融為一體，以額度盤點、夜間燃燒、結構性省額度、動態派工演進貫穿，並將技術細節抽離至附錄。
+
+2026-11-12 修正：額度提醒改成通用原則；補上儀表板截圖
 -->
