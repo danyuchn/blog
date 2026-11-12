@@ -137,7 +137,10 @@ def main():
                     else:
                         referrers.setdefault(absu, set()).add(final)
                         if absu not in results:
-                            results[absu] = resolve(absu, "HEAD")
+                            res = resolve(absu, "HEAD")
+                            if res[0] in (403, 405, 501):  # servers that refuse HEAD
+                                res = resolve(absu, "GET")
+                            results[absu] = res
         print(f"crawled {len(results)} urls, {len(pages)} html pages", file=sys.stderr)
 
     broken, loops, chains = [], [], []
