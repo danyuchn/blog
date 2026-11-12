@@ -9,7 +9,7 @@ import LinkButton from "./LinkButton.astro";
 import LangSwitcher from "./LangSwitcher.astro";
 import { SITE } from "@/config";
 import { t } from "@/i18n/ui";
-import { langFromPathname } from "@/utils/siteLang";
+import { homePath, langFromPathname, postsPath, tagsPath } from "@/utils/siteLang";
 import { withBase } from "@/utils/withBase";
 
 const { pathname } = Astro.url;
@@ -17,17 +17,24 @@ const lang = langFromPathname(pathname);
 const brandUrl =
   "https://www.agentcrew.cc/?utm_source=blog&utm_medium=header&utm_campaign=brand";
 
-// Remove trailing slash from current pathname if exists
 const currentPath =
   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+const rest = currentPath.replace(/^\/blog(?=\/|$)/, "") || "/";
 
 const isActive = (path: string) => {
-  const basePath = withBase(path);
-  const currentPathArray = currentPath.split("/").filter(p => p.trim());
-  const basePathArray = basePath.split("/").filter(p => p.trim());
-
-  return currentPath === basePath || (currentPathArray.length > 1 && currentPathArray[1] === basePathArray[1]);
+  const target = withBase(path).replace(/\/$/, "");
+  return currentPath === target || currentPath.startsWith(`${target}/`);
 };
+const postsActive =
+  rest === "/posts" ||
+  rest.startsWith("/posts/") ||
+  rest === "/en/posts" ||
+  rest.startsWith("/en/posts/");
+const tagsActive =
+  rest === "/tags" ||
+  rest.startsWith("/tags/") ||
+  rest === "/en/tags" ||
+  rest.startsWith("/en/tags/");
 ---
 
 <a
@@ -51,7 +58,7 @@ const isActive = (path: string) => {
     ]}
   >
     <a
-      href={withBase("/")}
+      href={withBase(homePath(lang))}
       class="min-w-0 flex-1 truncate py-1 font-display text-sm leading-tight font-black sm:flex-none sm:text-2xl sm:leading-none"
     >
       {SITE.title}
@@ -86,12 +93,12 @@ const isActive = (path: string) => {
         ]}
       >
         <li class="col-span-2">
-          <a href={withBase("/posts")} class:list={{ "active-nav": isActive("/posts") }}>
+          <a href={withBase(postsPath(lang))} class:list={{ "active-nav": postsActive }}>
             Posts
           </a>
         </li>
         <li class="col-span-2">
-          <a href={withBase("/tags")} class:list={{ "active-nav": isActive("/tags") }}>
+          <a href={withBase(tagsPath(lang))} class:list={{ "active-nav": tagsActive }}>
             Tags
           </a>
         </li>

@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
+import { tagPagePath } from "@/utils/siteLang";
 import { withBase } from "@/utils/withBase";
 import { getPath } from "@/utils/getPath";
 import { displayTag } from "@/i18n/tags";
@@ -46,7 +47,7 @@ const firstTag = tags && tags.length > 0 ? tags[0] : undefined;
     {
       firstTag && (
         <a
-          href={withBase(`/tags/${slugifyStr(firstTag)}/`)}
+          href={withBase(tagPagePath(lang, slugifyStr(firstTag)))}
           class="tracking-wide hover:text-accent"
         >
           {displayTag(slugifyStr(firstTag), lang)}

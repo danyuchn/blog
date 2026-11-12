@@ -1,54 +1,24 @@
 ---
-import { getCollection } from "astro:content";
-import type { GetStaticPathsOptions } from "astro";
-import Main from "@/layouts/Main.astro";
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
-import Pagination from "@/components/Pagination.astro";
-import getUniqueTags from "@/utils/getUniqueTags";
-import getPostsByTag from "@/utils/getPostsByTag";
-import { displayTag } from "@/i18n/tags";
-import { langFromPathname } from "@/utils/siteLang";
-import { SITE } from "@/config";
+import TagPosts from "@/components/TagPosts.astro";
+import { tagListPaths } from "@/utils/listRoutes";
 
-export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = await getCollection("blog");
-  const tags = getUniqueTags(posts);
-
-  return tags.flatMap(({ tag, tagName }) => {
-    const tagPosts = getPostsByTag(posts, tag);
-
-    return paginate(tagPosts, {
-      params: { tag },
-      props: { tagName },
-      pageSize: 100,
-    });
-  });
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: Parameters<typeof tagListPaths>[0];
+}) {
+  return tagListPaths(paginate, "zh");
 }
 
-const params = Astro.params;
-const { tag } = params;
-const { page, tagName } = Astro.props;
-const pageLang = langFromPathname(Astro.url.pathname);
-const label = displayTag(tag ?? tagName, pageLang);
+const { page, tagName, otherCount, otherPageCount } = Astro.props;
+const { tag } = Astro.params;
 ---
 
-<Layout title={`Tag: ${label} | ${SITE.title}`}>
-  <Header />
-  <Main
-    pageTitle={[`Tag:`, label]}
-    titleTransition={tag}
-    pageDesc={`All the articles with the tag "${label}".`}
-  >
-    <h1 slot="title" transition:name={tag}>{`Tag:${label}`}</h1>
-    <ul>
-      {page.data.map(data => <Card {...data} />)}
-    </ul>
-  </Main>
-
-  <Pagination {page} />
-
-  <Footer noMarginTop={page.lastPage > 1} />
-</Layout>
+<TagPosts
+  lang="zh"
+  tag={tag ?? ""}
+  tagName={tagName}
+  page={page}
+  otherCount={otherCount}
+  otherPageCount={otherPageCount}
+/>

@@ -1,0 +1,45 @@
+---
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import Card from "@/components/Card.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Pagination from "@/components/Pagination.astro";
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
+import { SITE } from "@/config";
+import { t } from "@/i18n/ui";
+import type { Lang } from "@/utils/i18n";
+import { hreflangAlternates, postsPath } from "@/utils/siteLang";
+import { withBase } from "@/utils/withBase";
+
+type Props = {
+  lang: Lang;
+  page: Page<CollectionEntry<"blog">>;
+  otherPageCount: number;
+};
+
+const { lang, page, otherPageCount } = Astro.props;
+const other: Lang = lang === "zh" ? "en" : "zh";
+const otherPage = Math.min(page.currentPage, Math.max(1, otherPageCount));
+const zhPage = lang === "zh" ? page.currentPage : otherPage;
+const enPage = lang === "en" ? page.currentPage : otherPage;
+---
+
+<Layout
+  title={`${t("posts.title", lang)} | ${SITE.title}`}
+  description={t("posts.desc", lang)}
+  language={lang}
+  siteLang={lang}
+  langAlt={withBase(postsPath(other, otherPage))}
+  alternates={hreflangAlternates(postsPath("zh", zhPage), postsPath("en", enPage))}
+>
+  <Header />
+  <Main pageTitle={t("posts.title", lang)} pageDesc={t("posts.desc", lang)}>
+    <ul>
+      {page.data.map(data => <Card {...data} />)}
+    </ul>
+  </Main>
+  <Pagination {page} />
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>

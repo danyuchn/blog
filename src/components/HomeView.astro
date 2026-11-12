@@ -1,0 +1,120 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import StartHere from "@/components/StartHere.astro";
+import Card from "@/components/Card.astro";
+import GridCard from "@/components/GridCard.astro";
+import { getListedPosts } from "@/utils/getSortedPosts";
+import { filterByLang, type Lang } from "@/utils/i18n";
+import { t } from "@/i18n/ui";
+import { homePath, hreflangAlternates, postsPath } from "@/utils/siteLang";
+import { withBase } from "@/utils/withBase";
+
+type Props = { lang: Lang };
+
+const { lang } = Astro.props;
+const other: Lang = lang === "zh" ? "en" : "zh";
+const RECENT_COUNT = 6;
+
+const posts = await getCollection("blog");
+const sortedPosts = filterByLang(getListedPosts(posts), lang);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const recentPosts = sortedPosts
+  .filter(({ data }) => !data.featured)
+  .slice(0, RECENT_COUNT);
+---
+
+<Layout
+  language={lang}
+  siteLang={lang}
+  langAlt={withBase(homePath(other))}
+  alternates={hreflangAlternates(homePath("zh"), homePath("en"))}
+>
+  <Header />
+  <main id="main-content" data-layout="index" class="app-layout">
+    <section id="hero" class="pt-16 pb-6">
+      <h1
+        class="font-display text-4xl leading-tight font-black tracking-tight text-foreground sm:text-6xl"
+      >
+        {t("home.hello", lang)}
+      </h1>
+      <div class="mt-6 max-w-3xl">
+        <p class="text-base leading-relaxed text-foreground/80">
+          {t("home.credibility", lang)}
+        </p>
+        <ul class="mt-4 grid grid-cols-3 gap-2">
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact1", lang)}
+          </li>
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact2", lang)}
+          </li>
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact3", lang)}
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <StartHere lang={lang} />
+
+    {
+      featuredPosts.length > 0 && (
+        <section
+          id="featured"
+          class:list={[
+            "pt-8 pb-8",
+            { "border-b border-border": recentPosts.length > 0 },
+          ]}
+        >
+          <p class="mb-6 text-sm font-semibold tracking-widest text-accent uppercase">
+            {t("home.kickerFeatured", lang)}
+          </p>
+          <ul class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredPosts.map(post => (
+              <GridCard {...post} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts" class="pt-10 pb-4">
+          <p class="mb-2 text-sm font-semibold tracking-widest text-foreground/50 uppercase">
+            {t("home.kickerRecent", lang)}
+          </p>
+          <ul>
+            {recentPosts.map(post => (
+              <Card variant="h3" {...post} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="py-8">
+      <LinkButton
+        href={withBase(postsPath(lang))}
+        class="text-sm text-foreground/50 transition-colors hover:text-accent"
+      >
+        {t("home.allPosts", lang)} →
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset?.layout;
+    if (indexLayout) {
+      sessionStorage.setItem("backUrl", window.location.pathname);
+    }
+  });
+</script>

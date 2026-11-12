@@ -18,6 +18,8 @@ const ui: Record<string, Record<Lang, string>> = {
     zh: "AgentCrew 課程與一對一陪跑",
   },
   "home.fact3": { en: "A weekly newsletter", zh: "每週電子報" },
+  "home.kickerFeatured": { en: "Featured", zh: "精選" },
+  "home.kickerRecent": { en: "Recent writing", zh: "最近在寫" },
   "home.start": { en: "Start here", zh: "從這裡開始" },
   "home.startBack": { en: "← Back to home", zh: "← 回首頁" },
   "home.featured": { en: "Featured", zh: "精選文章" },
@@ -32,6 +34,11 @@ const ui: Record<string, Record<Lang, string>> = {
   "tags.desc": {
     en: "All the tags used in posts.",
     zh: "所有文章使用的標籤。",
+  },
+  "tags.tagLabel": { en: "Tag:", zh: "標籤：" },
+  "tags.tagDesc": {
+    en: 'All the articles with the tag "{tag}".',
+    zh: "標籤為「{tag}」的文章。",
   },
   "post.prev": { en: "Previous Post", zh: "上一篇" },
   "post.next": { en: "Next Post", zh: "下一篇" },

@@ -1,0 +1,24 @@
+---
+import TagPosts from "@/components/TagPosts.astro";
+import { tagListPaths } from "@/utils/listRoutes";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: Parameters<typeof tagListPaths>[0];
+}) {
+  return tagListPaths(paginate, "en");
+}
+
+const { page, tagName, otherCount, otherPageCount } = Astro.props;
+const { tag } = Astro.params;
+---
+
+<TagPosts
+  lang="en"
+  tag={tag ?? ""}
+  tagName={tagName}
+  page={page}
+  otherCount={otherCount}
+  otherPageCount={otherPageCount}
+/>

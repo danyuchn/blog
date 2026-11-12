@@ -19,6 +19,10 @@ type Props = {
   language?: "en" | "zh";
   /** Absolute hreflang alternates, e.g. zh-Hant / en / x-default */
   alternates?: { hreflang: string; href: string }[];
+  /** When set, the language switcher navigates to langAlt instead of toggling. */
+  siteLang?: "en" | "zh";
+  /** Root-relative counterpart URL, including the /blog base. */
+  langAlt?: string;
 };
 
 const {
@@ -33,6 +37,8 @@ const {
   scrollSmooth = false,
   language,
   alternates = [],
+  siteLang,
+  langAlt,
 } = Astro.props;
 
 // The /blog proxy serves both "/x" and "/x/" with 200; always point canonical
@@ -72,6 +78,8 @@ const structuredData = {
   dir={SITE.dir}
   lang={htmlLang}
   class={`${scrollSmooth && "scroll-smooth"}`}
+  data-site-lang={siteLang}
+  data-lang-alt={langAlt}
 >
   <head>
     <meta charset="UTF-8" />

@@ -1,6 +1,6 @@
 ---
-// Language switcher: EN / 中文 toggle
-// Stores preference in localStorage, filters [data-lang] elements on list pages
+// On language-split pages (data-site-lang), navigate to the counterpart URL.
+// Elsewhere, keep the localStorage toggle, and follow a post translation when one exists.
 ---
 
 <button
@@ -17,16 +17,31 @@
     const label = document.getElementById("lang-label");
     if (!btn || !label) return;
 
+    const siteLang = document.documentElement.dataset.siteLang;
+    const langAlt = document.documentElement.dataset.langAlt;
+
+    if (siteLang === "zh" || siteLang === "en") {
+      localStorage.setItem("lang", siteLang);
+      label.textContent = siteLang === "zh" ? "EN" : "中文";
+      filterByLang(siteLang);
+      btn.onclick = () => {
+        if (!langAlt) return;
+        localStorage.setItem("lang", siteLang === "zh" ? "en" : "zh");
+        window.location.href = langAlt;
+      };
+      return;
+    }
+
     const current = localStorage.getItem("lang") || "zh";
     label.textContent = current === "zh" ? "EN" : "中文";
+    filterByLang(current);
 
-    btn.addEventListener("click", () => {
+    btn.onclick = () => {
       const lang = localStorage.getItem("lang") || "zh";
       const next = lang === "zh" ? "en" : "zh";
       localStorage.setItem("lang", next);
       window.dispatchEvent(new CustomEvent("lang-change", { detail: next }));
 
-      // On post pages, navigate to translation if available
       const mainEl = document.getElementById("main-content");
       const translationUrl = mainEl?.dataset.translationUrl;
       if (translationUrl) {
@@ -36,10 +51,7 @@
 
       label.textContent = next === "zh" ? "EN" : "中文";
       filterByLang(next);
-    });
-
-    // Apply filter on load
-    filterByLang(current);
+    };
   }
 
   function filterByLang(lang: string) {
@@ -47,9 +59,9 @@
       el.style.display = el.dataset.lang === lang ? "" : "none";
     });
 
-    // Also filter tag items that have data-lang
     document.querySelectorAll<HTMLElement>("[data-tag-lang]").forEach(el => {
-      el.style.display = el.dataset.tagLang === lang || el.dataset.tagLang === "both" ? "" : "none";
+      el.style.display =
+        el.dataset.tagLang === lang || el.dataset.tagLang === "both" ? "" : "none";
     });
   }
 

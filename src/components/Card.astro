@@ -4,6 +4,7 @@ import { slugifyStr } from "@/utils/slugify";
 import { getPath } from "@/utils/getPath";
 import { displayTag } from "@/i18n/tags";
 import { getLangFromPost } from "@/utils/i18n";
+import { tagPagePath } from "@/utils/siteLang";
 import { withBase } from "@/utils/withBase";
 import Datetime from "./Datetime.astro";
 
@@ -36,7 +37,7 @@ const isFeatured = featured ?? false;
         <div class="flex flex-wrap gap-x-2 gap-y-1">
           {tags.map(tag => (
             <a
-              href={withBase(`/tags/${slugifyStr(tag)}/`)}
+              href={withBase(tagPagePath(lang, slugifyStr(tag)))}
               class="text-xs tracking-wide hover:text-accent"
             >
               {displayTag(slugifyStr(tag), lang)}

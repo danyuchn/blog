@@ -1,0 +1,16 @@
+---
+import PostList from "@/components/PostList.astro";
+import { postListPaths } from "@/utils/listRoutes";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: Parameters<typeof postListPaths>[0];
+}) {
+  return postListPaths(paginate, "en");
+}
+
+const { page, otherPageCount } = Astro.props;
+---
+
+<PostList lang="en" page={page} otherPageCount={otherPageCount} />

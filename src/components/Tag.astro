@@ -1,6 +1,6 @@
 ---
 import { displayTag } from "@/i18n/tags";
-import { langFromPathname } from "@/utils/siteLang";
+import { langFromPathname, tagPagePath } from "@/utils/siteLang";
 import { withBase } from "@/utils/withBase";
 
 type Props = {
@@ -10,12 +10,13 @@ type Props = {
 };
 
 const { tag, size = "lg" } = Astro.props;
-const label = displayTag(tag, langFromPathname(Astro.url.pathname));
+const lang = langFromPathname(Astro.url.pathname);
+const label = displayTag(tag, lang);
 ---
 
 <li>
   <a
-    href={withBase(`/tags/${tag}/`)}
+    href={withBase(tagPagePath(lang, tag))}
     transition:name={tag}
     class:list={[
       "inline-block border border-foreground/40 tracking-wide",

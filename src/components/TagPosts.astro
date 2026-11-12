@@ -1,0 +1,58 @@
+---
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import Card from "@/components/Card.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Pagination from "@/components/Pagination.astro";
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
+import { displayTag } from "@/i18n/tags";
+import { t } from "@/i18n/ui";
+import { SITE } from "@/config";
+import type { Lang } from "@/utils/i18n";
+import { hreflangAlternates, tagPagePath, tagsPath } from "@/utils/siteLang";
+import { withBase } from "@/utils/withBase";
+
+type Props = {
+  lang: Lang;
+  tag: string;
+  tagName: string;
+  page: Page<CollectionEntry<"blog">>;
+  otherCount: number;
+  otherPageCount: number;
+};
+
+const { lang, tag, tagName, page, otherCount, otherPageCount } = Astro.props;
+const other: Lang = lang === "zh" ? "en" : "zh";
+const label = displayTag(tag || tagName, lang);
+const otherPage = Math.min(page.currentPage, Math.max(1, otherPageCount));
+const zhPage = lang === "zh" ? page.currentPage : otherPage;
+const enPage = lang === "en" ? page.currentPage : otherPage;
+const zhHref = other === "zh" && otherCount === 0 ? tagsPath("zh") : tagPagePath("zh", tag, zhPage);
+const enHref = other === "en" && otherCount === 0 ? tagsPath("en") : tagPagePath("en", tag, enPage);
+const langAltPath =
+  otherCount === 0 ? tagsPath(other) : tagPagePath(other, tag, otherPage);
+---
+
+<Layout
+  title={`${t("tags.tagLabel", lang)} ${label} | ${SITE.title}`}
+  description={t("tags.tagDesc", lang).replace("{tag}", label)}
+  language={lang}
+  siteLang={lang}
+  langAlt={withBase(langAltPath)}
+  alternates={hreflangAlternates(zhHref, enHref)}
+>
+  <Header />
+  <Main
+    pageTitle={[`${t("tags.tagLabel", lang)}`, label]}
+    titleTransition={`${lang}-${tag}`}
+    pageDesc={t("tags.tagDesc", lang).replace("{tag}", label)}
+  >
+    <ul>
+      {page.data.map(data => <Card {...data} />)}
+    </ul>
+  </Main>
+  <Pagination {page} />
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>
