@@ -153,6 +153,7 @@ const relatedPosts = posts
     class:list={["app-layout pb-12", { "mt-8": !SITE.showBackButton }]}
     data-pagefind-body={archived ? undefined : ""}
     data-translation-url={translationUrl}
+    data-post-slug={post.id}
   >
     {
       archived && (
@@ -337,6 +338,47 @@ const relatedPosts = posts
   </main>
   <Footer />
 </Layout>
+
+<script>
+  /* GA4 custom events (gtag is loaded in Layout.astro). One delegated listener
+     on document, registered once, so it survives ClientRouter navigations. */
+  type Gtag = (command: "event", name: string, params: object) => void;
+
+  function sendEvent(name: string, params: Record<string, string>) {
+    const gtag = (window as unknown as { gtag?: Gtag }).gtag;
+    if (typeof gtag !== "function") return;
+    gtag("event", name, params);
+  }
+
+  document.addEventListener("click", e => {
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+    const postSlug =
+      document.querySelector<HTMLElement>("[data-post-slug]")?.dataset
+        .postSlug ?? "";
+
+    const copyButton = target.closest("button.copy-code");
+    if (copyButton) {
+      sendEvent("prompt_copy", { post_slug: postSlug });
+      return;
+    }
+
+    const link = target.closest<HTMLAnchorElement>("a[href]");
+    if (!link) return;
+    let ctaLocation: string | undefined;
+    if (link.closest("[data-cta-location='post_end']")) {
+      ctaLocation = "post_end";
+    } else if (link.closest(".post-inline-cta")) {
+      ctaLocation = "post_inline";
+    }
+    if (!ctaLocation) return;
+    sendEvent("blog_cta_click", {
+      cta_location: ctaLocation,
+      link_url: link.href,
+      post_slug: postSlug,
+    });
+  });
+</script>
 
 <script is:inline data-astro-rerun>
   /** Create a progress indicator
