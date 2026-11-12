@@ -1,7 +1,7 @@
 # 部落格 UX／UI／SEO 審查（2026-11-12，Gemini Argon 任務模式）
 
 原始對話：https://gemini.google.com/app/0368a645122a6f3b（Gemini 實際開遠端瀏覽器看站，餵了近 28 天台灣 GA4 數據）。
-2026-11-13 跟 Dustin 逐條討論後再動手；要改的文字（標題、導言、CTA、About、Hero）交 agy Flash 重寫，主線只驗事實。
+2026-11-13 跟 Dustin 逐條討論後再動手；要改的文字（標題、導言、CTA、About、Hero）交網頁版 Gemini Argon 重寫，主線只驗事實。
 
 ## 主線已核對
 
