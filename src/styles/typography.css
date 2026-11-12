@@ -51,9 +51,18 @@
     }
 
     table {
+      /* Scroll inside the article on narrow screens instead of widening the page */
+      @apply block w-max max-w-full overflow-x-auto;
+
       th,
       td {
         @apply border border-border p-2;
+      }
+
+      /* First two columns stay readable; keep CJK words unbroken */
+      th:nth-child(-n + 2),
+      td:nth-child(-n + 2) {
+        @apply min-w-24 [word-break:keep-all];
       }
 
       th {
