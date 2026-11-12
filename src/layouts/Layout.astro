@@ -45,7 +45,8 @@ const canonicalURL = (() => {
   return url.href;
 })();
 
-const htmlLang = language ?? SITE.lang ?? "en";
+// BCP 47 tag for <html lang>: zh posts are Traditional Chinese.
+const htmlLang = language === "zh" ? "zh-Hant" : (language ?? SITE.lang ?? "en");
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
