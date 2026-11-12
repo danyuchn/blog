@@ -22,8 +22,8 @@
 ## 3. 寫作（zh 先行）
 
 - [ ] 每篇從 `.claude/templates/article.md` 起手，遵守 `.claude/specs/article-spec.md`。
-- [ ] 寫手一律是 agy，不派 Sonnet：新文走 `ext-run --kind write`（寫作模型，Argon 額度滿自動退 Flash），brief 照 `~/.claude/skills/subagent-dispatch/references/write-brief.md` 骨架（讀者目標＋自由重寫＋只守事實底線，不加語氣限制）；併入與翻譯照 `.claude/templates/fanout-writer-prompt.md`。都改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。（W47 試行中，Dustin 審過後再正式改 Prompt A 與 article-spec）
-- [ ] 回收：照自首清單逐句裁決忠實度，砍 AI 補述（模板內有完整回收 checklist）。
+- [ ] 寫手一律是 agy，不派 Sonnet：新文走 `ext-run --kind write`（寫作模型，Argon 額度滿自動退 Flash），brief 照 `~/.claude/skills/subagent-dispatch/references/write-brief.md` 骨架（讀者目標＋自由重寫＋只守事實底線，不加語氣限制）；併入與翻譯照 `.claude/templates/fanout-writer-prompt.md`。都改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。（Dustin 2026-11-12 W47 核准定案）
+- [ ] 回收：只驗事實不改句子；照檔尾出處表核對引號原話與數字，素材沒有的論點、誇飾、內部代號列出退回寫作模型改（模板 Prompt A 收件段）。
 
 ## 4. 翻譯與去 AI 腔
 

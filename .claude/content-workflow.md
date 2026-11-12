@@ -7,7 +7,7 @@
 
 | 需求 | 讀哪裡 |
 |---|---|
-| 寫/改任何文章（frontmatter、檔名、圖片、embed、改寫七原則、voice） | `.claude/specs/article-spec.md` |
+| 寫/改任何文章（frontmatter、檔名、圖片、embed、寫作原則、voice） | `.claude/specs/article-spec.md` |
 | 維護碎念三檔（上限、配對、抽取） | `.claude/specs/micro-notes-spec.md` |
 | 選 tag / 新增 tag | `.claude/specs/tags.md`（白名單，CI 強制） |
 | 新文章起手 | 複製 `.claude/templates/article.md` |
@@ -25,7 +25,7 @@
    - **Threads-only 匯出**（無 IG `posts_1.json`）會讓腳本報錯：跳過腳本、為當週日期範圍寫一次性分類 snippet，不要為單次案例改腳本。
    - **匯出視窗與上週重疊必去重**：匯出開頭一兩天的貼文常已收進上週週報，提案前對照上週 micro-notes 區段剔除。
 2. **Aggregate**：聚類提案。**提案分批（全跑 vs Top N）時必說每個未選篇章的去處**（micro-notes / 留下週 / 棄寫），否則會補開重做。
-3. **Write**：由 agy 寫 zh（照 article-spec＋template，用模板 Prompt A），主對話只派工與驗收。
+3. **Write**：`ext-run --kind write`（寫作模型 Argon→Flash，取代 Sonnet 寫手）照模板 Prompt A 從素材寫 zh，主對話只備料、寫 brief、驗事實。
 4. **Translate**：同一個 agy 工作接著翻 en，檔名與 zh 完全相同。
 5. **Humanize**：agy 讀 `~/.claude/skills/humanizer/SKILL.md` 把 en 過一次去 AI 腔（Prompt A 第 3 步）。**例外**：原創技術分享文（`tech-share-post-spec.md`）的 en 版以 agy 翻譯＋核對數字、引言、程式碼為準，不另跑 humanizer。
 6. **Build & Verify**：`npm run check:content` → `npm run build` → `npm run dev` 抽查。

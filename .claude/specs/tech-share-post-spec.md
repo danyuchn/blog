@@ -1,7 +1,7 @@
 # 技術分享文規格（Tech Share Post Spec）
 
 適用：作者自己做的工具、外掛、流程、系統，寫成「我怎麼做出來、有沒有用、你怎麼做自己的版本」的長文。
-不適用：社群貼文改寫（走 article-spec 改寫原則）、週報、短觀點文。
+不適用：社群貼文改寫（走 article-spec 寫作原則）、週報、短觀點文。
 通用欄位、檔名、圖片路徑、私人名字去識別化一律以 `article-spec.md` 為準，本檔只規範這一類文章的骨架與紀律。
 範本文章：`src/data/blog/zh/work-mode-ai-working-modes.md`（2026-10-25）。流程見 `.claude/skills/tech-share-post/SKILL.md`。
 
