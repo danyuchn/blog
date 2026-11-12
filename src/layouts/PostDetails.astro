@@ -204,8 +204,10 @@ const nextPost =
                 ))}
               </ol>
             </aside>
+            {/* !-modifiers: `.app-prose details` (inline-block) outranks plain
+                display utilities, which made this TOC show on desktop too. */}
             <details
-              class="not-prose mb-6 block w-full border border-border p-4 sm:hidden"
+              class="not-prose mb-6 block! w-full border border-border p-4 sm:hidden!"
               data-pagefind-ignore
             >
               <summary class="text-xs font-semibold tracking-widest text-foreground/60 uppercase">
