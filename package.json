@@ -12,7 +12,8 @@
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check:links": "lychee --offline --no-progress --root-dir \"$PWD/dist\" --remap \"file://$PWD/dist/blog/(.*) file://$PWD/dist/\\$1\" --remap \"file://$PWD/dist/blog$ file://$PWD/dist/\" --index-files index.html 'dist/**/*.html'"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
