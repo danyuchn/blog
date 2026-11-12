@@ -9,12 +9,12 @@ const ui: Record<string, Record<Lang, string>> = {
   "nav.search": { en: "Search", zh: "搜尋" },
   "home.hello": { en: "Hi, I'm Dustin.", zh: "嗨，我是 Dustin。" },
   "home.credibility": {
-    en: "A teacher with 12 years of GMAT experience, now teaching working people to finish the job with AI.",
-    zh: "教 GMAT 12 年的老師，現在教上班族用 AI 把工作做完。",
+    en: "A teacher of 12 years with no coding background, helping you clear everyday busywork with AI.",
+    zh: "教書 12 年的非工程師，幫你用 AI 把每天煩人的雜事做完。",
   },
   "home.intro": {
-    en: "This blog is about how someone with no engineering background gets real work done with Claude Code and Gemini, and the pitfalls along the way.",
-    zh: "這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和 Gemini 把工作做完的過程，還有途中踩過的坑。",
+    en: "Raw notes from real work tests and mistakes. You don't need a tech background—just copy what works and take your time back.",
+    zh: "我把每天試錯、踩坑的真實過程全寫在這裡。不用懂程式碼，直接照抄我驗證過的工作流，把時間拿回自己手上。",
   },
   "home.kickerFeatured": { en: "Featured", zh: "精選" },
   "home.kickerRecent": { en: "Recent writing", zh: "最近在寫" },
@@ -48,32 +48,32 @@ const ui: Record<string, Record<Lang, string>> = {
     zh: "閱讀中文版",
   },
   "l0.title": {
-    en: "Start with the free prep course",
-    zh: "先從免費預科開始",
+    en: "Free Prep: Get Your First AI Result",
+    zh: "免費預科：帶你跑出第一個成果",
   },
   "l0.desc": {
-    en: "The free L0 prep course gets Claude Code installed and your first result out. No programming background needed.",
-    zh: "免費的 L0 預科帶你把 Claude Code 裝好、跑出第一個結果，不用程式背景。",
+    en: "Step-by-step setup for Claude Code with zero coding required.",
+    zh: "零程式基礎也能跟著做，一步步裝好 Claude Code 並完成第一次實測。",
   },
   "l0.cta": {
-    en: "Start the free L0 prep course",
-    zh: "免費開始 L0 預科",
+    en: "Join Free Prep",
+    zh: "免費加入預科",
   },
   "l1.link": {
-    en: "L1 intro course: let AI finish your first real task",
-    zh: "L1 入門班：讓 AI 替你完成第一個真實任務",
+    en: "Ready for AI to finish a real task for you? Explore L1",
+    zh: "想讓 AI 替你完成第一個真實任務？了解 L1 入門班",
   },
   "l3.link": {
     en: "3-month 1-on-1 program",
     zh: "三個月一對一陪跑",
   },
   "diagnosis.cta": {
-    en: "Or book a free 15-minute diagnosis",
-    zh: "或先預約免費 15 分鐘診斷",
+    en: "Not sure where to start? Book a free 15-min chat",
+    zh: "不確定怎麼開始？預約 15 分鐘免費診斷",
   },
   "newsletter.lead": {
     en: "Want AI working in your own job, not just in demos? ",
-    zh: "每週一封，只挑跟你工作有關的 AI 動態。",
+    zh: "不追空泛新聞，每週只挑跟日常工作有關的 AI 實測心得。",
   },
   "newsletter.link": {
     en: "See the 3-month 1-on-1 program →",
