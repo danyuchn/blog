@@ -5,6 +5,7 @@ title: "How to tune Opus 4.7's effort, and why I still keep non-coding tasks on 
 slug: en/opus-effort-tuning-sonnet-sweetspot
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-coding

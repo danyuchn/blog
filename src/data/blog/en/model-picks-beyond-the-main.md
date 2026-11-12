@@ -5,6 +5,7 @@ title: "Model Picks Beyond the Main One: Notes I Left at Different Times"
 slug: en/model-picks-beyond-the-main
 featured: false
 draft: false
+archived: true
 tags:
   - model-comparison
   - ai-tools

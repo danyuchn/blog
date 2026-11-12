@@ -5,6 +5,7 @@ title: "主力之外，各模型的定位：我在不同時間留下的選型碎
 slug: zh/model-picks-beyond-the-main
 featured: false
 draft: false
+archived: true
 tags:
   - model-comparison
   - ai-tools

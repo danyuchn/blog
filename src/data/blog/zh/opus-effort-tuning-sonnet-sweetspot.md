@@ -5,6 +5,7 @@ title: "Opus 4.7 的 effort 怎麼調，跟為什麼我非編程任務還是停�
 slug: zh/opus-effort-tuning-sonnet-sweetspot
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-coding
