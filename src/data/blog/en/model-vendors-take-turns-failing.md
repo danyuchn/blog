@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-10-09T00:01:00Z
-title: The Two Big Model Vendors Take Turns Failing, So Build a Backup
+title: "Model Vendors Take Turns Stumbling: Why Teams Need Built-In Redundancy"
 slug: en/model-vendors-take-turns-failing
 featured: false
 draft: false
@@ -9,136 +9,141 @@ tags:
   - codex
   - ai-trends
   - opinion
-description: 'Teaching with Codex this week, each turn took ten-plus minutes to come back. OpenAI cut speed and quota, and Anthropic nearly shut the door not long ago. The vendors take turns failing, so any company building agents on commercial AI needs a fallback.'
+description: 'Commercial AI vendors take turns dropping the ball—OpenAI slashes speed and quotas, while Anthropic wrestles with outages and capacity crunches. Building reliable agent workflows means planning multi-model failovers and tuning out reflexive defensive tone.'
 ---
 
-On the morning of 10/06 I taught a class with Codex, and it was brutally slow. I was already on 6.1 Sol, low effort, fast mode, and it still took ten-plus minutes before I could look at the next turn. Running two sessions side by side didn't fix it either, which was awkward.
+On the morning of October 6, I was running a live training session with Codex, and it slowed to an absolute crawl. Even with GPT-6.1 Sol set to low-effort fast mode, waiting for a single turn took over ten minutes. Even running two sessions in parallel could not salvage the awkward silence in the room.
 
-Luckily I got my training on the podium of a 150-person classroom, so I fell back on old-school teaching skills: lots of awkward small talk about planning, ideals, and future architecture. I also deliberately opened my Claude Code to demo, so the client could see the speed gap.
+Fortunately, I cut my teeth lecturing in 150-seat auditoriums. I leaned on old-school classroom stagecraft: buying time with banter about project roadmaps, vision, and system architectures, before deliberately pulling up Claude Code side by side to let the client see the stark speed difference.
 
-## OpenAI: cutting speed, cutting quota, cutting everything
+That sudden slowdown was an unvarnished reminder: major model vendors take turns shooting themselves in the foot. Don't panic—just expect it. If your team plans to rely on commercial AI for agents, build in redundancy from day one. Otherwise, when the model goes down, your company goes down with it.
 
-OpenAI has definitely tightened the door lately. Speed cut, quota cut, everything cut, and the free resets have been seen through.
+## OpenAI's Downward Cycle: Slashing Speeds, Quotas, and Shifting Compute
 
-@mylifcc on X posted a benchmark screenshot: Astra, 5.6 Sol, and Luna are all throttled to 60% of their original speed, and GPT-6.1 Sol drops all the way to 15 tok/s.
+OpenAI has clearly hit a slump. Speeds slashed, quotas cut, limits tightened across the board. Passing out quota resets no longer fools anyone.
 
-![A benchmark screenshot from X user @mylifcc, measuring output tokens per second for each GPT model; the caption says Astra, 5.6 Sol, and Luna are all slowed to 60% of their original speed, and GPT-6.1 Sol to 15 tok/s](/blog/assets/posts/model-vendors-take-turns-failing/1-gpt-throughput-drop.jpg)
+On X, @mylifcc posted benchmark screenshots showing speeds for Astra, 5.6 Sol, and Luna dropped to roughly 60% of their previous baseline, with GPT-6.1 Sol cratering to 15 tokens per second.
 
-The culprit behind how insanely slow Codex has been these past few days seems to be this...?
+![Benchmark screenshot from X user @mylifcc tracking tokens per second across GPT models, showing speeds for Astra, 5.6 Sol, and Luna dropping to 60% of original performance, and GPT-6.1 Sol dropping to 15 tok/s](/blog/assets/posts/model-vendors-take-turns-failing/1-gpt-throughput-drop.jpg)
 
-![A screenshot of OpenAI's official account announcing a batch of mathematical results produced by an internal frontier model, with a GitHub link to openai/math](/blog/assets/posts/model-vendors-take-turns-failing/2-openai-math-release.jpg)
+Looks like we found the culprit behind Codex crawling so painfully over the past few days.
 
-You watched him raise the red tower, you watched him feast the guests, you watched the tower fall.
+![Screenshot of an official OpenAI post announcing mathematical breakthroughs from their frontier models, linking to the openai/math GitHub repository](/blog/assets/posts/model-vendors-take-turns-failing/2-openai-math-release.jpg)
 
-Of everything I've had GPT 6.1 Sol do lately, the thing I'm happiest with is this meme:
+First they build the mansion, then they host the grand banquet, and then the roof caves in. Out of everything I have asked GPT-6.1 Sol to do recently, the result I was happiest with was this meme:
 
-![A three-panel meme titled "Watched him raise the red tower", "Watched him feast the guests", and "Watched the tower fall", each panel a post by OpenAI's Tibo: Codex passing three million weekly users with a rate limit reset, Astra shipping early with a full reset, and the Pro $200 plan reopening with usage recalculated to net out at half the API spend of the old plan. A footer says the meme was made by GPT 6.1 Sol](/blog/assets/posts/model-vendors-take-turns-failing/3-codex-meme.jpg)
+![Three-panel meme referencing the classic Chinese rise-and-fall adage, pairing posts from OpenAI's Tibo: Codex hitting 3M weekly users with quota resets, Astra launching early with global resets, and the $200 Pro tier reopening while stealthily halving effective API quotas. Caption notes it was generated by GPT-6.1 Sol](/blog/assets/posts/model-vendors-take-turns-failing/3-codex-meme.jpg)
 
-It's slow and janky on real work, yet digging up material and roasting its own employer with a meme came out fast and good. Truly the closest thing to human AGI, as OpenAI puts it (?
+Sluggish and frustrating on real work, but lightning-fast at digging up sources and generating memes roasting its own creator. Truly the closest thing to human-level AGI OpenAI ever promised.
 
-6.1 is just as bad at knowledge work; I wrote about that separately in [Why GPT 6 Sol / Luna Felt So Dumb](/blog/posts/en/why-gpt6-sol-luna-felt-dumb). These days Codex can only be sent off on single-point jobs like scraping, and I'm honestly worn out. My record of moving back and forth is in [this post](/blog/posts/en/three-moves-between-claude-and-codex).
+6.1 remains just as clumsy on knowledge work—I previously wrote about [why GPT-6 Sol and Luna felt so clumsy](/blog/posts/en/why-gpt6-sol-luna-felt-dumb). Nowadays, Codex gets relegated to narrow utility jobs like web scraping. Migrating back and forth between platforms has been exhausting.
 
-## Anthropic's side: it nearly shut the door, now it's wide open
+## The Tide Turns: Capacity Crunches and the Economics of Account Bans
 
-Anthropic nearly shut the door a while back, and lately it's wide open again, especially Opus 5.5. A cost-performance monster.
+Two or three months ago, the tables were completely turned. Anthropic held the lead, so how did OpenAI manage to snatch so many customers away?
 
-Here's my latest test: [$100 USD turned into a 5,469 jackpot](https://www.threads.com/share/BANRqG4Fs8/).
+When Opus 5 launched, my first thought was that Anthropic was remarkably brave. Then I remembered Claude has suffered outages on every day of the week—uptime has simply never been their priority.
 
-So my biggest wish right now is for OpenAI to get its act together a little, so that:
+Fast-forward to today: Anthropic throttled access for a stretch, but recently swung the doors wide open again. Opus 5.5 in particular is an absolute value monster. Here is my latest test, [unlocking a 5,469-unit windfall from a $100 tier](https://www.threads.com/share/BANRqG4Fs8/).
 
-1. Anthropic doesn't get to be the only big player and act high and mighty
-2. Opus doesn't get more refugees piling in and crushing the compute
+So right now, my biggest wish is actually for OpenAI to get its act together:
 
-Please, OpenAI, shape up. Otherwise too many people flee over, and when Anthropic runs short of compute, we're the ones who suffer.
+1. So Anthropic doesn't turn into an arrogant monopoly throwing its weight around
+2. So refugees from OpenAI don't flood over and overwhelm Anthropic's capacity
 
-## Account bans: better to kill a hundred by mistake
+Please, OpenAI, step it up. If too many users flee over, Anthropic will run out of compute and we will be the ones taking the hit. If OpenAI were not in such disarray, Anthropic would never get away with being this brazen.
 
-On bans, getting away is really hard. Their fingerprinting is set up to not care at all about Type 1 error and to fight with everything it has to reduce Type 2 error. In other words, "better to kill a hundred by mistake than let one slip through."
+There is a reliable indicator for spotting when a model vendor is entering a slump: watch whether they start rolling out flashy, gimmicky consumer apps. Remember when Claude Design churned out frantic daily updates? Remember OpenAI's Sora pivoting to a social short-video app? Only when they prune these side distractions and refocus do the tailwinds return.
 
-That's easy to understand, though, because enterprise customers are where their revenue mostly comes from.
+When it comes to account bans, escaping them is remarkably difficult. Their device fingerprinting setup is tuned to disregard Type 1 errors entirely while aggressively suppressing Type 2 errors—in plain terms, they would rather ban a hundred innocent accounts than let a single suspect slip through.
 
-Subscribers are subsidized at a loss of about 50x, but the huge risk of distillation by fake accounts also comes from those subscribers. So wrongly banning a few hundred doesn't touch their revenue.
+From a business standpoint, this makes complete sense. Enterprise contracts drive real revenue. Individual subscriptions are heavily subsidized—often running at a 50x loss—yet the existential risk of synthetic accounts distilling weights stems directly from those consumer tiers. Collateral damage on a few hundred innocent accounts barely dents their bottom line. Besides, breakthrough moments for both vendors have mostly come from competitor missteps; unless false bans reach catastrophic proportions, the community rarely defects en masse.
 
-More importantly, the big moments when either of the two vendors moved up in history mostly came from the other side's mistakes. As long as the false-ban rate doesn't reach massacre levels, the community barely notices and can't easily jump to the other side.
+## Hands-On Tuning: Ironing Out Codex's Defensive Tone
 
-If OpenAI weren't such a mess, Anthropic wouldn't dare be this cocky.
+Beyond service outages and fluctuating quotas, Codex brings another annoyance to daily workflows: its defensive tone. I recently saw a hilarious satire that sounds suspiciously like Codex wrote it: "Certainly, I will disclose my sleep status with full transparency. I will strictly distinguish between 'resting my eyes,' 'light sleep,' and 'deep sleep,' rather than aggregating them into a single metric. I will also compute a SHA-256 hash to verify that my recorded sleep duration matches the content of my dreams."
 
-## Two or three months ago, the wind blew the other way
+During everyday task collaboration, Codex loves leaning on negative guardrails like "cannot," "must not," and "X does not imply Y." I had Claude dispatch a subagent to dig through historical session logs and isolate Codex's defensive verbal tics: under the exact same cross-tool harness sync, why does Claude speak normally while Codex sounds like a nervous bureaucrat?
 
-Two or three months ago, Anthropic was clearly ahead. Why did OpenAI snatch so many customers away?
+![Terminal screenshot: Asking Claude to dispatch a subagent via history-find to analyze Codex's defensive writing habits, asking whether the issue stems from the harness or the base model, followed by Claude's reply dispatching the audit](/blog/assets/posts/model-vendors-take-turns-failing/4-codex-defensive-ask.jpg)
 
-When Opus 5 shipped, my first thought was that they were being brave. Then I thought about it again: Claude has had outages on every day of the week. They simply don't care about uptime.
+The audit showed that the core issue lies in Codex's underlying base model rather than the shared harness configuration. That said, our setup left a loophole: Codex lacked positive tone guidance. Claude had clear guidelines stating what tone to adopt; Codex only had a default pragmatic setting buried in configuration, surrounded by a mountain of negative prohibitions. There was also a likely compounding factor (inferred, not isolated via controlled test): rules requiring verification for negative assertions probably trained Codex to reflexively turn "no record found" into hedging statements like "cannot infer..."
 
-How can you tell a model company is about to hit a headwind? When it keeps pushing all kinds of flashy end-user apps. Think of Claude Design shipping something new every day, or OpenAI's Sora social short-video app. When those get pruned back, the company is about to catch a tailwind again.
+The fix was adding developer instructions to the top level of Codex's local configuration. State conclusions and next steps upfront using affirmative phrasing, then append necessary constraints once without rambling disclaimers. For unverified items, state plain facts rather than anticipating misunderstandings. Keep the voice brisk and direct, like a senior colleague handing off a project.
 
-Just realize these two will take turns failing, and keep a level head.
+Here are two examples comparing Codex's original phrasing with the revised versions:
 
-## Another Codex problem: defensive tone
+- Original: "'Early next year' is not a confirmed date, so we cannot create a tracking task for 2027/01/01 on our own." Revised: "'Early next year' has no set date. Note it as plain text in the master file and create a task once she replies."
+- Original: "This only indicates that the line items cannot be directly mapped to the proposal; it cannot be inferred that this was unquoted or unexecuted." Revised: "The three quotes do not contain matching line items. Confirm quotes and execution separately."
 
-Beyond services and quotas taking turns failing, Codex brings another headache in day-to-day use. I once saw a parody that cracked me up, and this kind of defensive writing looks very much like Codex: "Understood, I will honestly disclose my sleep state. I will distinguish between 'resting with eyes closed,' 'light sleep' and 'deep sleep' and will not merge the three. I will also use SHA-256 to verify that sleep duration matches dream content."
+The dialogue statistics and exact configuration snippet are detailed in the appendix below.
 
-I asked Claude to dispatch a subagent to use /history-find and hunt down Codex's defensive writing tic. I really dislike how it over-stresses "can't, must not, not... doesn't mean..." as a way of talking. I wanted to know whether it's a harness problem or a base model problem, why the same sync harness doesn't make Claude do this but does make Codex do it, and whether I need a Codex-only patch on top of sync so it stops talking like that.
+## Relying on Commercial AI for Agents: The Only Answer Is Redundancy
 
-![A terminal screenshot: I ask Claude to dispatch a subagent with history-find to catch Codex's defensive writing tic and ask whether it's the harness or the base model; Claude replies that it will dispatch a subagent to investigate the Codex tic](/blog/assets/posts/model-vendors-take-turns-failing/4-codex-defensive-ask.jpg)
+I told my class bluntly: these model vendors take turns acting reckless and drawing fire. If your company intends to rely on commercial AI for agents, build redundancy into your stack. When the model falls flat on its face, your company cannot afford to fall with it.
 
-The result: the main cause is Codex's base model, not the sync harness. But the harness has a gap that leaves nothing to pull Codex's tone back, so Codex needs its own tone setting, placed outside the sync scope.
+Once you accept that both vendors will reliably stumble in alternating shifts, you can stop panicking and simply prepare for it.
 
-The evidence is the last 30 days of conversations (Codex 393 messages, Claude 3,136, counting only messages over 150 characters):
+## Appendix: Defensive Tone Audit Data and Configuration
+
+Session statistics over the past 30 days (393 messages from Codex, 3,136 from Claude, filtered to messages over 150 characters):
 
 | Metric | Codex | Claude |
 |---|---|---|
-| Negation words overall (per 100 characters) | 2.52 | 2.52 |
-| Defensive patterns (per 1,000 characters): "doesn't mean / isn't equal to / not X but Y / can't directly / can only" | 1.80 | 1.13 |
-| "doesn't mean / not / isn't equal to" (per 1,000 characters) | 0.49 | 0.08 |
-| Share of messages with a defensive pattern | 48% | 36% |
+| Total negative words (per 100 words) | 2.52 | 2.52 |
+| Defensive phrasing (per 1,000 words): does not mean / not equal to / not X but Y / cannot directly / only | 1.80 | 1.13 |
+| "Does not mean / not necessarily / not equal to" (per 1,000 words) | 0.49 | 0.08 |
+| Share of messages containing defensive phrasing | 48% | 36% |
 
-Both sides use the same amount of negation; the difference is sentence pattern. When Claude says "no," it's describing a fact. Codex goes one step further and blocks a misreading for you first, like "X isn't equal to Y, so you can't infer Z."
+Both assistants use negative words at identical rates. The difference lies in sentence structure. When Claude says "no," it describes a factual reality. Codex takes an extra defensive leap to head off misinterpretation, reflexively adding hedges like "X does not equal Y, so one cannot infer Z."
 
-Why it isn't the harness: the instruction density given to both is about the same. At the global layer, banned words per 1,000 characters are 1.61 for Claude and 1.92 for Codex; skills are 1.39 versus 1.38; the project layers are nearly identical. That gap can't explain a 1.6x difference in sentence patterns, let alone a 6x difference in "doesn't mean." Sync only copies, links, or translates as-is, with no tone handling at all. The real difference is the tone setting. On the Claude side there's Dustin's Style, an output style that describes in positive terms what tone is wanted. Codex only has personality = "pragmatic" (line 3 of config.toml), and the rest is a wall of prohibitions with no positive guidance. One possible contributor (inference, untested): rules like "negative assertions must be verified" may make Codex write "couldn't find it" as a fixed defensive line like "can't infer...".
+This disparity was not caused by our configuration sync. Prompt constraint density was nearly identical across both environments: global prohibitives per thousand words stood at 1.61 for Claude versus 1.92 for Codex, capability modules clocked in at 1.39 versus 1.38, and project-level configs were indistinguishable. Those minor differences cannot account for a 1.6x surge in defensive patterns, let alone a 6x spike in phrases like "does not mean." The sync mechanism merely copies, symlinks, or mirrors files without touching tone.
 
-![A terminal screenshot of Claude's investigation results and data table, listing Codex versus Claude negation words overall, defensive patterns per 1,000 characters, "doesn't mean" per 1,000 characters, and the share of messages with defensive patterns, and explaining why the harness isn't the cause](/blog/assets/posts/model-vendors-take-turns-failing/5-codex-defensive-stats.jpg)
+The real culprit was tone configuration. Claude had explicit, affirmative descriptions detailing what tone to use. Codex had only `personality = "pragmatic"` (line 3 of `config.toml`) flanked by an exhaustive list of prohibitions, completely devoid of positive steering. Furthermore, rules like "negative assertions require verification" (an inference, not tested in isolation) likely trained Codex to convert every "record not found" into a defensive caveat.
 
-Suggested fix: put the tone setting in developer_instructions at the top level of ~/.codex/config.toml, not in AGENTS.md, because AGENTS.md is a translation target of sync and gets overwritten. Draft:
+![Terminal screenshot: Claude's audit report and metrics table, comparing negative word counts, defensive phrasing per thousand words, hedges like 'does not mean,' and the proportion of defensive messages across Codex and Claude, explaining why the harness was not responsible](/blog/assets/posts/model-vendors-take-turns-failing/5-codex-defensive-stats.jpg)
+
+Recommendation: Place tone instructions under the top-level `developer_instructions` in `~/.codex/config.toml` rather than shared project documentation (`AGENTS.md`), which serves as a sync target and gets overwritten. Here is the draft configuration:
 
 ```toml
 developer_instructions = """
-用肯定句先說結論與下一步，再補必要的限制。
-限制只寫一次，放在最相關的那句裡，不另開「不是…而是…」的澄清。
-未驗證的事用「尚未驗證 X」陳述事實，不推論對方的誤解。
-回報成果時說做了什麼、結果是什麼；沒做的事只在影響決策時提。
-語氣像資深同事交接：簡短、確定、不替讀者預防誤讀。
+Lead with conclusions and next steps using affirmative statements, then append necessary constraints.
+State constraints once within the most relevant sentence; do not open separate "not X, but Y" clarifications.
+For unverified items, state facts plainly as "X has not yet been verified," without inferring potential misunderstandings.
+When reporting progress, state what was done and what resulted; mention omitted actions only when they affect decisions.
+Maintain the tone of a senior colleague handing off work: concise, confident, and without preemptively cushioning reader comprehension.
 """
 ```
 
-The draft reads: state the conclusion and next step in affirmative sentences first, then add necessary limits; write each limit once, inside the most relevant sentence, without a separate "not X but Y" clarification; describe unverified things as "X not yet verified" instead of guessing the other person's misunderstanding; when reporting, say what was done and what the result was, and mention what wasn't done only if it affects a decision; sound like a senior colleague handing off: short, definite, not guarding the reader against misreading.
-
-Two of Codex's original sentences, rewritten as a test:
-
-- Original: "'Early next year' isn't a confirmed date, so I can't create a tracking to-do for 2027/1/1 on my own." Rewritten: "'Early next year' has no fixed date; I'll note it as plain text in the main file and open a to-do once she replies."
-- Original: "This only means the line items can't be matched directly to the proposal; it can't be inferred that nothing was quoted or done." Rewritten: "The three quotes have no line items that match one by one; whether they were quoted or carried out needs another check."
-
-![A terminal screenshot: Claude suggests putting the tone setting in developer_instructions in config.toml, with a draft and a before-and-after rewrite of two Codex sentences](/blog/assets/posts/model-vendors-take-turns-failing/6-codex-tone-fix.jpg)
-
-## Build a backup
-
-In class I also said it plainly: these model vendors are itching for trouble, taking turns screwing up and getting spat on. If a company plans to rely on commercial AI to run agents, it has to build a backup, or when the model goes down the company goes down with it.
+![Terminal screenshot: Claude recommending placing tone configuration under developer_instructions in config.toml, alongside draft instructions and before-and-after rewrites of two Codex statements](/blog/assets/posts/model-vendors-take-turns-failing/6-codex-tone-fix.jpg)
 
 <!--
-2026-10-09 W42 merged from micro-notes: two archive notes added to the 'wind blew the other way' section, and the Codex defensive-writing note added to the top of the tone section; all three removed from the archive.
+2026-10-09 W42 併入碎念：「Claude 壓根不在乎 uptime」「模型商逆風的訊號」併入「兩三個月前，風向是反的」一節（「Opus 5 上週上線」改為「Opus 5 上線的時候」）；「Codex 的防禦式寫作」併入防禦式語氣一節開頭（新增「之前看到一則諷刺，」為銜接）。三條自碎念存檔刪除。
 -->
 
 <!--
 新增非原文句子清單（忠實度自首）：
-1. 「On the morning of 10/06 I taught a class with Codex, ...」 — 類型：改寫（原文「今天早上」改為日期；移除 emoji）
-2. 各 H2 小標題 — 類型：框架句（對應 zh 小標題）
-3. 「@mylifcc on X posted a benchmark screenshot: ...」 — 類型：銜接（照實轉述圖一內文）
-4. 「6.1 is just as bad at knowledge work; I wrote about that separately in [...]」 — 類型：改寫（加站內連結）
-5. 「My record of moving back and forth is in [this post].」 — 類型：改寫（原文「歡迎來看我反覆搬家的紀錄」改為站內連結）
-6. 「On bans, 」 — 類型：銜接
-7. 「Two or three months ago, Anthropic was clearly ahead. Why did OpenAI snatch so many customers away?」 — 類型：改寫（原文為「A」「O」縮寫，依語境展開）
-8. 「In class I also said it plainly: ...」 — 類型：改寫（原文「我也明確地說」加「在課堂上」；移除 emoji）
-9. 「I asked Claude to dispatch a subagent ...」、調查結果與證據各段、建議做法與兩句改寫示例 — 類型：改寫（照實轉述圖四至圖六）
-10. 「The draft reads: ...」段（toml 草稿的英文意譯） — 類型：改寫（en 版新增，因草稿本體為中文原文）
+1. 「10/06 早上上課帶 Codex，慢到炸，……」 — 類型：改寫（原文「今天早上」改為日期；移除 emoji）
+2. 「## OpenAI：砍速度，砍額度，什麼都砍」「## A\ 這邊：前陣子要關，現在大門敞開」「## 封號：寧可錯殺一百」「## 兩三個月前，風向是反的」「## 做好備援」「## Codex 的另一個問題：防禦式語氣」 — 類型：框架句（小標題，取自素材字句與任務指定標題）
+3. 「X 上 @mylifcc 有一張實測截圖：Astra、5.6 Sol、Luna 的速度全部被降低到原來的 60%，GPT-6.1 Sol 更是降低到 15 tok/s。」 — 類型：銜接（照實轉述圖一內文）
+4. 「最近讓 GPT 6.1 Sol 做的事情中，我最滿意的是做這張梗圖：」 — 類型：原文（10/05 貼文，未改）；「眼看他起朱樓……」三句亦為原文
+5. 「6.1 在知識工作上一樣爛，我另外寫過[為什麼 GPT 6 Sol / Luna 用起來這麼蠢]。」 — 類型：改寫（原文「但6.1 在知識工作上一樣爛⋯⋯⋯」加站內連結）
+6. 「現在 codex 只能讓他去做爬蟲等單點任務了，我也是真的很心累。」 — 類型：改寫（原文語序對調；為回覆留言，只取意思）
+7. 「我反覆搬家的紀錄在[這篇]。」 — 類型：改寫（原文「歡迎來看我反覆搬家的紀錄」，移除邀請句式、改為站內連結）
+8. 「拜託 OAI 快點振作，不然太多人逃難過來，到時候 A\ 算力不夠遭殃的又是我們。」 — 類型：改寫（回覆留言，語意不變）
+9. 「講到封號，」 — 類型：銜接（原貼文首句「其實要逃真的很難」前加主題提示）
+10. 「兩三個月前，風向是 A\ 明明原本領先，為什麼會被 OAI 瘋狂搶走客戶？」 — 類型：改寫（原文為「A」「O」縮寫，依語境展開為 A\ 與 OAI；回覆留言只取意思）
+11. 「我在課堂上也明確地說：……」 — 類型：改寫（原文「我也明確地說」加「在課堂上」；移除 emoji；句末改句號）
+12. 「我請 Claude 派 subagent 去用 /history-find 抓 codex 防禦性寫作的口癖：……」整段 — 類型：改寫（照實轉述圖四我的提問）
+13. 「調查結果：主因在 Codex 的 base model，……」以下至表格與兩段說明 — 類型：改寫（照實轉述圖五的 Claude 回覆，句子順序與用語依截圖，段落重排）
+14. 「證據是近 30 天的對話（……）：」 — 類型：改寫（轉述圖五「證據」段）
+15. 「建議做法：……」、toml 草稿、兩句改寫示例 — 類型：改寫（照實轉述圖六）
 
-2026-10-26 splice cleanup (mirrors zh): moved "Build a backup" section to the end of the post; new bridge sentences: "Beyond services and quotas taking turns failing, Codex brings another headache in day-to-day use."
+2026-10-26 拼接順稿：
+- 「除了服務與額度輪流出問題，Codex 在日常使用上還有另一個困擾。」— 類型：銜接
+（把「做好備援」章節移到全篇文末作為收尾，將「Codex 的另一個問題：防禦式語氣」移至其前）
+-->
+
+<!--
+2026-11-12 舊文盤點整篇重寫：以課堂突發當機為引子，將模型商輪流失常的外部風險與日常落地調校防禦式語氣整合成單一主軸；收斂多重收尾，並將數據表格與設定檔收納至附錄。
 -->

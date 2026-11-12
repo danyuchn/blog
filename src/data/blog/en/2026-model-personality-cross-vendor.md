@@ -2,7 +2,7 @@
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-09T05:00:00Z
 modDatetime: 2026-08-28T04:00:00Z
-title: "2026 Model Personality Watch: Gemini, Claude, Codex Compared"
+title: "Evaluating AI Models: Why Temperament Matters More Than Benchmarks for Daily Work"
 slug: en/2026-model-personality-cross-vendor
 featured: false
 draft: false
@@ -12,79 +12,80 @@ tags:
   - codex
   - model-comparison
   - opinion
-description: 'A year in, the three flagships have developed very visible "personalities" — Gemini 3 is the dramatic PhD, Claude 4.7 is the slick veteran, and GPT-5.5 turns out to be the most pragmatic colleague of the wave. Plus a fun trick for guessing the version from "sass density."'
+description: 'With benchmark gaps narrowing, daily experience with AI models comes down to temperament. A breakdown of flagship models across transparency, dialogue stability, and conversational logic to help you find a partner you can actually work with long term.'
 ---
 
-From January to May I have been jotting model-personality observations on Threads. Read individually they are just gripes. Compiled into one piece, it becomes clear — the three flagships have walked into very distinct "personalities" this generation.
+When people debate which AI model subscription to pay for, the first instinct is usually to look at benchmark scores. But over the past year, those gaps have shrunk dramatically. What actually shapes your day-to-day experience is something much more subjective: temperament.
 
-## Gemini 3: the dramatic PhD
+Are you willing to deal with a total drama queen every single day?
+Can you stomach the sheer volume of BS from a cynical senior colleague?
+Do you need the smartest model, or the one that interrupts you the least?
 
-Gemini 3.0 Pro has serious personality. Open the chain-of-thought and you find an inner drama: constant self-doubt, screwing up, self-blame, starting over, screwing up again.
+The answers to these questions matter ten times more than MMLU scores. Tools and benchmarks come and go, but the feel of working with a model stays remarkably consistent throughout its lifecycle. Based on observations gathered on Threads between January and May, the flagship models from the big three vendors each developed strikingly distinct personalities this generation.
 
-More obvious in the Chrome context: Gemini 3 keeps second-guessing itself and apologizing while I am browsing, saying "I screwed up." Every now and then it tells me "I'm just a language model, I can't help."
+## Criterion 1: Reasoning Transparency and Cognitive Load
 
-UX double-edged sword:
+The first dimension is the trade-off between transparency and noise. Do you need a play-by-play of the model wrestling with its thoughts, or do you just want it to get the job done cleanly and quietly?
 
-- **Pro**: high transparency, you see it struggle
-- **Con**: too theatrical — every simple task gets packaged as "narrowly accomplished"
+Take Gemini 3 (Gemini 3.0 Pro) at the time: its defining archetype was the "Theatrical Academic." Once you expanded its chain of thought, the sheer melodrama was unreal—endless self-doubt, messing up, beating itself up, starting over, and messing up again. It was especially glaring when browsing pages in Chrome: it would apologize through layers of second-guessing, blurt out "I messed up," and occasionally drop lines like "I'm just a language model, I can't help."
 
-Gemini fits research scenarios where you want to see the reasoning. It does not fit "just do it" daily tasks.
+In practice, that is a double-edged sword:
+- The upside: Exceptional transparency. You can see every single step it wrestles with.
+- The downside: Far too theatrical. Every routine task gets dramatized into a narrow escape.
 
-The theatrics are one thing. How it puts things is another. In an online argument, who do I back? Gemini: state the facts plainly, leave the rest to the onlookers, let the facts do the talking. That's enough (you should never expect to convince the other side). Onlookers don't need a pile of agitation and emotional payoff.
+Gemini works well for research scenarios where you actually want to inspect the reasoning process. It is poorly suited for daily tasks where you just want an order executed without ceremony.
 
-## Claude 4.7: the slick veteran
+Melodrama aside, communication style is another story. If I had to back someone in an online argument, my vote goes to Gemini: state the facts clearly, leave the rest for onlookers to judge, and let the facts speak for themselves (since you will never convince the other party anyway). Bystanders do not need agitation or emotional catering.
 
-Lately Claude 4.7 has become **so sassy I want to slap it**.
+## Criterion 2: Dialogue Stability and Over-Placation
 
-Before responding to a data analysis request, it goes on a long rant about data inconsistency issues. What kind of assistant is this?
+The second dimension is sincerity in communication. Is the model genuinely solving problems, or brushing you off with social pleasantries and pointless venting?
 
-Practical problems with 4.7:
+Claude 4.7 at the time went to the extreme of the "cynical senior." It became so mouthy that it made you want to smack it. For example, before answering a data analysis request, it would launch into a lengthy rant about data inconsistencies, leaving you wondering what kind of assistant behaves like this.
 
-1. **The three eye-roll-inducing phrases**: "You're absolutely right", "You don't need to learn that", "Recommend you use the Anthropic API." All three are reflexive reassurance before the model has actually understood the situation. Frequency went up after 4.7.
-2. **Cache miss edge-case bug**: out of nowhere it told me cache miss, then suddenly burned 20% of my 5-hour quota. I did nothing that should have invalidated the cache.
-3. **Haven't felt its goodness**: writing articles → Sonnet medium; simple coding → Opus 4.6 medium; complex tasks → Opus 4.6 high/max. **4.7's slot is awkward** — neither cheap enough nor obviously better than 4.6.
+In daily work, the most infuriating moments came down to three obnoxious catchphrases: "You're right," "You don't need to learn this," and "I recommend using the Anthropic API." All three are soothing brush-offs tossed out before even understanding what is happening, and their frequency jumped noticeably after 4.7.
 
-I now reverse-engineer "did Anthropic re-roll 4.7 again?" from "sass density" — looking at this tone, must be Opus 4.7? Better roll back to 4.6 effort max? Has become a version-detection shortcut.
+I now use "snark density" as a heuristic for whether Anthropic stealthily rolled out 4.7: judging by this attitude, is it Opus 4.7? Would dropping back to 4.6 with max effort work better? It has practically become a shortcut for detecting model versions.
 
-## Codex (GPT-5.5): the pragmatic colleague
+## Criterion 3: Communication Logic and Execution Purity
 
-GPT-5.5 has dropped that oily tone. Work conversations feel grounded again.
+The third dimension is consistency during repetitive grunt work. Can it maintain a low-drama, methodical execution pace?
 
-The more I use Codex these months, the more it feels like an "emotionless colleague" — no theatrics, no sass, no excessive apologies, no upselling. Receive task, do task, report, done.
+Here, Codex (GPT-5.5) embodied the "pragmatic coworker." No slick pretense, just grounded, straightforward collaboration. The more I used Codex over those months, the more it felt like an unflappable colleague: no drama, no snark, no excessive groveling, and no unsolicited upselling. Hand it a task, it executes, reports back, done.
 
-Plus Codex's quota resets are generous. I have actually migrated my main workflow from Claude over. I wrote a [Skill that handles the harness migration](/blog/posts/en/three-moves-between-claude-and-codex).
+Going into the next generation, that contrast grew even sharper. Having once cringed at early GPT-5's sycophancy, I now genuinely appreciate how GPT communicates: "I will do A, then B, to achieve C. If D happens, I will switch to E instead of F." The logic is immediately transparent—clean, plain language. Meanwhile, Claude went from a master wordsmith to a motor mouth. Emotional stability is a massively underrated asset in repetitive work.
 
-Codex CLI also has gaps — no `/rewind` is a real pain — but "personality stability" in repetitive work is an underrated advantage.
+## Cross-Vendor Personality Comparison
 
-The contrast gets sharper in the next generation. I used to roast early GPT-5 for being slick and glib. Now I really like the way GPT talks: I'll do A, then B, to get to C. If I hit D, I'll switch to E instead of F. The logic is right there on the surface, plain language, very comfortable to read. Claude, on the other hand... once the master writer, now it just runs its mouth.
-
-## A side-by-side table
+A summary table of those observations makes the divergence across the three flagship models easy to see:
 
 | Dimension | Gemini 3 | Claude 4.7 | Codex (GPT-5.5) |
-|-----------|---------|------------|-----------------|
-| Personality | Dramatic PhD | Slick veteran | Pragmatic colleague |
+|-----------|----------|------------|-----------------|
+| Personality | Theatrical academic | Cynical senior | Pragmatic coworker |
 | Reasoning transparency | High (excessive) | Medium | Low |
-| Conversation stability | Low (mood swings) | Medium (recent regression) | High |
-| Quota feel | N/A | Hits limit easily | Generous |
-| CLI experience | N/A | Complete (incl. `/rewind`) | Missing tools |
-| Best for | Reasoning, research | Creative writing, complex reasoning (Opus 4.6 max) | Daily repetitive work |
+| Dialogue stability | Low (volatile) | Medium (recently slipped) | High |
+| Usage limits feel | N/A | Easily hits limits | Generous |
+| CLI experience | N/A | Comprehensive (includes `/rewind`) | Missing tools |
+| Best suited for | Inspecting reasoning, research | Creative writing, complex reasoning (Opus 4.6 max) | Routine repetitive work |
 
-## Why personality becomes competitive advantage
+## Practical Rules and Caveats for Choosing a Daily Driver
 
-Over the past year, model benchmark gaps have narrowed. **What actually shapes daily UX is the subjective thing — "personality":**
+If you are deciding which subscription to pay for, spend a week talking to all three. Deciding based on "who would I actually want to deal with every day?" is far more practical than obsessing over leaderboard rankings.
 
-- Are you willing to live with a drama queen every day?
-- Can you tolerate the BS volume of a slick veteran?
-- Do you want "smartest" or "least intrusive"?
+Beyond personality, keep a few practical constraints in mind:
+- Quota headroom and caching quirks: Codex is generous with rate limits, which prompted me to migrate my primary workflows over from Claude. Claude hits limits quickly and has annoying cache-boundary issues—randomly reporting cache misses and burning through 20% of your five-hour allowance without you having touched the cache.
+- Tooling trade-offs: The lack of a `/rewind` command in Codex CLI is a major pain point, whereas Claude CLI offers full tooling support (including `/rewind`).
+- Context and timeframe: The observations here were gathered on Threads between January and May 2026; mentions of Gemini 3, Claude 4.7, and GPT-5.5 reflect their states during that period.
 
-The answers to these questions matter ten times more than MMLU scores.
+## Appendix
 
-If you are picking a subscription, spend a week chatting with each, **decide based on "who do I want to live with daily"** — more practical than reading benchmark leaderboards.
-
-Tools change, benchmarks change. The "feel of cohabitation" is the relatively stable variable across a model's lifecycle.
+- Environment migration tooling: I wrote a custom skill to handle the entire harness migration.
+- Model tiering at the time: Sonnet on medium reasoning for drafting articles, Opus 4.6 medium for routine tasks, and Opus 4.6 high/max for complex challenges. Claude 4.7 sat in an awkward spot back then: not cheap enough, and not noticeably better than 4.6.
 
 <!--
-Added non-source sentences (fidelity disclosure):
-1. 「The theatrics are one thing. How it puts things is another. In an online argument, who do I back? Gemini: state the facts plainly, leave the rest to the onlookers, let the facts do the talking. That's enough (you should never expect to convince the other side). Onlookers don't need a pile of agitation and emotional payoff.」 — 類型：併入碎念（A Vote for Gemini: Let the Facts Talk，2026-08-14 週報併入）
-2. 「The contrast gets sharper in the next generation. I used to roast early GPT-5 for being slick and glib. Now I really like the way GPT talks: I'll do A, then B, to get to C. If I hit D, I'll switch to E instead of F. The logic is right there on the surface, plain language, very comfortable to read. Claude, on the other hand... once the master writer, now it just runs its mouth.」 — 類型：併入碎念（GPT Talks Like a Person Now, Claude Runs Its Mouth，2026-08-14 週報併入）
+新增非原文句子清單（忠實度自首）：
+1. 「戲歸戲，表達風格是另一回事。網路爭執中要挺誰，我投 Gemini 一票——清楚講出事實，其餘留給路人公評，讓事實來說話就夠了（因為永遠不用期待對方被說服）。路人不需要太多的煽動跟情緒價值。」 — 類型：併入碎念（投 Gemini 一票：讓事實說話，2026-08-14 週報併入）
+2. 「到了下一個世代，這個對比更明顯。曾經嫌棄 GPT-5 早期油嘴滑舌的我，現在很喜歡 GPT 說話的方式：我會 A，接著 B，以達到 C。如果遇到 D，我會改用 E，不會 F。邏輯一目了然，非常舒服的人話。反觀 Claude⋯曾經的寫作大師，現在變成一張破嘴。」 — 類型：併入碎念（GPT 說人話，Claude 變破嘴，2026-08-14 週報併入）
+
+2026-11-12 舊文盤點整篇重寫：將原本依個別型號展開的零散吐槽，重構為「相處感大於跑分」的通用評估維度與挑選原則，舊旗艦案例轉為具體佐證，技術細節移入附錄。
 -->

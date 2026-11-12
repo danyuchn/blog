@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-04-22T05:00:00Z
-title: "Claude Code This Week: Offloading CLAUDE.md, Quota-Saving Tricks, Ghostty Click Fix"
+title: "Practical Claude Code Setup: Slimming CLAUDE.md, Quota Control, and Automated Workflows"
 slug: en/claude-code-tips-apr-w17
 featured: false
 draft: false
@@ -9,115 +9,127 @@ tags:
   - claude-code
   - ai-tools
   - ai-workflow
-description: 'A handful of Claude Code settings and money-saving tricks I picked up this week — how Rules/Memory/Hooks offload CLAUDE.md, fixing cmd+click in Ghostty No Flicker mode, dispatching long-read work to Haiku for quota relief, and the cache difference between pasting images and editing prior messages after 4.7.'
+description: 'When CLAUDE.md swells past a thousand lines, instructions get dropped, and rate limits hit within minutes, your harness needs an overhaul. A practical guide to splitting Rules, Memory, and Hooks, delegating to Haiku subagents, caching rules, Ghostty click fixes, and an automated video pipeline.'
 ---
 
-A few Claude Code settings and tricks I accumulated this week. Nothing is brand new, but all of them are things I learned by running face-first into the wall. Organized by topic.
+When I first adopted Claude Code as my daily driver, I walked straight into two familiar traps: stuffing every guideline into a single config file until it grew past a thousand lines and the model started forgetting things, and watching my 5-hour quota sit comfortably at 55% at 9:00 AM only to slam into a hard limit fifteen minutes later.
 
-## Stop stuffing everything into CLAUDE.md
+Over months of tuning configuration files, terminal quirks, and token budgets—eventually automating an entire video pipeline that drove real channel growth—the core takeaway was clear: Claude Code handles complex work reliably only when you give it clear boundaries and split up its responsibilities, rather than dumping every wish into a single file.
 
-Most people only know the "memo file" (CLAUDE.md) and don't know that Rules, Memory, and Hooks can all share its load. I used to be the guy with a 1000-line CLAUDE.md yelling at Claude for forgetting things.
+## Don't Cram Everything into CLAUDE.md: Rules, Memory, and Hooks
 
-Then I slowly learned to split it:
+Most users only know about `CLAUDE.md`, overlooking how much Rules, Memory, and automated Hooks can take off its plate. I used to let my own `CLAUDE.md` swell past a thousand lines, complaining that Claude was getting clumsy whenever it dropped an instruction.
 
-- **Rules** (`~/.claude/rules/`): Cross-project technical rules, trap lists, tool routing tables. Use `@path/to/rule.md` to import from CLAUDE.md.
-- **Memory** (auto memory): Session-level user preferences, project state, error log. Relevant entries auto-load in new conversations.
-- **Hooks** (`settings.json`): Automated behaviors (SessionStart checks, PreToolUse interception, PostToolUse reminders). The model doesn't run these. The harness does.
+In reality, forcing technical specs, guidelines, and history into a single file makes the context unwieldy; once it passes a thousand lines, the model naturally misses things. A cleaner architecture separates configuration across three layers:
 
-I recorded a weekend video explaining the division of labor: <https://www.youtube.com/watch?v=kSFty4XwXS8>
+- **Rules**: Cross-project technical guidelines, gotcha lists, and tool routing tables. Import them from `CLAUDE.md` on demand using `@path/to/rule.md`.
+- **Memory**: Session-level user preferences, current project state, and post-mortems of past mistakes. Auto-memory pulls only the relevant entries whenever you start a new conversation.
+- **Hooks**: Automated behaviors configured in `settings.json` (such as `SessionStart` checks, `PreToolUse` interception, and `PostToolUse` reminders). Whatever the model might skip, the harness enforces.
 
-## Explanatory mode: for non-engineering learners
+When configuring permission modes, people often ask how to stop approval prompts from interrupting every routine action. In practice, pairing bypass mode with hooks works best: bypass mode eliminates nagging false positives, while hooks step in at genuinely risky operations like deleting files, pushing to remotes, or sending external communications.
 
-A common issue when onboarding students: Claude Code throws around too much jargon, and they can't follow.
+Over the weekend, I put together a video breaking down how these advanced settings divide the work: <https://www.youtube.com/watch?v=kSFty4XwXS8>
 
-Two-step fix:
+## Reducing Friction: Plain-Language Explanations and Terminal Click Targets
 
-1. `/config` → `explanatory mode`. It shifts into explanation mode.
-2. If that's still not clear, add a rule in CLAUDE.md asking it to explain what it's doing in plain, non-technical language.
+Beyond modular configs, reducing day-to-day friction makes a huge difference when you live inside the tool all day.
 
-Those two together bring Claude's output down to a level a middle schooler can follow.
+When onboarding students without an engineering background, the most frequent roadblock is Claude Code generating dense technical jargon that leaves them lost. Clearing that communication barrier takes two steps:
 
-## The Ghostty click trap: cmd+click breaks in No Flicker mode
+1. Run `/config` and switch to `explanatory mode`.
+2. Add a rule to `CLAUDE.md` instructing the model to explain its current actions in plain, non-technical language.
 
-The traditional Flicker mode has been rendering poorly in Ghostty lately. It renders the same stretch of history multiple times, so scrolling back shows a jumbled mess. I switched to No Flicker mode (text lines fixed, mouse takes over).
+Combining those two tweaks lowers the comprehension bar enough that even a middle schooler can follow what Claude is doing.
 
-That solved the original problem, and immediately surfaced the next one: Ghostty's original `cmd+click` to open links and file paths was being intercepted by Claude Code. Some paths Claude Code couldn't recognize or open.
+Another friction point shows up right in the terminal. In Ghostty, standard Flicker mode frequently botches scrollback rendering, redrawing the same conversation history multiple times and turning review into a garbled mess. To fix that, I switched to No Flicker mode with fixed text rows and mouse capture enabled.
 
-I had Claude Code generate link formats one by one for me to test. Conclusion, now in CLAUDE.md:
+That solved the rendering glitch, but triggered an immediate side effect: Ghostty's native `cmd+click` shortcut for opening links and file paths was captured by Claude Code, breaking click-to-open detection for certain paths. (Disabling mouse capture made things worse, completely breaking trackpad scrolling through history and locking the viewport onto the prompt input).
 
-> File paths must use absolute `file://` URLs (e.g., `file:///Users/danyuchn/path/file.md`). The `file://` prefix is required for clickability. Exceptions: inside code blocks, command examples, and function parameters. Keep their original format.
+To fix the click detection, I had Claude Code generate various path formatting styles and tested them one by one. The only format that consistently triggered clean click targets went straight into my `CLAUDE.md`:
 
-Side note: why not just disable the mouse takeover? Because it's worse. Without mouse takeover, trackpad scrolling is completely uncontrollable in history. It gets locked into the input field.
+> Always format file locations as absolute `file://` URLs (e.g., `file:///Users/danyuchn/path/file.md`); the `file://` prefix is required for clickable links. Exceptions: code blocks, command examples, and function arguments keep their original format.
 
-## Quota savings: dispatch long reads to Haiku
+## Quota and Cache Economics: Keeping Heavy Models Off Grunt Work
 
-This week's trick: for long-document reading, don't let the main agent read it directly. High-tier models burn tokens on long inputs. Instead:
+Under heavy daily usage, assigning grunt work to an expensive flagship model will burn through your rate limits in no time.
 
-> Dispatch several Haiku agents to read segments of this document. Hand them the file directly. Don't extract text yourself (saves quota). Then synthesize their summaries.
+When plowing through long documents, never feed the entire raw text directly to your primary frontier model. Processing massive contexts on high-end models explodes token consumption and introduces attention dilution. A far more economical approach is chunking the document and delegating it to cheaper Haiku subagents:
 
-Splitting into segments avoids attention dilution, and using Haiku saves cost. Explicitly tell it to "hand over the file directly" so the higher-tier main agent doesn't touch the long text and burn tokens.
+> Dispatch several Haiku agents to read this document in chunks. Pass the file directly to them without extracting the text yourself (to conserve quota), then summarize their findings.
 
-## After 4.7: pasting images vs editing prior messages, cache behavior
+The secret to this prompt is explicitly stating "pass the file directly to them," preventing the primary model from touching the raw text and racking up tokens. Splitting the document prevents attention dilution, while Haiku keeps costs negligible.
 
-A new lesson this week: the official Claude Code docs leave this unclear.
+Alongside smart subagent delegation, understanding prompt caching is essential for managing your quota. Following version 4.7, official documentation on cache invalidation remained vague. After inspecting raw cache telemetry across dozens of runs, I confirmed one critical rule:
 
-**Pasting an image in a new message does NOT invalidate the cache. Editing a prior message DOES.**
+**Appending images in a new message does not bust the cache; editing an earlier message does.**
 
-I pulled the actual cache fields to prove this. So if you want to attach a reference image, keep pasting new messages. Don't go back and edit an old one.
+If you need to supply reference screenshots or mockups, simply send them in a fresh follow-up message instead of going back to edit earlier prompts.
 
-On a side note: when you're wrong, admit it. Don't double down. Too many people in Taiwan love to double down; it looks bad, and honest apology + responsible correction is something everyone still needs to learn. The rule applies to humans and models equally.
+## Script to Publish: An Automated Video Pipeline with 90% AI Collaboration
 
-## In practice: bypass + hooks
+Once your configs, interface, and quota management are dialed in, Claude Code can drive extensive end-to-end production pipelines. Here is my actual workflow for producing programmatic Remotion videos:
 
-People sometimes ask me how to set permission mode so it doesn't keep popping dialogs. In practice I use `bypass` + hooks. Bypass kills the false-positive friction, hooks intercept at the genuinely dangerous points (file deletion, remote push, outbound communication).
+1. Research the topic, checking official documentation and community best practices.
+2. Draft the voiceover script and mark placeholders for screen recordings.
+3. Record the voiceover and auto-remove filler words in CapCut.
+4. Feed subtitles and audio back to Claude Code to start designing animations.
+5. Record the actual on-screen walkthrough while Claude works.
+6. Run basic video cleanups on the screen recording in CapCut.
+7. Once the recording is ready, Claude has usually finished the animation code; feed the clip back to let it embed the footage.
+8. Review animations for visual bugs or off-beat timing, directing adjustments and having Claude take screenshots to self-verify.
+9. Render the final video and thumbnail.
+10. While rendering, have Claude correct typos in the subtitle file and draft the YouTube title and description.
+11. With the video exported, upload it directly via the YouTube API and schedule the release.
 
-## Remotion video production workflow
+Roughly 90% of this pipeline runs on deep AI collaboration, leaving only about 10% for manual tasks—mostly because parts of CapCut lack API integration, and I personally dislike the feel of synthesized AI voiceovers.
 
-I've been getting smooth at making Remotion videos in Claude Code. Rough workflow:
+I plan to package and open-source this automated video pipeline as a reusable Skill module later. You can see a sample video produced with this setup here: <https://youtu.be/J1WjxzzSzv8?si=w8jLGhBjh8_0HbYR>
 
-1. Research the topic, check official docs and community best practices
-2. Design the narration script, mark where screen recordings are needed
-3. Record narration, strip filler words in Jianying
-4. Send the subtitle and audio back to Claude Code, ask it to start designing animations
-5. Meanwhile, I record the screen demos
-6. Do light post-production in Jianying
-7. By now the animations are roughly done. Send the video back to Claude Code for embedding
-8. Check whether animations stay in sync, any dropped beats. If so, direct corrections and ask it to screenshot-verify itself
-9. Output final video and thumbnail
-10. While waiting, have it fix subtitle typos and prepare video title + description
-11. Once output lands, upload via YouTube API with scheduled publish
+## When Domain Expertise Meets Execution: Leverage for Non-Engineers
 
-The full pipeline is ~90% deep AI involvement, 10% is Jianying features that don't have API/MCP access, plus my personal preference against AI-synthesized voice.
+This collaboration model stretches far beyond my own video setup; it proved just as powerful during live teaching sessions.
 
-Plan to open source this as a Skill eventually. Sample video: <https://youtu.be/J1WjxzzSzv8?si=w8jLGhBjh8_0HbYR>
+While coaching a student on Claude Code recently, I discovered he had spent eight years running YouTube partnerships at Google. I mentioned offhand that my new channel was struggling to gain traction, and he generously shared several core strategies for driving organic YouTube growth.
 
-## And an unexpected case: a Xoogler grew my channel
+After class, while having Claude Code organize and archive our session notes, I came across that exchange and casually prompted it: "Can you try implementing his advice?" and handed over the channel's API credentials.
 
-Beyond using Claude Code to produce videos myself, an unexpected use case came up while teaching this week.
+Within 24 hours, views surged noticeably, and channel subscribers doubled in a single day.
 
-A few days ago I was teaching a student how to use Claude Code and accidentally learned he'd worked at Google for 8 years on YouTube-related products.
+That outcome completely flipped the dynamic. Even without any programming background, his sharp planning instincts and command clarity were immediately obvious. Working with AI came naturally to him—he picked up concepts instantly, easily covering four hours of progress in a single hour.
 
-I casually said, "Our startup channel's traffic won't grow, it's so frustrating," and he generously shared a few content strategies for growing YouTube channels (is that insider information?).
+## A Reality Check on Rate Limits
 
-After class, while I was asking Claude Code to archive the class transcript, I hit that portion of the conversation and asked Claude Code: can you try executing his advice? Then gave it API access to my channel.
-
-24 hours later, traffic exploded. Subscribers doubled in a day.
-
-So this time I called him my teacher. Xooglers are genuinely sharp. You can feel it in conversation. No coding background, but whether it's planning logic or directing AI execution, he picks things up instantly. We did four hours of work in one.
-
-## Rate limit reality check
-
-One last rant: you know that feeling when at 9 AM your 5-hour quota is at 55%, and 15 minutes later you hit the limit and need a nap to reset?
+No matter how smooth your workflow feels, daily production eventually crashes into strict rate limits. Especially on flagship models, you will almost certainly experience this: looking at your 5-hour quota sitting at 55% at 9:00 AM, only to hit a wall fifteen minutes later and wait out the cooldown:
 
 ```
 You've hit your rate limit.
 - Reset Friday 07:00 AM
 ```
 
-That's daily life after Opus 4.7. If you haven't read [my quota incident log](/blog/posts/en/claude-code-quota-incident-log), one of its sections covers Opus 4.7's launch week. Pair it with this one.
+This has been reality ever since Opus 4.7 dropped. For a detailed breakdown of how that played out, check my earlier [quota incident log](/blog/posts/en/claude-code-quota-incident-log), which documented what happened during launch week.
 
-Official changelog: <https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md>
+Facing inevitable rate limits, defensive habits come down to three straightforward practices:
+First, delegate long-document reading to lightweight models like Haiku for chunked summaries, keeping raw files away from your primary agent;
+Second, send images and extra context in new messages so you don't invalidate existing prompt cache;
+Third, pair permission bypass with automated hooks to skip repetitive confirmations while safeguarding destructive actions.
+
+Once you set up Claude Code as a system with rules, memory, hooks, and multi-model routing, it stops feeling like a fragile chatbot and turns into a reliable second brain you can lean on every day, even within tight quotas.
+
+## Appendix
+
+A quick reference for the advanced configurations and technical specs mentioned in this post:
+
+- **Rules (`~/.claude/rules/`)**: Imported into `CLAUDE.md` on demand using `@path/to/rule.md`. Ideal for storing cross-project engineering conventions, gotchas, and tool routing tables.
+- **Session Memory**: Uses the auto-memory system to track session-level user preferences, project statuses, and post-mortems, automatically pulling relevant entries into fresh sessions.
+- **Automated Hooks (`settings.json`)**: Intercepts lifecycle events, including `SessionStart` initial checks, `PreToolUse` command verification, and `PostToolUse` reminders.
+- **Terminal Display & Click Targets**: Set Ghostty to No Flicker mode for fixed text rows, and format file paths as absolute URLs with the `file://` protocol to keep paths clickable when mouse capture is active.
+- **Official Updates**: For changelogs and detailed release notes across Claude Code versions, see the official CHANGELOG: <https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md>
 
 <!--
-2026-10-26 splice cleanup (mirrors zh): no sections moved or merged, bridged video production into teaching use case in Xoogler section; new bridge sentences: "Beyond using Claude Code to produce videos myself, an unexpected use case came up while teaching this week."
+2026-10-26 拼接順稿：
+- 「除了自己用 Claude Code 產影片，這週教課時還碰上一個意料外的應用實例。」— 類型：銜接
+（在「Xoogler 幫我長流量」節開頭補上一句銜接，交代從影片製作延伸到教學應用）
+
+2026-11-12 舊文盤點整篇重寫：
+將原本零散的設定碎念、踩坑紀錄與實戰案例，重構成「配置拆分、互動介面、額度經濟、實戰工作流」的完整架構，去除離題批判，技術細節收斂至附錄。
 -->

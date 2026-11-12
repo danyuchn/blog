@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-31T04:00:00Z
-title: Two Habits for Voice-Driving Coding Agents, and I Am Still Finding the Balance
+title: "Two Voice Prompting Modes: Push-to-Talk for Chores, Long Audio for Deep Thinking"
 slug: en/voice-input-two-modes
 featured: false
 draft: false
@@ -9,59 +9,72 @@ tags:
   - ai-workflow
   - productivity
   - gemini
-description: 'Short instructions go through push-to-talk; walking through a whole course outline or system architecture goes through a full QuickTime recording that I hand to the AI to transcribe and execute. Plus the setup I use to burn the AI quota that came free with Google Drive.'
+description: 'When working with Claude Code or Codex, use push-to-talk for quick prompts and full recordings for deep thinking. Here is a zero-setup browser trick and a headless CLI setup for agents to transcribe audio.'
 ---
 
-Back in March I was still wishing for it: hoping for built-in voice input! The tools have since filled that in, and now the question is just how to use them.
+Back in March, I was wishing coding and CLI AI tools had built-in voice input. Tools like Claude Code and Codex eventually rolled it out, but once microphone support arrived, that turned out to be the easy part. The real challenge was figuring out how to express my thoughts out loud without breaking my stride.
 
-I am curious what everyone's habit is for voice-driving Claude Code or Codex.
+At first, I assumed I would mostly give short instructions, so I set up push-to-talk tools like SayIt where you hold a key to record and release to transcribe. Over time, though, whenever I needed to walk through a curriculum deck, review system architecture, or run an end-to-end acceptance check, I gravitated toward long, uninterrupted recordings. Push-to-talk handles quick chores; long recordings are for deep thinking where interruptions hurt. I am still balancing the two.
 
-At first I assumed my habit was short instructions, so I installed something like SayIt: hold the key to record, release to transcribe. Later I found that for things like walking through the whole thinking behind a slide deck, going over a system architecture, or doing an overall acceptance pass, what I actually prefer is: open QuickTime, start talking through my comments while watching, and when I am done, drag the audio file over and let the AI transcribe it with a preconfigured speech-to-text tool and then act on it.
+## Two Voice Prompting Modes: Quick Push-to-Talk vs. Long Audio for Deep Work
 
-Where I am right now: for miscellaneous chores, push-to-talk works; when I need to seriously walk through my thinking without being interrupted, I use the full recording. I am still finding the balance...
+The first mode is push-to-talk for small, routine tasks. Just like SayIt, you press to record and release to transcribe. For quick chores, it works well.
 
-## How the transcription piece is wired up
+When reviewing slide decks, course structures, system architectures, or end-to-end deliverables, my habit shifted: open QuickTime, talk through feedback while browsing the material, and then drop the audio into a transcription tool for an AI agent to execute.
 
-The full-recording route hinges on transcription. This is what I use now.
+Whenever you need to untangle complex ideas without breaking flow, record the whole session. Once you are done, pass the audio file to your transcription setup to generate a transcript and trigger downstream tasks.
 
-For anyone who wants to actually use the AI quota that came bundled with your Google Drive purchase: have your Claude Code / Codex read the following and set it up as a SKILL.
+## Transcribing Long Audio: Zero-Setup Web UI and Headless Multimodal Calls
+
+With long recordings, the bottleneck is transcription.
+
+To chew through long audio quickly, the best approach is leaning directly on multimodal models. There are two straightforward paths:
+
+The simplest, zero-setup option is dropping the audio file straight into the Gemini web UI. It is hard to beat: drop a 23-minute recording into the chat, and Google's compute churns out a clean, typo-free transcript in 55 seconds. Pair this with your other AI agents: record long audio while reviewing documents to stay in flow, then copy the transcript over and let the agent get to work.
+
+If you want transcription baked into your workflow without switching to a browser, you can call a terminal tool in headless mode directly from Claude Code or Codex. The key here is letting the multimodal model use its native audio understanding—feeding the raw audio directly for it to listen and transcribe, rather than piping it through Whisper or slicing it up with ffmpeg first. Native multimodal transcription matches traditional tools in accuracy, runs significantly faster, and includes speaker diarization out of the box.
+
+Also, if your Google Drive plan comes with bundled AI credits, burning that quota via headless CLI calls from Codex or Claude Code for grunt work—voice transcription, image recognition, document summaries—is a great deal. The quota comes bundled with Drive anyway; just the other day I spun up 10 Gemini agents simultaneously to read a 193-page report without feeling the pinch.
+
+## Practical Tips and Guidelines
+
+A few practical takeaways when integrating long audio into your daily routine:
+
+First, filler words. Verbal fillers like "um" and "uh" can be cleaned up afterward if you need polished text, but if you are just prompting an agent, you can ignore them. On a subscription quota, a few extra tokens make no difference.
+
+Second, alternative STT models. People often ask how accurate this approach is. The error rate is comparable to standard tools, but it runs much faster and handles speaker identification automatically. Others have recommended alternative speech-to-text models; I tested one that excelled at Taiwanese Hokkien, though its Mandarin accuracy fell slightly behind Qwen.
+
+Third, prerequisites. Make sure you are logged in via the antigravity CLI beforehand.
+
+## Appendix
+
+For anyone looking to put their Google Drive AI credits to good use, you can have Claude Code or Codex set up a skill using this configuration:
 
 ```bash
-agy -p "請直接使用你自己的多模態原生音訊理解能力，完整轉錄以下音檔為逐字稿。不要嘗試呼叫 whisper、ffmpeg 分析或任何外部語音轉文字工具，直接把音檔本身讀進來聽並轉寫。音檔路徑：<絕對路徑>。請完整逐字轉錄，不要摘要、不要省略，並在每段開頭標註講者與時間戳 [MM:SS]。" --model "gemini-3.6-flash-high" --add-dir <音檔所在目錄> --dangerously-skip-permissions
+agy -p "Transcribe the following audio file verbatim using your native multimodal audio understanding. Do not call whisper, ffmpeg analysis, or any external speech-to-text tools; listen to and transcribe the audio file directly. Audio path: <absolute path>. Transcribe verbatim without summarizing or omitting anything, and label the speaker and timestamp [MM:SS] at the start of each section." --model "gemini-3.6-flash-high" --add-dir <directory containing audio file> --dangerously-skip-permissions
 ```
 
-And then you get a very, very fast transcription tool.
-
-Remember to log in on the antigravity CLI side first.
-
-## Why this route
-
-Using its headless mode, called out by codex or claude code to eat the subscription quota on odd jobs (transcription, image recognition, long-document summaries) works pretty well. The day before, I had 10 gemini agents read a 193-page report all at once. Zero pain at all.
-
-Someone asked whether this transcription method is accurate. The error rate is about the same, but it is very, very fast, and it comes with speaker identification built in. The quota came free with Drive.
-
-Someone else recommended another STT model. I tried one of them before. What it is strongest at is recognizing Taiwanese; for Chinese, accuracy is a touch behind qwen.
-
-## The Zero-Setup Option: Gemini on the Web
-
-If running a CLI feels like too much trouble, there's actually an even simpler, zero-setup alternative.
-
-The one thing Gemini's web app is still miles ahead at: transcribing audio into a transcript.
-
-Drag in a 23-minute recording and, with Google's massive compute behind it, it's done in 55 seconds. Zero typos.
-
-(The ums and uhs you can clean up afterward if you need to. If it's going into a prompt, just ignore them. On a subscription it's barely a few tokens either way.)
-
-I recommend pairing it with another AI agent. When I'm reviewing a long document, I focus on recording one long audio file, which helps me get into a deep flow state. When I'm done, one click to copy and hand it to the agent to get things done. Lovely.
+The core of this command lies in prompt design: forcing the model to rely on its native audio comprehension, bypassing external Whisper calls and ffmpeg preprocessing, and returning a full verbatim transcript with speaker labels and `[MM:SS]` timestamps, pinned to `gemini-3.6-flash-high`.
 
 <!--
-2026-10-09 W42 postscript: translated from a 10-05 17:05 Threads post. Added non-source sentences: heading only.
+2026-10-09 W42 補記：10-05 17:05 Threads 貼文逐字（補半形空格、「阿」改「啊」）。新增非原文句子：小標（框架句）。
 -->
 
 <!--
 新增非原文句子清單（忠實度自首）：
-1. 「Back in March I was still wishing for it:」「The tools have since filled that in, and now the question is just how to use them.」 — 類型：併入碎念（Voice Input Please，2026-08-14 週報併入）
+1. 「完整錄音這條路，卡點在轉錄。我現在用的是這個。」 — 類型：銜接（把素材 A 的完整錄音習慣接到素材 B 的轉錄設定）
+2. 「有人問這個轉錄法準不準。」 — 類型：銜接（素材 D 原為回覆他人提問，補回被回覆的語境）
+3. 「也有人推薦別的 STT 模型。」 — 類型：銜接（素材 E 原為回覆他人推薦，補回被回覆的語境）
+4. 「我前一天就是一次叫 10 個 gemini agent…」 — 類型：改寫（原文「我昨天就是」，因文章脫離貼文當下時序，「昨天」改為「前一天」）
+5. 「三月的時候我還在許願：」「後來工具一個個都補上了，問題就變成怎麼用。」 — 類型：併入碎念（拜託給我語音輸入，2026-08-14 週報併入）
+其餘句子皆為素材逐字或僅做標點/斷行整理（含把原文為手機排版斷開的指令接回單行、刪除 emoji）。
 
-2026-10-26 splice cleanup (mirrors zh): removed "Postscript" from heading, clarified reference to recommended STT models, and added bridge sentence; new bridge sentences: "If running a CLI feels like too much trouble, there's actually an even simpler, zero-setup alternative."
+2026-10-26 拼接順稿：
+- 「之前有試過其中一款，最強的是辨識台語，不過辨識中文準確度差 qwen 一點點。」— 類型：改寫（補足代名詞先行詞）
+- 「如果你覺得跑 CLI 太麻煩，其實還有個更簡單的免設定解法。」— 類型：銜接
+將補記標題改為自然章節並補充過渡句，修正 STT 模型指涉代名詞。
 -->
 
+<!--
+2026-11-12 舊文盤點整篇重寫：將原本零散的貼文碎片整合成完整主線，區分隨按即錄與長錄音兩種思考場景，並將技術指令抽整至附錄，使核心轉錄判準泛化適用於現行多模態模型。
+-->

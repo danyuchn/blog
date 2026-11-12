@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-04-08T15:00:00Z
-title: "cc-audit: A Skill That Forces You to Save Claude Code Quota"
+title: "cc-audit: A Skill That Stops Claude Code from Burning Your Tokens"
 slug: en/cc-audit-skill
 featured: false
 draft: false
@@ -9,64 +9,66 @@ tags:
   - claude-code
   - ai-tools
   - token-optimization
-description: 'I turned my viral list of quota-saving tips into a skill. Hand the GitHub link to Claude Code to install, and it''ll audit your settings, recent sessions, rules bloat, and context usage, then hand back an actionable fix list.'
+description: 'I turned my viral token-saving tips into an automated audit skill for Claude Code. Feed it to Claude Code, and it inspects your settings, recent sessions, rules, and context usage to hand you an actionable checklist of fixes.'
 ---
 
-Claude has been messing with quotas lately and everyone's complaining. Complaining aside, Claude is still what I use to work. A while back I posted a long list of quota-saving tips on Threads, which ended up getting a thousand-plus likes. Someone suggested it should be a skill, so I built one.
+Anthropic keeps messing with Claude's rate limits lately. People complain, but at the end of the day, we still have to use it. Instead of sweating over an empty token bar every afternoon, a much more practical move is hunting down the configs and habits quietly burning through your quota. A while back, I put together a long thread on token-saving tips that got over a thousand likes, and someone in the comments suggested turning it into a skill.
 
-Here it is: <https://github.com/danyuchn/cc-audit>
+So I built it, and here it is: <https://github.com/danyuchn/cc-audit>
 
-Hand the link to Claude Code and ask it to install.
+It's a health-check skill specifically designed for your Claude Code setup. Feed the repo link to Claude Code, let it install it for you, and you can run a diagnostic right away.
 
-## What It Does
+## Why Not Just Run /stats?
 
-cc-audit is a health-check skill. When triggered, it runs four steps and hands back a structured report and an actionable fix list.
+The first question most people ask is obvious: doesn't the terminal already have `/stats` for checking usage?
 
-### Step 1: Static Config Audit
+The built-in `/stats` command does tell you how many tokens the current session consumed, but it fails to answer three fundamental questions:
 
-- Is your default model set to Sonnet? Sonnet is much cheaper than Opus for most tasks and usually enough.
-- What hooks are configured? Any runaway post-hooks silently eating tokens?
-- MCP server list—each one is a fixed startup overhead.
-- Line counts per rules file—catches rules that have bloated past 200 lines and need splitting.
-- Skills list.
+1. Why did it use so many?
+2. Which specific settings are burning through the quota?
+3. Now that you have the numbers, what exact changes should you make next?
 
-### Step 2: JSONL Session Analysis (last 5 sessions)
+`/stats` shows the weight on the scale without diagnosing the cause. cc-audit acts as an automated physical: instead of raw numbers, you get a structured report and an actionable punch list. Every single entry maps directly to a specific file, line number, and recommended edit, saving you from guessing or combing through documentation.
 
-This is the meat of it. It pulls your five most recent JSONL files and computes, per session:
+## The Four Checks in cc-audit
 
-- **Context usage**: `(input_tokens + cache_creation + cache_read) / 200000`
-- **Cache type**: distinguishes Pro's 5-minute cache (`ephemeral_5m_input_tokens`) from Team/Enterprise's 1-hour cache (`ephemeral_1h_input_tokens`)
-- **Compact triggers**: detects `/compact` events via `type=system` messages with a `summary` key
-- **Image-triggered cache misses**: spots the pattern "user content has image type + next assistant message has cache_read < 500"
+Once triggered, cc-audit walks through four steps to take a full inventory of your setup and recent token usage:
 
-After the run you get a clear view per session: how many tokens it cost, whether auto-compact ran, whether a pasted image nuked the cache, whether context usage was 80% or 30%.
+**Step 1: Static Config Review**
 
-### Step 3: Check Against Official Best Practices
+It starts by inspecting your baseline environment:
+- Whether your default model is set to Sonnet (Sonnet is far cheaper than Opus for most daily tasks, and more than capable enough).
+- Configured hooks, especially rogue post-hooks that silently eat tokens.
+- The MCP server list—each server carries a fixed overhead every time you launch a session.
+- Line counts across rules files, flagging any rule file that bloats past 200 lines and needs splitting.
+- Currently mounted skills.
 
-This step WebFetches the latest Anthropic Claude Code docs and compares your current setup against official recommendations. Are the tips I wrote getting outdated? They can't, because it re-fetches every run.
+**Step 2: JSONL Session Analysis (Last 5 Sessions)**
 
-### Step 4: Rules Path-Specificity Check
+This is the heart of the audit. It pulls JSONL logs from your last five sessions and runs a deep pass on each one:
+- **Context utilization**: Calculated as `(input_tokens + cache_creation + cache_read) / 200000`. If you run a 1M context window session, the denominator switches to `1,000,000`. This gives you an immediate read on whether your context is sitting at 80% or 30%.
+- **Cache lifetime and tier**: Extracted from `ephemeral_5m_input_tokens` and `ephemeral_1h_input_tokens`. As long as you are on a Claude subscription within plan limits, the main thread gets a 1-hour cache; subagents or overage usage drop to a 5-minute cache.
+- **Compact count**: Scans for the `summary` keyword in `type=system` messages to see whether `/compact` was triggered during the session.
+- **Cache misses after image pastes**: Detects instances where user content has an image type followed by an assistant message with `cache_read < 500`, catching cases where an image broke prompt caching.
 
-It checks whether your rules should have a `paths:` condition so they only load when relevant file paths show up. This one saves a lot, and most people don't know about it.
+Once this step finishes, everything is laid bare: total tokens spent, whether auto-compact kicked in, whether a pasted screenshot wrecked your cache, and whether you were hovering at 30% or 80% context capacity.
 
-## Why Not Just Use `/stats`?
+**Step 3: Checking Official Best Practices**
 
-Claude Code's built-in `/stats` tells you "this session used X tokens," but it doesn't tell you:
+A common concern with static audit tools is that rules go stale. Here, cc-audit uses WebFetch to pull Anthropic's latest official Claude Code documentation live and compares the newest recommendations against your config. Because it fetches updates dynamically on each run, the advice never falls out of date.
 
-1. Why it used that much
-2. Which settings are the culprits
-3. What to change next
+**Step 4: Path-Specificity Check for Rules**
 
-cc-audit's output is an actionable fix list. Each item points to a specific file, specific line, specific change. You don't have to cross-reference docs and guess.
+It checks whether your rules files should use conditional loading with `paths:`. With path filters, specialized rules only load into context when relevant files appear in the workspace, instead of permanently eating tokens in every session. It is one of the biggest token savers available, yet surprisingly few people use it.
 
-## Build the Habit
+## Turn Auditing into a Regular Refactoring Habit
 
-My own usage is to run cc-audit every week on Claude Max reset day. Pair this with the workflow I wrote about in [Obsidian + Claude Code](/blog/posts/en/obsidian-claude-code-workflow)—the day your weekly quota is about to reset and you're temporarily a "single-day token millionaire" is exactly when you should be doing this kind of refactor.
+I used to audit everything manually against the docs, which easily took 30 to 40 minutes and left plenty of room to miss things. Packaging it into a skill cut that down to a fully automated five-minute run that covers every item in one shot.
 
-I used to do this by hand, cross-checking docs, and it took 30-40 minutes. As a skill, it's fully automated in five minutes and I stop forgetting items.
+If you want to bake this into your routine, the best time to run it is right before your quota resets. As I mentioned in my [Obsidian + Claude Code workflow](/blog/posts/en/obsidian-claude-code-workflow) piece, quota reset day makes you a temporary "token billionaire." With tokens to spare, that is the prime window to refactor your environment, split bloated rules, and prune unused configs.
 
-Hand this link to Claude Code: <https://github.com/danyuchn/cc-audit>
+Give this link to Claude Code: <https://github.com/danyuchn/cc-audit>
 
-It'll install and verify, then you just type `/cc-audit` to run.
+It will install it, verify everything, and then you just type `/cc-audit` to start.
 
-> **Postscript (2026-10-20):** Two things in the formulas above have moved. Cache TTL isn't split by Pro vs Team/Enterprise: on any Claude subscription the main conversation gets the 1-hour cache while you're within plan usage, and subagents or usage-credit turns get 5 minutes. And many sessions now run a 1M context window, so divide by 1,000,000 instead of 200,000 if that's what you're on.
+<!-- 2026-11-12 舊文盤點整篇重寫：將文末後記對快取時效與上下文視窗公式的修正整合進步驟內文，把檢查流程改為連貫的四大面向，並以清楚的安裝指引作為全文唯一的收尾。 -->

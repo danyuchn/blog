@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-02-19T04:00:00Z
-title: "Claude Code Initial Prompt Tips: Six Techniques for Effective AI Collaboration"
+title: "Claude Code Initial Prompts: Six Practical Habits for Working with AI"
 slug: en/claude-code-initial-prompt-tips
 featured: false
 draft: false
@@ -9,61 +9,55 @@ tags:
   - claude-code
   - ai-coding
   - developer-experience
-description: 'Six practical tips for writing effective initial prompts in Claude Code, from clarifying your goals to leveraging plan mode for better AI collaboration.'
+description: 'Six practical habits for writing Claude Code initial prompts: clarifying goals, mapping manual workflows, picking the right model, and leaning on plan mode.'
 ---
 
-I've recently had the chance to help some former colleagues and team members upgrade their workflows to work with AI. This got me thinking more intentionally about my own Claude Code habits.
+Lately, while helping former colleagues and team members bring AI into their workflows, I started taking notes on how I actually use Claude Code every day.
 
-I really dislike those self-proclaimed "AI experts" online who barely scratch the surface and then charge for courses. For me, since I know I only scratch the surface myself, sharing for free is the real joy.
+A lot of people open Claude Code and toss in whatever comes to mind first. A few basic habits before hitting send make a huge difference in how clearly the AI responds.
 
-Today I want to share: **how to write clear initial prompts**.
+![Claude Code terminal screenshot: example initial prompt](/blog/images/claude-code-initial-prompt-tips/terminal-prompt.png)
 
-![Claude Code terminal screenshot: initial prompt example](/blog/images/claude-code-initial-prompt-tips/terminal-prompt.png)
+## Get clear on the goal and the motivation
 
-## Tip 1: Know Your End Goal and Motivation First
+Before typing, take thirty seconds to answer two simple questions: what am I actually trying to accomplish, and why does this need to happen right now?
 
-You need to think clearly about your end goal and your motivation before typing anything.
+If you aren't clear on what you want, there is no way an AI will get it right. In my case, the end goal was cleaning up and refactoring our `CLAUDE.md` and memory files. The motivation was that we hadn't touched them in a while, and small frictions were starting to pop up during our daily sessions.
 
-In my case, the goal was "refactor and clean up CLAUDE.md and memory files," because I felt things had gotten a bit out of sync since my last cleanup — collaboration with Claude was starting to feel slightly off.
+## Picture how you would do it by hand
 
-Many people open Claude Code and just throw out a random sentence. But if you don't know what you want, how can the AI get it right? Spend 30 seconds thinking: what exactly am I trying to achieve, and why?
+Whenever you face a task, ask yourself one question: "If I didn't have AI, how would I walk through this step by step on my own?"
 
-## Tip 2: Imagine How You'd Do It Manually Without AI
+You are only asking the AI to handle work you already know how to do. My thought process at the time was straightforward: if I did this manually, I would first check official best practices for writing clean rule and memory files. Then, I would pull up our existing files and review each one against those standards. Translating the workflow already in your head into concrete steps works much better than inventing a prompt out of thin air.
 
-Ask yourself: "If there were no AI, how would I do this by hand? What's the process?"
+## Don't worry about typos or filler words
 
-For my task, I imagined: I'd first look up best practices for writing memory files and rules, then find all the rules and memory files on my machine to check if they match those best practices. That's exactly how I wrote my prompt.
+Don't stress over typing. Unless a typo completely changes what you mean, just let it slide.
 
-This mindset is crucial. You already know how to do the work — you're just letting AI take over the execution. Translating your workflow into instructions is far more effective than trying to craft the perfect prompt from scratch.
+If typing feels slow or you struggle to organize your thoughts, turning on voice dictation works great. Just speak your mind. The "ums" and "ahs" barely cost any tokens. Claude Code handles typos, casual phrasing, and speech quirks without missing a beat, so don't get stuck trying to craft a "perfect prompt" before you even begin.
 
-## Tip 3: Use Plan Mode When You're Unsure
+## Pick the right model for the job
 
-If you're worried about missing details or overlooking something, start with plan mode. Plan mode will proactively ask you multiple-choice questions wherever things are unclear.
+Picking the right model saves time and money, and it often produces cleaner results.
 
-Plan mode is the feature I recommend most for Claude Code newcomers. It analyzes the current state, drafts a plan, and actively asks you about anything uncertain. You don't need to have every detail figured out upfront — let the AI fill in the gaps.
+Whenever a new model drops, I read the system card, skim the release notes, and check Reddit to see what people are saying. Still, the most reliable test is running it yourself for two or three days. You quickly learn which tiers you trust with specific tasks. For this documentation cleanup, I didn't need a heavy model like Opus 4.6 for a complex refactor; Sonnet 4.6 handles documentation maintenance exceptionally well and was more than enough.
 
-![Plan mode analysis: automatically diagnoses file status and suggests improvements](/blog/images/claude-code-initial-prompt-tips/plan-overview.jpg)
+## When details are fuzzy, switch to plan mode
 
-## Tip 4: Don't Worry About Typos
+If a task has lots of moving parts and you worry about missing a key step, starting in plan mode is your best bet.
 
-Don't worry about typos — unless your typo completely changes the meaning, just let it go. If you struggle to type out organized thoughts, voice input works fine too. Just talk. Don't worry about filler words like "um" or "uh" — they barely cost you any tokens.
+Plan mode is the feature I recommend most to anyone getting started with Claude Code. It inspects the current setup, sketches out an execution plan, and stops to ask multiple-choice questions whenever it hits an ambiguous choice. You don't need to have every detail figured out in your opening prompt. Let the AI surface those edge cases early.
 
-Claude Code's language understanding is strong. Typos, casual speech, and voice input artifacts are no problem. Don't let the pursuit of a "perfect prompt" paralyze you — just say it first and refine later.
+![Plan mode analysis screen: diagnosing file status and proposing improvements](/blog/images/claude-code-initial-prompt-tips/plan-overview.jpg)
 
-## Tip 5: Pick the Right Model for the Job
+## Read the plan before letting it run: ask questions, ask for changes
 
-I usually recommend checking the official system card and introduction when a new model comes out, reading Reddit for user impressions, and most importantly, trying it yourself for two or three days. You'll naturally learn which tasks you're comfortable assigning to each model tier.
+Once the plan is generated, take the time to read through what it laid out.
 
-In this case, since it wasn't complex code refactoring, I skipped Opus 4.6 and went with Sonnet 4.6, which is particularly good at documentation maintenance tasks. Pick the right model, and you save time, money, and get better results.
-
-## Tip 6: Read the Plan Carefully — Ask Questions, Request Changes
-
-Read the plan carefully. If you don't understand something, use option 4 to tell Claude "I don't understand, rewrite it in simpler terms." My habit is: if anything in the plan is unclear, I ask; if anything is unsatisfactory, I request changes. Then I bypass permissions and let it run while I go do things it can't — like cleaning the house.
+If the explanation feels too technical, you can pick option 4 and simply tell it, "I don't get this—explain it in plain English." Ask about anything confusing, and tell it to tweak anything you don't like. Once everything looks solid, bypass permissions and let it run, freeing you up to go tackle chores the AI can't do for you.
 
 ![Plan mode execution screen](/blog/images/claude-code-initial-prompt-tips/plan-execution.jpg)
 
-Just remember to maintain version control and backups as a safety net. If you don't fully trust it, the step-by-step approval mode works great too.
+Letting the AI run on autopilot saves effort, but basic safeguards still matter. Make sure your version control is clean and backups are in place before letting it loose, just in case something unexpected happens. And if you aren't fully confident in the task yet, stepping through actions one by one remains a sensible and dependable choice.
 
----
-
-That's about it. I'll share more when something comes to mind. No paid courses, no scams — just real, first-hand tips from the trenches.
+<!-- 2026-11-12 舊文盤點整篇重寫：去除開頭與結尾的防禦性贅述，將六個起始指令心法依思考、表達、選模到計畫模式執行的流程梳理連貫，並將安全備份提醒集中於文末收尾。 -->

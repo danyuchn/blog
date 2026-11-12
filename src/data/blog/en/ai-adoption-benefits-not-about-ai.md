@@ -2,7 +2,7 @@
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-28T04:00:00Z
 modDatetime: 2026-09-24T04:00:00Z
-title: Most of the Gains From AI Adoption Have Little to Do With AI
+title: Most of the Gains From AI Adoption Have Little to Do with AI
 slug: en/ai-adoption-benefits-not-about-ai
 featured: false
 draft: false
@@ -10,59 +10,67 @@ tags:
   - opinion
   - ai-workflow
   - enterprise-ai
-description: 'From hands-on work, most of what an organization gains from adopting AI comes from fixing permissions, data governance, buy-in and redundant processes along the way, not from the AI itself.'
+description: 'In practice, most of what an organization gains from adopting AI comes from fixing permissions, data governance, buy-in, and bloated processes along the way, not the AI itself.'
 ---
 
-Honestly: from my own experience, most of the gains organizations get from AI adoption have little to do with AI.
+To be blunt: across my own rollout work, most of what organizations gain from adopting AI has very little to do with AI.
 
-Along the way you have to fix permissions, fix data governance, win people over, cut the redundant steps. By the time all of that is done, it looks like you could have improved efficiency without the AI anyway.
+I noticed this on an earlier project. After helping a client roll out AI, it looked like they had saved 80% of their time. But when I looked back more closely, that 80% had almost nothing to do with AI. It came down to structuring their existing workflows, establishing a single source of truth (SSOT), and pruning redundant steps.
 
-I ran into this on an earlier project. After the rollout it looked like the client had saved 80% of their time, and later I found that 80% had little to do with AI. It was structuring the existing process, the SSOT, and the pruning.
+At bottom, it has always been a people problem and an existing-process problem.
 
-At bottom, it's the people problem, plus the existing-process problem.
+## The Truth Behind the 80% Time Savings
 
-That's also why I think shadow AI is a sore spot at a lot of companies. Rather than letting it run loose, better to find a way to coexist with it.
+During a rollout, you have to sort out permissions, clean up data governance, win people over, and cut out redundant steps.
 
-Two related pieces: [The 2.5 Stage of AI Adoption](/blog/posts/en/ai-adoption-stage-2-5-automation) on where adoption stalls, and [Designing Enterprise AI Training](/blog/posts/en/enterprise-ai-training-design) on how the training side gets arranged.
+By the time all that groundwork is done, you realize that even without AI, the bottlenecks would have cleared up on their own.
 
-Related video: "The AI Collaboration Methodology Distilled From Nearly a Hundred Workshops, Courses and Enterprise Rollouts" <https://youtu.be/ST_v4UdC-Wc>
+That's why you shouldn't adopt AI just for the sake of adopting it. You end up polishing a turd.
 
-## Don't Adopt AI Just to Adopt It
+If you want to see how much AI can actually help across those seven steps, take a look at this video: *Want to Adopt AI? Look at How Much AI Can Actually Help Across These Seven Steps First* <https://youtu.be/KgimZ5n3mC0>.
 
-Don't adopt AI just to adopt it, or you end up polishing a turd.
+## Managing AI Like a Grocery Store Employee
 
-The new video is about exactly this: "Want to Adopt AI? Look at How Much AI Can Actually Help Across These Seven Steps First" <https://youtu.be/KgimZ5n3mC0>
+Beyond rushing into adoption before untangling your processes, another common mistake is having completely unrealistic expectations of AI.
 
-Beyond not sorting out the process first, another common mistake is having completely unrealistic expectations of AI.
+Imagine you run a corner grocery store and hire an employee. When they first start, you only let them stock shelves, label items, and haul heavy boxes—strictly within your line of sight. Only after they've been around for a while and their work stays steady do you gradually let them handle the register, place orders, reconcile accounts, and watch the shop.
 
-## Treat AI Like a Grocery Store Hire
+And when they first start minding the store alone, you still don't dare walk too far away. You're terrified they'll run into something unexpected and freeze up, so you stay on standby, ready to rush back the second your phone rings.
 
-You open a grocery store and hire someone. At first you only let them stock shelves, put on labels and carry heavy things, all within your line of sight. Only later do you let them work the register, place orders, reconcile the books, mind the store.
+Only much, much later—once you know they truly understand every rule in the shop, once you've personally coached them through plenty of surprises, and once you're certain they can handle things on their own—do you dare take a vacation abroad and leave your life's work entirely in their hands.
 
-And when they first mind the store alone, you still don't dare go far, because you're afraid they'll hit something they don't know how to handle and you need to be one phone call away from coming back to save the day.
+If building trust with a real employee takes that kind of progression, why is it that when people start using AI, they immediately fantasize about one-shotting everything and expect every workflow to be fully automated on day one?
 
-Much, much later, once you're sure they know every rule and you've walked them through plenty of surprises, once they can really stand on their own, that's when you dare go abroad on holiday and leave this thing you built in their hands.
+## Crossing the Trust Barrier: Getting Unstuck and Moving Past Fear
 
-So how the hell do you start using AI and immediately fantasize about one-shotting everything, automating all of it? What is wrong with you?
+Another common problem is reluctance: three months after rollout, why does nobody actually dare use it? For that side of things, see this video: *Three Months Into AI Adoption, Why Does Nobody Dare Actually Use It?* <https://youtu.be/TIuu5uMrhnE>.
 
-Another video happens to be about the other side of that, the not-daring: "Three Months Into AI Adoption, Why Does Nobody Dare Actually Use It?" <https://youtu.be/TIuu5uMrhnE>
+If your rollout gets stuck, you need to figure out which layer is holding you back. You can check out the video *AI Adoption Still Stuck? First Figure Out Which Layer It Is Stuck On* <https://youtu.be/8sLBM7xg9U0>, as well as [Stage 2.5 of AI Adoption](/blog/posts/en/ai-adoption-stage-2-5-automation) on where rollouts typically stall.
 
-The follow-up is about finding out why you are stuck: "AI Adoption Still Stuck? First Figure Out Which Layer It Is Stuck On" <https://youtu.be/8sLBM7xg9U0>
+That's also why I think shadow AI is such a sore spot for so many companies. Rather than turning a blind eye, it's better to find a way to coexist with it. For how to structure the training side, take a look at [Designing Enterprise AI Training](/blog/posts/en/enterprise-ai-training-design).
+
+For a related video, check out: *The AI Collaboration Methodology Distilled From Nearly a Hundred Workshops, Courses and Enterprise Rollouts* <https://youtu.be/ST_v4UdC-Wc>.
 
 <!--
-Added non-source sentences (fidelity disclosure):
-1. "At bottom," — type: bridge (the rest is verbatim from reply 1). The main thread cut the draft's "So the bottleneck usually isn't the model" on review: that was the AI issuing a verdict on the author's behalf, and the source material does not contain it.
-2. "That is also why I think shadow AI is a sore spot at a lot of companies." — type: bridge (source read "I also think this is a sore spot for many companies" as a reply; subject restored as shadow AI)
-3. "Two related pieces: ... on where adoption stalls, and ... on how the training side gets arranged." — type: framing (internal cross-links, not in source)
-4. "This week's video: ..." — type: framing (video reference, not in source)
+新增非原文句子清單（忠實度自首）：
+1. 「說到底，是人的問題，還有既有流程的問題。」 — 類型：銜接（把回覆一的「人的問題，還有既有流程的問題」接進主線，前半句「卡點通常不在模型」為 AI 新增銜接語）
+2. 「這也是為什麼我覺得 shadow AI 是很多公司的痛點。」 — 類型：銜接（原句為「我也覺得這是很多公司的痛點」，回覆他人語境已失，補上主詞 shadow AI）
+3. 「延伸兩篇：⋯⋯講導入卡在哪一段；⋯⋯講培訓那一側怎麼排。」 — 類型：框架句（站內互引，原素材無）
+4. 「本週的影片：⋯⋯」 — 類型：框架句（影片掛載，原素材無）
 
-2026-09-04 weekly-routine addendum: added "An Anonymized Case, Plus a New Video" section, translated from the zh version's new section (source: a 09-02 Threads post that already contained this YouTube link). Added sentences: the heading (framing), "The new video is about exactly this:" (bridge). The case itself is a faithful translation of the source post, no new claims added.
+2026-09-04 週例行補記：新增「一個匿名案例，加一支新影片」一節，素材取自 09-02 Threads 貼文（原文即含此 YouTube 連結）。新增句：小標（框架句）、「新影片講的正是這件事：」（銜接句）。案例本體逐字取自原貼文，未新增論點。
 
-2026-09-11 W38 weekly-routine addendum: added "The Grocery Store Hire, Plus a New Video", translated from the zh section (source: a 09-10 Threads post, kept verbatim including the profanity) plus this week's own new video TIuu5uMrhnE. Added sentences: the heading (framing) and "This week's video happens to be about the other side of that, the not-daring:" (bridge).
+2026-09-11 W38 週例行補記：新增「雜貨店員工，加一支新影片」一節，素材為 09-10 Threads 貼文（逐字保留，含原文粗話）＋本週自家新片 TIuu5uMrhnE。新增句：小標（框架句）、「本週的影片剛好講到不敢用的那一邊：」（銜接句）。
 -->
 
 <!--
-2026-09-24 W40 postscript: linked the 2026-09-22 video. Added non-source sentence: the lead-in line (bridging, paraphrased from the video title).
+2026-09-24 W40 補記：掛上 2026-09-22 新片參照連結。新增非原文句子：「接著這支講卡住的時候怎麼找原因」（銜接，依影片標題改寫）。
 
-2026-10-26 splice cleanup (mirrors zh): removed "plus video" from headings, deleted duplicate summary, and changed time words "This week's video" to "Related video" and "Another video"; new bridge sentences: "Beyond not sorting out the process first, another common mistake is having completely unrealistic expectations of AI."
+2026-10-26 拼接順稿：
+- 「除了流程沒梳理好，另一個常見的毛病是對 AI 的期待太不切實際。」— 類型：銜接
+結構調整：移除標題拼貼標記，刪除與前文重複的省流總結，並修正矛盾的時間詞「本週的影片」。
+-->
+
+<!--
+2026-11-12 舊文盤點整篇重寫：將原本多次週報拼貼與影片宣傳連綴重組成單一連貫敘事，以「省下 80% 時間的真相」與「雜貨店員工比喻」貫穿流程梳理與漸進信任，去除情緒粗話並將六個延伸連結自然融入論述脈絡。
 -->

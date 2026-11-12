@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-03-27T04:00:00Z
-title: "Anthropic's Trust Crisis and My Backup Plan"
+title: "When Your Primary AI Could Fail at Any Moment: Multi-Endpoint Fallbacks and Setup Sync for Non-Coders"
 slug: en/anthropic-trust-crisis-backup
 featured: false
 draft: false
@@ -9,47 +9,62 @@ tags:
   - claude-code
   - ai-tools
   - ai-trends
-description: 'They quietly slashed quotas, went silent for a week, and only responded when they got caught. When your work is deeply tied to a service that can''t even hit two nines of uptime, a backup plan isn''t optional—it''s essential.'
+description: 'When your daily work relies heavily on a single AI provider, downtime or sudden quota cuts can halt operations overnight. Here is how I evaluate fallback models for non-coding tasks, sync rules and memory across tools, and stay ready to switch.'
 ---
 
-## Timeline
+Handing your day-to-day work and operations over to AI is ideal when models reliably take over various tasks. The reality is much rougher: when a core provider cannot even keep two nines of availability, staking your entire workflow on one vendor is an unacceptable risk.
 
-3/20: Users started reporting abnormal quota consumption en masse. Pro subscribers hit their limit after one or two messages. Max subscribers burned through five hours of quota in one hour.
+On March 20, 2026, complaints began flooding user communities about bizarre quota burn rates. Pro subscribers hit their caps after sending just one or two prompts. Max users burned through five-hour limits within an hour. Worse still was the silence that followed. For nearly a full week, from March 20 to March 25, the company posted zero official updates. Boris and Thariq, who usually post nonstop, kept touting new product features while dodging every question from users. GitHub issues opened by the community were shut down immediately, and support tickets went nowhere.
 
-3/20 to 3/25: Anthropic basically played dead. No announcements. Boris and Thariq—who normally post constantly—kept hyping new features and dodged every question about the quota issue. GitHub issues got closed instantly. Customer support was useless.
+Earlier, when someone asked whether the promotional double quota signaled future cuts, Thariq had brushed it off, saying "sometimes a gift is just a gift"—telling everyone not to overthink it. Then, on March 26, the company finally put out an announcement, and the community erupted. A 10x traffic surge overloading infrastructure is something anyone can understand, but you announce changes before making them. Shipping shiny features while quietly slashing allowances for long-time subscribers and playing dead for a week is a breach of trust, and it left people completely disillusioned.
 
-Up to this point, I was still holding out a sliver of hope, along with some other users, that this was just a bug, not a deliberate cut. After all, someone had previously asked "Is this double quota just a preview before you slash it?" and Thariq responded with "Sometimes a gift is just a gift"—implying don't overthink it, it's free.
+The incident was a wake-up call for anyone whose workflow leans heavily on AI. Realizing that even premier services can buckle under pressure—bringing severe reliability and trust issues right into a workflow you depend on daily—I spent an entire morning putting together a backup plan.
 
-Then 3/26, they dropped that announcement, and everyone lost it.
+## Three Non-Coding Criteria for Picking Fallback Models
 
-This is clearly an integrity issue. Everyone can understand you've got 10x the users flooding in. Everyone can understand your capacity is maxed out. But you could have announced it first, then made the change. Instead, you were shipping new features left and right while quietly slashing quotas for existing subscribers and playing dead. That's something nobody can accept.
+Because most of my daily work involves document processing and knowledge tasks rather than programming, I bypassed coding-heavy models like Codex and evaluated alternatives across three dimensions:
 
-I couldn't think of a single reason to defend them anymore. Completely disillusioned.
+First, autonomous task execution (agentic flow).
 
-## Why a Backup Plan Is Essential
+Second, reliable tool calling.
 
-Want to let Claude deeply take over your work? I think you might be disappointed. The vision is beautiful, but when your uptime can't even hit two nines (99%), that's a dealbreaker. No person or company is going to stake their operations on a service this unreliable.
+Third, precise intent alignment.
 
-That said, my workflow was already deeply dependent, so what was I supposed to do?
+Based on these criteria, I selected three models to rotate through: GLM-5, Kimi-2.5, and MiniMax 2.5, all routed through providers hosting infrastructure in US data centers.
 
-I spent a morning finding backup options.
+## The Real Bottleneck: Syncing Rules and Memory
 
-## Model Selection
+Finding viable fallback models is only the first step. What actually makes or breaks a switch is environment synchronization.
 
-Since most of my work doesn't involve coding—it's mostly document and writing work—I didn't go for a coding-focused model like Codex. Instead, I evaluated on three dimensions: agentic flow (autonomous task execution capability), tool calling stability, and intent alignment accuracy.
+Much of why your primary tool works so well comes from the rules and memories you spent months refining. Once you jump to another tool, all that accumulated context disappears. Without that invisible context injected into every prompt, any new model feels like it is operating with both hands tied behind its back.
 
-After evaluation, I picked three to rotate through: GLM-5, Kimi-2.5, and MiniMax 2.5, all routed through US-based providers.
+Once the models are picked, the next priority is getting the environment in sync:
 
-## Environment Sync
+At the rules level, keep guidelines and behavior specs in a central location. Use file symlinks so your primary tool and fallback setups share the same physical source, and configure the header frontmatter to satisfy both tool schemas without maintaining two sets of rules.
 
-With the models sorted, the next step was syncing the environment. The reason your Claude is good is largely because of the rules and memory you've painstakingly built up. If a new tool doesn't read those, you lose all that invisible context injection, and the new model is basically working with both hands tied behind its back.
+At the execution level, port your configured lifecycle hooks into the fallback environment.
 
-I installed the opencode-rules plugin on OpenCode, set up symlinks in the rules directory, added dual-key frontmatter support, migrated hooks separately, and handled memory through OpenCode's own plugin.
+At the memory level, mount and handle long-term memory through dedicated plugins.
 
-After all that, I finally had peace of mind. I no longer had to shut down when Claude went down.
+With this setup in place, I finally regained peace of mind—no longer forced to shut down work whenever Claude goes down.
 
-## Conclusion
+## Operating Principles: Staying Ready to Switch
 
-Set up multiple endpoints early. Back up all your configs and memory. Being able to switch at any time is the only real strategy.
+Once you have a roster of endpoints and a synced environment, you need defensive operating principles around subscriptions and daily habits:
 
-AI companies are all the same—once they get popular, they start getting cocky, and the service starts degrading. The best strategy is to never buy annual plans and always be ready to bail.
+Never commit to long-term annual plans. When AI companies face sudden user surges, capacity crumbles, service degrades, and tier terms change without warning. The safest strategy is monthly subscriptions, keeping you ready to jump ship at a moment's notice.
+
+Set up a multi-endpoint architecture early. Backing up your configurations and memory so you can swap tools instantly is the only reliable way to protect your work.
+
+The initial draft of this post was written in March 2026; the references to GLM-5, Kimi-2.5, and MiniMax 2.5 reflect the test setup at that time.
+
+## Appendix
+
+The specific technical configuration for the fallback environment described above is as follows:
+- The fallback environment runs on OpenCode.
+- Rules are synchronized via the opencode-rules plugin, creating symlinks to the source rule files and using dual-key frontmatter to support both schemas.
+- Lifecycle hooks are ported directly into OpenCode.
+- Long-term memory is managed and mounted through a dedicated OpenCode plugin.
+
+<!-- 2026-11-12 舊文盤點整篇重寫：將特定服務爭議與舊模型名稱抽離為歷史案例，改以通用多端點備援、三個非編程評估維度及規則記憶跨環境同步為核心主軸，技術細節移至附錄。 -->
+

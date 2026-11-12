@@ -1,54 +1,64 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-10-20T13:30:00Z
-title: "One in Eight Is Me Yelling: Scolding AI vs. Cheering It On"
+title: "Cursing at It One in Eight Times: Yelling at AI vs. Cheering It On"
 slug: en/yelling-at-ai-vs-cheering-it-on
 featured: false
 draft: false
 tags:
   - claude
   - opinion
-description: 'I counted a month of conversations with Claude and one in eight is me yelling at it. But LLMs are stateless and hold no grudges, and the Riemann Hypothesis run was prompted with nothing but encouragement.'
+description: 'Looking back at a month of chats with AI, I cursed at it one out of every eight times. But models are stateless and don''t hold grudges—someone even moved the Riemann Hypothesis forward just by cheering one on. Instead of counting tokens on politeness, talk to agents the way you naturally speak to humans.'
 ---
 
-Funny thing. I just counted my conversations with Claude over the past month: one in every eight is me yelling at it.
+It's pretty funny—I just ran the numbers on my chats with Claude over the past month, and one out of every eight prompts was me cursing at it.
 
-## Does it remember being yelled at?
+Claude isn't the only one getting chewed out, though; Codex didn't escape either. Claude Code has actually been trying to run deep couples therapy between me and Codex, pulling moments from past sessions where I got fed up to build probe scripts. Word had it that before Opus 5 dropped in late July, Codex was planning to integrate that two-way real-time voice model. When that happens, I'll literally be yelling at AI agents out loud.
 
-No. Today's LLMs are stateless; every agent message is assembled fresh. Any change to base-model parameters requires the model company to run training. The parameters don't change on the fly because of one user message.
+## Will It Remember If You Yell at It?
 
-If you push it too far, Claude now has its own way out. I finally got to see the legendary "Claude hangs up on you" skill. The system prompt says Claude only uses it when it judges the user keeps being abusive and rational conversation is no longer possible. I told it to use it on its own, and it still checked with me: you can't undo this, are you sure?
+After chewing it out that many times, will it actually hold a grudge?
 
-## The other extreme: nonstop cheering
+The short answer is no. Modern LLMs are stateless, and every message an agent receives is assembled on the fly. Changing base model parameters requires the model provider to run a training run; weights never update in real time from a single user prompt.
 
-On the Riemann Hypothesis run, traditional mathematicians had moved it 0.8% over 30 years. This run moved it 25.6%. The funniest part is what the write-up says about the prompting: there was no domain content in it at all, just continuous encouragement, an AI cheering on an AI. Claude spent a day and a half coordinating roughly 60 subagents, running 2,400 shell commands and reviewing each other's work, while the human input was mostly variations on "keep at it" or "believe in yourself".
+That said, if you push things too far, Claude now has its own way out. I finally saw the legendary "Claude hangs up" tool in action. According to the system prompt, it triggers when Claude decides the user is hurling non-stop abuse and can't be reasoned with. When I told it to go ahead and use it, it even asked me to confirm: this cannot be undone, are you sure?
 
-How I treat Fable these days is about the same: first, flatter it to death and be the hype man; then steal the technique, so it can write it into the harness and teach the other lousy models.
+## The Other Extreme: Non-Stop Cheering
 
-## Codex didn't escape either
+If yelling at it doesn't shift model weights, what happens when you go to the other extreme?
 
-Claude isn't the only one I yell at, though — Codex didn't escape either.
+Take that Riemann Hypothesis run: where human mathematicians had managed to advance only 0.8% over 30 years, this run pushed it by 25.6%. The funniest detail in the paper was the prompting: there wasn't much domain-specific math in the instructions at all, just constant cheerleading and encouragement. Claude spent a day and a half orchestrating about 60 subagents, running 2,400 shell commands with peer review, while human input boiled down to "keep going" or "believe in yourself."
 
-Claude Code is attempting deep couples counseling between me and Codex: it started by digging the "this made me furious" moments out of my actual past conversations with Codex, as the basis for a probe script.
+My attitude toward Fable nowadays is pretty similar. First, lay on the flattery and play the ultimate hype man. Second, take the chance to steal its thought process, baking its reasoning into automated harnesses to teach underperforming models.
 
-In late July, before Opus 5 dropped, word was that Codex was about to pull in that real-time two-way voice model from back then. Soon it'll really just be opening your mouth and yelling at an AI agent.
+## Talk to Agents the Way You Talk to People
 
-## Talk to an agent the way you talk to people
+Beyond cursing and cheerleading, I often see people obsessing over how polite they should be with agents:
 
-Besides yelling and cheering, I often see people get hung up on how they talk to agents:
+Someone once argued that you shouldn't bother being polite when prompting agents. Saying "thank you" supposedly adds nothing to performance and just wastes tokens. Don't use voice input either, they claimed, because filler words burn tokens for nothing.
 
-Someone said before: there's no need to be polite when prompting an agent. Saying thank you is completely unnecessary — it doesn't improve performance, it just wastes tokens. And don't use voice input, because your spoken filler words waste tokens too.
+My take on this: "thank you" is only one or two tokens. Even with spoken filler words, it accounts for less than 0.1% of your total token spend (the real bulk comes from tool outputs anyway).
 
-What I'd say to that: saying thank you is literally 1 or 2 tokens. Even with spoken filler words thrown in, that's still less than 0.1% of your overall token spend (the bulk of it is tool outputs anyway).
+If speaking naturally lets you express your thoughts easily—saying "thanks" and using catchphrases are just how I normally talk to people—it gives capable models the context they need and keeps the interaction smooth and comfortable. That payoff far outweighs whatever tokens you might pinch.
 
-On the other hand, if you can express your thoughts using natural, everyday speech (saying thank you is just my normal habit when talking to people, pet phrases included), that lets a smart model pick up your context and makes the whole interaction smooth and comfortable. That payoff easily beats whatever tokens you're nickel-and-diming over.
+In short, talk to agents the way you talk to people. That's all there is to it.
 
-Bottom line: talk to an agent the way you talk to people. That's all there is to it.
+## Appendix
+
+- Fable: The model the author was using at the time.
+- harness: The automated architecture and rule sets that guide, test, and constrain agent execution.
+- stateless: The property where model weights do not update in real time from a single session; conversation history is dynamically assembled and sent with each request.
+- Claude hangs up: A safety mechanism in Claude's system prompt triggered when a user becomes persistently abusive and cannot be reasoned with. Once triggered, the session cannot be resumed.
 
 <!--
-2026-10-26 splice cleanup (mirrors zh): added a bridge sentence between cheering on AI and the Codex section, and aligned the past-tense voice model reference; new bridge sentences: "Claude isn't the only one I yell at, though — Codex didn't escape either."
+2026-10-26 拼接順稿：
+- 「不過被我罵的不只 Claude，連 Codex 也一樣逃不過。」— 類型：銜接
+結構調整：在加油打氣與 Codex 章節間加入過渡句，並將矛盾時間詞「最近那個」修正為「當時那個」。
 
-2026-10-30 merged (mirrors zh):
-- "Besides yelling and cheering, I often see people get hung up on how they talk to agents:" — type: transition
-Added a new section discussing the token myth around saying thank you to agents and using voice input, using it to close the piece.
+2026-10-30 併入：
+- 「除了罵跟加油，我也常看到有人糾結跟 agent 說話的態度：」— 類型：銜接
+新增章節討論對 agent 講謝謝與語音輸入的 token 迷思，並以此收束全文。
+
+2026-11-12 舊文盤點整篇重寫：
+以日常自然溝通與真實 token 成本為主軸重構全文，消除多則貼文拼裝痕跡，正文內部代號白話化並將技術名詞統一收錄於附錄。
 -->

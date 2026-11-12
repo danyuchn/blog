@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-10-02T01:00:00Z
-title: "After Using Opus 5.5, Many of My Old Skills Need a Rewrite"
+title: "Auditing Workflows After a Model Upgrade: How to Rethink and Trim Your AI Skills"
 slug: en/opus-55-rethink-old-skills
 featured: false
 draft: false
@@ -9,54 +9,88 @@ tags:
   - claude
   - skills
   - ai-workflow
-description: 'With no Skill and no open-source project, Opus 5.5 one-shotted a fully animated video, then translated and subtitled a Vietnamese stand-up special. Weekly quota barely moved, and the Skill details I wrote to rein in older models all need a second look.'
+description: 'When a smarter model lands, how should you prune the bloated skills written to babysit older ones? Through video editing and cross-language translation tests, here''s how to run zero-skill baseline tests, cut obsolete guardrails, and turn core rules into clean specs.'
 ---
 
-After using Opus 5.5, I found that a lot of the Skills I wrote in the past need to be adjusted.
+There is a running joke: "If you learn slowly enough, you'll never have to learn anything at all."
 
-Models used to be less creative and less capable. In many places I could only rely on past experience, trial and error again and again, and then add restrictions one by one.
+It makes for great self-deprecating humor, but oddly enough, it kind of applies to AI too (?). Over the past few years, we wrote piles of skills, preprocessing manuals, and convoluted prompting rules for one basic reason: the models back then were not sharp or creative enough, and they tripped over details constantly. To get anything done, we had to play babysitter, turning every painful trial-and-error lesson into rigid constraints to keep the model inside safe boundaries.
 
-This time, on a whim: I'd seen a lot of people online one-shotting videos with Opus 5.5, so I just asked Opus 5.5 to use its own creativity, effort set to high. I gave it the raw audio of my voiceover and told it to make a video it thought was impressive.
+With Opus 5.5 here, though, all those skill details and defensive rules we accumulated to keep older models in line deserve a fresh look, a heavy trim, or even a full overhaul. When a new model arrives, how should you audit the workflows you built around the old one? Which steps can you scrap outright, and which rules need keeping and restructuring? Testing this across video editing and cross-language translation, I put together a practical approach for auditing your existing skills.
 
-This is what came out. I used to open CapCut and cut the filler words and pauses myself. Now it did all of that, and built extremely detailed animation too. Version one is what it came up with on its own (it didn't read my old SKILL). Version two is the same video with our brand visual guidelines applied.
+## Step 1: Strip Constraints for a Raw Test and Cut Obsolete Guardrails
 
-<div class="video-embed"><iframe src="https://www.youtube.com/embed/tpDFj6VKtsc" title="The three data security questions bosses ask most" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+The first step in auditing an existing workflow is having the nerve to strip off every constraint and run a raw baseline test.
 
-Here's the prompt I gave it:
+After seeing people online using Opus 5.5 to generate videos in one shot, an idea hit me: why not turn Opus 5.5 loose and let it run with its own creative ideas? In our traditional workflow, producing an explainer short meant tedious manual prep. After recording the voiceover, I usually had to open a video editor like CapCut to manually slice out filler words, stumbles, and awkward pauses, block out visuals scene by scene against the script, and enforce specific animation frameworks and visual styles through detailed skills.
 
-> /goal 我允許你用你自己的方法幫忙剪接去贅字、講錯的口誤跟停頓（我臨場發揮的內容不算），動畫也不一定要用hyperframe/remotion跟我們的視覺風格，也不用遵從我們原本的腳本所寫的動畫長相，請你發揮創意用你自己最強的能力創造你覺得最厲害的動畫，不需要受 SKILL約束。做出影片後放到下載資料夾才算目標完成。
+This time, I dropped every skill constraint from before. I set thinking effort to high, handed Opus 5.5 the raw, unedited voiceover audio, and gave it full creative freedom to build whatever video it thought was best.
 
-That used 2% of my 100 USD weekly quota (???). I can't imagine how much it would cost on Codex.
+Here is the exact prompt I used:
 
-Honestly:
+> /goal I grant you permission to use your own methods to edit out filler words, speech mistakes, and pauses (unscripted remarks do not count as mistakes). For animation, you do not have to use hyperframe/remotion or follow our visual style, nor do you need to follow the animation look outlined in our original script. Use your creativity and best capabilities to create what you consider the most impressive animation possible, completely free of any SKILL constraints. The goal is only complete once the finished video is placed in the Downloads folder.
 
-1. The animation really is stunning (look closely and there are still a few tiny problems, but very few now)
+Here is what came out:
 
-2. All those Skill details and passed-down experience I wrote to constrain the model in the past: I think everyone needs to re-examine them in the Opus 5.5 era
+<div class="video-embed"><iframe src="https://www.youtube.com/embed/tpDFj6VKtsc" title="老闆最常問的三個資料安全問題" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-There's a famous saying, "if you learn slowly, you don't have to learn anything." It works on people, and apparently it works on AI too (?
+The results were genuinely impressive. All the filler words, pauses, and speech stumbles that used to require manual hunting in an editor were identified and cleanly trimmed by the model, which also generated remarkably detailed motion graphics alongside it.
 
-The next day, Opus 5.5 did it again.
+This test sent a clear signal: the skill details and defensive rules we piled up to keep older models in check need to be reexamined across the board in the Opus 5.5 era.
 
-To repost translated videos, I used to go find an open-source pipeline plus a SKILL somebody shared on GitHub. This time I tried giving it no SKILL and no open-source project. I told it, one-shot, to translate the video, burn in subtitles, and produce a one-minute highlight cut of the funniest bits. I deliberately picked Vietnamese stand-up comedy, full of local slang and in-jokes, some of which you can only get by reading the text on screen.
+## Step 2: Unplug External Pipelines and Test Complex Nuance and Multimodal Limits
 
-Oh my god, oh my god, oh my god.
+Beyond simple step-by-step guardrails, the other type of bloated workflow we used to build involved hunting down open-source pipelines on GitHub for specialized tasks and layering a stack of custom skills on top.
 
-Opus 5.5 really is a god-tier model. One-shot, done in 10 minutes. The 100 USD weekly quota didn't even move 1%, API-equivalent 2.74 USD. The translation is natural and spot on, and the vertical highlight cut for social media looks properly made.
+The next day, I gave Opus 5.5 a tougher edge case: translating localized cultural humor across languages and cutting a highlight reel.
 
-Once again this shows a lot of SKILLs can be slimmed down. And even if you don't slim them down, they need a major overhaul. Opus 5.5 is unreasonably strong.
+Previously, repurposing and translating foreign video meant chaining together external open-source pipelines with multiple tools running in sequence. This time, I again gave it zero skills and plugged in no open-source repos. I simply issued a one-shot prompt asking it to translate the dialogue, burn in subtitles, and automatically edit a one-minute punchline highlight clip.
 
-The original video is here: <https://www.youtube.com/watch?v=tOO28YF4g60>. It's hilarious.
+I deliberately picked a Vietnamese stand-up comedy set packed with local slang and subtext, where some jokes even required reading text on the stage screen to understand:
 
-One more thing: I suggest using Opus 5.5 over the next few days to take stock of your commonly used workflows and write them up as specs. That way, if it gets dumbed down someday, you at least still have a good spec to work from.
+The original video is here: <https://www.youtube.com/watch?v=tOO28YF4g60>, and it is hilarious.
+
+Opus 5.5 nailed it on the first try in under ten minutes. The translation felt natural and spot-on, and the vertical social short looked surprisingly polished.
+
+This test drove home the point again: many skills written in the past can be simplified, and even if you do not slim them down, they need a thorough overhaul.
+
+## Step 3: Layer Your Brand Standards—Free the Creativity, Constrain the Boundaries
+
+Once you cut away the unnecessary babysitting and external pipelines, how should you reshape whatever skills remain?
+
+The key is architectural layering: delegate creativity and raw generative power entirely to the model, while keeping business boundaries and brand identity as the constraint layer.
+
+Take the animated video test as an example. The first version was completely free of skill constraints, and the model showed impressive visual creativity. But it did not carry our specific brand identity. Instead of cramming the model back into tedious rules, a better approach splits the work into two stages:
+1. Stage 1 (Unguided generation): Skip the old skills. Let the model use its native capabilities in a one-shot pass to produce a strong first draft with solid creative direction and structure.
+2. Stage 2 (Boundary alignment): Apply your brand guidelines to dial in the final version.
+
+Pulling skills back from micromanaging operations (like teaching the model how to cut or draw) and refocusing them on macro standards (like brand visuals and delivery specs) is the core logic for restructuring workflows today.
+
+## Cost Estimates and Practical Spec Advice
+
+When putting this audit method into practice, a few cost considerations and boundary details are worth keeping in mind.
+
+First, testing costs. Based on my run data, running frontier models is far cheaper than people think: the video-editing run consumed about 2% of a $100/week plan quota. The ten-minute Vietnamese comedy translation and highlight reel did not even move the meter by 1%, with an API equivalent cost of around $2.74. Spending such minimal quota on a raw test to gain a vastly streamlined workflow is a bargain.
+
+Second, a realistic look at output quality. The animation was genuinely impressive. If you inspect closely, there are still a few minor flaws, but they are remarkably rare now.
+
+Finally, the most important takeaway: take time these next few days to run Opus 5.5 through your routine workflows, audit them, and distill your non-negotiable business logic into clean specs. The beauty of this is that even if model degradation happens down the road, you still have a solid spec to rely on.
+
+## Appendix
+
+Technical settings and tools referenced in this article:
+- Model and inference settings: Tested on Opus 5.5 with reasoning effort set to high.
+- Tool codenames in the prompt: hyperframe and remotion were explicitly mentioned in the prompt.
+- Compute usage breakdown: The video editing task consumed roughly 2% of a $100/week plan quota; the Vietnamese stand-up comedy translation did not even reach 1%, with an equivalent API cost of $2.74 USD.
 
 <!--
 新增非原文句子清單（忠實度自首）：
-1. 「用了 Opus 5.5 之後，過去寫的 Skill 都要重新調整」（title，en 為在地化翻譯） — 類型：改寫
-2. 「提示詞是這樣下的：」（en: Here's the prompt I gave it:） — 類型：銜接
-3. 「隔天，Opus 5.5 神奇再一波。」（en: The next day, Opus 5.5 did it again.） — 類型：改寫
-4. 「原影片來源在這裡：」（en: The original video is here:） — 類型：改寫
-5. 「順帶提一句：建議趁最近幾天…」 — 類型：改寫（去掉原文「然後」）
+1. 「用了 Opus 5.5 之後，過去寫的 Skill 都要重新調整」（title） — 類型：改寫
+2. 「提示詞是這樣下的：」 — 類型：銜接
+3. 「隔天，Opus 5.5 神奇再一波。」 — 類型：改寫（原文為「Opus 5.5 神奇再一波」，加「隔天，」並移除標題式斷行）
+4. 「原影片來源在這裡：」 — 類型：改寫（原文為「原影片來源：」）
+5. 「順帶提一句：建議趁最近幾天…」 — 類型：改寫（原文為「然後順帶提一句：」，去掉「然後」）
 6. description 整句 — 類型：框架句
-註：原文的換行段落在文中合併為較長段落（僅合併，不增減字句）；其餘句子皆為作者原文的翻譯。
+註：原文的換行段落在文中合併為較長段落（僅合併，不增減字句）；其餘句子皆為作者原文。
+2026-11-12 舊文盤點整篇重寫：將原本零散的 one-shot 驚嘆心得，重構為讀者可直接套用的新模型流程盤點三步驟，並將個人額度轉化為成本原則，保留所有原始數據、提示詞與影音連結。
 -->

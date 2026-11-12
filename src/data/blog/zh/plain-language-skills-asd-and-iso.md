@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-13T04:00:00Z
-title: 讓 AI 對你說人話的兩個 skill：ASD-STE100 管文法，ISO 24495 管結構
+title: "讓 AI 對你說人話的兩個 skill：ASD-STE100 管文法，ISO 24495 管結構"
 slug: zh/plain-language-skills-asd-and-iso
 featured: false
 draft: false
@@ -9,24 +9,21 @@ tags:
   - skills
   - open-source
   - claude-code
-description: '三個禮拜前隨手做的 asd-ste100-skill 被老外瘋狂轉載還留了三個 PR，順手再開一個天天在用的 iso-24495-skill。'
+description: '三個禮拜前隨手做的 asd-ste100-skill 被轉載並收到三個 PR。要讓 AI 說人話，文法與用字交給飛機維修標準 ASD-STE100，邏輯與結構交給淺白語言國際標準 ISO 24495。'
 ---
+
+一早醒來，信箱裡赫然冒出一整串 GitHub issue thread 的回覆提醒信件。點進去看才發現，自己三個禮拜前隨手做的一個 skill，竟然被國外開發者瘋狂轉載，甚至還收到了三個 PR。
+
+妖獸，我只是一個文組 SKILL 仔。看著信箱裡的回覆提醒信和那三個 PR，這樣似乎也可以來挑戰一下 6 個月 GPT PRO？
+
+要讓 AI「說人話」，可以切成兩個層面：一個管文法與用字，另一個管邏輯與結構。
 
 ## ASD-STE100：管文法與用字
 
-妖獸，一醒來看到怎麼有 GitHub issue thread 的回覆提醒信件，點進去看才發現自己三個禮拜前隨手做的一個 SKILL 被老外瘋狂轉載，還留了三個 PR。
-
+第一個是用來規範文法與用字的 skill：
 <https://github.com/danyuchn/asd-ste100-skill>
 
-（這個 skill 是怎麼來的，寫在[讓 Claude 說人話：一套飛機維修手冊的簡化英文標準](/blog/posts/zh/asd-ste100-claude-plain-english-skill/)。）
-
-這樣似乎也可以來挑戰一下 6 個月 GPT PRO？
-
-有位外國網友在那串下面問要不要裝，我用英文回了他，原話照貼：
-
-> I suggest to write one line in CLAUDE.md first, simply demanding it to speak in asd-ste-100 and check its output during conversation. If it can do well then no need to install this skill - it has been learnt by model during pre-training. If it can't or ceases to follow this rule when context usage grows, then manually triggering this skill should still be the better option.
-
-我只是文組 SKILL 仔。
+這個 skill 來自一套飛機維修手冊的簡化英文標準 ASD-STE100，核心就是規範文法與用字，把這套標準做成 skill 套用給 AI。
 
 ## ISO 24495：管邏輯與結構
 
@@ -36,7 +33,25 @@ description: '三個禮拜前隨手做的 asd-ste100-skill 被老外瘋狂轉載
 
 ISO 24495（正式名稱為 ISO 24495-1:2023）是全球第一部關於「淺白易懂語言」（Plain Language）的國際標準。它確立了清晰寫作的核心原則與指導方針，旨在幫助各機關與企業產出讓讀者能快速找到、理解並使用的文件，減少溝通誤解。
 
-跟 ASD 的區別：ASD 規範文法跟用字，ISO 規範邏輯跟結構。
+這兩者的區別：
+- ASD 規範文法跟用字。
+- ISO 規範邏輯跟結構。
+
+## 實務判準：如何決定是否安裝 skill
+
+有位外國網友在那串下面問要不要裝這個 skill，我用英文回了他，原話照貼：
+
+> I suggest to write one line in CLAUDE.md first, simply demanding it to speak in asd-ste-100 and check its output during conversation. If it can do well then no need to install this skill - it has been learnt by model during pre-training. If it can't or ceases to follow this rule when context usage grows, then manually triggering this skill should still be the better option.
+
+這段回覆提供了一個可以直接套用的實務準則：先用輕量方式測試，不要一開始就堆疊繁複的工具。
+
+模型在預訓練階段已經學過 asd-ste-100。日常使用時，只要在 CLAUDE.md 寫上一行指令，要求它遵循 asd-ste-100，再觀察對話中的輸出即可。如果它表現得好，就不需要安裝這個 skill；只有在 context 用量變高、不再遵守這項規則時，手動觸發 skill 才是更好的選擇。
+
+## 附錄：專案指示與技術細節
+
+前面引文提到的 CLAUDE.md，做法是先在其中寫上一行指令，要求模型遵循 asd-ste-100，先在對話中檢查輸出表現。
+
+分清文法與結構的分工，按 context 用量決定是否手動觸發 skill，讓 AI 對你說人話。
 
 <!--
 新增非原文句子清單（忠實度自首）：
@@ -48,4 +63,7 @@ ISO 24495（正式名稱為 ISO 24495-1:2023）是全球第一部關於「淺白
 2026-10-26 拼接順稿：
 - 「搞定文法之後，」— 類型：銜接
 加上兩個 H2 小標將兩則素材分別歸納為管文法與管結構的對應章節，並平順銜接時間語境。
+
+2026-11-12 舊文盤點整篇重寫：
+以早晨收到 GitHub 通知為開場鉤子示範「說人話」，將 ASD-STE100 管文法用字與 ISO 24495 管邏輯結構的互補分工清晰展開，並把實務建議提煉為可套用的安裝判準與技術附錄。
 -->

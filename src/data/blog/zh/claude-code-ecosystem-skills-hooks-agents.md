@@ -9,41 +9,47 @@ tags:
   - claude-code
   - ai-workflow
   - ai-tools
-description: 'Claude Code 的生態系已經從單純的 CLI 工具長成一個完整的平台：Skill 各家都支援、Hook 攔截指令、Agent View 多工管理、fork subagent 繼承上下文。連社群都開始用 Skill 搞創意了。'
+description: 'Claude Code 已從單純的 CLI 演進為具備 Skill、Hook 與多代理協同的完整平台。了解如何透過架構組合流程與控制上下文，能讓日常自動化更加穩固。'
 ---
 
-Claude Code 的生態系在過去幾個月長得很快，從單純的 CLI 工具變成一個有 Skill、Hook、Agent、Subagent 的完整平台。整理一下目前的全貌。
+很多人剛接觸 Claude Code 時，只把它當成一個在終端機裡幫忙寫程式碼的 CLI 工具。但在短短幾個月內，它的形態已經完全不同——從最初單純的命令列對話，迅速演變為具備 Skill、Hook、Agent View 到 Subagent 的完整架構。
+
+這不再只是一個單點輔助工具，而是一套可以自訂規則、封裝流程、甚至派發多代理協同作戰的工作流平台。整理這套生態的全貌，有助於看清這些組件如何互相搭配，成為日常工作流的骨幹。
 
 ## Skill——各家都支援了
 
-Skill 已經不是 Claude Code 的專利。Codex 支援、Gemini 也支援。但生態跟成熟度差距還是很大——Claude Code 的 Skill 生態目前最活躍，社群貢獻的 Skill 數量遠超其他平台。
+Skill 已經不再是 Claude Code 的專利，目前 Codex 支援，Gemini 也支援。但在生態豐富度與成熟度上，彼此差距依然明顯——Claude Code 的 Skill 生態依舊最為活躍，社群貢獻的 Skill 數量遠超其他平台。
 
-社群的創意也很有趣。有人做了一個叫 `moyu` 的 Skill：離職前把自己寫的代碼轉成屎山，真正達到了「人走了，陰魂不散」的境界。還有人腦洞大開，想用 `/schedule` 排程每週一出門前自動生成週末假故事、每天出門前生成假成就，自動發到信箱，通勤時閱讀一分鐘，到公司就能跟同事胡吹。
+部落格裡幾個我自己在用的 Skill，可以看出它實際能做什麼：[cc-audit](/blog/posts/zh/cc-audit-skill) 逐條檢查你的設定、近期 session 與 context 用量，列出省額度的修正清單；[ASD-STE100 與 ISO 24495 兩個 skill](/blog/posts/zh/plain-language-skills-asd-and-iso) 讓 AI 改用簡明語言回話；[Remotion Skill](/blog/posts/zh/remotion-claude-code-videos) 從口白討論到剪輯渲染，半小時做出一支教學影片；[文檔審查 SKILL](/blog/posts/zh/review-loop-my-context-window) 讓 agent 先出完整提案、我錄音審查、它再改版。
 
-玩笑歸玩笑，這些案例反映的是 Skill 的核心價值：把重複的工作流封裝成一個指令，不管內容是正經的還是搞笑的。
+這些案例共通的是 Skill 的核心價值：把重複的工作流封裝成一個指令，需要時才載入（載入機制見 [Claude Code Skills 機制解密](/blog/posts/zh/claude-code-skills-mechanism)）。
 
 ## Hook——攔截指令的守門員
 
-Hook 是比 CLAUDE.md 更強制的機制。CLAUDE.md 寫的是建議，模型可以選擇忽略；Hook 是系統層級的攔截，模型繞不過去。
+如果說 Skill 負責擴充能力，Hook 扮演的角色就是系統底層的守門員。
 
-社群有人做了一個 vague-prompt-detection hook：掛上去之後，它會攔截每一個使用者送出的指令，判斷是否模糊。清晰的直接放行，模糊的就觸發 Skill 追問 1-6 個問題。對於常常語焉不詳的使用者來說很實用。
+很多人習慣把規則寫在 CLAUDE.md 裡，但 CLAUDE.md 寫的本質上是給模型的建議，模型在某些情況下依然可能選擇忽略。Hook 則是系統層級的攔截，模型繞不過去。
+
+例如社群中有人開發了 vague-prompt-detection hook。掛載上去之後，它會即時攔截使用者送出的每一個指令並評估清晰度：清楚的指令直接放行；若判定過於模糊，就會主動觸發 Skill 追問 1 到 6 個問題。對於常常指令語焉不詳、導致模型產出不如預期的使用者來說，這種防護非常實用。
 
 ## Agent View——多工管理
 
-Claude Code 推出的 Agent View 功能，可以一次管理好幾個 Session 協同完成任務。用法是升級到最新版 CLI，打 `claude agents` 啟動。
-
 這解決了一個長期的痛點：以前要開多個終端機視窗分別跑不同 agent，現在有統一的介面管理。
+
+Claude Code 推出的 Agent View 功能，只要升級到最新版 CLI，在終端機輸入 `claude agents` 即可啟動，一次管理好幾個 Session 協同推進工作。
+
+除了介面整合，另一項實驗功能 Agent Team 則更進一步，由主 agent 擔任 manager 的角色負責拆解並分派任務，直接跟底下的 team member 展開對話與合作。
 
 ## Fork Subagent——繼承還是隔離
 
-實驗功能中的 fork subagent 可以繼承主 agent 的上下文。另一個實驗功能 Agent Team 則是主 agent 作為 manager 分派任務，跟 team member 對話。
+過去處於實驗階段的 fork subagent，核心特色在於可以完整繼承主 agent 的上下文。然而，繼承上下文是一把雙面刃。在需要連續上下文的開發場景中雖然方便，但當我們需要進行 audit 或獨立審查時，如果子代理全盤接收主 agent 的思維與背景，很容易陷入球員兼裁判的盲區。在這種情境下，隔離上下文的獨立審查，反而更有價值。
 
-用了 fork 之後要注意一件事：之後都要非常明確地跟主 agent 講要不要繼承上下文。不然它會一律用繼承上下文的 forked agent——可是有時候做 audit 就是不想讓它球員兼裁判。隔離上下文的獨立審查，反而更有價值。
+值得注意的是，這項機制從 2026 年 8 月的 v2.1.232 起就已經脫離實驗階段，變成系統的預設行為。這意味著現在每個人調度子代理時，都必須非常明確地對主 agent 說明這次到底要不要繼承上下文；若未特別指定，系統一律會自動啟動繼承上下文的 forked agent。如果你的工作流需要徹底停用這項 fork 行為，也可以將環境變數 `CLAUDE_CODE_FORK_SUBAGENT` 設成 `0`。
 
 ## 生態系的意義
 
-這些功能單獨看都是小工具，但組合起來就是一個完整的工作流平台。Skill 封裝流程、Hook 強制規則、Agent 分工協作、Subagent 決定隔離或繼承。
+單獨檢視 Skill、Hook、Agent View 與 Subagent，它們看起來只是各司其職的獨立組件。但當這些機制組合在一起時，工具的層次就徹底改變了。
 
-對於每天重度使用 Claude Code 的人來說，這些不是錦上添花，是基礎設施。
+你可以用 Skill 沉澱高頻流程，用 Hook 在底層守住操作原則，透過 Agent View 掌握多工進度，並依據任務性質在 Subagent 之間切換繼承與隔離的資訊邊界。對於每天高度依賴 Claude Code 工作的人來說，這些架構設計不再只是錦上添花的小功能，而是維繫整個自動化體系穩定運作的基礎設施。
 
-> **後記（2026-10-20）**：fork subagent 已經不是實驗功能了，從 v2.1.232（2026 年 8 月）起預設就是開的，所以「要明確講要不要繼承上下文」這件事現在每個人都會遇到。要關掉 fork，就把 `CLAUDE_CODE_FORK_SUBAGENT` 設成 `0`。
+<!-- 2026-11-12 舊文盤點整篇重寫：將文末後記之子代理預設開啟行為與環境變數設定完整整合至子代理小節，消除雙重收尾，並優化各章節論述與銜接。 -->

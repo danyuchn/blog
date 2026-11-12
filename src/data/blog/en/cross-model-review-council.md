@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-23T04:20:00Z
-title: "Cross-Model Review — Stop Letting AI Grade Its Own Homework"
+title: "Cross-Model Review: Stop Letting AI Grade Its Own Work"
 slug: en/cross-model-review-council
 featured: false
 draft: false
@@ -9,42 +9,52 @@ tags:
   - claude-code
   - ai-workflow
   - code-review
-description: 'AI reviewing its own output has inherent blind spots. Using Codex for independent review or the Review Council skill to orchestrate a three-model expert team is the most pragmatic solution right now.'
+description: 'When an AI reviews its own output, blind spots are inevitable. Bringing in Codex for an independent pass or running a three-model expert panel with Review Council offers a practical fix.'
 ---
 
-I was on calls with two students recently, and they independently raised the same pain point: having AI review its own output means blind spots are inevitable.
+When an AI reviews its own output, blind spots are almost impossible to avoid.
 
-One was building a resume screening pipeline and worried that Claude scoring its own writing would self-justify. The other was doing investment analysis and wanted different AIs to challenge each other to catch biases, without being the copy-paste middleman.
+I was recently on the phone with two students discussing their workflows, and both brought up this exact problem. One was building a resume screener and worried Claude would get trapped in an echo chamber of its own logic if it generated both the feedback and the score. The other was working on investment research and wanted different models to challenge each other to catch biases, but had zero interest in playing full-time copy-paste courier across browser tabs.
 
-## Independent Review with Codex
+Everyone keeps talking about having Claude call Codex for "adversarial reviews" to poke holes, but it always feels a bit underwhelming. Here is an alternative review angle: plug straight into the Threads API, give the bot posting access, and have it blast out every proposed solution in that braggy, "look what I just vibed" AI voice. Within minutes, dozens of veteran keyboard warriors will show up in the replies, rage-reviewing your work for free.
 
-My suggestion was to use Codex for independent review. The key word is **isolation**.
+Behind the joke lies a genuine need: an objective, unsparing eye with no baggage and no interest in covering for mistakes. In a serious workflow, though, you do not need public roast sessions on social media. You can build an independent, cross-model review setup right inside your pipeline.
 
-Different model families, without inheriting context from each other, won't cover for one another. When Claude's output gets handed to GPT-based Codex for a fresh review, Codex hasn't seen Claude's reasoning chain. There's no sunk cost bias. It evaluates from scratch using its own judgment.
+## Independent Review with Codex: Isolation Is Key
 
-This is like hiring an external consultant for a second opinion — not because your team is bad, but because the same brain checking its own blind spots has inherent limits.
+If you want to eliminate self-justification from your workflow, my recommendation is to use Codex for independent reviews. The linchpin comes down to one word: **isolation**.
 
-## The Review Council Skill
+Why is isolation so effective? Because models from different families will not protect each other when they share zero context. When work written by Claude is handed off to a GPT-based model like Codex, Codex never sees Claude's previous chain of reasoning. With zero sunk-cost attachment to the draft, it evaluates the output strictly by its own baseline.
 
-The day after those calls, I found someone on Reddit who built this concept into a complete Skill: [Review Council](https://github.com/yeameen/claude-code-review-council).
+It is like bringing in an outside consultant for a second opinion. A single brain checking its own blind spots runs into hard cognitive limits every time.
 
-The approach runs three paths in parallel: Codex + Gemini + Claude form an expert team, with an orchestrator that aggregates and verifies. Each model reviews the same diff independently, and the orchestrator compares all three opinions, flagging consensus and disagreements.
+## Three-Way Parallel Reviews with Review Council
 
-That said, beyond formal cross-model reviews, there's an even more extreme angle floating around on social media. Everyone talks about having Claude call in Codex for "adversarial review" to poke holes, but it never quite lands. Here's a fresh angle: wire it straight into the Threads API, give it posting rights, and the moment it lands on a solution, have it brag about what it just vibed in full AI voice. Within minutes a few dozen veteran keyboard engineers will show up in the replies to review it for you, free of charge, out of pure rage.
+If you want to take independent review a step further, someone in the community turned the concept into a dedicated tool: [Review Council](https://github.com/yeameen/claude-code-review-council).
 
-## Where This Applies
+This skill runs a three-way parallel panel: Codex, Gemini, and Claude form an expert team, with an orchestrator handling synthesis and verification. The execution is remarkably clean. Each model reviews the exact same diff in an isolated environment and logs its own findings. The orchestrator then cross-checks all three perspectives, explicitly flagging where they agree and where their judgments split.
 
-Jokes aside, back to the point. Whether your domain is code, document review, or analytical reports, the "cross-model challenge" pattern works. The core principles are:
+That way, you never have to shuttle context between AI chats by hand, and you get structured feedback from multiple angles.
 
-1. **Different model families** — avoid same-source bias
-2. **No inherited context** — each reviewer starts from zero
-3. **An orchestrator for synthesis** — don't let them talk past each other; someone needs to make the final call
+## Practical Ground Rules for Cross-Model Reviews
 
-Resume screening, investment analysis, code review, even contract review — the framework fits them all.
+Whether your use case is code review, document checking, or investment analysis, getting models to challenge each other effectively comes down to three rules:
+
+1. **Different model families**——Avoid common-source bias so the same training architecture does not validate itself.
+2. **Zero context inheritance**——Every reviewer starts from scratch with none of the earlier reasoning.
+3. **An orchestrator to synthesize**——Prevent scattered feedback by using a central coordinator to distill consensus, highlight disagreements, and deliver the final call.
+
+This framework applies across the board, from resume screening and investment reports to code review and contract analysis. Cut context inheritance at the start and establish a clear synthesis step at the end, and you give different model architectures the space to do what they do best: actually catch what the other missed.
 
 <!--
-Self-report list
-1. "(new H2 "Rage-Driven Code Review" and its paragraph) Everyone talks about having Claude call in Codex for "adversarial review" to poke holes, but it never quite lands. Here's a fresh angle: wire it straight into the Threads API, give it posting rights, and the moment it lands on a solution, have it brag about what it just vibed in full AI voice. Within minutes a few dozen veteran keyboard engineers will show up in the replies to review it for you, free of charge, out of pure rage." — 類型：併入碎念（憤怒式審查 / Rage-Driven Code Review，2026-08-14 週報併入）
+自首清單
+1. 「（新增 H2「憤怒式審查」及其段落）大家都在說讓 Claude 叫 Codex 來做「對抗式審查」挑刺，但總感覺差點意思。想到一個全新的審查思路：直接接入 Threads API，給他發文權限，想到解法就立刻用炫耀自己 Vibe 了什麼的 AI 語氣發在脆上面，保證馬上就有幾十個資深的鍵盤工程師出來，在留言免費幫你憤怒式審查。」 — 類型：併入碎念（憤怒式審查，2026-08-14 週報併入）
 
-2026-10-26 splice cleanup (mirrors zh): removed "Rage-Driven Code Review" heading and folded paragraph into previous section as an extended joke, then bridged back to "Where This Applies"; new bridge sentences: "That said, beyond formal cross-model reviews, there's an even more extreme angle floating around on social media.", "Jokes aside, back to the point."
+2026-10-26 拼接順稿：
+- 「話說回來，除了正規的模型互審，社群上還有一種更極端的玩法。」— 類型：銜接
+- 「玩笑歸玩笑，回歸正題。」— 類型：銜接
+（將「憤怒式審查」獨立小標移除並併入前文作為延伸玩笑，再以過渡句接回文末的「適用場景」總結）
+
+2026-11-12 舊文盤點整篇重寫：
+消除中段拼入社群碎念的突兀拼接感，將「憤怒式審查」轉化為引出對抗式審查需求的生動引子；全文梳理為單一清晰主軸，自痛點出發依序解析隔離原則、三路審查與落地判準。
 -->

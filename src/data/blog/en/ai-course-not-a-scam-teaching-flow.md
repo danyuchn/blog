@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-10-02T01:03:00Z
-title: "Is Teaching an AI Course Just Harvesting Chives? How I Went Back and Refined My Teaching Flow"
+title: "Are AI Courses Just a Cash Grab: How I Rebuilt a Solid Teaching Workflow"
 slug: en/ai-course-not-a-scam-teaching-flow
 featured: false
 draft: false
@@ -9,68 +9,85 @@ tags:
   - teaching
   - ai-education
   - opinion
-description: 'Someone said running an AI course is just harvesting chives. I needed 15 years to get fluent at teaching GMAT, and when I started teaching AI I ran over time and wasted hours too, so I went back and rebuilt the whole flow.'
+description: 'Many assume that because AI answers questions for free, teaching an AI course is just a cash grab. After 15 years teaching the GMAT, my first AI classes still ran hours over. Here''s how I overhauled the workflow so students get a practical system that actually works.'
 ---
 
-Recently I saw someone say that running an AI course is just "harvesting chives" (a Chinese idiom for fleecing people). I found it funny and had nothing to say.
+A common refrain in AI discussions goes something like this: if you can get answers to any question just by asking AI, why pay for a course? Aren't people selling AI classes just running cash grabs?
 
-A lot of teachers put real effort into making the learning experience good. Just because you can get something by asking AI doesn't mean everyone else can get it that easily. Ever heard of the "curse of knowledge"? That's exactly this blind spot.
+Whenever I see that take, I can only laugh and shake my head. Plenty of instructors pour genuine effort into building a good learning experience. Just because you can pull an answer out of an AI prompt doesn't mean someone else can do it easily. That is the curse of knowledge in a nutshell.
 
-Take me. I taught GMAT for 15 years, and only toward the end did it become second nature. The moment a student walks in I can see where the problem is. I design the homework before, during and after class, I customize the whole study plan, and I can diagnose thinking blind spots precisely.
+Take my own background: I taught the GMAT for fifteen years, and by the end, it was second nature. A student would come in, and I could spot their issue in minutes. I could design precise pre-class prep, live coaching, and post-class assignments, diagnose blind spots in their reasoning, and customize a study plan from scratch.
 
-But when I started teaching AI, a lot of it had to start from scratch. Honestly, the product was badly designed at first. I often ran over time, a 1-hour session turning into 3 hours. Pre-class preparation was thin too: things that could have been installed before class got dragged into the class itself, and concepts students could have learned from a recorded lesson, I taught from zero live. Then there was waiting for students to type, waiting for them to install things, waiting for the AI to finish running. All wasted time...
+When I shifted to teaching AI, though, I had to figure things out from scratch. Frankly, my early course design was rough. Sessions dragged on relentlessly; what was supposed to take one hour routinely ballooned into three. Pre-class prep was inadequate: environments and tools that should have been set up beforehand ended up being installed in a scramble during live sessions. I spent valuable live time lecturing on basic concepts that students could have grasped just by watching recorded videos. Then came waiting for students to type, waiting for progress bars, and waiting for AI generation. It was a massive waste of time.
 
-Knowing nothing at the start and wasting time is normal. But I think a teacher who cares goes back and refines their teaching flow and the product spec of the whole course.
+Wasting time while finding your footing is normal. But if you take your craft seriously, you can't let your classes spin their wheels. You have to step back and rebuild your teaching workflow and product specs.
 
-So here is my flow now:
+## Shifting from Selling Hours to Delivering Complete Solutions
 
-First, a short consultation with the student who's coming for one-on-one, to pin down the scope of what they'll build and to hand them a blueprint of every future step on the spot. Then I give them the full recorded course. After they finish it, I give them a customized handbook that tells them which prompts to use when they work with AI on their own. There's a private message channel throughout, so they can ask anytime.
+To fix the overruns and inefficiencies, I took the burden jammed into live class time and redistributed it across pre-class prep and post-class follow-up. The rebuilt workflow breaks down into three core stages:
 
-![A page from the customized handbook I give students, covering conversation management (one task per conversation, turn anything important into a file), the two built-in commands /insights and /goal, and a tip to have the AI turn any plan you can't follow into a review page.](/blog/assets/posts/ai-course-not-a-scam-teaching-flow/1-handbook.jpg)
+First is a brief pre-class consultation. Before jumping into live 1-on-1 implementation, I hold a short call with the student to clarify the scope of what we are building and map out a step-by-step blueprint on the spot.
 
-The bigger problems wait for the two-hour one-on-one, where I ask the student to export their conversation history for me to analyze. In class I demonstrate in person: in the same situation where they work with the AI, how I would give instructions, how I would check the results, how I would direct the AI. Along the way I add a lot of techniques, logic and strategy for working with AI.
+Second is recorded video lessons and a customized handbook. Once the scope is set, the student watches pre-recorded lessons to build a foundation. After that, I deliver an operating manual tailored to their specific use case, complete with concrete prompts showing how to work with the AI independently.
 
-Students say what they learn this way is very lean. Fumbling around with AI alone, you hit a lot of blind spots and go in circles. But after about two cycles of this method, every student can independently complete the workflow they came with, and they pick up a complete skill set they can use on other projects.
+![A page from the customized operating handbook outlining chat management principles: one conversation per task, saving important outputs into files, using the /insights and /goal slash commands, and turning complex plans into review pages.](/blog/assets/posts/ai-course-not-a-scam-teaching-flow/1-handbook.jpg)
 
-So teaching AI now is really different from the beginning. First, I almost never run over time, because I've moved things to before and after class. Second, students know what they're doing at each step and what comes next, they've communicated fully with the teacher, and they know that what they bought is a finished total solution, not "class hours".
+As shown in this handbook page, students get a clear grasp of concrete chat management principles: one conversation per task, saving important outputs into files, and using built-in commands like /insights and /goal. When facing an intricate plan that is hard to follow, they learn to ask the AI to generate an easy-to-read review page instead. On top of that, they have a dedicated direct-messaging channel to ask questions whenever they get stuck practicing on their own.
 
-There's one more thing in the flow that I tell students straight: I record the whole session, give them the transcript, and turn the transcript into class notes for them. Why? Because a transcript is worth more to the teacher than to the student. Think about it: if you have the transcript of every class, you can have AI distill the essence of your lessons, so preparing in the future isn't so tiring, and you can keep iterating on top of it.
+Third is transcript exports and a targeted two-hour 1-on-1. Instead of burning live time fumbling through complex problems, we save those roadblocks for this session. Before we meet, the student exports their full chat history with AI so I can see exactly where things broke down. In class, I jump straight into the scenario where they got stuck and work through it live: how I structure the prompts, verify the output, and steer the AI when it drifts, explaining the underlying logic and tactical nuances on the spot.
 
-So the transcript helps the teacher far, far more than it helps the student. The student gets one copy, but you have your own transcript every time, which adds up to hundreds.
+When tinkering on their own, students often run in circles around their blind spots. But with this closed loop of pre-class prep, tailored manuals, and transcript diagnostics, they typically become fully capable of executing their target workflow and transferring the skills to other projects after just two cycles.
 
-More importantly, what the student recorded is always your yesterday. The transcripts you keep accumulating help you build your tomorrow faster. What they learn will never catch up with your system.
+By this point, sessions almost never run late. Students know exactly what they are doing and where they are heading next, with constant communication throughout. They know they are paying for a complete, workable solution, not just clock hours on a calendar.
 
-## Deepening the Service: Coaching 18 Students Solo
+## Transcripts as a Two-Way Asset: Compounding Yesterday and Tomorrow
 
-Once this flow is running smoothly, the most direct result is that service scale and attention to detail can hold at the same time.
+There is another practice I insist on throughout the entire workflow: recording every session, generating full transcripts, and distilling them into concise takeaway notes for the student.
 
-I never used to think I could coach 18 students on my own and still handle all of it myself: teaching, answering questions, custom study plans, progress adjustments, designing homework, grading homework. Fully personalized service, and more detailed than what I used to give when I only had a handful of students.
+On the surface, this looks like customer service for the student. In reality, it helps the instructor even more. Think about it: transcripts from every class can be fed to an AI to pull out the key insights, slashing future prep time and letting you iterate on course materials after every single session.
 
-With Claude Code, all of that is doable now. It sounds easy, but pulling it off takes some technique:
+For an individual student, it is just a log of their own session. For the teacher, it builds a private archive of hundreds of dense, real-world teaching transcripts.
+
+More importantly, a student's recording captures what you taught yesterday. Your growing library of transcripts helps you build what you will teach tomorrow, so your underlying system is always moving forward.
+
+## Scale Meets Precision: Coaching 18 Students Solo
+
+Once this teaching and operations workflow is running smoothly, the most direct payoff is that scale and personal attention no longer trade off against each other.
+
+Years ago, I could hardly imagine coaching 18 students at the same time while handling live teaching, Q&A, custom study planning, pacing adjustments, homework design, and grading all by myself. Yet the service is even more attentive and tailored than back when I only took on a handful of students.
+
+With Claude Code, this is entirely doable. It sounds straightforward, but making it work takes some deliberate technique:
 
 <div class="video-embed"><iframe src="https://www.youtube.com/embed/Hm05AErsUs8" title="一個人帶 18 位學生，怎麼一個都不漏掉？家教用 AI 管學生的 6 個方法" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-So why do I have such a complete structure? Simple: for a while I felt that I was extremely successful teaching GMAT, riding high and doing it with my eyes closed, every consultation dense with information and not a dull moment. But teaching AI, I was back to being the me of 15 years ago, just starting out on GMAT.
+## Porting 15 Years of Teaching Standards Across Disciplines
 
-So I asked Fable to distill my 15 years of GMAT teaching experience, to find out how my teaching-material specs had been polished all along, and then transfer them in parallel to AI teaching.
+Where did this delivery framework come from?
 
-I think doing it this way is responsible. Would anyone call a course like this chive-harvesting? So what I think you should actually look at is how much the teacher has put into the course, and whether the course planning and design is complete and carefully made.
+After 15 years of teaching GMAT, everything came effortlessly. Every consultation was dense, fast-paced, and never skipped a beat. But when I first started teaching AI, I suddenly felt thrown back fifteen years to when I was a complete novice.
 
-All in all, if this is a teacher with experience, passion and the drive to make the product good, why criticize them for no reason?
+So I had an AI collaborator analyze fifteen years of my GMAT teaching history, extract the curriculum standards I had refined over that decade and a half, and port those exact specifications into my AI courses.
 
-All I can say is that people who talk from the comfort of the sidelines have it too easy. They deserve a slap.
+Whether a course is a rip-off doesn't come down to whether AI can answer the same questions. It comes down to whether the instructor actually built a solid learning experience and a thoughtful delivery system. When you transform disjointed billable hours into a clear framework of pre-class prep, transcript diagnostics, and live troubleshooting, students leave with a workflow they can run entirely on their own.
+
+## Appendix
+
+The distillation and cross-domain porting of 15 years of teaching experience described above was carried out by having Fable distill the curriculum development history and map it onto AI course specifications. Tracking personalized student progress and managing assignments across multiple learners was implemented using Claude Code.
 
 <!--
-2026-10-09 W42 addendum: translation of a 10-07 21:32 Threads post; video uploaded to the AgentCrew Academy channel on 10-07. Added non-source sentences: heading only.
+2026-10-09 W42 補記：兩段為 10-07 21:32 Threads 貼文逐字（補半形空格）；影片為 AgentCrew Academy 10-07 上架。新增非原文句子：小標（框架句）。
 -->
 
 <!--
 新增非原文句子清單（忠實度自首）：
-1. 「流程裡還有一個做法，我都直接跟學生講：」 — 類型：銜接（對應 zh 版同句）
-2. 「(a Chinese idiom for fleecing people)」 — 類型：框架句（英文讀者註解「割韭菜」）
+1. 「流程裡還有一個做法，我都直接跟學生講：」 — 類型：銜接（把另一則回覆接進流程段，取代原文「我都直接跟學生講：」開頭）
+2. 「所以現在我的流程是這樣：」後接段落的合併與句末標點補齊、「1 小時／3 小時」「project」「total solution」的字面修正 — 類型：改寫（僅標點、錯字、斷句合併，無新增意思）
 3. 圖片 alt 全句 — 類型：框架句（依主對話提供的圖片描述撰寫）
 4. 文章標題與 description — 類型：框架句
-5. 其餘為 zh 版逐句翻譯，標點與斷句合併屬改寫
 
-2026-10-26 splice cleanup (mirrors zh): removed addendum tag from 18-student section and moved it before conclusion so the slap line remains the sole ending; new bridge sentences: "Once this flow is running smoothly, the most direct result is that service scale and attention to detail can hold at the same time."
+2026-10-26 拼接順稿：
+- 「這套流程跑順之後，最直接的成果就是服務規模跟細緻度能同時成立。」— 類型：銜接
+將 18 位學生影片章節移除補記標記並移至結論之前，讓欠掌嘴維持全文唯一收尾。
+
+2026-11-12 舊文盤點整篇重寫：移除社群情緒性開嗆與拼接痕跡，改以「重構教學產品規格與交付體系」為主軸，將 Fable 等內部工具代號移至附錄說明，補齊段落前後邏輯與流暢度。
 -->

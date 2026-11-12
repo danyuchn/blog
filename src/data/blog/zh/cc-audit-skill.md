@@ -9,64 +9,66 @@ tags:
   - claude-code
   - ai-tools
   - token-optimization
-description: '把我之前整理的一千多讚的省額度技巧全部做成 skill。丟給 Claude Code 安裝後，它會逐條檢查你的設定、近期 session、rules 膨脹、context 用量，給出可執行的修正清單。'
+description: '把我之前在社群整理獲得一千多讚的省額度技巧做成健診 skill。丟給 Claude Code 安裝後，它會自動檢查設定、近期 session、rules 與 context 用量，產出可執行的修正清單。'
 ---
 
-Claude 最近額度亂搞，大家罵歸罵，Claude 還是得繼續用。前陣子我整理了一大串省額度的技巧發在 Threads 上，收穫一千多讚之後，有網友提議可以做成 skill。
+Claude 最近額度亂搞，大家罵歸罵，Claude 還是得繼續用。與其每天看著額度見底焦慮，更實在的作法是把背後偷吃 token 的設定與習慣徹底抓出來。前陣子我在 Threads 上整理了一大串省額度的技巧，收穫一千多讚之後，有網友提議可以做成 skill。
 
 所以我就做好放在這邊了：<https://github.com/danyuchn/cc-audit>
 
-把連結丟給 Claude Code 請他幫你裝就好了。
+這是一個專門幫 Claude Code 環境做健康檢查的 skill。把連結丟給 Claude Code 請它幫你安裝，就能直接上線執行健診。
 
-## 它在做什麼
+## 為什麼不直接看內建的 /stats？
 
-cc-audit 是一個健診 skill。觸發後它會跑四個步驟，最後給你一份結構化報告和可執行建議清單。
+很多人的第一個疑問通常是：終端機裡不是本來就有 `/stats` 可以看用量嗎？
 
-### Step 1：靜態設定審查
+Claude Code 內建的 `/stats` 確實會告訴你「這個 session 用了多少 token」，但它回答不了最核心的三件事：
 
-- 預設模型是不是設成 Sonnet（大部分情境 Sonnet 比 Opus 省很多，而且夠用）
-- Hooks 設了哪些，有沒有失控的 post-hook 吃 token
-- MCP server 清單，每個都是啟動時的固定開銷
-- Rules 檔案每檔行數——看有沒有哪個 rule 膨脹到 >200 行需要拆分
-- Skills 清單
+1. 為什麼會用這麼多？
+2. 哪幾個設定才是吃額度的元兇？
+3. 知道數字之後，下一步具體該改什麼？
 
-### Step 2：JSONL Session 分析（近 5 個 session）
+`/stats` 只能量出體重，卻照不出病因。cc-audit 的定位是一份自動化健診，它的輸出不是單純的統計數字，而是結構化報告與可執行建議清單。清單上的每一條，都會具體對應到你的哪一個檔案、哪一行、該做什麼修改，完全不用自己翻文檔瞎猜。
 
-這一步是重點。它會撈你最近 5 個 JSONL 檔，逐條計算：
+## cc-audit 的四個健診面向
 
-- **Context 使用率**：`(input_tokens + cache_creation + cache_read) / 200000`
-- **快取類型**：從 `ephemeral_5m_input_tokens` 跟 `ephemeral_1h_input_tokens` 分辨你吃的是 Pro 的 5 分鐘快取還是 Team/Enterprise 的 1 小時快取
-- **Compact 觸發次數**：`type=system` 訊息中有 `summary` 關鍵字代表觸發過 `/compact`
-- **貼圖後的 cache miss**：用「user content 有 image type + 下一條 assistant cache_read < 500」組合偵測
+觸發 cc-audit 之後，它會跑四個步驟，全面盤點你的設定與近期用量：
 
-跑完你會看到「這個 session 花了多少 token、有沒有 auto compact、有沒有被貼圖搞掉快取、context 用到 80% 還是 30%」——全部一目瞭然。
+**第一步：靜態設定審查**
 
-### Step 3：官方最佳實踐查詢
+它會先檢查你的底層環境組態：
+- 預設模型是不是設成 Sonnet（大部分情境下 Sonnet 比 Opus 省很多，而且完全夠用）。
+- Hooks 設了哪些，有沒有失控的 post-hook 會吃 token。
+- MCP server 清單，每個 server 都是啟動時的固定開銷。
+- Rules 檔案每檔行數，檢查有沒有哪個 rule 膨脹到 >200 行需要拆分。
+- Skills 清單，盤點目前掛載的項目。
 
-這一步它會 WebFetch 去抓 Anthropic 最新的 Claude Code 文檔，比對你目前的設定跟官方建議有多遠。我寫的這些建議會不會過時？不會，因為它每次跑都重新抓。
+**第二步：JSONL Session 分析（近 5 個 session）**
 
-### Step 4：Rules path-specificity 檢查
+這一步是整套健診的核心重點。它會撈出你最近 5 個 session 的 JSONL 紀錄，逐條進行深度解析：
+- **Context 使用率**：計算公式是 `(input_tokens + cache_creation + cache_read) / 200000`；如果你使用的是 1M context window 的 session，分母則對應改成 `1,000,000`。算出來就能清楚知道你的 context 目前是用到了 80% 還是 30%。
+- **快取時效與類型**：從 `ephemeral_5m_input_tokens` 跟 `ephemeral_1h_input_tokens` 辨識快取狀態。只要使用 Claude 訂閱、且在方案額度內，主對話享有的是 1 小時快取；如果是 subagent 或是吃額外用量的部分，快取時效則是 5 分鐘。
+- **Compact 觸發次數**：偵測 `type=system` 訊息中是否有 `summary` 關鍵字，確認對話過程中是否曾觸發過 `/compact`。
+- **貼圖後的 cache miss**：以「user content 有 image type + 下一條 assistant cache_read < 500」組合進行偵測，抓出快取是否被貼圖打掉。
 
-檢查你的 rules 是不是應該加 `paths:` 條件載入，讓它只在相關檔案路徑出現時才吃 context。這一招省很多，很多人不知道。
+跑完這一步，這個 session 花了多少 token、有沒有 auto compact、有沒有被貼圖搞掉快取、context 用到 80% 還是 30%，全部一目瞭然。
 
-## 為什麼不直接看 `/stats`？
+**第三步：官方最佳實踐查詢**
 
-Claude Code 內建的 `/stats` 只告訴你「這個 session 用了多少 token」，但沒告訴你：
+很多人會擔心這類檢查規則會不會隨時間過時。cc-audit 在這一步會透過 WebFetch 直接去抓 Anthropic 最新的 Claude Code 官方文檔，拿最新建議來比對你目前的設定差距。因為每次跑都重新線上抓取，給出的建議不會過期。
 
-1. 為什麼這麼多
-2. 哪幾個設定是元兇
-3. 下一步該改什麼
+**第四步：Rules 的 path-specificity 檢查**
 
-cc-audit 的輸出格式是可執行建議清單。每一條都對應到具體的檔案、具體的行數、具體的修改。你不用自己對照文檔猜。
+檢查你的 rules 檔案是不是應該加上 `paths:` 條件載入。透過這個機制，特定規則只會在相關檔案路徑出現時才載入吃 context，避免無關情境常態佔用。這一招能省下非常多額度，但很多人在設定時都不知道。
 
-## 養成習慣
+## 把健診變成固定的重構習慣
 
-我自己的用法是每週 Claude Max 重置那天跑一次 cc-audit，配合我前面寫過的 [Obsidian + Claude Code 工作流](/blog/posts/zh/obsidian-claude-code-workflow)——額度即將重置的那一天，你暫時變身「單日 token 富翁」的時候，正是你做這種重構的好時機。
+之前我是手動對照文檔逐項修改，常常要花三四十分鐘，還容易看漏。做成 skill 之後變成五分鐘全自動，所有項目一次檢查完畢。
 
-之前我是手動對照文檔改，花三四十分鐘。做成 skill 後變成五分鐘全自動，還不會漏掉項目。
+如果你想把這套做法放進日常工作流，最好的時機是配合你的方案重置週期。可以參考我前面寫過的 [Obsidian + Claude Code 工作流](/blog/posts/zh/obsidian-claude-code-workflow)——在額度即將重置的那一天，你暫時變身「單日 token 富翁」，這時候額度最充裕，正是進行環境重構、拆分 rules 與清理設定的黃金時段。
 
 丟這個連結給 Claude Code：<https://github.com/danyuchn/cc-audit>
 
 它會幫你裝好、驗證、然後你打 `/cc-audit` 就開始跑。
 
-> **後記（2026-10-20）**：上面公式有兩處已經變了。快取時效不是照 Pro 或 Team/Enterprise 分，而是只要用 Claude 訂閱、還在方案額度內，主對話就是 1 小時快取，subagent 或吃額外用量的部分才是 5 分鐘。另外現在很多 session 跑的是 1M context window，用的是這種的話，分母要改成 1,000,000，不是 200,000。
+<!-- 2026-11-12 舊文盤點整篇重寫：將文末後記對快取時效與上下文視窗公式的修正整合進步驟內文，把檢查流程改為連貫的四大面向，並以清楚的安裝指引作為全文唯一的收尾。 -->

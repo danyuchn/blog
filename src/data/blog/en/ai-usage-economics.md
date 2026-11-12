@@ -2,7 +2,7 @@
 author: Dustin Yuchen Teng
 pubDatetime: 2026-07-03T04:00:00Z
 modDatetime: 2026-10-02T01:00:00Z
-title: 'The Usage Economics of AI: Quotas, Plans, Tokenizers, and That Anesthetic Bill'
+title: "The Economics of AI Usage: Quota Black Boxes, Subscription Math, and Calming Token Anxiety"
 slug: en/ai-usage-economics
 featured: false
 draft: false
@@ -10,281 +10,192 @@ tags:
   - ai-tools
   - ai-trends
   - subscription
-description: 'Notes on AI usage, collected: pay-as-you-go vs subscription, a tokenizer quietly adding 1.4x, why resets are staggered, the real gap between Pro and Max, why a "4x upgrade" only doubles your weekly quota, a night market steak framework, and the bill you shouldn''t mistake for output.'
+description: 'A breakdown of AI subscription economics: from 50x official subsidies and five-hour versus weekly quota gaps to prompt caching, the night-market steak framework, and automated off-peak scheduling.'
 ---
 
-Over the past few months I kept leaving little notes about "AI usage," each sitting alone in my micro-notes diary. Put together, they turn out to make a small "usage economics" — how you pay, how usage quietly inflates, why the quota rules are opaque, all the way to the bill at the end of the month. Might as well collect them into one piece.
+Claude Code isn't something I open once in a while; it's the environment running the moment I boot up my machine every morning. Because I spend my whole day in it, when the terminal suddenly throws a rate limit error, the letdown hits hard. It feels worse than losing your internet connection, because whatever you were building just grinds to a dead stop.
 
-## For Heavy-Text Work, Pay-As-You-Go Wins
+What makes it absurd is checking the usage dashboard at the end of the month and seeing token consumption hit an all-time high of +111%. When you separate spending from actual output, that number stops looking like the cost of efficiency. It looks like a bill for being spoiled by your tools. Quotas expand on their own, usage rules stay opaque, and the models are addictive to use. Put those three together, and it's easy to rationalize the invoice as a necessary productivity tax. Look closer, though, and you'll often realize you aren't paying for raw output; you're paying for convenience.
 
-Anywhere that involves large amounts of text, I use OpenRouter — meeting transcript processing, for example. But since it's truly on-demand and I always pick cheap bulk-friendly models, pay-as-you-go works out better. Top up $10 USD and it lasts a long time.
+Meanwhile, on the free tier of ChatGPT, I have yet to hit a single limit. That isn't because the free tier is so generous; it's because paid Claude pushes you into rate limits constantly. **For Claude users, satisfaction and anxiety spike together.** Free users stay comfortably in the "good enough" zone, while paying Claude users live on a ticking clock: will this still run an hour from now? Every week before quota resets, social feeds fill up with familiar panic: screenshots showing 92% usage with ten hours to go, paired with frantic comments like "I can't sleep if I haven't burned every token" or "I literally had a nightmare about wasted tokens."
 
-A subscription suits people who lean hard on the same few models every day. But if your heavy lifting is "occasional, token-hungry, and not fussy about the priciest model," pay-as-you-go doesn't waste money on quota you never touch.
+This isn't an individual discipline problem; it's built into how subscription tiers work. A fixed monthly fee paired with a hard ceiling creates an instinctive fear of missing out. It's like paying for a gym membership: skip a workout and you feel like you've wasted your body, but leave tokens on the table and you trigger pure intellectual dread.
 
-On the pay-as-you-go side, GPT-5.6-Luna is cheap to the point of absurdity. I'm running it in two places: a browser extension like immersive translation, one-click translating 50-80 foreign-language pages a day; and a voice-input tool like Typeless called "Say It," used 100-150 times a day to clean up text. After 10 days, daily spend is under $0.01, and the cost dashboard just shows 0.0.
+When usage quietly balloons, quota rules remain murky, and the tool is too useful to put down, you end up normalizing that hefty monthly invoice. Shaking off that anxiety requires taking a cold look at the actual economics behind your usage.
 
-## Usage Inflates on Its Own, and You Never Feel It
+## The Subscription Math: Official Subsidies and Dangerous Shortcuts
 
-A tokenizer rewrite is the real shocker — 1.4x usage.
+Sticking purely to the facts: first-party subscriptions from major AI labs are, dollar for dollar, the best deal around. The official subsidy ranges anywhere from 10x to 50x. For instance, on Claude's $100 plan, the raw token volume you can chew through in a month would easily cost $5,000 if billed at standard API rates.
 
-You change nothing, same work, the model swaps in a new tokenizer and usage climbs 40%. That kind of inflation isn't printed anywhere obvious; you only catch it from how fast your quota drains.
+If you try setting up a centralized API routing platform, you're almost certainly stuck paying flat API rates. Is that really where you want to put your money?
 
-## Quota Rules Are More Opaque Than You'd Think
+Around the same time, I heard an even more extreme cost-cutting idea: sharing a single account among three people. That was the funniest thing I'd heard all month, even funnier than mayoral candidates campaigning on universal AI portals. Anyone proposing that clearly hasn't used Claude enough to know that sharing one seat between three people is just three colleagues holding hands on an express trip to ban hell.
 
-Why does everyone's quota reset at a different time? Because if a reset also reset the clock, everyone's reset time would converge, and everyone would binge right before the cycle ends, piling on peak load and destabilizing the servers. That's why they deliberately stagger it. My guess, anyway.
+If you want to experience quotas from the opposite extreme, there's another way: jump straight into Claude Code on a $6,000 plan, fire up Fable alongside Ultracode, and feel not just like a manager, but like a business owner. Though what you'll really feel first is having payroll bounce the minute you hit your ceiling.
 
-Everyone's reset time is different — some Sunday, some Wednesday. Call it Anthropic's "demand smoothing": it keeps peak load from concentrating on one or two days.
+Speaking of extreme pricing, here's some trivia: the most expensive API model to date wasn't Claude Fable, but GPT-o1-pro at $150/$600 per million tokens—roughly 12 to 15 times the price of Fable or Mythos ($10/$50). Released in March 2025, it lingered in a deprecated state before OpenAI slated it for shutdown on October 23, 2026. Its reign as the most expensive model won't last much longer.
 
-The other direction is pooling. Cold news of the morning: Claude Design's standalone quota has disappeared, folded into the overall Claude usage quota. Separate quotas get pulled into the main pool one by one; you gain flexibility, but the price is it gets harder to reckon "how much of this feature do I actually have left."
+## The Black Box and the Bloat Trap: Why Your Tokens Disappear
 
-## Watch That Final Bill Turn Into an Anesthetic
+Users running benchmarks found something surprising: moving from 5x to 20x doesn't actually give you 4x the capacity across the board. The 4x boost only applies to the rolling five-hour window. **Your weekly cap only doubles.**
 
-ccusage hit an all-time high, +111%. When you separate spending from output, that number isn't "the cost of efficiency" — it's "the bill for being spoiled by a tool."
+Pay more, get less than expected. That isn't just an impression; it's how the math is structured. If you're upgrading to run multi-day batch jobs, you need to know whether your bottleneck is the five-hour burst or the weekly ceiling. People rarely talk about this difference, but it dictates your actual throughput depending on whether you work in intense sprints or spread work evenly across the week. If you use the tool in short, scattered sessions each day, upgrading beyond 5x won't meaningfully stretch your weekly pool. Codex follows a similar pattern: after Tibo teased back-to-back resets, tests on the $20 tier revealed that the seven-day allocation amounts to roughly five full five-hour windows, with only a small buffer left over.
 
-Usage inflates on its own, the quota rules are opaque, and the models are addictively good, so stack those three and the month-end bill is easy to rationalize as "the price of productivity." But separate spending from output and you'll often find: you're paying to be spoiled by a tool, not necessarily paying for what you produced.
+Another puzzle is reset timing. Why does everyone's quota refresh on a different day—some on Sunday, others on Wednesday? It appears to be Anthropic's version of demand smoothing. If everyone reset at midnight on the same day, users would rush to dump their remaining tokens right before the deadline, slamming the infrastructure and causing server instability. Staggering reset days prevents weekly usage spikes from piling onto a single afternoon.
 
-## Platform Math, and the Ban Hell of Sharing One Account Three Ways
+Beyond staggering schedules, providers are also pooling pools together. A quiet change recently: Claude Design's standalone quota disappeared, folded entirely into the main Claude usage pool. Merging separate allowances into one bucket provides flexibility, but it makes it much harder to budget exactly how much headroom you have left for a specific workflow.
 
-Just the facts, no comment on any individual:
+Even sneakier is tokenizer updates. You don't change a single prompt, yet a silent tokenizer update on identical text can suddenly inflate token counts by 1.4x—a 40% jump. You won't find this plastered across release notes; you only notice it when your quota runs down faster than usual.
 
-Each vendor's own subscription plan is basically the best deal you can get. The subsidy multiple runs as high as 10~50x. For example, I pay $100 USD for Claude, and in a month I get through an amount of usage that would cost about $5,000 USD at API rates. If you set up a big routing platform, you very likely have to run on API rates... is that really such a good idea?
+There is also a sharp gap between nominal capacity and real-world availability depending on the clock. Recent tests during US East Coast peak hours showed limits hitting in as little as an hour under sustained heavy use. When shared infrastructure gets congested, your effective slice of compute shrinks, diluting the nominal headroom you thought you bought.
 
-The same day, the same math showed up in another form. Three-way sharing. That was the funniest thing I heard back then, funnier than the mayoral candidate's big all-in-one AI portal. Have you never used Claude? Three-way sharing = three people going to ban hell together.
+Features meant to help you can also eat your quota alive. Skills function less like autonomous departments and more like dense instruction manuals. Over long sessions, they often lead to session shutdowns or premature rate limits. **Skills don't save tokens; they just spend them in a different way.** Injecting a skill costs tokens on every prompt, pushing your context window closer to its threshold. If you find yourself hitting limits more frequently, check whether your loaded skills are responsible.
 
-Want to feel a quota from the opposite direction? There's a way for that too: go into Claude Code, take the $6,000 plan, then turn on fable + ultracode, and you get to feel what it's like to be not just a manager but the boss. Of course the first thing you'll feel is the quota running out and payroll not going through.
+The same goes for graphical interfaces: Cowork, Claude's sandbox interface, burns tokens far faster than the command-line CLI. The reasons are straightforward: wrapper overhead in the UI, default safety prompts injected behind the scenes, and different context retention behaviors. If you're on Pro using Cowork and burning through allowances, switching to the terminal CLI will save you substantial token volume on the exact same task. Cowork works well as an onboarding sandbox, but it isn't built for heavy, daily production work.
 
-Speaking of extreme pricing, trivia pointing the other way: the most expensive model by API pricing right now isn't Claude Fable, it's GPT-o1-pro, at 150/600, about 12-15x Fable/Mythos (10/50). Released March 2025, currently deprecated but not yet retired.
+## The Real Value of a Five-Hour Window: 710K Output Tokens and a 55x Subsidy
 
+How much raw value can you actually squeeze out of a single five-hour window?
 
-## When the Quota Runs Out, the Work Stops There
+Since the release of Opus 5.5, token efficiency has improved significantly, and the five-hour window has noticeably expanded. One morning, after managing to exhaust a full five-hour window under heavy load, I dug through the terminal session logs and agent metrics to see what kind of volume had actually run:
 
-Claude Code isn't an occasional tool for me — it's running from the moment I open my laptop every morning. So when Rate Limit hits, the sense of loss is real. More frustrating than losing internet, because the work literally stops there.
+- The window ran from 8:00 to 13:00, with 6 manual primary sessions (up to 3 running concurrently) and 2 automated scheduled tasks.
+- Primary session turns: 746 turns on Opus 5.5 and 187 turns on Sonnet 5.
+- Dispatched subagents: 32 total (23 Sonnet, 6 Opus, and 3 Fable).
+- Total output: roughly 710,000 tokens, backed by approximately 440 million cached read tokens.
 
-A later version finally added this: auto-resume once your quota resets. Genuinely great. What I actually want more, though, is for caches older than an hour to survive.
+The delegation was clean: primary sessions ran Opus 5.5 for high-level decisions and verification, bulk execution went to Sonnet subagents, and Fable stepped in only when a second opinion was needed.
 
-That dependency made me pay close attention to quotas. Here's what months of daily use taught me.
+That single window consumed around 12% of the weekly allowance. At published API rates, that compute was worth $156.69, scaling out to roughly $1,276 for the week. Max out that full weekly allowance for a month, and you're looking at $5,469 in equivalent API spend. Measured against a $100 monthly subscription, the effective subsidy works out to roughly 55x.
 
-## A "4x Upgrade" That Isn't 4x
+That's pretty much the gist of it.
 
-Someone measured it: the "4x upgrade" from 5x to 20x is only on the 5-hour quota. **Weekly quota only doubles.**
+## Caching and Pay-As-You-Go: Mechanics You Need to Know
 
-Pay more, get less than expected. This is not a personal impression, it is the design. If you are upgrading to run long batch jobs, confirm whether you actually need 5-hour capacity or weekly capacity.
+To get that level of value out of a subscription, you need to understand how prompt caching is billed and how long it lasts.
 
-This gap rarely gets discussed, but it matters depending on your usage pattern. If you work in short, scattered sessions across the week, the 5x plan's improvement to your weekly budget is more limited than the marketing suggests. The people who benefit most from the session quota increase are those who do intensive multi-hour work in single sittings.
+A detail many people miss: **cache reads are only billed under API pricing; on a subscription plan, cache reads are completely free.** If you keep an extensive system prompt or a detailed project guide like CLAUDE.md, your subscription won't charge you a single cent for repeatedly reading those cached tokens. API users, by contrast, pay a small fee on every single cache hit.
 
-It's a similar logic over on Codex. Tibo's heads-up about a back-to-back reset let me accidentally measure how the $20 plan's 5-hour window relates to its 7-day window: the 7-day quota works out to roughly five 5-hour rounds, plus a bit more. If you want to seriously max out your quota, going hard from the moment it's announced is the move.
+Cache lifetime depends on how you run the request. According to official documentation, primary sessions on an active subscription keep cached tokens alive for 1 hour. Subagents, purchased usage credits, and direct API key calls, however, only hold cache for 5 minutes.
 
-## Pro's Quota Is Actually Quite Limited
+In day-to-day work, keeping cache warm is the most effective way to protect your quota. Running `/usage` in your terminal displays your current cache hit rate on the bottom line. Keeping that rate high means avoiding long idle pauses and, above all, avoiding switching models back and forth inside the same session. Fortunately, with Opus 5.5, adjusting reasoning effort mid-conversation does not bust the cache: dial effort up when you need thorough autonomous execution, and dial it down when you want quick, interactive responses.
 
-Many people buy Pro thinking it'll be enough. My read: if you're using it for occasional questions, Pro is fine. But once you start running agents and letting Claude complete multi-step tasks autonomously, Pro's weekly quota disappears fast.
+Once subscription caching makes sense, when does it pay to switch to pay-as-you-go (on-demand) APIs instead?
 
-I burned through 20 USD of extra usage in two days before I understood this, bought another 20, then just upgraded. The math made more sense than topping up repeatedly.
+Subscriptions fit people who lean hard on flagship models every single day. If your heavy workloads happen only occasionally, consume massive token counts, and don't require the most expensive flagship model, paying per token avoids wasting money on unused monthly tiers. For text-heavy batch processing—like transcribing and summarizing meeting recordings—I route requests through OpenRouter. Because it's strictly on-demand and uses cheap, high-throughput models, a $10 deposit lasts for months.
 
-## Is Max Worth It
+On the pay-as-you-go side, GPT-5.6-Luna is absurdly cheap. I wire it into two daily tools: a full-page translation extension handling 50 to 80 foreign-language articles a day, and a voice-to-text dictation tool like Typeless processing 100 to 150 voice snippets daily. Over ten consecutive days, total spend stayed under a penny a day, showing up as $0.00 on the dashboard.
 
-The gap from Pro to Max isn't just quantity — the feel of using it changes entirely. With Pro you're constantly rationing. With Max you barely think about it.
+## Night-Market Steak and Decision Frameworks: Capacity Expansion or Anxiety Tax?
 
-I started at 20x, realized I couldn't actually keep up (while Claude is running I'm still busy thinking about how to verify the output and frame the next instruction — I can't actually parallelize 20x), and stepped back down to 5x. Mostly Sonnet, occasionally Opus for tasks that need deeper reasoning.
+Beyond the arithmetic, there is a more fundamental question about mindset:
 
-At $100/month for Max, amortized over working days, it's a reasonable tool cost for serious use.
+You can buy a $7 steak at a night market, or a $70 steak at a white-tablecloth restaurant. Does the $70 steak taste ten times better?
 
-## What One 5-Hour Window Is Actually Worth
+Almost never. People still buy it, of course, but for reasons that have little to do with the beef itself: the room, the service, the ambiance, or entertaining a client.
 
-Ever since Opus 5.5 shipped, quota has gone a long way, and the 5-hour window got bigger too. One morning I finally managed to burn through a whole window inside 5 hours, so I got curious how many tokens that window is worth, and pulled it apart with the claude log CLI and an agent-session tool:
+AI subscriptions follow the same dynamic, yet people rarely view them this way. The ratio between price and realized benefit is often skewed. The price gap between Sonnet and Opus is wide, but Sonnet handles 80% of routine work without breaking a sweat. **Upgrading to flagship tiers or Max plans rarely multiplies actual productivity in equal proportion.** Many people pay for Max simply as an anxiety tax, worried that a lower tier might lack some critical capability. In practice, a cheaper tier rarely lacks capability; it just requires a little more patience.
 
-- The window ran 8:00-13:00, with 6 main sessions I opened by hand, at most 3 running at once, plus 2 more running on a schedule
-- Model turns in the main sessions: Opus 5.5 746 turns, Sonnet 5 187 turns
-- 32 subagents dispatched: 23 Sonnet / 6 Opus / 3 Fable
-- Total output about 710K tokens, cache reads about 440M tokens
+Moving from Pro to Max isn't just about token volume; the day-to-day feel changes completely. If you only prompt a model occasionally, Pro has plenty of headroom. Once you start dispatching autonomous agents to run multi-step workflows, though, Pro's weekly ceiling burns out in days. Before I mapped this out, I burned $20 on extra usage credits in two days, bought another $20 chunk, and eventually decided it made more sense to upgrade to Max.
 
-The split: the main thread runs Opus 5.5 for decisions and sign-off, the bulk execution goes to Sonnet subagents, and Fable only comes out when I want a second opinion.
+On Pro, you constantly monitor how many tokens you have left. On Max, you rarely have to think about it. I briefly tested the 20x tier, but quickly found my own workflow couldn't keep up with the output. While agents are running, you still have to verify changes, test edge cases, and frame the next prompt. Human oversight simply can't match a 20x throughput firehose, so I dropped back down to 5x. At roughly $5 a working day, a $100 Max plan represents a fair operating cost for my daily setup.
 
-That whole window was roughly 12% of my weekly quota, worth $156.69 at API prices, which puts a week at about $1,276. Scale that up and if I maxed the weekly quota all month, that's $5,469. In other words, a 55x subsidy!
+To evaluate whether an upgrade is worth the money, run through these three questions:
 
-That's about it, for what it's worth.
+**1. Does this tool allow me to accomplish things I couldn't do before?**
+This doesn't mean "finishing a task faster." It means taking on work you previously couldn't tackle at all. That is where 10x leverage comes from. If a tool merely turns a two-hour task into a one-hour task, you're buying efficiency, not expanded capability. What efficiency is worth compared to expanded capability is an entirely different calculation.
 
-## Use the monthly API credit
+**2. Am I actually applying the tool to problems it excels at?**
+Many subscribers pay for premium plans only to rewrite basic emails, ask questions a quick search could answer, or run simple tasks the free version of GPT-4o handles effortlessly. That isn't a problem with the tool; it's a mismatch with the workload. The difference between night-market steak and a prime ribeye is close to zero if you're just looking for a quick bite before heading home.
 
-A reminder: use the API credit Claude gives you each month, equal to your subscription fee. Right now I plug it straight into the scheduled jobs I run every night: the to-do morning-brief dashboard, newsletter material collection, and weekly harness maintenance.
+**3. Does my usage regularly hit the actual cap?**
+If you never run into weekly limits, a Pro plan is generally plenty. If you find yourself scrambling to burn tokens every week before the reset clock runs out, ask yourself why. You might genuinely need the capacity, or you might just be reacting to the psychological urge to use up your allowance. The latter isn't a real operational need; it's an anxiety induced by the subscription model.
 
-I also used this as a chance to tune those scheduled jobs. When I first took stock, I found some of them were running on Opus, and the hidden cost was pretty high. Because scheduled jobs run where you can't see them, that invisible quota burn is easy to miss. So I switched to Sonnet 5.5 and adjusted effort and the prompts, and ended up replacing the model with Sonnet: same quality, half the cost.
+Whether night-market steak hits the spot depends on what you went to the market for. Whether an AI subscription is worth the money isn't about whether the model is good; it's about whether you're pointing it at the right problems.
 
-Next step: figure out how to use up the Cloud Session credit that expires in early November...
+## Model Allocation in Practice: From Time Slots to Automated Jobs
 
-People asked what else I use it for and how I hook it up (I plug the API key in under -p mode):
+With a clear framework in place, allocating models across daily tasks becomes straightforward:
 
-1. I designed my own eval set based on my tasks and use it to test different models at different effort levels, to find the most fine-grained dispatch settings for subagents.
-2. Once a week, capped at 25 USD, I let it clear low-risk to-dos that can run autonomously.
-3. The things mentioned above.
+- Drafting articles and structuring thoughts: Sonnet with medium reasoning effort.
+- Everyday coding tasks: Opus with medium reasoning effort.
+- Complex architecture reviews and multi-file analysis: Opus with high or max effort.
+- On model versions: if a minor release doesn't show a noticeable practical leap, there is no need to switch immediately. With Opus 5.5, token economy improved dramatically, and the five-hour window opened up considerably.
 
-But actually, switching /login over to the API also draws on that 100 USD. So if you can't think of anything to use it on, switch to API mode a few days before the credit expires and it gets used up. As long as you don't attach a card for billing on the API Console side, you lose nothing.
+Timing your work directly counters peak-hour dilution. Since heavy runs during US East Coast afternoon hours can trigger limits inside an hour, a practical fix is scheduling critical tasks for morning hours in Taipei (late-night off-peak in North America). That also explains why Claude often feels smoother and more responsive across Asian time zones.
 
-## Cowork Burns More Tokens Than CLI
+On the tooling side, Claude Code added an auto-resume feature that kicks back in once your rate limit resets, so you don't have to babysit the terminal. If you hit your five-hour limit but can't afford to stop, you can fall back to low-priority mode to keep jobs crawling forward. It's slower and still counts toward your weekly cap, but it prevents your pipeline from stalling.
 
-Cowork is Claude's sandboxed UI version. Its token consumption runs significantly faster than direct CLI use — community benchmarks show a meaningful difference. Multiple reasons: interface wrapper overhead, default safety injections, different context management patterns.
+Make sure to put your monthly bundled API credits to work as well. Anthropic's Help Center makes it clear that these monthly credits cannot be used inside interactive terminal sessions; they are reserved strictly for external API calls and non-interactive workflows using the Agent SDK.
 
-If you're using Cowork and feel like Pro disappears instantly, switching to CLI for the same tasks will stretch your quota noticeably. Cowork is the right onboarding experience, not the right production environment.
+To take advantage of these credits, I pipe them directly into background cron jobs: a nightly task dashboard, automated newsletter curation, and weekly test harness maintenance. Auditing those scripts early on revealed several jobs running Opus unnecessarily, creating silent cost leaks. Swapping those to Sonnet 5.5 while tuning effort levels and prompt instructions halved my credit burn without sacrificing output quality.
 
-## Cache Facts a Lot of People Don't Know
+You can also use this credit pool in two other ways: running your own benchmark suites to test how different models behave at various effort settings (dialing in subagent dispatch rules), or capping autonomous agents at $25 a week to clear low-risk backlog items. If you have cloud session credits expiring soon—like a batch I had running out in early November—switch execution modes a few days early to burn them on useful batch work rather than letting them vanish.
 
-Most people don't know this: **only API billing charges for cache reads. Subscription plan cache reads are free.**
+One final note on management mindset: subscription allowances are finite, but perceived scarcity should never distort how you work.
 
-If you have a long system prompt or CLAUDE.md, your subscription won't get charged when it's read from cache. API users pay a small fee on every cache hit. This matters if you're deciding between subscription and API access for your usage patterns.
+I've seen people take tasks back to do manually just because they feared hitting a limit, saving a few pennies of compute while burning their own hours. You buy subscriptions to save time, not to spend your day micro-calculating whether a prompt is worthy of running. If you're five minutes away from your weekly reset with 10% of your quota still sitting there, feed it a meaningful batch task and burn it clean. Until the clock resets, that compute is yours; if you don't use it, it simply vanishes.
 
-Beyond billing, there are two practical cache details:
+## Limits and Gotchas to Remember
 
-1. If you want to save money, protect your cache. On the $20 plan the cache lasts 5 minutes; on $100 and up it's 1 hour. Type `/usage` any time and the last line shows your cache hit rate. Beyond not walking away too long, don't keep switching models.
-2. Switching effort mid-conversation on Opus 5.5 finally doesn't break the cache. Want the model more careful and autonomous, turn effort up; want it faster with you stepping in more, turn it down. I switched effort once or twice in that conversation and the cache definitely held.
+Here is a summary of the practical boundaries across tiers and tools:
 
-## A Few Useful Tools
+- Account sharing carries an extreme risk of account bans and should never be used to cut costs. First-party subscriptions offer substantial subsidies; third-party routing aggregators bill per token and cannot match subscription pricing.
+- Tier upgrades scale non-linearly: jumping from 5x to 20x offers 4x headroom only within rolling five-hour windows; the weekly ceiling only doubles. On Codex, a seven-day allocation equals roughly five full five-hour windows plus a modest buffer.
+- Caching and credit boundaries: primary sessions on subscription retain cached prompts for 1 hour, whereas subagents, purchased credits, and direct API keys drop cache after 5 minutes. Bundled monthly API credits cannot be used inside interactive terminal sessions; they work only via external API endpoints and the Agent SDK.
+- Tooling overhead: skill injections and the Cowork GUI introduce significant prompt bloat and context drag, speeding up quota exhaustion and session crashes. For heavy development, stick to the terminal CLI.
+- Peak-hour dilution: during peak North American working hours, nominal capacity drops as shared infrastructure strains, potentially triggering rate limits after just one hour of intense use.
 
-**ccusage**: `!npx ccusage@latest monthly` shows a detailed breakdown of token usage. If you want to know where your tokens are actually going, this is essential.
+## Appendix: Terminal Commands and Technical Details
 
-**Rate Limit Statusline**: Since Claude Code 2.1.80, you can display remaining rate limit in your terminal statusline. No more typing `/usage` to check — just glance at the bottom of your terminal.
+A quick reference for the commands and tools mentioned throughout the post:
 
-**/low-priority**: lets you keep going after your five-hour quota is maxed out, just slower, since it runs on off-peak compute. It still eats into your weekly quota. I learned that one from Reddit.
-
-With these tools, you'll have much better awareness of your usage rhythm. When you know how much time until reset and how much quota remains, you can make better decisions about pacing.
-
-## One Mindset Note
-
-Last, a slightly philosophical point: subscription quota is a finite resource, but its scarcity shouldn't distort your judgment.
-
-I've seen people do tasks manually to save tokens that Claude should have done — "saving" tokens while wasting their own time. Quota exists to save you time, not to be optimized in isolation.
-
-Have 5 minutes until reset and still 10% unused? Burn it. Pre-reset quota that isn't used is just wasted.
-
-## The Night Market Steak and the Restaurant Steak
-
-Here's a question I keep coming back to:
-
-There's a $7 steak at a night market stall. There's a $70 steak at a sit-down restaurant. Is the restaurant version ten times better?
-
-Almost never. But people still pay. The reasons have nothing to do with the steak itself: the environment, the service, the ritual, being able to bring a client.
-
-AI subscriptions follow the same logic. Almost nobody thinks about them this way.
-
-The ratio between AI subscription cost and productivity gains feels similar. The price gap between Sonnet and Opus is large, but Sonnet handles 80% of daily work. **Upgrading to Opus Max does not produce a proportional jump in real productivity.**
-
-Many people pay for Max as an "anxiety tax" — afraid that the lower tier might miss some capability. What the lower tier actually misses is mostly not capability — it is patience.
-
-## The Anxiety the Subscription Model Is Designed to Create
-
-The week before Claude Max's weekly reset, a predictable pattern appears on social media. Screenshots: "All models 92%, ten hours until reset." Comments: "I can't sleep until I burn through it." "I'm dreaming about wasting tokens."
-
-This isn't a personal quirk. It's the subscription mechanic working as designed. Monthly fee plus usage cap naturally produces "I need to use all of it or I'm losing money" — the same psychology as a gym membership. The difference is that an unused gym membership makes you feel guilty about your body. Unused Claude tokens make you feel guilty about your intellectual output.
-
-That anxiety is a signal. It might mean you're subscribed to the wrong plan.
-
-## Three Questions Worth Asking
-
-**1. Am I doing things I couldn't do before — or just doing the same things faster?**
-
-Faster is worth something. But "I can now do things that were previously out of reach" is worth a lot more. If your AI subscription is primarily compressing the time on tasks you'd have done anyway, you're buying efficiency. If it's opening up capabilities you genuinely didn't have before, you're buying leverage.
-
-Those two things have very different price-to-value calculations.
-
-**2. Am I using this tool for what it's actually good at?**
-
-A lot of Claude Max subscribers use most of their quota on things a free-tier model handles fine: rephrasing sentences, asking questions a search engine answers in seconds, formatting text. That's not a tool problem — it's a use case problem.
-
-The night market steak and the restaurant steak taste almost identical when you're just eating alone to get full. The difference shows up in the context where the rest of what you're paying for matters.
-
-**3. Am I actually hitting usage limits?**
-
-If you've never come close to hitting your weekly quota, Pro is probably enough. If you're sprinting to burn tokens before reset every week, one of two things is true: you genuinely need more, or you're being manipulated by the reset mechanic into manufacturing demand.
-
-The second one is worth examining honestly.
-
-## My Actual Setup
-
-For what it's worth, here's how I'm currently using different model tiers:
-
-- Writing and thinking: Sonnet, medium effort
-- Standard coding tasks: Opus 4.6, medium
-- Complex architecture, multi-file analysis: Opus 4.6, high/max
-- Opus 4.7: haven't noticed a meaningful improvement over 4.6 in my workflow, not in a rush to switch
-
-If most of your work falls in the first two categories, Pro with good session management usually covers it. Max makes sense for high-intensity, sustained daily use across multiple long sessions.
-
-The question isn't "is this tool good." The question is "am I using it in the places it's actually ten times better."
-
-Night market or restaurant — depends entirely on why you're eating out.
-
-## US East Peak Hours: Hit Limit in One Hour
-
-Recent measurement: with current plans plus US East peak, you will probably hit limit in about 1 hour.
-
-This means there is a gap between "real usable capacity" and "nominal capacity" — peak-hour traffic dilutes the denominator.
-
-Practical workaround: schedule important work during early Taipei mornings (off-peak in North America). This also explains why Claude has felt more usable in Asian time zones recently.
-
-## Skills Did Not Solve Hit Limit — They Brought Shutdown Instead
-
-Skills are not like different departments. They are more like operations manuals.
-
-Use them long-term and they shut down every other day. When they don't shut down, they hit limit. **Skills do not save tokens. They redirect how tokens get burned** — loading Skills itself costs tokens, and they push long contexts toward the upper bound faster.
-
-If your hit-limit frequency has gone up, first check if Skills are dragging it.
-
-## Meanwhile, Free GPT Hasn't Hit Limit
-
-I have been using free GPT and still haven't hit limit.
-
-The point isn't that the free tier is strong. It is that paid Claude makes me hit limit constantly. **Claude users' "satisfaction" and "anxiety" both went up** — compared to free GPT users sitting comfortably in "good enough", Claude users live in the "will I still have access in the next hour" timer zone.
-
-## Stringing It Together
-
-Put these observations together and you see Anthropic's subscription design logic:
-
-- **Spread demand** to avoid infrastructure failure
-- **Tier structure** makes upgrades feel large but deliver less
-- **Peak dilution** makes real capacity lower than nominal
-- **New features like Skills** burn tokens faster
-- **Anxiety from paying** becomes a retention mechanism
-
-This is a mature subscription economics model, not a simple "capacity tier" system. Understanding the structure helps you decide:
-
-- Am I upgrading to Max for capacity or for anxiety?
-- What is the real cause of hitting limit?
-- Can I push the problem down with timing + tool diversification?
-
-The tool is good. You should know what you are buying.
-
-> **Postscript (2026-10-20):** Two corrections to the notes above. Per the current Claude Code docs, the main conversation gets a one-hour cache on any Claude subscription within plan usage (five minutes applies to subagents, usage credits and API keys). And the Help Center says the monthly API credit doesn't apply to interactive Claude Code, so switching `/login` to the API won't spend it; it's for the API, Agent SDK and similar use. Also, OpenAI shuts o1-pro down on October 23, 2026, so it won't hold the "most expensive" title much longer.
+- Token consumption analysis: run `!npx ccusage@latest monthly` to view your detailed usage breakdown and equivalent costs.
+- Remaining quota status line: from Claude Code 2.1.80 onward, rate limit headroom can be displayed persistently on the terminal status line.
+- Live cache hit rate: run `/usage` during an active session to see your current cache hit percentage on the bottom line.
+- Off-peak compute fallback: enter `/low-priority` to keep running on off-peak capacity when your five-hour window runs out (runs slower and still draws against your weekly pool).
+- Automated scheduling and headless execution: run non-interactive batch commands using `-p` flags with an API key for cron jobs, benchmarks, or background maintenance. For granular session audits, use session logging tools and agent tracking tools to inspect multi-agent turns and cache performance.
 
 <!--
-2026-10-16 W43 merge: one section from a 10-10 15:55 Threads post and two replies (10-10 16:17, 16:31). Translated from the zh, which is verbatim. Added non-original sentences: subheading (framing); "People asked what else I use it for and how I hook it up" (transition giving the reply context).
+2026-10-16 W43 合併新增：一節，素材為 10-10 15:55 Threads 貼文與 10-10 16:17、16:31 兩則回覆，原文逐字，僅補空格、修正錯字 subagnet→subagent、「上面文章提到的」改「上面提到的」。新增非原文句子：小標（框架句）、「有人問我還拿來做什麼、怎麼接」（銜接，回覆的提問脈絡）。
 -->
 
 <!--
-2026-10-02 W41 merge: two sections from two Threads posts (09-25 18:22 on window value, 09-28 16:57 on cache). Translated from the zh, which is verbatim from the posts. Added non-original sentences: the two subheadings (framing). "大 guy 4 這樣" is a Mandarin pun on "大概是這樣" (roughly like this) and is rendered as "That's about it."
+2026-10-02 W41 合併新增：兩節，素材為 09-25 18:22（窗口值多少）與 09-28 16:57（快取常識）兩則 Threads 貼文，原文逐字，僅把窗口數據改成條列、補標點。新增非原文句子：兩個小標（框架句）；「有天早上」由原文「今天早上」改寫（改寫：時間指稱）；「我那個對話」由原文「我這個對話」改寫（改寫：指稱）。
 -->
 
 <!--
-2026-08-28 W36 micro-note merge: the archive note "Auto-Resume After the Quota Resets" was folded in verbatim; it belongs to this post's quota-rules thread. Removed from the zh/en archive. The only added non-original sentence is the subheading (framing).
+2026-08-28 W36 碎念併入：archive 碎念「額度重置後自動繼續」逐字併入，屬本文額度規則那條線。已從 zh/en archive 刪除。新增非原文句子僅小標一則（框架句）。
 -->
 
 <!--
-2026-08-21 W35 merge addition: added one section, "Platform Math, and the Ban Hell of Sharing One Account Three Ways," absorbing two Threads posts from 2026-08-19 and one from 08-15, wording preserved ("is that really such a good idea?", "three people going to ban hell together", "payroll not going through"). Non-original sentences added this round:
-1. "The same day, the same math showed up in another form." — bridge joining the two posts, no new claim.
-2. "Want to feel a quota from the opposite direction? There's a way for that too:" — bridge introducing the third post, no new claim.
-Everything else is the original wording. Existing paragraphs unchanged. humanizer was run on the new section only.
+2026-08-21 W35 合併新增：新增一節「大平台的算術，跟三人共享的封號地獄」，吸收 2026-08-19 兩則與 08-15 一則 Threads 貼文，原文逐字保留（含「這樣真的好嗎？」「三人一起下封號地獄」「薪水發不出來的感覺」）。本次新增的非原文句子清單：
+1. 「同一天還有另一個版本的算術。」— 銜接：把前後兩則貼文接起來，不含新主張。
+2. 「想從反方向體驗額度的，也有辦法：」— 銜接：引出第三則玩笑，不含新主張。
+其餘為原文逐字，僅補標點與數字前後空格。既有段落零改動。
 -->
 
 <!--
-2026-08-28 merge addition: folded in three older subscription posts (claude-code-subscription-guide / ai-subscription-value / claude-subscription-economics), prose moved over as written, with only headings and minimal bridging added. Non-original sentences added this round:
-1. New H2 headings "When the Quota Runs Out, the Work Stops There", "A \"4x Upgrade\" That Isn't 4x", "The Night Market Steak and the Restaurant Steak" — headings drawn from the wording of the paragraphs beneath them, no new claim. All other headings are the originals.
-2. "Everyone's reset time is different — some Sunday, some Wednesday. Call it Anthropic's \"demand smoothing\": it keeps peak load from concentrating on one or two days." — rewrite: two original sentences joined so they follow the existing paragraph.
-3. "Put these observations together" replaces "Put the six observations together" — rewrite: the six numbered items were reordered during the merge, so the count no longer holds.
-No new claims, numbers or criteria were introduced. Duplicated material removed:
-- The "2x usage" paragraph from claude-code-subscription-guide (first 5 hours at 4x, everything else 2x) was dropped in favor of the fuller claude-subscription-economics version (with "Pay more, get less than expected" and the 5-hour vs weekly capacity test), followed by the usage-pattern implication that only ai-subscription-value had.
-- The two opening steak sentences of claude-subscription-economics section 3 were dropped as duplicates of the fuller ai-subscription-value version; the rest of that section (Sonnet at 80%, anxiety tax, patience) was kept and placed after the steak passage.
-- Openers: the guide's two-paragraph opener survives as "When the Quota Runs Out, the Work Stops There"; the value post's steak question survives; the economics post's "Over the past two weeks I have accumulated..." opener was dropped because it no longer holds after merging.
-- The three `---` dividers in ai-subscription-value were removed in favor of H2 sections.
-Nothing else from the three sources was dropped; every other paragraph moved over intact.
+2026-08-28 合併新增：併入三篇訂閱主題舊文（claude-code-subscription-guide / ai-subscription-value / claude-subscription-economics），散文逐字搬移，只補小標與最小銜接。本次新增的非原文句子清單：
+1. 新增 H2 小標「額度到了，工作就停在那裡」「「增加 4 倍」其實沒有 4 倍」「夜市牛排跟餐廳牛排」— 小標（語意取自原文段落，非新論點）。其餘小標（Pro 的額度其實很少／Max 到底值不值／Cowork 很燒 token，別用它替代 CLI／訂閱 cache reads 不計費／幾個實用工具／一個管理心態／訂閱制設計出來的焦慮／一個判斷框架／那要怎麼選？／美東尖峰時段：一小時就 hit limit／Skill 沒解決 hit limit，反而帶來 shutdown／反觀免費版 GPT，至今未 hit limit／串起來看）沿用原文標題。
+2. 「每個人的 reset 時間都不一樣，有人禮拜天，有人禮拜三。」— 改寫：原句為「發現每個人 reset 時間都不一樣，有人禮拜天，有人禮拜三。」，去掉開頭「發現」以接續既有段落。後接的 demand smoothing 句為原文逐字。
+3. 「串起來看」段首句由「把六條串在一起」改為「把這幾條串在一起」— 改寫：原文的六條在合併後被拆散重排，數字不再成立。
+本次未新增任何原文沒有的論點、數據或判準。刪除的重複內容：
+- claude-code-subscription-guide 的「『雙倍用量』期間……只有前 5 小時是 4 倍量，其餘時間才是 2 倍」整段刪除，改用 claude-subscription-economics 的完整版（含「Pay more, get less than expected」與五小時/週容量判準），並接上 ai-subscription-value 獨有的使用型態含意段。
+- claude-subscription-economics 第 3 節開頭的夜市牛排比喻兩句刪除（與 ai-subscription-value 的完整版重複），該節其餘獨有內容（Sonnet 80%、焦慮稅、耐心）保留並接在牛排段之後。
+- 三篇的開場導言（guide 的兩段保留為「額度到了，工作就停在那裡」；value 的牛排提問保留；economics 的「過去兩週累積了好幾條……」導言刪除，因合併後不再成立）。
+- ai-subscription-value 原文的三處 `---` 分隔線移除，改以 H2 分節。
+除上述外，三篇來源的所有段落皆無損搬移，無其他捨棄。
 
-2026-09-11 W38 micro-note merge: four live notes (`/low-priority`, Codex 5h vs 7d windows, GPT-5.6-Luna API spend, o1-pro being the priciest) folded in verbatim as one section and removed from the zh/en live file. Added non-source sentences: the heading (framing) and two bridging phrases.
+2026-09-11 W38 碎念併入：四條 live 碎念（`/low-priority`／Codex 5h 對 7d 窗口／GPT-5.6-Luna API 花費／最貴的模型是 o1-pro）逐字併為一節，已從 zh/en live 檔刪除。新增非原文句子：小標（框架句）、「這是看 Reddit 才學到的。」（改寫，原句為「看 Reddit 才學到」）、「按量付費這一側」與「另一個方向的冷知識」兩處銜接語。
 
-2026-10-26 splice cleanup (mirrors zh): moved summary section to the end, removed "Folded In" and "Postscript" splice markers, integrated four standalone notes and auto-resume into relevant sections, and merged cache paragraphs into a single section; new bridge sentences: "Speaking of extreme pricing,", "It's a similar logic over on Codex.", "Beyond billing, there are two practical cache details:"
+2026-10-26 拼接順稿：
+- 「說到極端定價，」— 類型：銜接
+- 「在 Codex 那邊也是類似邏輯。」— 類型：銜接
+- 「除了計費，還有兩個實務上的快取細節：」— 類型：銜接
+將「串起來看」總結章節移至全文末端收尾，移除「併入：」「補記：」標記，將四條零散碎念與額度重置續跑依主題整併進相應章節，並將快取相關段落整合成單一小節。
+-->
+
+<!--
+2026-11-12 舊文盤點整篇重寫：將多篇零散舊文、碎念與追加後記打散重構，以用量焦慮與經濟學算術為主軸一次寫成；修正前後模型版本與快取規格矛盾，私有代號轉為白話正文，限制與附錄工具分別集中收攏，消除雙重收尾。
 -->

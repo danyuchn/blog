@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-02-12T11:00:00Z
-title: "Critical Thinking in the AI Era: Playing Dumb, the Feynman Method, and What Future Talent Looks Like"
+title: "Thinking in the Age of AI: Playing Dumb, the Feynman Technique, and What Real Talent Looks Like"
 slug: en/ai-era-critical-thinking
 featured: false
 draft: false
@@ -9,77 +9,64 @@ tags:
   - ai-trends
   - ai-education
   - opinion
-description: 'AI won''t replace your thinking, but it will expose the fact that you can''t think. From rediscovering how to learn through AI interactions, to the growing demand for "AI collaboration skills" in exams and workplaces — observations from an educator.'
+description: 'AI can help you find answers, but it won''t find the questions you don''t know to ask. Why playing dumb, combining the Feynman technique with AI, and sharp critical thinking form the foundation of human-AI collaboration.'
 ---
 
-AI can help you find answers, but it can't find the questions you didn't know to ask. Through working with AI, I rediscovered something: the ability to think is the scarcest resource of our time.
+AI can help you find answers, but it can't find the questions you don't even know to ask.
 
-## Play Dumb, Ask Relentlessly, Fear No Authority
+Working alongside AI reminded me of one fundamental reality: genuine thinking is the scarcest resource of our time. Many assume AI will just think for them. But getting genuinely sound output from a model takes relentless probing, peeling back layers until every logical flaw shows.
 
-While building AI tools, I accidentally caught a glimpse of my former straight-A student self.
+## Playing Dumb: Using AI as a Sparring Partner Without Authority Bias
 
-When I interact with AI, I put myself in the learner's seat. And in that process, I noticed I instinctively keep pressing — patiently reading its responses, spotting the flawed parts, then drilling deeper, asking it to explain things every which way — even asking it to explain like I'm a middle schooler.
+Whenever I collaborate with AI, I deliberately switch into beginner mode.
 
-The thing is, I already know what the answer is. I know exactly where its logic went wrong. But it's precisely this attitude of playing dumb, relentlessly questioning, peeling back layers, and refusing to bow to authority that gets AI to produce something actually correct.
+During the conversation, I keep pressing it. I read every line of its response carefully, catch any subtle misstep, and push right back. I will ask it to rephrase things in three or four different ways, or demand that it explain the concept so simply that an eighth grader could follow without getting lost.
 
-Looking back, it hits me. So many people, throughout their education, just accept whatever the teacher says as gospel. They don't push back. They don't say "I don't get it, can you explain it a different way?" And some teachers, deep down, probably know they got something wrong, but they can't bring themselves to correct it — so they hide behind authority to save face. The teacher-student relationship becomes one-way indoctrination instead of mutual sharpening. We end up as students who only listen and never ask. How could learning outcomes possibly be good?
+Most of the time, I already know the right answer, and I can pinpoint the exact step where its reasoning went off the rails. Even so, I choose to play dumb, ask follow-ups, and strip the argument down piece by piece. I corner the flaws until the model produces an answer that is genuinely rigorous and airtight.
 
-But now we have AI. It will never get impatient. It never gets tired. You can ask it to explain something 10, 20 different ways and it won't bat an eye. It'll even openly admit when it made an error in its analysis. As long as you're willing to change your attitude — willing to chase answers relentlessly and patiently examine its logic — you'll find yourself learning more than you ever did in all your years of schooling.
+Looking back, this stands in stark contrast to traditional schooling. Growing up, students learn to treat teachers as unimpeachable authorities. They passively absorb whatever is handed down, never questioning, and rarely daring to say, "I don't get it, could you explain that differently?" On the other side, some instructors who realize they made a mistake double down with their authority just to save face. When education degenerates into authority demanding compliance, students become passive containers who take notes and never ask questions. Real learning drops to zero.
 
-Remember: play dumb and ask like crazy, listen patiently, peel back the layers — and above all, fear no authority.
+AI completely flips that dynamic. It never loses patience, and it never gets tired. You can ask it to reframe an idea from ten or twenty angles, and it won't get annoyed. When you catch a flaw in its reasoning, it owns the mistake without an ego. The moment you drop the habit of passive compliance, stop fearing authority, push with relentless questions, and examine every deduction, you end up learning far more than you ever did sitting in a classroom.
 
-## The Feynman Method + AI = The Ultimate Review Technique
+## The Feynman Technique Plus AI: Pinpointing Your Cognitive Blind Spots
 
-What does a traditional study review look like? Finish a problem set, check the answers, glance at the explanation for the ones you got wrong, think "oh I get it," flip the page. Two months later you take the same test. Same score.
+What does a typical test review look like? You finish a set of practice questions, check the answer key, glance at the explanation, think "Got it," and turn the page. Two months later, you take the same test and get the exact same score. That isn't studying; it's just reading the answer key. The brief dopamine hit of understanding an explanation tricks your brain into believing you've mastered the material—no different from scrolling through short-form videos. An answer key only tells you the correct answer is B. It never shows you which step threw your reasoning off.
 
-I eventually realized that wasn't reviewing at all — that was just "looking at answers." Reading the explanation and feeling like you understand is an illusion. The only thing you actually gained was a hit of dopamine from your brain's reward system, no different from scrolling short-form videos.
+Eventually, I landed on an approach that lines up directly with the Feynman technique. The core of Feynman's idea is straightforward: if you can't explain something simply to someone with no background in the subject, you don't actually understand it.
 
-I later found a method that turned out to align perfectly with the Feynman technique. The core of the Feynman method: explain something in simple language to someone with zero background. If you stumble through the explanation, you don't actually understand it.
+My routine is to walk through my entire problem-solving process out loud and record it. Starting from the prompt, I narrate my interpretation step by step: how I eliminate incorrect options, and why I pick the final answer. The moment I stumble, hesitate, or lose the thread, that friction marks the exact boundary of my blind spot.
 
-What I do is talk through my reasoning out loud and record it. Starting from reading the problem, step by step — how I interpret it, how I eliminate options, why I pick this answer. When I hit a point where I can't keep going, that's exactly where the problem is.
+Instead of aimlessly re-reading the entire chapter, you take that exact breaking point straight to AI. You have the model unpack the logic around that specific snag, offering explanations from multiple angles until it genuinely clicks.
 
-Then I take that exact sticking point to AI. No need to start from scratch — just zero in on the spot where you got stuck. AI will break down the logic at that breakpoint, give you different angles, until something finally clicks.
+It's just like a rookie in pro sports: you study footage of standard pitching mechanics, record your own throwing motion, and play them side by side in slow motion against a pro. Listening back to your audio makes every hesitation, fuzzy transition, or unwarranted leap painfully obvious. Once you clear up those weak links with AI, you re-record and explain the concept again until the entire chain of logic runs smoothly. That is what a real, closed-loop feedback cycle looks like.
 
-This is worlds apart from reading answer explanations. An answer key tells you the answer is B. It doesn't tell you at which step you started going off track.
+## Critical Thinking: The Skill AI Cannot Replace
 
-I compare it to this: you just joined a professional sports team. You watch the textbook pitching form, then record your own motion, and compare it frame by frame in slow motion against the pros. That's how real, solid improvement happens.
+Traditional business roles are shrinking fast. Data analysts took the brunt of it first, while conventional marketing and HR are sliding into the danger zone. Employers and universities are increasingly treating human-AI collaboration as a primary benchmark.
 
-Go back and listen to your own recording. You'll notice plenty of spots where your explanation stutters, where things are vague and lack logic, where your thinking jumps around. Those spots are exactly what you need to study. Learn it again, re-record, re-explain — until the whole thing flows smoothly. That's the full Feynman method cycle.
+Standardized tests, on the other hand, still test skills that bear little direct relation to collaborating with AI. If these exams fail to keep pace with the times—relying solely on shortening test length and making questions easier to steal business from competitors—they will eventually face obsolescence.
 
-## The Future Doesn't Need Knowledge — It Needs Critical Thinking
+Looking at the skills that matter most in the age of AI:
 
-Traditional business school jobs are shrinking fast. Data Analysts are getting hit first. Traditional Marketing and HR roles are in the danger zone too. Employers and universities are increasingly treating "how to collaborate with AI" as a key competency to evaluate.
+**Data Sufficiency**—Helps you feed adequate data into your prompts when working with AI. You need to know what information is vital and what is missing.
 
-But if you look at today's standardized tests, the direct relevance to AI skills is actually pretty low. These exams are destined to lag behind the times. If they don't reform — if they just keep making tests shorter and easier trying to poach competitors' market share — they'll eventually become irrelevant.
+**Critical Reasoning**—Helps you spot biased deductions when AI leans overly optimistic or pessimistic. AI can hallucinate with a straight face; you need the judgment to catch it.
 
-I took stock of which skills have the highest relevance in the AI era:
+**Integrated Reasoning and Graphics Interpretation**—Cross-referencing across large volumes of data to verify whether the model's output rests on facts or pure hallucination.
 
-**Data sufficiency** — helps you provide adequate information in your prompts when collaborating with AI. You need to know what information matters and what's missing.
+By contrast, long-form reading comprehension can easily be offloaded to AI for quick summaries and Q&A. Pure calculations can be delegated to automated tools; running the numbers is no longer an issue.
 
-**Critical reasoning** — helps you verify when AI draws overly optimistic or pessimistic, biased conclusions. AI will confidently spout nonsense with a straight face. You need the ability to spot it.
+That's why I predict future exams and assessments will shift toward "AI collaboration scenarios." The focus won't be on how much knowledge you can memorize, but whether you can steer an AI with the right instructions in a messy situation and critically examine whatever it produces.
 
-**Integrated reasoning and chart interpretation** — requires cross-referencing large amounts of data to verify whether AI's output is grounded in facts or hallucinated from thin air.
+Instead of stressing over whether AI will take your job or worrying that someone else prompts faster than you, put your energy where real differentiation happens: figure out what judgment you can offer that AI can't, and get clear on what valuable outcomes you want to create with it.
 
-What's relatively less important? Long-form reading comprehension — you can use AI to summarize and do Q&A on long texts now. Pure math computation — current models can call tools automatically; calculation isn't the bottleneck.
-
-So here's my bold prediction: future exams and competency assessments will shift toward "AI collaboration scenarios." They won't test how much knowledge you've memorized. They'll test whether you can give AI the right instructions in a complex situation, then critically evaluate what it produces.
-
-In fact, this isn't just about facing changes in testing; it's also my consistent attitude when dealing with outside competition and AI anxiety.
-
-## Focus on the Product, Not the Competition
-
-Someone once asked me: "When competitors keep coming after you, how do you hold up?"
-
-Honestly, I never felt like I was "holding up." Because if I spend my time fighting them and comparing myself to them, that means I care more about the competition than I care about my users.
-
-I spend my time building the product. Tell me that's not way more meaningful than obsessing over what the competition is doing.
-
-This attitude is even more relevant in the AI era. Instead of anxiously wondering whether AI will replace you, spend your time figuring out what you can do that AI can't. Instead of stressing that other people use AI faster than you, spend your time thinking about what you want to build with AI.
-
-The ability to think isn't a talent — it's an attitude. Playing dumb and asking relentlessly is an attitude. The Feynman method is an attitude. Critical reasoning is an attitude. Focusing on the product is an attitude.
-
-AI won't replace your thinking. But it will expose the fact that you can't think.
+Thinking isn't an innate talent—it's an attitude. AI won't replace your thinking, but it will expose when you don't know how to think.
 
 <!--
-2026-10-26 splice cleanup (mirrors zh): added bridge sentence before the competition section to connect exam shifts with mindset on competition and AI anxiety; new bridge sentences: "In fact, this isn't just about facing changes in testing; it's also my consistent attitude when dealing with outside competition and AI anxiety."
+2026-10-26 拼接順稿：
+- 「其實不只是面對考試變革，這也是我面對外部競爭與 AI 焦慮時一貫的態度。」— 類型：銜接
+結構調整：在批判思維預測與文末專注產品章節之間加入過渡句，連結面對變局與焦慮的心態。
+
+2026-11-12 舊文盤點整篇重寫：
+剔除文末回應同業競爭的發散段落與多重結尾，將全文聚焦於人機協作所需的批判思考、裝傻追問的態度與費曼檢討術，收斂為單一連貫的論點。
 -->

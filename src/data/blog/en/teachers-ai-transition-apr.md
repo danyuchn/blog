@@ -1,72 +1,46 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-04-22T06:00:00Z
-title: "A Teacher's Responsibility: How a 15-Year Cram School Instructor Sees AI-Era Course Quality"
+title: "Stop Turning AI into a Religion: A 15-Year Test-Prep Teacher on Teaching Quality and Accountability"
 slug: en/teachers-ai-transition-apr
 featured: false
 draft: false
 tags:
   - ai-education
   - teaching
-description: 'When students have the wrong expectations, instructors are often also failing. After 15 years in cram schools and recent experience teaching Claude Code, a few thoughts on course quality basics, teacher responsibility, and the most practical one-word answer for a cram school going AI.'
+description: 'When students carry unrealistic expectations, instructors are often failing too. Drawing from 15 years in test prep and recent Claude Code workshops, here is an honest look at teaching fundamentals and instructor accountability.'
 ---
 
-I saw a discussion online recently: "Too many students come in with unrealistic expectations. They think one class will make them master a skill." Plenty of instructors agreed in the comments.
+I recently caught an online discussion where someone pointed out: "Too many students expect miracles from a single workshop, assuming one session will make them master a skill." The comment section was packed with people nodding along.
 
-I want to offer the other angle: both sides are at fault.
+Look at it from another angle, though: both sides are responsible.
 
-I've taught GMAT for 15 years, and I've recently started teaching Claude Code. I understand the "students want to magically improve overnight but don't see the concept-building and accumulation underneath" complaint. But I've also taken a lot of online classes myself, and I'll say this responsibly: **a lot of instructors genuinely don't know how to teach.**
+I have spent 15 years teaching professional test prep (GMAT), and lately I have also been running trial workshops on Claude Code. I completely understand how frustrating it is when learners expect overnight competence while ignoring the conceptual legwork and practice behind it. But I have also taken plenty of online courses as a student, and I can say this candidly: a shocking number of instructors have no clue how to teach.
 
-## The basic bar for teaching quality
+## Testing an Instructor's Baseline: Ditch the Slide Reading, Let Live Q&A Be the Litmus Test
 
-A few basics:
+If students shouldn't harbor unrealistic expectations, why do instructors pump up their marketing with claims like "Master [X skill] in this one course"?
 
-- Are you reading off the slides, or can you riff based on what students are showing you in the room?
-- Do chapters connect logically? Is there designed practice time so students can keep up?
-- When students hit the obvious follow-up question, can you catch it? How do you handle the off-script ones?
+Setting boundaries and managing expectations is the basic duty of anyone designing a curriculum. Yet right now, so many course promoters have completely abandoned their shame just to chase clicks. "Master Claude Code in one workshop" versus "This workshop will help you get started with Claude Code; the rest takes your own deliberate practice" may sound similar at first glance, but the gap in honesty is massive.
 
-A lot of "instructors" fail these. But online they're marketed as amazing. My test for a teacher's actual depth is the Q&A session. Do they have real substance or not, and that's when it shows. A teacher with real accumulation can handle questions across skill levels and explain in a structured, logical way that helps the asker understand.
+Strip away the exaggerated hype, and whether an instructor is actually qualified comes down to a few basic operational realities:
 
-Plenty of teachers can't do this. And they compensate by selling faith.
+- Do they just read off their slides verbatim, or can they speak freely and adapt on the fly to how learners are doing in the room?
+- Does the progression between sections follow a clear logic, with dedicated hands-on time so students can keep pace?
+- Can they handle the obvious questions that inevitably come up, and how do they respond when hit with an unexpected inquiry?
 
-## Course marketing also needs expectation management
+Too many "instructors" fail these basic tests, even if their marketing makes them look brilliant online. The most straightforward way to evaluate an instructor is simple: jump straight into live, interactive Q&A. That is the exact moment you find out whether they have real substance.
 
-If students shouldn't have unrealistic expectations, why do instructors overpromise in course marketing? "This class will make you master XXX."
+An instructor with genuine depth can handle questions from learners at any level and break down the answer logically so the person actually gets it. Far too many instructors simply cannot do that, so they resort to preaching tech hype like a religion instead.
 
-Setting boundaries and managing expectations. Isn't that also the course producer's job? But a lot of course marketing will say anything for reach these days.
+## Conscience Matters More Than Raw Skill: Designing the Experience from the Learner's Seat
 
-"This class will make you master Claude Code" vs. "This class gets you started with Claude Code. The rest is on you and your practice." Sounds similar, but the integrity gap is huge.
+At its root, teaching quality rarely hinges on how elite an instructor's technical chops are. It comes down to basic conscientiousness.
 
-## Responsibility > Ability
+An instructor's most fundamental responsibility is to stand in the learner's shoes and ask: "What do they actually need?"
 
-A teacher's most basic responsibility is to think from the learner's angle: what do they need?
+When I started running trial workshops on Claude Code recently, I was well aware that my domain mastery was still building. But I still made sure to conduct thorough pre-class student surveys, account for diverse needs when designing lesson plans and slides, and find ways to offer personalized advice to each person.
 
-I've recently started teaching Claude Code, and I know my depth isn't where I want it yet. But I still do learner surveys, and I design lesson plans and slides with each person's needs in mind. I try to give every student customized suggestions.
+This has nothing to do with genius; it is purely about taking responsibility. I have seen plenty of people with high skill but zero conscience. When an instructor is still building competence but takes the responsibility seriously, learners immediately feel the difference.
 
-This has nothing to do with ability. It's pure responsibility. I've seen plenty of capable people with no responsibility, and learners who are still building their capability but have strong responsibility. Students feel the difference clearly.
-
-With the teaching mindset covered, back to the tools: plenty of cram school peers have also been asking me which AI they should use to assist their teaching.
-
-## Cram school AI transition: the one-word answer
-
-I've been a cram school teacher for 15 years, and I've also consulted for humanities/sciences cram schools on their AI transition.
-
-One-word answer: Claude.
-
-Not Gemini, not GPT, not some locally-hosted small model. The reason deserves a longer post, but in practice: for a cram school teacher's workflow (lesson prep, question authoring, grading, personalized student suggestions, admin paperwork), Claude's answer quality and agent reliability are the only options that hold up at this stage.
-
-I've tested the others. Choosing Claude isn't faith.
-
-At the end of the day, whether it's a teacher teaching or a child learning on their own, the biggest trap is turning a tool or a theory into an article of faith.
-
-## Protecting Curiosity in Learning
-
-A few days ago I made a decision: I threw out my kid's copy of "Attention Is All You Need."
-
-The kid cried. But I hope this was the right call. I hope he rediscovers his curiosity for learning across the board, instead of treating some specific book as a "must master" article of faith. In the AI era, for a beginner, understanding architecture matters less than keeping your curiosity alive. Papers are always findable; curiosity, once lost, is much harder to recover.
-
-Hope it's not too late.
-
-<!--
-2026-10-26 splice cleanup (mirrors zh): retitled side story heading to "Protecting Curiosity in Learning" and added transitions between teaching mindset, model choice, and the book story; new bridge sentences: "With the teaching mindset covered, back to the tools: plenty of cram school peers have also been asking me which AI they should use to assist their teaching.", "At the end of the day, whether it's a teacher teaching or a child learning on their own, the biggest trap is turning a tool or a theory into an article of faith."
--->
+<!-- 2026-11-12 舊文盤點：依 Dustin 驗收只留教學品質與責任心兩節，模型選擇與丟論文兩節移除。 -->
