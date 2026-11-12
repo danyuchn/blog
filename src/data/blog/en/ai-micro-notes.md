@@ -65,6 +65,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 
 > Working on a complex script with multiple race conditions and concurrent caching, subagents running multi-round testing and adversarial reviews just couldn't catch all the bugs. Switching to the TLA+ pstack skill caught every issue we'd burned rounds of tokens finding, and got all tests to pass. An article proved it really works — Claude also shared how to use formal verification for agent reviews on large codebases too.
 
+**Hand-Rolling an ERP Is Easy; Maintenance and Security Are the Hard Part**
+
+> The hardest moment in my AI teaching career just arrived: my dad sent over a few Douyin videos on AI reverse engineering and asked if we could hand-roll an ERP for his company so he can stop paying software fees. Dad, just pay the bill — building a prototype isn't hard, maintenance and security are. I really hate these content creators cranking out one-shot short videos for clout.
+
 ## Workflow & Method
 
 **How Someone With GAD Reads a Risk Report**
@@ -98,6 +102,10 @@ A curated set of short AI hot takes I've been posting on Threads since 2026, now
 **The Curse of Knowledge Is Real**
 
 > Teach anyone once and you'll see most people get stuck just installing things... so the "curse of knowledge" really is a thing. We can never picture how the common sense we take for granted is "knowledge" plenty of people are willing to pay for.
+
+**Use Gemini 4 Argon in Deep Research Mode for Literature Reviews**
+
+> For finding papers and literature, run Gemini 4 Argon in Deep Research mode — it's an absolute beast.
 
 ## AI Industry & Business Observations
 

@@ -310,3 +310,25 @@ description: "2026 年較零碎、時效性的 AI 碎念，依時間排列。精
 **理想中的模型，跟現實拿到的模型**
 
 > 每天我都在許願：如果有一個模型能夠兼顧 Gemini 說話的活人感、Claude 的靈活主動、GPT 的深度細心就好了⋯但怎麼現實生活中，比較常拿到的是 Gemini 的幻覺、Claude 的小細節偷懶、GPT 的防禦語氣。
+
+## 2026 年 11 月中旬（W47）
+
+**全自動排程的一天：我不允許自己用了卻不知道原理**
+
+> 凌晨五點 Herdr 自動排程啟動，由 Opus 5.5 調度多個 Sonnet，再派工給 Grok、Codex、Gemini 與 Colab 處理待辦；七點前在螢幕上開好審閱頁，起床按同意或補充，九點前就驗收完當天待辦，白天留給上課、諮詢、研究與運動，半夜十一點睡覺後再由夜間排程清理知識庫、重整 harness、收集 AI 新知。這套流程最可貴的是每個步驟都是親手打造的，資料流向、每個 agent 權限多少都知之甚詳——我不允許用了卻不知道原理的事情發生在我身上。
+
+**Qwen 的審查是護欄問題，開放權重想怎麼改隨你**
+
+> Qwen 是開放權重模型裡表現最穩定強悍的（其他模型常是跑分沒輸過、體感沒聽過）。不喜歡官方意識形態有兩條路：非 IT 就回歸職場常識，公司部署 AI 是拿來工作不是聊政治的；是 IT 就直接去改權重或用 Hugging Face 上的 uncensored 版——訓練資料形成的底子都在，只是被政策護欄封印，像 Nous Research 重新調校 Qwen 3.8 就能在能力不變下把黨言黨語拿掉，人家都開放權重了，動手改才是正途。
+
+**視覺品味在線的只有 Claude 跟 Gemini**
+
+> 目前視覺品味在線的主要就 Claude 跟 Gemini 兩家，但 Gemini 作為主 agent 的任務掌控能力還沒那麼成熟，所以 Claude 還是略勝一籌。GPT 除了 Astra 之外都拉完了，會在任何想得到的縫隙裡塞滿字；至於 Grok，連馬斯克都說 4.8 架構會改頭換面，就知道它目前還不在第一梯隊。
+
+**同一個 Session 先讓 Claude Fable 帶頭，再切 Gemini 4 Argon**
+
+> 有在用 Cursor、Magpie 或 CLIproxyAPI 的可以試試：在同一個 session 先讓 Claude Fable 帶頭，再切到 Gemini 4 Argon，它的隱藏潛力就會被激發出來。但我很好奇，既然 thinking token 都被隱藏起來無法跨模型傳遞，這到底是怎麼生效的？還是說 Gemini 4 Argon 光看 Claude Fable 的工具調用鏈就能大覺醒？
+
+**Colab 跑 MiniMax H3 與 Qwen 3.8 27B**
+
+> 在 Colab 上裝 MiniMax H3 跟 Qwen 3.8 27B 來跑，是真神。

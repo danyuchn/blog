@@ -310,3 +310,25 @@ The more scattered, time-sensitive AI micro-notes from 2026, archived in chronol
 **The Model I Wish For vs. the Model I Get**
 
 > Every day I make the same wish: if only one model combined Gemini's human-sounding voice, Claude's initiative and flexibility, and GPT's depth and care... Yet in real life what I mostly get is Gemini's hallucinations, Claude cutting corners on small details, and GPT's defensive tone.
+
+## Mid-November 2026 (W47)
+
+**A Day on Full Automation: I Refuse to Use What I Don't Understand**
+
+> At 5 a.m., a scheduled run kicks off in Herdr: Opus 5.5 dispatches multiple Sonnets, which fan out tasks across Grok, Codex, Gemini, and Colab; by 7 a.m., review pages are waiting on my screen so I can wake up, click approve or add notes, and wrap up the day's to-dos before 9 a.m., leaving the rest of the day for teaching, consulting, research, and the gym, while an 11 p.m. night job cleans the knowledge base, tidies the harness, and gathers AI news for the next morning. What makes this setup valuable is that I built every step by hand and know exactly where the data goes and what permissions each agent holds — I refuse to let myself use something without understanding how it works.
+
+**Qwen's Censorship Is Just a Guardrail Issue — With Open Weights, Change It Yourself**
+
+> Qwen is the most stable workhorse among open-weight models, while plenty of others never lose a benchmark yet nobody uses them in practice. If the official ideology bothers you, there are two paths: if you're not in IT, use basic workplace common sense — your company deployed AI for work, not politics; if you are in IT, tweak the weights or grab an uncensored build off Hugging Face. The underlying training is all there and only sealed behind policy guardrails — Nous Research just tuned Qwen 3.8 to strip out the party-speak without losing capability, which is the right way to handle open weights instead of just complaining about Chinese models.
+
+**Only Claude and Gemini Have Real Visual Taste Right Now**
+
+> Right now, only Claude and Gemini have reliable visual taste, though Gemini's task control as a lead agent still isn't as mature, giving Claude the edge. Every GPT model outside of Astra is a mess that crams text into every gap it can find; as for Grok, Elon himself just said the 4.8 architecture will be a complete overhaul, which tells you it's not in the top tier yet.
+
+**Lead With Claude Fable, Then Switch to Gemini 4 Argon in the Same Session**
+
+> If you use Cursor, Magpie, or CLIproxyAPI, try letting Claude Fable lead the session and then switching mid-session to Gemini 4 Argon — it unlocks hidden potential in Argon. What puzzles me is how that even works when thinking tokens are hidden and can't be passed across models: does Gemini 4 Argon wake up just from reading Claude Fable's tool-call chain?
+
+**Running MiniMax H3 and Qwen 3.8 27B on Colab**
+
+> Loading up MiniMax H3 and Qwen 3.8 27B to run on Colab is god-tier.
