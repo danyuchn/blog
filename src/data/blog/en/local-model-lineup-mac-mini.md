@@ -11,6 +11,7 @@ tags:
   - open-source
 description: 'Ten days of offline models on a 48GB Mac mini M4 Pro — the picks, the task split, a terrifying swap write rate, and three bad habits I admit to.'
 tldr: 'To run AI models locally for sensitive data, selecting the right model lineup and hardware setup is critical. On a 48GB Mac mini, Qwen3.6 handles daily data cleaning and OCR at 50 generation units per second, while cloud models handle non-sensitive tasks. Always monitor memory swap to prevent SSD wear.'
+seoTitle: 'Running Local Models on Mac mini: M4 Pro Lineup and Speed'
 ---
 
 ## I Announced the Lineup in Classical Chinese

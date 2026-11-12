@@ -11,6 +11,7 @@ tags:
   - ai-workflow
 description: "Claude Code's context window grew from 200k to 1M. The instinct is to put more in. That instinct is wrong. Five session management operations, four strategy rules, and the two most common ways to break your own context."
 tldr: 'When AI conversations grow long, outputs often degrade due to clutter rather than memory limits. To keep responses accurate, start a fresh conversation for new tasks, rewind to the branching point when off track, and proactively summarize history right after completing a subtask instead of waiting for memory to overflow.'
+seoTitle: '1M Context: Claude Code Session Management Strategies'
 ---
 
 ![1M Context — not about holding more, but managing better](/blog/assets/posts/context-session-mgmt/slide-1.jpg)

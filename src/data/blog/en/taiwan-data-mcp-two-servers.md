@@ -12,6 +12,7 @@ tags:
   - claude-code
 description: 'Two MCP servers wrapping Taiwan''s public data sources—one focused on court judgments and statutes, the other aggregating 52,960 government open datasets plus 37 local utility tools. They turn out to be complementary; I now run both.'
 tldr: 'Need your AI to query Taiwanese government open data and local business information directly? This review compares two extensions: one specialized in legal judgments and regulations, and another packing over 52,000 public datasets with 37 utilities like tax ID lookups and business day checks for daily office productivity.'
+seoTitle: 'mcp-taiwan-legal-db: Search Taiwan Law and Court Rulings'
 ---
 
 Spent the last two weeks evaluating two MCP servers that wrap Taiwan's public data. The trigger was needing "official source" demo material for the L2 course, plus checking whether either is good enough to hand to L3 adoption clients in legal, compliance, or government settings.

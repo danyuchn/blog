@@ -11,6 +11,7 @@ tags:
   - ai-workflow
 description: 'Claude Code 的 context window 從 200k 長到 1M，但更大不代表更好用。這篇整理五種 session 管理操作（Continue / rewind / clear / compact / Subagents）、四大策略、以及最容易踩的兩個坑。'
 tldr: '跟 AI 對話越聊越長時，常會發現它開始胡言亂語或忘記重要指示，這往往是舊資訊干擾造成的上下文腐化。面對不同任務應隨時開新對話，走錯方向時直接回溯重走，並在每個小任務剛結束時主動精簡歷史紀錄，才能讓 AI 始終保持精準的高水準表現。'
+seoTitle: '1M Context 管理：Claude Code 防上下文腐化'
 ---
 
 ![1M Context 不是裝更多，而是管理更好](/blog/assets/posts/context-session-mgmt/slide-1.jpg)

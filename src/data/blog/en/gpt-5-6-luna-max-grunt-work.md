@@ -12,6 +12,7 @@ tags:
   - automation
 description: 'Offload time-consuming browser scraping and bulk data entry to budget models, while saving flagship models for spec review. From pulling bank statements and hunting award seats to tagging customer profiles, here is a durable framework for dividing AI labor.'
 tldr: 'When you need to scrape data from anti-scraping websites without APIs, avoid costly services or aggressive scripts. Set up a division of labor: let cheap models handle raw browser chores at human-like speeds overnight without getting blocked, and have advanced models review the final results.'
+seoTitle: 'GPT-5.6 Luna Max: Browser Automation for Office Grunt Work'
 ---
 
 When picking AI models, people love to dismiss smaller or cheaper options across the board. But in real-world workflows, a huge chunk of work is just mind-numbing, mechanical grunt work: pulling statements from bank portals that have no public API and aggressively block scrapers, clicking through dozens of date combinations on clunky airline systems to find award seats, or cross-referencing spreadsheets to copy customer notes into a backend sidebar one by one.

@@ -11,6 +11,7 @@ tags:
   - model-comparison
 description: 'A hands-on lesson: let AI look at an engineering drawing and write CadQuery directly, and a single vision model will confidently get the topology wrong. Two more independent models and a 2:1 veto are what caught it.'
 tldr: 'Relying on a single AI vision model to interpret technical drawings often produces confident yet fundamentally backward readings. Single-model visual interpretation is inherently risky; using multiple independent models to cross-verify discrepancies through a majority vote exposes hidden misreads before costly errors cascade downstream.'
+seoTitle: 'AI CAD from Engineering Drawings: Multi-Model Verification'
 ---
 
 I've been trying out a workflow lately: take an engineering drawing, let an AI look at it and write CadQuery directly, and have it spit out STEP/STL. Sounds smooth. The moment I actually ran it, the first wall wasn't the code — it was reading the drawing itself.
