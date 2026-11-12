@@ -1,7 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
+import { withBase } from "@/utils/withBase";
 import { getPath } from "@/utils/getPath";
+import { displayTag } from "@/i18n/tags";
 import { getLangFromPost } from "@/utils/i18n";
 import Datetime from "./Datetime.astro";
 
@@ -41,6 +43,15 @@ const firstTag = tags && tags.length > 0 ? tags[0] : undefined;
     class="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs text-foreground/60"
   >
     <Datetime {...props} class="[&_time]:text-xs" />
-    {firstTag && <span class="tracking-wide uppercase">{firstTag}</span>}
+    {
+      firstTag && (
+        <a
+          href={withBase(`/tags/${slugifyStr(firstTag)}/`)}
+          class="tracking-wide hover:text-accent"
+        >
+          {displayTag(slugifyStr(firstTag), lang)}
+        </a>
+      )
+    }
   </div>
 </li>

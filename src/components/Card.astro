@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
 import { getPath } from "@/utils/getPath";
+import { displayTag } from "@/i18n/tags";
 import { getLangFromPost } from "@/utils/i18n";
 import { withBase } from "@/utils/withBase";
 import Datetime from "./Datetime.astro";
@@ -36,9 +37,9 @@ const isFeatured = featured ?? false;
           {tags.map(tag => (
             <a
               href={withBase(`/tags/${slugifyStr(tag)}/`)}
-              class="text-xs tracking-wide uppercase hover:text-accent"
+              class="text-xs tracking-wide hover:text-accent"
             >
-              {tag}
+              {displayTag(slugifyStr(tag), lang)}
             </a>
           ))}
         </div>

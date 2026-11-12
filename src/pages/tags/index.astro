@@ -7,9 +7,13 @@ import Footer from "@/components/Footer.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
 import postFilter from "@/utils/postFilter";
 import { filterByLang, type Lang } from "@/utils/i18n";
+import { displayTag } from "@/i18n/tags";
+import { langFromPathname } from "@/utils/siteLang";
 import { slugifyStr } from "@/utils/slugify";
 import { withBase } from "@/utils/withBase";
 import { SITE } from "@/config";
+
+const pageLang = langFromPathname(Astro.url.pathname);
 
 const posts = await getCollection("blog");
 
@@ -36,7 +40,7 @@ const countFor = (tagSlug: string, lang: Lang) =>
               class="group flex h-full flex-col gap-1 p-4 transition-colors duration-200 hover:bg-accent-surface focus-visible:bg-accent-surface"
             >
               <span class="text-xs font-semibold tracking-wide break-all uppercase">
-                {tagName}
+                {displayTag(tag, pageLang)}
               </span>
               <span class="font-display text-2xl leading-none font-black text-foreground transition-colors duration-150 group-hover:text-accent">
                 <span data-lang="zh">{countFor(tag, "zh")}</span>

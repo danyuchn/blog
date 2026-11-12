@@ -1,4 +1,6 @@
 ---
+import { displayTag } from "@/i18n/tags";
+import { langFromPathname } from "@/utils/siteLang";
 import { withBase } from "@/utils/withBase";
 
 type Props = {
@@ -7,7 +9,8 @@ type Props = {
   size?: "sm" | "lg";
 };
 
-const { tag, tagName, size = "lg" } = Astro.props;
+const { tag, size = "lg" } = Astro.props;
+const label = displayTag(tag, langFromPathname(Astro.url.pathname));
 ---
 
 <li>
@@ -15,12 +18,12 @@ const { tag, tagName, size = "lg" } = Astro.props;
     href={withBase(`/tags/${tag}/`)}
     transition:name={tag}
     class:list={[
-      "inline-block border border-foreground/40 tracking-wide uppercase",
+      "inline-block border border-foreground/40 tracking-wide",
       "hover:border-accent hover:text-accent focus-visible:text-accent",
       { "px-2 py-0.5 text-xs": size === "sm" },
       { "px-2.5 py-1 text-sm": size === "lg" },
     ]}
   >
-    {tagName}
+    {label}
   </a>
 </li>
