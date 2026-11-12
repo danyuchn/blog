@@ -51,6 +51,30 @@ const ui: Record<string, Record<Lang, string>> = {
     en: "Or book a free 15-minute diagnosis",
     zh: "或先預約免費 15 分鐘診斷",
   },
+  "newsletter.lead": {
+    en: "Want AI working in your own job, not just in demos? ",
+    zh: "每週一封，只挑跟你工作有關的 AI 動態。",
+  },
+  "newsletter.link": {
+    en: "See the 3-month 1-on-1 program →",
+    zh: "免費訂閱電子報 →",
+  },
+  "newsletter.submit": {
+    en: "Subscribe",
+    zh: "訂閱",
+  },
+  "newsletter.placeholder": {
+    en: "you@example.com",
+    zh: "you@example.com",
+  },
+  "newsletter.success": {
+    en: "Check your inbox and tap the confirmation link to finish subscribing.",
+    zh: "請到信箱點確認連結，完成訂閱。",
+  },
+  "newsletter.error": {
+    en: "Subscription didn't go through. Please try again.",
+    zh: "訂閱沒有成功，請稍後再試。",
+  },
 };
 
 export function t(key: string, lang: Lang): string {

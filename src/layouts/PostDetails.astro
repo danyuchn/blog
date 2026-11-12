@@ -353,6 +353,113 @@ const relatedPosts = posts
     gtag("event", name, params);
   }
 
+  function upgradeInlineNewsletter() {
+    const onBrand = location.hostname.endsWith("agentcrew.cc");
+    const preview =
+      new URLSearchParams(location.search).get("formpreview") === "1";
+    if (!onBrand && !preview) return;
+
+    document
+      .querySelectorAll<HTMLElement>("[data-inline-newsletter]")
+      .forEach(block => {
+        if (block.dataset.upgraded === "1" || block.querySelector("form")) return;
+        const link = block.querySelector("a");
+        if (!link) return;
+        block.dataset.upgraded = "1";
+
+        const form = document.createElement("form");
+        form.className = "post-inline-newsletter";
+
+        const email = document.createElement("input");
+        email.type = "email";
+        email.name = "email";
+        email.required = true;
+        email.autocomplete = "email";
+        email.placeholder = block.dataset.placeholder ?? "";
+        email.setAttribute("aria-label", block.dataset.placeholder ?? "Email");
+
+        const honeypot = document.createElement("input");
+        honeypot.type = "text";
+        honeypot.name = "website";
+        honeypot.tabIndex = -1;
+        honeypot.autocomplete = "off";
+        honeypot.className = "newsletter-honeypot";
+        honeypot.setAttribute("aria-hidden", "true");
+
+        const button = document.createElement("button");
+        button.type = "submit";
+        button.textContent = block.dataset.submit ?? "";
+
+        const error = document.createElement("p");
+        error.className = "newsletter-error";
+        error.hidden = true;
+
+        form.append(email, button, honeypot, error);
+        link.replaceWith(form);
+
+        form.addEventListener("submit", async event => {
+          event.preventDefault();
+          const body = new FormData(form);
+          const payload = {
+            email: String(body.get("email") ?? ""),
+            website: String(body.get("website") ?? ""),
+            utmSource: "blog",
+            utmMedium: "post_inline",
+            utmCampaign: "newsletter",
+          };
+          const showSuccess = () => {
+            form.replaceWith(
+              document.createTextNode(block.dataset.success ?? "")
+            );
+          };
+          const showError = (message: string) => {
+            error.hidden = false;
+            error.textContent = message || block.dataset.error || "";
+            button.disabled = false;
+          };
+
+          if (preview && !onBrand) {
+            showSuccess();
+            return;
+          }
+          if (!onBrand) return;
+
+          button.disabled = true;
+          try {
+            const res = await fetch("/api/newsletter", {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify(payload),
+            });
+            let json: { error?: string } = {};
+            try {
+              json = (await res.json()) as { error?: string };
+            } catch {
+              json = {};
+            }
+            if (!res.ok) {
+              showError(json.error || block.dataset.error || "");
+              return;
+            }
+            const gtag = (window as unknown as { gtag?: Gtag }).gtag;
+            if (typeof gtag === "function") {
+              gtag("event", "newsletter_submit", {
+                utm_source: payload.utmSource,
+                utm_medium: payload.utmMedium,
+                utm_campaign: payload.utmCampaign,
+              });
+            }
+            showSuccess();
+          } catch {
+            showError(block.dataset.error || "");
+          }
+        });
+      });
+  }
+
+  upgradeInlineNewsletter();
+  document.addEventListener("astro:page-load", upgradeInlineNewsletter);
+
   document.addEventListener("click", e => {
     const target = e.target;
     if (!(target instanceof Element)) return;
