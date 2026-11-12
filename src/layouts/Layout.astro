@@ -17,6 +17,8 @@ type Props = {
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
   language?: "en" | "zh";
+  /** Absolute hreflang alternates, e.g. zh-Hant / en / x-default */
+  alternates?: { hreflang: string; href: string }[];
 };
 
 const {
@@ -30,6 +32,7 @@ const {
   modDatetime,
   scrollSmooth = false,
   language,
+  alternates = [],
 } = Astro.props;
 
 // The /blog proxy serves both "/x" and "/x/" with 200; always point canonical
@@ -74,6 +77,11 @@ const structuredData = {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
     <link rel="canonical" href={canonicalURL} />
+    {
+      alternates.map(alt => (
+        <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+      ))
+    }
     <meta name="generator" content={Astro.generator} />
 
     <!-- Load Font -->

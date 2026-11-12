@@ -69,6 +69,26 @@ const translationUrl = translation
   ? getPath(translation.id, translation.filePath)
   : undefined;
 
+/* hreflang alternates: only when a published translation exists.
+   Absolute URLs on SITE.website, trailing slash (same form as canonical). */
+const absoluteUrl = (path: string) => {
+  const url = new URL(path, SITE.website);
+  if (!url.pathname.endsWith("/")) url.pathname += "/";
+  return url.href;
+};
+const alternates = (() => {
+  if (!translation || !translationUrl) return [];
+  const selfHref = absoluteUrl(getPath(post.id, post.filePath));
+  const transHref = absoluteUrl(translationUrl);
+  const zhHref = postLang === "zh" ? selfHref : transHref;
+  const enHref = postLang === "en" ? selfHref : transHref;
+  return [
+    { hreflang: "zh-Hant", href: zhHref },
+    { hreflang: "en", href: enHref },
+    { hreflang: "x-default", href: zhHref },
+  ];
+})();
+
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
   author,
@@ -79,6 +99,7 @@ const layoutProps = {
   ogImage,
   scrollSmooth: true,
   language: postLang,
+  alternates,
 };
 
 /* ========== Prev/Next Posts (same language only) ========== */
