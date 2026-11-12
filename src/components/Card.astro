@@ -6,6 +6,7 @@ import { displayTag } from "@/i18n/tags";
 import { getLangFromPost } from "@/utils/i18n";
 import { tagPagePath } from "@/utils/siteLang";
 import { withBase } from "@/utils/withBase";
+import { listedTagSet } from "@/utils/listedTags";
 import Datetime from "./Datetime.astro";
 
 type Props = {
@@ -18,6 +19,7 @@ const lang = getLangFromPost(post);
 
 const { title, description, tags, featured, ...props } = data;
 const isFeatured = featured ?? false;
+const tagPages = await listedTagSet(lang);
 ---
 
 <li
@@ -35,14 +37,20 @@ const isFeatured = featured ?? false;
     {
       tags && tags.length > 0 && (
         <div class="flex flex-wrap gap-x-2 gap-y-1">
-          {tags.map(tag => (
-            <a
-              href={withBase(tagPagePath(lang, slugifyStr(tag)))}
-              class="text-xs tracking-wide hover:text-accent"
-            >
-              {displayTag(slugifyStr(tag), lang)}
-            </a>
-          ))}
+          {tags.map(tag =>
+            tagPages.has(slugifyStr(tag)) ? (
+              <a
+                href={withBase(tagPagePath(lang, slugifyStr(tag)))}
+                class="text-xs tracking-wide hover:text-accent"
+              >
+                {displayTag(slugifyStr(tag), lang)}
+              </a>
+            ) : (
+              <span class="text-xs tracking-wide">
+                {displayTag(slugifyStr(tag), lang)}
+              </span>
+            )
+          )}
         </div>
       )
     }
