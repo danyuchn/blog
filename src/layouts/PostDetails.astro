@@ -83,6 +83,15 @@ const absoluteUrl = (path: string) => {
 };
 const alternates = (() => {
   if (!translation || !translationUrl) return [];
+  // A merged/archived page canonicalises to another post; hreflang pointing at
+  // itself would contradict that canonical, so emit none for either side.
+  if (
+    post.data.canonicalURL ||
+    translation.data.canonicalURL ||
+    post.data.archived ||
+    translation.data.archived
+  )
+    return [];
   const selfHref = absoluteUrl(getPath(post.id, post.filePath));
   const transHref = absoluteUrl(translationUrl);
   const zhHref = postLang === "zh" ? selfHref : transHref;
