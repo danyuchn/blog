@@ -12,7 +12,7 @@ tags:
 description: 'Someone on Twitter chained Codex, Hyperframes, IndexTTS2 and HeyGen into a one-person media pipeline. I pulled the repo, tried it, played with a local TTS model, then rebuilt a video days later on Claude Code.'
 ---
 
-The other day I saw someone on Twitter chain Codex + Hyperframes + IndexTTS2 + HeyGen into a one-person media pipeline, and open-source it as a repo with 50-something SKILLs. So I pulled it down and gave it a go (I happened to have a HeyGen Avatar I made a year ago). The repo is Pluviobyte's rnskill; the original author's tweet is [here](https://x.com/Pluvio9yte/status/2081328645524668636).
+The other day I saw someone on Twitter chain Codex + [Hyperframes](/blog/posts/en/automated-video-pipeline-gotchas) + IndexTTS2 + HeyGen into a one-person media pipeline, and open-source it as a repo with 50-something SKILLs. So I pulled it down and gave it a go (I happened to have a HeyGen Avatar I made a year ago). The repo is Pluviobyte's rnskill; the original author's tweet is [here](https://x.com/Pluvio9yte/status/2081328645524668636).
 
 The results were unexpectedly good. Lip sync landed, the speech was clear, and the animation was genuinely impressive. The voiceover still has that AI feel, though maybe that's also how I sound when I read a script slowly in real life (?).
 

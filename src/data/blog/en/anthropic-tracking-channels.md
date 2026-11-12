@@ -21,7 +21,7 @@ The most direct but most overlooked one is **Anthropic's official research secti
 
 Especially important: **System Cards**.
 
-In April, Anthropic published the system card for the next-generation Claude Mythos Preview — 244 pages. I highlighted what I considered the key sections for reference. Original PDF: <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>.
+In April, Anthropic published the system card for the next-generation [Claude Mythos](/blog/posts/en/fable-mythos-system-card-scifi) Preview — 244 pages. I highlighted what I considered the key sections for reference. Original PDF: <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>.
 
 System cards are far more useful than marketing blogs. The real moves and the real pitfalls are all in there — safety test results, model limitations, red team experiments, refusal behaviors. None of this shows up in the keynote. All of it is in the system card.
 

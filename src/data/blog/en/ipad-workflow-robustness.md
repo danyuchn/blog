@@ -13,7 +13,7 @@ tags:
 description: 'A follow-up to the full iPad-runs-Claude-Code guide. This one is not about setup, it is about robustness: home internet in Bangkok drops, the rainy season kills the power, so how does the host machine survive? Plus why I gave up the Magic Keyboard for my mouth and some gestures.'
 ---
 
-The last post covered the basic trio for running Claude Code on an iPad: tmux + Tailscale + Moshi. That one was about how to set it up. This one is about how to keep it from dying right when you need it most.
+The last post covered the basic trio for running Claude Code on an iPad: tmux + [Tailscale](/blog/posts/en/ipad-claude-code-setup) + Moshi. That one was about how to set it up. This one is about how to keep it from dying right when you need it most.
 
 I keep a MacBook Air and a Mac mini at home as 24-hour headless hosts. When I head out I only carry an iPhone and an iPad, and I remote back in to run Claude Code and Codex. The catch: I'm in Bangkok, where the home internet drops once every month or two, and the rainy season occasionally cuts the power. So getting it installed isn't enough. You need a fallback plan for outages.
 

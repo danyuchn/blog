@@ -13,7 +13,7 @@ tags:
 description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是穩健性——曼谷家用網路會斷、雨季會停電，主機端怎麼撐住；以及我為什麼放棄妙控鍵盤、改用一張嘴加手勢。'
 ---
 
-上一篇講了用 tmux + Tailscale + Moshi 在 iPad 上跑 Claude Code 的基本三件套。那篇是「怎麼裝起來」，這篇是「怎麼讓它不會在你最需要的時候掛掉」。
+上一篇講了用 tmux + [Tailscale](/blog/posts/zh/ipad-claude-code-setup) + Moshi 在 iPad 上跑 Claude Code 的基本三件套。那篇是「怎麼裝起來」，這篇是「怎麼讓它不會在你最需要的時候掛掉」。
 
 我把 MacBook Air 跟 Mac mini 放家裡當二十四小時的 headless 主機，出門只帶 iPhone + iPad，遠端接回去跑 Claude Code 跟 Codex。問題是我家在曼谷，家用網路一兩個月會斷一次，雨季偶爾還會停電。所以光裝起來不夠，得做斷網斷電的備案。
 

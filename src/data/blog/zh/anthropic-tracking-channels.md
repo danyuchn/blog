@@ -21,7 +21,7 @@ description: '從 2026 年 3 月開始我陸續記了一些追 Anthropic 的方�
 
 特別重要的是**系統卡（System Card）**。
 
-4 月官方發了下一代 Claude Mythos Preview 的系統卡，244 頁。我把覺得是重點的地方另外 highlight 起來供大家參考。原檔在 <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>。
+4 月官方發了下一代 [Claude Mythos](/blog/posts/zh/fable-mythos-system-card-scifi) Preview 的系統卡，244 頁。我把覺得是重點的地方另外 highlight 起來供大家參考。原檔在 <https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf>。
 
 讀系統卡真的是比讀 marketing blog 有用多了，該有的招數跟不該有的陷阱都在裡面。安全測試結果、模型限制、紅隊實驗、refusal 行為——這些東西不會在發表會的 keynote 上出現，但都在系統卡裡。
 

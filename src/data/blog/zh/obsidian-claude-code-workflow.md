@@ -36,7 +36,7 @@ description: '把人生都放到 Obsidian，再讓 Claude Code 接入。日誌�
 
 一、開給它全電腦權限，掃描所有使用 Claude Code 的專案，給出過時和暫存檔案的歸檔清理建議。
 
-二、用 claude-log CLI 讀取本週所有 session 的對話紀錄，找到跟 Claude Code 溝通不順的地方，然後用官方文檔的最佳實踐修正 Claude.md、rules、memory。
+二、用 [claude-log](/blog/posts/zh/self-improving-claude-md) CLI 讀取本週所有 session 的對話紀錄，找到跟 Claude Code 溝通不順的地方，然後用官方文檔的最佳實踐修正 Claude.md、rules、memory。
 
 相信我，這會讓你接下來一週過得很愉快。
 

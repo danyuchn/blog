@@ -22,7 +22,7 @@ One version wasn't enough, so I asked it to go bolder. That produced four reject
 
 ![Four rejected visual directions, A through D, shown side by side: gallery white, warm-paper editorial, ink-black cover, navy professional](/blog/assets/posts/agentcrew-visual-system-design-process/2-rejected-directions.jpg)
 
-Later I tried a completely different approach, skipping Fable this time and asking GPT-image-2 directly for 5-10 style variations to choose from. Then I fed my pick back to GPT-5.6-sol and asked it to mock up a YouTube thumbnail. I also gave it my current YouTube channel homepage and had it build an HTML prototype of what the redesigned channel would look like. Once I settled on one, it built me a thumbnail template so I could swap in new content and titles going forward. I haven't actually switched the channel art yet. I want to run an A/B test for a while first.
+Later I tried a completely different approach, skipping Fable this time and asking [GPT-image-2](/blog/posts/en/gpt-image-2-prompting) directly for 5-10 style variations to choose from. Then I fed my pick back to GPT-5.6-sol and asked it to mock up a YouTube thumbnail. I also gave it my current YouTube channel homepage and had it build an HTML prototype of what the redesigned channel would look like. Once I settled on one, it built me a thumbnail template so I could swap in new content and titles going forward. I haven't actually switched the channel art yet. I want to run an A/B test for a while first.
 
 Working with GPT this time around felt just as good, so I think either path works. In the AI era, producing a prototype barely costs any time anymore. The hard part has shifted back to your own taste and judgment.
 

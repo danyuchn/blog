@@ -12,7 +12,7 @@ tags:
 description: 'Four months of video automation gotchas, from Remotion through HyperFrames: truncated downloads that exit 0, thumbnail titles cut mid-word, transcript chunks returning zero lines, large uploads that hang. None of them raise an error.'
 ---
 
-The dangerous part of this pipeline isn't that it breaks. It's that it quietly does half the work and reports success. A download exits 0 but the file is truncated. `compactTitle()` chopped titles into half-sentences and left them on YouTube across thirty-six videos. Five of thirteen transcript chunks returned zero lines and the merged result still looked complete. Not one of those threw an error. Here they are in order, from the Remotion setup through to HyperFrames.
+The dangerous part of this pipeline isn't that it breaks. It's that it quietly does half the work and reports success. A download exits 0 but the file is truncated. `compactTitle()` chopped titles into half-sentences and left them on YouTube across thirty-six videos. Five of thirteen transcript chunks returned zero lines and the merged result still looked complete. Not one of those threw an error. Here they are in order, from the [Remotion](/blog/posts/en/remotion-claude-code-videos) setup through to HyperFrames.
 
 ## The Remotion era: nine bugs from April
 

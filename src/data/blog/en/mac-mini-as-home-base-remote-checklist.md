@@ -15,7 +15,7 @@ description: 'Eight things I checked before flying out, to keep a home Mac Mini 
 
 Tomorrow is my first trip abroad since I bought the Mac Mini. Here's the remote setup checklist I ran through before leaving:
 
-1. Made sure Tailscale had every device on the tailnet connected and handshaking, with both Mosh and SSH getting through
+1. Made sure [Tailscale](/blog/posts/en/ipad-claude-code-setup) had every device on the tailnet connected and handshaking, with both Mosh and SSH getting through
 2. Kept the Mac Mini awake with a caffeinate command so it never sleeps
 3. Set up auto-reboot in case of an unexpected shutdown
 4. Kept Herdr running persistently, configured in machine mode so other devices on the LAN can connect into the same herdr server

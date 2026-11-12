@@ -59,4 +59,4 @@ research 目錄放了完整的長篇論述文章（23KB 的 Context Engineering�
 
 **偷給 Agent 塞提示**：就算你懂得讓他派出 sub-agent 來做測試員跟評審，也要好好去看他分派給 agent 什麼提示詞。好幾次我就抓到 Claude 給測試員特別詳細的提示——「按照流程來不能遺漏」「特別注意上一輪產生的錯誤」——現實生活中人類調用 Skill 可不是這樣用的。
 
-有人問包成 Skill 跟 NotebookLM 有什麼差別。如果只是唸書，NotebookLM 的確也可以達到吸收的效果。但包成 Skill 的好處是可以在 Claude Code 裡面隨時把它拉進來參與討論。在 NotebookLM，書會是以書為中心的學習；但 Skill 則是以你的工作為中心，書的知識變成隨時可以被調用的顧問。
+有人問包成 Skill 跟 [NotebookLM](/blog/posts/zh/obsidian-vs-notebooklm-agent) 有什麼差別。如果只是唸書，NotebookLM 的確也可以達到吸收的效果。但包成 Skill 的好處是可以在 Claude Code 裡面隨時把它拉進來參與討論。在 NotebookLM，書會是以書為中心的學習；但 Skill 則是以你的工作為中心，書的知識變成隨時可以被調用的顧問。

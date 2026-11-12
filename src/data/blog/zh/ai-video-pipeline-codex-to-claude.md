@@ -12,7 +12,7 @@ tags:
 description: '從推特上看到有人把 Codex、Hyperframes、IndexTTS2、HeyGen 串成一條自媒體流水線，拉下來實測、順手玩 b 站的本地 TTS，幾天後換 Claude Code 重做一支。'
 ---
 
-那天看到推特上有人把 Codex + Hyperframes + IndexTTS2 + HeyGen 串在一起成為一條自媒體流水線，弄了一個有 50 幾個 SKILL 的 repo 開源分享，我就拉下來做做看（剛好 HeyGen 有我一年前做的 Avatar）。repo 是 Pluviobyte 的 rnskill，原作者的推文在[這裡](https://x.com/Pluvio9yte/status/2081328645524668636)。
+那天看到推特上有人把 Codex + [Hyperframes](/blog/posts/zh/automated-video-pipeline-gotchas) + IndexTTS2 + HeyGen 串在一起成為一條自媒體流水線，弄了一個有 50 幾個 SKILL 的 repo 開源分享，我就拉下來做做看（剛好 HeyGen 有我一年前做的 Avatar）。repo 是 Pluviobyte 的 rnskill，原作者的推文在[這裡](https://x.com/Pluvio9yte/status/2081328645524668636)。
 
 沒想到效果出奇的好。嘴型都有對到，講話也很清楚，動畫更是做得驚艷。雖然口播還是有 AI 感，但好像我真人放慢速度念稿也是這個感覺（？）
 

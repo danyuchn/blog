@@ -16,7 +16,7 @@ Whenever Anthropic releases a new Claude model, I have an odd habit: I immediate
 
 When people hit a wall with a new model, they usually start digging for secret prompt hacks. But whenever I get stuck, I go back to the traits in the system card and adjust how I interact with it. More often than not, the collaboration suddenly clicks. Over time, this became my standard routine: understand who you are dealing with before trying to manage them. It is just like an engineering manager figuring out how to lead a new hire before their first day.
 
-Boris Cherny, who leads Claude Code at Anthropic, has publicly shared the exact same principle:
+[Boris Cherny](/blog/posts/en/ai-adoption-stage-2-5-automation), who leads Claude Code at Anthropic, has publicly shared the exact same principle:
 
 ![Screenshot of Boris Cherny's tweet: Talk to Claude the way you would a coworker; there are no secret prompt tricks—the key is communicating what you want it to do, how much effort you expect, and how it can verify its own work, with Traditional Chinese translation below.](/blog/assets/posts/read-system-card-before-managing-model/4-boris-cherny-coworker.jpg)
 

@@ -15,7 +15,7 @@ description: '出國前一次寫下的八條遠端配置檢查表：Tailscale、
 
 明天是買了 Mac Mini 後第一次出遠門出國旅行。以下記錄一下出門前的遠端配置檢查表：
 
-1. Tailscale確定內網都有連接且握手成功，Mosh/SSH協定都打通
+1. [Tailscale](/blog/posts/zh/ipad-claude-code-setup)確定內網都有連接且握手成功，Mosh/SSH協定都打通
 2. Mac Mini使用咖啡因指令保持常駐不休眠
 3. 設置意外關機自動重開機模式
 4. Herdr常駐，且配置好machine模式，可以在其他內網裝置連進同一個herdr server

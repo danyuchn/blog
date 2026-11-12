@@ -12,7 +12,7 @@ tags:
 description: '從 Remotion 到 HyperFrames，四個月的影片自動化踩坑合輯：exit 0 的殘檔、靜默截斷的縮圖標題、回 0 行的轉錄合併、卡死的大檔上傳。共同點是全都不報錯。'
 ---
 
-這條管道最危險的地方不是它會壞掉，是它會安靜地少做一半事情然後回報成功。exit 0 的下載其實是殘檔、`compactTitle()` 把標題砍成半句掛了三十六支、13 段轉錄有 5 段回 0 行合併起來看起來還很完整——這些沒有一個會丟 error 給你。以下按時間順序，從 Remotion 那套一路記到 HyperFrames。
+這條管道最危險的地方不是它會壞掉，是它會安靜地少做一半事情然後回報成功。exit 0 的下載其實是殘檔、`compactTitle()` 把標題砍成半句掛了三十六支、13 段轉錄有 5 段回 0 行合併起來看起來還很完整——這些沒有一個會丟 error 給你。以下按時間順序，從 [Remotion](/blog/posts/zh/remotion-claude-code-videos) 那套一路記到 HyperFrames。
 
 ## Remotion 時代：四月的九個坑
 

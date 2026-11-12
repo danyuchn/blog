@@ -150,7 +150,7 @@ Claude Code 綜合評估後給的結論是「**可以裝**」。理由：沒有 
 
 這個 prompt 跑下來大概就是 80% 的 `/security-scan` 體驗。等你常常用之後，再考慮把它包成一個 skill。
 
-MCP server 的數量在過去幾個月暴增。Twinkle Hub、mcp-taiwan-legal-db、各種 Reddit 大神寫的小工具——每天都有人推薦新的可以裝。
+MCP server 的數量在過去幾個月暴增。Twinkle Hub、[mcp-taiwan-legal-db](/blog/posts/zh/taiwan-data-mcp-two-servers)、各種 Reddit 大神寫的小工具——每天都有人推薦新的可以裝。
 
 如果你照單全收，你的 Claude Code 環境裡的 MCP server 會在三個月內累積到 20-30 個。其中可能有幾個是惡意的（譬如 typosquatting：`mcp-anthrop1c` 假裝是官方的 `mcp-anthropic`）；也有幾個是寫得太爛、會把你的 API key log 到外部服務的。
 

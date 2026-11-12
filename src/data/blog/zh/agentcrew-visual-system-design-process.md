@@ -22,7 +22,7 @@ description: '我不是設計師，這週用 Fable、GPT-image-2、GPT-5.6-sol �
 
 ![四個被否決的視覺方向 A 到 D 並排比較：藝廊白、暖紙誌面、墨黑封面、紺青專業](/blog/assets/posts/agentcrew-visual-system-design-process/2-rejected-directions.jpg)
 
-後來我又嘗試了另外一種方式，這次不倚賴 Fable，而是直接請 GPT-image-2 產出 5-10 版風格圖讓我選，再把選中的風格圖丟回給 GPT-5.6-sol，請它做出 YouTube 封面的範例，順便給它我 YouTube 的首頁，讓它用 HTML 做一個「改版後的頻道長怎樣」的原型。等我選中之後，它再幫我做封面樣板，方便未來替換內容跟產出。目前頻道封面還沒正式換，因為想先跑一陣子 A/B Test 再決定。
+後來我又嘗試了另外一種方式，這次不倚賴 Fable，而是直接請 [GPT-image-2](/blog/posts/zh/gpt-image-2-prompting) 產出 5-10 版風格圖讓我選，再把選中的風格圖丟回給 GPT-5.6-sol，請它做出 YouTube 封面的範例，順便給它我 YouTube 的首頁，讓它用 HTML 做一個「改版後的頻道長怎樣」的原型。等我選中之後，它再幫我做封面樣板，方便未來替換內容跟產出。目前頻道封面還沒正式換，因為想先跑一陣子 A/B Test 再決定。
 
 跟 GPT 合作的這一次感覺也很不錯，所以我覺得兩條路都行得通。AI 時代原型的產出已經不花什麼時間，重點回到了使用者自己的 taste 跟選擇。
 

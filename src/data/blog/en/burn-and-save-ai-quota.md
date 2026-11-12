@@ -96,7 +96,7 @@ I applied the same logic to the rest of my expiring marginal compute:
 
 **Bundled Colab compute:** Training local models. I burned Google's Colab credits training small models to see if they could replace paid services on my local machine. The speech-to-text model succeeded and went into daily use. A model meant to imitate my writing voice lost a blind test against my prompt setup, so I deleted it. I also tested an open-source AI video model and put together a 44-second dialogue clip.
 
-**Testing new models on real tasks:** When Haiku 5.5 came out, I built a 13-question benchmark using my actual day-to-day tasks, spending about $15 in compute. For error-checking tasks, Haiku performed just as well as the flagship models at roughly one-tenth the cost. From then on, I routed all routine verification to it.
+**Testing new models on real tasks:** When [Haiku 5.5](/blog/posts/en/haiku-55-own-task-benchmark) came out, I built a 13-question benchmark using my actual day-to-day tasks, spending about $15 in compute. For error-checking tasks, Haiku performed just as well as the flagship models at roughly one-tenth the cost. From then on, I routed all routine verification to it.
 
 ## Using Surplus Compute to Build Permanent Token Savings
 

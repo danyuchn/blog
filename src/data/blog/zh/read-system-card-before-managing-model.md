@@ -16,7 +16,7 @@ description: '新模型發布時先看系統卡的個性評估，才能像帶團
 
 許多人在用新模型碰壁時，習慣去到處找提示詞秘訣。但我每次卡關時，都是回頭看系統卡裡的評估，調整自己跟模型互動的模式，往往合作就順暢了起來。久而久之這成了我的固定慣例：用新模型之前先「投其所好」，摸透個性再來想怎麼應對。這就像新人入職前，主管要先想好怎麼帶人一樣。
 
-Anthropic 負責開發 Claude Code 的 Boris Cherny 也公開提過同樣的原則：
+Anthropic 負責開發 Claude Code 的 [Boris Cherny](/blog/posts/zh/ai-adoption-stage-2-5-automation) 也公開提過同樣的原則：
 
 ![Boris Cherny 的推文截圖：Talk to Claude the way you would a coworker，沒有什麼下指令的秘訣，重點是傳達你要它做什麼、希望它投入多少心力、它該如何驗證自己做對了，下方附繁體中文翻譯。](/blog/assets/posts/read-system-card-before-managing-model/4-boris-cherny-coworker.jpg)
 

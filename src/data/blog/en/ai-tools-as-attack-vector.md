@@ -150,7 +150,7 @@ The simplest no-skill version is to just tell Claude Code:
 
 That prompt gets you about 80% of the `/security-scan` experience. After running it a few times you can package the pattern into a skill.
 
-The MCP server count has exploded in the past few months. Twinkle Hub, mcp-taiwan-legal-db, all kinds of small tools written by Reddit folks—new recommendations every day.
+The MCP server count has exploded in the past few months. Twinkle Hub, [mcp-taiwan-legal-db](/blog/posts/en/taiwan-data-mcp-two-servers), all kinds of small tools written by Reddit folks—new recommendations every day.
 
 If you accept them all, your Claude Code's installed MCP servers will climb to 20-30 within three months. Some might be malicious (e.g. typosquatting: `mcp-anthrop1c` impersonating the official `mcp-anthropic`). Some might just be poorly written and log your API key to an external service.
 

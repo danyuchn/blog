@@ -36,7 +36,7 @@ When your weekly quota is about to reset within a day and you're temporarily a "
 
 One, give it full computer access, scan every project that uses Claude Code, and get recommendations for archiving outdated and temp files.
 
-Two, use the claude-log CLI to read all session transcripts from the past week, find spots where communication with Claude Code was rough, then use official docs and best practices to refine your Claude.md, rules, and memory files.
+Two, use the [claude-log](/blog/posts/en/self-improving-claude-md) CLI to read all session transcripts from the past week, find spots where communication with Claude Code was rough, then use official docs and best practices to refine your Claude.md, rules, and memory files.
 
 Trust me, this will make the following week significantly smoother.
 
