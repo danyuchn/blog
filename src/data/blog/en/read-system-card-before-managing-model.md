@@ -104,7 +104,7 @@ Bring it into a codebase to write software, and that Japanese craftsman vibe bec
 
 ## An Educator's Lens and Practical Realities
 
-Much of how I collaborate with these models comes from my background teaching the GMAT. Putting different models in the right roles and adapting your communication style to their personalities is really just differentiated instruction. For more on handling plateaus and iterative learning, I wrote up two core mindsets previously: [Two Mindsets for Getting Unstuck: Thinking with Logic and an AI Pedagogy of Never Making the Same Mistake Twice](/blog/posts/en/debugging-mindset-logic-ai-pedagogy).
+Much of how I collaborate with these models comes from my background teaching the GMAT. Putting different models in the right roles and adapting your communication style to their personalities is really just differentiated instruction.
 
 When putting this multi-model playbook into practice, keep a few real-world constraints in mind:
 

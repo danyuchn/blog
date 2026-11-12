@@ -25,7 +25,7 @@ So I'm going to design GMAT-style questions that test AI ability. I mentioned th
 
 Someone asked me whether this is the difference between humanities people and science people. Hard to say. I've met plenty of humanities people with poor logic who get spun in circles by AI.
 
-People with an engineering background are better at reading evidence and setting up tests, following the thread until they find where the AI went wrong on a long task. Without that foundation, a lot of people just curse at the AI and tell it to go around again and redo it, which is completely pointless. I broke down that "how to look at evidence" part in more detail in [The Debugging Mindset](/blog/posts/en/debugging-mindset-logic-ai-pedagogy).
+People with an engineering background are better at reading evidence and setting up tests, following the thread until they find where the AI went wrong on a long task. Without that foundation, a lot of people just curse at the AI and tell it to go around again and redo it, which is completely pointless.
 
 ## Try it. How many can you get right?
 

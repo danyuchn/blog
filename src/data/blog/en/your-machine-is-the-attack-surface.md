@@ -63,7 +63,7 @@ Three, when you feed untrusted input to a model, say out loud that unfamiliar li
 
 None of the three asks you to understand how the model works inside, or to judge whether this week's jailbreak got patched. All of them happen on the side you control.
 
-I wrote earlier about [capability boundaries and de-identifying private data](/blog/posts/en/ai-security-boundary/), which was about what shouldn't go out. This one points the other way: even if you send nothing out, the residue, the flags, and the input are still sitting on your machine.
+I wrote earlier about [capability boundaries and de-identifying private data](/blog/posts/en/pii-guard-tw/), which was about what shouldn't go out. This one points the other way: even if you send nothing out, the residue, the flags, and the input are still sitting on your machine.
 
 Whether the model says the wrong thing isn't up to me. These three are.
 
