@@ -7,6 +7,17 @@ const ui: Record<string, Record<Lang, string>> = {
   "nav.about": { en: "About", zh: "關於" },
   "nav.archives": { en: "Archives", zh: "歸檔" },
   "nav.search": { en: "Search", zh: "搜尋" },
+  "home.hello": { en: "Hi, I'm Dustin.", zh: "嗨，我是 Dustin。" },
+  "home.credibility": {
+    en: "A teacher with 12 years of GMAT experience, now teaching working people to finish the job with AI.",
+    zh: "教 GMAT 12 年的老師，現在教上班族用 AI 把工作做完。",
+  },
+  "home.fact1": { en: "12 years of teaching", zh: "12 年教學經驗" },
+  "home.fact2": {
+    en: "AgentCrew courses and 1-on-1 coaching",
+    zh: "AgentCrew 課程與一對一陪跑",
+  },
+  "home.fact3": { en: "A weekly newsletter", zh: "每週電子報" },
   "home.featured": { en: "Featured", zh: "精選文章" },
   "home.recent": { en: "Recent Posts", zh: "最新文章" },
   "home.allPosts": { en: "All Posts", zh: "所有文章" },

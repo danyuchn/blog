@@ -8,6 +8,7 @@ import Card from "@/components/Card.astro";
 import GridCard from "@/components/GridCard.astro";
 import { getListedPosts } from "@/utils/getSortedPosts";
 import { filterByLang } from "@/utils/i18n";
+import { t } from "@/i18n/ui";
 import { withBase } from "@/utils/withBase";
 
 const RECENT_COUNT = 6;
@@ -33,29 +34,47 @@ const recentPosts = (["zh", "en"] as const).flatMap(lang =>
         class="font-display text-4xl leading-tight font-black tracking-tight text-foreground sm:text-6xl"
         data-lang="zh"
       >
-        嗨，我是 Dustin。
+        {t("home.hello", "zh")}
       </h1>
       <h1
         class="font-display text-4xl leading-tight font-black tracking-tight text-foreground sm:text-6xl"
         data-lang="en"
       >
-        Hi, I'm Dustin.
+        {t("home.hello", "en")}
       </h1>
 
-      <div class="mt-6 max-w-prose">
-        <p class="text-base leading-relaxed text-foreground/70" data-lang="zh">
-          教了 12 年 GMAT，現在人在曼谷，用 AI
-          做教育產品。這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和
-          Gemini 把東西做出來的過程，還有途中踩過的坑。
+      <div class="mt-6 max-w-3xl">
+        <p class="text-base leading-relaxed text-foreground/80" data-lang="zh">
+          {t("home.credibility", "zh")}
         </p>
-        <p
-          class="mt-2 text-base leading-relaxed text-foreground/70"
-          data-lang="en"
+        <ul
+          class="mt-4 grid grid-cols-3 gap-2"
+          data-lang="zh"
         >
-          12 years teaching GMAT. Now based in Bangkok, building education
-          products with AI. This blog is about how someone with zero engineering
-          background actually ships things — and all the pitfalls along the way.
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact1", "zh")}
+          </li>
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact2", "zh")}
+          </li>
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact3", "zh")}
+          </li>
+        </ul>
+        <p class="text-base leading-relaxed text-foreground/80" data-lang="en">
+          {t("home.credibility", "en")}
         </p>
+        <ul class="mt-4 grid grid-cols-3 gap-2" data-lang="en">
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact1", "en")}
+          </li>
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact2", "en")}
+          </li>
+          <li class="border border-border px-2 py-2 text-xs leading-snug text-foreground sm:text-sm">
+            {t("home.fact3", "en")}
+          </li>
+        </ul>
       </div>
     </section>
 
