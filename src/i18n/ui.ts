@@ -12,12 +12,10 @@ const ui: Record<string, Record<Lang, string>> = {
     en: "A teacher with 12 years of GMAT experience, now teaching working people to finish the job with AI.",
     zh: "教 GMAT 12 年的老師，現在教上班族用 AI 把工作做完。",
   },
-  "home.fact1": { en: "12 years of teaching", zh: "12 年教學經驗" },
-  "home.fact2": {
-    en: "AgentCrew courses and 1-on-1 coaching",
-    zh: "AgentCrew 課程與一對一陪跑",
+  "home.intro": {
+    en: "This blog is about how someone with no engineering background gets real work done with Claude Code and Gemini, and the pitfalls along the way.",
+    zh: "這裡寫的是一個沒有工程背景的人，怎麼靠 Claude Code 和 Gemini 把工作做完的過程，還有途中踩過的坑。",
   },
-  "home.fact3": { en: "A weekly newsletter", zh: "每週電子報" },
   "home.kickerFeatured": { en: "Featured", zh: "精選" },
   "home.kickerRecent": { en: "Recent writing", zh: "最近在寫" },
   "home.start": { en: "Start here", zh: "從這裡開始" },
