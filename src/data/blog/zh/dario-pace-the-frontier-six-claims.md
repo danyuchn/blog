@@ -5,6 +5,7 @@ title: Dario Amodei 又發萬言書：六大重點與覆議名單
 slug: zh/dario-pace-the-frontier-six-claims
 featured: false
 draft: false
+archived: true
 tags:
   - anthropic
   - ai-safety

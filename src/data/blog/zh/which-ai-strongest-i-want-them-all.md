@@ -5,6 +5,7 @@ title: "哪個 AI 最強？我全都要：讓 Claude 當大腦，指揮 Gemini �
 slug: zh/which-ai-strongest-i-want-them-all
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - gemini

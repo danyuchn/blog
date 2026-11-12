@@ -5,6 +5,7 @@ title: "Claude Code 這週整理：1M Context 怎麼用、額度焦慮集體發�
 slug: zh/claude-code-tips-apr-w18
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

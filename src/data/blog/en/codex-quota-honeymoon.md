@@ -5,6 +5,7 @@ title: "A Few Days Into Switching From Claude Code to Codex: The Quota Honeymoon
 slug: en/codex-quota-honeymoon
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - ai-workflow

@@ -5,6 +5,7 @@ title: "用 Claude Code 這幾個月，累積下來的周邊工具與學習資�
 slug: zh/claude-code-tool-belt
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

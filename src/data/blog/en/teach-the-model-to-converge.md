@@ -5,6 +5,7 @@ title: "A Chatty Model: Teaching Opus 5 to Converge"
 slug: en/teach-the-model-to-converge
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - skills

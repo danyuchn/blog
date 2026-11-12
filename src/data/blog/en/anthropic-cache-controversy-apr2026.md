@@ -5,6 +5,7 @@ title: "What Anthropic Did This Time: Cache Reduction and Token Anxiety Injectio
 slug: en/anthropic-cache-controversy-apr2026
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

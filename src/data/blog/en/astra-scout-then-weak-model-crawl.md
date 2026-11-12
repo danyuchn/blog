@@ -5,6 +5,7 @@ title: "Astra Scouts, Luna Max Finishes: Crawling Niche Sites With Heavy Anti-Sc
 slug: en/astra-scout-then-weak-model-crawl
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - ai-coding

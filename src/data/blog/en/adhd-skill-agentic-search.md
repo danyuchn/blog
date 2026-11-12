@@ -5,6 +5,7 @@ title: "I Let My /adhd Skill Go Dig Up a 3C-Scene Price-Hike Rumor on Its Own"
 slug: en/adhd-skill-agentic-search
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

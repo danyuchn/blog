@@ -5,6 +5,7 @@ title: "Why You Keep Hitting Limit: Six Observations on Claude's Subscription Ec
 slug: en/claude-subscription-economics
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-economics

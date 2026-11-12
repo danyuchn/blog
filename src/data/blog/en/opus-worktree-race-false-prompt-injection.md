@@ -5,6 +5,7 @@ title: "Opus 4.8 Cries 'Prompt Injection,' Codex GPT-5.5 Tracks Down the Real Ca
 slug: en/opus-worktree-race-false-prompt-injection
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - claude-code

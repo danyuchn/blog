@@ -5,6 +5,7 @@ title: "Getting AI to Write Like Me: From LoRA Fine-Tuning to a Three-Gate Skill
 slug: en/ai-writing-in-my-voice-lora-vs-skill
 featured: false
 draft: false
+archived: true
 tags:
   - skills
   - ai-workflow

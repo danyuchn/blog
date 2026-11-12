@@ -5,6 +5,7 @@ title: "Gemini 3.5 Flash Reddit 實測彙整——貴三倍、Vision 退步、To
 slug: zh/gemini-3-5-flash-reddit-review
 featured: false
 draft: false
+archived: true
 tags:
   - gemini
   - model-comparison

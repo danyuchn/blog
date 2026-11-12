@@ -5,6 +5,7 @@ title: 'Sonnet 5 Is Out: The Lazy Version of the System Card, Plus Where I Actua
 slug: en/sonnet-5-launch-system-card
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-trends

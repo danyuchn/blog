@@ -5,6 +5,7 @@ title: "What If This Site Had Existed in 2011"
 slug: en/gc-career-platform-what-if-2011
 featured: false
 draft: false
+archived: true
 tags:
   - career
   - ai-tools

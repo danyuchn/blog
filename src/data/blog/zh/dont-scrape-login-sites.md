@@ -5,6 +5,7 @@ title: "需要登入的網站別硬爬——你的 token 就是你的帳號"
 slug: zh/dont-scrape-login-sites
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - security

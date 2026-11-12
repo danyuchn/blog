@@ -5,6 +5,7 @@ title: "AI Security Boundaries: The Lobster Craze, Presidio, and My Three Rules"
 slug: en/ai-security-boundary
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - security

@@ -5,6 +5,7 @@ title: "帶藝人經紀公司用 Claude Code，與 DK 信心曲線的軟著陸"
 slug: zh/training-talent-agency-dk-curve
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - teaching

@@ -6,6 +6,7 @@ title: 'Push, Not Pull: On Anthropic''s Week of Communication'
 slug: en/push-not-pull-anthropic-comms-week
 featured: false
 draft: false
+archived: true
 tags:
   - anthropic
   - opinion

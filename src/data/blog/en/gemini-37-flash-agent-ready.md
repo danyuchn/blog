@@ -6,6 +6,7 @@ title: "Gemini 3.7 Flash: The First Gemini in Six Months I'd Actually Put on Age
 slug: en/gemini-37-flash-agent-ready
 featured: false
 draft: false
+archived: true
 tags:
   - gemini
   - model-comparison

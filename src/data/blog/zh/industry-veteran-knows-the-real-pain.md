@@ -6,6 +6,7 @@ title: 你要在一個業界打滾非常久，才知道真正的痛點是什麼
 slug: zh/industry-veteran-knows-the-real-pain
 featured: false
 draft: false
+archived: true
 tags:
   - case-study
   - ai-education

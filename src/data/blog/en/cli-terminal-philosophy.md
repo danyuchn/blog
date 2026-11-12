@@ -5,6 +5,7 @@ title: "Why Claude Code Only Reaches Its Full Potential in the Terminal"
 slug: en/cli-terminal-philosophy
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

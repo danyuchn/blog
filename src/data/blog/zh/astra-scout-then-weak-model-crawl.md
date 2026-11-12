@@ -5,6 +5,7 @@ title: "Astra 探路、Luna Max 收工：反爬太徹底又太小眾的網站怎
 slug: zh/astra-scout-then-weak-model-crawl
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - ai-coding

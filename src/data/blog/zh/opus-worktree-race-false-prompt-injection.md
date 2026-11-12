@@ -5,6 +5,7 @@ title: "Opus 4.8 搞烏龍報『提示注入攻擊』，Codex GPT-5.5 揪出 wor
 slug: zh/opus-worktree-race-false-prompt-injection
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - claude-code

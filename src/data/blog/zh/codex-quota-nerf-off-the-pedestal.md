@@ -5,6 +5,7 @@ title: Codex 走下神壇：額度偷縮被網友抓出來了
 slug: zh/codex-quota-nerf-off-the-pedestal
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - ai-trends

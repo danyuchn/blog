@@ -5,6 +5,7 @@ title: "A Few Months With Claude Code: The Companion Tools and Resources I've Ac
 slug: en/claude-code-tool-belt
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

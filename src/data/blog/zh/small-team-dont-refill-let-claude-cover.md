@@ -5,6 +5,7 @@ title: 遇缺不補，人少了就 Claude 來頂
 slug: zh/small-team-dont-refill-let-claude-cover
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - case-study

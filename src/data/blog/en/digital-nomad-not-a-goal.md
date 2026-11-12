@@ -6,6 +6,7 @@ title: "Digital Nomadism Is Something You Stumble Into, Not a Goal to Chase"
 slug: en/digital-nomad-not-a-goal
 featured: false
 draft: false
+archived: true
 tags:
   - opinion
   - digital-nomad

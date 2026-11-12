@@ -5,6 +5,7 @@ title: "Claude Desktop vs CLI: Why I Still Use the Terminal After the Redesign"
 slug: en/claude-desktop-vs-cli
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

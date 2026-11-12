@@ -5,6 +5,7 @@ title: "Opus 4.7 上線一週：從系統卡到火烤文，到底哪邊出了問
 slug: zh/opus-47-week-review
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - model-comparison

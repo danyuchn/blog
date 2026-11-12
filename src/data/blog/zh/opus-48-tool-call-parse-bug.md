@@ -5,6 +5,7 @@ title: "Opus 4.8 全線抽風的一天：tool call cannot be parsed"
 slug: zh/opus-48-tool-call-parse-bug
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

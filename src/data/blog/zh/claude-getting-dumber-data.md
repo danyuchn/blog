@@ -5,6 +5,7 @@ title: "Claude 變笨了？這次有人拿出數據證據"
 slug: zh/claude-getting-dumber-data
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

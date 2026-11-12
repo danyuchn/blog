@@ -5,6 +5,7 @@ title: "Anthropic 這次幹了什麼：快取縮水與 Token 焦慮注射"
 slug: zh/anthropic-cache-controversy-apr2026
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

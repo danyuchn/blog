@@ -5,6 +5,7 @@ title: "Claude Code Desktop vs CLI right now—why I think beginners should just
 slug: en/claude-code-desktop-vs-cli-w20
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-coding

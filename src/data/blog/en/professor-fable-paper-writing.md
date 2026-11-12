@@ -5,6 +5,7 @@ title: "Testing Fable's Limits on a Professor Friend's Paper Repo"
 slug: en/professor-fable-paper-writing
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-trends

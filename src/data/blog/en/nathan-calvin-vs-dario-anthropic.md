@@ -5,6 +5,7 @@ title: "What Is Anthropic, Really? A Week of Nathan Calvin vs. Dario"
 slug: en/nathan-calvin-vs-dario-anthropic
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - claude

@@ -5,6 +5,7 @@ title: "A Few Takeaways from the Claude Code Anniversary Talk"
 slug: en/claude-code-anniversary-talk
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

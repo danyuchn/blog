@@ -5,6 +5,7 @@ title: "出門吃飯前，讓 Claude Code 在旅館背景偷跑的五步 SOP"
 slug: zh/hotel-remote-cc-sop
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

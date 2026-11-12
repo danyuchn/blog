@@ -5,6 +5,7 @@ title: "AI 訂閱費值不值？夜市牛排思考框架"
 slug: zh/ai-subscription-value
 featured: false
 draft: false
+archived: true
 tags:
   - ai-daily-use
   - claude-code

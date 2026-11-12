@@ -5,6 +5,7 @@ title: The interesting numbers hiding in knowledgeC.db
 slug: en/knowledgec-db-time-audit
 featured: false
 draft: false
+archived: true
 tags:
   - ai-daily-use
   - personal

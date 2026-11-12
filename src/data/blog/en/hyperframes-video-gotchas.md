@@ -5,6 +5,7 @@ title: Eleven HyperFrames Video Gotchas
 slug: en/hyperframes-video-gotchas
 featured: false
 draft: false
+archived: true
 tags:
   - video-production
   - gotchas

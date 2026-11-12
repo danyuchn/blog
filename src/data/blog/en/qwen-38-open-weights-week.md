@@ -6,6 +6,7 @@ title: "The Week of Qwen 3.8 Open Weights: From Model Card to A3B Getting Delete
 slug: en/qwen-38-open-weights-week
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - model-comparison

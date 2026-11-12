@@ -5,6 +5,7 @@ title: 話癆的模型：教 Opus 5 怎麼收斂
 slug: zh/teach-the-model-to-converge
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - skills

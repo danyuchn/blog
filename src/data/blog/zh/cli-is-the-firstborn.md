@@ -5,6 +5,7 @@ title: CLI 是親生的，其他都是後媽養的
 slug: zh/cli-is-the-firstborn
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - anthropic

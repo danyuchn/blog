@@ -5,6 +5,7 @@ title: "燒 token 永動機：Anthropic 真的很努力"
 slug: zh/anthropic-token-burning-machine
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - opinion

@@ -5,6 +5,7 @@ title: 我做了一個能語意搜尋 Claude Code / Codex 舊對話的 SKILL
 slug: zh/search-past-claude-sessions-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - skills

@@ -6,6 +6,7 @@ title: 只換外面那圈 loop
 slug: zh/longhorizon-harness-outer-loop
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - ai-tools

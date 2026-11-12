@@ -5,6 +5,7 @@ title: "Which AI Is Strongest? I'll Take Them All: Claude as the Brain, Directin
 slug: en/which-ai-strongest-i-want-them-all
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - gemini

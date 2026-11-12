@@ -5,6 +5,7 @@ title: "Eight Days of Silent Failure: launchd Fired on Schedule, Nothing Happene
 slug: en/launchd-silent-failure-streak
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - developer-experience

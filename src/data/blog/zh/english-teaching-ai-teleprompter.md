@@ -5,6 +5,7 @@ title: "全英文授課的提詞器救星，以及我正在評估的開源 AI Me
 slug: zh/english-teaching-ai-teleprompter
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - teaching

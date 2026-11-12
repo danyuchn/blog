@@ -5,6 +5,7 @@ title: I Finally Switched My Daily Driver from Claude Code to Codex
 slug: en/why-i-switched-from-claude-code-to-codex
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - codex

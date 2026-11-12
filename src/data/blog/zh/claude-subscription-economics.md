@@ -5,6 +5,7 @@ title: "為什麼你會一直 hit limit：Claude 訂閱經濟學的六個觀察"
 slug: zh/claude-subscription-economics
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-economics

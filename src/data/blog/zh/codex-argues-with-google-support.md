@@ -5,6 +5,7 @@ title: Codex 自己做了一份證據包，跑去跟 Google 真人客服吵架
 slug: zh/codex-argues-with-google-support
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - security

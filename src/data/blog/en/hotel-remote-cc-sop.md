@@ -5,6 +5,7 @@ title: "The Five-Step SOP for Sneaking Claude Code Runs From the Hotel Over Dinn
 slug: en/hotel-remote-cc-sop
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

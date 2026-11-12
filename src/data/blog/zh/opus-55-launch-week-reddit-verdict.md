@@ -5,6 +5,7 @@ title: "Opus 5.5 發布週：從重置卡到 Reddit 風向"
 slug: zh/opus-55-launch-week-reddit-verdict
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-trends

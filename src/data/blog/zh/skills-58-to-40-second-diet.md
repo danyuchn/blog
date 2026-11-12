@@ -5,6 +5,7 @@ title: 第二次 harness 減肥：全域 skills 58 砍到 40
 slug: zh/skills-58-to-40-second-diet
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - harness

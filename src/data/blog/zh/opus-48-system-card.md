@@ -5,6 +5,7 @@ title: "拼全網最速——Opus 4.8 系統卡 244 頁重點，外加我怎麼�
 slug: zh/opus-48-system-card
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

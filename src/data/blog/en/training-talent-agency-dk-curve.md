@@ -5,6 +5,7 @@ title: "Teaching a Talent Agency to Use Claude Code, and the Soft Landing of the
 slug: en/training-talent-agency-dk-curve
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - teaching

@@ -5,6 +5,7 @@ title: "Nine video production bugs I hit in April 2026"
 slug: en/video-production-gotchas-2026
 featured: false
 draft: false
+archived: true
 tags:
   - ffmpeg
   - remotion

@@ -6,6 +6,7 @@ title: "Making Claude Talk Like a Human: A Plain-English Standard From Aircraft 
 slug: en/asd-ste100-claude-plain-english-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-tools

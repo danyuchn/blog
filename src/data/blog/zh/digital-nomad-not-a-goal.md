@@ -6,6 +6,7 @@ title: "數位遊牧是可遇不可求，不要把它當成追求目標"
 slug: zh/digital-nomad-not-a-goal
 featured: false
 draft: false
+archived: true
 tags:
   - opinion
   - digital-nomad

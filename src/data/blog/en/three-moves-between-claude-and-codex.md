@@ -6,6 +6,7 @@ title: Three Moves Between Claude and Codex
 slug: en/three-moves-between-claude-and-codex
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - claude-code

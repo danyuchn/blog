@@ -5,6 +5,7 @@ title: Anthropic 同一週：安全報告翻車，去識別化工具升級完全
 slug: zh/anthropic-two-opposite-moves-week
 featured: false
 draft: false
+archived: true
 tags:
   - security
   - ai-tools

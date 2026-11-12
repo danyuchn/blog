@@ -5,6 +5,7 @@ title: "Claude Code 桌面版跟終端機現在差在哪——我為什麼覺得
 slug: zh/claude-code-desktop-vs-cli-w20
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-coding

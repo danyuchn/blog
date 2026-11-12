@@ -5,6 +5,7 @@ title: "Opus 5.5 Launch Week: From the Reset Card to the Reddit Verdict"
 slug: en/opus-55-launch-week-reddit-verdict
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-trends

@@ -5,6 +5,7 @@ title: A Zero While Sitting on a Gold Mine
 slug: en/audit-my-own-site-perceived-value
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-course

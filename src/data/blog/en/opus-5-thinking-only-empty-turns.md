@@ -5,6 +5,7 @@ title: "Supposedly the Smartest Model, and Opus 5 Spent My Whole Day Spinning in
 slug: en/opus-5-thinking-only-empty-turns
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - debugging

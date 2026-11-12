@@ -5,6 +5,7 @@ title: "從 Claude Code 換到 Codex 的這幾天：額度蜜月期"
 slug: zh/codex-quota-honeymoon
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - ai-workflow

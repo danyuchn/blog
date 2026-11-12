@@ -5,6 +5,7 @@ title: "Claude Code 源碼洩漏：Reddit 大神挖出的三個秘密"
 slug: zh/claude-code-source-leak
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

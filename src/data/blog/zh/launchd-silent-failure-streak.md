@@ -5,6 +5,7 @@ title: "靜默連敗 8 天：launchd 照常觸發，卻什麼都沒發生"
 slug: zh/launchd-silent-failure-streak
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - developer-experience

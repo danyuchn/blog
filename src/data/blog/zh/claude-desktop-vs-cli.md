@@ -5,6 +5,7 @@ title: "Claude Desktop vs CLI 差在哪——改版之後我為什麼還是用�
 slug: zh/claude-desktop-vs-cli
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

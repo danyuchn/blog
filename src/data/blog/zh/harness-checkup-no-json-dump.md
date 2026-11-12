@@ -5,6 +5,7 @@ title: "別把上一個對話的 JSON 餵給它，先體檢 harness"
 slug: zh/harness-checkup-no-json-dump
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

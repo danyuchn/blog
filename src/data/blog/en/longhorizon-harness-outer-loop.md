@@ -6,6 +6,7 @@ title: Just Swap the Outer Loop
 slug: en/longhorizon-harness-outer-loop
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - ai-tools

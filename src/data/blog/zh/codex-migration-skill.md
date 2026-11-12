@@ -5,6 +5,7 @@ title: "從 Claude Code 搬家到 Codex：我做了一個 Skill 自動處理"
 slug: zh/codex-migration-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - codex

@@ -5,6 +5,7 @@ title: "Don't Brute-Force Sites That Need a Login—Your Token Is Your Account"
 slug: en/dont-scrape-login-sites
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - security

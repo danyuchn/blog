@@ -5,6 +5,7 @@ title: "A Few Months of AI Teaching Content: What Gets Traffic and What Doesn't"
 slug: en/ai-content-traffic-observations
 featured: false
 draft: false
+archived: true
 tags:
   - ai-education
   - opinion

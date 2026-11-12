@@ -5,6 +5,7 @@ title: "AI 的安全邊界：龍蝦熱潮、Presidio、與我的三條鐵則"
 slug: zh/ai-security-boundary
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - security

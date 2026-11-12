@@ -5,6 +5,7 @@ title: "Claude Code 週年對話的幾個重點"
 slug: zh/claude-code-anniversary-talk
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

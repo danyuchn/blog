@@ -5,6 +5,7 @@ title: "Opus 4.7 After One Week: From the System Card to the Roasting, Where Did
 slug: en/opus-47-week-review
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - model-comparison

@@ -5,6 +5,7 @@ title: knowledgeC.db 查出來的有趣數字
 slug: zh/knowledgec-db-time-audit
 featured: false
 draft: false
+archived: true
 tags:
   - ai-daily-use
   - personal

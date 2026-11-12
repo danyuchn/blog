@@ -5,6 +5,7 @@ title: Opus 5.5 系統卡裡六個有趣的地方
 slug: zh/opus-55-system-card-highlights
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-safety

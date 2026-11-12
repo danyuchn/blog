@@ -5,6 +5,7 @@ title: "The Perpetual Token-Burning Machine: Anthropic Really Is Trying"
 slug: en/anthropic-token-burning-machine
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - opinion

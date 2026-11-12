@@ -6,6 +6,7 @@ title: 我在 Claude 和 Codex 之間搬了三次家
 slug: zh/three-moves-between-claude-and-codex
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - claude-code

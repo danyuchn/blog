@@ -5,6 +5,7 @@ title: Anthropic 到底是什麼？Nathan Calvin 與 Dario 一週論戰整理
 slug: zh/nathan-calvin-vs-dario-anthropic
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - claude

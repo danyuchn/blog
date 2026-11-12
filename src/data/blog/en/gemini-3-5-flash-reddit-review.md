@@ -5,6 +5,7 @@ title: "Gemini 3.5 Flash on Reddit: 3x the Price, Worse Vision, Tool Calling Bro
 slug: en/gemini-3-5-flash-reddit-review
 featured: false
 draft: false
+archived: true
 tags:
   - gemini
   - model-comparison

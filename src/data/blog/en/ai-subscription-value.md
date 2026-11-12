@@ -5,6 +5,7 @@ title: "Is your AI subscription worth it? A night market steak framework"
 slug: en/ai-subscription-value
 featured: false
 draft: false
+archived: true
 tags:
   - ai-daily-use
   - claude-code

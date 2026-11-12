@@ -5,6 +5,7 @@ title: "Don't Refill the Seat, Let Claude Cover It"
 slug: en/small-team-dont-refill-let-claude-cover
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - case-study

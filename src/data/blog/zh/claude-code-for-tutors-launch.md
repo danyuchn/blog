@@ -5,6 +5,7 @@ title: Claude Code for Tutors：讓 Agent 直接教老師怎麼用 Agent
 slug: zh/claude-code-for-tutors-launch
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - teaching

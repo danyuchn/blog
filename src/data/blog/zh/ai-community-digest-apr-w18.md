@@ -5,6 +5,7 @@ title: "AI 社群週報 W18：Claude 偵測到你在偷用 Codex、GPT 5.5 的�
 slug: zh/ai-community-digest-apr-w18
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - claude-code

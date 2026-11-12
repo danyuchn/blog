@@ -6,6 +6,7 @@ title: 不是拉力，是推力：從這一週 Anthropic 的溝通說起
 slug: zh/push-not-pull-anthropic-comms-week
 featured: false
 draft: false
+archived: true
 tags:
   - anthropic
   - opinion

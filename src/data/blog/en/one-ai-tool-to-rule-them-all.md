@@ -5,6 +5,7 @@ title: "One AI Tool to Rule Them All: Why I Only Recommend Claude Code"
 slug: en/one-ai-tool-to-rule-them-all
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

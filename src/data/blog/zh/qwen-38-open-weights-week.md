@@ -6,6 +6,7 @@ title: Qwen 3.8 開放權重的這一週：從模型卡到 A3B 被刪
 slug: zh/qwen-38-open-weights-week
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - model-comparison

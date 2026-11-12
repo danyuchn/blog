@@ -5,6 +5,7 @@ title: "Two Mindsets for Getting Unstuck: Logical Thinking, and the AI Pedagogy 
 slug: en/debugging-mindset-logic-ai-pedagogy
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

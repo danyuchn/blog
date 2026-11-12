@@ -5,6 +5,7 @@ title: "Why Does Cowork Hit Your Limit in Hours While Claude Code Runs All Day?"
 slug: en/cowork-vs-claude-code
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

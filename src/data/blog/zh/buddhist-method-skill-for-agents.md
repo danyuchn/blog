@@ -6,6 +6,7 @@ title: 把佛法交給 agent，讓他用佛法約束自己
 slug: zh/buddhist-method-skill-for-agents
 featured: false
 draft: false
+archived: true
 tags:
   - skills
   - harness

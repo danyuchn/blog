@@ -5,6 +5,7 @@ title: Instead of Begging the Model Not to Lie, I Wrote a Hook That Stops It
 slug: en/pending-guard-hook-against-confabulation
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - harness

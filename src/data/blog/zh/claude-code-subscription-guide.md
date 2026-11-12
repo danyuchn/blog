@@ -5,6 +5,7 @@ title: "Claude Code 訂閱怎麼選：從 Pro 到 Max 的真實落差"
 slug: zh/claude-code-subscription-guide
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

@@ -6,6 +6,7 @@ title: 讓 Claude 說人話：一套飛機維修手冊的簡化英文標準
 slug: zh/asd-ste100-claude-plain-english-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-tools

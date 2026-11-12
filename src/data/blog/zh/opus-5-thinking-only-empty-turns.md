@@ -5,6 +5,7 @@ title: 號稱最聰明的 Opus 5，一整天在我對話裡空轉
 slug: zh/opus-5-thinking-only-empty-turns
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - debugging

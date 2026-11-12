@@ -5,6 +5,7 @@ title: "The Day Opus 4.8 Went Haywire: tool call cannot be parsed"
 slug: en/opus-48-tool-call-parse-bug
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

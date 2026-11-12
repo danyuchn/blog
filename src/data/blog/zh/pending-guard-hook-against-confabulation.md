@@ -5,6 +5,7 @@ title: 與其拜託模型不要騙我，不如寫一個擋得住的 hook
 slug: zh/pending-guard-hook-against-confabulation
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - harness

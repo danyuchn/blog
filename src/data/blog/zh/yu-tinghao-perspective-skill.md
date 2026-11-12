@@ -5,6 +5,7 @@ title: "我做了一個「庭皓 SKILL」——把財經 YouTuber 的觀點蒸�
 slug: zh/yu-tinghao-perspective-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - skills

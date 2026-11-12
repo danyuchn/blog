@@ -5,6 +5,7 @@ title: "Claude Code Source Leak: Three Secrets Unearthed by Reddit"
 slug: en/claude-code-source-leak
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

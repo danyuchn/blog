@@ -5,6 +5,7 @@ title: "裝 MCP 之前先讓 Claude 幫你掃——找到 7 個漏洞，但說�
 slug: zh/security-scan-before-mcp-install
 featured: false
 draft: false
+archived: true
 tags:
   - mcp
   - security

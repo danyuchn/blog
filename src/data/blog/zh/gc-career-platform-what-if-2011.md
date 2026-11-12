@@ -5,6 +5,7 @@ title: 如果2011年有這個網站，我可能會走不一樣的路
 slug: zh/gc-career-platform-what-if-2011
 featured: false
 draft: false
+archived: true
 tags:
   - career
   - ai-tools

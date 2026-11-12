@@ -6,6 +6,7 @@ title: AI 訂閱該怎麼分配：Fable 買判斷力，Luna Max 賺性價比
 slug: zh/subscription-allocation-fable-and-luna-max
 featured: false
 draft: false
+archived: true
 tags:
   - subscription
   - model-comparison

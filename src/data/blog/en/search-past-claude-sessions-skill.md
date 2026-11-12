@@ -5,6 +5,7 @@ title: "I Built a Skill That Semantically Searches My Old Claude Code / Codex Se
 slug: en/search-past-claude-sessions-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - skills

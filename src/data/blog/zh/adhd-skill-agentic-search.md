@@ -5,6 +5,7 @@ title: 我讓 /adhd skill 自己去查一件 3C 圈的漲價八卦
 slug: zh/adhd-skill-agentic-search
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

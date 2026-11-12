@@ -5,6 +5,7 @@ title: Some of My Subagents Were Already Grandpas
 slug: en/ccx-quota-surge-forensics
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - token-optimization

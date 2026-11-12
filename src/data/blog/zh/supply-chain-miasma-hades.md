@@ -5,6 +5,7 @@ title: "從 Miasma 到 Hades：同一個攻擊組織如何把 AI 工具當成供
 slug: zh/supply-chain-miasma-hades
 featured: false
 draft: false
+archived: true
 tags:
   - security
   - ai-tools

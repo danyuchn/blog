@@ -5,6 +5,7 @@ title: "Every AI Leader Starts Cutting Corners — The GPT, Claude, Gemini Cycle
 slug: en/ai-leaders-race-to-bottom
 featured: false
 draft: false
+archived: true
 tags:
   - ai-industry
   - model-comparison

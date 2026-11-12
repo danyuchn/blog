@@ -5,6 +5,7 @@ title: "I Built a \"Tinghao SKILL\" — Distilling a Finance YouTuber's Perspect
 slug: en/yu-tinghao-perspective-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - skills

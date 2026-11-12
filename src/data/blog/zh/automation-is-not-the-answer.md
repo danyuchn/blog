@@ -5,6 +5,7 @@ title: "「自動化」不是大部分事情的解方——以及我怎麼拍這
 slug: zh/automation-is-not-the-answer
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-workflow

@@ -5,6 +5,7 @@ title: "Second Harness Diet: Global Skills From 58 Down to 40"
 slug: en/skills-58-to-40-second-diet
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - harness

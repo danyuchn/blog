@@ -6,6 +6,7 @@ title: You Have to Be in an Industry a Very Long Time to Know Its Real Pain
 slug: en/industry-veteran-knows-the-real-pain
 featured: false
 draft: false
+archived: true
 tags:
   - case-study
   - ai-education

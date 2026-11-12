@@ -5,6 +5,7 @@ title: 讓 AI 寫得像我：從 LoRA 微調到 SKILL 三道閘門
 slug: zh/ai-writing-in-my-voice-lora-vs-skill
 featured: false
 draft: false
+archived: true
 tags:
   - skills
   - ai-workflow

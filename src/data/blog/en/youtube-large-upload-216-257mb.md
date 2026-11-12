@@ -5,6 +5,7 @@ title: "YouTube Data API large-file upload tested: 216 MB succeeds, 257 MB hangs
 slug: en/youtube-large-upload-216-257mb
 featured: false
 draft: false
+archived: true
 tags:
   - youtube
   - video-production

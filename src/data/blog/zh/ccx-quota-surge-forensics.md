@@ -5,6 +5,7 @@ title: 有些 subagent 都當阿公了
 slug: zh/ccx-quota-surge-forensics
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - token-optimization

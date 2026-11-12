@@ -5,6 +5,7 @@ title: The CLI Is the Firstborn
 slug: en/cli-is-the-firstborn
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - anthropic

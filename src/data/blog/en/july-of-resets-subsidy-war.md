@@ -5,6 +5,7 @@ title: "A July Full of Resets: A Light AI User Reviews the Subsidy War"
 slug: en/july-of-resets-subsidy-war
 featured: false
 draft: false
+archived: true
 tags:
   - ai-economics
   - subscription

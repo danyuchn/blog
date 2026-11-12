@@ -5,6 +5,7 @@ title: "Is Claude Getting Dumber? Someone Finally Brought Data"
 slug: en/claude-getting-dumber-data
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

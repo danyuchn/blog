@@ -5,6 +5,7 @@ title: "From Takedown to Return, I Caught a Case of AnthroPTSD"
 slug: en/fable-takedown-to-return-anthroptsd
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - opinion

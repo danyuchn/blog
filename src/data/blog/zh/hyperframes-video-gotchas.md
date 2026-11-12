@@ -5,6 +5,7 @@ title: HyperFrames 影片產出的十一個坑
 slug: zh/hyperframes-video-gotchas
 featured: false
 draft: false
+archived: true
 tags:
   - video-production
   - gotchas

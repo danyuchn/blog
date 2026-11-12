@@ -5,6 +5,7 @@ title: "The Teleprompter That Saved My English-Only Teaching, and the Open-Sourc
 slug: en/english-teaching-ai-teleprompter
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - teaching

@@ -5,6 +5,7 @@ title: "No Error Doesn't Mean Success: Five Silent Failure Traps in AI Dev"
 slug: en/silent-failures-verify-real-state
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - gemini

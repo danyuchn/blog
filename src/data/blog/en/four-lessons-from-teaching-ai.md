@@ -5,6 +5,7 @@ title: Four Things I Have Learned from Teaching AI
 slug: en/four-lessons-from-teaching-ai
 featured: false
 draft: false
+archived: true
 tags:
   - teaching
   - ai-education

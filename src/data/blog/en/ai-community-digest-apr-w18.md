@@ -5,6 +5,7 @@ title: "AI community digest W18: Claude detects Codex cheating, GPT 5.5 guardrai
 slug: en/ai-community-digest-apr-w18
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - claude-code

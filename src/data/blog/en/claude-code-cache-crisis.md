@@ -5,6 +5,7 @@ title: "Claude Code's Cache Crisis: Why Your Quota Burns So Fast"
 slug: en/claude-code-cache-crisis
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - token-optimization

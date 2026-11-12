@@ -5,6 +5,7 @@ title: "Have Claude scan an MCP before you install it—it found 7 vulnerabiliti
 slug: en/security-scan-before-mcp-install
 featured: false
 draft: false
+archived: true
 tags:
   - mcp
   - security

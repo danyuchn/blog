@@ -5,6 +5,7 @@ title: "\"Automation\" Isn't the Answer to Most Things — and How I Made This V
 slug: en/automation-is-not-the-answer
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-workflow

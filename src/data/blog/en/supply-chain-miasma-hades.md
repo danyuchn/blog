@@ -5,6 +5,7 @@ title: "From Miasma to Hades: How One Group Turned AI Tools Into a Supply-Chain 
 slug: en/supply-chain-miasma-hades
 featured: false
 draft: false
+archived: true
 tags:
   - security
   - ai-tools

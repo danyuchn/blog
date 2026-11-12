@@ -5,6 +5,7 @@ title: 坐擁金礦的零分
 slug: zh/audit-my-own-site-perceived-value
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-course

@@ -5,6 +5,7 @@ title: "Anthropic, Same Week: Safety Report Backfires, De-identification Goes Fu
 slug: en/anthropic-two-opposite-moves-week
 featured: false
 draft: false
+archived: true
 tags:
   - security
   - ai-tools

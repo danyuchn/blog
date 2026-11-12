@@ -6,6 +6,7 @@ title: Gemini 3.7 Flash——這半年內第一個能拿去做 agent 的 Gemini
 slug: zh/gemini-37-flash-agent-ready
 featured: false
 draft: false
+archived: true
 tags:
   - gemini
   - model-comparison

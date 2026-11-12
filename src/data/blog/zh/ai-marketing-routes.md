@@ -5,6 +5,7 @@ title: "AI 時代的經營路線之爭：自動化貼文、Skill 投毒論、跟
 slug: zh/ai-marketing-routes
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - ai-ethics

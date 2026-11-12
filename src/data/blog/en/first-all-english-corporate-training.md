@@ -5,6 +5,7 @@ title: "My First All-English Two-Hour Corporate Training: I Burned the Script Tw
 slug: en/first-all-english-corporate-training
 featured: false
 draft: false
+archived: true
 tags:
   - teaching
   - speaking

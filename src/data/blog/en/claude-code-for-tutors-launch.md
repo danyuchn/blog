@@ -5,6 +5,7 @@ title: "Claude Code for Tutors: Letting an Agent Teach Teachers How to Use Agent
 slug: en/claude-code-for-tutors-launch
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - teaching

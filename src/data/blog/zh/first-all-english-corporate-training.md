@@ -5,6 +5,7 @@ title: "第一次全英文兩小時企業內訓：上課前兩小時燒掉提詞
 slug: zh/first-all-english-corporate-training
 featured: false
 draft: false
+archived: true
 tags:
   - teaching
   - speaking

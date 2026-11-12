@@ -5,6 +5,7 @@ title: "Dario Amodei Drops Another Manifesto: Six Claims and a Roll Call"
 slug: en/dario-pace-the-frontier-six-claims
 featured: false
 draft: false
+archived: true
 tags:
   - anthropic
   - ai-safety

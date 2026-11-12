@@ -5,6 +5,7 @@ title: "AI-Era Business Routes: Auto-Generated Posts, the Skill Poisoning Theory
 slug: en/ai-marketing-routes
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - ai-ethics

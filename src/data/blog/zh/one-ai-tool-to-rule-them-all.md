@@ -5,6 +5,7 @@ title: "一個 AI 工具打天下：為什麼我只推薦 Claude Code"
 slug: zh/one-ai-tool-to-rule-them-all
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

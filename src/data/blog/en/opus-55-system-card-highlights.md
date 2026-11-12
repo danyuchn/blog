@@ -5,6 +5,7 @@ title: Six Interesting Bits From the Opus 5.5 System Card
 slug: en/opus-55-system-card-highlights
 featured: false
 draft: false
+archived: true
 tags:
   - claude
   - ai-safety

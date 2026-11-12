@@ -5,6 +5,7 @@ title: "Don't Dump the Last Session's JSON — Check Your Harness First"
 slug: en/harness-checkup-no-json-dump
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

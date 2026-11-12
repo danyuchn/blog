@@ -6,6 +6,7 @@ title: "How I Split My AI Subscriptions: Fable Buys Judgment, Luna Max Buys Valu
 slug: en/subscription-allocation-fable-and-luna-max
 featured: false
 draft: false
+archived: true
 tags:
   - subscription
   - model-comparison

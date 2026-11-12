@@ -5,6 +5,7 @@ title: 充滿 reset 的七月：一個 AI 輕量用戶的補貼大戰復盤
 slug: zh/july-of-resets-subsidy-war
 featured: false
 draft: false
+archived: true
 tags:
   - ai-economics
   - subscription

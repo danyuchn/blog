@@ -5,6 +5,7 @@ title: "Racing for the Fastest Summary — Opus 4.8's 244-Page System Card, and 
 slug: en/opus-48-system-card
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-trends

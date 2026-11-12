@@ -5,6 +5,7 @@ title: "Claude Seeing Ghosts Four Nights Straight: A Log of Opus 4.8 Fabricating
 slug: en/opus-48-confabulation-four-days
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

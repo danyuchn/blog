@@ -6,6 +6,7 @@ title: Hand the Dharma to Your Agent and Let It Discipline Itself
 slug: en/buddhist-method-skill-for-agents
 featured: false
 draft: false
+archived: true
 tags:
   - skills
   - harness

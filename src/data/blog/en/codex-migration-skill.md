@@ -5,6 +5,7 @@ title: "Moving from Claude Code to Codex: I Built a Skill to Handle It"
 slug: en/codex-migration-skill
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - codex

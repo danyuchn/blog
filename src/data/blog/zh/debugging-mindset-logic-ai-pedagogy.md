@@ -5,6 +5,7 @@ title: "卡關時的兩個心態：用邏輯思考，與『不貳過』的 AI �
 slug: zh/debugging-mindset-logic-ai-pedagogy
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

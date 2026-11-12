@@ -5,6 +5,7 @@ title: "為什麼 Claude Code 在終端機裡才是完全體"
 slug: zh/cli-terminal-philosophy
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

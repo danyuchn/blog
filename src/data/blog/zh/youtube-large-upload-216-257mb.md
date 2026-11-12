@@ -5,6 +5,7 @@ title: "YouTube API 大檔上傳卡死實測——216 MB 過 / 257 MB 不過，�
 slug: zh/youtube-large-upload-216-257mb
 featured: false
 draft: false
+archived: true
 tags:
   - youtube
   - video-production

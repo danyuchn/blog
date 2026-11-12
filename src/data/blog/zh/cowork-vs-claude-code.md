@@ -5,6 +5,7 @@ title: "為什麼 Cowork 幾小時就頂到限額，Claude Code 整天都沒事�
 slug: zh/cowork-vs-claude-code
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

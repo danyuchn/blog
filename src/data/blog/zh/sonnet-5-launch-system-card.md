@@ -5,6 +5,7 @@ title: 'Sonnet 5 發布：系統卡懶人版，跟我的實測定位'
 slug: zh/sonnet-5-launch-system-card
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-trends

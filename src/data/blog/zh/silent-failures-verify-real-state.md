@@ -5,6 +5,7 @@ title: "沒拋錯不代表成功：AI 開發裡的五個靜默失敗陷阱"
 slug: zh/silent-failures-verify-real-state
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - gemini

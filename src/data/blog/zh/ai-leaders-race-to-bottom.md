@@ -5,6 +5,7 @@ title: "坐上第一就開始拿翹——GPT、Claude、Gemini 的降智循環"
 slug: zh/ai-leaders-race-to-bottom
 featured: false
 draft: false
+archived: true
 tags:
   - ai-industry
   - model-comparison

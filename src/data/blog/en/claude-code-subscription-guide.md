@@ -5,6 +5,7 @@ title: "Claude Code Subscription Guide: The Real Gap Between Pro and Max"
 slug: en/claude-code-subscription-guide
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

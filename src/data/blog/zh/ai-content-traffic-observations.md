@@ -5,6 +5,7 @@ title: "做 AI 教學內容幾個月：什麼有流量、什麼沒有"
 slug: zh/ai-content-traffic-observations
 featured: false
 draft: false
+archived: true
 tags:
   - ai-education
   - opinion

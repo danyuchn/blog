@@ -5,6 +5,7 @@ title: "Codex Falls Off the Pedestal: People Caught the Quota Nerf"
 slug: en/codex-quota-nerf-off-the-pedestal
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - ai-trends

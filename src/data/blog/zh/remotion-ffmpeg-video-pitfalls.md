@@ -5,6 +5,7 @@ title: "用 Claude Code 做教學影片一週踩到的坑——Remotion 動畫�
 slug: zh/remotion-ffmpeg-video-pitfalls
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - developer-experience

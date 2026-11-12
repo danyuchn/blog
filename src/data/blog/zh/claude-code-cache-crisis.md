@@ -5,6 +5,7 @@ title: "Claude Code 的快取危機：為什麼你的額度燒得那麼快？"
 slug: zh/claude-code-cache-crisis
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - token-optimization

@@ -12,6 +12,7 @@ tags:
   - youtube
 featured: false
 draft: false
+archived: true
 canonicalURL: https://www.agentcrew.cc/blog/posts/zh/automated-video-pipeline-gotchas
 ---
 

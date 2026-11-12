@@ -5,6 +5,7 @@ title: Codex Built Its Own Evidence Package and Went to Argue With Google Suppor
 slug: en/codex-argues-with-google-support
 featured: false
 draft: false
+archived: true
 tags:
   - codex
   - security

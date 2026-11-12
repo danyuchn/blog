@@ -5,6 +5,7 @@ title: "拿教授朋友的論文 repo 試 Fable 的能力邊界"
 slug: zh/professor-fable-paper-writing
 featured: false
 draft: false
+archived: true
 tags:
   - ai-tools
   - ai-trends

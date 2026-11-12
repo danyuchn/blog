@@ -5,6 +5,7 @@ title: 從下架到回歸，我得了 AnthroPTSD
 slug: zh/fable-takedown-to-return-anthroptsd
 featured: false
 draft: false
+archived: true
 tags:
   - ai-trends
   - opinion

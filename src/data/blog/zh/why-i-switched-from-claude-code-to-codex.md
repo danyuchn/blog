@@ -5,6 +5,7 @@ title: 我終於把主力從 Claude Code 換成 Codex 了
 slug: zh/why-i-switched-from-claude-code-to-codex
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - codex

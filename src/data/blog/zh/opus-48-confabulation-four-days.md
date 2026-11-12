@@ -5,6 +5,7 @@ title: Claude 半夜見鬼連續四天：Opus 4.8 捏造工具輸出實錄
 slug: zh/opus-48-confabulation-four-days
 featured: false
 draft: false
+archived: true
 tags:
   - claude-code
   - ai-tools

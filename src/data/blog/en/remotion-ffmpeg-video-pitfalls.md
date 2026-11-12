@@ -5,6 +5,7 @@ title: "A Week of Making Tutorial Videos With Claude Code: Remotion Animation an
 slug: en/remotion-ffmpeg-video-pitfalls
 featured: false
 draft: false
+archived: true
 tags:
   - ai-workflow
   - developer-experience
