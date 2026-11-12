@@ -21,6 +21,7 @@ const ui: Record<string, Record<Lang, string>> = {
   },
   "post.prev": { en: "Previous Post", zh: "上一篇" },
   "post.next": { en: "Next Post", zh: "下一篇" },
+  "post.related": { en: "Related reading", zh: "延伸閱讀" },
   "translation.readEn": { en: "Read in English", zh: "Read in English" },
   "translation.readZh": {
     en: "閱讀中文版",

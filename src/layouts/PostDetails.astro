@@ -14,6 +14,7 @@ import { findTranslation } from "@/utils/i18n";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import { getLangFromPost } from "@/utils/i18n";
+import { t } from "@/i18n/ui";
 import { SITE } from "@/config";
 
 type Props = {
@@ -121,6 +122,27 @@ const nextPost =
   currentPostIndex < sameLangPosts.length - 1
     ? sameLangPosts[currentPostIndex + 1]
     : null;
+
+/* ========== Related reading: same language, ranked by shared tags then recency ========== */
+
+const RELATED_COUNT = 3;
+const currentTags = new Set(tags ?? []);
+const relatedPosts = posts
+  .map((p, recencyRank) => ({
+    p,
+    recencyRank, // `posts` is already sorted newest first
+    shared: p.data.tags.filter(tag => currentTags.has(tag)).length,
+  }))
+  .filter(
+    ({ p }) =>
+      p.id !== post.id &&
+      p.id !== translation?.id &&
+      !p.data.archived &&
+      getLangFromPost(p) === postLang
+  )
+  .sort((a, b) => b.shared - a.shared || a.recencyRank - b.recencyRank)
+  .slice(0, RELATED_COUNT)
+  .map(({ p }) => p);
 ---
 
 <Layout {...layoutProps}>
@@ -239,6 +261,37 @@ const nextPost =
     <BackToTopButton />
 
     <DiagnosisCta lang={postLang} slug={post.id} />
+
+    {
+      relatedPosts.length > 0 && (
+        <section class="mt-10" aria-labelledby="related-heading" data-pagefind-ignore>
+          <h2
+            id="related-heading"
+            class="border-b-2 border-foreground pb-2 font-display text-xl font-bold text-foreground"
+          >
+            {t("post.related", postLang)}
+          </h2>
+          <ul class="list-none">
+            {relatedPosts.map(rp => (
+              <li class="border-b border-border py-4">
+                <Datetime
+                  pubDatetime={rp.data.pubDatetime}
+                  modDatetime={rp.data.modDatetime}
+                  timezone={rp.data.timezone}
+                  class="text-sm text-foreground/60"
+                />
+                <a
+                  href={getPath(rp.id, rp.filePath)}
+                  class="mt-1 block font-display text-lg leading-snug font-bold text-foreground transition-colors duration-150 hover:text-accent focus-visible:ring-1 focus-visible:ring-accent focus-visible:outline-none"
+                >
+                  {rp.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <ShareLinks />
 
