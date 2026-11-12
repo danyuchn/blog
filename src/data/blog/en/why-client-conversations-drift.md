@@ -10,6 +10,7 @@ tags:
   - consulting
   - skills
 description: 'Notes from a client diagnosis: three root causes, four prescriptions, plus the main/sub agent pairing run backwards and the rambling only a hook can cure.'
+tldr: 'If your conversations with AI drift off topic without actionable results, it is usually due to missing specifications and cluttered context. Keep discussions focused by documenting agreed conclusions into files, and call in an advanced model strictly as an occasional advisor for targeted guidance.'
 ---
 
 Quick notes on what I picked up from a client today.

@@ -10,6 +10,7 @@ tags:
   - ai-tools
   - open-source
 description: "Billing clients by the hour with Claude Code? I built an open-source plugin to track actual working time automatically."
+tldr: 'Freelancers and consultants billing by the hour often struggle to track exact project hours when juggling multiple client tasks simultaneously. The open-source tool claude-work-timer analyzes session history logs and automatically deducts idle gaps over five minutes, delivering accurate billable time for each specific project.'
 ---
 
 ## The Problem

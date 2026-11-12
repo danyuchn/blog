@@ -10,6 +10,7 @@ tags:
   - contract
   - lessons-learned
 description: 'A 5/12 admin class contracted for 1.5 hours ran 2.5 hours (+67%). Root cause: I misread the client''s stated topic preference as authorization to expand scope. The lesson became five Scope Discipline rules that must appear in every future enterprise / 1-on-1 / tutoring contract.'
+tldr: 'Constantly running overtime or overdelivering work clients never requested? Lock down training scope in contracts with uniform practice cases, student caps, and time buffers, treating casual chat feedback strictly as non-binding. Always self-audit before altering course plans: if not explicitly required by contract, do not expand.'
 ---
 
 5/12 ran an admin class. Contract said 1.5 hours. Final time: 2.5 hours. Overran by 67%.

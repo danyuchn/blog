@@ -10,6 +10,7 @@ tags:
   - ai-education
   - teaching
 description: 'In discussions about AI taking over, timelines and taste miss the point—because AI will never go to prison for you. While everyone rushes toward vibe coding, frontline workers carry an asymmetric risk premium. Learning to audit toolchains and catch errors before signing off is the one skill that can''t be replaced.'
+tldr: 'Wondering where humans remain indispensable as AI advances? AI cannot go to prison or bear legal liability; human accountability is the ultimate bottom line. Regardless of role or seniority, the essential skill is learning to trace intermediate reasoning and rigorously verify outputs before signing off.'
 ---
 
 ## Timelines and Taste Aren't the Real Issue

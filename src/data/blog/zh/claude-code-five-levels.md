@@ -10,6 +10,7 @@ tags:
   - ai-coding
   - developer-experience
 description: '從 Raw Prompting 到 Orchestration，Reddit 上 778 個讚的框架——每一層存在的原因，是因為上一層壞掉了。'
+tldr: '覺得 Claude Code 時好時壞、有時又準又快有時卻自己亂做，其實是因為工作方式撞到了該階段的天花板。從直接對話、把說明檔從 145 行縮到 77 行以維持合規，到建立標準作業手冊、自動檢查機制與多助手協作，當 AI 開始犯蠢時，要補的不是更多聊天，而是照這五個等級升級結構。'
 ---
 
 很多人說 Claude Code 不穩定，有時候又準又快，有時候就自己亂做。我以前也這樣覺得。

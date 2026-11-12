@@ -10,6 +10,7 @@ tags:
   - harness
   - claude-code
 description: 'After a few months with Claude Code, the memory files it wrote for itself had piled up past four hundred, mostly running logs and client status. Here is how I sorted them, cut them to just over three hundred, and put a write gate in front to stop the regrowth.'
+tldr: 'Notice your AI memory files growing cluttered with outdated facts and bloated context? Relocate project statuses and specific procedures to proper storage, pruning 101 unnecessary memory files at once. Setting up automated validation gates to block logs and enforce size limits keeps your AI memory permanently clean.'
 ---
 
 Claude Code writes the things it thinks are worth remembering into small files under each project, and loads them automatically next time. After a few months of use, these memory files had grown past four hundred. One day I opened the index and found that quite a lot of what it had saved didn't belong there.

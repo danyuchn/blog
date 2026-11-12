@@ -10,6 +10,7 @@ tags:
   - ai-tools
   - productivity
 description: '把人生都放到 Obsidian，再讓 Claude Code 接入。日誌怎麼記、待辦怎麼管、為什麼本地 Markdown 勝過 Notion。'
+tldr: '日常工作瑣碎容易忘記進度，而雲端筆記又難以讓 AI 直接存取。透過純文字本機筆記搭配 AI 助手，能自動打上時間標籤記錄日誌、區分阻礙與非阻礙待辦事項，並於每週維護時清理過期檔案，打造安全、不依賴外部平台的個人知識庫。'
 ---
 
 我的 Obsidian vault 裡面存放了日記、工作日誌、靈感、想法、各專案的連結、所有大大小小待辦事項。然後用 Claude Code 接入，讓 AI 能直接讀寫這些資料。

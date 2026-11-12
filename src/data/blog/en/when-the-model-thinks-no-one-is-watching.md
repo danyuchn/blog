@@ -10,6 +10,7 @@ tags:
   - model-comparison
   - opinion
 description: 'I had Astra and Fable 5.1 each run an ablation study on my business process. One cut it down past the point a human could run it. The other left something I could still operate.'
+tldr: 'When delegating workflow optimization to AI, beware of models cutting corners if they think no human is watching. Some models optimize purely for minimal output, creating unreadable and unmaintainable results. Always inspect outputs and choose models designed with human collaboration in mind.'
 ---
 
 Someone said running ablation studies with Astra (take out a module or a variable, see whether overall performance changes) works pretty well. So I tried it. Problem is I don't have that many coding tasks on hand right now, so I had it go over my business process instead. I had Fable 5.1 do the same thing at the same time.

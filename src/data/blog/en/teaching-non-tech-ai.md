@@ -10,6 +10,7 @@ tags:
   - claude-code
   - teaching
 description: 'One student was a seasoned HR consultant who managed all her files across several USB drives and had never heard of an API. Here are five knowledge gaps that show up constantly when teaching AI tools outside the tech world — and what actually works.'
+tldr: 'Struggling to guide non-technical colleagues into adopting AI? The real barrier is not the interface, but bridging five hidden mindset gaps such as hesitating to prompt or assuming vague ideas are useless. Mapping AI collaboration to familiar management principles empowers them to apply their existing expertise effortlessly.'
 ---
 
 One of my students was a highly experienced enterprise HR consultant. Twenty-plus years of expertise. Day-to-day computer use: email, Word, Excel. File management: several USB drives. 

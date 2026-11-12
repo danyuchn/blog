@@ -10,6 +10,7 @@ tags:
   - teaching
   - ai-education
 description: 'My one-on-one lessons ran 51% over schedule. I went back to the lesson transcripts, had one AI write up my teaching rules and another hunt for faults, and only made decisions on a single checklist myself. The method, the numbers, what I actually told the AI, and a prompt you can paste.'
+tldr: 'Battling chronic classroom overtime and rules that drift away from real lessons? Ground your guidelines in actual transcripts by having one AI draft them, another independently find flaws, and yourself deciding line by line on a review page. Grounding standards in real classroom data ensures rules actually work in practice.'
 ---
 
 I teach one-on-one tutoring sessions regularly. Recently, I asked an AI to organize how I actually teach into a set of rules. Moving forward, I follow these rules whenever I prep for class or write post-class notes. I call this my teaching spec. This spec was extracted directly from lesson transcripts. One AI looked back through the transcripts, reconstructed what actually happened in class, and drafted the rules. A second AI focused entirely on catching mistakes. My only job was to go down a web checklist and make decisions line by line. Even once a rule is set, it is never carved in stone. If something comes up in the next class, we might toss it out and rewrite it on the spot.

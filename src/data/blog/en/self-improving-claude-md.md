@@ -10,6 +10,7 @@ tags:
   - ai-coding
   - productivity
 description: "I used claude-log to scan 500+ Claude Code sessions across 6 projects, extracted every time I yelled at the AI, and turned those into CLAUDE.md rules. Here's what I found."
+tldr: 'Tired of correcting AI on the exact same mistakes over and over? Search your historical chat logs for correction keywords to uncover real stumbling blocks. Turning these battle-tested lessons into shared project guidelines in 5 minutes keeps AI aligned and stops recurring errors for good.'
 ---
 
 ## The Problem with CLAUDE.md

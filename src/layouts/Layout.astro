@@ -8,6 +8,8 @@ import "@/styles/global.css";
 
 type Props = {
   title?: string;
+  /** Search-result / browser-tab title; social tags keep `title`. */
+  docTitle?: string;
   author?: string;
   profile?: string;
   description?: string;
@@ -27,6 +29,7 @@ type Props = {
 
 const {
   title = SITE.title,
+  docTitle,
   author = SITE.author,
   profile = SITE.profile,
   description = SITE.desc,
@@ -101,8 +104,8 @@ const structuredData = {
     />
 
     <!-- General Meta Tags -->
-    <title>{title}</title>
-    <meta name="title" content={title} />
+    <title>{docTitle ?? title}</title>
+    <meta name="title" content={docTitle ?? title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="sitemap" href={withBase("/sitemap-index.xml")} />

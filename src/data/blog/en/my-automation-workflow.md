@@ -10,6 +10,7 @@ tags:
   - automation
   - ai-workflow
 description: 'From /loop clocking in for me at ERP, to Monitor Tool as a background event gatekeeper, to Google Map MCP saving browser clicks, to Obsidian + Mirror framework for weekly reflection. Here''s my six-month Claude Code automation stack, plus a clarification of how commands and skills actually split.'
+tldr: 'Building an automation workflow is not about hoarding tools, which often accelerates mistakes. A resilient system should layer routine commands and schedules for execution, event monitors for efficiency, and weekly reflective notes at the top for direction calibration, pruning unnecessary tools to keep daily operations lean.'
 ---
 
 After six months my Claude Code workflow has accumulated an automation stack.

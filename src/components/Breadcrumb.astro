@@ -12,7 +12,14 @@ const pathWithoutBase = base && currentUrlPath.startsWith(base)
 
 // Get url array from path
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
-const breadcrumbList = pathWithoutBase.split("/").slice(1);
+const rawList = pathWithoutBase.split("/").slice(1);
+
+// English pages live under /en/: keep breadcrumb links inside that prefix
+const langPrefix = rawList[0] === "en" ? "/en" : "";
+const breadcrumbList = langPrefix ? rawList.slice(1) : rawList;
+
+// /start/<key>/ has no index page, so drop that segment from the trail
+if (breadcrumbList[0] === "start") breadcrumbList.splice(0, 1);
 
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
@@ -36,7 +43,7 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
     class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"
   >
     <li>
-      <a href={withBase("/")} class="opacity-80">Home</a>
+      <a href={withBase(`${langPrefix}/`)} class="opacity-80">Home</a>
       <span aria-hidden="true" class="opacity-80">&raquo;</span>
     </li>
     {
@@ -53,7 +60,7 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
           </li>
         ) : (
           <li>
-            <a href={withBase(`/${breadcrumb}/`)} class="capitalize opacity-70">
+            <a href={withBase(`${langPrefix}/${breadcrumb}/`)} class="capitalize opacity-70">
               {breadcrumb}
             </a>
             <span aria-hidden="true">&raquo;</span>

@@ -10,6 +10,7 @@ tags:
   - business
   - frameworks
 description: 'Three rules that came out of two weeks of back-to-back BD calls: score a deal''s channel value separately from its deal value, use The Pumpkin Plan to decide which slice to take, and write down a hard ceiling for free consulting.'
+tldr: 'Mixing networking potential with immediate project revenue can distort your hourly rates and pricing. Keep channel investment and project revenue accounting separate, accept only the one-third scope you excel at while raising unit rates, and strictly cap free consultations to a single sixty-minute session with zero retained deliverables.'
 ---
 
 Two weeks of back-to-back AI adoption BD calls forced three gut instincts of mine into written rules. Writing them down.

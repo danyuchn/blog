@@ -10,6 +10,7 @@ tags:
   - developer-experience
   - case-study
 description: '一週內在同一個 Firebase 專案（GMAT 題庫系統）連環踩到的 Firestore 權限、composite index、error_logs 洗版、TPA 計分、App Check token、瀏覽器翻譯 DOM crash 八個坑——每坑現象、根因、解法。'
+tldr: '維護線上題庫或資料庫系統時，常遇到本機測不出、上線卻權限被拒、警報洗版甚至因瀏覽器翻譯導致網頁崩潰的隱形問題。關鍵在於修正查詢權限約束、補上缺漏資料的容錯判斷，並在前端攔截瀏覽器翻譯改寫網頁節點造成的錯誤，避免系統在正式環境無預警故障。'
 ---
 
 這一輪的坑沒有一個會在本機開發時炸給你看——它們是 Slack 上連噴好幾天的 permission-denied、被洗版的 error_logs，以及使用者一開瀏覽器翻譯就整頁掛掉。

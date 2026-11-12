@@ -10,6 +10,7 @@ tags:
   - claude-code
   - ai-workflow
 description: 'Covey''s time management matrix from The 7 Habits of Highly Effective People splits time on two axes: important × urgent. Drop Claude Code into the picture and each quadrant''s time allocation shifts. The long-term compounding from AI isn''t in Q1, it''s in Q2.'
+tldr: 'Drowning in urgent workplace crises and daily administrative interruptions? Using AI to compress crisis response times and delegate routine tasks can save 2-3 hours each day. The real compounding value comes from moving that saved time into long-term strategic planning and deep discussions with AI, rather than taking on more busywork.'
 ---
 
 Stephen Covey's time management matrix from *The 7 Habits of Highly Effective People* splits time across two axes: **important × urgent**.

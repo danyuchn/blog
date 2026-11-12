@@ -10,6 +10,7 @@ tags:
   - ai-tools
   - token-optimization
 description: 'I turned my viral token-saving tips into an automated audit skill for Claude Code. Feed it to Claude Code, and it inspects your settings, recent sessions, rules, and context usage to hand you an actionable checklist of fixes.'
+tldr: 'Built-in usage stats show how much Claude Code quota you burned, but not which settings are draining it. Installing the open-source cc-audit skill runs a five-minute check across your default model, your last 5 sessions'' cache hits, and path-specific rules—pointing out the exact file and line to fix.'
 ---
 
 Anthropic keeps messing with Claude's rate limits lately. People complain, but at the end of the day, we still have to use it. Instead of sweating over an empty token bar every afternoon, a much more practical move is hunting down the configs and habits quietly burning through your quota. A while back, I put together a long thread on token-saving tips that got over a thousand likes, and someone in the comments suggested turning it into a skill.

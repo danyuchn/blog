@@ -10,6 +10,7 @@ tags:
   - model-comparison
   - ai-daily-use
 description: 'Fed the exact same source material to write a video voiceover, the first AI draft was so defensive and preachy I rejected the whole batch. Changing how I briefed the task and switching writing models got it approved on the first pass in ninety seconds. Here is what changed—and four moves you can try right away.'
+tldr: 'AI drafts often sound robotic and defensive when prompts overload on constraints and raw spec files while lacking a clear goal. State what readers should take away, feed only two clean source files, let a natural-sounding model like Gemini 4 Argon freely restructure the draft before checking facts separately, and spend 1–2 weeks distilling past chat corrections into custom rules.'
 ---
 
 A while back, I wrote three blog posts about teaching methods, documenting how I talk to AI during classes and daily work. After they went live, I decided to adapt them into three YouTube videos. That morning, I dispatched the job to my usual workhorse model—Claude's Sonnet—asking it to turn the posts into three initial voiceover drafts.

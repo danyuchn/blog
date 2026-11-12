@@ -10,6 +10,7 @@ tags:
   - case-study
   - course-design
 description: '2026-05 investigation into doing case-based AI teaching for business courses. HBS / HBR cases carry licensing risk. Maps the open alternatives (UBC Open Case Studies, OpenCaseStudies.org, World Bank), what''s off-limits, and the direction of training MBA-background seed instructors.'
+tldr: 'Designing business or AI courses often leads to copyright traps with Harvard or MIT cases that forbid commercial use or AI modification. Free does not equal commercial use. Instructors should turn to open educational resources like UBC or develop data-driven cases paired with rigorous teacher oversight.'
 ---
 
 I've been planning case-based teaching for a business AI course. Initially I assumed buying HBS / HBR cases would just work. Reading the licensing terms revealed a minefield. This is the 2026-05 investigation.

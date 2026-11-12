@@ -10,6 +10,7 @@ tags:
   - codex
   - ai-workflow
 description: '從推特上看到有人把 Codex、Hyperframes、IndexTTS2、HeyGen 串成一條自媒體流水線，拉下來實測、順手玩 b 站的本地 TTS，幾天後換 Claude Code 重做一支。'
+tldr: '想拍短影音分享概念卻害怕面對鏡頭尷尬，或不想每次重新錄音拍片？透過串接 Codex 或 Claude Code、Hyperframes、IndexTTS2 與 HeyGen 的 50 幾個技能模組，就能用自己的聲音樣本與數位分身做出嘴型對齊、動畫吸睛的口播影片。'
 ---
 
 那天看到推特上有人把 Codex + [Hyperframes](/blog/posts/zh/automated-video-pipeline-gotchas) + IndexTTS2 + HeyGen 串在一起成為一條自媒體流水線，弄了一個有 50 幾個 SKILL 的 repo 開源分享，我就拉下來做做看（剛好 HeyGen 有我一年前做的 Avatar）。repo 是 Pluviobyte 的 rnskill，原作者的推文在[這裡](https://x.com/Pluvio9yte/status/2081328645524668636)。

@@ -11,6 +11,7 @@ tags:
   - knowledge-management
   - ai-workflow
 description: 'I''d been wanting to make this video for a long time, but kept putting it off. Obsidian''s flexibility is so high that it grows into a different shape in every person''s hands. The payoff isn''t immediate either—it''s only after the vault has grown for a while that you realize you can''t go back.'
+tldr: 'Explaining your background to an AI repeatedly wastes time and leaves your knowledge trapped in external services. Keeping long-term memories in local Markdown files preserves complete ownership. Start simply with daily notes and linked keywords, organizing organically over time to build a sustainable, AI-accessible personal knowledge base.'
 ---
 
 I'd been wanting to make this video for a long time, but kept putting it off until today.

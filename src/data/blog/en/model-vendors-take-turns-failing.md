@@ -10,6 +10,7 @@ tags:
   - ai-trends
   - opinion
 description: 'Commercial AI vendors take turns dropping the ball—OpenAI slashes speed and quotas, while Anthropic wrestles with outages and capacity crunches. Building reliable agent workflows means planning multi-model failovers and tuning out reflexive defensive tone.'
+tldr: 'Relying on a single AI provider leaves workflows vulnerable whenever rate limits, sudden slowdowns, or outages strike. Since major model vendors inevitably take turns experiencing service issues, companies and professionals must establish multi-model backup setups to switch platforms seamlessly without disrupting daily operations.'
 ---
 
 On the morning of October 6, I was running a live training session with Codex, and it slowed to an absolute crawl. Even with GPT-6.1 Sol set to low-effort fast mode, waiting for a single turn took over ten minutes. Even running two sessions in parallel could not salvage the awkward silence in the room.

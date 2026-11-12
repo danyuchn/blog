@@ -10,6 +10,8 @@ tags:
   - open-source
   - claude-code
 description: 'A simple asd-ste100 skill I threw together three weeks ago got reshared and picked up three PRs. To make AI speak plain language, pair ASD-STE100 for grammar and vocabulary with ISO 24495 for logic and structure.'
+tldr: 'AI outputs often sound convoluted or structurally disorganized. Applying aircraft maintenance standards for vocabulary alongside international plain-language guidelines for document structure forces clarity. Start simply by adding a one-line prompt rule; trigger dedicated instructions manually only if the model forgets rules as the conversation grows.'
+seoTitle: 'Make AI Speak Plainly: Use ASD-STE100 and ISO 24495 Rules'
 ---
 
 I woke up to an inbox full of GitHub notification emails from an issue thread. When I clicked through, I realized a small skill I had thrown together three weeks ago was being shared around by overseas developers—and it had even racked up three PRs.

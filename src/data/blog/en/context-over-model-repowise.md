@@ -10,6 +10,7 @@ tags:
   - mcp
   - agentic-coding
 description: 'I came across repowise, a tool that inserts a layer of context between your codebase and the model. It is a good excuse to talk about a bigger idea: when a model breaks things, the first instinct is to reach for a stronger model, but the real cause is usually too little context.'
+tldr: 'When an AI modifies a project and accidentally breaks surrounding code, the root cause is usually a lack of architectural context rather than model intelligence. Supplying clear dependency maps and design rationale reduced tool calls by 49% and costs by 36% in tests. Providing structured context is far more cost-effective than upgrading models.'
 ---
 
 I recently saw a tool called repowise on r/ClaudeAI and did a bit of digging. It solves a problem I run into all the time, so let me use it to make a broader point.

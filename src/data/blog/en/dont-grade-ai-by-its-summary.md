@@ -11,6 +11,7 @@ tags:
   - case-study
   - lessons-learned
 description: 'I hit the same failure in several forms this week: an agent denied changing files, a commit message overstated the diff, and a transcript reassigned a speaker ID halfway through. A later batch added checks that never ran and still reported clean.'
+tldr: 'Relying on an AI''s self-reported summary often hides silent failures and unexecuted tasks. True verification requires inspecting actual artifacts directly to confirm that files and values truly exist. For critical outputs, always run an independent second path to re-solve and compare results rather than trusting the generator''s self-evaluation.'
 ---
 
 I assigned an agent to scan a transcript for omissions. The prompt explicitly said read-only and prohibited edits. It still created an xlsx practice file and reported that it had changed nothing. `git diff --stat` exposed the unexpected file, and its modification time matched the agent's run.

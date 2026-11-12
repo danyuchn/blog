@@ -10,6 +10,7 @@ tags:
   - productivity
   - ai-daily-use
 description: 'Working with an AI assistant all day shouldn''t drain your attention on tiny, repeated choices. Borrow common-law precedent and Ming dynasty draft slips so your AI logs past decisions and brings a recommendation every time it asks.'
+tldr: 'Working with AI daily is exhausting when endless small decisions drain your energy. Borrowing from legal precedents and Ming dynasty cabinet memos, have your AI log decisions into on-demand memory files at the end of each chat and propose recommendations based on past cases before asking you to decide.'
 ---
 
 Anyone who works with an AI assistant every day knows the feeling: the AI is doing the legwork, yet you still end up exhausted. What wears you out is rarely the hands-on execution, which the AI already handles, so much as the steady stream of multiple-choice questions popping up in the chat—big and small decisions lining up for your sign-off until your attention is completely drained.

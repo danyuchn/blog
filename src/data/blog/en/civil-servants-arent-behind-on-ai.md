@@ -10,6 +10,7 @@ tags:
   - ai-education
   - consulting
 description: 'I reviewed the AI training project demos at a municipal government''s research and evaluation office and wrote ten pages of written comments. Veterans have experience and judgment, and with the right guidance it goes a long way.'
+tldr: 'Think civil servants and senior staff lag behind on AI? In practice, public-sector adoption thrives because time saved actually goes back to staff rather than triggering extra assignments; by simplifying workflows first and distilling past decisions into clear standards, experienced workers turn their judgment into a major advantage.'
 ---
 
 Today I was reviewing the AI training project demos put on by staff at a municipal government's research and evaluation office. I wrote my comments using speech-to-text (it's been so long since I wrote a document by hand with no LLM at all, and it felt weird).

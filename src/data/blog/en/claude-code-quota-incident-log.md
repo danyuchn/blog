@@ -11,6 +11,8 @@ tags:
   - token-optimization
   - ai-trends
 description: 'Four quota incidents in full: two official cache bugs, an 80x jump in API requests pulled from JSONL, Opus 4.7 measured at 2x consumption, and one session of mine that burned 90% in half an hour.'
+tldr: 'If your AI quota runs out quickly despite typing very little, this guide uncovers why your usage actually spikes. Rapid drain often comes from resuming old conversations, models looping repeatedly, or helper assistants multiplying unchecked. You can avoid wasted quota by starting fresh chats for new tasks, capping background helpers, and keeping a backup tool ready.'
+seoTitle: 'Why Is Claude Quota Draining Fast? 4 Incidents Explained'
 ---
 
 Your quota isn't burned by the words you type. It's burned by things you can't see: a string-matching bug that invalidates the cache, an entry fee that reprocesses the whole context every time you resume, a behavioral regression that multiplies API requests 80x, and a subagent tree that breeds until some of them are grandpas because nobody set a cap. Four incidents, in the order they happened.

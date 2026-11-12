@@ -10,6 +10,7 @@ tags:
   - ai-education
   - opinion
 description: 'AI can help you find answers, but it won''t find the questions you don''t know to ask. Why playing dumb, combining the Feynman technique with AI, and sharp critical thinking form the foundation of human-AI collaboration.'
+tldr: 'Simply reading answer keys creates a false sense of mastery and leaves you vulnerable to AI hallucinations. Treat AI as a tireless sparring partner by playing dumb and asking for 10 or 20 different explanations, and record yourself explaining concepts aloud to pinpoint and fix logic gaps.'
 ---
 
 AI can help you find answers, but it can't find the questions you don't even know to ask.

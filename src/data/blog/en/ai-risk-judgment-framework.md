@@ -11,6 +11,7 @@ tags:
   - workflow
   - frameworks
 description: 'A common question in corporate trainings — "can I let AI do this automatically?" I answer with two axes: reversible vs irreversible, isolated vs production. This 2x2 prevents more incidents than any prompt-engineering tutorial.'
+tldr: 'Unsure whether a task is safe to automate with AI? Evaluate it across two dimensions: reversibility (can mistakes be undone in 5 minutes?) and isolation (does it stay on your machine or touch external systems?). Whenever an action is irreversible or external—like sending emails—require human approval on drafts first.'
 ---
 
 In this morning's corporate training session I flagged a small risk-judgment framework worth keeping handy.

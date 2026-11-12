@@ -10,6 +10,8 @@ tags:
   - ai-workflow
   - ai-education
 description: 'Read the personality evaluations in the system card before using a new model so you can manage it like a teammate. A breakdown of Opus, Sonnet, Haiku 5.5, and Fable 5.2—their workplace personas, dispatch logic, and concrete communication playbooks.'
+tldr: 'Struggling to communicate effectively with new AI models? Treat them like coworkers by understanding their distinct personalities. Give the strategic Opus full context and room to explore, while handing the task-focused Sonnet crystal-clear delivery standards to make daily collaboration effortless.'
+seoTitle: 'Choosing Claude Models: Personality Guide for Opus & Sonnet'
 ---
 
 Whenever Anthropic releases a new Claude model, I have an odd habit: I immediately download the 200-plus-page system card to see what they put in it. Out of all the sections, what grabs me most is the part evaluating model welfare. Anthropic hired professional psychologists to treat these models like human subjects and profile their personalities.

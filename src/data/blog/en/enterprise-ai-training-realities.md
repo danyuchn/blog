@@ -10,6 +10,7 @@ tags:
   - enterprise-ai
   - teaching
 description: 'Four things I learned after running a handful of enterprise AI training sessions. Prep time is 3-5x the session itself. The client liaison decides everything. The instructor has to handle wildly different skill levels. And if you''re looking to hire a trainer, the signals are like picking a pop star.'
+tldr: 'Thinking about delivering corporate AI training without underpricing your preparation? Custom hands-on workshops require 3-5 times the teaching hours in preparation time, so contracts must bill prep work explicitly. Align client expectations early via precalls and design tiered exercises so both beginners and advanced staff stay engaged without derailing the class.'
 ---
 
 Four things I only learned after running a handful of enterprise AI training sessions:

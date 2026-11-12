@@ -10,6 +10,8 @@ tags:
   - ai-trends
   - knowledge-management
 description: 'Once I started using AI, the feeds I follow changed completely. Threads is full of third-, fourth-, fifth-hand reposts with extra seasoning added, so I pulled together 300-plus sources and had AI build my own weekly digest.'
+tldr: 'Tired of exaggerated, second-hand AI news on social media? The best solution is returning to original sources. By curating over 300 primary sources and having AI extract verified facts without clickbait headlines, you can stay informed without the unnecessary hype and anxiety.'
+seoTitle: 'Curate News with AI: Build a Custom 300-Source Newsletter'
 ---
 
 Once I started using AI, I noticed the social media I follow had changed. I used to only scroll IG and Threads (still do, a lot), but I eventually realized that a lot of what is on Threads is third-, fourth-, fifth-, sixth-hand reposting, and the source is still the Twitter, blogs, Medium, and Substack newsletters of the big names overseas.

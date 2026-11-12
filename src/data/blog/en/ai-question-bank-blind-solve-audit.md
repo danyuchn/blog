@@ -10,6 +10,7 @@ tags:
   - case-study
   - ai-education
 description: 'My question bank is AI-generated, so I did not let the same AI check it. A second AI re-solved every sampled question without seeing the answer key, and people judged whatever did not match.'
+tldr: 'Asking the same AI that wrote your test questions to check them only repeats its original blind spots. Separating answer keys so a second AI blind-solves each question with a backup choice—paired with full-database structural scans that caught answer C appearing 48% of the time across 2,662 items—exposes flawed logic and batch defects.'
 ---
 
 I run a GMAT practice platform called PDT, and most of its question bank is AI-generated. In the early-September backup, the Critical Reasoning (CR) section alone had 2,662 questions, and 2,624 of them had IDs starting with ai_gen.

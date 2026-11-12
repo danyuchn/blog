@@ -10,6 +10,7 @@ tags:
   - codex
   - ai-tools
 description: 'OpenAI just shipped GPT-6.1 Terra and says it matches Astra at a tenth of the price. I ran review, patching and screen tasks to see what you can hand it.'
+tldr: 'To cut costs and boost speed on high-volume document extraction and routine maintenance, GPT-6.1 Terra offers $1 input and $5 output per million units. While it handles routine reviews faster and at half the price, catching Traditional Chinese typos and subtle conversational context still requires Claude Sonnet.'
 ---
 
 OpenAI released GPT-6.1 Terra on October 26, 2026. The standard API costs $1 per million input tokens and $5 per million output tokens, which is half the price of both the previous Terra and the same-generation Sol, focusing on fast, efficient visual reasoning and computer use.

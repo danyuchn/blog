@@ -11,6 +11,7 @@ tags:
   - creator
   - ai-course
 description: "Real analytics breakdown of how EP.18 went viral — not through SEO, but retention triggering subscriber activation, then spreading via sidebar. Plus what I actually did to make it happen."
+tldr: 'Growing a YouTube channel is not about keyword SEO, but prioritizing audience retention. High retention first activates existing subscribers, prompting the algorithm to recommend your content to new viewers. Pair long-form videos with short clips and pinned links to convert viral traffic into lasting audience engagement.'
 ---
 
 In the third week of April, something happened that had me staring at GA4 for two hours straight.

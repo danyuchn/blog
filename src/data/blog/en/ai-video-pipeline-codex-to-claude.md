@@ -10,6 +10,7 @@ tags:
   - codex
   - ai-workflow
 description: 'Someone on Twitter chained Codex, Hyperframes, IndexTTS2 and HeyGen into a one-person media pipeline. I pulled the repo, tried it, played with a local TTS model, then rebuilt a video days later on Claude Code.'
+tldr: 'Camera-shy about filming reels or tired of recording every take from scratch? By chaining Codex or Claude Code, Hyperframes, IndexTTS2, and HeyGen across a 50-plus skill workflow, you can clone your voice and use a digital avatar to produce lip-synced, animated talking-head videos.'
 ---
 
 The other day I saw someone on Twitter chain Codex + [Hyperframes](/blog/posts/en/automated-video-pipeline-gotchas) + IndexTTS2 + HeyGen into a one-person media pipeline, and open-source it as a repo with 50-something SKILLs. So I pulled it down and gave it a go (I happened to have a HeyGen Avatar I made a year ago). The repo is Pluviobyte's rnskill; the original author's tweet is [here](https://x.com/Pluvio9yte/status/2081328645524668636).

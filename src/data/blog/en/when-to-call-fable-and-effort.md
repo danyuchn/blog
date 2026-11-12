@@ -11,6 +11,7 @@ tags:
   - ai-workflow
   - token-optimization
 description: 'The most expensive model is not meant to run the whole way. Three moments where calling in Fable feels right to me, plus why I cap Opus 5 at med, and the weekly cycle I fell into: efficiency king Monday to Thursday, Fable mode Friday to Sunday.'
+tldr: 'To maximize top-tier AI performance without draining your budget, deploy advanced models strategically. Use cost-effective models for daily tasks, call the smartest model only for architectural planning, unblocking, or final verification, and avoid pushing reasoning effort to the maximum where returns diminish.'
 ---
 
 When do I call in Fable? Switching models means a cache miss, so the usual move is a subagent. The three moments that work best for me:

@@ -10,6 +10,7 @@ tags:
   - ai-tools
   - productivity
 description: 'Put your entire life into Obsidian, then let Claude Code tap in. How I do daily logs, manage to-dos, and why local Markdown beats Notion.'
+tldr: 'Keeping track of fragmented tasks is hard, and cloud notes create friction for AI access. Connecting local Markdown files with an AI assistant lets you automatically log timestamped updates, separate blocking from actionable tasks, and clean up outdated notes weekly, ensuring your personal knowledge base remains private and fully accessible.'
 ---
 
 My Obsidian vault holds my diary, work logs, ideas, stray thoughts, links across all my projects, and every to-do item big and small. Then I hook Claude Code into it, so AI can directly read and write all of that data.

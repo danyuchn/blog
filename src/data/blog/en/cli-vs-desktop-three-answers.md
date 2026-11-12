@@ -11,6 +11,7 @@ tags:
   - ai-tools
   - developer-experience
 description: 'From March''s Cowork token burn, to April''s "still the terminal," to May''s "beginners should just start with the desktop app," to August''s "the CLI is the firstborn." One question, three different answers across five posts, laid out in the order I gave them.'
+tldr: 'Choosing between an intuitive graphical interface and a command-line tool often involves trade-offs between ease of use and quota consumption. Graphical desktop setups burn through usage limits rapidly due to screen captures and redundant context loading. Although the command line has a steeper learning curve, its precise context control makes it superior for daily work.'
 ---
 
 People ask me this a lot: should you run Claude Code in the terminal or in the desktop app? I've written about it five times over the past year, and the answer changed three times. March and April were "the terminal, no argument." May became "beginners should just start with the desktop app." August swung back to "the CLI is the firstborn and everything else is a stepchild." They're below in the order I wrote them, each section marked with when. Where the answers contradict each other, I'm not going to smooth that over. That was my answer at the time.

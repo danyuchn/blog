@@ -10,6 +10,7 @@ tags:
   - enterprise-ai
   - ai-workflow
 description: '整理 Anthropic 官方 ABC Legal 案例的六張圖卡：50+ 生產環境代理人、把 agent 當軟體放進 git、非工程師組成的 steering committee，以及「可信任，才自動化」的營運原則。'
+tldr: '想把員工散落在個人電腦上的 AI 實驗，變成全公司可控管的正式工作流程，關鍵不在於教大家寫程式。ABC Legal 讓 15 位非工程背景員工從單一任務範本起步，搭配版本紀錄與人工審核機制，在一個月內建立超過 50 個自動助理，讓部分任務成本最高下降約 50%。'
 ---
 
 以下六張圖卡整理自 Anthropic 官方 case study〈[How ABC Legal turned every employee into a builder with Claude-managed agents](https://claude.com/resources/articles/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents)〉，數據資料截至 2026 年 7 月。

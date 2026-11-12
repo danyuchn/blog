@@ -11,6 +11,7 @@ tags:
   - ai-workflow
   - token-optimization
 description: 'Three things I learned from letting an agent run local video-model parameter research overnight: hard constraints in CLAUDE.md, a gate script watching SSD writes, and a 30-minute check-in loop.'
+tldr: 'Letting an AI run long, unattended tasks overnight risks system crashes and excessive disk wear. Establishing three strict guardrails—hardware write monitoring, periodic status checks, and a mandatory morning cutoff—combined with clear acceptance criteria in the prompt, lets you safely sleep while the AI completes and documents the work.'
 ---
 
 A few notes from letting an agent run local video-model parameter research on its own overnight.

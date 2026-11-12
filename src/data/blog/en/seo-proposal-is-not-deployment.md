@@ -10,6 +10,7 @@ tags:
   - case-study
   - seo
 description: 'I had an SEO weekly report running on autopilot for five weeks, and one page''s Quick Win just kept sitting there doing nothing. The root cause wasn''t a wrong optimization — it was that the nice optimization proposal was never actually deployed.'
+tldr: 'Wondering why automated optimization proposals never seem to yield results? A recommendation is not a live deployment; without verifying real-world status, proposals can idle for weeks. Close every feedback loop by confirming changes are actually live and aligning before-and-after tracking windows accurately.'
 ---
 
 I have an SEO weekly workflow that runs on its own each week: pull Google Search Console data, figure out which pages need attention, generate title/meta optimization proposals for them, and put it all on a Quick Win list. The pipeline runs smoothly. Every week, fresh suggestions show up.

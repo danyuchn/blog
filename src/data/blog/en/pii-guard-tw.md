@@ -10,6 +10,7 @@ tags:
   - ai-tools
   - security
 description: 'There''s no off-the-shelf de-identification tool for Taiwan''s PII formats. So I built one that keeps sensitive data on your machine while you send the rest to AI.'
+tldr: 'Uploading documents with sensitive client information to cloud AI creates serious compliance and privacy risks. A local de-identification tool tailored for Taiwanese ID, phone, and tax numbers replaces private data with placeholders before AI processing, restoring them locally so real data never leaves your computer.'
 ---
 
 I was recently using AI to process client data, and the client was clear: sensitive information should not be sent to AI servers. But when I went looking for de-identification tools, I hit a wall—Taiwan's PII formats (national ID numbers, local phone numbers, tax IDs) aren't supported by any existing tool.

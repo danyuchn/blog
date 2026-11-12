@@ -9,6 +9,7 @@ tags:
   - consulting
   - business
 description: '一次 BD 鬆手的覆盤：客戶三次飄向「給我 artifact」，我把一句話從「after the training」改成「if the priority is to build the hub」，球就交回去了。'
+tldr: '當客戶表面想買教育培訓，內心卻想要現成系統時，強推能力訓練只會讓雙方卡住。關鍵做法是將用詞從「培訓完再蓋」改為「若優先想蓋系統」，把主導權交還客戶；將能力培養與系統導入脫鉤分開報價，無論客戶怎麼選都不吃虧。'
 ---
 
 Kevin 是一家跨國物流公司的人，這幾天主動回我，表態認同 Claude 確實比較強，順手問了 Copilot Cowork 怎麼啟用。看起來像是一個很順的培訓案：客戶買單、客戶想用、客戶問操作。但他緊接著補了一句反問：「萬一連 Cowork 也開不了，還有什麼替代方案？」

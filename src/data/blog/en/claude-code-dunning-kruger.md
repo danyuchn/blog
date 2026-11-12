@@ -10,6 +10,7 @@ tags:
   - ai-coding
   - developer-experience
 description: 'A non-engineer power user''s journey through the Claude Code Dunning-Kruger curve: from day-one confusion and day-three hubris to week-two wall-hitting, before mastering rules, skills, and multi-model collaboration.'
+tldr: 'Non-engineers using Claude Code often crash from early overconfidence into frustration when the AI forgets context, spawns junk files, and burns quota. Treating it like a new hire—having multiple AI assistants clean up docs, update settings, and build structured handbooks—cuts quota use by 50%, doubles speed, and pairs smoothly with Codex for tough bugs.'
 ---
 
 I don't have an engineering background, but over the past six months, I've used Claude Code to refactor databases, connect frontends and backends, coordinate multi-agent setups, and deploy production apps completely on my own.

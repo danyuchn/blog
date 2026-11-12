@@ -10,6 +10,7 @@ tags:
   - teaching
   - opinion
 description: 'An AI-course cash grab overheard at a convenience store, set against the two things I can actually show: a SKILL distilled from fifteen years of material, and a mock exam interface pulling past a thousand USD a month. Price tracks marketing, not delivery.'
+tldr: 'From NT$18,000-a-month AI courses sold through word-of-mouth to exhausting free consultations, price reflects persuasion rather than actual value. Instead of chasing hype, judge courses and products by verifiable outputs—like 15 years of experience distilled from over 200 articles and 100 hours of video, or a practice platform earning over $1,000 in monthly subscriptions.'
 ---
 
 Sheltering from the rain at a 7-Eleven seating area in Da'an, Taipei, waiting for class, I overheard some aunties talking about AI: "I'm paying NT$18,000 a month for my son to learn AI, four installments now, it's that teacher's course he recommended last time."

@@ -10,6 +10,7 @@ tags:
   - ai-coding
   - developer-experience
 description: 'Six practical habits for writing Claude Code initial prompts: clarifying goals, mapping manual workflows, picking the right model, and leaning on plan mode.'
+tldr: 'Staring at a blank prompt box or getting off-target results from a casual one-liner? Spend 30 seconds defining your goal, dictate the manual steps you would take without AI, match the model to the task like Sonnet 4.6 for docs, and use Plan Mode to align on details before backing up and letting it run.'
 ---
 
 Lately, while helping former colleagues and team members bring AI into their workflows, I started taking notes on how I actually use Claude Code every day.

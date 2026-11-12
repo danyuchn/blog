@@ -10,6 +10,7 @@ tags:
   - ai-workflow
   - agentic-coding
 description: 'AI is great at "looking done." To catch its blind spots, you can''t rely on it checking its own work — you bring in an auditor that knows nothing, inherits no context, and gets only the rules and the output.'
+tldr: 'When AI checks its own multi-step work within the same conversation, it inherits the exact biases that caused it to skip steps or strip out intentional constraints. To catch hidden omissions, assign a separate, context-free AI auditor given only the core principles and final output—while keeping humans in the loop.'
 ---
 
 Lately I've been leaning on one workflow a lot: the main conversation dispatches a subagent to do the work, then dispatches another subagent to verify it. After running this for a while, I noticed AI self-verification has a few recurring blind spots. Here are the principles I distilled from them.

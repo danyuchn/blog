@@ -105,6 +105,9 @@ const alternates = (() => {
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
+  docTitle: post.data.seoTitle
+    ? `${post.data.seoTitle} | ${SITE.title}`
+    : undefined,
   author,
   description,
   pubDatetime,

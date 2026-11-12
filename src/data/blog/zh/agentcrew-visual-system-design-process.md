@@ -10,6 +10,7 @@ tags:
   - agentcrew
   - non-engineer
 description: '我不是設計師，這週用 Fable、GPT-image-2、GPT-5.6-sol 迭代出 AgentCrew Academy 的視覺系統，記下被否決的四個方向與最後套用到網站、投影片、文件的規格。'
+tldr: '不會設計卻要幫品牌挑視覺風格，最難的已經不是生出提案，而是自己的品味與選擇。透過 Fable 或 GPT-image-2 產出 5-10 版風格圖與原型，就能把同一套視覺語言直接套用到網站、上課投影片與 A4 文件三種真實產出。'
 ---
 
 我不是設計師，但這週花了不少時間幫 AgentCrew Academy 選一套視覺系統。

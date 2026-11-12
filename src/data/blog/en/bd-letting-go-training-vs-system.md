@@ -9,6 +9,7 @@ tags:
   - consulting
   - business
 description: 'A post-mortem on letting go in a BD deal: the client drifted toward "give me an artifact" three times, and I changed one phrase from "after the training" to "if the priority is to build the hub" — and handed the ball back.'
+tldr: 'When a client asks for training but secretly wants a tangible system, forcing a training agenda creates friction. Shift from "training first" to "if building a system is your priority," letting the client choose the path. Separate capability training from system implementation and price them independently.'
 ---
 
 Kevin works at a multinational logistics company. These past few days he reached out on his own, said he agreed that Claude is indeed the stronger option, and casually asked how to enable Copilot Cowork. It looked like a smooth training engagement: the client's sold, the client wants to use it, the client's asking about the operations. But he immediately tacked on a counter-question: "What if even Cowork can't be enabled — what's the fallback then?"

@@ -10,6 +10,7 @@ tags:
   - token-optimization
   - security
 description: 'I built two Claude Mods: one that masks sensitive info while I record courses, and one that keeps the Claude Code prompt cache warm. Then I found Claude Code already has idle compact built in.'
+tldr: 'Recording tutorial videos or stepping away from your desk often risks exposing private data or incurring high costs from expired conversation caches. A live masking tool automatically blurs sensitive information on-screen to eliminate video post-editing, while a cache-warming tool periodically pings conversations to prevent expensive context reloads.'
 ---
 
 Claude Mod officially landed in the Desktop App and everyone was talking about it. I saw people building really good stuff. I want to share the one I made too: AI never sees your confidential information. The Mod masks it automatically, restores it automatically, and the key information never leaves your machine. I've already given it to my client's team, and so far it works without a single problem. The source is at [pii-guard](https://github.com/danyuchn/pii-guard), and there's a write-up in [PII Guard TW](/blog/posts/en/pii-guard-tw).

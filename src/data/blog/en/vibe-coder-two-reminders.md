@@ -10,6 +10,7 @@ tags:
   - ai-coding
   - opinion
 description: 'Two great posts I found on Reddit: one says vibe coders should learn system architecture before rushing to code, the other says what you build with Claude is useless to others — the real value is the thinking.'
+tldr: 'If you want to build digital tools with AI, do not start with raw code; learn the high-level system architecture first. The finished tool will eventually become outdated, but your thinking process for spotting real workplace pain points and designing solutions is what truly lasts.'
 ---
 
 Lately I've felt that instead of watching vibe coders trade jabs on Threads, it's worth spending some time over on Reddit.

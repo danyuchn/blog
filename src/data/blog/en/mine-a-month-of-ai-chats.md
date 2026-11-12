@@ -11,6 +11,7 @@ tags:
   - ai-workflow
   - harness
 description: 'I asked Claude Code to sift through over 300 chat logs from the past month to extract four collaboration habits, turn my most frequent catchphrases into switchable modes, and refine auto-review rules using real rejection cases.'
+tldr: 'Repeating instructions or hitting strict auto-mode barriers often derails daily AI collaboration. Analyzing over 300 real chat logs reveals practical habits—like separating the writer from the verifier—and allows you to rewrite automated review rules directly from past rejection records, making AI seamlessly match your workflow.'
 ---
 
 I asked Claude Code to dig through over three hundred chat logs I had accumulated over the past month. At first, I just wanted to see what habits had quietly formed in my daily workflow that others might not know about. Once the logs were laid out, though, I spotted more than just my own subconscious rules of thumb. Following that same thread, I ended up doing two more things: packaging my most frequent catchphrases into switchable modes, and fixing the constant roadblocks from auto mode reviews.

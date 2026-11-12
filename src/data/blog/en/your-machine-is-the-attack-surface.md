@@ -11,6 +11,7 @@ tags:
   - claude-code
   - mcp
 description: 'Everyone talks about AI security as whether the model will say the wrong thing. What actually bites you is the plaintext keys left on your disk, the permission flag you waved through, and the untrusted input you fed it.'
+tldr: 'AI security risks rarely stem from models misbehaving; they happen directly on your own computer. Unprotected API keys in local logs, skipping permission prompts, and feeding untrusted files without isolation create real vulnerabilities. Securing your local machine and permissions is your best line of defense.'
 ---
 
 When people talk about AI security, attention usually lands on the model: will it say what it shouldn't, can it be talked around. That layer really is unstable. Claude is normally so morally upright — won't do this, won't do that. But somehow with Baidu it suddenly cooperates with jailbreaks. Looks like Dario has some unspecified trauma from his Baidu days.

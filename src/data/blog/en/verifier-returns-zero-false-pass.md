@@ -11,6 +11,7 @@ tags:
   - case-study
   - ai-coding
 description: 'Four times this week a "check passed" turned out to be a broken checker, plus four real bugs where every layer looked fine on its own. Before you trust a zero, prove the checker is actually comparing something.'
+tldr: 'Seeing zero errors during automated checks often means the verification tool failed to compare rather than everything being fine. Before trusting a clean pass, always test the checker with a known faulty sample to ensure it actually catches issues.'
 ---
 
 A check returning zero means one of two things: either nothing is wrong, or the checker is not actually comparing anything. [No Error Doesn't Mean Success](/blog/posts/en/silent-failures-and-confabulated-tool-results) was about a tool not erroring out being no proof it worked, and [How to Write a Gate That Actually Blocks](/blog/posts/en/gates-that-actually-block) was about the criteria themselves. This one is those same criteria running into fresh cases all week: the checker you use to confirm success can itself be broken. I ran into this repeatedly this week, and every instance looked exactly like a passing check.

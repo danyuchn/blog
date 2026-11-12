@@ -10,6 +10,8 @@ tags:
   - model-comparison
   - ai-workflow
 description: 'Opus 5.5、Sonnet 5.5、Fable 5.1 都有了之後，我自己的分工是 Opus 親自指揮驗證部署、Sonnet 當 subagent 實作、Fable 偶爾請出場當顧問。'
+tldr: '面對多款能力與定價各異的 AI 模型時，若不清楚個別特長容易浪費預算或拖慢進度。最有效率的搭配是由理解力與主動性高的頂級模型負責指揮與驗收，派任執行力強的中階模型落實具體工作，遇到瓶頸時再請宏觀視角更廣的模型提供策略第二意見。'
+seoTitle: 'Claude 模型怎麼分工？Opus 指揮、Sonnet 實作與 Fable 顧問搭配'
 ---
 
 手頭上同時有了 Opus 5.5、Sonnet 5.5 和 Fable 5.1 之後，大家最常問的大概就是怎麼分工。

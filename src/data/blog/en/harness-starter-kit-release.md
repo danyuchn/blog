@@ -11,6 +11,7 @@ tags:
   - skills
   - open-source
 description: 'I open-sourced the Claude Code skills and hooks I actually use every day. No technical skill required, pure logic, built for knowledge workers with no coding background.'
+tldr: 'For non-technical workers wanting an AI assistant that follows rules without fabricating facts, this starter kit includes verification guards and five practical commands like plain-language explanations. You can install it directly by pasting the link to your AI.'
 ---
 
 Compared to the Claude and Codex wizards online I'm still way behind, because my technical skills just aren't that strong.

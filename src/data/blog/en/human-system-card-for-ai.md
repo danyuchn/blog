@@ -10,6 +10,7 @@ tags:
   - ai-workflow
   - codex
 description: 'Have Claude read your past chat logs and write a ''human system card'' covering your personality, decision logic, and communication preferences. Includes an excerpt of my own card and a four-step prompt to make yours.'
+tldr: 'Constantly explaining your communication preferences to new AI tools drains time and energy. Have your AI analyze past conversations to generate a personal profile detailing your decision logic and preferred style. Feeding this profile to any new model eliminates repetitive friction and immediately aligns its output with your expectations.'
 ---
 
 Let me quietly share a god-tier trick I came up with recently: have Claude look through your past conversation history with it and make you a "human system card" (modeled on the "model welfare" chapter of Claude's own system card), which is basically your personality profile, decision logic, communication preferences, and so on.

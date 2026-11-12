@@ -10,6 +10,7 @@ tags:
   - lessons-learned
   - harness
 description: 'Four times this week my agent concluded something did not exist. The worst: it ruled that 16 emails were never sent, when they had all gone out days earlier.'
+tldr: 'When verifying workflows or asking an AI to audit progress, a single negative search often leads to the false conclusion that something was not done. Proving absence requires checking every possible account and file path. Verifying full context and examining actual content prevents mistaking incomplete searches for factual proof.'
 ---
 
 Proving something exists is easy. Find one instance and you're done. Proving something doesn't exist means exhausting every place it could be, and whoever is checking usually checks one place and calls it settled. My agent did that four times this week. The worst one came within an inch of going into the weekly report.

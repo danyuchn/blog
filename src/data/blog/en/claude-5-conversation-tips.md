@@ -11,6 +11,7 @@ tags:
   - ai-workflow
   - skills
 description: 'Some practical tips I have been sharing with friends lately on talking to the Claude 5 generation of models: a home-made explain skill for alien-speak, answering everything in one pass instead of letting the conversation drift, voice-input setups, first-principles pruning, a hook that treats slacking, a minimal CLAUDE.md, and a fix for the phantom pushback habit.'
+tldr: 'Chatting with Claude 5 often leads to jargon, tangents, unverified claims, or unsolicited pushback against points you never made. Using custom skills for plain explanations, first-principles pruning, and stopping phantom pushback—paired with voice input to answer all points at once and automated verification checks—keeps conversations focused.'
 ---
 
 Some practical tips I have been sharing with friends lately on talking to the Claude 5 series of models:

@@ -10,6 +10,7 @@ tags:
   - automation
   - ai-workflow
 description: '從 /loop 指令幫我打 ERP 卡、Monitor Tool 做背景事件守門員、Google Map MCP 省瀏覽器操作、到 Obsidian 搭 Mirror 框架做反思週報——整理這半年我家 Claude Code 的自動化架構，順便釐清 commands 跟 skills 到底怎麼分。'
+tldr: '打造個人自動化流程時，工具並非越多越好，盲目疊加反而容易加速犯錯。有效的系統應分層運作：以指令與排程負責日常執行，以事件監聽與外部工具提升效率，頂層則用筆記搭配覆盤框架校準方向，適度精簡多餘工具才能讓自動化真正穩定放大產能。'
 ---
 
 半年下來，我的 Claude Code 工作流累積了一套自動化架構。

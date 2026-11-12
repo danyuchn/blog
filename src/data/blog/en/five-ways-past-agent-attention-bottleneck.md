@@ -10,6 +10,7 @@ tags:
   - claude-code
   - productivity
 description: 'Once I have more than 5 Claude Code/Codex windows going, I hit an attention bottleneck — constant context switching is genuinely exhausting. Five things that get me past it: a good multi-window manager, voice input, an overnight schedule, a reviewable skill, and regular pruning.'
+tldr: 'Running 5 or more AI assistants simultaneously causes severe context switching fatigue. Break through this bottleneck with five practical habits: use a multi-window manager to let assistants coordinate, adopt voice dictation for long instructions, delegate routine work to overnight schedules, enforce standardized review formats, and regularly prune unnecessary workflows.'
 ---
 
 Once I'm managing more than 5 Claude Code/Codex instances at the same time, I hit an attention bottleneck. Constant context switching is genuinely exhausting.

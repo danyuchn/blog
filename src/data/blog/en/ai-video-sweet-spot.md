@@ -9,6 +9,8 @@ tags:
   - ai-tools
   - video-production
 description: 'Record your own narration on camera and let AI help with the visuals; Astra plus DaVinci Resolve did the most tedious 90% of a six-day vlog edit; Qwen 3 ASR is enough for transcripts.'
+tldr: 'Sorting footage, rough-cutting, and transcribing easily eat up most of your video production time. Keep your own on-camera voiceovers while letting Claude Code, Astra, and DaVinci Resolve cross-reference GPS timelines and emails to finish 90% of editing—plus Qwen 3 ASR for transcripts—so your six-day vlog finishes while you unpack.'
+seoTitle: 'AI Video Editing: Host on Camera, Let AI Cut & Transcribe'
 ---
 
 I still think you record your own narration and put yourself on camera, and let AI help with the visuals and animation. That's the sweet spot.

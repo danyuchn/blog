@@ -11,6 +11,7 @@ tags:
   - ai-education
   - opinion
 description: 'An unwritten observation: people with high GMAT scores collaborate noticeably better with AI. So I wrote two GMAT-style questions about AI ability. How many can you get right?'
+tldr: 'Getting confused by AI hallucinations or unable to spot where complex tasks derailed? Effective collaboration relies on critical thinking and evidence verification rather than prompt memorization. Defining problems clearly, separating objective facts from assumptions, and testing understanding through verbal inquiry are the timeless thinking skills needed for the AI era.'
 ---
 
 ## An unwritten observation

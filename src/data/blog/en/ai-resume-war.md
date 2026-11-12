@@ -9,6 +9,7 @@ tags:
   - ai-trends
   - ai-daily-use
 description: 'Something slightly absurd is happening in the job market — candidates using AI to generate hundreds of tailored applications, HR using AI to filter them. In a bilateral arms race, who actually benefits?'
+tldr: 'When applicants customize resumes in five minutes to apply in bulk and HR uses AI to filter hundreds of applications in seconds, both sides enter a prisoner''s dilemma. Instead of spraying generic applications, use AI to clearly articulate real achievements and unique backgrounds—or sharpen hiring criteria—to stand out.'
 ---
 
 A comment I saw this week that stuck with me:

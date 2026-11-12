@@ -11,6 +11,7 @@ tags:
   - developer-experience
   - opinion
 description: "46 days, 6 projects, 7,843 conversations. This is not a manual — it's a diary of trial and error."
+tldr: 'Collaborating with AI often fails when vague prompts lead to misunderstandings or accidental file deletions. Providing clear context and goals matters far more than knowing technical jargon; always ask AI to list planned steps and files before executing. Paste full error messages and treat multi-round refinement as a standard workflow.'
 ---
 
 ## Why I'm Writing This

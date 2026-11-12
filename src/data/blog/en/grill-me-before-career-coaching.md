@@ -10,6 +10,7 @@ tags:
   - skills
   - personal
 description: 'Before meeting with a career coach or making a major move, have AI grill your updates into a focused cheat sheet. Let your coach target your blind spots during the session, then use AI to turn those takeaways into concrete next steps.'
+tldr: 'Before an important decision or career coaching session, clarify disorganized thoughts by having AI relentlessly question your recent notes and emotional shifts. Distilling your thoughts into three core issues with evidence beforehand allows you to talk 80% of the time while the coach pinpoints your blind spots.'
 ---
 
 I have been in career coaching for four years now, working regularly with a fantastic coach. Just this morning, we had one of the most valuable, productive conversations in all four years.

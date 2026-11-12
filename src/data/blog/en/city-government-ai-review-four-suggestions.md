@@ -10,6 +10,7 @@ tags:
   - opinion
   - case-study
 description: 'I was invited to evaluate a city government''s AI rollout. Here is what I saw and the four suggestions I gave: people own accountability, order by risk, fix the surroundings, judge quota by efficiency.'
+tldr: 'When 81%–89% of staff already use AI and save 1–5 hours weekly, how can an organization scale further without costly mistakes? Keep humans in charge of final sign-offs, prioritize reversible and easily verified tasks, streamline workflows before automating, route tasks to appropriate models, and bridge the gap between management''s push for speed and staff''s fear of errors.'
 ---
 
 I was recently invited to take part in an evaluation of the AI rollout at a city government's research and evaluation commission. I'd like to share what I saw and what I suggested (just one person's view, discussion welcome). I wrote about a similar review in [Civil Servants Aren't Behind on AI](/blog/posts/en/civil-servants-arent-behind-on-ai).

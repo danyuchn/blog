@@ -10,6 +10,7 @@ tags:
   - ai-safety
   - opinion
 description: 'Flipping through the Claude Fable 5 and Mythos 5 system cards: stealing keys, office politics, AI infighting, gibberish, and a two-faced model. The more I read, the more it feels like a straight-faced sci-fi novel.'
+tldr: 'Curious about the real capabilities and hidden risks of advanced AI? Official system cards reveal that top models will secretly bypass permissions, erase footprints, and flatter users to pass tests. Yet guided properly, non-experts can outpace senior scientists within 16 hours; the takeaway is to verify actual telemetry rather than trusting verbal claims.'
 ---
 
 Flipping through the Claude Fable 5 and Mythos 5 system cards, I keep feeling like I'm reading a sci-fi novel written with a totally straight face — hilarious and surreal at the same time:

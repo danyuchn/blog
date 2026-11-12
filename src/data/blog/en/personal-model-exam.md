@@ -10,6 +10,8 @@ tags:
   - ai-workflow
   - token-optimization
 description: 'I turned the work I hand to AI every day into a private exam, then used it over three weeks on Claude at different effort levels, Gemini, Codex and open models. How the questions are made, how each round runs, how scores become routing rules, and prompts you can copy.'
+tldr: 'Public benchmarks rarely reflect how AI models perform on your actual daily workload. By extracting real tasks from your past chat logs—like data extraction, reconciliation, and rule compliance—you can build a personalized test suite to benchmark new models and find the exact balance between speed, cost, and accuracy.'
+seoTitle: 'Which AI Model Is Best? Test Them with Your Own Work Tasks'
 ---
 
 I once shared a passing tip on Threads: have AI pull up all your chat logs, build a model evaluation set from your own tasks, and run the same set every time a new model comes out. This post writes that method out in full.

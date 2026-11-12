@@ -11,6 +11,7 @@ tags:
   - organization
   - opinion
 description: 'Block / Square / Cash App 的 Jack Dorsey 接受訪問，聊他為什麼把公司裁員 40% 然後從頭重建。順便整理 Sequoia 投資人 Roelof 講的「好 CEO 三件事」——在 AI 可以做出 80% 之後，剩下那 20% 才是人類的價值。'
+tldr: '擔心職場價值被日常例行工作取代嗎？當 AI 輕鬆接手 80% 的規劃、追蹤與整合，工作者的真正價值落在剩下的 20%——敢說真話的決斷力、嚴謹的邏輯與獨到的品味，這才是避免被平庸取代的核心防線。'
 ---
 
 Jack Dorsey（Twitter 創辦人、現在做 Block / Square / Cash App）接受訪問，聊他最近的大動作：把公司裁員 40%，然後從頭重建。

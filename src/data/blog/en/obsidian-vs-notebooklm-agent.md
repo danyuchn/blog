@@ -9,6 +9,7 @@ tags:
   - ai-tools
   - obsidian
 description: 'These two tools get compared a lot, but they solve fundamentally different problems. From a Claude Agent automation perspective, the difference is even clearer — one is a local knowledge base your Agent reads and writes directly, the other''s API stops at "managing the Notebook itself."'
+tldr: 'Choosing between local notes and cloud Q&A tools often confuses automated knowledge management. Local Markdown files excel as a long-term hub that AI can directly read and update without platform lock-in. For strict citations on specific reports or papers, export them to dedicated document tools to leverage both strengths.'
 ---
 
 Obsidian and NotebookLM get compared often, but most comparisons focus on "which one has better AI." Looking at it through "can Claude Agent automate operations on it" reveals a much cleaner distinction.

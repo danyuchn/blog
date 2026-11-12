@@ -9,6 +9,8 @@ tags:
   - ai-tools
   - video-production
 description: '自己錄旁白出鏡、畫面動畫用 AI 輔助；Astra 配 DaVinci Resolve 剪六天 vlog 做掉最費工的 90%；逐字稿用 Qwen 3 ASR 就夠。'
+tldr: '自己拍片紀錄生活或教學，最花時間的往往是整理海量檔案、順剪與上字幕。只要維持真人出鏡錄旁白，把手機與相機接上電腦讓 Claude Code 與 Astra 搭配 DaVinci Resolve 自動比對地圖時間軸與信件、完成 90% 的剪接，再用免費開源的 Qwen 3 ASR 產出逐字稿，拆完行李影片就做好了。'
+seoTitle: 'AI 剪影片怎麼做？真人錄旁白，剪接與逐字稿交給 AI 省 90% 工'
 ---
 
 我覺得還是自己錄旁白出鏡，但是畫面動畫用 AI 輔助，會是甜蜜點。

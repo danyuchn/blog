@@ -10,6 +10,7 @@ tags:
   - productivity
   - ai-workflow
 description: 'When one person or a small team has an AI run routine work from a checklist, the list only grows. Why that happens, and the monthly subtraction review I added.'
+tldr: 'When routine checklists keep expanding and draining attention, you need a systematic subtraction rule. Review the past four weeks of reports every month; if any step returns empty or gets deferred for three consecutive weeks, either reduce its frequency or remove it immediately.'
 ---
 
 This post is about one small thing: when you have an AI run a checklist every week and the list only ever grows, how to add a fixed step that takes things off.

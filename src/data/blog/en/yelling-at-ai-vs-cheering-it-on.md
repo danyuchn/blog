@@ -9,6 +9,7 @@ tags:
   - claude
   - opinion
 description: 'Looking back at a month of chats with AI, I cursed at it one out of every eight times. But models are stateless and don''t hold grudges—someone even moved the Riemann Hypothesis forward just by cheering one on. Instead of counting tokens on politeness, talk to agents the way you naturally speak to humans.'
+tldr: 'When collaborating with AI, you do not need to stress over being overly polite, harsh, or skipping pleasantries to save usage. Words like thank you account for less than 0.1% of total costs; speaking naturally as you would to a colleague provides better context and yields far better results.'
 ---
 
 It's pretty funny—I just ran the numbers on my chats with Claude over the past month, and one out of every eight prompts was me cursing at it.

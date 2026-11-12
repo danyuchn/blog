@@ -10,6 +10,7 @@ tags:
   - ai-workflow
   - productivity
 description: 'Working with an agent drains my attention, so I worked out a review loop: he writes the full proposal, I review it by voice, he revises, I go eat and exercise, then v2 shows up.'
+tldr: 'Exhausted by constant back-and-forth chatting with AI? Have AI produce a complete proposal first, then record your spoken review comments uninterrupted. Taking a 20-minute break while AI applies your revisions restores mental energy and keeps you focused in deep flow.'
 ---
 
 ## It started with someone else's attention drain

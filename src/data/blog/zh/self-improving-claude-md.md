@@ -10,6 +10,7 @@ tags:
   - ai-coding
   - productivity
 description: "用 claude-log 工具掃描歷史對話，從你罵 AI 的紀錄中提煉規則寫進 claude.md，讓 Claude Code 真正學會不再踩同一個坑。"
+tldr: '每次跟 AI 協作總覺得在反覆糾正同樣的低級錯誤？透過工具搜尋歷史對話紀錄中責備 AI 的關鍵字，把散落的教訓挖掘出來。將實戰踩坑經驗自動整理回專案規則檔，只要 5 分鐘就能讓 AI 記住教訓、不再重複犯錯。'
 ---
 
 ## 前情提要

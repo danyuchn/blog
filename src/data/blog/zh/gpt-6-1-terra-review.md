@@ -10,6 +10,7 @@ tags:
   - codex
   - ai-tools
 description: 'OpenAI 剛發布 GPT-6.1 Terra，官方說它比 Astra 便宜十倍。我用審查、修補、看畫面三組題目實測，整理哪些工作可以交給它。'
+tldr: '想在大量辨識單據與日常修補上節省成本並提高速度。最新推出的 GPT-6.1 Terra 每百萬單位輸入 1 美元、輸出 5 美元，比上一代便宜一半且速度飛快；但若要挑出繁簡錯字與判斷細膩對話脈絡，依然要交給 Claude Sonnet。'
 ---
 
 OpenAI 在 2026 年 10 月 26 日發布 GPT-6.1 Terra。標準 API 每百萬 token 輸入 $1、輸出 $5，比上一代 Terra 和同代的 Sol 都便宜一半，主打快速、高效的視覺推理與電腦操作。
