@@ -47,7 +47,7 @@ description: '把 CLAUDE.md 一路砍到只剩八組對句，外加一篇刻意�
 >
 > 征途漫漫，惟有奮鬥。讓我們牢牢把握「明意圖、守閘門、取實證、刻檔案」十六字方針，奮力譜寫新時代人機協同新篇章！
 
-完整的在這邊啦：<https://github.com/agentcrew-academy/harness-starter-kit/tree/main/claude-md-template>
+完整範本已從公開的工具包撤下。
 
 這條線之前寫過兩篇：[我每天在用的 Skill 跟 Hook，開源了](/blog/posts/zh/harness-starter-kit-release)、[Claude 5 時代的情境工程六條新規則，與我砍掉的 1473 行 harness](/blog/posts/zh/claude-5-context-engineering-six-rules)。
 

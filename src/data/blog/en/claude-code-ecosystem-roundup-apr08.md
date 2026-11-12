@@ -40,9 +40,9 @@ What makes this noteworthy is that it's the first proof of concept bridging a lo
 
 The architecture—a two-tier CLI + Skills setup—matches the teaching framework we use at AgentCrew: the CLI handles network requests and API calls at the bottom layer, while a Skill wraps around it at the top layer for Claude to understand and invoke. If you are looking to turn your company's internal tools or legacy systems into Claude Code interfaces, this is a great architectural reference.
 
-- Website: <https://job104-cli.dev/>
-- CLI: <https://github.com/MIBlue119/job104_cli>
-- Skills: <https://github.com/MIBlue119/job104-cli-skills>
+- Website: job104-cli.dev (no longer online)
+- CLI: MIBlue119/job104_cli (no longer online)
+- Skills: MIBlue119/job104-cli-skills (no longer online)
 - Installation: `brew install MIBlue119/tap/job104-cli` or `uv tool install job104-cli`
 
 Many mature, everyday services in Taiwan are still locked behind traditional web UIs. Hopefully we'll see similar community-driven POCs for platforms like 1111, CakeResume, and MetaHR, unlocking more local data interfaces for terminal AI.

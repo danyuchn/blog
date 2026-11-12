@@ -63,7 +63,7 @@ The signal: MBA × AI case method is being seriously explored by multiple busine
 | Repo / Skill | License | Type | Verdict |
 |--------------|---------|------|---------|
 | [DogInfantry/claude-skill-management-consultant-B1](https://github.com/DogInfantry/claude-skill-management-consultant-B1) | `Apache-2.0` | Management consulting / case interview / business problem solving | Closest to MBA case analysis. Has issue tree, hypothesis-driven thinking, MECE, Pyramid Principle, profitability / market entry / M&A worked cases |
-| [travisjneuman/.claude — case-interview-practice](https://github.com/travisjneuman/.claude/blob/main/skills/case-interview-practice/SKILL.md) | `MIT` | Consulting case interview practice | profitability, market sizing, market entry, M&A, pricing, operations, growth strategy frameworks; CASE method flow |
+| travisjneuman/.claude — case-interview-practice (link no longer works) | `MIT` | Consulting case interview practice | profitability, market sizing, market entry, M&A, pricing, operations, growth strategy frameworks; CASE method flow |
 | [snzeeee/claude-skill-case-study-builder](https://github.com/snzeeee/claude-skill-case-study-builder) | `MIT` | Freelancer / portfolio case study | Not MBA. Turns interviews into Challenge-Solution-Results |
 | [gtmagents/gtm-agents — case-studies](https://github.com/gtmagents/gtm-agents/blob/main/plugins/content-marketing/skills/case-studies/SKILL.md) | `Apache-2.0` | GTM / customer story | CHIC: Challenge → Hypothesis → Implementation → Change |
 

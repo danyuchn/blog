@@ -40,9 +40,9 @@ GitHub：<https://github.com/pnp/cli-microsoft365>
 
 這個專案的架構（CLI + Skills 雙層）其實跟 AgentCrew 的教學框架一致：底層由 CLI 負責處理實際的網路請求與 API 呼叫，上層則包裝一層 Skill 提供給 Claude 理解與調用。對於想把自己公司內部現有系統或工具轉化為 Claude Code 接口的人來說，這個專案是非常好的架構參考範例。
 
-- 官網：<https://job104-cli.dev/>
-- CLI：<https://github.com/MIBlue119/job104_cli>
-- Skills：<https://github.com/MIBlue119/job104-cli-skills>
+- 官網：job104-cli.dev（已失效）
+- CLI：MIBlue119/job104_cli（已失效）
+- Skills：MIBlue119/job104-cli-skills（已失效）
 - 安裝方式：`brew install MIBlue119/tap/job104-cli` 或 `uv tool install job104-cli`
 
 台灣有許多實用且成熟的本地服務，至今依然停留在純網頁介面。期待未來能看見 1111、CakeResume、MetaHR 也出現類似的社群 POC，把更多本地資料接口釋放給終端 AI。

@@ -29,7 +29,7 @@ description: '用沒燒完的閒 token 做了一個庭皓 SKILL：蒸餾 17 部�
 
 做法上，是用 yt-dlp 把影片逐字稿抓下來，再交給 Gemini 整理，然後依 Anthropic 官方的 progressive-disclosure 原則拆成主檔加幾個參考檔。驗證方式是：根據 undistill 的影片逐字稿抽取未經解讀的 raw fact、data & news，請 SKILL 生成皓哥的觀點跟話術，然後再比對真實逐字稿皓哥是怎麼解讀的。
 
-repo 放在 [github.com/danyuchn/yu-tinghao-perspective](https://github.com/danyuchn/yu-tinghao-perspective)，公開版有把逐字稿排除掉（版權考量）。如果不是這週意外重置我絕對沒有這種閒 token。歡迎大家 PR 補充。
+repo 名稱是 yu-tinghao-perspective（目前沒有公開），公開版有把逐字稿排除掉（版權考量）。如果不是這週意外重置我絕對沒有這種閒 token。歡迎大家 PR 補充。
 
 玩下來最有意思的一點：感覺他的思維邏輯跟人類不太一樣。
 

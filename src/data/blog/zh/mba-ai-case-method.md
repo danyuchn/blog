@@ -65,7 +65,7 @@ UBC = University of British Columbia，加拿大溫哥華的頂尖公立研究�
 | Repo / Skill | 授權 | 類型 | 判斷 |
 |--------------|------|------|------|
 | [DogInfantry/claude-skill-management-consultant-B1](https://github.com/DogInfantry/claude-skill-management-consultant-B1) | `Apache-2.0` | 管理顧問 / case interview / 商業問題分析 | 最接近 MBA case analysis。內含 issue tree、hypothesis-driven thinking、MECE、Pyramid Principle、profitability / market entry / M&A worked cases |
-| [travisjneuman/.claude — case-interview-practice](https://github.com/travisjneuman/.claude/blob/main/skills/case-interview-practice/SKILL.md) | `MIT` | Consulting case interview practice | profitability、market sizing、market entry、M&A、pricing、operations、growth strategy 框架；CASE method 流程 |
+| travisjneuman/.claude — case-interview-practice（原連結已失效） | `MIT` | Consulting case interview practice | profitability、market sizing、market entry、M&A、pricing、operations、growth strategy 框架；CASE method 流程 |
 | [snzeeee/claude-skill-case-study-builder](https://github.com/snzeeee/claude-skill-case-study-builder) | `MIT` | Freelancer / portfolio case study | 不是 MBA case；用途是訪談整理成 Challenge-Solution-Results |
 | [gtmagents/gtm-agents — case-studies](https://github.com/gtmagents/gtm-agents/blob/main/plugins/content-marketing/skills/case-studies/SKILL.md) | `Apache-2.0` | GTM / customer story | CHIC：Challenge → Hypothesis → Implementation → Change |
 

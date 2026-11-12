@@ -52,7 +52,7 @@ Claude has a chronic problem of what it claims not matching what it actually did
 
 Keep "CLAUDE.md" minimal. Reason things through instead of only giving negative constraints. I have my own template you can adapt to your own taste.
 
-<https://github.com/agentcrew-academy/harness-starter-kit/blob/main/claude-md-template/CLAUDE.md>
+(The template has since been taken out of the public kit.)
 
 ## Treat the nagging: it argues with things I never said
 

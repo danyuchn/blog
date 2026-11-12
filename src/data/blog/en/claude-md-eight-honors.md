@@ -47,7 +47,7 @@ Then I expanded it into a circular:
 >
 > The journey ahead is long; there is only struggle. Let us firmly grasp the sixteen-character guideline of "clarify intent, guard the gate, take evidence, carve the file," and strive to write a new chapter of human-machine collaboration for the new era!
 
-The full thing is over here: <https://github.com/agentcrew-academy/harness-starter-kit/tree/main/claude-md-template>
+The full template has since been taken out of the public kit.
 
 Two earlier posts on the same thread: [The Skills and Hooks I Use Every Day, Now Open Source](/blog/posts/en/harness-starter-kit-release), [Six New Context Engineering Rules for Claude 5, and the 1,473 Lines I Cut](/blog/posts/en/claude-5-context-engineering-six-rules).
 

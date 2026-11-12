@@ -29,7 +29,7 @@ Install this SKILL and your AI can become Brother Hao too.
 
 For the build, I used yt-dlp to pull the video transcripts, handed them to Gemini to clean up, then split everything into a main file plus a few reference files following Anthropic's progressive-disclosure principle. The way I validated it: take an undistilled video transcript, pull out the raw fact, data & news before any interpretation, ask the SKILL to generate Brother Hao's take and his patter, then compare against how Brother Hao actually interpreted it in the real transcript.
 
-The repo is at [github.com/danyuchn/yu-tinghao-perspective](https://github.com/danyuchn/yu-tinghao-perspective). The public version has the transcripts excluded (copyright). If this week hadn't reset by accident I'd never have had this many spare tokens. PRs welcome.
+The repo is called yu-tinghao-perspective (not public at the moment). The public version has the transcripts excluded (copyright). If this week hadn't reset by accident I'd never have had this many spare tokens. PRs welcome.
 
 The most interesting thing after playing with it: his reasoning feels a little different from a human's.
 

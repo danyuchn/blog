@@ -52,7 +52,7 @@ Claude總有宣稱跟做的事情不符的通病。這需要用hook來治：只�
 
 "CLAUDE.md" 極簡化。講道理而不是只給負向約束。我有一套自己的範本，你可以改成自己喜歡的。
 
-<https://github.com/agentcrew-academy/harness-starter-kit/blob/main/claude-md-template/CLAUDE.md>
+（範本已從公開的工具包撤下。）
 
 ## 治雞婆：他在反駁我根本沒說過的東西
 

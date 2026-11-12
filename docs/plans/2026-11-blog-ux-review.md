@@ -64,3 +64,32 @@
 | 12 | 部分 | Hero 改一段白話介紹（不用格子）；整站配色對齊未做 |
 | 13 | 未做 | 高流量文與主站雙向連結 |
 | 14 | 部分 | GA4 事件 `blog_cta_click`、`prompt_copy` 已加；桌機機器流量篩選延後 |
+
+## 基準數據（2026-11-12 上線前，GSC 2026-08-14～11-11，zh＋en 合計）
+
+| 文章 | 曝光 | 點擊 | 點閱率 | 平均排名 |
+|---|---|---|---|---|
+| gemini-underrated-harness | 7 | 1 | 14.3% | 15.9 |
+| burn-and-save-ai-quota | 13 | 0 | 0.0% | 14.9 |
+| ai-video-sweet-spot | 1 | 0 | 0.0% | 8.0 |
+| claude-code-quota-incident-log | 89 | 1 | 1.1% | 9.5 |
+| read-system-card-before-managing-model | 28 | 0 | 0.0% | 9.9 |
+| work-mode-ai-working-modes | 11 | 0 | 0.0% | 20.1 |
+| why-i-built-my-own-newsletter | 0 | 0 | – | – |
+| claude-code-plan-picker | 69 | 0 | 0.0% | 26.6 |
+| personal-model-exam | 3 | 0 | 0.0% | 19.3 |
+| ai-adoption-stage-2-5-automation | 6 | 1 | 16.7% | 6.0 |
+| opus-sonnet-fable-division-of-labor | 5 | 0 | 0.0% | 9.0 |
+| plain-language-skills-asd-and-iso | 945 | 106 | 11.2% | 5.1 |
+| ipad-claude-code-setup | 72 | 4 | 5.6% | 8.2 |
+| harness-ablation-one-week | 0 | 0 | – | – |
+| ai-usage-economics | 37 | 0 | 0.0% | 7.0 |
+| gpt-5-6-luna-max-grunt-work | 1306 | 105 | 8.0% | 4.4 |
+| local-model-lineup-mac-mini | 646 | 42 | 6.5% | 5.9 |
+| taiwan-data-mcp-two-servers | 274 | 8 | 2.9% | 7.5 |
+| context-session-management | 155 | 4 | 2.6% | 5.9 |
+| why-gpt6-sol-luna-felt-dumb | 294 | 9 | 3.1% | 6.7 |
+| multi-model-visual-verification | 154 | 9 | 5.8% | 7.6 |
+| cli-vs-desktop-three-answers | 275 | 21 | 7.6% | 6.4 |
+
+部落格全站：曝光 15257、點擊 588。GA4 基準見本文「三個最大問題」第 3 點（每工作階段 1.1–1.4 頁、form_start 30 → confirmed 13）。
