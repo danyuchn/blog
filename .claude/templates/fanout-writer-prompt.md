@@ -7,7 +7,7 @@
 
 1. **給複本，不給 repo 原檔**：要改的文章先複製到 scratchpad（例：`<scratchpad>/zh/`、`<scratchpad>/en/`），prompt 只寫複本路徑。agy 即使被告知只寫 scratchpad，也可能就地改寫它讀到的 repo 檔。
 2. **用 ext-run 背景跑**：在 scratchpad 目錄下執行（agy 會把暫存檔丟在 cwd），一批約 10 篇或 6–7 萬字，最多 8 批並行：
-   `~/.claude/scripts/ext-run --name <名稱> --timeout 3000 --marker <結尾標記> agy --effort high --dangerously-skip-permissions --add-dir <複本目錄> -p "$(cat <prompt 檔>)"`
+   `~/.claude/scripts/ext-run --name <名稱> --timeout 3000 --marker <結尾標記> agy --model "$(~/.claude/scripts/ext-run --model-for write)" --dangerously-skip-permissions --add-dir <複本目錄> -p "$(cat <prompt 檔>)"`
    用 Bash `run_in_background` 跑，並掛 Monitor 涵蓋完成、失敗與逾時。
 3. **3 分鐘沒進展就換路**：檔案沒變、只有 request 數在漲，就改成「只把譯文／段落印到標準輸出、不准動檔」，由主對話原樣插回。
 4. 驗收通過後，主對話才把複本拷回 repo。
