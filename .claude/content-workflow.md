@@ -12,7 +12,7 @@
 | 選 tag / 新增 tag | `.claude/specs/tags.md`（白名單，CI 強制） |
 | 新文章起手 | 複製 `.claude/templates/article.md` |
 | 原創技術分享文（自己做的工具／流程的痛點、實測、提示詞、附錄） | `.claude/specs/tech-share-post-spec.md`＋`.claude/skills/tech-share-post/SKILL.md` |
-| 寫稿、併入既有文章、拼接審查（agy 寫、主對話驗） | `.claude/templates/fanout-writer-prompt.md`（Prompt A／B／C＋驗收 checklist） |
+| 寫稿、併入既有文章（整篇重寫）、拼接審查（agy 寫、主對話驗） | `.claude/templates/fanout-writer-prompt.md`（Prompt A／B／C＋驗收 checklist） |
 | 每週週報全流程 | `.claude/checklists/weekly-roundup.md` |
 | 機器驗證 | `npm run check:content`（CI blocking；錯誤訊息會指回對應 spec） |
 | 品牌調性 / 讀者輪廓 | `.impeccable.md` |
@@ -40,7 +40,7 @@
 寫稿、改稿、併入、翻譯、去 AI 腔一律交給 agy（經 `~/.claude/scripts/ext-run`），Claude 主對話只派工與驗收、不親自寫內文。prompt 一律由 `.claude/templates/fanout-writer-prompt.md` 生成，不可自行簡化。四條鐵則（事故驅動，模板內有完整版）：
 
 - **agy 只改 scratchpad 複本**，驗收通過才由主對話拷回 repo。
-- **併入既有文章不准在文末加節**：用 Prompt B 織進正文，併完跑 Prompt C 拼接審查，怪異度 ≥3 退回重做（規則見 article-spec「併入既有文章」）。
+- **併入既有文章＝整篇重寫**：舊文全文＋新素材交寫作模型用 Prompt B 重寫整篇，不在原文插段落、不在文末加節（規則見 article-spec「併入既有文章」）。
 
 - **忠實度自首清單**：每個寫手必回報「新增非原文句子」逐句清單，主對話逐句裁決——比盲讀全篇快且不漏。
 - **派工前 working tree 清乾淨、圖片主對話先複製**。
