@@ -5,6 +5,7 @@ title: 'My CLAUDE.md Boiled Down to Eight Lines of "Take Pride In…, Take Shame
 slug: en/claude-md-eight-honors
 featured: false
 draft: false
+archived: true
 tags:
   - harness
   - claude-code

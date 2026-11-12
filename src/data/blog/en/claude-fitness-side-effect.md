@@ -5,6 +5,7 @@ title: "Lost 10 kg After Ten Years of Failure — Because of Claude's Quota"
 slug: en/claude-fitness-side-effect
 featured: false
 draft: false
+archived: true
 tags:
   - opinion
   - ai-daily-use

@@ -5,6 +5,7 @@ title: "Claude vs Gemini vs GPT：一個重度使用者的模型體感實錄"
 slug: zh/claude-vs-gemini-vs-gpt
 featured: false
 draft: false
+archived: true
 tags:
   - ai-models
   - claude

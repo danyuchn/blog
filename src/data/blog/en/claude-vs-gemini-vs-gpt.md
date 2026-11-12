@@ -5,6 +5,7 @@ title: "Claude vs Gemini vs GPT: A Power User's Honest Field Notes"
 slug: en/claude-vs-gemini-vs-gpt
 featured: false
 draft: false
+archived: true
 tags:
   - ai-models
   - claude

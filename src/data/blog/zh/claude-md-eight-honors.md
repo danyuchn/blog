@@ -5,6 +5,7 @@ title: 我的 CLAUDE.md 精煉到只剩八句「以…為榮，以…為恥」
 slug: zh/claude-md-eight-honors
 featured: false
 draft: false
+archived: true
 tags:
   - harness
   - claude-code

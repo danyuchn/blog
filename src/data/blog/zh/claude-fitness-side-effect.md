@@ -5,6 +5,7 @@ title: "睽違十年瘦了 10 公斤——竟然是因為 Claude 額度不夠"
 slug: zh/claude-fitness-side-effect
 featured: false
 draft: false
+archived: true
 tags:
   - opinion
   - ai-daily-use
