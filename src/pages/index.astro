@@ -3,14 +3,11 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import GridCard from "@/components/GridCard.astro";
 import { getListedPosts } from "@/utils/getSortedPosts";
 import { filterByLang } from "@/utils/i18n";
-import IconRss from "@/assets/icons/IconRss.svg";
-import { SOCIALS } from "@/constants";
 import { withBase } from "@/utils/withBase";
 
 const RECENT_COUNT = 6;
@@ -59,20 +56,6 @@ const recentPosts = (["zh", "en"] as const).flatMap(lang =>
           products with AI. This blog is about how someone with zero engineering
           background actually ships things — and all the pitfalls along the way.
         </p>
-      </div>
-
-      <div class="mt-6 flex items-center gap-4">
-        {SOCIALS.length > 0 && <Socials />}
-        <a
-          target="_blank"
-          href={withBase("/rss.xml")}
-          class="text-foreground/40 transition-colors hover:text-accent"
-          aria-label="RSS Feed"
-          title="RSS Feed"
-        >
-          <IconRss width={16} height={16} class="stroke-current stroke-2" />
-          <span class="sr-only">RSS Feed</span>
-        </a>
       </div>
     </section>
 

@@ -1,6 +1,7 @@
 import type { Lang } from "@/utils/i18n";
 
 const ui: Record<string, Record<Lang, string>> = {
+  "brand.home": { en: "AgentCrew", zh: "AgentCrew 主站" },
   "nav.posts": { en: "Posts", zh: "文章" },
   "nav.tags": { en: "Tags", zh: "標籤" },
   "nav.about": { en: "About", zh: "關於" },

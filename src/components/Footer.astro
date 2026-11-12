@@ -1,5 +1,7 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+import IconRss from "@/assets/icons/IconRss.svg";
+import { withBase } from "@/utils/withBase";
 import Socials from "./Socials.astro";
 
 const currentYear = new Date().getFullYear();
@@ -22,7 +24,19 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
       "flex flex-col items-center justify-between text-sm sm:flex-row-reverse",
     ]}
   >
-    <Socials />
+    <div class="flex items-center gap-1">
+      <Socials />
+      <a
+        target="_blank"
+        href={withBase("/rss.xml")}
+        class="p-2 text-foreground/80 hover:text-accent sm:p-1"
+        aria-label="RSS Feed"
+        title="RSS Feed"
+      >
+        <IconRss width={20} height={20} class="stroke-current stroke-2" />
+        <span class="sr-only">RSS Feed</span>
+      </a>
+    </div>
     <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
       <span>Copyright &#169; {currentYear}</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>

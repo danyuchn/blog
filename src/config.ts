@@ -3,7 +3,7 @@ export const SITE = {
   author: "Dustin Yuchen Teng",
   profile: "https://github.com/danyuchn",
   desc: "Sharing practical AI workflows, tools, and insights for everyday learning and productivity.",
-  title: "Dustin's AI Lab",
+  title: "Dustin's AI Lab｜AgentCrew",
   ogImage: "", // empty → fall back to dynamically generated /og.png
   lightAndDarkMode: true,
   postPerIndex: 4,

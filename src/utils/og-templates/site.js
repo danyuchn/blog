@@ -90,7 +90,7 @@ export default async () => {
                   type: "p",
                   props: {
                     style: {
-                      fontSize: 76,
+                      fontSize: 60,
                       fontWeight: 900,
                       lineHeight: 1.2,
                       margin: 0,
