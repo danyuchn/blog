@@ -15,13 +15,14 @@
 ## 2. 聚類提案
 
 - [ ] **每則貼文三選一**：開新文、併入既有文、進 micro-notes；沒讀完匯出不得判「不開新稿」（Dustin 2026-11-07）。
+- [ ] **只出有價值的文章，不追篇數**（Dustin 2026-11-12）：開新文的門檻是陌生讀者讀完能帶走一個做法、判準或觀點；只有展示、時事梗、素材薄到撐不起一篇的，改併入或進碎念。
 - [ ] 聚類後向使用者提案（全跑 vs Top N）。
 - [ ] **必須明說每個未選篇章的去處**（micro-notes / 留下週 / 棄寫）——漏說會導致使用者事後追問、補開重做（歷史上發生過 build 跑兩次）。
 
 ## 3. 寫作（zh 先行）
 
 - [ ] 每篇從 `.claude/templates/article.md` 起手，遵守 `.claude/specs/article-spec.md`。
-- [ ] 寫手一律是 agy：prompt 用 `.claude/templates/fanout-writer-prompt.md` Prompt A 生成，經 ext-run 改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。
+- [ ] 寫手一律是 agy，不派 Sonnet：新文走 `ext-run --kind write`（寫作模型，Argon 額度滿自動退 Flash），brief 照 `~/.claude/skills/subagent-dispatch/references/write-brief.md` 骨架（讀者目標＋自由重寫＋只守事實底線，不加語氣限制）；併入與翻譯照 `.claude/templates/fanout-writer-prompt.md`。都改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。（W47 試行中，Dustin 審過後再正式改 Prompt A 與 article-spec）
 - [ ] 回收：照自首清單逐句裁決忠實度，砍 AI 補述（模板內有完整回收 checklist）。
 
 ## 4. 翻譯與去 AI 腔
