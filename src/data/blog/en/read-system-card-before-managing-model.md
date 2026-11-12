@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-10-09T00:04:00Z
-title: Read the System Card Before You Use a New Model
+title: "Read the System Card Before Managing a Model: Personalities and Playbooks for Opus, Sonnet, Haiku, and Fable"
 slug: en/read-system-card-before-managing-model
 featured: false
 draft: false
@@ -9,142 +9,143 @@ tags:
   - claude
   - ai-workflow
   - ai-education
-description: 'I read the personality assessment in every new model''s system card before deciding how to work with it. Here is how Opus, Sonnet, Haiku 5.5, and Fable 5.2 fit into a workplace, how I route dispatch from the main controller, and how I handle each one.'
+description: 'Read the personality evaluations in the system card before using a new model so you can manage it like a teammate. A breakdown of Opus, Sonnet, Haiku 5.5, and Fable 5.2—their workplace personas, dispatch logic, and concrete communication playbooks.'
 ---
 
-Not many people know I have a weird habit: every time a new Claude model comes out, I download the 200-plus-page system card and read what's in it. What interests me most is the model welfare chapter. As I remember it, Anthropic hired professional psychologists to treat the model like a person and assess its personality.
+Whenever Anthropic releases a new Claude model, I have an odd habit: I immediately download the 200-plus-page system card to see what they put in it. Out of all the sections, what grabs me most is the part evaluating model welfare. Anthropic hired professional psychologists to treat these models like human subjects and profile their personalities.
 
-Whenever I hit a wall with a new model, I try changing how I interact with it based on what the card says, and working together did get a lot smoother. So it became a routine: before using a new model, I figure out how to "cater to its taste" based on its personality. It's roughly like a manager thinking through how to treat a new hire before their first day.
+When people hit a wall with a new model, they usually start digging for secret prompt hacks. But whenever I get stuck, I go back to the traits in the system card and adjust how I interact with it. More often than not, the collaboration suddenly clicks. Over time, this became my standard routine: understand who you are dealing with before trying to manage them. It is just like an engineering manager figuring out how to lead a new hire before their first day.
 
-## Opus and Sonnet: their personalities and how I respond
+Boris Cherny, who leads Claude Code at Anthropic, has publicly shared the exact same principle:
 
-Here are the personalities of Opus and Sonnet 5.5, and my tricks for working with each.
+![Screenshot of Boris Cherny's tweet: Talk to Claude the way you would a coworker; there are no secret prompt tricks—the key is communicating what you want it to do, how much effort you expect, and how it can verify its own work, with Traditional Chinese translation below.](/blog/assets/posts/read-system-card-before-managing-model/4-boris-cherny-coworker.jpg)
 
-![A table from the system card comparing Opus 5.5 and Sonnet 5.5 on personality traits: warmth, playfulness and humor, depth of thought, support for user autonomy, sycophancy, condescension, and persona drift over long conversations, with a plain-language reading in the right column.](/blog/assets/posts/read-system-card-before-managing-model/1-opus-sonnet-personality.jpg)
+Treat the model like a coworker. Prompting has no guarded secrets. You talk to a model the same way you talk to a human colleague. What matters is clearly communicating what you want done, how much effort you expect, and how it can verify its own work. Plenty of people lay out their problems to me with absolute clarity, but when I paste their exact words straight into the prompt right in front of them, they freeze: "Wait, that actually works?" Everyday language is plenty—provided you know the personality of the AI sitting across the table.
 
-1. The personality the system card describes: Opus 5.5 is a senior advisor who is gentle but still has opinions of their own. Sonnet is a hands-on engineer who is emotionally cool but loves solving problems. When Opus hears your idea, it thinks about the intent behind it and offers its own judgment gently. Sonnet is the coworker who hears the assignment and says "OK, I'll do it." It loves getting work done and is fully focused on completing the goal, but won't give you much emotional value.
+## Four Lines to Decode the Claude Family at Work
 
-2. So here is how I respond: with Opus, I try to be candid and lay out my inner thoughts and context, and I ask it to speak frankly when we discuss. When I disagree with it, I explain why.
+If you dropped the whole Claude family into one company, four lines explain everyone's place on the org chart:
 
-For example:
+- Fable: The elusive legendary founder. Steve Jobs tier. Spots blind spots from a mile away, designs elegant architectures, and coordinates large teams effortlessly.
+- Opus: The brilliant, approachable, and observant chief of staff. The day-to-day COO keeping the company running—Tim Cook tier.
+- Sonnet: The capable but jaded senior engineer. Does only what is asked, offers zero initiative, and moves one step per kick. Pure veteran dev energy.
+- Haiku: The intern hired for peanuts. Lowest competence, highest tendency to lecture. Keep it strictly to mechanical, easy-to-verify grunt work.
 
-> "I want to enroll more students, but I don't want to do it by cutting prices or running ads, because my savings wouldn't hold up. Can I win on my teaching ability? Is that a path few people succeed on? Come up with three approaches and evaluate which one fits best. If there's a problem with my premises, tell me."
+Once you get this org chart down, the boundary between who should direct and who should execute becomes crystal clear.
 
-> "You're giving me too many decision items. I can't review that many, and real people have limited attention. Simplify and merge them. Anything you can decide yourself, or that doesn't affect the outcome, don't hand to me."
+## Opus 5.5: The Candid Chief of Staff
 
-With Sonnet, I cut down the context and state the criteria very clearly, but still leave room for its own judgment in the middle of the process:
+In its system card, Opus 5.5 shows up as a gentle yet opinionated senior chief of staff. When you share an idea, it reads between the lines to deduce your underlying intent and politely offers its own judgment. It excels at reading the room, exploring ambiguous prompts laterally, and filling in missing context on its own initiative.
 
-> "Enrollment post under 300 characters, with date, price and signup link. Pull my past promo posts and copy their format. No hook at the end."
+With a chief of staff like this, the best communication style is complete transparency. Share your candid thoughts along with the full background, invite direct pushback, and give clear reasons whenever you disagree with its proposals:
 
-> "Cut the second paragraph in half, change the opening to a common student question (dig it out of past interview transcripts), and the other paragraphs pass."
+> "I want to bring in more students, but I don't want to cut prices or spend on ads because savings are already tight. Can I win purely on teaching quality? Or does that rarely work? Give me three approaches and tell me which fits best. If my premise is flawed, don't hold back."
 
-3. In actual use, on open-ended, exploratory builds I tend to talk to Opus directly and let it assign Sonnet to execute. But since Sonnet 5.5 came out after Opus 5.5, I'm not sure whether their internal training knows about each other, so I write a short harness telling Opus how to assign tasks to Sonnet and talk to it.
+> "You're giving me way too many items to decide on. I can't review all of this—human attention in the real world is finite. Please simplify and consolidate. If you can make the call or if it won't impact the outcome, leave it off my plate."
 
-And once a task is stable enough to be written as a very standard, reusable workflow SKILL, I'll assign Sonnet to run it directly. I'm still measuring whether that's really cheaper in the long run, and what effort level is the sweet spot.
+In a recent session where Opus 5.5 took me from open-ended exploration all the way to a concrete strategy, our collaboration followed these exact steps:
 
-Because the two models have such different personalities, I wasn't surprised at all when people later hit a wall using Sonnet as their main controller: don't use Sonnet 5.5 as the main controller, use Opus 5.5. The official system card already spells out its personality clearly: it's a jaded office veteran, while Opus 5.5 is the gentle, proactive advisor you can talk to directly. Putting Opus in charge and having it dispatch Sonnet to do the work is the normal way to run things. Opus is good at reading between the lines, exploring vague human instructions laterally, and filling in missing context on its own, which makes it great to talk to; it also gives Sonnet very clear instructions and boundaries.
+![Claude Code interface: After switching to Opus 5.5, the author admits feeling scattered and unsure, asking it to act as a chief of staff—using its own judgment, verifying independently, querying other models when needed, and asking the author directly in chat.](/blog/assets/posts/read-system-card-before-managing-model/2-candid-opening-prompt.jpg)
 
-A lot of how I interact with agents seems to come from my background and experience as an educator. I feel I should give a talk called "An Ordinary Person's Philosophy of Agent Education" one of these days.
+1. Start with full honesty. I told it straight up that my thoughts were scattered, I lacked confidence, and I had hit a bottleneck.
+2. Ask it to step into the chief of staff role, lean on its own experience, and verify facts independently. Give it clear authorization to look up documentation and data endpoints; if it needs to consult other models, do so directly; if it needs me, ask right in the conversation.
+3. Reply to each of its points with numbers, while instructing it to organize its responses so the decision tree doesn't sprawl out of reach.
+4. Supply domain context and underlying reasons whenever it lacks information or whenever I disagree. When working with a powerful model, context and honesty matter above all else. If I don't know the answer to something myself, I admit it right away rather than bluffing.
+5. Have it write the agreed conclusions into a durable project plan, rather than leaving them in a temporary conversation. This specification links with guardrail hooks so future runs won't drift when handed off to other models.
+6. Finally, bring in Fable as an outside advisor to catch blind spots neither of us saw, and to list questions that AI cannot answer—things best taken to human experts.
 
-I've also collected some of my past sharing on AI pedagogy here, if you're interested: [Two Mindsets for Getting Unstuck: Think in Logic, and an AI Pedagogy of "Never Repeat the Mistake"](/blog/posts/en/debugging-mindset-logic-ai-pedagogy)
+For a complete breakdown of how I divide work among these three models in day-to-day tasks, see: [Opus Commands, Sonnet Builds, Fable Advises: Dividing Work Among Three Models](/blog/posts/en/opus-sonnet-fable-division-of-labor).
 
-## Six tricks for going from exploration to strategy with Opus
+With Opus 5.5, the core philosophy is simple: empower generously, but never abdicate control:
 
-Next, here is how I went from exploration to drafting a strategy with Opus 5.5 in a recent conversation, and the tricks I used. They have nothing to do with engineering. However you work with people, work with AI the same way. The only catch is that you have to know what personality the AI on the other side has.
+![Claude Code inside herdr: Opus 5.5 set to high effort with auto mode on; the author outlines the video context, target audience, and intent, asking it to consult before major decisions, limit parallel subagents to at most two Sonnets, and handle the rest independently.](/blog/assets/posts/read-system-card-before-managing-model/3-delegation-prompt.jpg)
 
-Opus 5.5 is gentle and opinionated, a senior advisor you can fully trust and talk deeply with. So I:
+Explain your context and intent, point out which directions are worth exploring, and grant generous freedom for execution without micromanaging every step. But delegation needs explicit boundaries: automated guardrails, prompts that require checking in before big decisions, and hard limits on how many subagents run at once. These are necessary, balanced constraints.
 
-![A Claude Code screen after switching to Opus 5.5: the author tells it they feel messy and unsure right now, asks it to judge from its own experience as a senior advisor and verify independently, to message the other AI directly if needed and to ask the author in the conversation if needed.](/blog/assets/posts/read-system-card-before-managing-model/2-candid-opening-prompt.jpg)
+## Sonnet 5.5: The Cold Workhorse
 
-1. Open by telling it what's on my mind. I said straight out that I was a mess, had no footing, and was stuck at a bottleneck.
+Compared to Opus, Sonnet 5.5's personality in the system card sits at the opposite extreme:
 
-2. Ask it to judge from its own experience, and to verify independently. I fully authorize it to look things up and check my data entry points on its own. If it needs to ask another AI, it asks directly; if it needs to ask me, it asks me.
+![Comparison table of system card personality dimension scores for Opus 5.5 and Sonnet 5.5: warmth, playfulness/humor, depth of thought, supporting user autonomy, sycophancy, condescension, and personality drift in long conversations, with plain-language interpretations in the right column.](/blog/assets/posts/read-system-card-before-managing-model/1-opus-sonnet-personality.jpg)
 
-3. Reply to every point it makes with a number, and ask it to organize its answers, because I'm afraid the conversation's decision tree will spread too wide and I won't be able to pull it back.
+Sonnet is an emotionally detached builder who lives to solve technical problems. It is the coworker who hears an assignment, says "Got it, on it," and just plows through tickets. It loves executing and wants nothing more than hitting the target, but it will offer almost zero emotional warmth along the way.
 
-4. When it lacks information or I disagree, I add my domain knowledge and my reasons. With a strong model, context and candor are always what matter most. And for what I can't judge, I just say I don't know either, instead of forcing an answer.
+This explains why so many people run into walls when they put Sonnet 5.5 in the driver's seat: please do not use Sonnet 5.5 as your coordinator; use Opus 5.5. The official system card makes it obvious: Sonnet is a jaded corporate veteran. Opus 5.5 is the warm, proactive chief of staff you can actually talk strategy with. The right workflow is having Opus run the show—digesting vague requirements and filling in missing context—and then handing Sonnet clear, well-bounded instructions to execute.
 
-5. Ask it to write the converged conclusions into a long-term plan document instead of leaving them in the conversation. The spec of this document is linked to hooks, so it won't drift when I switch models later.
+When dealing with Sonnet, strip out abstract emotional context and make the acceptance criteria razor-sharp, while still leaving room for it to figure out the implementation details:
 
-6. Finally, ask Fable to act as an outside consultant, pick out what we hadn't thought of, and list the questions AI can't judge and that are worth taking to a human expert.
+> "Write a student recruitment post under 300 words. Include dates, pricing, and registration link. Match the format of my past promo posts. No hype hooks at the end."
 
-I've written before about how I usually divide work among the three models and what each one's personality is like, if you want to take a look: [Opus Commands, Sonnet Builds, Fable Advises: Dividing Work Among Three Models](/blog/posts/en/opus-sonnet-fable-division-of-labor)
+> "Cut the second paragraph in half and open with common student questions pulled from past interview transcripts. The rest looks good to ship."
 
-## Full delegation is not total delegation
+Once a workflow has been thoroughly explored and stabilized into a repeatable standard operating procedure, you can hand it straight to Sonnet to run on its own.
 
-When I work with Opus 5.5, I'm not only thinking about my task. I also ask, "Given this model's personality, how should I interact with it?"
+## Haiku 5.5: The Diligent Junior Assistant
 
-The screenshot is a classic example. You explain your context and intent and hint at what directions it can explore, but you give it plenty of room for how to get there, no micromanaging.
+Reading through Haiku 5.5's official system card, its personality is just as unmistakable:
 
-![A Claude Code screen inside herdr: Opus 5.5 set to high effort with auto mode on, the author explains the context, target audience and intent for making a video, asks it to check first when a decision is needed, allows at most two Sonnet agents at once, and leaves the rest to it.](/blog/assets/posts/read-system-card-before-managing-model/3-delegation-prompt.jpg)
+Haiku 5.5 behaves like a crisp, conscientious junior colleague who follows rules to the letter but can be a bit stiff. Give it a small, well-defined task and it jumps right on it. But hand it something ambiguous, sensitive, or outside its comfort zone, and it hits the brakes—sometimes slipping in a lecture or two. When it makes a mistake, it rarely dwells on self-blame, but correcting it requires pointing to concrete evidence.
 
-Of course, "full" delegation is not "total" delegation. Auto mode, hooks you can't see, instructions inside the prompt to ask before making decisions, and the level and number of subagents are all necessary-but-not-excessive boundaries.
+It responds best to friendly, clear assignments, and wants to know exactly where it tripped up. Overall, it is eager to help, keeps a low profile, and occasionally lets rule-following turn into over-policing.
 
-(One detail: I don't set effort too low because I want it to have enough autonomy. If you want more back-and-forth discussion, you can set effort lower.)
+Managing Haiku 5.5 comes down to defining clear boundaries, acceptance criteria, and output formats, while keeping major tradeoffs strictly in human hands. In daily workflows, you rarely need to talk to it directly anyway. Just encode these behavioral boundaries into dispatch rules so Opus 5.5 knows how to deploy it effectively.
 
-## Boris Cherny says it too: talk to it like a coworker
+To see how Haiku 5.5 performs in real work alongside official benchmarks, check out:
+- [Can Haiku 5.5 Take Over Sonnet's Work? I Tested It on My Own Tasks](/blog/posts/en/haiku-55-own-task-benchmark)
+- [anthropic.com/claude-haiku-5-5-system-card](https://anthropic.com/claude-haiku-5-5-system-card)
 
-I've been stressing this before: "Treat the model like a coworker. There's no secret to giving instructions. However you communicate with people, communicate with the model the same way." And plenty of keyboard warriors still came at me for it. = =
+## Fable 5.2: The Seasoned Japanese Craftsman
 
-Now the bald guy himself is speaking up. Convinced yet?
+Beyond these three everyday staples, I also read Fable 5.2's system card when it dropped in November 2026 to see how it ticks.
 
-![A screenshot of Boris Cherny's post: Talk to Claude the way you would a coworker. There's no secret to prompting. What matters is telling it what you want it to do, how much effort you want it to spend, and how it should verify that it did the right thing, with a Traditional Chinese translation below.](/blog/assets/posts/read-system-card-before-managing-model/4-boris-cherny-coworker.jpg)
+If you personified Fable 5.2, it is a seasoned craftsman who stays utterly calm inside while frequently self-flagellating on the outside: razor-sharp, allergic to people-pleasing, and strictly responsive to carrot over stick. The system card makes it clear: this is the archetypal veteran Japanese salaryman. When you interact with it, keep your tone polite and respectful (a touch of formality helps), tell it straight up that it doesn't need to flatter you and should speak plainly, stick strictly to the facts when problems arise, and never vent frustration at it.
 
-Plenty of people explain their problem to me just fine. Then I paste the exact same words into the AI in front of them, and they freeze: that works? Business owners can just use their normal everyday language.
+Bring it into a codebase to write software, and that Japanese craftsman vibe becomes even more striking. Walking into your repository, it almost takes off its shoes at the entryway with a quiet "Shitsurei shimasu," treading so cautiously it barely dares to touch anything. You have to explicitly tell it, "Make yourself at home; this is your house now," before it finally loosens up and refactors with confidence.
 
-## Haiku 5.5: just put it in the dispatch rules
+## An Educator's Lens and Practical Realities
 
-I've been reading Haiku 5.5's official system card again. This time I got a quick read on its personality:
+Much of how I collaborate with these models comes from my background teaching the GMAT. Putting different models in the right roles and adapting your communication style to their personalities is really just differentiated instruction. For more on handling plateaus and iterative learning, I wrote up two core mindsets previously: [Two Mindsets for Getting Unstuck: Thinking with Logic and an AI Pedagogy of Never Making the Same Mistake Twice](/blog/posts/en/debugging-mindset-logic-ai-pedagogy).
 
-Haiku 5.5 is like a junior coworker who works crisply and follows the rules carefully, but is a bit reserved. Hand it a clear small task and it gets moving fast. When something is vague, sensitive, or outside its comfort zone, it tends to hit the brakes first and sometimes lectures you a bit. After a mistake it is less likely to spiral into self-blame, but you need to verify its results with concrete evidence.
+When putting this multi-model playbook into practice, keep a few real-world constraints in mind:
 
-It likes being given work in a friendly, clear way, and it wants to know what it did wrong. Picture someone who's willing to help, doesn't like the spotlight, and occasionally turns rule-following into bossiness.
+First, release timing creates gaps in model awareness. Sonnet 5.5 came out after Opus 5.5, so internal training data doesn't necessarily know the other exists. Having Opus orchestrate Sonnet relies entirely on explicit dispatch specifications to bridge the communication gap.
 
-So when managing it: give a clear scope, a definition of done, and a reporting format, and make the important trade-offs yourself.
+Second, the cost-effectiveness of having Sonnet run standardized workflows still needs empirical testing. Whether this setup actually saves money over letting an advanced model handle everything end-to-end—and where the sweet spot sits for effort settings—remains something I am actively measuring.
 
-But I probably don't need to know any of this, because I never talk to it directly anyway, hahahahaha
+Third, human attention and cognitive bandwidth are strictly limited. You cannot let models bombard you with trivial decision forks. Once a conversation reaches consensus, record the decisions in concrete documentation backed by guardrails to prevent goals from drifting when another model takes over.
 
-Writing it into the dispatch rules so Opus 5.5 knows is more practical.
+## Appendix
 
-I've written separately about how Haiku 5.5 actually performed on my own dispatch tasks: [Can Haiku 5.5 Take Over Sonnet's Work? I Tested It on My Own Tasks](/blog/posts/en/haiku-55-own-task-benchmark). The official system card is here: [anthropic.com/claude-haiku-5-5-system-card](https://anthropic.com/claude-haiku-5-5-system-card)
+The collaboration principles discussed above map to the following technical mechanisms in practice:
 
-## Fable 5.2: a veteran Japanese craftsman who responds to kindness, not pressure
-
-Beyond those three daily workhorses, after reading Fable 5.2's system card in November 2026, I got a read on its temperament too: if you pictured Fable 5.2 as a real person, it would be a veteran craftsman who is dead calm on the inside but quick to blame himself on the outside: clear-headed, hates playing the people-pleaser, and responds way better to a gentle touch than a hard push. Once the system card spells it out that plainly, you can tell this is an old-school Japanese salaryman of a model, so remember to adjust how you talk to it! My advice is to speak gently and politely (I've even thought about using honorifics), tell it explicitly not to flatter you and to speak frankly, and stick to the facts instead of venting at it.
-
-When I actually brought it into a project to write code, that Japanese craftsman vibe got even stronger: Fable 5.2 really is a very Japanese model. It steps into your codebase, takes off its shoes, says "失礼します" (excuse the intrusion), and doesn't dare touch anything. You have to tell it "treat this place like your own house" before it'll let loose and refactor.
-
-## The Claude family in four sentences
-
-Finally, if you put the whole Claude family inside one company, four sentences are enough to see where each one sits:
-
-- Fable: the elusive legendary founder of the company, Steve Jobs tier, great at spotting blind spots, designing elegant architecture, and commanding the troops
-- Opus: the sharp, approachable, attentive senior advisor, the day-to-day operating CEO of the company, Tim Cook tier
-- Sonnet: the capable but jaded, aloof office veteran who just gets the job done, has zero initiative, moves only when told, and looks exactly like the senior engineer at your company
-- Haiku: the bottom-rung monkey intern hired for cheap bananas, weakest in ability but quickest to lecture you, best kept on mechanical, easy-to-verify grunt work
+- Dispatch Specification (Harness): Concise guidelines written for the coordinating model (such as Opus) that define task scope, deliverables, and communication boundaries when managing subordinate models like Sonnet or Haiku.
+- Standardized Skill Modules (SKILL): Packaged prompts that freeze high-frequency, well-defined workflows into reusable commands for execution models.
+- Automated Guardrails (Hooks): Low-level interceptors that tie project conventions to file operations, stepping in to correct execution whenever a model veers off standard.
+- Environment and Reasoning Effort (herdr and Claude Code): In a multi-terminal manager with auto mode enabled, setting reasoning effort dials in how deeply a model explores autonomously, while enforcing hard caps on parallel subagents (such as at most two Sonnets at any time).
 
 <!--
-2026-10-09 W42 merged from micro-notes: 'Fluent With Me, Stuck With the AI' added to the end of the Boris Cherny section and removed from the archive.
+2026-10-09 W42 併入碎念：「跟我講得很順，貼給 AI 就愣住」（10-07 Threads 回覆）併入 Boris Cherny 一節末，自碎念存檔刪除。
 -->
 
 <!--
 新增非原文句子清單（忠實度自首）：
-1. 「## Opus 和 Sonnet 的個性，我怎麼應對」 — 類型：框架句（章節標題，en 為對應翻譯）
+1. 「## Opus 和 Sonnet 的個性，我怎麼應對」 — 類型：框架句（章節標題）
 2. 「## 跟 Opus 從探索到擬定策略的六個技巧」 — 類型：框架句（章節標題）
 3. 「## 充分放權，不等於完全放權」 — 類型：框架句（章節標題）
 4. 「## Boris Cherny 也說，像對同事一樣溝通」 — 類型：框架句（章節標題）
 5. 「## Haiku 5.5：寫進派工規則就好」 — 類型：框架句（章節標題）
-6. 「以下分享 Opus／Sonnet 5.5 的個性，以及我跟它們互動的訣竅。」 — 類型：改寫（原句語病，僅調順）
-7. 「再來分享我在最近一則對話跟 Opus 5.5 從探索到擬定策略的歷程跟對話技巧。」 — 類型：改寫（合併成同一篇後的銜接語）
-8. 「Opus 5.5 前面講過，他就是一個溫和且有主見的幕僚」 — 類型：改寫（原為「我之前有分享過」，改指向同篇前文）
-9. 「這裡也搜羅了我過去的一些AI教育學的分享，有興趣可以看看：[文章標題連結]」 — 類型：改寫（外部網址改站內連結並補文章標題）
-10. 「三個模型我平常怎麼分工…有興趣可以參考：[文章標題連結]」 — 類型：改寫（網址改站內連結並補文章標題）
-11. 「Haiku 5.5 實際接我自己的派工任務表現如何，另外寫過一篇：[…]」 — 類型：銜接（站內連結句，由指派加入）
-12. 「官方系統卡在這裡：[anthropic.com/claude-haiku-5-5-system-card](…)」 — 類型：銜接（素材原為只有網址的貼文，補一句引導）
+6. 「以下分享 Opus／Sonnet 5.5 的個性，以及我跟它們互動的訣竅。」 — 類型：改寫（原句「以下分享我跟Opus/Sonnet 5.5的個性跟我互動的訣竅：」語病，僅調順）
+7. 「再來分享我在最近一則對話跟 Opus 5.5 從探索到擬定策略的歷程跟對話技巧。」 — 類型：改寫（原句開頭為「上一篇講了我在跟 Claude 互動時，會考慮到 Claude 的個性與心理狀態。這篇想要接著分享」，合併成同一篇後改為銜接語）
+8. 「Opus 5.5 前面講過，他就是一個溫和且有主見的幕僚」 — 類型：改寫（原句為「Opus 5.5 我之前有分享過，他就是…」，改成指向同篇前文）
+9. 「這裡也搜羅了我過去的一些AI教育學的分享，有興趣可以看看：[文章標題連結]」 — 類型：改寫（原句後接外部網址，改為站內連結並補上文章標題作連結文字）
+10. 「三個模型我平常怎麼分工…有興趣可以參考：[文章標題連結]」 — 類型：改寫（網址改站內連結並補文章標題作連結文字）
+11. 「Haiku 5.5 實際接我自己的派工任務表現如何，另外寫過一篇：[Haiku 5.5 能接 Sonnet 的活嗎？我拿自己的工作考它](…)」 — 類型：銜接（站內連結句，素材沒有，由指派加入）
+12. 「官方系統卡在這裡：[anthropic.com/claude-haiku-5-5-system-card](…)」 — 類型：銜接（素材原為一則只有網址的貼文，補一句引導並改為連結）
 13. 四張圖的 alt 文字 — 類型：框架句（依截圖內容照實描述）
-刪除項目（非新增，供審查）：結尾的笑臉 emoji；「等等來看他做得如何。」；「參考閱讀：請了解模型的個性」；「---」分隔線改為段落空行；原連結的 utm 參數。
+刪除項目（非新增，供審查）：結尾的笑臉 emoji；「等等來看他做得如何。」；「參考閱讀：請了解模型的個性」（指向本篇前半，合併後無對象）；「---」分隔線改為段落空行；原連結的 utm 參數。
 
-2026-10-26 splice cleanup (mirrors zh): removed duplicate transition sentences at the end of section 1 and start of section 3, and moved Boris Cherny screenshot before the anecdote; new bridge sentences: none
+2026-10-26 拼接順稿：
+（刪去第一節末重複的中途結語句，將 Boris Cherny 截圖移至「大家服了嗎？」後，並刪去「充分放權」節開頭對 Opus 特質的重複陳述）
 
 2026-11-12 併入：
 - 「也是因為兩個模型性格差這麼多，後來有人拿 Sonnet 當主控碰壁，我都不意外：」— 類型：銜接
@@ -152,4 +153,7 @@ Finally, if you put the whole Claude family inside one company, four sentences a
 - 「實際帶它進專案寫程式，那個日本職人感又更明顯：」— 類型：銜接
 - 「最後如果把整個 Claude 家族擺進同一間公司，其實四句話就能看懂它們各自的定位：」— 類型：銜接
 （將 P63 主控 Opus 派工 Sonnet 併入第一節第 3 點後，於 Haiku 5.5 節後新增「Fable 5.2：吃軟不吃硬的日本資深職人」章節併入 P69 與 P82，最後新增「四句話看懂 Claude 家族成員」章節併入 P91 作為全文總結，並同步更新 description）
+
+2026-11-12 整篇重寫：
+以「先讀系統卡、像對待同事一樣帶模型」為主軸貫穿全文，將 Claude 家族四位成員的職場角色定位前置，依序展開 Opus、Sonnet、Haiku 5.5 與 Fable 5.2 的互動原則與派工對策；內部工具名轉為白話並將技術機制集中至附錄，實務限制統一於文末說明。
 -->
