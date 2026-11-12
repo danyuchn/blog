@@ -65,6 +65,9 @@ const ogImage = ogImageUrl
   : undefined;
 
 const postLang = getLangFromPost(post);
+/** Deep posts (raw markdown body >= 6000 characters) also link the 1-on-1 program. */
+const DEEP_POST_CHARS = 6000;
+const isDeep = (post.body?.length ?? 0) >= DEEP_POST_CHARS;
 const translation = findTranslation(post, posts);
 const translationUrl = translation
   ? getPath(translation.id, translation.filePath)
@@ -261,7 +264,7 @@ const relatedPosts = posts
 
     <BackToTopButton />
 
-    <DiagnosisCta lang={postLang} slug={post.id} />
+    <DiagnosisCta lang={postLang} slug={post.id} deep={isDeep} />
 
     {
       relatedPosts.length > 0 && (

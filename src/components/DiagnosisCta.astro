@@ -5,20 +5,28 @@ import type { Lang } from "@/utils/i18n";
 type Props = {
   lang: Lang;
   slug: string;
+  /** True when the raw post body is long enough for the 1-on-1 program link. */
+  deep?: boolean;
 };
 
-const { lang, slug } = Astro.props;
+const { lang, slug, deep = false } = Astro.props;
 
 const utmContent = slug.replace(/^(zh|en)\//, "");
-const soloParams = new URLSearchParams({
-  utm_source: "blog",
-  utm_medium: "post_cta",
-  utm_campaign: "blog_funnel_fix",
-  utm_content: utmContent,
-});
-const ctaUrl = `https://agentcrew.cc/l3/solo?${soloParams.toString()}`;
-const diagnosisUrl =
-  "https://agentcrew.cc/l3/inquire?utm_source=blog&utm_medium=post_cta&utm_campaign=diagnosis";
+
+function ctaHref(path: string, campaign: string) {
+  const params = new URLSearchParams({
+    utm_source: "blog",
+    utm_medium: "post_end",
+    utm_campaign: campaign,
+    utm_content: utmContent,
+  });
+  return `https://www.agentcrew.cc${path}?${params.toString()}`;
+}
+
+const l0Url = ctaHref("/l0/", "l0");
+const l1Url = ctaHref("/l1/", "l1");
+const diagnosisUrl = ctaHref("/l3/inquire", "diagnosis");
+const soloUrl = ctaHref("/l3/solo", "l3");
 ---
 
 <div
@@ -34,29 +42,49 @@ const diagnosisUrl =
       &rarr;
     </span>
     <h2 class="font-display text-xl font-bold text-foreground sm:text-2xl">
-      {t("solo.title", lang)}
+      {t("l0.title", lang)}
     </h2>
   </div>
   <p class="mt-3 text-sm leading-relaxed text-foreground/75 sm:text-base">
-    {t("solo.desc", lang)}
+    {t("l0.desc", lang)}
   </p>
   <a
-    href={ctaUrl}
+    href={l0Url}
     target="_blank"
     rel="noopener noreferrer"
     class="mt-5 inline-flex items-center gap-1.5 bg-accent px-5 py-3 text-sm font-semibold text-background no-underline"
   >
-    {t("solo.cta", lang)}
+    {t("l0.cta", lang)}
     <span aria-hidden="true">&rarr;</span>
   </a>
-  <p class="mt-4 text-sm text-foreground/75">
+  <p class="mt-4 flex flex-col gap-1.5 text-sm text-foreground/75">
+    <a
+      href={l1Url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-underline-slide w-fit text-accent"
+    >
+      {t("l1.link", lang)}
+    </a>
     <a
       href={diagnosisUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="link-underline-slide text-accent"
+      class="link-underline-slide w-fit text-accent"
     >
       {t("diagnosis.cta", lang)}
     </a>
+    {
+      deep && (
+        <a
+          href={soloUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-underline-slide w-fit text-accent"
+        >
+          {t("l3.link", lang)}
+        </a>
+      )
+    }
   </p>
 </div>

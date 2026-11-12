@@ -27,28 +27,28 @@ const ui: Record<string, Record<Lang, string>> = {
     en: "閱讀中文版",
     zh: "閱讀中文版",
   },
-  "solo.title": {
-    en: "3-month 1-on-1 AI coaching",
-    zh: "三個月一對一 AI 陪跑",
+  "l0.title": {
+    en: "Start with the free prep course",
+    zh: "先從免費預科開始",
   },
-  "solo.desc": {
-    en: "A prompt handbook written around your own work, two 2-hour 1-on-1 sessions, and DMs answered for three months. At the end you rerun the whole workflow yourself.",
-    zh: "照你工作寫的提示詞手冊、兩次一對一各 2 小時、三個月隨時私訊問，結案時你自己把流程重跑一次。",
+  "l0.desc": {
+    en: "The free L0 prep course gets Claude Code installed and your first result out. No programming background needed.",
+    zh: "免費的 L0 預科帶你把 Claude Code 裝好、跑出第一個結果，不用程式背景。",
   },
-  "solo.cta": {
-    en: "See what the program includes",
-    zh: "看方案內容",
+  "l0.cta": {
+    en: "Start the free L0 prep course",
+    zh: "免費開始 L0 預科",
   },
-  "diagnosis.title": {
-    en: "15-Minute AI Adoption Diagnosis",
-    zh: "15 分鐘導入診斷",
+  "l1.link": {
+    en: "L1 intro course: let AI finish your first real task",
+    zh: "L1 入門班：讓 AI 替你完成第一個真實任務",
   },
-  "diagnosis.desc": {
-    en: "Fill in a short form to book your free 1-on-1 diagnosis, and find out how you can work with AI without the pain and get a real productivity lift.",
-    zh: "填表預約你的專屬 1 對 1 免費診斷時段，了解你可以怎麼無痛與 AI 協作、大幅提升生產力。",
+  "l3.link": {
+    en: "3-month 1-on-1 program",
+    zh: "三個月一對一陪跑",
   },
   "diagnosis.cta": {
-    en: "Or book a free 15-minute diagnosis first",
+    en: "Or book a free 15-minute diagnosis",
     zh: "或先預約免費 15 分鐘診斷",
   },
 };
