@@ -10,7 +10,7 @@ tags:
   - claude-code
   - productivity
 description: 'After watching Boris Cherny break down the stages of AI adoption, it hit home: I''m stuck at stage 2.5, where limited attention plus low trust becomes a vicious cycle. This week I used late-night schedules, a morning dashboard, and herdr auto-spawning sessions to cut a 4-5 hour workflow down to 1-2 hours.'
-tldr: 'Managing 5-10 AI assistants at once quickly bottlenecks when limited attention and low trust force constant manual checks. By shifting routine tasks to overnight schedules and generating a 6 AM review dashboard with context summaries, daily collaboration time drops from 4-5 hours to 1-2 hours without sacrificing quality.'
+tldr: 'Managing multiple AI tasks at once can quickly overwhelm your attention with constant reviews. By running routine work overnight and reviewing one consolidated morning summary at 6 a.m., you can cut 4–5 hours of daily back-and-forth down to 1–2 hours without losing quality.'
 seoTitle: 'Stuck Managing AI? Cut Daily Review from 4-5 Hours to 1-2'
 ---
 

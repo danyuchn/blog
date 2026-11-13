@@ -10,7 +10,7 @@ tags:
   - ai-coding
   - developer-experience
 description: 'From Raw Prompting to Orchestration — the 778-upvote Reddit framework where every level exists because the previous one broke.'
-tldr: 'When Claude Code feels inconsistent—brilliant one moment and erratic the next—you have likely hit the ceiling of your current setup. Moving across five maturity levels from raw prompting and trimming CLAUDE.md from 145 to 77 lines, up to SOP skills, automated checks, and multi-agent orchestration shows that fixing AI mistakes requires better structure, not more chatting.'
+tldr: 'Feel like Claude Code is unpredictable and keeps going off track? The issue usually isn''t the AI—it''s hitting the ceiling of your current setup, where adding clear rules and check steps works far better than more chatting.'
 ---
 
 A lot of people say Claude Code is unstable. Works great sometimes, then suddenly goes off the rails. I used to think the same.

@@ -10,7 +10,7 @@ tags:
   - ai-workflow
   - ai-tools
 description: 'Claude Code has grown well past a basic terminal CLI into a system powered by skills, hooks, and agent orchestration. Here is how those pieces connect to keep daily workflows dependable.'
-tldr: 'Treating Claude Code as a simple chat tool often leads to ignored rules, messy multi-window juggling, and biased self-audits. By combining reusable workflow skills, system-level guardrails that intercept vague prompts, Agent View for multi-session management, and isolated context for independent reviews, you build a reliable automation system.'
+tldr: 'Think Claude Code is just for writing code? It has evolved into a full workflow platform where you can save repeated steps into manuals, set strict guardrails AI cannot bypass, and manage multiple tasks from one screen.'
 ---
 
 When most people first encounter Claude Code, they treat it like a simple terminal CLI that helps write code. Within a few months, though, the landscape shifted. What started as simple command-line chat turned into a complete architecture spanning skills, hooks, an agent view, and subagents.

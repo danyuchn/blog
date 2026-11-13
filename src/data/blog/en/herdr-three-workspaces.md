@@ -10,7 +10,7 @@ tags:
   - ai-workflow
   - productivity
 description: 'After Opus 5.5 analyzed 30 days of my session logs, I split herdr into standing, today and long-term workspaces. Four status lights keep the standing agent aware, and Opus can jump into the next pane to rescue a task.'
-tldr: 'Switching between multiple AI workspaces often leads to lost progress. Organize your spaces into three tiers: a standing area for overall management, a daily area for tasks that must be cleared each night, and a long-term area for multi-day projects, monitored by four distinct status lights.'
+tldr: 'Juggling multiple AI windows at once makes it easy to lose track of what is done. Splitting herdr into three workspaces—persistent, today, and long-term—with four status lights lets a lead AI track progress and even jump into another window to rescue stuck tasks.'
 ---
 
 This is how I use herdr.

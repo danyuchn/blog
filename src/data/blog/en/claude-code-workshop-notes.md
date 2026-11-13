@@ -10,7 +10,7 @@ tags:
   - ai-education
   - ai-coding
 description: 'Designing a Claude Code workshop for non-engineers — from analyzing signup demand to crafting the curriculum, plus 15 quick-start tips for zero-coding-background learners.'
-tldr: 'Guiding non-technical beginners to master AI agents requires shifting their mindset from simple chatbots to automated workflows. A successful curriculum demonstrates real-world tasks and teaches students to map out manual steps before delegating. With clear logic and intent, users can let AI handle ninety percent of the heavy lifting.'
+tldr: 'You do not need coding skills to direct Claude Code—what matters is clearly explaining how you already do the work. Insights from 80+ workshop signups show that stating your intent, starting with familiar tasks, and restarting when edits go sideways let AI handle 90% of the execution.'
 ---
 
 In late February I started planning a very different kind of Claude Code workshop — the goal was to get people with zero coding background to walk out with their own working workflow in five hours.

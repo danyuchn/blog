@@ -10,7 +10,7 @@ tags:
   - harness
   - claude-code
 description: 'Three near-leaks of API keys in one week, and none came from pasting one somewhere public: skill packaging, a masking command that failed, and a build config. Plus the rule I use to decide whether to rotate.'
-tldr: 'Pushing code to private repositories or using unverified masking commands often leads to accidental API key leaks. Keys frequently escape during file bundling, faulty regex substitutions, or local build exports. Once pushed to any remote repository, treat the key as compromised and rotate it immediately.'
+tldr: 'API keys often leak not from public paste mistakes, but from web-upload bundles, silent masking script failures, or local build settings. Follow one clear rule: if a key hits any remote repository—even a private one—treat it as leaked and rotate it; if it stayed local, just scrub the record.'
 ---
 
 I ran into three key-leak situations this week. None of them was the classic "pasted it somewhere public" mistake. They all came out of places I thought were safe: packaging, a masking command, and a build config. This post covers the mechanisms only, with no values.

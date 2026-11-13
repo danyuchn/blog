@@ -10,7 +10,7 @@ tags:
   - ai-coding
   - opinion
 description: 'We shouldn''t uniformly trash Vibe Coding, but we do need to recognize the traps in course quality. A teacher with 10+ years in the game shares how to tell the real deal from the fakes.'
-tldr: 'To avoid scams when learning AI-assisted development, steer clear of courses promising instant mastery and use saved time to understand the underlying logic. Always prioritize security, discuss the overall architecture with AI before building, and test patiently as you go.'
+tldr: 'Thinking about building tools with AI or buying a course, and worried about hype? A teacher with over 10 years of experience advises using AI-saved time to test and ask how things work, not to brag online. Check courses for real walkthroughs rather than instant-mastery promises, plus eight beginner traps to avoid.'
 ---
 
 My Threads feed has been flooded with Vibe Coding content lately -- the algorithm just keeps pushing it at me. More and more people are launching courses on Vibe Coding. Since I've been a teacher for over 10 years myself, one glance is usually enough to tell who actually knows their stuff and who doesn't.

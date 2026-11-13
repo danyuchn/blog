@@ -10,7 +10,7 @@ tags:
   - opinion
   - model-comparison
 description: 'Codex often slips into defensive mode, obsessing over not being wrong instead of figuring out what you actually need. Rather than arguing with it directly, let another model orchestrate the work, or assign it to adversarial reviews where its pedantry actually shines.'
-tldr: 'Some AI models become overly defensive, producing hedged and evasive answers to avoid making mistakes. Rather than trying to change their communication style, adjust their role in your workflow: let other models delegate tasks to them in the background, or leverage their nitpicking tendencies exclusively for rigorous review and edge-case testing.'
+tldr: 'Tired of AI hedging every answer just to avoid being wrong instead of helping you? Stop chatting with overly defensive models directly. Let another AI call them behind the scenes and put their nitpicking instinct to work on reviews and testing.'
 ---
 
 GPT-6 has an uncanny knack for defensive phrasing. You have to wonder what kind of reinforcement learning produced a model like this: it spends every waking token covering its back rather than figuring out what the user actually wants to know.

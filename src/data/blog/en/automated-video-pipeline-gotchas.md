@@ -10,7 +10,7 @@ tags:
   - gotchas
   - automation
 description: 'Four months of video automation gotchas, from Remotion through HyperFrames: truncated downloads that exit 0, thumbnail titles cut mid-word, transcript chunks returning zero lines, large uploads that hang. None of them raise an error.'
-tldr: 'Automating video production is risky when workflows fail silently while reporting success—like truncating 36 thumbnail titles into half-sentences or returning 0 lines for 5 of 13 transcript segments. Across four months and four tools, the lesson is clear: design for 90% automation with 10% manual fallback, and always verify actual outputs.'
+tldr: 'The biggest danger in automated video production and YouTube uploads is tools reporting success while silently dropping half the output. Drawing from four months of troubleshooting four toolchains, the core lesson is to skip chasing 100% automation: keep a 10% manual fallback and always verify the actual output file.'
 ---
 
 The dangerous part of this pipeline isn't that it breaks. It's that it quietly does half the work and reports success. A download exits 0 but the file is truncated. `compactTitle()` chopped titles into half-sentences and left them on YouTube across thirty-six videos. Five of thirteen transcript chunks returned zero lines and the merged result still looked complete. Not one of those threw an error. Here they are in order, from the [Remotion](/blog/posts/en/remotion-claude-code-videos) setup through to HyperFrames.

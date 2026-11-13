@@ -10,7 +10,7 @@ tags:
   - claude-code
   - ai-tools
 description: 'Fable 5 came back for one week only. I did not spend it on daily busywork — I spent it on high-leverage judgment, distilled into skills that cheap models can follow.'
-tldr: 'Wasting expensive, top-tier AI quotas on routine daily chores drains budgets quickly. The smartest approach is skill distillation: deploy your smartest model as an architect to analyze projects and produce reusable operating guidelines, then let cost-effective models handle everyday execution by strictly following those proven rules.'
+tldr: 'Using top AI models without burning through your quota means keeping them off daily chores. Have the most expensive model plan, review, and write reusable work rules, while cheaper models handle routine execution. Even in academic paper writing, this division of labor kept every single rule intact.'
 ---
 
 Fable 5 is back for a limited one-week window, so I'm going to protect my weekly quota with Sonnet 5 and pour everything else into Fable.

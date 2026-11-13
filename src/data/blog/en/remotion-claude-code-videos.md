@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - productivity
 description: 'I''d had the Remotion skill installed for a while, mostly just playing with it. Once I started making a free Claude Code tutorial series, I realized how good it actually is—from script discussion to export, 30 minutes gets you a 15-minute video with no retakes.'
-tldr: 'Struggling with time-consuming video editing software for tutorials? Discuss the script via chat, record your voiceover and screen demos, and let code automatically handle the animations and rendering. Once the workflow is established, you can produce a polished 15-minute tutorial in just half an hour.'
+tldr: 'Tired of wrestling with timelines and animation settings in traditional video editors? With Claude Code and Remotion, you don''t need coding or editing skills—just plan your lesson, record your voice and screen demos, and let AI handle the rest to produce a 15-minute tutorial in half an hour.'
 ---
 
 I had the Remotion skill installed for a while and mostly just played with it. When I started making a free Claude Code tutorial series, I finally realized how good it actually is.

@@ -10,7 +10,7 @@ tags:
   - harness
   - case-study
 description: 'A student built seven agents on an M5 Max and kept hitting timeouts. The problem wasn''t a weak model — it was skipping the basics: harness, context management, task routing.'
-tldr: 'Struggling with multi-agent setups that constantly freeze or time out? The breakdown usually stems from relying entirely on language prompts without an enforcement framework. Lay a solid foundation first by managing memory properly, routing complex reasoning to capable models, and handling repetitive steps with straightforward scripts.'
+tldr: 'Setting up 7 AI roles at once often leads to constant stalls and impossible troubleshooting. More AI helpers are not better: simplify your workflow, set clear rules, and avoid handing fixed, routine tasks to AI unless you can trace every step.'
 ---
 
 A student coming to class this Sunday emailed me with a situation I think is worth unpacking.

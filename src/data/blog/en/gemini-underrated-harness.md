@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - model-comparison
 description: 'A lot of people complain that Gemini isn''t good, but Google''s clunky web UI and native terminal harness are what drag it down. Once you hook it up to a proper interface via API, it easily outclasses other models in writing and multimodal work. Here is how I divide the workload across a $140-a-month Big Three setup.'
-tldr: 'If an AI feels clunky, the issue is often its native user interface rather than the underlying model. By combining a 140-dollar monthly setup across three major providers, you can assign complex reasoning to Claude, image generation to GPT, and writing polishing plus multimodal tasks to Google''s generous 20-dollar tier.'
+tldr: 'If Gemini feels underwhelming, the culprit is often its native interface rather than the model itself. This $140/month three-vendor setup pairs Claude for planning and $20 GPT for image generation and browser control with a $20 Gemini plan that handles writing, multimodal tasks, and generous cloud perks.'
 seoTitle: 'Why Gemini Feels Bad: Fix the UI for Writing & Multimodal'
 ---
 

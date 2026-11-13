@@ -9,7 +9,7 @@ tags:
   - developer-experience
   - productivity
 description: 'This week I exported a client proposal as HTML→PDF and split an internal report from PDF→images page by page. Both flows had a seemingly unsolvable trap. Each fix is one line of code, but tracking down that line cost me real time.'
-tldr: 'Exporting HTML to PDF often results in unexpected blank pages and unwanted white borders. This occurs because browser print engines apply a default 12mm print margin that ignores standard CSS rules. Adding `@page { margin: 0; size: A4; }` to your stylesheet completely fixes the issue.'
+tldr: 'Ever had a webpage look fine on screen, only to export as a PDF with blank pages and white borders, or get just one image when converting a multi-page PDF? Both traps have quick fixes: zero out margins with `@page` in CSS, and switch from macOS `qlmanage` to PyMuPDF for page-by-page image export.'
 ---
 
 Both traps share one thing: everything looks right in the browser, and what's wrong is the file you're about to send out.

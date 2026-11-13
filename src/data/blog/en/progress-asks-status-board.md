@@ -10,7 +10,7 @@ tags:
   - ai-workflow
   - harness
 description: 'Letting an AI run long jobs in the background is easy. Knowing where it got to when you come back is not. I counted two weeks of my own messages and found I was missing a status board, not more monitoring.'
-tldr: 'Letting AI handle long background tasks often causes anxiety, prompting users to repeatedly ask for updates. Simple completion alerts do not reveal real-time progress or remaining time. Setting up a lightweight status registry that logs start, batch milestones, and completion lets you instantly see task status and estimated finish times.'
+tldr: 'Tired of constantly asking AI "are you done yet?" while it runs long tasks? Out of 1,053 messages in two weeks, 41 were progress checks—even fixing completion alerts only bumped it from 2.07 to 2.4 times a day. What you actually need is a human-readable status board showing progress, ETA, and last check-in.'
 ---
 
 I often leave Claude working while I'm away from my desk. I once jotted down my four tricks for that: dispatch more subagents, use the history-find skill to dig up old sessions, set a /loop 30m tick so it polls on its own, and check /usage to see where each session's tokens went. In rainy season I even had Codex watch the Bangkok city weather office's page, and ping me whenever it judged a 50%+ chance of rain within the hour, so I could run out and bring the laundry in.

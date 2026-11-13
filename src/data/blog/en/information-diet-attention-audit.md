@@ -10,7 +10,7 @@ tags:
   - opinion
   - claude-code
 description: 'People obsess over whether every bite of food is clean, then swallow piles of dirty info online without a second thought. So I pulled my own Chrome history db and had it analyze my browsing habits. A few sections came out uglier than I expected.'
-tldr: 'We often spend hours on social media believing we are staying informed, when we are actually burning attention. An audit of 2,357 Threads visits revealed that 57% were spent checking personal notifications and posts, while absorbing external information accounted for just 17%. Auditing your habits is key to a healthier information diet.'
+tldr: 'What feels like information overload may actually be a feedback loop of checking your own notifications. An audit of 30 days of Chrome history revealed that 57% of 2,357 Threads visits were self-checks, while 59% of AI work went to system upkeep versus 9% to client delivery.'
 ---
 
 ## Clean Food and Dirty Info

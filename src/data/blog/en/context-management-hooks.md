@@ -10,7 +10,7 @@ tags:
   - ai-coding
   - developer-experience
 description: 'From Claude.md to Hooks — sharing the context management upgrade after heavy daily Claude Code usage. When rules pile up and compliance drops, Hooks become the perfect gatekeeper.'
-tldr: 'Piling too many guidelines into instructions causes AI to overlook rules and make careless mistakes. Keep primary instruction files under 200 lines and use conditional automated guards that cannot be bypassed. Enforcing mandatory checks when sending messages, installing third-party tools, or saving changes ensures critical safety steps are never skipped.'
+tldr: 'Do your AI instructions keep failing no matter how many rules you add? Keep your main guide under 200 lines, and set up mandatory checkpoints for high-risk actions like sending emails so the AI always stops for your approval.'
 ---
 
 Most people switching from chat windows to Claude Code hit a wall early on because they don't understand Claude.md. The next wall is understanding it but not knowing how to manage context.

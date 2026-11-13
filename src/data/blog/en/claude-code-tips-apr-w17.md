@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - ai-workflow
 description: 'When CLAUDE.md swells past a thousand lines, instructions get dropped, and rate limits hit within minutes, your harness needs an overhaul. A practical guide to splitting Rules, Memory, and Hooks, delegating to Haiku subagents, caching rules, Ghostty click fixes, and an automated video pipeline.'
-tldr: 'Piling instructions into a single configuration file causes AI to forget rules and burn through usage limits. Split your setup into distinct rules, memory, and automated safety guards while using plain-language mode for clarity. For heavy reading, delegate chapter summaries to budget models to preserve premium quotas.'
+tldr: 'Tired of Claude Code forgetting long instructions or burning through your quota in 15 minutes? Split your setup into separate rules, memory, and auto-checks, delegate long reading to lightweight models, and attach images in new messages rather than editing old ones. Treating it as a divided system keeps complex workflows running smoothly.'
 ---
 
 When I first adopted Claude Code as my daily driver, I walked straight into two familiar traps: stuffing every guideline into a single config file until it grew past a thousand lines and the model started forgetting things, and watching my 5-hour quota sit comfortably at 55% at 9:00 AM only to slam into a hard limit fifteen minutes later.

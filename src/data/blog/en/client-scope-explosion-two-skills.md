@@ -11,7 +11,7 @@ tags:
   - skills
   - ai-workflow
 description: 'Asking about revenue, metrics, and decisions in a single prompt, or never persisting conclusions after brainstorming. Two real-world cases of client drift with AI, and the fieldwork of using /explain, /first-principles, Grill-me, and checkpoint to rein their workflows back in.'
-tldr: 'Stuffing revenue goals, dashboard planning, and business strategy into a single prompt causes the AI to drift along with your scattered thoughts. When overwhelmed by information, instruct the AI to re-explain concepts in plain language or strip away unnecessary metrics. Focus on the core objective and document conclusions to produce actionable results.'
+tldr: 'Ever notice Claude drifting off-topic when you cram too many requests into one prompt? Two habits keep it on track: ask it to re-explain in plain high-school-level language and strip away unneeded assumptions, then save every agreed rule into files so nothing gets lost.'
 ---
 
 I used to think I was the only one who hits information overload talking to Claude and stops understanding what it's saying. Later I found out I'm not alone. My client has the same problem.

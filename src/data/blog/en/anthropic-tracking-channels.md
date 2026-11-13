@@ -11,7 +11,7 @@ tags:
   - claude
   - resources
 description: 'Since March 2026 I have been jotting down ways to follow Anthropic — official sources, employee accounts, third-party teardowns. Consolidating into one piece, with notes on the recent Mythos system-card controversy and the curious silence of Anthropic employees on social media.'
-tldr: 'Relying solely on keynotes or social media hype for AI news makes it easy to fall for exaggerated claims or misattributed features. Combining official research and 244-page system cards, employee social accounts like Thariq''s, and independent third-party benchmarks across 8 models reveals the gap between marketing and reality.'
+tldr: 'Overwhelmed by AI hype and unsure which product news to trust? Instead of relying on a single source, cross-check three channels: official research reports, employee social posts, and independent third-party tests. Combining all three helps you spot the gap between marketing claims and real-world limits.'
 ---
 
 Since March 2026 I have been jotting down ways to track Anthropic on Threads. After a few months, the patterns sort into three channels.

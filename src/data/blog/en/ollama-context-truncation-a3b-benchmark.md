@@ -10,7 +10,7 @@ tags:
   - harness
   - ai-tools
 description: 'Two things I logged: cco (Claude Code driven by local Ollama) had long been giving off-topic answers, and the root cause was not a weak model but a full harness whose system prompt had ballooned to 30-50k tokens and was being silently truncated; then I put A3B on the Mac mini for two days as a night worker.'
-tldr: 'When a local AI model gives irrelevant answers, the root cause is often silent prompt truncation rather than model capability. Expanding the context length limit and trimming bloated instructions restores accuracy. Local models excel at focused single-task duties like transcription and OCR, leaving complex orchestration to cloud frontier models.'
+tldr: 'If your local AI keeps giving off-topic answers, your long instructions may be getting silently cut off. Testing on a 48GB Mac mini shows local models are still too slow for long tasks, working best on single-step jobs like transcription, image text reading, and redacting sensitive files for cloud models.'
 ---
 
 If your local model keeps answering off-topic, don't reach for a different model yet — your system prompt may already be getting silently truncated.

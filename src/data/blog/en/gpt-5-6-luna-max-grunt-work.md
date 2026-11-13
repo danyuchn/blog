@@ -11,7 +11,7 @@ tags:
   - model-comparison
   - automation
 description: 'Offload time-consuming browser scraping and bulk data entry to budget models, while saving flagship models for spec review. From pulling bank statements and hunting award seats to tagging customer profiles, here is a durable framework for dividing AI labor.'
-tldr: 'When you need to scrape data from anti-scraping websites without APIs, avoid costly services or aggressive scripts. Set up a division of labor: let cheap models handle raw browser chores at human-like speeds overnight without getting blocked, and have advanced models review the final results.'
+tldr: 'Tired of manually tagging over 100 client records, downloading reports, or checking airline seats across tabs? You don''t need expensive flagship AI for repetitive grunt work—budget models that click through a real browser handle it well. Use a two-tier setup: let cheap models do the tedious clicking, and high-end models do the final review.'
 seoTitle: 'GPT-5.6 Luna Max: Browser Automation for Office Grunt Work'
 ---
 

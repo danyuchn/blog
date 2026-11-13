@@ -10,7 +10,7 @@ tags:
   - model-comparison
   - ai-workflow
 description: 'With Opus 5.5, Sonnet 5.5 and Fable 5.1 all out, my split is: Opus leads, verifies and deploys, Sonnet implements as a subagent, and Fable gets called in now and then as an advisor.'
-tldr: 'Juggling multiple AI models with different pricing and capabilities often leads to wasted budget and friction. The most efficient team setup uses an intuitive top-tier model to orchestrate and verify, a disciplined mid-tier model to execute concrete tasks, and brings in a broader strategic model only for second opinions when facing complex bottlenecks.'
+tldr: 'Not sure how to split tasks across Opus 5.5, Sonnet 5.5, and Fable 5.1? Let Opus 5.5 lead since it grasps intent best, use literal-minded Sonnet 5.5 as an execution helper, and call in Fable 5.1 as an advisor to spot blind spots. Avoid maxing out Sonnet—it actually costs more than Opus.'
 seoTitle: 'How to Divide Work Across Claude: Opus, Sonnet, and Fable'
 ---
 

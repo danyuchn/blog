@@ -10,7 +10,7 @@ tags:
   - ai-workflow
   - productivity
 description: 'Normal weekly reviews let you make excuses for yourself. Mirror System doesn''t offer reassurance — just feed your daily notes to Claude and watch it surface the patterns you''ve been avoiding.'
-tldr: 'Self-reviews often fail because our minds rationalize delays and avoid uncomfortable truths. By feeding a week of daily notes into AI and asking for purely factual critique without comforting words, you can spot avoided tasks and zero-progress areas. Recording only the single most uncomfortable finding forces real action.'
+tldr: 'Tend to make excuses for unfinished tasks during your weekly review? Feed your weekly notes to Claude with this no-comfort prompt template to spot repeated delays and the blind spots you keep avoiding.'
 ---
 
 In a normal weekly review, you'll make excuses for yourself.

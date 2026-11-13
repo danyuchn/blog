@@ -10,7 +10,7 @@ tags:
   - enterprise-ai
   - claude-code
 description: 'If you want to make your manager or coworkers feel Agentic AI in one second—and then open the door to an internal training engagement—my three go-to moves are cleaning up messy desktops, reconciling conflicting meeting notes and emails, and producing multi-version drafts for different recipients. These three hit office workers right in the pain.'
-tldr: 'Struggling to convince colleagues and managers of AI''s practical value without using technical jargon? Target three universal workplace headaches: organizing cluttered desktops into clean folders, reconciling conflicting meeting records within 5 minutes, and instantly generating 4 tailored email versions for different stakeholders to build instant trust.'
+tldr: 'To show your boss or coworkers how useful AI really is, skip the tech talk and demo three daily chores everyone hates. Use Claude Code to tidy messy folders, spot conflicts across meeting notes in 5 minutes, and draft four email versions in 3 minutes to build trust first.'
 ---
 
 If you want to make your manager or coworkers **feel Agentic AI in one second**, and from there pull the company toward a small-group advanced course, my three go-to moves are these.

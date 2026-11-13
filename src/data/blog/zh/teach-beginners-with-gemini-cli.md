@@ -10,7 +10,7 @@ tags:
   - teaching
   - ai-education
 description: '帶 Claude Code / Codex 初學者裝 Gemini Antigravity CLI 的五個步驟：從多模態 use case、CLI 介面的心理建設、語音轉錄的 quick win，一路帶到資料治理與本機模式。'
-tldr: '帶新手入門終端 AI 工具卻卡在打字介面或多模態限制？透過安裝具備語音辨識與圖片讀取強項的工具，現場示範發票報帳與精準語音轉錄，讓初學者立刻看見實質成效。這套流程能順暢串起各家模型優勢，並自然建立資料隱私與查核觀念。'
+tldr: '帶新手學進階 AI 工具常卡關，不妨先用 Gemini 做會議錄音轉文字和拍發票對帳，讓對方馬上看到成果再談資料隱私。若擔心轉錄內容出錯，只要獨立跑 2 到 3 次交叉比對，不到 5 分鐘就能自己核對出正確版本。'
 ---
 
 最近發現一個事情：帶裝 Gemini Antigravity CLI 治 Claude Code / Codex 初學者百病。

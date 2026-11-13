@@ -10,7 +10,7 @@ tags:
   - ai-education
   - ai-workflow
 description: 'I gave AI over two hundred transcripts of recorded student interviews and had it build a teaching knowledge base it looks up when preparing lessons. The AI said every quote was exact; a small program found 6 of 44 did not match. This post covers how I caught the errors, how I settle it when my own advice contradicts itself, and a starter prompt you can paste straight to an AI.'
-tldr: 'Want to transform teaching archives into an accurate AI knowledge base without fabricated outputs? Cut costs by sampling transcripts rather than reading everything, and run automated script checks to verify quoted sources. Manually decide on conflicting past methods to ensure the resulting repository is completely faithful to your practice.'
+tldr: 'Feeding 202 teaching transcripts to AI is costly, and a cheap model even invented 6 fake quotes out of 44 entries while claiming perfection. Instead, sample 22 sessions, run a simple check to verify every quote against the original text, and decide any conflicting teaching methods yourself.'
 ---
 
 I have taught the GMAT (the English-language test for applying to business school) for more than ten years. Recently I handed a batch of recorded student-interview transcripts to an AI and had it build a knowledge base it will look up later when preparing lessons and answering students' questions. Every statement in it carries my original words and the timestamp in the recording, so it can be checked, and where my own advice contradicts itself over the years, I make the call.

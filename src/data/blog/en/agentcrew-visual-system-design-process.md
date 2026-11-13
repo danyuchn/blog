@@ -10,7 +10,7 @@ tags:
   - agentcrew
   - non-engineer
 description: 'I am not a designer, but I spent this week iterating on a visual system for AgentCrew Academy with Fable, GPT-image-2, and GPT-5.6-sol. Here are the four rejected directions and the final spec applied to the website, slides, and documents.'
-tldr: 'For non-designers choosing a brand identity, generating proposals is now easy—the real challenge is your own taste. By using Fable or GPT-image-2 to create 5-10 style options and HTML prototypes, you can apply one unified visual system across websites, course slides, and A4 documents.'
+tldr: 'Can a non-designer build a cohesive brand look with AI? Because AI makes generating style options and real prototypes for websites, slides, and documents fast and cheap, the real challenge shifts to your own taste and judgment. Instead of guessing, have AI produce concrete visual options and pick from what you see.'
 ---
 
 I'm not a designer, but I spent a good chunk of this week picking a visual system for AgentCrew Academy.

@@ -10,7 +10,7 @@ tags:
   - security
   - lessons-learned
 description: 'Calendar invites, replies, and the internal notes on a hold event are all one-way doors. I got each of them wrong once this month, so here are the shapes of the accidents and the checks that catch them.'
-tldr: 'Letting AI manage emails and calendars risks irreversible, client-facing mistakes. Drawing from three real mishaps, you can prevent awkward errors by verifying ambiguous pronouns before triggering notifications, checking actual recipient and CC lists on reply-all drafts, and treating calendar notes with invitees as public information.'
+tldr: 'Letting an AI assistant send emails or update calendar invites can cause mistakes you cannot take back. Three real mishaps show the issue is rarely a bug, but unclear names, extra reply-all recipients, or internal notes leaking out. Always double-check the recipient list and visible fields before sending.'
 ---
 
 I wrote earlier about [your machine being the attack surface](/blog/posts/en/your-machine-is-the-attack-surface), which covers the local side: leftover credentials, permission flags, untrusted input. This is the other side, the moment an agent reaches out and touches an external system. I hit three of these this month. Same problem each time: once the thing ships you can't pull it back, and the mistake lands where the client can see it.

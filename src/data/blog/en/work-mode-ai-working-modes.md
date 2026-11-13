@@ -10,7 +10,7 @@ tags:
   - harness
   - ai-workflow
 description: 'I built work-mode, a Claude Code plugin with autonomous, delegate and wrap-up modes plus desktop/phone reply formats. The pain points, how it evolved, numbers from 136 sessions, and prompts you can copy.'
-tldr: 'If you are frustrated by AI constantly pausing for trivial confirmations or failing to wrap up, switching working modes can help. Configure AI to work autonomously on safe tasks, offload bulk work, and summarize pending decisions at closing, which boosted decision-list delivery from 10% to 86%.'
+tldr: 'Tired of AI constantly pausing to ask permission, rambling at wrap-up, or formatting poorly on mobile? Switching between autonomous, delegation, and wrap-up modes with one command boosted end-of-reply decision lists from 10% to 86% and saved 14% to 25% of weekly Claude quota. Includes eight practical prompts and a starter template.'
 seoTitle: 'Stop AI from Asking Constantly: Claude Code Working Modes'
 ---
 

@@ -10,7 +10,7 @@ tags:
   - skills
   - ai-workflow
 description: 'When a smarter model lands, how should you prune the bloated skills written to babysit older ones? Through video editing and cross-language translation tests, here''s how to run zero-skill baseline tests, cut obsolete guardrails, and turn core rules into clean specs.'
-tldr: 'Upgrading to more capable AI models makes bloated prompt guardrails and complex pre-processing rules obsolete. Stripping away outdated constraints for bare testing reveals tasks the model can now solve in one shot. Letting the model handle creative execution while reserving rules for core brand and delivery standards streamlines the entire workflow.'
+tldr: 'Still holding AI back with overly detailed rules built for older models? Testing Opus 5.5 on video editing and a 10-minute Vietnamese comedy translation without old rules delivered impressive results using at most 2% of a $100 weekly quota. Keep rules only for brand style and final standards, and drop the micro-steps.'
 ---
 
 There is a running joke: "If you learn slowly enough, you'll never have to learn anything at all."

@@ -10,7 +10,7 @@ tags:
   - ai-education
   - ai-workflow
 description: 'I went through 30 transcripts of one-on-one and company classes plus 751 commands I typed to AI in my own work, to see how I actually open a request, steer midway and close it. Includes 8 original lines and a starter prompt you can paste to an AI.'
-tldr: 'Worrying about crafting perfect prompts or constantly babysitting AI responses? Synthesized from 30 class transcripts and 751 spoken prompts, the key is stating your core goal upfront, drawing clear boundaries, and letting AI work uninterrupted. Verify outputs independently and capture corrections into standing rules.'
+tldr: 'Analyzing 30 classes and 751 real prompts shows AI handles messy, spoken instructions just fine. What actually matters are four habits: state your goal and boundaries upfront, tell AI to interview you when unclear, have a separate AI review the work, and save corrections at the end.'
 ---
 
 This post is about how I give spoken instructions to AI. The point is not precise wording. It is a few fixed moves: say why, draw a line around what it may and may not touch, let it ask first, and tell it to write things down when you are done.

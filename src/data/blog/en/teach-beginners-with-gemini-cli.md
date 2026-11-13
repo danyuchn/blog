@@ -10,7 +10,7 @@ tags:
   - teaching
   - ai-education
 description: 'Five steps I walk Claude Code / Codex beginners through when installing the Gemini Antigravity CLI: multimodal use cases, getting comfortable with a CLI, a quick win from voice transcription, and finishing on data governance and local mode.'
-tldr: 'Helping beginners adopt command-line AI tools without getting overwhelmed? Introduce a multimodal tool to showcase quick wins like invoice expense extraction and accurate meeting transcription with timestamps. This hands-on path demonstrates how different models excel at different tasks while naturally introducing data privacy principles.'
+tldr: 'Newcomers often freeze on advanced AI tools, so start with Gemini for instant wins like meeting transcription and receipt scanning before discussing data privacy. To prevent transcription errors, run 2 to 3 independent passes and compare differences—you can verify the right text in under 5 minutes.'
 ---
 
 Something I noticed recently: installing the Gemini Antigravity CLI with beginners cures most of what ails Claude Code / Codex newcomers.

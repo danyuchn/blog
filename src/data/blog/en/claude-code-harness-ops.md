@@ -10,7 +10,7 @@ tags:
   - harness
   - ai-workflow
 description: 'From March to April, running Claude Code as a long-running harness surfaced a bunch of issues. Survival tactics during the outage, my hook for cleaning up zombie processes, the silent memory bloat fixed in 2.1.86, the resume cache-miss fix in 2.1.90, and the Plan-Mode-question-density problem after 4.7.'
-tldr: 'When your AI tool slows down, interrupts auto mode with 6 questions, or burns quota upon resuming a chat, the outer operating environment—not the model—is usually to blame. Automatically clearing leftover background processes at wrap-up, updating to 2.1.86 and 2.1.90 to fix cache and memory leaks, and front-loading clarifications cuts interruptions to 1-2 questions.'
+tldr: 'When AI stalls or suddenly gets expensive, the culprit is often its outer memory and workflow layer rather than intelligence. If auto mode keeps interrupting you with questions, state every detail in your first message to cut 6 interruptions down to 1 or 2.'
 ---
 
 After six months of using Claude Code as a daily driver, I've come to a realization: the model's capability is already enough. What actually bottlenecks efficiency is the harness itself.

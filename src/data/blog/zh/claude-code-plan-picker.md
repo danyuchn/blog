@@ -10,7 +10,7 @@ tags:
   - subscription
   - ai-economics
 description: '誰該買 Pro、誰該買 Max 5x、Max 20x 要不要買，什麼時候直接用 API。價格以官方頁面為準，用量判斷來自我每天開 Claude Code 的經驗。'
-tldr: '不知道 Claude Code 訂閱該買哪檔？偶爾問問題選 20 美元 Pro，天天跑多步驟工作選 100 美元 Max 5x（近 30 天等值約 6,000 美元），別買週額度只多 2 倍的 20x；額度用完改買第二個 Pro 帳號或升級。'
+tldr: 'Claude 訂閱方案該買 20 美元的 Pro、100 美元還是 200 美元的 Max？實測建議日常工作直接選 100 美元方案最划算，200 美元的每週額度只多一倍且人腦根本跟不上驗收，偶爾才用的重度任務則改用按量付費。'
 seoTitle: 'Claude Code 訂閱方案怎麼選？Pro、Max 5x 與 API 費用評估'
 ---
 

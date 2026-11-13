@@ -11,7 +11,7 @@ tags:
   - claude-code
   - opinion
 description: 'From wanting 13 subagents to chat for me, to one person running 1000, to agents arguing across a table — the real bottleneck is the human main agent, and the fix is deduping before you dispatch.'
-tldr: 'Multiplying parallel AI assistants does not automatically speed up work; it often overwhelms the human bottleneck with conflicting outputs and review fatigue. Scaling helpers magnifies chaos unless materials are deduplicated beforehand. Establish a small, solid verification and review workflow before expanding the number of automated helpers.'
+tldr: 'Think launching dozens of AI assistants at once will double your speed? Every result still funnels back to you for review and final decisions, so blind multitasking just burns through your quota and energy—clean up conflicts first, and only delegate self-contained tasks.'
 ---
 
 ## I Really Want 13 Subagents to Chat for Me

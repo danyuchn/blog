@@ -10,7 +10,7 @@ tags:
   - model-comparison
   - ai-workflow
 description: 'Instead of official benchmarks, I built a test from 761 sub-agent jobs I actually delegated over 45 days. On seven checking tasks Haiku 5.5 matched Sonnet and Opus at about a tenth of the cost; long transcript extraction is still not complete enough.'
-tldr: 'To see if cheap models can replace expensive flagship models for verification chores, the author tested Haiku 5.5 on eight real-world tasks. At just $0.10 input per million units, Haiku 5.5 matched Sonnet on seven verification tasks while slashing costs to one-eleventh.'
+tldr: 'Wondering if budget-friendly Haiku 5.5 can replace Sonnet for daily work? Tested on seven verifiable tasks—like fact-checking numbers, reviewing drafts, and reconciling accounts—Haiku 5.5 matched Sonnet''s accuracy at one-eleventh the cost. Only long transcript extraction still needs Sonnet.'
 ---
 
 Haiku 5.5 came out yesterday. Official pricing is $0.10 per million input tokens and $0.50 per million output tokens (up to 100k), against $2 and $10 for Sonnet 5.5.

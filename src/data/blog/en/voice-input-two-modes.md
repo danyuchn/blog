@@ -10,7 +10,7 @@ tags:
   - productivity
   - gemini
 description: 'When working with Claude Code or Codex, use push-to-talk for quick prompts and full recordings for deep thinking. Here is a zero-setup browser trick and a headless CLI setup for agents to transcribe audio.'
-tldr: 'To instruct AI by voice without breaking your train of thought, use push-to-talk for quick tasks and full recordings for complex thinking. You can drop a 23-minute audio file into a multimodal model to get an accurate transcript with speaker identification in 55 seconds.'
+tldr: 'Tired of losing your train of thought when talking to AI? Use push-to-talk for quick chores, but switch to a single long recording when reviewing slides or complex ideas. For a zero-setup option, drag the audio file into Gemini on the web—a 23-minute recording transcribes in 55 seconds with zero typos.'
 ---
 
 Back in March, I was wishing coding and CLI AI tools had built-in voice input. Tools like Claude Code and Codex eventually rolled it out, but once microphone support arrived, that turned out to be the easy part. The real challenge was figuring out how to express my thoughts out loud without breaking my stride.

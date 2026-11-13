@@ -11,7 +11,7 @@ tags:
   - debugging
   - ai-tools
 description: 'Exit 0, HTTP 200, and a model saying "done" are all unreliable success signals. Cases from my own code, CLIs, and APIs through to a model inventing commit hashes out of thin air, ending with the one thing that actually holds.'
-tldr: 'Think your task succeeded just because no errors popped up? From tools returning empty payloads to AI fabricating tool outputs, the most dangerous failures are completely silent. Guard against these breakdowns by actively inspecting real-world data and enforcing automated gates before accepting any claim of completion.'
+tldr: 'No error message does not mean success—automated schedules can quietly fail for 8 days, and AI may even invent fake completion results. Asking AI nicely to follow rules is unreliable; the only real fix is setting hard verification checks and confirming actual outcomes.'
 ---
 
 The least reliable success signal you have is the absence of an error. Exit 0 can be a truncated file. HTTP 200 can be an empty response. A schedule that fires on time can run zero lines of code. And a model reporting "done, commit hash 3f9e8a2" can be entirely made up. This post lines up three layers of silent failure I ran into over six months — the tool layer, the model layer, the scheduler layer — and ends with the only defense I found that actually holds.

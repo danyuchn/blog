@@ -10,7 +10,7 @@ tags:
   - claude-code
   - gotchas
 description: 'I audited 14 days of PreToolUse hook ask prompts: 159 of them, roughly 70% false positives. A guard hook should match the command position, not the whole string, and you can measure the fix from hook events in the transcript without replaying anything.'
-tldr: 'When automated safety checks trigger too often on harmless actions, alert fatigue sets in. An audit of 159 confirmations over 14 days revealed a 70% false-positive rate. Stripping quoted text and matching only the command position reduced false alerts from 135 to 50 without compromising safety.'
+tldr: 'When an AI asks for confirmation too often, people get numb and click yes without reading. An audit of 159 prompts over 14 days found about 70% were false alarms; checking only the actual command instead of the full text cut triggers from 135 to 50, with all 27 test cases passing.'
 ---
 
 I went back through 14 days of PreToolUse hook ask events. There were 159, and about 70% were false positives.

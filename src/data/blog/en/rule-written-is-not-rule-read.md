@@ -10,7 +10,7 @@ tags:
   - skills
   - lessons-learned
 description: 'Writing a rule or skill into a file does not mean the model opened it this turn. Two lesson-prep misses this week, plus magpie''s lessons-file approach, show why the call site has to say "open and read this first."'
-tldr: 'Frustrated that AI still hallucinates despite established reference files? Simply writing guidelines does not mean AI reads them in that turn; you must explicitly instruct it to open and read. Recording recurring missteps into an error notebook before turning them into strict rules reliably prevents repeated mistakes.'
+tldr: 'Ever wonder why AI ignores rules you already wrote down? Writing a rule doesn''t mean AI actually opens and reads it—it often skims summaries and guesses the rest. Tell it explicitly which file to open before starting, and keep a mistake log where errors repeated three times become mandatory checks.'
 ---
 
 Several entries in this week's log say the same thing: a rule or skill got written, but nobody read it that turn. When one document depends on another, the call site has to say "open it and read it first." Otherwise the model reads a summary and derives the rest on its own.

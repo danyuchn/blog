@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - ai-workflow
 description: 'The gap between AI and human intent is closing fast, so what separates good output moves toward taste and verification — and verification is where human responsibility stays.'
-tldr: 'As AI gets better at understanding human intent, prompting matters less than taste and verification. Have AI generate 5 prototypes so you can choose what works, and remember that AI cannot take legal or professional responsibility—you must verify raw materials and actual results rather than trusting reports.'
+tldr: 'As AI gets better at understanding vague instructions, what sets people apart shifts to taste and verification—especially since humans still carry the final responsibility. When checking AI work, inspect the actual output and original source files directly rather than trusting AI''s own summary or flawed checklists.'
 ---
 
 ## The Alignment Gap Is Closing

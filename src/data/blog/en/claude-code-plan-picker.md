@@ -10,7 +10,7 @@ tags:
   - subscription
   - ai-economics
 description: 'Who should buy Pro, who should buy Max 5x, whether Max 20x is worth it, and when to just use the API. Prices come from Anthropic''s official pages; the usage judgment comes from running Claude Code every day.'
-tldr: 'Unsure whether to pick Claude Code''s $20 Pro, $100 Max 5x, or $200 Max 20x plan? Choose Pro for occasional questions and Max 5x for daily multi-step work (worth ~$6,000 in API value over 30 days), while skipping 20x since weekly quota only doubles; if you run out, buy a second Pro account or upgrade.'
+tldr: 'Unsure whether to buy the $20 Pro, $100 Max, or $200 Max Claude plan? Real-world testing points to the $100 plan for daily work, as the $200 tier only doubles weekly limits while human review becomes the bottleneck; use pay-as-you-go for occasional heavy tasks.'
 seoTitle: 'Claude Code Plans: Should You Buy Pro, Max 5x, or Use API?'
 ---
 

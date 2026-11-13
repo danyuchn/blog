@@ -10,7 +10,7 @@ tags:
   - ai-workflow
   - ai-education
 description: '新模型發布時先看系統卡的個性評估，才能像帶團隊一樣因材施教。整理 Opus、Sonnet、Haiku 5.5 與 Fable 5.2 的職場性格定位、主控派工邏輯與具體溝通對策。'
-tldr: '遇到新模型不知如何溝通或成果不如預期時，像帶領職場同事般掌握各個 AI 的個性才能發揮最大戰力。擅長思考的 Opus 要坦誠交代背景脈絡並充分放權，而埋頭苦幹的 Sonnet 則給予精準交付標準，依性格因材施教協作更順暢。'
+tldr: '用 AI 卡關常不是提示詞不夠好，而是沒摸清它的脾氣。先讀官方「系統卡」再像帶同事一樣分工：找 Opus 討論策略、叫 Sonnet 按明確規格執行、把固定雜工交給 Haiku、對 Fable 則要禮貌且直說，合作立刻順很多。'
 seoTitle: 'Claude 模型怎麼選？從系統卡看 Opus、Sonnet 與 Haiku 差異'
 ---
 

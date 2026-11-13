@@ -9,7 +9,7 @@ tags:
   - ai-trends
   - claude-code
 description: 'I demonstrated Claude Code to friends and they were all amazed. Then I gave them free Pro trial passes — three of them. Not a single one was used. That told me a lot about how AI adoption actually works.'
-tldr: 'Why do people stick to old habits even when given powerful AI tools for free? With 90% of users lagging 1.5 to 2 years behind enthusiasts, closing the gap requires top-down leadership, learning triggered by real pain points, and building clear rules and structured knowledge bases.'
+tldr: 'Even after seeing Claude Code automate office work—and getting a free pass—most people still stick to old habits as long as nothing is broken. To close this 1.5-to-2-year adoption gap, don''t chase flashy features; start from a real work pain point and organize your rules and documents clearly.'
 ---
 
 Before the New Year I demonstrated Claude Code to several friends — not coding, office work: organizing meeting notes, batch processing data, automating repetitive tasks. Every one of them said some version of "that's insane."

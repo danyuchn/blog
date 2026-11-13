@@ -12,7 +12,7 @@ tags:
   - system-maintenance
   - automation
 description: "Rules trimmed from 13,020 to 7,590 tokens. 92 broken wikilinks. Five root causes behind a failing todo system. Four days of cleanup, one quarterly SOP."
-tldr: 'As personal notes and task lists grow, broken links and duplicate todos gradually destroy trust in the system. A quarterly audit that loads non-essential guidelines only on demand cuts startup overhead by 42%. Sorting 92 broken links into three priority tiers and clarifying task ownership restores system reliability.'
+tldr: 'Note systems and to-do lists rarely break overnight—they rot slowly. A four-day Obsidian audit cut startup overhead by 42% via on-demand rules, triaged 92 broken links into three tiers, pinpointed five causes of messy to-dos, and produced a two-hour quarterly cleanup checklist.'
 ---
 
 Knowledge bases don't usually break dramatically. They rot slowly.

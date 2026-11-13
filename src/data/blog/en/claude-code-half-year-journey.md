@@ -10,7 +10,7 @@ tags:
   - ai-workflow
   - reflection
 description: 'From January to April, my state of mind with Claude Code went from "that PTT-generation affection for the CLI" to "20x hesitation" to "AI detox" to "practicing Thai at a Bangkok meetup." Here''s the six-month arc, along with the nights agents worked overtime for me until 5 AM.'
-tldr: 'After six months of heavy AI use, non-engineers easily go from the thrill of running tasks until 5 AM to burnout when their brain can no longer keep up with reviewing outputs. Embracing AI for a 10x capability boost while skipping 20x plans, scheduling weekly AI detoxes, and saving your mental energy for direction and verification prevents fast wasted effort.'
+tldr: 'What happens after working with AI daily for six months? A non-engineer shares the shift from running overnight tasks to scheduling AI detox days, showing that direction matters more than speed because human review is the real bottleneck.'
 ---
 
 When I first seriously used Claude Code in January, I had a vaguely PTT-generation affection for it.

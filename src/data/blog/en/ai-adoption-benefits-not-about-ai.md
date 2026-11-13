@@ -11,7 +11,7 @@ tags:
   - ai-workflow
   - enterprise-ai
 description: 'In practice, most of what an organization gains from adopting AI comes from fixing permissions, data governance, buy-in, and bloated processes along the way, not the AI itself.'
-tldr: 'Many teams stall when adopting AI because of broken workflows or unrealistic expectations of instant automation. In practice, 80% of time saved comes from structuring workflows, building a single source of truth, and pruning redundancies—then gradually building trust in AI like training a new store clerk.'
+tldr: 'Saving 80% of your time during AI adoption often comes from cleaning up messy workflows and removing redundant steps, not from AI itself. Instead of expecting instant full automation, treat AI like a new store clerk: start with simple tasks under your watch and build trust gradually.'
 ---
 
 To be blunt: across my own rollout work, most of what organizations gain from adopting AI has very little to do with AI.

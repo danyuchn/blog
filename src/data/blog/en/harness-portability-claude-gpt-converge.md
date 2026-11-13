@@ -10,7 +10,7 @@ tags:
   - model-comparison
   - ai-workflow
 description: 'Claude 5 and GPT-5.6 official guidance is converging on the same thing — retiring old-style prompt stacking. But trimming is not letting go; control just moves. And the payoff of maintaining that layering is switching tools without losing a step.'
-tldr: 'Making an AI assistant effective does not mean micromanaging every single step. Major official guidelines converge on one principle: provide clear goals, context, and success criteria while pruning repetitive instructions, but strictly preserve boundaries around security, permissions, and irreversible operations.'
+tldr: 'Tired of retraining your AI workflow every time you switch tools? The latest guides agree: stop piling on instructions, and separate goals, on-demand knowledge, and hard safety limits instead. Once organized, your workflow becomes portable across Claude and GPT.'
 ---
 
 I put the latest official guidance from Claude 5 and GPT-5.6 side by side, and they agree more than I expected: both are retiring old-style prompt stacking.

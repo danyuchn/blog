@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - personal-finance
 description: 'I fed all my assets, liabilities, income, and expenses into Claude Code, then just asked "am I going broke?" A month of conversations turned into a full FIRE planning toolkit — and why I open-sourced it.'
-tldr: 'Struggling to plan early retirement with rigid spreadsheet formulas that cannot handle unexpected life changes? Feeding your financial figures into AI lets you simulate 10,000 market paths and evaluate multi-currency scenarios through natural conversation. It also integrates Asian-specific realities like health insurance and family responsibilities into flexible retirement projections.'
+tldr: 'Want to plan early retirement without wrestling with rigid Excel formulas? By chatting with Claude Code, you can test what-if scenarios and simulate 10,000 market paths across multiple currencies. The author also open-sourced 20 guides covering Asian realities like health insurance, elder care, and visas.'
 ---
 
 FIRE (Financial Independence, Retire Early) is exactly what it sounds like — save enough money, retire early. The concept is huge in online communities abroad, but figuring out how far you actually are from retirement used to mean either wrestling with Excel formulas yourself or using someone else's pre-built spreadsheet. The problem with those templates is they're rigid as hell: if you want to ask "what happens if the stock market drops 30% next year" or "how much later do I retire if I spend an extra 200K TWD per year," you'd have to rebuild the model yourself. The barrier is high.

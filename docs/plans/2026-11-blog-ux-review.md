@@ -53,7 +53,7 @@
 | 1 | ✓ | 文末主按鈕改推 L0 免費預科（Gemini 說的《三段指令法》指南不存在）；L1 與診斷為次連結；陪跑只出現在 6000 字以上長文。中文文章內嵌電子報表單，接主站 `/api/newsletter`（雙重確認信） |
 | 2 | 部分 | 手機目錄去重；導言上移未做 |
 | 3 | ✓ | 站名改 Dustin's AI Lab｜AgentCrew、header 主站按鈕、About 重寫 |
-| 4 | ✓ | `tldr` frontmatter＋「30 秒白話結論」框，摘要由 Argon（45 篇）與 Flash 產出、數字逐條對原文；封存與低價值文不補 |
+| 4 | ✓ | `tldr` frontmatter＋「30 秒白話結論」框，摘要由 Argon（45 篇）與 Flash 產出、數字逐條對原文；封存與低價值文不補 。2026-11-13 盲測 7 篇：Orchestrator (Argon)（`gemini-pro-orchestrator-g1-pro`）4 票、Hydrogen 3 票、Argon 0 票，全部改寫：20 對用 Orchestrator，它約 30 篇就撞上獨立的週額度（`ai-quota` 看不到），其餘交 Hydrogen。拆解紀錄：Orchestrator 寫短文時沒分派給 Hydrogen，輸出速度 76 tok/s 與 Argon 相同 |
 | 5 | ✓ | 依 tag 配 3 篇延伸閱讀；首頁 4 條任務導覽 `/start/<key>/`（選文由 Codex 判斷） |
 | 6 | ✓ | `/blog/` 中文、`/blog/en/` 英文，雙向 hreflang＋x-default |
 | 7 | ✓ | `lang` 改 zh-Hant，Pagefind 對應 zh-hant |

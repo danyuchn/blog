@@ -10,7 +10,7 @@ tags:
   - remote-work
   - ipad
 description: 'A complete setup for running Claude Code on an iPad 11-inch: tmux for persistent sessions, Tailscale for NAT traversal, and Moshi as the SSH terminal. The goal is rebuilding 90% productivity, not just fixing bugs.'
-tldr: 'For those wanting to work on an iPad without the lag and battery drain of remote desktop, combine Tailscale for direct networking, Moshi for stable terminal display, and tmux for persistent sessions. This setup keeps your work alive through disconnects and easily lasts all afternoon.'
+tldr: 'Want to run Claude Code on your iPad without the lag and battery drain of remote desktop apps? Pairing Tailscale, Moshi, and tmux lets you connect without router setup, keeps your work alive when switching apps, and lasts an entire afternoon.'
 seoTitle: 'Run Claude Code on iPad: tmux, Tailscale & Moshi Setup'
 ---
 

@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - opinion
 description: 'A 15-year teaching veteran shares how AI reignited his passion for teaching, how to build an AI clone of yourself, open-source your knowledge, and why "teachers who use AI" are the real threat.'
-tldr: 'Feeling burned out by repeatedly answering basic student questions? Distilling your teaching transcripts and course materials creates a personalized AI assistant for under 100 NTD. Letting your AI clone handle routine round-the-clock Q&A frees up your energy for in-depth mentoring and genuine human connection.'
+tldr: 'AI will not replace teachers, but teachers who use AI will replace those who do not. Instead of chasing full automation, turn your own lectures and notes into a personal knowledge base so AI handles 24/7 basic Q&A while you focus on deep coaching and human connection.'
 ---
 
 I was among the first test-prep teachers in Taiwan to research end-user AI applications, integrate AI into my courses, and advocate for students to use AI. Over two years ago, people were flip-flopping between "AI will replace humans any day now" and "AI sucks, why would I bother." My thinking has stayed the same from then to now.

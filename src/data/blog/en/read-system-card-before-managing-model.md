@@ -10,7 +10,7 @@ tags:
   - ai-workflow
   - ai-education
 description: 'Read the personality evaluations in the system card before using a new model so you can manage it like a teammate. A breakdown of Opus, Sonnet, Haiku 5.5, and Fable 5.2—their workplace personas, dispatch logic, and concrete communication playbooks.'
-tldr: 'Struggling to communicate effectively with new AI models? Treat them like coworkers by understanding their distinct personalities. Give the strategic Opus full context and room to explore, while handing the task-focused Sonnet crystal-clear delivery standards to make daily collaboration effortless.'
+tldr: 'Getting stuck with AI often isn''t a prompting issue—it''s about personality fit. Read the official system card and manage models like coworkers: brainstorm strategy with Opus, give Sonnet exact specs to execute, assign routine chores to Haiku, and treat Fable with polite candor.'
 seoTitle: 'Choosing Claude Models: Personality Guide for Opus & Sonnet'
 ---
 

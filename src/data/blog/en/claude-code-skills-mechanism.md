@@ -8,7 +8,7 @@ draft: false
 tags:
   - claude-code
 description: 'Skills don''t dump all their prompts into context by default. They load layer by layer on demand. But passive trigger rate is only 30-50%, so slash commands are your safest bet.'
-tldr: 'Adding custom skills to your AI will not clutter its memory because it loads descriptions on demand with only about 100 words. However, passive trigger rates are only 30% to 50%. Keep descriptions keyword-precise, avoid hoarding dozens of skills, and manually type slash commands for reliable activation.'
+tldr: 'Worried that installing too many skills in Claude Code will overload its memory? It loads details only when needed, though automatic triggering works only 30–50% of the time. For reliable results, type a slash to call the skill manually and keep your list focused.'
 ---
 
 I keep seeing people worry: if I install a bunch of skills, won't all those prompts get injected into context by default and dilute the model's attention?

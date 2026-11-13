@@ -11,7 +11,7 @@ tags:
   - gmail
   - workflow
 description: 'Two weeks of heavy use across Resend batch sends and Gmail draft creation for course notifications, lecture thank-you emails, and BD outreach. Over 1,400 emails sent. Seven lessons worth writing down.'
-tldr: 'Running into broken schedules or messed-up formatting when sending batch emails? Backed by over 1,400 sent emails, this checklist highlights verifying actual scheduling status, styling with inline tables, and leading with genuine conversations rather than pitching sales early in business outreach.'
+tldr: 'Automating batch emails for courses or outreach can backfire—like 40 scheduled emails sending a week early without warning. Here are seven real pitfalls from sending over 1,400 emails, from broken layouts to missed replies, plus data showing a non-salesy first email boosts open rates from 17% to 67%.'
 ---
 
 The most expensive one here: you set a schedule for 5/18, all 40 emails went out on 5/11 anyway, and the API response never told you.

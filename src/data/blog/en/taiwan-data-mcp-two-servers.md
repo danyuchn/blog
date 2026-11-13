@@ -11,7 +11,7 @@ tags:
   - ai-tools
   - claude-code
 description: 'Two MCP servers wrapping Taiwan''s public data sources—one focused on court judgments and statutes, the other aggregating 52,960 government open datasets plus 37 local utility tools. They turn out to be complementary; I now run both.'
-tldr: 'Need your AI to query Taiwanese government open data and local business information directly? This review compares two extensions: one specialized in legal judgments and regulations, and another packing over 52,000 public datasets with 37 utilities like tax ID lookups and business day checks for daily office productivity.'
+tldr: 'Want AI to look up Taiwan laws or government data directly? This review compares two tools: mcp-taiwan-legal-db for court rulings and regulations, and Twinkle Hub for 52,960 government datasets plus 37 daily utilities like company tax ID and workday checks—start with Twinkle Hub for everyday work.'
 seoTitle: 'mcp-taiwan-legal-db: Search Taiwan Law and Court Rulings'
 ---
 

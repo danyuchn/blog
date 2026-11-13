@@ -10,7 +10,7 @@ tags:
   - ai-trends
   - harness
 description: 'JEV is a new model that only does probability judgments and formatted output, fast and cheap. I swapped it into the semantic gates I used to run on luna and flash-lite, plus harness slimming, news filtering, and exam-question QA.'
-tldr: 'Reviewing hundreds of daily news items, tasks, or system guidelines with premium AI models burns excessive budget. Fast classification models like JEV can filter and score items for just $0.01 to $0.02 per 400 entries. Using lightweight models for initial triage frees up human attention for final decisions.'
+tldr: 'Not every job needs a chatty AI—sometimes you just need a fast classifier. JEV excels at filtering news noise, triaging daily tasks, and checking exam question quality whenever a task needs semantic judgment, a fixed-format answer, and quick sorting without deep reasoning.'
 ---
 
 The most interesting news this week, to me, was the JEV model: extremely fast, and it only does probability judgments and formatted output. After seeing all kinds of applications on X, I got early access, and actually running it has been very impressive. A lot of the semantic-judgment gates I used to jam luna or flash-lite into: benchmarks come out close, but JEV is faster and cheaper, so I'm swapping them out.

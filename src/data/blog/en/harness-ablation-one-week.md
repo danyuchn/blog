@@ -10,7 +10,7 @@ tags:
   - harness
   - token-optimization
 description: 'Most people keep piling instructions onto their AI, but removing rules is what actually saves tokens. Here are the one-week results of my ablation experiment and how Anthropic recommended the exact same thing.'
-tldr: 'Adding too many instructions to your AI assistant bloats the context and drains your quota. By pruning redundant rules for a one-week trial, initial setup overhead dropped by 20% while error rates stayed flat, lowering the cost per action and allowing more work done per session.'
+tldr: 'Piling more rules onto your AI only to see higher costs without better results? After backing up and trimming redundant instructions for one week, startup load dropped 20%, error rates stayed flat, and delegation success jumped from 75% to 94%. Trim rules first, and add back only what gets missed.'
 seoTitle: 'Save AI Quota by Removing Rules: A One-Week Ablation Test'
 ---
 

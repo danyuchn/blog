@@ -11,7 +11,7 @@ tags:
   - codex
   - remote-work
 description: 'Eight things I checked before flying out, to keep a home Mac Mini reachable as the base for Claude and Codex: Tailscale, Herdr, caffeinate, auto-reboot, and remote file access.'
-tldr: 'Leaving your desktop at home as a 24/7 remote workstation requires thorough preparation against disconnects and crash traps. Use Tailscale and Mosh for resilient networking, apply safe reboot commands that bypass disk encryption locks, and disable AirDrop/Handoff to reduce latency spikes from 130ms down to 3.6ms.'
+tldr: 'Traveling light without your main computer, yet still need reliable access to your desktop at home? This field-tested checklist and troubleshooting log helps you avoid common remote-access traps like power-loss lockouts, typing lag, and failed file transfers.'
 ---
 
 Tomorrow is my first trip abroad since I bought the Mac Mini. Here's the remote setup checklist I ran through before leaving:

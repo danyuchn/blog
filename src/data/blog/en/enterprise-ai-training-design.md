@@ -12,7 +12,7 @@ tags:
   - teaching-design
   - agentcrew
 description: "After running AI adoption training for several companies — manufacturing to services, 20 to 100+ people — three mistakes come up almost every time."
-tldr: 'Struggling to make corporate AI training stick after class ends? The key is teaching a unified methodology rather than forcing uniform tasks. Use structured pre-course surveys to identify actual time sinks, and always reserve classroom time for participants to practice on their own real-world work materials in a safe environment.'
+tldr: 'Why do fewer than 20% of trainees keep using AI after a workshop? Teach one shared method, but let each person practice on their own real work and reserve 15 minutes at the end for hands-on problem solving.'
 ---
 
 Over the past six months I've run AI tool adoption training for a handful of companies — manufacturing to services, 20 to 100+ people. Almost every RFP and kickoff call comes with the same request: "We want the whole company using AI to do XX."

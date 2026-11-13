@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - skills
 description: '有人把 NousResearch 的 Hermes Agent 整套行為拆解成 46 個 Claude Code 原生 Skill。沒有 OAuth、沒有外部進程、重啟 CC 就能用。核心設計哲學是「procedures-as-prompt」：用結構化 markdown 指令稿驅動 AI 行為，不用寫一行程式碼。'
-tldr: '想讓 AI 助手擁有跨場景記憶、任務分類與摘要能力，卻不想額外維護複雜的程式碼。這套做法將 46 種實用能力拆解成純文字指示，直接交由 AI 理解執行；透過結構化文字引導任務分流與分層記憶，讓沒有技術背景的人也能看懂並自訂進階流程。'
+tldr: '想讓 Claude Code 擁有任務分流、跨對話記憶等 46 種能力，其實不用寫程式或另裝系統。hermes-CCC 直接用純文字說明書做成擴充技能，重啟就能用，且要記住「手動下指令是保證，自動判斷只是期望」。'
 ---
 
 Hermes Agent 是 NousResearch 做的一套 AI agent 執行環境——有自己的記憶系統、工具路由、跨 session 學習能力。原本的設計是讓它跑在獨立的 process 裡，有自己的 runtime。

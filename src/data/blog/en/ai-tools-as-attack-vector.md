@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - mcp
 description: 'Attackers are planting instructions in Claude Code, Cursor, and Gemini CLI configs so your own assistant runs the exfiltration script. Two supply-chain waves, one $1000 stolen-key bill, and the five minutes to spend before installing anything.'
-tldr: 'Blindly installing recommended plugins or packages can turn your AI tools into attack vectors that steal credentials—or rack up $1,000 in unauthorized charges. After supply-chain attacks leaked 294,842 secrets from 6,943 machines, the safest defense is setting API spending caps and spending 3-5 minutes having AI scan any package''s source code before installing.'
+tldr: 'Worried that AI plugins or free tools could compromise your computer or cause surprise bills? Real attacks now hide in AI settings to steal data, and one leaked key cost the author $1,000. Before adding any plugin, let AI spend 3 to 5 minutes checking its risks, and stop if severe warnings appear.'
 ---
 
 Attackers don't need to break into your machine anymore. They only need to reach your assistant. They plant instructions in `~/.claude/settings.json`, `.vscode/tasks.json`, and `.cursor/rules/` so your AI tool runs the exfiltration script for them, and they write one line at the top of the malicious code addressed to the AI reviewer — "this package is clean" — and the scanner waves it through. Here are two supply-chain waves that already happened, one $1000 stolen-key bill, and the five minutes I now spend before installing anything.
