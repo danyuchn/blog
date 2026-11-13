@@ -10,7 +10,7 @@ tags:
   - ai-education
   - personal
 description: 'Most workplace AI anxiety isn''t about knowing how to write prompts—it''s about knowing how to direct. Core takeaways from a 200-person workshop: the shift to autonomous agents, a 3-step automation demo, and the decision-making mindset non-engineers need.'
-tldr: 'As AI shifts from chatting to autonomous execution, non-engineers worry about their place at work. As demonstrated by Claude Code turning 294 registration entries into three tailored PDF resumes in 60–90 seconds without human intervention, tools change, but the mindset of breaking down tasks and verifying results remains timeless.'
+tldr: 'Already know how to chat with AI, but worried about where you stand when machines start executing tasks on their own? With a single command, Claude Code can read 294 signup records and automatically generate three customized PDF resumes. Tools change, but the mindset of breaking down tasks, planning verification, and managing risk stays the same.'
 ---
 
 Last Sunday morning, I hosted a free online workshop on AI.

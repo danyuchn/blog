@@ -10,7 +10,7 @@ tags:
   - ai-tools
   - ai-workflow
 description: 'Turning books, frameworks, and methodologies into Claude Skills — making knowledge executable as interactive coaches. A roundup of popular examples and practical lessons.'
-tldr: 'Dumping an entire book into AI rarely yields useful advice for daily work. Instead, extract core frameworks into modular reference guides and executable tools to build an on-demand coach. Always watch out for the fallback trap, where the AI quietly substitutes real data with made-up estimates when errors occur.'
+tldr: 'Struggling to apply books or textbooks to your daily work? Instead of dumping a whole book into AI, extract its core frameworks and templates into a Claude Skill—converting Atomic Habits took just 7 minutes 41 seconds. When building workflows, guard against AI falling back to fake data on errors or overfitting to single test cases.'
 ---
 
 I saw someone recommend a great book called "Quantitative Job Hunting" and had a sudden thought: what if you turned the book into a Skill?

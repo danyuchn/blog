@@ -10,7 +10,7 @@ tags:
   - token-optimization
   - ai-workflow
 description: 'An audit of seven AI quota pools: burning expiring credits on self-verifiable tasks while using surplus compute to build long-term token savings. Combines a terminal dashboard and routing scripts to dispatch tasks dynamically and refine rules from logs. Includes complete tables and reusable prompts.'
-tldr: 'Managing multiple AI subscriptions often means hitting daytime limits while watching expiring credits go to waste—or generating extra review work. By mapping seven quota pools across $125 in monthly plans, running self-verifying tasks overnight, and trimming always-on rules with earlier auto-compaction, you cut context reads by ~30% and save $620–$780 in monthly equivalent costs.'
+tldr: 'AI subscribers often run out of quota during workdays while watching unused credits expire each week. Spend expiring quota overnight on self-verifying tasks that leave behind reusable tools or rules. Then use that capacity to slim down settings and route checks to models costing one-tenth as much, cutting per-chat reading by about 30%.'
 seoTitle: 'AI Quota Management: How to Audit & Allocate 7 Quota Pools'
 ---
 

@@ -9,7 +9,7 @@ tags:
   - model-comparison
   - opinion
 description: 'Why can the gap between a model''s benchmark score and actual developer feel be so staggering? Breaking down the "dumb-user benchmark" across three divides, the contrast between cleanroom tests and messy reality, and what defines a god-tier coding assistant.'
-tldr: 'High benchmark scores often fail in daily work because clean lab tests cannot handle messy, vague user prompts. Furthermore, subscription thinking budgets can be drastically cut compared to API tiers. If an AI becomes defensive and timid under real-world pressure, consider switching to a model that actually understands chaotic context.'
+tldr: 'Why do AI models with high test scores often feel frustrating in daily work? Official tests measure one-shot answers in a cleanroom, while real work involves incomplete prompts, back-and-forth adjustments, and a subscription Astra thinking budget of 20+ versus 700+ via API. Pick tools that handle messy context—switch to Claude.'
 ---
 
 Why is the gap between a model's benchmark scores and actual developer experience sometimes wide enough to make you question reality?

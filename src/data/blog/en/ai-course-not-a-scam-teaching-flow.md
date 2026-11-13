@@ -10,7 +10,7 @@ tags:
   - ai-education
   - opinion
 description: 'Many assume that because AI answers questions for free, teaching an AI course is just a cash grab. After 15 years teaching the GMAT, my first AI classes still ran hours over. Here''s how I overhauled the workflow so students get a practical system that actually works.'
-tldr: 'Teaching technical tools live often turns a 1-hour class into a 3-hour ordeal of setup delays and basic lectures. Restructuring into pre-class consultations, video lessons with custom handbooks, and 2-hour 1-on-1 demos based on chat logs lets one instructor coach 18 students with Claude Code while compounding transcripts into teaching assets.'
+tldr: 'Struggling with classes that always run overtime, or wondering if paid AI courses are actually worth it? Instead of selling hours, move recorded lessons and customized handbooks before class, saving the two-hour 1-on-1 session to diagnose chat logs and demonstrate real workflows. Within two cycles, students can work independently while one coach manages 18 students at once.'
 ---
 
 A common refrain in AI discussions goes something like this: if you can get answers to any question just by asking AI, why pay for a course? Aren't people selling AI classes just running cash grabs?
