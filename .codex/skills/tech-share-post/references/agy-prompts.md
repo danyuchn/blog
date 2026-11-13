@@ -1,6 +1,6 @@
 # agy 提示詞模板（抄自 2026-10-25 實際使用，括號為佔位）
 
-用法：`agy -p "<提示詞>" --effort high --add-dir <暫存夾> --dangerously-skip-permissions > <log> 2>&1 &`（或經 `~/.codex/scripts/ext-run agy -p …`）。agy 只寫指定的輸出檔，原稿不改。暫存夾用 scratchpad 或 mktemp，不放 repo。
+用法：`~/.codex/scripts/ext-run --name <名稱> agy --model "$(~/.codex/scripts/ext-run --model-for polish)" -p "<提示詞>" --add-dir <暫存夾> --dangerously-skip-permissions`（背景跑；要寫輸出檔所以不走 `--kind polish`，模型仍由 ext-run 決定）。agy 只寫指定的輸出檔，原稿不改。暫存夾用 scratchpad 或 mktemp，不放 repo。
 
 ## 1. 中文潤稿
 

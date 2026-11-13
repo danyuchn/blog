@@ -15,14 +15,15 @@
 ## 2. 聚類提案
 
 - [ ] **每則貼文三選一**：開新文、併入既有文、進 micro-notes；沒讀完匯出不得判「不開新稿」（Dustin 2026-11-07）。
+- [ ] **只出有價值的文章，不追篇數**（Dustin 2026-11-12）：開新文的門檻是陌生讀者讀完能帶走一個做法、判準或觀點；只有展示、時事梗、素材薄到撐不起一篇的，改併入或進碎念。
 - [ ] 聚類後向使用者提案（全跑 vs Top N）。
 - [ ] **必須明說每個未選篇章的去處**（micro-notes / 留下週 / 棄寫）——漏說會導致使用者事後追問、補開重做（歷史上發生過 build 跑兩次）。
 
 ## 3. 寫作（zh 先行）
 
 - [ ] 每篇從 `.claude/templates/article.md` 起手，遵守 `.claude/specs/article-spec.md`。
-- [ ] 寫手一律是 agy：prompt 用 `.claude/templates/fanout-writer-prompt.md` Prompt A 生成，經 ext-run 改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。
-- [ ] 回收：照自首清單逐句裁決忠實度，砍 AI 補述（模板內有完整回收 checklist）。
+- [ ] 寫手一律是 agy，不派 Sonnet：新文走 `ext-run --kind write`（寫作模型，Argon 額度滿自動退 Flash），brief 照 `~/.claude/skills/subagent-dispatch/references/write-brief.md` 骨架（讀者目標＋自由重寫＋只守事實底線，不加語氣限制）；併入與翻譯照 `.claude/templates/fanout-writer-prompt.md`。都改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。（Dustin 2026-11-12 W47 核准定案）
+- [ ] 回收：只驗事實不改句子；照檔尾出處表核對引號原話與數字，素材沒有的論點、誇飾、內部代號列出退回寫作模型改（模板 Prompt A 收件段）。
 
 ## 4. 翻譯與去 AI 腔
 
@@ -33,7 +34,7 @@
 
 - [ ] 新碎念分流：有可複用洞見 → live；純反應/玩笑 → 2026-archive；短暫感想、猜測、時事梗不收錄。
 - [ ] **併入掃描每週都跑，不等超過上限**：`semantic_dedup.py --micro --threshold 0.78`，逐條看碎念（含本週剛新增的）能否併進既有文章或本週新文，能併就併、併後從碎念刪除。高分但只是「都在講 Claude」的不算。
-- [ ] **併入照 article-spec「併入既有文章」**：交 agy 用模板 Prompt B 織進正文（不准文末加節、不准「併入：」標題），zh 驗過再派 en；併完對動過的文章跑 Prompt C 拼接審查，怪異度 ≥3 退回重做。
+- [ ] **併入＝整篇重寫**（Dustin 2026-11-12）：舊文全文＋新素材交 `ext-run --kind write` 用模板 Prompt B 重寫整篇，zh 驗過再全新翻 en；不是在原文插段落。
 - [ ] live 檔 ≤35 條；超過就聚類抽取成文（要有清楚觀點或具體讀者問題；同主題 3+ 條只是提醒，不是門檻）或搬 archive，被吸收條目 zh/en 都刪。
 - [ ] zh/en 條目數、順序完全同步。
 
