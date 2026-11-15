@@ -10,7 +10,7 @@ description: 把作者自己做的工具、外掛、流程寫成技術分享長�
 
 ## 流程
 
-1. **確認素材**：量化資料的分析檔（或先請 AI 用對話紀錄量一次）、作者原話出處（session id）、原始碼路徑。缺哪個先補，不自創數字。原話要用 `history-find` 從還在的對話紀錄撈（Claude Code 對話約 30 天後清除）；撈不到原話就整節拿掉，不硬創提示詞、不拿 AI 寫的句子充當原話（2026-10-28 Dustin：「不是題材不選，而是不要硬創提示詞」；減法檢視那篇原始對話已清除，提示詞段整段拿掉後照發）。正文以讀者情境為主，作者內部的步驟編號與改版沿革不進正文。
+1. **確認素材**：量化資料的分析檔（或先請 AI 用對話紀錄量一次）、作者原話出處（session id）、原始碼路徑。缺哪個先補，不自創數字。原話要用 `history-find` 從還在的對話紀錄撈（Claude Code 對話約 30 天後清除）；撈不到原話就整節拿掉，不硬創提示詞、不拿 AI 寫的句子充當原話（題材照選，只是不硬創提示詞）。正文以讀者情境為主，作者內部的步驟編號與改版沿革不進正文。
 2. **寫 brief**：複製 `references/brief-template.md`，把括號換成這篇的內容，存成 `.claude/tmp-brief-<名>.md`（不 commit，完成後刪）。多個寫手時一份 brief 一個任務。
 3. **載入風格**：寫手先載入 `threads-voice`（正式語氣）與 `ui-visual-defaults`（圖與影片），再讀 `article-spec.md`（尤其「讀者預設：陌生人」）、`tags.md`、`templates/article.md`。
 4. **寫 zh 草稿**（`draft: true`，在 feature 分支，不 push）。原話逐字、數字只用素材。
@@ -25,7 +25,7 @@ description: 把作者自己做的工具、外掛、流程寫成技術分享長�
 
 ## 派寫手的注意
 
-- 等建置或背景指令用前景執行或 `run_in_background` 等完成通知，不另掛 Monitor 輪詢（2026-10-29 三位寫手共掛三十多個）。
+- 等建置或背景指令用前景執行或 `run_in_background` 等完成通知，不另掛 Monitor 輪詢（多位寫手各自掛 Monitor 會累積大量輪詢）。
 
 - 暫存檔、影格放 `mktemp -d`，不要 `rm` repo 內的東西。
 - 圖片複製與最終 commit 由主對話做（見 content-workflow fan-out 協議）。
