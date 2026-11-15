@@ -21,9 +21,7 @@
 ## 社群匯入七步驟
 
 1. **Extract & Classify**：`scripts/classify_posts.py`（Gemini 分類，30 則/批，輸出 gitignored 的 `scripts/classified_posts.json`）。
-   - Meta 匯出是 latin-1 包 UTF-8，逐欄 `s.encode('latin-1').decode('utf-8')` 修正。
-   - **Threads-only 匯出**（無 IG `posts_1.json`）會讓腳本報錯：跳過腳本、為當週日期範圍寫一次性分類 snippet，不要為單次案例改腳本。
-   - **匯出視窗與上週重疊必去重**：匯出開頭一兩天的貼文常已收進上週週報，提案前對照上週 micro-notes 區段剔除。
+   - Meta 匯出編碼、Threads-only 匯出、與上週 micro-notes 去重：細節與失敗對策見 `.claude/checklists/weekly-roundup.md` §1。
 2. **Aggregate**：聚類提案。**提案分批（全跑 vs Top N）時必說每個未選篇章的去處**（micro-notes / 留下週 / 棄寫），否則會補開重做。
 3. **Write**：`ext-run --kind write`（寫作模型 Argon→Flash，取代 Sonnet 寫手）照模板 Prompt A 從素材寫 zh，主對話只備料、寫 brief、驗事實。
 4. **Translate**：同一個 agy 工作接著翻 en，檔名與 zh 完全相同。
