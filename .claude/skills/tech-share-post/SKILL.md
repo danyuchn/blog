@@ -14,7 +14,7 @@ description: 把作者自己做的工具、外掛、流程寫成技術分享長�
 2. **寫 brief**：複製 `references/brief-template.md`，把括號換成這篇的內容，存成 `.claude/tmp-brief-<名>.md`（不 commit，完成後刪）。多個寫手時一份 brief 一個任務。
 3. **載入風格**：寫手先載入 `threads-voice`（正式語氣）與 `ui-visual-defaults`（圖與影片），再讀 `article-spec.md`（尤其「讀者預設：陌生人」）、`tags.md`、`templates/article.md`。
 4. **寫 zh 草稿**（`draft: true`，在 feature 分支，不 push）。原話逐字、數字只用素材。
-5. **agy 潤稿（必做，不跳過）**：用 `references/agy-prompts.md` 的潤稿提示詞交給 agy，附上 `~/.claude/skills/threads-voice/references/brand_voice.md`，目標是改得自然、像作者本人說話。回來後用腳本比對數字集合、`>` 引言行、程式碼區塊、圖片與 video 行都沒變；Claude 與寫手只修事實錯誤與禁區句型，不自己重寫句子，也不因為自己覺得 agy 版囉唆就退回原稿；語氣不對就列內容約束退回 agy 重寫（2026-10-29 Dustin：寫手版「不像我的風格，太刻意」，要 agy 整篇潤）。
+5. **agy 潤稿（必做，不跳過）**：用 `references/agy-prompts.md` 的潤稿提示詞交給 agy，附上 `~/.claude/skills/threads-voice/references/brand_voice.md`，目標是改得自然、像作者本人說話。回來後用腳本比對數字集合、`>` 引言行、程式碼區塊、圖片與 video 行都沒變；Claude 與寫手只修事實錯誤與禁區句型，不自己重寫句子，也不因為自己覺得 agy 版囉唆就退回原稿；語氣不對就列內容約束退回 agy 重寫（寫手版容易不像作者本人的風格、太刻意，所以要 agy 整篇潤）。
 6. **風格自檢**：`python3 ~/.claude/skills/threads-voice/scripts/check_draft.py check --acct 主帳 --mode 資訊 <稿>`，「必改」照改。
 7. **英文版**：照 agy 潤好的 zh 定稿，用 `references/agy-prompts.md` 的翻譯提示詞交 agy 翻，寫手不自己翻；寫手核對數字、引言、程式碼與單位（中文「萬字」是 characters 不是 words）；不另跑 humanizer。
 8. **圖與影片**：圖用 `.claude/figure-kit/`（720px、最小 15px、en 圖不得有中文）；影片見 `.claude/figure-kit/video/README.md`。每張成品自己 Read 一次確認沒破版。
