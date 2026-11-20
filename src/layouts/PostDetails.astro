@@ -474,21 +474,16 @@ const relatedPosts = posts
         if (box.dataset.bound === "1") return;
         box.dataset.bound = "1";
         const variant = box.dataset.variant ?? "B";
+        // Captured at bind time so a late callback after a ClientRouter swap
+        // cannot attribute the event to the next post.
+        const postSlug = currentPostSlug();
         const form = box.querySelector<HTMLFormElement>(
           "[data-newsletter-form]"
         );
+        const fallback = box.querySelector<HTMLAnchorElement>(
+          "[data-newsletter-fallback]"
+        );
         if (!form) return;
-
-        // github.io copy cannot reach /api/newsletter: send readers to the brand site.
-        if (!onBrand && !preview) {
-          const link = document.createElement("a");
-          link.className = "newsletter-link";
-          link.href = box.dataset.fallbackHref ?? "";
-          link.target = "_blank";
-          link.rel = "noopener noreferrer";
-          link.textContent = form.querySelector("button")?.textContent ?? "";
-          form.replaceWith(link);
-        }
 
         if ("IntersectionObserver" in window) {
           const observer = new IntersectionObserver(
@@ -496,42 +491,67 @@ const relatedPosts = posts
               if (!entries.some(e => e.isIntersecting)) return;
               observer.disconnect();
               sendEvent("newsletter_box_view", {
-                post_slug: currentPostSlug(),
+                post_slug: postSlug,
                 variant,
               });
             },
             { threshold: 0.5 }
           );
           observer.observe(box);
+          document.addEventListener(
+            "astro:before-swap",
+            () => observer.disconnect(),
+            { once: true }
+          );
         }
 
-        const liveForm = box.querySelector<HTMLFormElement>(
-          "[data-newsletter-form]"
-        );
-        if (!liveForm) return;
-        const errorEl = liveForm.querySelector<HTMLElement>(
+        // github.io copy cannot reach /api/newsletter: keep the plain link to
+        // the brand site (visible by default) and only count the click.
+        if (!onBrand && !preview) {
+          fallback?.addEventListener("click", () => {
+            sendEvent("newsletter_form_start", {
+              post_slug: postSlug,
+              cta_location: "post_end_newsletter",
+            });
+          });
+          return;
+        }
+
+        fallback?.remove();
+        form.hidden = false;
+        const errorEl = form.querySelector<HTMLElement>(
           "[data-newsletter-error]"
         );
-        const button = liveForm.querySelector<HTMLButtonElement>("button");
+        const emailInput = form.querySelector<HTMLInputElement>(
+          'input[type="email"]'
+        );
+        const button = form.querySelector<HTMLButtonElement>("button");
 
-        liveForm.addEventListener(
-          "focusin",
+        emailInput?.addEventListener(
+          "focus",
           () => {
             sendEvent("newsletter_form_start", {
-              post_slug: currentPostSlug(),
+              post_slug: postSlug,
               cta_location: "post_end_newsletter",
             });
           },
           { once: true }
         );
 
-        liveForm.addEventListener("submit", async event => {
+        const showSuccess = () => {
+          const message = document.createElement("p");
+          message.setAttribute("role", "status");
+          message.tabIndex = -1;
+          message.textContent = box.dataset.success ?? "";
+          form.replaceWith(message);
+          message.focus();
+        };
+
+        form.addEventListener("submit", async event => {
           event.preventDefault();
-          const body = new FormData(liveForm);
+          const body = new FormData(form);
           if (preview && !onBrand) {
-            liveForm.replaceWith(
-              document.createTextNode(box.dataset.success ?? "")
-            );
+            showSuccess();
             return;
           }
           if (button) button.disabled = true;
@@ -539,18 +559,17 @@ const relatedPosts = posts
             email: String(body.get("email") ?? ""),
             website: String(body.get("website") ?? ""),
             medium: "post_end",
-            postSlug: currentPostSlug(),
+            postSlug,
           });
           if (result.ok) {
-            liveForm.replaceWith(
-              document.createTextNode(box.dataset.success ?? "")
-            );
+            showSuccess();
             return;
           }
           if (errorEl) {
             errorEl.hidden = false;
             errorEl.textContent = result.error || box.dataset.error || "";
           }
+          emailInput?.setAttribute("aria-invalid", "true");
           if (button) button.disabled = false;
         });
       });
