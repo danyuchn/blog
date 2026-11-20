@@ -91,6 +91,18 @@ const ui: Record<string, Record<Lang, string>> = {
     en: "Check your inbox and tap the confirmation link to finish subscribing.",
     zh: "請到信箱點確認連結，完成訂閱。",
   },
+  "newsletter.box.title": {
+    en: "",
+    zh: "每週一封，免費",
+  },
+  "newsletter.box.submit": {
+    en: "",
+    zh: "免費訂閱",
+  },
+  "newsletter.box.note": {
+    en: "",
+    zh: "隨時可退訂",
+  },
   "newsletter.error": {
     en: "Subscription didn't go through. Please try again.",
     zh: "訂閱沒有成功，請稍後再試。",

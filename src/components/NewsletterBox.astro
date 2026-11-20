@@ -1,0 +1,78 @@
+---
+import { t } from "@/i18n/ui";
+import type { Lang } from "@/utils/i18n";
+
+type Props = {
+  lang: Lang;
+  slug: string;
+};
+
+const { lang, slug } = Astro.props;
+
+const utmContent = slug.replace(/^(zh|en)\//, "");
+const fallbackParams = new URLSearchParams({
+  utm_source: "blog",
+  utm_medium: "post_end",
+  utm_campaign: "newsletter",
+  utm_content: utmContent,
+});
+const fallbackHref = `https://www.agentcrew.cc/newsletter?${fallbackParams.toString()}`;
+---
+
+{
+  lang === "zh" && (
+    <section
+      class="post-end-newsletter mt-10 border border-border p-6 sm:p-8"
+      data-pagefind-ignore
+      data-newsletter-box
+      data-variant="B"
+      data-fallback-href={fallbackHref}
+      data-success={t("newsletter.success", lang)}
+      data-error={t("newsletter.error", lang)}
+      aria-labelledby="newsletter-box-title"
+    >
+      <h2
+        id="newsletter-box-title"
+        class="font-display text-xl font-bold text-foreground"
+      >
+        {t("newsletter.box.title", lang)}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-foreground/75 sm:text-base">
+        {t("newsletter.lead", lang)}
+      </p>
+      <a
+        class="newsletter-link mt-4"
+        data-newsletter-fallback
+        href={fallbackHref}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t("newsletter.box.submit", lang)}
+      </a>
+      <form class="post-end-newsletter-form mt-4" data-newsletter-form hidden>
+        <input
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder={t("newsletter.placeholder", lang)}
+          aria-label="Email"
+        />
+        <input
+          type="text"
+          name="website"
+          tabindex="-1"
+          autocomplete="off"
+          class="newsletter-honeypot"
+          aria-hidden="true"
+          aria-label="Website"
+        />
+        <button type="submit">{t("newsletter.box.submit", lang)}</button>
+        <p class="newsletter-error" data-newsletter-error role="alert" hidden />
+      </form>
+      <p class="mt-3 text-xs text-foreground/60">
+        {t("newsletter.box.note", lang)}
+      </p>
+    </section>
+  )
+}
