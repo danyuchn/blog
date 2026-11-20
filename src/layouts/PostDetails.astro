@@ -8,6 +8,7 @@ import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import DiagnosisCta from "@/components/DiagnosisCta.astro";
+import NewsletterBox from "@/components/NewsletterBox.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import { findTranslation } from "@/utils/i18n";
@@ -289,11 +290,17 @@ const relatedPosts = posts
 
     <BackToTopButton />
 
+    <NewsletterBox lang={postLang} slug={post.id} />
+
     <DiagnosisCta lang={postLang} slug={post.id} deep={isDeep} />
 
     {
       relatedPosts.length > 0 && (
-        <section class="mt-10" aria-labelledby="related-heading" data-pagefind-ignore>
+        <section
+          class="mt-10"
+          aria-labelledby="related-heading"
+          data-pagefind-ignore
+        >
           <h2
             id="related-heading"
             class="border-b-2 border-foreground pb-2 font-display text-xl font-bold text-foreground"
@@ -370,24 +377,27 @@ const relatedPosts = posts
 <script>
   /* GA4 custom events (gtag is loaded in Layout.astro). One delegated listener
      on document, registered once, so it survives ClientRouter navigations. */
-  type Gtag = (command: "event", name: string, params: object) => void;
+  import {
+    sendEvent,
+    isBrandHost,
+    isFormPreview,
+    submitNewsletter,
+  } from "@/utils/newsletterClient";
 
-  function sendEvent(name: string, params: Record<string, string>) {
-    const gtag = (window as unknown as { gtag?: Gtag }).gtag;
-    if (typeof gtag !== "function") return;
-    gtag("event", name, params);
-  }
+  const currentPostSlug = () =>
+    document.querySelector<HTMLElement>("[data-post-slug]")?.dataset.postSlug ??
+    "";
 
   function upgradeInlineNewsletter() {
-    const onBrand = location.hostname.endsWith("agentcrew.cc");
-    const preview =
-      new URLSearchParams(location.search).get("formpreview") === "1";
+    const onBrand = isBrandHost();
+    const preview = isFormPreview();
     if (!onBrand && !preview) return;
 
     document
       .querySelectorAll<HTMLElement>("[data-inline-newsletter]")
       .forEach(block => {
-        if (block.dataset.upgraded === "1" || block.querySelector("form")) return;
+        if (block.dataset.upgraded === "1" || block.querySelector("form"))
+          return;
         const link = block.querySelector("a");
         if (!link) return;
         block.dataset.upgraded = "1";
@@ -425,13 +435,6 @@ const relatedPosts = posts
         form.addEventListener("submit", async event => {
           event.preventDefault();
           const body = new FormData(form);
-          const payload = {
-            email: String(body.get("email") ?? ""),
-            website: String(body.get("website") ?? ""),
-            utmSource: "blog",
-            utmMedium: "post_inline",
-            utmCampaign: "newsletter",
-          };
           const showSuccess = () => {
             form.replaceWith(
               document.createTextNode(block.dataset.success ?? "")
@@ -450,47 +453,120 @@ const relatedPosts = posts
           if (!onBrand) return;
 
           button.disabled = true;
-          try {
-            const res = await fetch("/api/newsletter", {
-              method: "POST",
-              headers: { "content-type": "application/json" },
-              body: JSON.stringify(payload),
-            });
-            let json: { error?: string } = {};
-            try {
-              json = (await res.json()) as { error?: string };
-            } catch {
-              json = {};
-            }
-            if (!res.ok) {
-              showError(json.error || block.dataset.error || "");
-              return;
-            }
-            const gtag = (window as unknown as { gtag?: Gtag }).gtag;
-            if (typeof gtag === "function") {
-              gtag("event", "newsletter_submit", {
-                utm_source: payload.utmSource,
-                utm_medium: payload.utmMedium,
-                utm_campaign: payload.utmCampaign,
+          const result = await submitNewsletter({
+            email: String(body.get("email") ?? ""),
+            website: String(body.get("website") ?? ""),
+            medium: "post_inline",
+            postSlug: currentPostSlug(),
+          });
+          if (result.ok) showSuccess();
+          else showError(result.error);
+        });
+      });
+  }
+
+  function initNewsletterBox() {
+    const onBrand = isBrandHost();
+    const preview = isFormPreview();
+    document
+      .querySelectorAll<HTMLElement>("[data-newsletter-box]")
+      .forEach(box => {
+        if (box.dataset.bound === "1") return;
+        box.dataset.bound = "1";
+        const variant = box.dataset.variant ?? "B";
+        const form = box.querySelector<HTMLFormElement>(
+          "[data-newsletter-form]"
+        );
+        if (!form) return;
+
+        // github.io copy cannot reach /api/newsletter: send readers to the brand site.
+        if (!onBrand && !preview) {
+          const link = document.createElement("a");
+          link.className = "newsletter-link";
+          link.href = box.dataset.fallbackHref ?? "";
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = form.querySelector("button")?.textContent ?? "";
+          form.replaceWith(link);
+        }
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            entries => {
+              if (!entries.some(e => e.isIntersecting)) return;
+              observer.disconnect();
+              sendEvent("newsletter_box_view", {
+                post_slug: currentPostSlug(),
+                variant,
               });
-            }
-            showSuccess();
-          } catch {
-            showError(block.dataset.error || "");
+            },
+            { threshold: 0.5 }
+          );
+          observer.observe(box);
+        }
+
+        const liveForm = box.querySelector<HTMLFormElement>(
+          "[data-newsletter-form]"
+        );
+        if (!liveForm) return;
+        const errorEl = liveForm.querySelector<HTMLElement>(
+          "[data-newsletter-error]"
+        );
+        const button = liveForm.querySelector<HTMLButtonElement>("button");
+
+        liveForm.addEventListener(
+          "focusin",
+          () => {
+            sendEvent("newsletter_form_start", {
+              post_slug: currentPostSlug(),
+              cta_location: "post_end_newsletter",
+            });
+          },
+          { once: true }
+        );
+
+        liveForm.addEventListener("submit", async event => {
+          event.preventDefault();
+          const body = new FormData(liveForm);
+          if (preview && !onBrand) {
+            liveForm.replaceWith(
+              document.createTextNode(box.dataset.success ?? "")
+            );
+            return;
           }
+          if (button) button.disabled = true;
+          const result = await submitNewsletter({
+            email: String(body.get("email") ?? ""),
+            website: String(body.get("website") ?? ""),
+            medium: "post_end",
+            postSlug: currentPostSlug(),
+          });
+          if (result.ok) {
+            liveForm.replaceWith(
+              document.createTextNode(box.dataset.success ?? "")
+            );
+            return;
+          }
+          if (errorEl) {
+            errorEl.hidden = false;
+            errorEl.textContent = result.error || box.dataset.error || "";
+          }
+          if (button) button.disabled = false;
         });
       });
   }
 
   upgradeInlineNewsletter();
-  document.addEventListener("astro:page-load", upgradeInlineNewsletter);
+  initNewsletterBox();
+  document.addEventListener("astro:page-load", () => {
+    upgradeInlineNewsletter();
+    initNewsletterBox();
+  });
 
   document.addEventListener("click", e => {
     const target = e.target;
     if (!(target instanceof Element)) return;
-    const postSlug =
-      document.querySelector<HTMLElement>("[data-post-slug]")?.dataset
-        .postSlug ?? "";
+    const postSlug = currentPostSlug();
 
     const copyButton = target.closest("button.copy-code");
     if (copyButton) {
