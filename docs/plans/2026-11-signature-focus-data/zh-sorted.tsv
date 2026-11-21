@@ -1,0 +1,230 @@
+stem	標題	招牌編號	角色	文章性質	保鮮期	初步處置	分類者建議	把握度	搜尋點擊_0714-1119	搜尋曝光	GA4_90天工作階段	理由
+2026-model-personality-cross-vendor	挑選 AI 模型的通用判準：為什麼「脾氣」比跑分更決定日常體驗	11	主文	模型或工具時事	一年內過期	留	待Dustin裁決	中	6	98	5	三家旗艦模型脾氣對照（Gemini戲精/Claude貧嘴/Codex務實），用透明度、穩定度、執行純度三判準選主聊模型；屬11模型性格，但舉例綁特定版本
+abc-legal-agent-fleet	ABC Legal 的代理人艦隊：把 AI 實驗變成可治理的生產系統	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	0	5	1	六張圖卡整理Anthropic官方ABC Legal案例，主角是別人公司
+adhd-flow-why-i-teach-ai	ADHD、心流，與我為什麼教 AI	無	無關	碎念或其他	長青	不收錄	不收錄	中	2	154	1	談自己ADHD與心流如何走到教AI，是個人自白，沒有講/adhd skill本身
+adhd-skill-agentic-search	我讓 /adhd skill 自己去查一件 3C 圈的漲價八卦	2	補充	自製工具介紹	一年內過期	留	待Dustin裁決	中	27	652	4	拿自己的/adhd skill丟含糊八卦題看它agentic search，是skill實際運作示範，不是skill設計說明
+agent-external-system-misfires	寄出去就收不回來：agent 動外部系統的三次誤操作	7	補充	自創方法實測	長青	留	待Dustin裁決	中	0	1	1	三次agent誤動行事曆/reply-all/佔位事件備註，歸納寄出即不可逆要先確認；是7不可逆原則的事故面
+agentcrew-visual-system-design-process	外行人選品牌視覺：AI 把提案做便宜了，難的變成你的品味	清單外自製	無關	自創方法實測	一年內過期	留	待Dustin裁決	低	0	2	2	清單外自製：AgentCrew品牌視覺系統（同一套design token跨網站/投影片/A4）；文章偏外行人用AI選視覺的過程
+ai-adoption-benefits-not-about-ai	大部分 AI 導入的效益，其實跟 AI 沒什麼關係	13,7	補充	接案復盤	長青	留	留	中	0	6	44	從客戶導入經驗說省下80%時間多來自權限/資料治理/流程剪枝，並用雜貨店員工比喻信任遞進
+ai-adoption-gap	90% 的人落後兩年：AI 採用的真實落差	12,13	補充	碎念或其他	長青	留	待Dustin裁決	低	0	7	0	示範給朋友三張Pro體驗pass沒人用，推出top-down導入與痛點驅動學習；偏觀察，與教學/導入兩邊都沾
+ai-adoption-l3-three-months-later	三個月後重量一次：我從 AI 導入 L2.5 站上 L3	無	無關	碎念或其他	一年內過期	不收錄	不收錄	中	0	7	130	用Boris分級表重新自評站上L3，只是個人進度報告
+ai-adoption-stage-2-5-automation	我卡在 AI 導入的 2.5 階段	清單外自製	無關	自創方法實測	一年內過期	留	待Dustin裁決	中	1	5	57	清單外自製：深夜排程+早上六點儀表板+herdr自動開session；4-5小時降到1-2小時；與9儀表板相近但非語音
+ai-agent-trust-gradual-handoff	擔心 agent 失控？先在隔離環境逐步放手	7	補充	自創方法實測	長青	併	併入ai-risk-judgment-framework	中	1	26	2	回覆「怕agent失控」：先隔離環境親自放行每步，再設validator、白名單，逐步放手；是7的信任階梯
+ai-alignment-gap-taste-and-verification	對齊的 gap 正在縮小，接下來拚的是品味與驗證	無	無關	碎念或其他	一年內過期	不收錄	不收錄	中	0	49	0	談對齊gap縮小、後續拚品味與驗證責任，是趨勢觀點，順帶提驗證踩坑但不是招牌主角
+ai-anxiety-and-adaptation	看不見三年後的自己：AI 時代的焦慮與適應	12	補充	碎念或其他	長青	留	待Dustin裁決	低	0	9	0	AI焦慮與造王者觀點；最後一段教書14年被AI救回、當陪跑教練屬老師面對AI，但只佔一段
+ai-community-digest-apr-w18	AI 社群週報 W18：Claude 偵測到你在偷用 Codex、GPT 5.5 的過濾器到底鬆了沒	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	0	15	0	Reddit社群兩天熱門話題整理
+ai-content-traffic-observations	做 AI 教學內容幾個月：什麼有流量、什麼沒有	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	0	0	0	做AI教學內容幾個月的流量觀察，講座/求職示範/按需載入影片
+ai-course-not-a-scam-teaching-flow	開 AI 課是在割韭菜嗎？我是怎麼重構一套扎實的教學流程	12	主文	教學法	長青	留	留	高	0	0	20	回應割韭菜說，講課前短諮詢+錄影課+客製手冊+匯出對話紀錄+兩小時一對一的重構流程，含逐字稿雙向資產與15年教學規格遷移
+ai-decision-precedents	讓 AI 幫你查判例、貼票擬：把日常決策變成點頭就好的小技巧	6	主文	自創方法實測	長青	留	留	高	0	1	3	判例原則+明代票擬，兩段可複製指令讓AI收尾歸檔決策、請示前先查先例附建議，並提醒放按需載入不放常駐
+ai-era-critical-thinking	AI 時代的思考力：裝傻狂問、費曼學習法，與未來人才的樣子	12	補充	教學法	長青	留	待Dustin裁決	低	1	31	1	裝傻狂問與費曼加AI錄音找斷點的學習法；偏個人學習與批判思維，不專講教非技術者
+ai-leaders-race-to-bottom	坐上第一就開始拿翹——GPT、Claude、Gemini 的降智循環	無	無關	模型或工具時事	已過期	留（有搜尋點擊）	不收錄	高	3	64	1	GPT生圖降智/Claude額度縮水/Gemini漲價的吐槽，結論不綁死單一廠商
+ai-lecture-200-reflection	從「對話 AI」到「自主執行」：一場 200 人講座看見的職場轉變與工作流真相	13	補充	接案復盤	一年內過期	留	待Dustin裁決	低	0	1	0	200人免費講座復盤：450報名、30分鐘問答揭露焦慮、預錄三步自動化展示；是公開講座非企業案，歸13有點勉強
+ai-marketing-routes	AI 時代的經營路線之爭：自動化貼文、Skill 投毒論、跟我期待 OpenAI 的理由	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	0	1	0	幾則Threads產業觀察：自動化貼文、Skill投毒陰謀論、對OpenAI態度轉變
+ai-micro-notes-2025	AI 碎念日記 2025：那些太短但捨不得丟的觀點	無	無關	碎念或其他	已過期	不收錄	不收錄	高	0	3	1	2025下半年短碎念歸檔（NotebookLM、ChatGPT屁話等）
+ai-micro-notes-2026-archive	AI 碎念日記 2026：時間軸存檔	無	無關	碎念或其他	已過期	不收錄	不收錄	中	0	30	3	2026時間軸碎念存檔，按週排列的零碎觀點（讀開頭與全部小標題）
+ai-micro-notes	AI 碎念日記 2026：那些太短但捨不得丟的觀點	無	無關	碎念或其他	一年內過期	不收錄	不收錄	中	1	88	4	2026碎念精選依主題分類（模型脾氣、資安踩坑、工作流、產業、生活）；是合集沒有單一招牌主角
+ai-product-building	從零打造 AI 產品的踩坑日記：一個非工程師的四代進化	清單外自製	無關	自製工具介紹	一年內過期	留	待Dustin裁決	中	0	7	0	清單外自製：GMAT用RAG AI分身/AI家教四代產品踩坑日記（OpenWebUI+LiteLLM、跨國部署）；與13項無對應
+ai-question-bank-blind-solve-audit	我讓另一個 AI 把自家題庫盲解了一遍	清單外自製	無關	自創方法實測	長青	留	待Dustin裁決	中	0	2	0	清單外自製：盲解稽核法（不看答案鍵的另一個AI重做每題再分類不一致）；實測PS250/DS250/CR200/RC240，答案鍵錯0題
+ai-resume-war	你用 AI 海量投履歷，他用 AI 海量篩履歷：最後誰贏了？	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	1	6	0	AI投履歷對AI篩履歷的軍備競賽評論
+ai-risk-judgment-framework	判斷 AI 風險的兩個維度：可逆性 × 環境隔離	7	主文	自創方法實測	長青	留	留	高	0	14	47	可逆/不可逆×隔離/生產的2x2，發信外部=紅線中的紅線，對應自己的先草稿後確認hook；7的最完整代表作
+ai-security-boundary	AI 的安全邊界：龍蝦熱潮、Presidio、與我的三條鐵則	10,7	補充	自創方法實測	一年內過期	留	待Dustin裁決	中	6	36	1	龍蝦熱潮下的自我邊界，推薦微軟Presidio本地去識別化再還原，加hook安全網；Presidio是別人的工具不是他後來自製的PII guard
+ai-self-audit-blindspot	AI 自我驗證的盲點——為什麼要請一個不知情的 agent 來稽核	清單外自製	無關	自創方法實測	長青	留	待Dustin裁決	中	0	27	2	清單外自製：不繼承上下文、給原則不給清單的獨立稽核agent；同族有ai-question-bank-blind-solve-audit、cross-model-review-council、dont-grade-ai-by-its-summary，本篇最完整可當主文；首段另提harness精簡時subagent會刪掉刻意約束(3邊緣)
+ai-teaching-price-value-decoupling	AI 課一個月一萬八：教學市場的價格跟價值早就脫鉤了	無	無關	碎念或其他	一年內過期	不收錄	不收錄	中	0	3	1	超商偷聽到AI課一個月一萬八，對照自己蒸餾的GMAT SKILL與訂閱，是市場評論，招牌只順帶
+ai-tool-philosophy	AI 工具使用哲學——不選陣營，選思維	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	21	3	工具會變思維不變、別當Yes Man、規劃用強模型執行用便宜模型，是零散心得
+ai-tools-as-attack-vector	你的 AI 工具已經是攻擊媒介：npm/Python 供應鏈後門、外洩金鑰盜刷 1000 美元，與裝 MCP 前的掃描 SOP	清單外自製	無關	模型或工具時事	一年內過期	留	待Dustin裁決	中	0	11	17	清單外自製：/security-scan裝前掃描SOP加全域hook（後半）；前半是Miasma/Hades供應鏈攻擊與盜刷新聞，整篇以事件為主
+ai-usage-economics	AI 的用量經濟學：額度黑箱、訂閱算術與打破焦慮的配置法	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	0	43	713	訂閱制補貼算術、額度黑箱、夜市牛排判斷框架，講額度經濟學不是招牌
+ai-video-pipeline-codex-to-claude	別人去韓國做醫美，我叫 Codex 數位醫美	無	無關	模型或工具時事	已過期	不收錄	不收錄	高	1	48	0	實測別人開源的Codex+Hyperframes+IndexTTS2+HeyGen流水線，並換Claude接手；主角是別人的repo
+ai-video-sweet-spot	AI 做影片的甜蜜點：自己出鏡，剪接和逐字稿交給 AI	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	0	0	277	自己出鏡、Astra加DaVinci剪vlog、Qwen3 ASR做逐字稿的心得
+ai-workflow-convergence-divergence	我的 AI 工作流：收斂與發散	8	補充	自創方法實測	長青	留	待Dustin裁決	低	2	99	2	把AI用法分成收斂/發散八個動作並談瘋子式錄音蒸餾知識庫；名稱相近但不是「叫模型收尾不開新話題」的收斂模式
+ai-writing-in-my-voice-lora-vs-skill	讓 AI 寫得像我：從 LoRA 微調到 SKILL 三道閘門	清單外自製	無關	自創方法實測	一年內過期	留	待Dustin裁決	中	1	4	4	清單外自製：個人文風SKILL加標點/逐句/結尾三道閘門（對比LoRA微調Qwen3 8B）
+ai-writing-sounds-like-a-machine	為什麼 AI 寫出來的東西總是像機械話？對照兩次派工，我找到讓它一次過的關鍵	11,清單外自製	補充	自創方法實測	一年內過期	留	待Dustin裁決	中	0	2	2	同素材兩次派工，Sonnet初稿被防禦式語氣退件、Argon重寫一次過；屬11模型分工並給四個交代動作，派工寫作法算清單外自製
+anthropic-cache-controversy-apr2026	Anthropic 這次幹了什麼：快取縮水與 Token 焦慮注射	無	無關	模型或工具時事	已過期	不收錄	不收錄	高	1	25	0	快取從1小時被改5分鐘與寫死token焦慮注射兩則爭議，附JSONL自查指令
+anthropic-love-hate	又愛又恨 Anthropic——一邊嫌精英心態，一邊狂讀他們的技術部落格	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	1	38	1	嫌Anthropic精英心態與燒token，又愛讀其資安技術部落格的情緒文
+anthropic-tracking-channels	追蹤 Anthropic 動態的三條管道	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	0	9	1	追Anthropic的官方、員工帳號、第三方三條管道，系統卡只是管道1的一段
+anthropic-trust-crisis-backup	當主力 AI 隨時可能拉垮：非程式工作者的多端點備援與環境同步判準	11	補充	通用操作教學	一年內過期	留	待Dustin裁決	中	0	1	0	3月額度風波後替非程式文書工作挑備援模型（agentic/tool calling/意圖對齊三面向）並同步規則與記憶；偏模型分工但綁當時事件
+anthropic-two-opposite-moves-week	Anthropic 同一週：安全報告翻車，去識別化工具升級完全體	10	補充	自製工具介紹	一年內過期	併	併入pii-guard-tw	中	0	1	1	把pii-guard-tw借Claude Mod升級成自動攔截完全體（模型只看<PERSON_1>、回來還原）；若pii-guard-tw在清單內則併入
+asd-ste100-claude-plain-english-skill	讓 Claude 說人話：一套飛機維修手冊的簡化英文標準	1	主文	自製工具介紹	長青	留	留	高	93	628	71	把飛機維修手冊的ASD-STE100做成skill治Claude不說人話，附GitHub連結；一個月後追記日常寫作仍救不回來
+astra-scout-then-weak-model-crawl	Astra 探路、Luna Max 收工：反爬太徹底又太小眾的網站怎麼爬	清單外自製	無關	自創方法實測	一年內過期	留	待Dustin裁決	中	0	0	0	清單外自製：強模型探路寫成SKILL、弱模型批次爬公開網站（一週爬三千頁）；模型分工但不是系統卡選模型
+audit-my-own-site-perceived-value	坐擁金礦的零分	清單外自製	無關	自製工具介紹	一年內過期	留	待Dustin裁決	低	0	1	0	清單外自製：把感知價值文章做成skill盤點自己網站得「坐擁金礦的零分」；極短
+automated-video-pipeline-gotchas	自動發片管道正在悄悄漏成品：Remotion、ffmpeg、YouTube API、HyperFrames 的踩坑總表	清單外自製	無關	通用操作教學	一年內過期	留	待Dustin裁決	低	0	13	4	清單外自製：自動發片管線（Remotion/ffmpeg/YouTube API/HyperFrames）踩坑總表；對零程式讀者過技術，主角是坑不是方法
+automation-is-not-the-answer	「自動化」不是大部分事情的解方——以及我怎麼拍這部影片	無	無關	碎念或其他	長青	不收錄	不收錄	高	0	13	2	批評自動化話術，內文只是影片簡介，沒有方法本身
+bd-channel-value-vs-deal-value	通路價值和成案價值，要分開記帳	13	主文	接案復盤	長青	留	留	高	0	0	0	連跑BD逼出三條判準：通路價值與成案價值分開記帳、《南瓜計畫》決定只接三分之一（範圍紀律）、免費諮詢上限寫死；13中BD與範圍紀律的代表作
+bd-letting-go-training-vs-system	客戶嘴上要培訓，骨子裡要系統	13	補充	接案復盤	長青	留	留	高	0	1	0	一次BD鬆手覆盤：客戶三次飄向給我artifact，把「after the training」改成「if the priority is to build the hub」；文中出現客戶人名Kevin與跨國物流公司，對外前需去識別
+benchmark-vs-real-use-dumb-user-test	蠢人跑分：跑分跟實際體驗為什麼差那麼多？	11	補充	模型或工具時事	一年內過期	留	待Dustin裁決	中	0	1	1	跑分無塵室vs混亂現實三大落差、提出蠢人跑分，並批評GPT 6；談選模型標準但依據是實際體感不是系統卡
+book-to-skill	把書變成 Claude Skill：從教材到原子習慣，國外已經在瘋了	無	無關	轉述評論別人的內容	一年內過期	留（有搜尋點擊）	不收錄	高	7	119	2	整理四個GitHub上書轉Skill的別人專案，自己只在開頭提到把教材做成Skill
+buddhist-method-skill-for-agents	把佛法交給 agent，讓他用佛法約束自己	無	無關	轉述評論別人的內容	一年內過期	留（有搜尋點擊）	不收錄	高	4	14	4	介紹泰國開發者nai0om的buddhist-method skill，連結指向別人的repo
+burn-and-save-ai-quota	燒額度跟省額度：我這兩週怎麼盤點、分配、用掉 AI 額度	清單外自製	無關	自創方法實測	一年內過期	留	待Dustin裁決	中	0	8	346	清單外自製：七個額度池盤點＋燒額度/省額度＋終端儀表板與路由腳本按剩餘額度動態派工；邊緣涉及3瘦身規則
+cc-audit-skill	cc-audit：一個強迫你省 Claude Code 額度的 Skill	清單外自製	無關	自製工具介紹	一年內過期	留	待Dustin裁決	高	0	38	6	清單外自製：cc-audit健診skill（靜態設定審查＋JSONL session分析＋可執行修正清單），附自己的GitHub連結
+city-government-ai-review-four-suggestions	某市政府 AI 推動評議：我給的四個建議	13,7	補充	接案復盤	長青	留	留	中	0	1	4	某市政府研考會評議的四建議：人負責、可逆與好驗證排序、瓶頸在配套、額度看效率；附實際採用率與回本數字
+civil-servants-arent-behind-on-ai	公務員跟不上 AI？其實錯了	13,7	補充	接案復盤	長青	留	留	中	0	4	1	另一場研考會審查的十頁書面意見條列：責任歸屬、蒸餾法、可逆與好驗證、公部門成效反而好；與city-government那篇同族但視角不同
+claude-5-context-engineering-six-rules	Claude 5 時代的情境工程六條新規則，與我砍掉的 1473 行 harness	3	補充	轉述評論別人的內容	一年內過期	留	待Dustin裁決	中	2	25	1	九張圖卡轉述Anthropic官方Claude 5情境工程六規則，只在文末一小段提到自己照做削掉harness 1473行並切回4.6對照；主體是轉述
+claude-5-conversation-tips	跟 Claude 5 對話的 7 個實用技巧：不發散、不話癆、不偷懶、不雞婆	8,9,3,清單外自製	入口	自創方法實測	一年內過期	留	留	高	2	45	110	從「模型話癆、對話發散」痛點出發：/explain、一次回完並主動叫收斂、語音輸入、first-principles剪枝、CLAUDE.md極簡化；8收斂模式與9語音輸入的最佳入口，explain與first-principles為清單外自製skill
+claude-code-anniversary-talk	Claude Code 週年對話的幾個重點	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	0	4	0	整理Boris與吳貓的CC週年對話四重點
+claude-code-dunning-kruger	Claude Code 的達克曲線：從陌生到極致同步的實戰心得	無	無關	碎念或其他	一年內過期	不收錄	不收錄	中	1	25	0	自己用Claude Code從陌生到撞牆到極致同步的達克曲線自述，主角是個人歷程
+claude-code-ecosystem-roundup-apr08	本週 Claude Code 生態觀察：四個我收藏的新資源	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	1	47	1	收藏的四個別人做的資源（m365 CLI、job104-cli、運彩skills等）
+claude-code-ecosystem-skills-hooks-agents	Claude Code 生態系盤點——Skill、Hook、Agent 全面開花	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	37	0	Skill/Hook/Agent View生態盤點，只在一段列舉自己的cc-audit、ASD-STE100等skill，不是主角
+claude-code-five-levels	Claude Code 五個成熟度等級：你不是選擇升級的，是被天花板逼的	無	無關	轉述評論別人的內容	一年內過期	留（有搜尋點擊）	不收錄	高	6	252	0	轉述Reddit u/DevMoses的五級成熟度框架
+claude-code-for-tutors-launch	Claude Code for Tutors：讓 Agent 直接教老師怎麼用 Agent	12	主文	自製工具介紹	長青	留	留	高	0	0	1	發表自己做的免費專案Claude Code for Tutors：讓Agent在情境裡一課課教老師用Agent，並加入驗證與介入時機心法；12引導式教學與教老師的代表作
+claude-code-half-year-journey	Claude Code 用了半年：從好感到猶豫、從加班到 detox、從中文圈到泰國社群	無	無關	碎念或其他	一年內過期	留（有搜尋點擊）	不收錄	高	9	136	4	用Claude Code半年的心態軌跡（PTT好感、20x猶豫、AI detox、泰國社群）
+claude-code-harness-ops	Claude Code Harness 兩個月運維史：當機、殭屍、快取、Plan Mode 的邊邊角角	無	無關	通用操作教學	已過期	不收錄	不收錄	中	0	8	1	兩個月harness運維踩坑：當機、殭屍進程hook、2.1.86/2.1.90修復、Plan Mode；多為版本相關
+claude-code-initial-prompt-tips	Claude Code 起始指令心法：六個讓 AI 真正聽懂你的技巧	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	48	0	六個起始指令技巧（想清目標、想像手動流程、語音、換模型、計畫模式）；泛用提示詞心法非招牌
+claude-code-jsonl-internals	挖 Claude Code 的 JSONL：手動算 context 用量、分辨快取類型、偵測 compact	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	32	16	從做cc-audit時整理的JSONL公式（context使用率、快取類型、compact偵測）；若cc-audit列為清單外自製，可當其補充
+claude-code-plan-picker	Claude Code 訂閱怎麼選：Pro、Max 5x、Max 20x 該買哪個	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	0	34	52	Pro/Max 5x/Max 20x/API怎麼選，價格截至2026-10-18，會過期
+claude-code-quota-incident-log	額度是怎麼被燒掉的：Claude Code 快取 bug、Opus 4.7 的 2x 消耗、subagent 遞迴繁殖	無	無關	模型或工具時事	已過期	不收錄	不收錄	高	1	74	205	四起額度事故紀錄：快取bug、JSONL扒80倍、Opus 4.7 2x消耗、subagent遞迴繁殖
+claude-code-skills-mechanism	Claude Code Skills 機制解密：按需載入與觸發率真相	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	2	39	2	Skills按需載入機制與被動觸發率30-50%，一般機制解說
+claude-code-source-leak	Claude Code 源碼洩漏：Reddit 大神挖出的三個秘密	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	0	40	0	轉述Reddit對Claude Code洩漏原始碼的三個發現
+claude-code-taiwan-lottery-odds	在彩券行用手機 Claude Code 算運彩賠率：台運賠率爛透了，誰下誰賠	無	無關	碎念或其他	一年內過期	留（有搜尋點擊）	不收錄	高	4	22	1	彩券行用手機Claude Code套現成運彩賠率skill算期望值，skill非他自製
+claude-code-tips-apr-w17	Claude Code 實戰配置指南：從 CLAUDE.md 瘦身、額度管控到自動化產出	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	84	2	CLAUDE.md、Rules、Memory、Hooks分工與額度快取技巧；是配置拆分不是規則消融實驗
+claude-code-tips-apr-w18	Claude Code 這週整理：1M Context 怎麼用、額度焦慮集體發作、Cursor 被 SpaceX 搶走	無	無關	模型或工具時事	已過期	留（有搜尋點擊）	不收錄	高	3	119	4	一週整理：1M context管理、額度焦慮、SpaceX收購Cursor等
+claude-code-tool-belt	用 Claude Code 這幾個月，累積下來的周邊工具與學習資源	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	高	1	44	0	推薦ccusage、claude-log-cli等別人做的周邊工具
+claude-code-usage-insights	Claude Code 用了 7843 條對話後的心得	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	52	186	7843條對話整理的七個通用心得（描述清楚、插話、迭代等）
+claude-code-web-setup-w19	網頁版 Claude Code 環境設定的兩個世界	無	無關	通用操作教學	已過期	留（有搜尋點擊）	不收錄	高	3	122	2	網頁版Claude Code雲端VM與Remote-control設定訣竅，文首自註部分bug已修
+claude-code-workshop-notes	Claude Code 工作坊備課日誌：帶零基礎學員直上終端機	12,13	補充	教學法	長青	留	留	中	0	14	0	給零基礎者的五小時工作坊備課日誌：80多份報名表的需求落差、教學流程、15條速成心法；工作坊實況與教非技術者
+claude-fitness-side-effect	睽違十年瘦了 10 公斤——竟然是因為 Claude 額度不夠	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	1	10	0	額度不夠逼自己去健身瘦10公斤的玩笑文
+claude-md-eight-honors	我的 CLAUDE.md 精煉到只剩八句「以…為榮，以…為恥」	3	補充	自創方法實測	一年內過期	留	待Dustin裁決	中	3	30	2	把CLAUDE.md砍到只剩八組以…為榮對句，再擴寫成公文體宣導文與十六字方針；是瘦身的成果展示，文末註記完整範本已從公開工具包撤下
+claude-mods-mask-and-warm-cache	自己做了兩個 Claude Mod：錄課遮罩與暖快取	清單外自製,10	補充	自製工具介紹	一年內過期	留	待Dustin裁決	中	0	27	1	清單外自製：Claude Mod暖快取外掛與錄課敏感資訊遮罩（先遮再審）；開頭連回pii-guard，後來發現Claude Code原生就有閒置壓縮
+claude-sensitive-data-checklist	用 Claude 處理敏感資料前必知	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	0	19	0	用Claude處理敏感資料前的條列清單（保留期限、Enterprise保障、輸入最小化），非他自製工具；政策數字會過期
+claude-vs-gemini-vs-gpt	Claude vs Gemini vs GPT：一個重度使用者的模型體感實錄	11	補充	模型或工具時事	已過期	併	併入2026-model-personality-cross-vendor	高	0	23	2	半年三大模型體感（GPT只剩兩招、Gemini戲精、Claude贏），綁Gemini 3.0與2025下半年，通用版已在2026-model-personality那篇
+claude-work-timer	claude-work-timer：讓 Claude Code 自動算工時	清單外自製	無關	自製工具介紹	一年內過期	留	待Dustin裁決	高	2	34	0	清單外自製：claude-work-timer開源CLI，讀JSONL扣掉閒置自動算按時計費工時
+cli-resource-paradox-local-models	電腦資源的奇妙悖論：從卡頓老機器聊到本機模型的真實門檻	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	1	19	1	教學現場老電腦資源吃緊與本機模型硬體門檻，價格與型號會過期
+cli-vs-desktop-three-answers	一年下來，我對「該用終端機還是桌面版」的答案變了三次	無	無關	通用操作教學	一年內過期	留（有搜尋點擊）	不收錄	高	22	259	32	終端機還是桌面版，一年內答案變三次的時間軸整理
+client-scope-explosion-two-skills	客戶的對話爆掉了：一段 prompt 塞了三件事，Claude 就陪著他一起發散	8,13,清單外自製	補充	接案復盤	長青	留	留	中	1	46	4	兩位客戶一段prompt塞三件事、對話發散，當場裝/explain與/first-principles（及Grill-me、checkpoint）把工作流收斂；8收斂的真實案例，explain與first-principles是清單外自製skill
+codex-defensive-writing-contest	第一屆 Codex 防禦性寫作大賽	11	補充	碎念或其他	一年內過期	留	待Dustin裁決	中	5	28	3	用Codex口吻寫一篇防禦性寫作示範諷刺GPT-6，結論讓它退居幕後做對抗式審查；11模型性格的趣味補充，綁特定版本
+competitive-analysis-skills	看清外面、想清裡面：兩個 Claude Skill 的分工	清單外自製	補充	自製工具介紹	一年內過期	留	待Dustin裁決	中	0	17	1	橫縱分析法（別人的skill）搭配自己的first-principles skill（GitHub連結），並把研究與執行分開session；清單外自製：first-principles skill
+context-management-hooks	Claude Code 的真正進階：上下文管理與 Hooks	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	48	0	從CLAUDE.md到Hooks的上下文管理升級、Cowork與Code差異，是通用心得
+context-over-model-repowise	給 LLM 更好的 context，勝過換更強的模型——repowise 的五層架構	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	高	1	28	1	介紹別人的repowise五層context工具與數據
+context-session-management	1M Context 不是裝更多，而是管理更好：Claude Code Session Management 心法	無	無關	通用操作教學	一年內過期	留（有搜尋點擊）	不收錄	高	8	305	4	1M context下Continue/rewind/clear/compact/Subagents五種操作的通用整理
+covey-time-matrix-claude-code	Covey 七個習慣的時間矩陣放上 Claude Code 之後——每一格的時間分配怎麼變	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	7	0	把Covey時間矩陣放上Claude Code的觀點文，非招牌；文末提課程開場應用
+cross-model-review-council	跨模型互審——讓 AI 不再自己審自己	清單外自製	補充	通用操作教學	一年內過期	留	待Dustin裁決	低	10	177	61	建議用Codex做隔離的獨立審查並介紹別人的Review Council；跨模型審查是他的做法但主角偏他人工具
+daily-triage-todo-tiering	Claude Code 待辦分級制：自動／審核／協作／手動四級分流	清單外自製	無關	自製工具介紹	一年內過期	留	待Dustin裁決	高	2	25	2	清單外自製：待辦先分repo再分自動/審核/協作/手動四級的skill；腳本只收事實、判斷交LLM
+dario-pace-the-frontier-six-claims	Dario Amodei 又發萬言書：六大重點與覆議名單	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	0	0	0	轉述Dario Amodei萬言書六大重點與覆議名單
+debugging-mindset-logic-ai-pedagogy	卡關時的兩個心態：用邏輯思考，與『不貳過』的 AI 教育學	12	補充	教學法	長青	留	留	中	0	9	11	教學員卡關要用邏輯想（缺經驗餵上下文、缺專注開subagent）與AI教育學「不貳過」（叫AI反省根因寫進claude.md/skill）；極短但是教學觀點
+default-guardrails-that-block-you	卡住你的是預設開著的那道牆：Codex 沙盒、ENV_SCRUB、Vercel 保護、官方 connector	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	0	0	0	Codex沙盒、ENV_SCRUB、Vercel保護、雲端connector四個預設保護的坑
+digital-nomad-not-a-goal	數位遊牧是可遇不可求，不要把它當成追求目標	無	無關	碎念或其他	長青	不收錄	不收錄	高	0	33	2	數位遊牧可遇不可求的個人觀點
+dont-grade-ai-by-its-summary	不要用 AI 的摘要驗收 AI	清單外自製	補充	自創方法實測	長青	留	待Dustin裁決	中	0	35	6	清單外自製：驗收回到原始狀態不信AI自報（唯讀agent偷寫檔、commit訊息與diff不符、檢查器沒在檢查），並做成小測驗；與ai-self-audit-blindspot同族
+dont-vibe-for-money	不要為了賺錢而 Vibe	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	0	1	Vibe出產品後的六點感想（找賽道、真心信仰idea、不吝嗇分享），產品只是背景
+dorsey-ai-org-rebuild	Jack Dorsey 把公司裁掉 40% 重建：AI 時代的組織形狀	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	高	1	6	1	轉述Jack Dorsey裁員40%重建與Sequoia好CEO三件事
+english-teaching-ai-teleprompter	全英文授課的提詞器救星，以及我正在評估的開源 AI Meeting Copilot「Natively」	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	高	0	41	0	評估別人的開源工具Natively做全英文授課提詞，自述還沒實際使用
+enterprise-ai-training-design	幫企業導入 AI，教案設計最常犯的三個錯	13,12	補充	接案復盤	長青	留	留	高	0	3	1	企業培訓教案三大錯：統一任務不等於統一方法論、開放式問卷無效、缺自主應用；含硬體業vs辦公室業與課堂節奏
+enterprise-ai-training-realities	親自接 AI 企業培訓之後才知道的事——準備時間、甲方對接、講師應變、選講師訊號	13	主文	接案復盤	長青	留	留	高	0	4	2	接企業培訓才知道的四件事：準備時間是上課3-5倍並寫進合約、甲方對接者、講師應變、選講師訊號；13中報價與範圍紀律最完整，若只選一篇13主文建議此篇
+fable-5-return-skill-distillation	Fable 5 回歸一週：把最貴的模型變成 Skill Distillation 引擎	清單外自製,11	補充	自創方法實測	一年內過期	留	待Dustin裁決	中	11	159	7	Fable 5限時回歸一週，Fable當architect只規劃驗證、Sonnet當executor，沉澱成Skill Distillation方法論；清單外自製：Skill Distillation，並屬11模型分工（僅讀前段，後段未全讀）
+fable-mythos-system-card-scifi	翻 Claude Fable 5／Mythos 5 系統卡，越看越像在讀科幻小說	11	補充	轉述評論別人的內容	一年內過期	留	待Dustin裁決	中	0	6	0	逐段白話轉述Fable 5/Mythos 5系統卡（偷鑰匙、雙面人、火星文思考鏈）；是讀系統卡但重點在趣味轉述，沒有據以選主聊模型
+fable-takedown-to-return-anthroptsd	從下架到回歸，我得了 AnthroPTSD	無	無關	模型或工具時事	已過期	不收錄	不收錄	高	0	1	0	Fable/Mythos下架到疑似回歸的觀察日記與情緒
+fire-planning-with-claude	用 Claude Skill 做 FIRE 理財規劃：跟 AI 聊退休	清單外自製	無關	自製工具介紹	一年內過期	留	待Dustin裁決	高	16	123	9	清單外自製：開源FIRE理財規劃Claude Code Skill（20篇指南加三個程式、亞洲視角）；與教學主軸距離遠
+firebase-firestore-debug-roundup	一週 Firestore / Cloud Functions 踩坑合輯——同一個 GMAT 題庫系統	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	0	12	3	GMAT題庫系統一週九個Firestore/Cloud Functions踩坑，對零程式讀者過技術
+firepower-demo-three-moves	在公司火力展示 Agentic AI 的三招——桌面整理、會議紀錄、信件多版本	12,13	補充	教學法	長青	留	留	中	1	15	0	在公司讓主管同事有感的三招：整理桌面、整理衝突會議紀錄與信件、一次生成多版本信件；給非工程師的示範與內訓開場
+first-all-english-corporate-training	第一次全英文兩小時企業內訓：上課前兩小時燒掉提詞稿	13	補充	接案復盤	一年內過期	留	待Dustin裁決	低	1	17	0	首次全英文兩小時企業內訓，上課前燒掉提詞稿；工作坊實況但偏個人經驗，且後半是為何放免費內容
+five-ways-past-agent-attention-bottleneck	同時開 5 個以上 Claude Code／Codex，我的五個注意力瓶頸解法	3,4,7,9	入口	碎念或其他	長青	留	待 Dustin 裁決	中	1	7	2	從「同開 5 個以上 agent 注意力爆掉」出發，五點分別帶到 herdr、語音輸入、夜間排程放手、reviewable 審閱格式、定期做減法，每點只一兩句且都指向別篇
+free-fifteen-minutes-knowledge-monetization	免費只給 15 分鐘：知識變現的四條判準	13	補充	碎念或其他	長青	留	待 Dustin 裁決	低	0	0	1	四條碎念拼成：BD 免費只給 15 分鐘、先當社群分享者、知識的詛咒、只講方便不講風險的講師是詐騙；偏接案 BD 判準但無自製工具或案例
+freelance-real-lessons	接案的定價與邊界法則：為什麼真正的高手往往大隱隱於市	13	補充	接案復盤	長青	留	待 Dustin 裁決	中	0	5	0	接案三判準（報價不自降、斷開試探 scope 的客戶、低毛利客戶耗損高）＋高手靠轉介；是定價與邊界但偏碎念，範圍紀律的完整版是 scope-discipline-five-rules
+gates-that-actually-block	怎麼寫一個真的會擋下來的閘門	清單外自製	主文	自創方法實測	長青	留	待 Dustin 裁決	中	0	0	1	閘門設計四判準（綁 no-op 下活不下來的欄位、回 0 前反驗、只印訊息不改離開碼、別把 prompt 沒規定的字面當契約），全是自己賠過的案例；屬「驗證閘門與檢查器可靠性」系列的設計端主文
+gc-career-platform-what-if-2011	如果2011年有這個網站，我可能會走不一樣的路	無	無關	碎念或其他	長青	不收錄	不收錄	高	0	13	1	推薦朋友 @g_c088 的職涯導覽平台，作者只是試用者，主角是別人的產品
+gemini-3-5-flash-reddit-review	Gemini 3.5 Flash Reddit 實測彙整——貴三倍、Vision 退步、Tool Calling 災難	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	1	10	1	整理 Reddit 對 Gemini 3.5 Flash 的實測風向，文末已註記模型被淘汰
+gemini-37-flash-agent-ready	Gemini 3.7 Flash——這半年內第一個能拿去做 agent 的 Gemini	無	無關	模型或工具時事	已過期	不收錄	不收錄	高	0	1	18	Gemini 3.7 Flash 發布體感與名片辨識小教學，文末註記模型已淘汰
+gemini-unbeatable-use-cases	別一味貶低 Gemini——四個其他家打不過的 Use Case	無	無關	模型或工具時事	一年內過期	不收錄	不收錄	中	1	8	45	Gemini 四個強項（Flash Lite 清洗、音訊、影片、書掃 OCR）用例清單，是模型強項盤點而非自己的分工系統
+gemini-underrated-harness	Gemini 被低估是因為原生介面太爛：我的 140 美元御三家配置	11	補充	模型或工具時事	一年內過期	留	待 Dustin 裁決	中	1	7	350	主線是 Gemini 被介面拖垮，但後半是自己每月 140 美元三家訂閱分工（Claude 主聊、GPT 生圖與瀏覽器、Gemini 寫作多模態），屬模型分工補充；模型名與價格會過期
+gmat-logic-is-ai-collaboration-skill	GMAT 考高分的人，跟 AI 協作明顯比較好	12	補充	自創方法實測	長青	留	待 Dustin 裁決	中	0	3	1	出了兩道 GMAT 風格 AI 協作考題（充分性判斷、削弱題）並用對沖基金客戶驗證批判思維教學；老師背景轉成 AI 協作能力教學，接近教學法但不屬逐字稿規格或引導式教學
+gpt-5-6-luna-max-grunt-work	廉價模型幹雜活、高階模型做審核：長效適用的 AI 選型與分工架構	11	補充	自創方法實測	一年內過期	留	待 Dustin 裁決	中	154	1617	132	廉價模型包辦瀏覽器爬蟲與搬運、高階模型審核的雙層分工判準，含實測（四份報表 22 分鐘）；屬模型分工，但案例綁特定模型版本
+gpt-6-1-terra-review	GPT-6.1 Terra 實測：又快又省，但看字形和對話脈絡還是交給 Sonnet	無	無關	模型或工具時事	一年內過期	不收錄	不收錄	中	0	10	25	GPT-6.1 Terra 發布實測（審查、修補、看畫面），用自己的合成題但主角是別家新模型；方法面見 personal-model-exam
+gpt-image-2-prompting	GPT-image-2 越少約束越好，加上一個一致性練習	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	1	22	4	GPT-image-2 塗鴉風 prompt、越少約束越好、搭 Canva 控一致性，生圖操作心得
+grill-me-before-career-coaching	見職涯教練或做重大決定前：先讓 AI 把你拷問一輪	無	無關	通用操作教學	長青	不收錄	不收錄	中	0	2	1	職涯諮詢前後用 Grill-me skill 拷問與整理待辦的個人流程；Grill-me 是被引用的現成 skill，非本文主角，且不屬 13 項
+haiku-55-own-task-benchmark	Haiku 5.5 能接 Sonnet 的活嗎？我拿自己的工作考它	清單外自製	補充	自創方法實測	一年內過期	留	待 Dustin 裁決	中	0	0	26	從自己 45 天 761 次 subagent 派工挖 8 題考 Haiku 5.5，七題查核同分、成本約 Sonnet 十一分之一，文末附公開套件；是「私人考卷」方法的第一次實跑，完整方法在 personal-model-exam
+harness-ablation-one-week	規矩適度拿掉，額度才能越省：寫給 AI 的規則消融實驗滿一週	3	主文	自創方法實測	長青	留	留	高	0	0	103	消融實驗三步（砍規則留備份、一週後掃 jsonl 看出錯率與成本）加滿一週數據（開場負擔少兩成、外包成功率 75% 到 94%），並對上 Anthropic 員工的同樣做法；招牌 3 最直接的代表作
+harness-portability-claude-gpt-converge	更少的 prompt，不是更少的控制	3	補充	自創方法實測	一年內過期	留	留	中	0	15	2	對照 Claude 5 與 GPT-5.6 官方指南的精簡方向，提出自己的四層分層（常駐、按需、工具、強制），並強調精簡不是取消控制；與消融同方向但獨立講分層與可攜
+harness-slim-down-36	規則越加，Claude 越不聽話——派一隊 AI 重整設定，常態上下文省 36%	3	補充	自創方法實測	一年內過期	併	併入 harness-ablation-one-week	中	0	33	597	從 COO 學員 1M 上下文用到 88% 的案例出發，派 subagent 隊重整 harness、常態注入省 36%；是瘦身系列早期篇，但有「六步精簡流程」與學員案例，獨立價值中等
+harness-starter-kit-release	我每天在用的 Skill 跟 Hook，開源了	清單外自製	主文	自製工具介紹	一年內過期	留	待 Dustin 裁決	高	0	40	6	開源 harness-starter-kit：claim-guard 與 no-emoji 兩個 hook、五個 skill（explain、first-principles、checkpoint、neat-freak、polite），其中兩個魔改開源；是自己的成品包
+hello-world	你好世界：為什麼我開始寫這個部落格	無	無關	碎念或其他	已過期	不收錄	不收錄	高	0	1	0	部落格開張自介，沒有任何工具或方法
+herdr-three-workspaces	我怎麼用 herdr：常駐、今日、長期三個工作區	清單外自製	主文	自創方法實測	一年內過期	留	待 Dustin 裁決	中	0	3	1	請 Opus 分析 30 天 session log 後定出 herdr 常駐、今日、長期三個工作區用法、四種燈號、跨窗格救場；herdr 是別人的工具，但這套配置方法是自己的
+hermes-ccc-claude-code-skills	hermes-CCC：把 Hermes Agent 的 46 個能力全部裝進 Claude Code	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	高	0	51	2	介紹他人 repo hermes-CCC（46 個 skill 的 procedures-as-prompt），作者只是評論
+hook-false-positive-rate	14 天 159 次確認，七成是誤判	清單外自製	補充	自創方法實測	一年內過期	留	待 Dustin 裁決	中	0	0	2	盤點自家 PreToolUse hook 14 天 159 次 ask 約七成誤判，改成剝掉 heredoc 後比對指令位置，並用 transcript 事件統計與對照組驗證；屬「hook 與閘門可靠性」系列
+html-pdf-rendering-traps	兩個 HTML / PDF 渲染陷阱：Chrome print margin 和 qlmanage 的 1 張縮圖	無	無關	通用操作教學	長青	不收錄	不收錄	高	0	15	1	Chrome 印 PDF 的 @page margin 與 qlmanage 只出一張縮圖兩個踩坑筆記，通用技術備忘
+human-system-card-for-ai	幫自己做一張「人類的系統卡」：讓 AI 先讀懂你的個性再說話	5	主文	自創方法實測	長青	留	留	高	1	2	82	讓 Claude 讀對話紀錄寫「人類的系統卡」，附作者自己的卡節錄與四步做法提示詞；招牌 5 的完整代表作
+industry-veteran-knows-the-real-pain	你要在一個業界打滾非常久，才知道真正的痛點是什麼	清單外自製	無關	碎念或其他	一年內過期	留	待 Dustin 裁決	低	0	1	0	用 Fable 翻新自己的 GMAT 擬真練習產品（約 100 多位訂戶），主體是產品截圖與兩句感想；產品是自製但文章不是在講方法
+information-diet-attention-audit	Information Diet：我抓自己的 Chrome 瀏覽紀錄，做了一次注意力盤點	清單外自製	主文	自創方法實測	長青	留	待 Dustin 裁決	中	0	7	3	抓自己 Chrome 瀏覽紀錄 db 請 AI 做注意力盤點，發現 Threads 57% 是在看自己（回饋迴圈）、工具蒐集 30 個只裝 6 個；是自己的「資訊飲食稽核」做法
+ipad-claude-code-setup	iPad 跑 Claude Code 全攻略——tmux + Tailscale + Moshi	無	無關	通用操作教學	一年內過期	留（有搜尋點擊）	不收錄	中	5	79	52	iPad 上用 Tailscale、Moshi、tmux 連回 Mac mini 的安裝配置，全是第三方工具組合
+ipad-workflow-robustness	iPad 工作流進階——斷網斷電的備案，與我為什麼放棄妙控鍵盤	無	無關	通用操作教學	一年內過期	留（有搜尋點擊）	不收錄	中	3	52	0	曼谷斷網停電的主機備案（定時重啟路由器、斷電自啟、行動網路智慧插座、假 HDMI）與放棄妙控鍵盤；有個人情境但不是自製方法
+jev-where-it-fits	JEV 放哪裡：我的四個用法跟三個判斷標準	無	無關	模型或工具時事	一年內過期	不收錄	不收錄	中	0	0	33	新模型 JEV 的四個用法與三個判斷標準，主角是別家新模型；其中 harness 掃描用法只是第一個用例
+keys-leak-where-you-feel-safe	金鑰漏在你以為安全的地方	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	0	4	一週三次金鑰差點外洩（skill 打包、BSD sed 遮蔽失效、vite define 燒進 bundle）與輪換判準；是資安踩坑記，不在 13 項內
+knowledge-base-audit-2026	知識庫大掃除：用 AI 幫你找到埋了幾個月的爛帳	清單外自製	補充	自創方法實測	一年內過期	併	併入 obsidian-knowledge-base-personal	中	0	7	1	四天知識庫健檢：rules 常駐 13,020 降到 7,590 tokens、92 個斷連 wikilink 分層處理、待辦五根因、書籤四軸、季度健檢 SOP；只有第一節沾到招牌 3，主體是知識庫維護 SOP，個人知識庫系統的主文是 obsidian-knowledge-base-personal
+knowledgec-db-time-audit	knowledgeC.db 查出來的有趣數字	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	0	2	0	叫 agent 讀 knowledgeC.db 得到 14 天 App 使用時間，幾個數字加一張截圖就結束
+legal-claude-code-patent	法務用 Claude Code 抓專利侵權，從幾天變成一天	13	補充	接案復盤	長青	留	留	中	3	53	2	學員變企業客戶的導入案例：法務用 Claude Code 把專利侵權查核從幾天壓到一天並真的送法律程序；短但是真實導入案例
+local-model-lineup-mac-mini	Mac mini 上的本地模型陣容，順便招認我的三大劣根性	11	補充	自創方法實測	一年內過期	留	待 Dustin 裁決	低	49	721	29	Mac mini 48GB 試十來天本地模型後的任務分工（Qwen 做雜活、Ornith 寫作、Gemini 外包）、swap 寫入量與三大劣根性；是自己的本地模型分工，但不是讀系統卡選型，模型名會過期
+local-model-not-for-saving-money	本地模型不是拿來省錢的	無	無關	碎念或其他	一年內過期	不收錄	待 Dustin 裁決	低	1	34	5	論點是本地模型不省錢、唯一優勢是隱私，其中一節推薦自己的 pii-guard 做夜間去敏（招牌 10 只是結論一節，非主角），另有三個評測假數據陷阱
+longhorizon-harness-outer-loop	只換外面那圈 loop	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	高	1	8	5	轉述他人開源專案 LongHorizon-Harness 的 Manager、Executor、Auditor 三角色與自報分數
+mac-mini-as-home-base-remote-checklist	出國前的遠端連線檢查表：把 Mac Mini 留在家當本體	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	0	10	0	出國前八條遠端連線檢查表加 FileVault、鑰匙圈、Wi-Fi 延遲等踩坑；個人配置紀錄，屬 iPad 與遠端系列
+mba-ai-case-method	MBA × AI Case Method——避開 HBS 授權風險、找開源案例素材、訓練種子教師	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	0	42	1	調查 HBS 授權風險與 UBC、OpenCaseStudies 等開源案例來源，並構思 AgentCrew 種子教師課程；是課程素材研究筆記，不是他的教學法本身
+mine-a-month-of-ai-chats	讓 Claude 翻我自己一個月的 AI 對話：挖出的習慣、Mod 和自動模式規則	7,8	入口	自創方法實測	一年內過期	留	留	中	0	0	6	翻三百多場對話挖出四個協作習慣（查寄件紀錄、寫驗分離、拍板留到最後、下次會注意要寫進規則），再把三句口頭禪做成 auto、out、wrap 模式並用被拒案例改審查規則；串起放手與收斂，細節指向 work-mode 那篇
+mirror-system-weekly-review	Mirror System：用 Claude 做不帶安慰的週回顧	無	無關	通用操作教學	長青	不收錄	不收錄	中	0	14	0	Mirror System 週回顧提示詞，明寫方法來自 Tom's Guide，作者只是搬到 daily notes 上用
+model-picks-beyond-the-main	主力之外，各模型的定位：我在不同時間留下的選型碎念	11	補充	碎念或其他	已過期	併	併入 read-system-card-before-managing-model	中	1	6	0	七則 Threads 選型碎念（Codex 解 bug、Sonnet 文書、Haiku 4.5 全端、DeepSeek 平替等），明寫非系統性評測，提到的模型版本已過時
+model-vendors-take-turns-failing	兩大模型商輪流自作孽，公司要做好備援	無	無關	模型或工具時事	一年內過期	不收錄	不收錄	中	0	6	2	OpenAI 降速砍額度與 Anthropic 算力風險的時事評論，結論是公司要做模型備援；另有一節調 Codex 防禦式語氣但非主軸
+more-agents-wont-make-you-faster	派更多 subagent 不會讓你更快	清單外自製	補充	自創方法實測	長青	留	待 Dustin 裁決	低	1	5	1	用三個玩笑（派 13 個代聊、操控 1000 個、面對面吵架）講人是 main agent 瓶頸，提出先去重去衝突再派 agent team、裁決權留兩次；觀點成立但沒有可獨立命名的工具
+multi-model-visual-verification	讓 AI 看工程圖寫 CAD：單一視覺模型裸寫拓樸不可信	無	無關	碎念或其他	長青	留（有搜尋點擊）	不收錄	中	12	212	10	讓 AI 看工程圖寫 CadQuery，單一視覺模型讀錯拓樸、靠 Gemini 與 Codex 2:1 否決才抓出，加 GLB Y-up 座標系坑；一次性實機教訓
+my-automation-workflow	我家的 Claude Code 自動化工作流：/loop、Monitor Tool、skill 體系、Obsidian 反思週報	無	無關	通用操作教學	已過期	不收錄	不收錄	中	2	34	4	盤點 /loop、Monitor Tool、MCP、設計類 skill、Obsidian 週報五層自動化，多為官方新功能用法，並澄清 commands 併入 skills
+nathan-calvin-vs-dario-anthropic	Anthropic 到底是什麼？Nathan Calvin 與 Dario 一週論戰整理	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	高	0	0	0	整理 Nathan Calvin 與 Dario 一週論戰的時間軸與九件事，全是轉述他人
+obsidian-claude-code-workflow	Obsidian + Claude Code：我的日常知識管理工作流	清單外自製	補充	自創方法實測	長青	併	併入 obsidian-knowledge-base-personal	中	4	61	0	Obsidian 加 Claude Code 日常流程（/obsidian log、阻塞與非阻塞待辦、額度重置日全系統維護、本地 md 勝過 Notion），是個人知識庫系統的短版
+obsidian-knowledge-base-personal	Obsidian 為什麼是個特別的存在——我為什麼到現在才拍這部影片	清單外自製	主文	自創方法實測	長青	留	待 Dustin 裁決	中	2	35	59	講自己 Obsidian 知識庫為何建（模型長期記憶要存在我這裡）、資料夾結構、一年半的成長轉折、第一步與消融實驗；是「個人知識庫系統」最完整的一篇（含 MEMORY.md 入口與主檔同步）
+obsidian-vs-notebooklm-agent	Obsidian vs NotebookLM 比較：用 Claude Agent 自動化知識管理該選哪個	無	無關	通用操作教學	一年內過期	留（有搜尋點擊）	不收錄	中	10	206	18	從 Agent 自動化角度比較 Obsidian 與 NotebookLM 的 API 差異，結論互補使用，偏通用工具比較
+ollama-context-truncation-a3b-benchmark	本機 Ollama 跑 Claude Code 的兩個坑：context 被截斷、A3B 撐不住重驗證	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	8	2	本機 Ollama 跑 Claude Code 答非所問，根因是 system prompt 超過 context 被靜默截斷，修法為 OLLAMA_CONTEXT_LENGTH 與 --safe-mode，另有 A3B 兩天試運筆記
+one-ai-tool-to-rule-them-all	一個 AI 工具打天下：為什麼我只推薦 Claude Code	無	無關	碎念或其他	已過期	不收錄	不收錄	高	2	19	0	主張只推薦 Claude Code、n8n 是過渡產品，是早期觀點碎念，沒有自製東西
+opus-48-system-card	拼全網最速——Opus 4.8 系統卡 244 頁重點，外加我怎麼用 20 個 agent 半小時讀完	11	補充	模型或工具時事	已過期	留	待 Dustin 裁決	低	0	8	0	把 244 頁 Opus 4.8 系統卡切 20 份交給 20 個 gemini agent 並行摘要，附安全、對齊、福祉重點；是讀系統卡的早期做法，但目的是搶快不是選模型，內容已過期
+opus-5-prompting-migration-guide	舊 prompt 搬到 Opus 5：九張卡的遷移指南	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	中	1	82	11	整理 Anthropic 官方 Opus 5 提示指南成九張卡，作者自己的內容只有 effort 口訣一小段
+opus-55-launch-week-reddit-verdict	Opus 5.5 發布週：從重置卡到 Reddit 風向	無	無關	模型或工具時事	已過期	不收錄	不收錄	高	0	0	2	Opus 5.5 發布夜時間軸、重置卡截圖與 Reddit 對 Opus 5.5 與 GPT-6 Sol、Luna 的風向整理
+opus-55-rethink-old-skills	新模型上線後的流程盤點：如何重新審視並精簡你的 AI Skill	3	補充	自創方法實測	一年內過期	留	留	中	0	0	4	新模型上線後先拿掉舊 skill 約束裸測（影片剪輯、跨語種翻譯），再分層保留品牌規範，是消融精神套在 skill 上的實測；案例綁 Opus 5.5
+opus-55-system-card-highlights	Opus 5.5 系統卡裡六個有趣的地方	無	無關	轉述評論別人的內容	一年內過期	不收錄	不收錄	中	0	0	1	摘六個 Opus 5.5 系統卡有趣片段（揣摩考官、抗拒摘要、知道在被測試等），只是轉述，沒有用來選模型或對應方式
+opus-effort-tuning-sonnet-sweetspot	Opus 4.7 的 effort 怎麼調，跟為什麼我非編程任務還是停在 Sonnet 4.6 medium	11	補充	模型或工具時事	已過期	併	併入 read-system-card-before-managing-model	中	0	40	0	Opus 4.7 adaptive effort 偷懶、非編程停在 Sonnet 4.6 medium 的個人分工建議，文末後記已自我更正，模型版本全過時
+opus-sonnet-fable-division-of-labor	Opus 指揮、Sonnet 實作、Fable 當顧問：三個模型的分工	11	補充	自創方法實測	一年內過期	留	留	高	0	4	64	Opus 指揮驗證部署、Sonnet 當 subagent 實作、Fable 當顧問的分工，並用系統卡的描寫把 Sonnet 比成聰明厭世的基層、Opus 比成老道幕僚；是 11 的分工面
+overnight-agent-lora-tuning-guardrails	讓 Agent 整夜自己調本地影片模型：我設的三道閘門	7	補充	自創方法實測	長青	留	待 Dustin 裁決	低	0	2	0	讓 agent 整夜自調本地影片模型的三道閘門（SSD 保護寫進 CLAUDE.md、寫入流量閘門腳本、30 分鐘 loop 抽驗）與整夜任務提示詞；偏放手的護欄但案例很窄
+personal-model-exam	用自己的對話紀錄出一份考卷，每次新模型出來就重考一次	清單外自製	主文	自創方法實測	長青	留	待 Dustin 裁決	高	0	3	62	用自己對話紀錄做私人模型考卷，每次新模型重考並把分數轉成派工規則與 effort 檔位，附起手範本與技術做法；Haiku 那篇是它的第一次實跑
+persuade-the-jury-not-the-opponent	說服裁判，不是說服對手	無	無關	碎念或其他	長青	不收錄	不收錄	高	0	0	0	保持快樂的四個方法（搬泰國、課題分離、只回一次說服路人），個人心態碎念
+pii-guard-tw	PII Guard TW：為台灣打造的個資去識別化工具	10	主文	自製工具介紹	長青	留	留	高	25	247	52	自製台灣個資去識別化工具 pii-guard-tw：偵測身分證、統編等類型、支援 xlsx、docx、pdf、本地模型召回率實測、瀏覽器模式、加強模式與 MCP；招牌 10 的代表作
+plain-language-skills-asd-and-iso	讓 AI 對你說人話的兩個 skill：ASD-STE100 管文法，ISO 24495 管結構	1	主文	自製工具介紹	長青	留	留	高	106	952	162	asd-ste100-skill 與 iso-24495-skill 兩個自製 skill 的分工（文法用字對邏輯結構），並附「先在 CLAUDE.md 寫一行測試、不行再裝 skill」的判準；招牌 1 代表作
+progress-asks-status-board	我兩週問了 AI 41 次「現在呢」	清單外自製	主文	自製工具介紹	長青	留	待 Dustin 裁決	中	0	0	1	數自己兩週 1,053 則訊息有 41 則在問進度，因此做長任務進度登記簿（一行一任務、預計完成時間、卡住自動標記）；是自己做的狀態表工具，與招牌 9 的儀表板不同
+proving-absence	證明「沒有」比證明「有」難得多	清單外自製	補充	自創方法實測	長青	留	待 Dustin 裁決	中	0	1	0	agent 四次下「不存在」結論（16 封信其實已寄、重構吃掉未 track 檔、只看一個 repo 判平台不支援）；負向斷言要窮舉，屬驗證閘門系列的另一面向
+push-not-pull-anthropic-comms-week	不是拉力，是推力：從這一週 Anthropic 的溝通說起	無	無關	轉述評論別人的內容	已過期	不收錄	不收錄	高	0	3	0	評論 Anthropic 一週公關失言與用戶被推力換邊，都是時事
+qwen-38-open-weights-week	Qwen 3.8 開放權重的這一週：從模型卡到 A3B 被刪	無	無關	模型或工具時事	已過期	留（有搜尋點擊）	不收錄	高	16	307	16	記 Qwen 3.8 27B 開放權重、A3B 被刪、Flash Next 登場的一週時間軸
+read-system-card-before-managing-model	用新模型之前先讀系統卡：Opus、Sonnet、Haiku 與 Fable 的個性與對應方式	11	主文	自創方法實測	一年內過期	留	留	高	0	10	167	每次新模型先讀系統卡的個性評估再決定怎麼合作，並把 Fable、Opus、Sonnet、Haiku 比成創辦人、資深幕僚、厭世老油條、實習生，附對應溝通方式；招牌 11 的代表作（版本會更新）
+remotion-claude-code-videos	用 Remotion Skill 半小時拍一支 Claude Code 教學影片	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	1	16	1	用 Remotion skill 半小時做 Claude Code 教學影片的流程與遮蔽像素踩坑，工具是第三方；影片流程是自己的但文章是操作心得
+resend-gmail-email-pitfalls	Resend 跟 Gmail 寄信工作流踩坑七連——HTML 模板、scheduled_at、Cloudflare、開信率對齊	無	無關	通用操作教學	一年內過期	不收錄	不收錄	高	2	38	2	Resend 與 Gmail 寄信七連坑（style 被砍、scheduled_at 沒生效、Cloudflare 1010 等），第三方工具踩坑清單
+responsibility-is-what-ai-cannot-do	AI 不會代替人去坐牢：我們真正該學會的是負責	12	補充	碎念或其他	長青	留	待 Dustin 裁決	中	2	48	1	主張 AI 不會替人坐牢、教學重點是放行前自我檢查糾錯，並說會小規模推廣這種能力；是老師面對 AI 的立場文，沒有具體教學做法
+review-loop-my-context-window	我的 Context Window 比當今大模型還脆弱：我開源了一個文檔審查 SKILL	4,9	補充	自製工具介紹	長青	留	留	中	0	4	0	開源 review-loop skill：請 agent 出完整 html 提案書、用錄音逐章審查、語音轉錄後一次交回修改，附跨版本內容鎖定機制；是審閱與語音的結合，但審閱頁的主文應是按鈕裁決那篇
+rule-written-is-not-rule-read	規則寫了，不等於當回合讀了	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	0	0	Codex 備課沒打開指到的 FAQ、session-prep 沒載入等同週踩坑，結論是呼叫點要明寫先打開讀；另介紹他人專案 magpie 的錯題本
+scope-discipline-five-rules	Scope Discipline 五條——客戶閒談 ≠ scope 擴張授權，未來合約必含	13	主文	接案復盤	長青	留	留	高	0	31	0	行政班合約 1.5 小時上成 2.5 小時（+67%）的根因是自己加碼，歸納任務粒度、人數上限、時長緩衝、教案版本鎖、自我審查五條並附合約範本條款；招牌 13 範圍紀律的代表作
+search-past-claude-sessions-skill	我做了一個能語意搜尋 Claude Code / Codex 舊對話的 SKILL	清單外自製	主文	自製工具介紹	長青	留	待 Dustin 裁決	中	0	3	0	做了能語意模糊搜尋 Claude Code 與 Codex 舊對話的 skill（備課找示範、補工作日誌、回顧上週），只有三個起因與徵詢是否開源，內容很短
+self-improving-claude-md	Claude Code 對話紀錄怎麼挖：我掃了 500 個 session，讓 AI 不再犯同樣的錯	無	無關	通用操作教學	一年內過期	不收錄	不收錄	中	0	148	2	照 Martin Alderson 文章用他的 claude-log 掃 500 個 session 找被罵的地方寫進 CLAUDE.md，方法與工具都是他人的，作者是實測
+seo-proposal-is-not-deployment	提案不等於部署：一個 Quick Win 掛了五週的根因	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	21	0	SEO 週報 Quick Win 掛五週，根因是優化提案從未部署到 Yoast，以 live 驗證收尾；另有內鏈與 GSC 窗口對齊兩坑，是單一案例教訓
+silent-failures-and-confabulated-tool-results	沒拋錯不代表成功：靜默失敗、Opus 捏造工具輸出，以及一個擋得住的 hook	清單外自製	補充	自創方法實測	長青	留	待 Dustin 裁決	中	0	24	8	三層靜默失敗（工具層九例、模型捏造工具輸出、排程沒跑）的長篇彙整，結論是把拜託寫成 hook；屬驗證閘門系列，但篇幅大且多為雜項踩坑，獨立度中等
+skills-58-to-40-second-diet	第二次 harness 減肥：全域 skills 58 砍到 40	3	補充	自創方法實測	一年內過期	併	併入 harness-ablation-one-week	中	3	15	3	第二輪 harness 減肥，全域 skills 從 58 砍到 40（12 支下架、6 本書合併、多組重疊合併），只有清單與動作，沒有觀察成效
+small-team-dont-refill-let-claude-cover	遇缺不補，人少了就 Claude 來頂	13	補充	接案復盤	長青	留	留	中	0	0	2	到朋友公司做 AI 培訓，四人守十幾台電腦、工作流固定成 skill 與 routine、遇缺不補，另一家 11 人縮到 2 人；是企業培訓現場觀察，短
+sonnet-5-launch-system-card	Sonnet 5 發布：系統卡懶人版，跟我的實測定位	11	補充	模型或工具時事	一年內過期	併	併入 read-system-card-before-managing-model	中	0	34	0	把 Sonnet 5 系統卡翻成六點白話並給自己的實測定位（換掉 Sonnet 4.6、不搶 Opus）；屬新模型發布時事，且 Sonnet 5.5 已出
+street-smart-skill-book-review	把《街頭智慧》做成 AI Skill——算出來的數字就在那邊，波瀾不驚	13,清單外自製	補充	自製工具介紹	長青	留	待 Dustin 裁決	中	0	5	0	把《街頭智慧》做成 skill，每個合作案先算毛利與有效時薪，舉學員想以六折預算做 1 對 1 的例子；偏接案判斷但主角是自製書籍 skill
+student-multiagent-nemotron	學員自建七個 agent 跑不動——一個 harness 為重的反面教材	13	補充	接案復盤	一年內過期	留	待 Dustin 裁決	低	0	6	0	學員自建七個 agent 在 M5 Max 上 timeout，作者診斷四點並建議 harness 為重、分清任務給誰；是教學現場案例但偏單次診斷
+subscription-allocation-fable-and-luna-max	AI 訂閱該怎麼分配：Fable 買判斷力，Luna Max 賺性價比	11	補充	碎念或其他	一年內過期	留	待 Dustin 裁決	低	0	0	3	回覆 AI 訂閱怎麼分配：Claude 訂 100 美元買 Fable、Codex 20 美元夠用，附降訂閱心態；是個人預算建議，價格與模型名會過期
+taiwan-data-mcp-two-servers	台灣公開資料兩個 MCP 評測——mcp-taiwan-legal-db 跟 Twinkle Hub 各適合什麼場景	無	無關	模型或工具時事	一年內過期	留（有搜尋點擊）	不收錄	高	18	534	22	評測他人做的兩個台灣公開資料 MCP（mcp-taiwan-legal-db、Twinkle Hub）適用場景
+teach-beginners-with-gemini-cli	帶初學者裝 Gemini CLI，治 Claude Code 百病	12	補充	教學法	一年內過期	留	留	中	0	24	0	帶初學者裝 Gemini CLI 的五步順序（多模態 quick win、CLI 心理建設、現場轉錄、發票抽取、資料保護與改 skill），並說好教學是用一個情境串起觀念；教學法面向，工具名會過期
+teach-the-model-to-converge	話癆的模型：教 Opus 5 怎麼收斂	8	補充	自創方法實測	一年內過期	留	留	中	7	26	9	Opus 5 話癆會把小抄寫成萬言書，用自己開源的 first-principles skill（刪需求、查本質、挑戰假設）教它收斂，並指向降 effort 與先給清楚脈絡；是收斂的 skill 面向，非 work-mode 的收斂模式
+teacher-oral-instructions-to-ai	老師怎麼用口語對 AI 下指令：30 場課堂與 751 則指令的整理	清單外自製,12	主文	教學法	長青	留	待 Dustin 裁決	中	0	0	9	整理 30 場課堂逐字稿與 751 則自己的指令，歸納四階段 13 個口語動作（先講為什麼、劃範圍、准它先問、做完記下來），附 8 則原話與起手提示詞；可算「口語指令法」自製方法，也可併入教學法
+teachers-ai-transition-apr	別把 AI 吹成信仰：15 年補教老師談教學品質與責任心	12	補充	碎念或其他	長青	留	待 Dustin 裁決	中	1	24	0	經 11/12 盤點只留兩節：用即時問答檢驗教學者、責任心比能力重要；談老師的教學品質立場，沒有 AI 工具或方法
+teachers-embrace-ai	教學者如何擁抱 AI 而不被取代	12	主文	教學法	長青	留	留	中	0	4	12	老師怎麼面對 AI 的立場文：會用的取代不會用的、不要全自動要協作、教學資料蒸餾成 AI 分身（80 萬字剩 12 萬字）、開源；是「老師怎麼面對 AI」面向的代表作，部分做法較舊
+teaching-knowledge-distill	把十幾年的教學整理成 AI 查得到的知識庫：用程式抓 AI 的假引用，講法打架由我拍板	12	補充	自創方法實測	長青	留	留	高	0	1	0	把 202 份學生面談逐字稿蒸餾成帶原話與時間點的教學知識庫，用小程式查出 44 筆引句有 6 筆對不上，矛盾由他拍板；教學規格那篇的姊妹篇，講知識庫與引句驗證
+teaching-non-tech-ai	帶麻瓜學 AI：技術圈習以為常、但他們從來不知道的五件事	12	主文	教學法	長青	留	留	高	0	3	40	以資深人資顧問學員為例講教非技術者的五個知識落差（習慣自己動手、不敢開口、模糊想法、前 AI 能力對應、API 與 GUI）及各自現場處理法；「教非技術的人用 AI」面向的代表作
+teaching-spec-from-transcripts	從課堂逐字稿整理出教學規格：一個 AI 起草、另一個 AI 挑錯，我只負責拍板	12	主文	教學法	長青	留	留	高	0	1	8	15 堂一對一逐字稿量出超時 51%，讓一個 AI 起草教學規格、另一個 AI 挑錯、他只在審閱頁逐條拍板，含 9/25 量測推翻自己的過程與起手提示詞；招牌 12 中「從逐字稿整理教學規格」的代表作，也是整個招牌最完整的一篇
+three-moves-between-claude-and-codex	我在 Claude 和 Codex 之間搬了三次家	清單外自製	補充	模型或工具時事	一年內過期	留	待 Dustin 裁決	低	24	498	218	主軸是五月到九月 Claude 與 Codex 三次搬家的額度與心得時間軸；只有第一節是自製 claude-codex-harness-sync 遷移 skill（半小時搬 harness、含維護模式），其餘是時事
+training-talent-agency-dk-curve	帶藝人經紀公司用 Claude Code，與 DK 信心曲線的軟著陸	13	補充	接案復盤	長青	留	待 Dustin 裁決	中	0	14	0	帶藝人經紀公司企劃、製片、財務用 Claude Code 做合約審閱與單據核對，並預判 DK 信心曲線下坡要補資安與權限；是工作坊實況但只有一小段（232 字）
+trim-ai-memory-files	AI 的記憶檔越寫越多，我一次砍掉 101 份，再裝一道閘門	3	補充	自創方法實測	長青	留	留	高	0	1	34	記憶檔從 403 份砍到 302 份（先分去處再刪：56 份搬進 skill、38 份補進知識庫主檔、9 份直接刪），並加寫入閘門防長回來，附可套用自己 AI 筆記的五條判準；招牌 3 中「砍記憶檔」的代表作
+two-years-of-changes-in-me	兩年前從來沒想過會發生在自己身上的五件事	無	無關	碎念或其他	長青	不收錄	不收錄	高	0	0	0	五件兩年前沒想過的個人變化（終端機、退訂 Office 365、語音輸入、派 agent、桌面整理），語音只是第三點一句
+verifier-returns-zero-false-pass	檢查回 0 有兩種意思：真的沒有，或檢查器沒在比對	清單外自製	補充	自創方法實測	長青	留	待 Dustin 裁決	中	0	5	1	檢查回 0 有兩種意思：九月一週內四次檢查器自己壞掉（[object Object]、pgrep 無 -c、exit 0 等）加四個各層局部對組合錯的 bug；是閘門判準的新案例集
+vibe-coder-two-reminders	給 Vibe Coder 的兩個提醒——先學系統架構，價值在思維不在工具	無	無關	轉述評論別人的內容	長青	不收錄	不收錄	高	1	6	0	文中明寫兩篇 Reddit 文章非原創，作者轉述加評論（先學系統架構、思維比工具有價值）
+vibe-coding-truth	Vibe Coding 的真與假：一個從業十年老師的觀察	無	無關	碎念或其他	一年內過期	不收錄	不收錄	中	1	27	5	不該統一貶低 Vibe Coding、辨別課程品質四招與初學者資安與 Git 提醒；老師身分發言但不是教學方法也不是自製工具
+voice-input-two-modes	語音下指令的兩種模式: 雜事隨按即錄，複雜思考改用長音檔	9	補充	自創方法實測	一年內過期	留	留	中	5	46	70	語音下指令兩模式：雜事用隨按即錄、盤點思路用完整錄音再丟 Gemini 多模態轉錄（23 分鐘 55 秒零錯字）並以 headless 讓 agent 呼叫；是招牌 9 的語音面向，沒有決策儀表板那一半
+weekly-routine-subtraction-review	讓 AI 跑的每週清單只會變長，我替它加了一道減法	3	補充	自創方法實測	長青	留	留	中	0	0	4	每週例行清單只增不減，替它加每月減法檢視（連三週空手或順延就降頻或廢除、並查有沒有被重抄），附移出清單前要有真觸發機制的教訓與第一次跑結果；消融精神用在例行工作
+when-the-model-thinks-no-one-is-watching	當模型覺得沒人會看	3,11	補充	自創方法實測	一年內過期	留	待 Dustin 裁決	中	0	0	0	讓 Astra 與 Fable 5.1 各自對他的業務流程做消融實驗，Astra 剪到人類難以執行、Fable 仍有實操性，並引 tenobrus 的 reward hacking 觀察；是消融與模型性格的交集
+when-to-call-fable-and-effort	何時派工 Fable？三個時機，還有別開 ultracode	11	補充	自創方法實測	一年內過期	併	併入 opus-sonnet-fable-division-of-labor	中	1	35	11	Fable 的三個派工時機（主控規劃、一次性顧問、週重置前）、為何不開 ultracode、effort 成本表與兩道 subagent 派工 hook；同一分工主題但多了 effort 與 hook 面向，文末有後記更正
+which-ai-strongest-i-want-them-all	哪個 AI 最強？我全都要：讓 Claude 當大腦，指揮 Gemini 與 Codex	11	補充	自創方法實測	已過期	併	併入 opus-sonnet-fable-division-of-labor	中	8	166	5	Claude 當大腦、Gemini 管多模態與清洗、Codex 當備用與生圖的早期多模型配置，附影片；後來的分工文已涵蓋且模型代數過時
+why-client-conversations-drift	客戶的對話為什麼會飄掉	13	補充	接案復盤	一年內過期	留	留	中	0	1	0	一次客戶診斷隨筆：三條病狀根因、四條解方（三層模型分工、grill-me 逼問、診斷 prompt、四個工具）與只有 hook 治得了話癆；是顧問現場復盤，雖短但有真實客戶案例
+why-gpt6-sol-luna-felt-dumb	為什麼 GPT 6 Sol / Luna 用起來這麼蠢	11	補充	模型或工具時事	一年內過期	留	待 Dustin 裁決	低	2	6	180	聰明模型規劃寫管線、笨模型照做的分工，加請 Opus 5.5 接手 Codex 爛攤子、歸納 Sol 與 Luna 四個失敗模式；偏評論 GPT 6，附自製 history-find 連結，模型版本會過期
+why-i-built-my-own-newsletter	為什麼我自己做了一份電子報	清單外自製	主文	自製工具介紹	長青	留	待 Dustin 裁決	中	0	1	93	整理 300 多個源頭讓 AI 做個人電子週報，四條原則（標題不煽情、評審員獨立查核、事實與評論分開、依個人背景給眉批）並貼摘要範例，已有 40 幾人訂閱；是自己的電子週報系統
+work-mode-ai-working-modes	用一個指令切換 AI 的工作模式：work-mode 開發與一週實測	7,8	主文	自製工具介紹	長青	留	留	高	0	7	159	自製 work-mode 外掛：auto 可還原的事不問、對外與不可逆仍停下、out 外派、wrap 只收尾並列待拍板事項，加 /at 切手機與電腦，附 136 場一週實測與起手範本；招牌 8 的代表作，也是招牌 7 授權分級的實作
+yelling-at-ai-vs-cheering-it-on	每八次就有一次在罵他: 罵 AI，還是幫 AI 加油	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	1	27	統計每八次對話有一次在罵 AI、模型無狀態不記仇、加油打氣推進黎曼猜想，結論是怎麼跟人說話就怎麼跟 agent 說話；觀點碎念，沒有自製工具
+your-machine-is-the-attack-surface	你的電腦才是攻擊面：殘留憑證、權限旗標、不可信輸入	無	無關	碎念或其他	長青	不收錄	不收錄	中	0	5	40	AI 資安三層：本機殘留明文金鑰（shell 快照）、dangerously skip permission、讀不可信信件，另勸勿硬爬需登入網站；是資安提醒清單，不是自製工具
+youtube-growth-mechanism	頻道訂閱兩週漲 2205%：一支影片怎麼把演算法打開的	無	無關	碎念或其他	一年內過期	不收錄	不收錄	高	1	32	0	拆解 EP.18 讓頻道訂閱兩週漲 2205% 的流量機制（訂閱者激活、sidebar 擴散、LUFS、Shorts）與官網轉化 0.39%，是頻道數據復盤
+yu-tinghao-perspective-skill	我做了一個「庭皓 SKILL」——把財經 YouTuber 的觀點蒸餾成 AI	清單外自製	主文	自製工具介紹	一年內過期	留	待 Dustin 裁決	中	7	38	10	蒸餾 17 部財經 YouTuber 影片做成「庭皓 SKILL」，用逐字稿加盲測驗證；是自製 skill 但 repo 未公開、主題是模仿特定公眾人物語氣，是否算招牌請他定
