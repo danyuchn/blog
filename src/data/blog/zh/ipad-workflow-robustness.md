@@ -23,7 +23,7 @@ description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是
 
 連線層我用 Tailscale 配 MOSH 協定。安全、不容易斷，重點是切換網路不用重連——從家裡 wifi 走出門變行動網路，session 還活著。
 
-終端機 app 我從 Termius 換成了 Moshi。Moshi 原生就是為 AI agent CLI 設計的，方塊字 render 不容易破碎。Termius 我實測 CJK render 有 bug，中文字會跑掉。我最愛的遠端終端機 App Moshi，後來竟然出了網頁版介面，搭配 Herdr 如有神助。開發者好像是日本人旅居曼谷數位遊牧，不愧是我大曼谷。
+終端機 app 我從 Termius 換成了 Moshi。Moshi 原生就是為 AI agent CLI 設計的，方塊字 render 不容易破碎。Termius 我實測 CJK render 有 bug，中文字會跑掉。我最愛的遠端終端機 App Moshi，後來竟然出了網頁版介面，搭配 Herdr 如有神助。開發者好像是日本人旅居曼谷遠端工作，不愧是我大曼谷。
 
 後備方案：Chrome 遠端桌面或 AnyDesk。SSH 終端能處理九成的事，但偶爾要看終端機以外的東西——某個 GUI app、某張圖——這時候用遠端桌面墊一下。它不是主力，是備胎。
 

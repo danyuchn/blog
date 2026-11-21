@@ -60,7 +60,7 @@ Cursor 是目前市面上 Claude Code 之外最成熟的 AI coding 工具之一�
 
 這是隱私問題，但也讓我想到另一件事：如果你一直在餵 AI 你自己的思考，它對你的理解可能比你以為的深很多。
 
-## 副業：用 Claude Code 做音樂
+## 工作以外：用 Claude Code 做音樂
 
 4/25 做了一件讓我意外好玩的事：用 Claude Code + Strudel REPL 做 Deep House 音樂。
 
