@@ -76,6 +76,26 @@ export const START_HERE: StartEntry[] = [
       "personal-model-exam",
     ],
   },
+  {
+    key: "attention",
+    title_zh: "跟 AI 協作，保住你的注意力",
+    title_en: "Keep Your Attention While Working with AI",
+    desc_zh: "同時開很多個 AI 不再切到累，把小決定與盯進度交給規則和工具。",
+    desc_en:
+      "Run many AI agents without burning out on switching; let rules and tools handle small calls and check-ins.",
+    slugs: [
+      "five-ways-past-agent-attention-bottleneck",
+      "ai-risk-judgment-framework",
+      "voice-input-two-modes",
+      "review-loop-my-context-window",
+      "ai-decision-precedents",
+      "read-system-card-before-managing-model",
+      "human-system-card-for-ai",
+      "work-mode-ai-working-modes",
+      "harness-ablation-one-week",
+      "adhd-flow-why-i-teach-ai",
+    ],
+  },
 ];
 
 export function startPath(key: string, lang: Lang): string {
