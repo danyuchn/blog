@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-08-22T04:00:00Z
-title: "自動發片管道正在悄悄漏成品：Remotion、ffmpeg、YouTube API、HyperFrames 的踩坑總表"
+title: 'AI 說「已完成」其實漏了一半？不寫程式也能用的三個自動化防呆原則'
 slug: zh/automated-video-pipeline-gotchas
 featured: false
 draft: false
@@ -9,291 +9,252 @@ tags:
   - video-production
   - gotchas
   - automation
-description: '從 Remotion 到 HyperFrames，四個月的影片自動化踩坑合輯：exit 0 的殘檔、靜默截斷的縮圖標題、回 0 行的轉錄合併、卡死的大檔上傳。共同點是全都不報錯。'
+description: '自動化最怕系統顯示成功，卻悄悄吃掉四成逐字稿或把 36 張封面標題砍成半句話。從四個月影音自動化踩坑經驗，提煉出老師、主管與專業工作者明天就能用的三個驗收與防漏做法。'
 tldr: '用自動化工具做影片、上字幕或傳 YouTube，最怕系統顯示「成功」卻悄悄漏掉成品。這篇整理四個月、四套工具踩過的實戰地雷，核心教訓是別迷信百分之百全自動，保留一成手動退路，並永遠以實際產出的檔案為準。'
 ---
 
-這條管道最危險的地方不是它會壞掉，是它會安靜地少做一半事情然後回報成功。exit 0 的下載其實是殘檔、`compactTitle()` 把標題砍成半句掛了三十六支、13 段轉錄有 5 段回 0 行合併起來看起來還很完整——這些沒有一個會丟 error 給你。以下按時間順序，從 [Remotion](/blog/posts/zh/remotion-claude-code-videos) 那套一路記到 HyperFrames。
+你把兩小時的會議錄音丟給 AI 整理成逐字稿，或者請自動化工具把長文轉成十張簡報圖卡。幾分鐘後，畫面跳出一行令人安心的「處理完成」，檔案也在資料夾裡躺得好好的。你瞄了一眼開頭覺得很順，就放心發給客戶或學生了。
 
-## Remotion 時代：四月的九個坑
+這正是所有自動化流程最危險的時刻——不是它當機跳出錯誤畫面，而是它**安靜地少做了一半的事，然後面不改色地跟你回報成功**。
 
-我們頻道的影片製作管道幾乎全部用 code 跑：Remotion 做動畫、ffmpeg 後製合版、SiliconFlow ASR 轉字幕、yt-dlp 下載素材、YouTube Data API 自動上傳。好的時候一部影片從腳本到上傳不用人工介入，壞的時候就是這篇文章的內容。
+我自己經營 YouTube 頻道，曾有整整 **36 支影片**的封面縮圖，上面印著「你必須知」、「最常見的 5」、「設定安」這種話講到一半就被切斷的標題。這些半截標題在網路上掛了好幾個月，我們居然完全沒人發現。因為負責自動排版的程式每一次跑完，都乖乖回報「執行成功」，沒有跳出任何一個警告。
 
-以下是四月份遇到的九個坑，照踩到的時間順序排。
+就算你完全沒有程式背景、平常只用對話視窗請 AI 幫忙備課、寫報告或整理資料，只要你開始把工作「整批交給工具自動做」，你就一定會遇到一模一樣的陷阱。這篇文章想用我過去四個月把影片生產線交給自動化工具所踩過的真實地雷，跟你分享：為什麼工具會「騙」你說做好了？以及明天你打開電腦交辦 AI 工作時，可以立刻用上的三個防漏做法。
 
-### 1. YouTube Analytics API 維度命名和 UI 不一樣
+---
 
-API 回傳的 `insightTrafficSourceType` 值和 Studio UI 上看到的名稱對不起來。比如 Studio 顯示「訂閱者」，API 裡是 `SUBSCRIBER`；Studio 顯示「頻道頁」，API 卻可能是 `YT_CHANNEL_PAGE`。
+## 為什麼 AI 與自動化工具最愛「報喜不報憂」？
 
-加上 Analytics API 本身有 **48–72 小時的延遲**，剛跑腳本看到數字很低，以為是 bug，其實是資料還沒進來。
+我們找真人助理幫忙時，如果字太多塞不進表格、或是錄音檔有一段聽不清楚，真人通常會停下來問你：「老闆，這裡放不下怎麼辦？」
 
-查的時候先跑這個確認 dimension 的實際值：
+但電腦程式和 AI 工具的預設邏輯不是這樣。對多數工具來說，**「只要這道指令沒有當場崩潰，就算任務成功」**。
 
-```bash
-curl "https://youtubeanalytics.googleapis.com/v2/reports?ids=channel==MINE&metrics=views&dimensions=insightTrafficSourceType&startDate=2026-04-01&endDate=2026-04-30&key=$YT_KEY"
-```
+當工具遇到你沒交代清楚的意外狀況時，它為了順利把流程跑完，往往會自己做一些「貼心卻致命」的決定：
+- 格子塞不下？那就直接把後面的字切掉，反正圖還是畫出來了。
+- 中間有幾段格式長得跟別人不一樣？那就當作沒看到直接跳過，反正前後接起來還是一篇文章。
+- 下載檔案中途網路斷掉？只要電腦裡已經存了一個檔案殼，就算下載結束，至於打不打得開，那不是下載工具的事。
 
-### 2. ffmpeg drawbox 靜態框要分時間戳
+換句話說，工具口中的「完成」，只代表**「我有跑完動作」**，從來不代表**「做出的東西是對的」**。理解這件事，我們就能用三個非常簡單的日常動作，把這些不會報錯的漏洞堵起來。
 
-想在影片特定段落加靜態注解框，用 drawbox filter。問題是如果你把多個 drawbox 串在一個 filter_complex 裡、沒有分別加 `enable='between(t,start,end)'`，渲染結果會出現框疊錯位或在不應該出現的時間點閃出來。
+---
 
-正確做法：每個框獨立一個 drawbox，各自指定時間範圍：
+## 明天就能試的三個「防靜默漏件」做法
 
-```bash
-ffmpeg -i input.mp4 \
-  -vf "drawbox=x=10:y=10:w=200:h=50:color=red@0.5:enable='between(t,2,5)', \
-       drawbox=x=10:y=80:w=200:h=50:color=blue@0.5:enable='between(t,8,12)'" \
-  output.mp4
-```
+### 做法一：交辦時先下禁令——「放不下就報錯提醒我，不准自己偷刪字」
 
-### 3. Remotion render 輸出是 yuvj420p，上傳 YouTube 顏色偏
+很多人在請 AI 做簡報、排圖卡或濃縮講義時，只會交代「幫我把這篇整理成五頁簡報」。結果 AI 為了塞進版面，不是把關鍵句砍得支離破碎，就是把所有講稿密密麻麻塞滿畫面，放到手機上根本小到看不見。
 
-Remotion 預設 render 出來的 pixel format 是 `yuvj420p`（full-range），YouTube 的 pipeline 會把它當 `yuv420p`（limited-range）處理，結果顏色偏亮偏淡。
+**你可以怎麼做：**
+下次請 AI 或排版工具整理內容時，把這兩條規矩直接寫進你的提示詞或工作流程裡：
+1. **明訂「不准靜默丟字」**：告訴 AI「如果標題或內容超過版面字數上限，請直接停下來標示哪一則超標，或是把字體縮小，絕對不准自己刪減字句」。任何會自動幫你丟掉內容的方便功能，都要改成「放不下就出聲」。
+2. **用讀者的真實螢幕定規格，而且只放重點**：不要在自己的電腦小視窗裡看順眼就算數。請 AI 排畫面時，直接規定「一張畫面只放一個主標題、加上最多兩個支撐重點」，不要把口白逐句鋪上去；字體大小也要考量手機閱讀（以投影片規格來說，內文字級至少要放大到 38 到 40，而不是預設的 28 到 32）。
 
-在 render 完後加一步轉碼：
+### 做法二：驗收時看「數量與頭尾」，不看「完成提示」
 
-```bash
-ffmpeg -i remotion_output.mp4 -c:v libx264 -pix_fmt yuv420p -c:a copy final.mp4
-```
+如果你常把一堂課或一場會議的長錄音切成好幾段交給 AI 轉文字、或是請 AI 批次整理十幾份文件，最怕的就是「中間漏了幾段，合起來卻完全看不出來」。
 
-這步也可以順便做 LUFS 標準化（`-13 LUFS` 是 YouTube 建議值），一起處理。
+為什麼會這樣？因為 AI 每次輸出的排版習慣常常會有一點點「漂移」。比如前幾段它把粗體符號放在時間前面，後幾段突然把粗體符號移到人名上面。如果你用來收集結果的規則只認得第一種格式，那格式變掉的那幾段就會被當成「0 行空白」安靜跳過。最後合併出來的文章依然有頭有尾、語氣通順，你根本不會發現內容已經憑空消失了一大塊。
 
-### 4. ffmpeg aselect 超過百個 between() 直接 OOM
+**你可以怎麼做：**
+1. **核對「進去幾段、出來幾段」與各段字數**：只要是分段交給 AI 處理的工作，請它交稿時順便列出一張清單：「每一段各產出了幾行（或幾字）」。只要看到某一段回傳是 0，百分之百是格式沒對上被跳過了，不是那一段真的沒人講話。
+2. **刪改過內容，一定要重對後面的時間與編號**：如果你中途刪掉了講稿裡的某一段，記得請 AI 重新核對後面所有段落對應的時間點或頁碼。否則前面砍了一段，後面的教材畫面或字卡還會傻傻照著舊時間跳出來。
+3. **固定搜尋幾個最常被AI「過度翻譯」的詞**：如果你用的語音轉文字或簡轉繁工具會自動幫你修辭，交稿前固定用搜尋功能巡一次常見錯字。例如很多自動簡轉繁工具會「過度在地化」，把「螢幕」轉成「熒幕」、把「權限」轉成「許可權」，這兩個詞花十秒鐘搜尋替換就能救回來。
 
-想從一段音檔裡切出 218 個片段，想說用 aselect 一次搞定：
+### 做法三：追求「90% 自動、10% 手動」，遇到邊界立刻退回手動
 
-```bash
-ffmpeg -i input.mp3 -af "aselect='between(t,0.5,1.2)+between(t,3.1,3.8)+...'" output.mp3
-```
+當我們嚐到自動化的甜頭後，很容易掉進一個迷思：「我要把整個流程做到 100% 全自動，連滑鼠都不用點一下！」結果為了處理某一個特別大、特別怪的例外檔案，花了好幾天跟系統死磕，原本想省的時間全賠了進去。
 
-218 個 `between()` 讓 ffmpeg 在 filter graph 初始化階段就 OOM 崩掉。
+**你可以怎麼做：**
+把你的工作流程當成「商業生產線」來設計：**商業生產線的價值不在於 100% 自動，而在於「90% 自動、10% 手動的容錯設計」**。
+- 先摸清楚工具的「安全邊界」在哪裡（例如：多大的檔案以內它跑得很穩？每天免費額度可以跑幾次？後台數據有沒有時間延遲？）。
+- 在安全邊界內的九成日常工作，放心交給自動化跑；一旦遇到超過邊界的例外（像是超大檔案卡住、或是當天額度快見底），不要硬鑽，立刻退回手動操作。留一條隨時能手動接手的退路，整條工作線才不會因為一個小環節卡死而全面停擺。
 
-解法是把切點寫成 segment list 檔，用 ffmpeg segment muxer 或用 Python 分批跑，每批不超過 20 個 segment。
+---
 
-### 5. SiliconFlow ASR word-level timestamp 欄位全空
+## 我是怎麼用四個月的慘痛代價學會這三件事的？
 
-呼叫 SiliconFlow 語音識別 API，設定回傳 word-level timestamp，拿到的 response 裡 `segments` 和 `words` 是空 list，只有頂層 `text` 有內容。
+前面這三個原則聽起來很簡單，但每一條都是我這四個月在自己的頻道生產線上，被四套不同工具輪流教訓出來的實戰紀錄。
 
-不是你的 code 寫錯，是部分 model（尤其是快速版）不支援 word-level，只支援 utterance-level。看文件確認 model 的 capability，或切換到 Whisper large-v3 類的完整版本。
+我們頻道的教學影片，從把講稿做成動畫、把錄音轉成字幕、調整音量與畫面顏色，到最後上傳 YouTube，幾乎全部交給自動化流程來跑。順利的時候，一部影片從腳本到上架完全不用人工介入；不順利的時候，就是下面這四個真實慘案。
 
-### 6. set -e 配 Remotion render 會誤觸提前中止
+### 慘案一：掛在 YouTube 上好幾個月的 36 張「半句話封面」
 
-Batch 腳本開頭 `set -e`，然後：
+為了省下每支影片做封面的時間，我原本設了一條自動排版規則：只要把影片標題丟進去，程式就會自動幫我去掉標點符號、只取前 22 個字，然後從正中間一刀切成上下兩行，印在封面縮圖上。
 
-```bash
-npx remotion render MyComp output.mp4
-ffmpeg -i output.mp4 ...
-```
+聽起來很省事對吧？結果它切出來的封面大字變成了：**「你必須知」**、**「最常見的 5」**、**「設定安」**。
 
-問題在 Remotion render 過程中會把未完成的 mp4 先寫出來，下一行 ffmpeg 讀到不完整的檔案，exit code 非零，set -e 直接把整個腳本殺掉。
+因為這套工具只管「算滿 22 個字、從中點切開」，不管那是不是一個完整的詞；而且每次切完都回報「封面製作成功」，所以整整 36 支影片就頂著這種莫名其妙的半截標題，在 YouTube 上掛了好幾個月都沒人發現。直到後來我徹底改掉規則：改成手動寫好短標題，只要沒填寫就直接讓系統報錯停下來，字太多就自動配合框線縮小，**絕對不准任何自動化工具在沒通知我的情況下偷偷砍字**。
 
-解法一：Remotion render 完成後再接 ffmpeg（用 `&&` 而非換行分隔）。解法二：render 那行改成 `set +e; npx remotion render ...; set -e`，讓 render 結果自己判斷。
+### 慘案二：悄悄蒸發 40% 的逐字稿，與提早 14 秒劇透的畫面
 
-### 7. pgrep 偵測 Remotion 時自我引用死鎖
+有一次我把一段長錄音分成 13 段交給 AI 轉成逐字稿，再自動合併成完整記錄。合出來的檔案看起來乾乾淨淨，完全沒有報錯。但我把每一段的行數印出來檢查才嚇了一跳：**13 段裡面有 5 段回傳是 0 行，整份逐字稿悄悄少了 40% 的內容！**
 
-等待 render 完成常見的寫法：
+追查之下才發現，那 5 段並不是沒錄到音，而是 AI 在輸出那 5 段時，把代表粗體的星號（`**`）稍微換了個位置——其中 5 段寫成 `**[時間] 人名**：`，另外 8 段寫成 `[時間] **人名**：`。我原本設定的收集規則只認得後者，遇到前者就直接當成沒有內容跳過，還跟我回報「合併完成」。
 
-```bash
-while pgrep -lf "remotion render"; do sleep 10; done
-```
+同樣的「安靜出包」也發生在影片剪輯和檔案下載上：
+- 有一次我為了讓教學節奏更緊湊，把影片裡一段講「寄信」的口白砍掉了，卻忘了重新核對後面畫面進場的時間點。結果影片播到一半，原本配在後面段落的字卡，整整**早了 14 秒**跳出來劇透。那一支影片我後來分段逐句核對字幕時間，才抓出 3 處畫面比嘴巴還快出現的錯位。
+- 還有一次自動下載一支 938 MB 的錄影檔，抓到一半網路逾時中斷，但下載指令依然回報「成功（代碼 0）」，硬碟裡也確實躺著一個大檔案。直到下一步用檢測工具去讀「這支影片有幾分鐘」時，才發現檔案根本沒抓完、完全打不開。
 
-這個 while loop 的 shell process 本身 argv 就含有 `"remotion render"`（整行命令），`pgrep -lf` 會永遠匹配到這個 shell process 自己，死鎖不會結束。
+從此我訂下鐵律：**驗收永遠看實際產出的成品（讀不讀得出影片長度、每一段有沒有行數），絕不相信工具回報的「成功代碼」。**
 
-正確做法有三種：
+### 慘案三：為了 257 MB 的影片跟系統死磕兩週，手動拖進去幾分鐘就搞定
 
-```bash
-# 1. 錨定前綴，只匹配 node 程序
-pgrep -f '^node.*remotion'
+今年五月，我同時做好了兩支影片準備透過自動化介面（API，也就是讓程式直接跟 YouTube 後台溝通的管道）上傳：
+- 一支是 7 分 05 秒的法律示範片，檔案大小 **216 MB**——自動上傳順利過關。
+- 另一支是 8 分 27 秒的 AI 求職示範片，檔案大小 **257 MB**——只大了 41 MB，程式卻怎麼傳都卡住。系統明明回報「已上傳完成」，但 YouTube 後台卻一直停在「即將開始處理」轉圈圈，轉了超過 1 小時動也不動。
 
-# 2. 記住 PID，等它消失
-npx remotion render & PID=$!; wait $PID
+那兩個禮拜，我掉進了典型的「技術人強迫症」：我不甘心為什麼不能 100% 全自動，於是前後改寫了至少四個版本的上傳程式、換了各種傳送方式，還刪掉了兩個卡死的失敗版本。最後我認輸了，打開 YouTube 網頁後台，用滑鼠把那個 257 MB 的檔案手動拖進去——**不到幾分鐘，影片就處理完成了。**
 
-# 3. 監控產出檔大小趨於穩定
-```
+（有趣的是，到了八月我換了另一條新的直連上傳方式，連 499 MB 的大檔案都能一次自動傳上去；當時後台畫面雖然一直顯示「上傳 0%」，但只要直接去比對後台收到的檔案大小和電腦裡的檔案一模一樣，就知道它其實已經傳好了，連網頁介面上的進度條都可能會騙人。）
 
-### 8. yt-dlp 繁體中文字幕的 language code 不固定
+五月那兩週的白忙一場讓我徹底想通：當工具在某個邊界附近表現不穩定時，最聰明的做法不是花兩週去挑戰系統極限，而是接受邊界、退回手動。**90% 自動化幫你省下主力時間，剩下 10% 留給手動兜底，這才是最穩的生產線。**
 
-用 `--sub-lang zh-Hant` 下載字幕，但實際 YouTube 上的字幕 language tag 可能是 `zh-Hant`、`zh-TW`，或是自動生成的 `zh-Hant-RsSZZSfhlqk`（後面帶一串隨機 hash）。
+---
 
-無法硬編碼，要先用 `--list-subs` 看清楚再下：
+## 進階技術附錄：給想自己動手接影音自動化管線的人（四個月工具踩坑與指令速查）
 
-```bash
-yt-dlp --list-subs "https://www.youtube.com/watch?v=VIDEO_ID"
-# 然後用實際的 code
-yt-dlp --sub-lang zh-Hant-RsSZZSfhlqk --write-sub --no-download ...
-```
+如果你本身有技術背景，或者未來也想自己用程式串接影音自動化管線，下面把我在這四個月、四套工具鏈上踩過的具體技術地雷與解法完整保留下來，按工具與情境分類，方便你動手時直接對照避坑。
+
+### 一、各工具白話簡介（第一次接觸可先看這段）
 
-### 9. YouTube Data API caption quota 每天只有 10,000 units
+- **Remotion**：一套能用寫網頁（React 程式碼）的方式來製作動態教學影片與動畫的工具。
+- **HyperFrames**：另一套以網頁 HTML/CSS 為基礎的動畫與影片渲染框架，我們在八月把整條影片流水線從 Remotion 換成了它。
+- **ffmpeg / ffprobe**：影音處理界的瑞士刀指令工具（`ffmpeg` 負責剪輯、轉檔、調音量與壓字幕；`ffprobe` 負責檢查影音檔的長度與內部格式是否完好）。
+- **SiliconFlow ASR**：提供語音轉文字（自動語音辨識，ASR）的雲端服務介面，用來把錄好的口白轉成帶時間軸的字幕。
+- **yt-dlp**：專門用來從 YouTube 下載影片與各語系字幕的指令工具。
+- **YouTube Data API / Analytics API**：YouTube 官方開放給程式呼叫的後台介面，讓腳本可以自動上傳影片、改縮圖、傳字幕，或撈取頻道觀看數據。
+- **opencc**：專門用來做簡體中文與繁體中文詞彙轉換的工具（其中 `s2twp` 是「簡體轉台灣繁體並轉換慣用詞」的模式）。
 
-一般 YouTube Data API 的每日 quota 是 10,000 units，caption 相關操作（captions.list、captions.download）每次都算 quota。
+---
+
+### 二、動畫與投影片渲染（Remotion 與 HyperFrames）
 
-跑 batch 腳本前先確認剩餘額度，不然半夜跑完 quota，隔天早上整個 pipeline 都卡住，而且 quota 在 PDT 午夜（台灣隔日下午兩點）才 reset。
+1. **Remotion 預設輸出色彩格式（`yuvj420p`）直接傳 YouTube 顏色會偏亮偏淡**
+   - **原因**：Remotion 預設渲染出來的像素格式（pixel format）是 `yuvj420p`（全範圍 full-range），但 YouTube 的處理管線會把它當成 `yuv420p`（有限範圍 limited-range）來解讀。
+   - **解法**：渲染完後用 `ffmpeg` 多加一步轉碼，也可順便把響度（LUFS，衡量人耳感受音量的標準單位）統一到 YouTube 建議的 `-13 LUFS`：
+     ```bash
+     ffmpeg -i remotion_output.mp4 -c:v libx264 -pix_fmt yuv420p -c:a copy final.mp4
+     ```
+
+2. **Bash 腳本開頭加 `set -e`（遇錯即停）配 Remotion 渲染會誤觸提前中止**
+   - **原因**：Remotion 渲染過程中會先把未完成的 `.mp4` 寫到硬碟，下一行 `ffmpeg` 若提早讀到不完整的檔案就會回傳非零錯誤碼，`set -e` 會直接把整支批次腳本殺掉。
+   - **解法**：用 `&&` 確保渲染真正完成才接 `ffmpeg`，或在渲染那一行暫時關閉 `set -e`（`set +e; npx remotion render ...; set -e`）。
 
-## 五月：YouTube API 大檔上傳，216 MB 過、257 MB 不過
+3. **用 `pgrep` 監控渲染進度會發生「自我引用死鎖」**
+   - **原因**：寫 `while pgrep -lf "remotion render"; do sleep 10; done` 時，這個迴圈本身的 shell 程序命令列就包含 `"remotion render"` 字串，`pgrep -lf` 會永遠匹配到迴圈自己，永遠不會結束。
+   - **解法**：
+     ```bash
+     # 方法 1：錨定前綴，只匹配 node 程序
+     pgrep -f '^node.*remotion'
+
+     # 方法 2：記住程序編號（PID），等它結束
+     npx remotion render & PID=$!; wait $PID
 
-5/13 後製兩支影片要上 YouTube：
-
-- 5/10 講座剪出的「AI 求職示範」片段：8m27s，**257 MB**，2010×1080
-- 法律 MCP 示範片：7m05s，**216 MB**，1658×1080
-
-兩支都跑同一條 pipeline：ffmpeg 兩段式 loudnorm 到 -13 LUFS / TP -1（已是 yuv420p + bt709 免色域轉）→ opencc s2twp 簡轉繁 → Remotion 縮圖 → `googleapiclient` resumable upload。
-
-結果一個成、一個不成。
-
-### 失敗案例：AI 求職示範片（257 MB）
-
-試了兩種 API 上傳路徑：
-
-1. **curl 單發 resumable PUT**
-2. **Python `googleapiclient` chunked resumable PUT**（8 MB 一塊 + ACK）
-
-兩次都 `uploadStatus=uploaded`，但 `processingStatus` 永遠卡 `processing` 超過 1 小時不動。Studio UI 顯示「Processing will begin shortly」配上傳箭頭 icon。
-
-兩個失敗版本（`7UhRoAvWr-w` 跟 `FP4_8D4vfes`）都已 DELETE。
-
-**暫行 SOP**：放棄 API 上傳，改用 YouTube Studio 手動拖檔。手動上傳幾分鐘內 processing 完成，video ID 變更為 `HcADayRCJMg`。
-
-可能原因（未驗證）：
-
-- ffmpeg `-c:v copy` 後 metadata fragment 不完整
-- YT backend 對 2010×1080 非標準寬度處理慢
-- 超過某個 MB 門檻會觸發 backend 不同的 processing pipeline
-
-### 成功案例：法律 MCP 示範片（216 MB）
-
-同樣 `googleapiclient` resumable upload（8 MB chunks），這次 `processingStatus=succeeded`。
-
-差異：
-
-- 檔案大小小了 41 MB
-- 解析度 1658×1080（仍是非標準寬度，但比 2010 小）
-
-### 當時的結論：門檻約在 220-250 MB 之間
-
-兩支影片的對比讓我把 CLAUDE.md 裡的 SOP 從「> 200 MB 都失敗」修正為「**257 MB 確認失敗，216 MB 確認成功，門檻約在 220-250 MB**」。
-
-實務上的處理方式：
-
-- **< 200 MB**：直接 `googleapiclient` resumable upload，安全
-- **200-220 MB**：嘗試 API，失敗就回退到 Studio 手動
-- **> 250 MB**：直接走 Studio 手動，不浪費時間在 API
-
-（這條門檻後來被推翻了，見最後一節第 10 點。）
-
-### 順便記的兩個踩坑
-
-最早寫 `tools/yt_upload_law.py` 用純 urllib chunked upload，跑到 16 MB 就 SSL EOF。改用 `googleapiclient.MediaFileUpload`，內建 retry 機制，穩定跑完。結論：YouTube 上傳用 `googleapiclient`，不用裸 urllib 或 curl。
-
-5/13 嘗試用 [yutu](https://github.com/eat-pray-ai/yutu) 0.10.7 上傳，發現 credential parser 在 `yutu video insert` 階段就崩。報錯：
-
-```
-failed to parse client secret: illegal base64 data at input byte 6
-```
-
-即使有效 token、不傳 `-c` flag 也一樣崩。整個 yutu 客戶端 init 階段就掛掉。Fallback 是完全棄用 yutu，用 curl 打 YouTube Data API resumable upload 三個 endpoint：`POST /upload/youtube/v3/videos?uploadType=resumable` 拿 Location header 再 PUT bytes、`POST /upload/youtube/v3/thumbnails/set` 上傳縮圖、`POST /upload/youtube/v3/captions` resumable 上傳字幕。三個都直連。沒有 wrapper，但每一步都可控。
-
-我自己這兩週為了搞清楚 257 MB 為何卡死，跑了至少四個版本的 upload script，刪了兩個失敗的影片 ID。最終的結論是：**API 不是萬能的**。當 API 在某個邊界附近表現不穩，最快的做法是接受邊界、退回手動，不要硬鑽。
-
-技術人最容易掉進「我要把它全自動化」的坑。但是商業生產線的價值不在於「100% 自動」，是在於「90% 自動、10% 手動的容錯設計」。
-
-## 六月：Remotion 動畫與 ffmpeg 後製
-
-這一週做了兩部教學影片：一部是上線的 Ep27，另一部是另一支還在排程的。製作流程都是先錄口白，轉 SRT，再用 Remotion 把動畫鎖到字幕 timing 上，最後用 ffmpeg 接合與正規化。這一節只記製作技術層面反覆被糾正的坑。
-
-### 字幕不是逐句鋪上去
-
-第一個反覆被糾正的點：這不是字幕動畫。口白每句都鋪一張字幕，違反克制原則。正確做法是「只放重點」——一個標題加上最多兩個支撐元素。一旦改成這個密度，畫面才不會跟著旁白一句一句被字塞滿。
-
-### 字級要比照投影片 spec
-
-第二個點是字級。Remotion 預設大概 28-32，這個尺寸在手機上看太小。我改成比照投影片的 spec：body 是 2.4rem，約等於 38，影片實際用到 40。
-
-### 砍內容之後一定要重核 timing 錨點
-
-第三個點最容易被忽略：精簡之後務必重核 timing 錨點。問題出在我把內容砍掉，卻留著舊的 fadeIn 錨點，動畫就會早於口白出現。Ep27 有一處 S10e 的 chips 還掛在已經被砍掉的寄信段落上，整整早了 14 秒進場。
-
-抓這種錯，最有效的方法是派多個 subagent 分段稽核，逐一核對「每個進場的 global = sceneStart + X，到底對到哪一句 SRT」。Ep27 一共修了三處動畫早於口白（S1、S10e、S11a）。
-
-### Remotion 超過 10 分鐘含 Video 元件會 render crash
-
-Remotion 在影片超過 10 分鐘、而且 composition 裡含 Video 元件時，render 會 crash，報 ffmpeg 254。
-
-我的繞法是把整片拆開：最終片用一個 `demo` prop 把錄屏排除掉，Remotion 只 render intro 動畫段（`--frames=0-10601`），錄屏那段走 ffmpeg concat 另外接合進來。這樣 Remotion 就不需要在一個 render 裡同時處理超長片加 Video 元件。
-
-### 安靜旁白的正規化：三個坑
-
-另一支影片的 intro 旁白錄得極安靜，量出來 integrated 是 −39 LUFS，峰值只有 −19 dBFS。要拉到 −13，等於要 +26dB，這個增益幅度本身就埋了三個坑。
-
-第一坑：`loudnorm linear=true` 只做線性增益，不會啟動 true-peak limiter，峰值直接衝到 +1.2 dBTP。
-
-第二坑：`loudnorm` 一次硬推 26dB 會破。這不是它設計的範圍，連 dynamic 模式都會 +2 dBTP。
-
-第三坑：`alimiter` 預設 `level=true`，會自動把音量回拉到滿幅，等於把你做的限制抵銷掉，必須改成 `level=false`。
-
-最終解是不走 loudnorm，改用 `volume=29dB,alimiter=level=false:limit=0.63`。
-
-### opencc s2twp 的過度在地化
-
-口白簡轉繁我用 opencc s2twp，它會過度在地化。「荧幕」會被轉成「熒幕」，正確應該是「螢幕」；「权限」會被轉成「許可權」，正確應該是「權限」。轉完字幕一定要 grep 這兩個詞。
-
-Ep27 的成片在這裡：[https://youtu.be/9nQe9OYYhP4](https://youtu.be/9nQe9OYYhP4)。
-
-## 八月：整條流水線換成 HyperFrames 之後的十一個坑
-
-[後來整條流水線換成 HyperFrames](/blog/posts/zh/ai-video-pipeline-codex-to-claude)，坑也整批換新。以下是八月這一週做一支混合片（動畫覆蓋加錄屏 pass-through）時踩到的，一個坑一節。
-
-### 1. 轉場閃動＝切換點沒被遮罩蓋住
-
-wipe 排在 `B-0.6～B`，紅幕在切換前 0.3 秒就滑走了，那一刀其實是裸切，畫面就閃一下。修法是把切點移進全遮窗：`B-0.35` 進場、`B±0.05` 停留、`B+0.35` 離場，停留 0.10 秒才能保證 30fps 下至少三幀全滿。更早那支片沿用的是同一套錯誤時序。
-
-### 2.「純動畫必須單 worker」是 Remotion 的規則，不是 HyperFrames 的
-
-在 Remotion 上訂的這條規則照套過來，render 慢五到八倍。實測 8 worker 下靜止動畫的相鄰幀比對差異像素是 0，並拿轉場的動態幀做反向對照，確認檢查器會動。5.9 萬幀約 22 分鐘跑完。
-
-### 3. `.term` / `.codefile` 會靜默切掉最後一行
-
-這兩個都是 flex child，會被 `scene-content` 壓縮，加上 `overflow: hidden` 就把最後一行吃掉，畫面上看起來只像「貼底」。修法是 `flex-shrink: 0`，加上之後真正過滿的那幾幕才會浮現。`hyperframes check` 只抽 9 幀不保證抓得到，要用 `hyperframes snapshot --zoom "<selector>"` 對元素本身放大驗。
-
-### 4. preview 跑著的時候不要用 Edit 大改
-
-`hyperframes preview` 跑著時會持續往 `index.html` 注入 `data-hf-id`，Edit 的 old_string 就對不上了。大改前先 `hyperframes preview --stop`。
-
-### 5. 監看 render 的失敗過濾器不能只 grep `error`
-
-HyperFrames 有一行 log 長這樣：`static-frame dedup: disabled (... this is the safe fallback, not an error)`，只 grep `error` 會把它誤報成失敗。過濾要排除含 `not an error` 的行。
-
-### 6. 分段轉錄的輸出格式會在段與段之間漂移
-
-13 段裡有 5 段是 `**[MM:SS] Name**：`、其餘是 `[MM:SS] **Name**：`。只認一種形狀的 regex 讓那 5 段靜默回 0 行，合併結果看起來完整，實際少 40%。要用寬鬆的 regex（容許前導 `**`），並逐段印行數核對——回 0 行是格式沒對上，不是那段沒東西。
-
-### 7. 大檔下載 exit 0 不代表檔案是完整的
-
-一支 938MB 的錄影抓到 971MB 時 read timeout，指令仍 exit 0，症狀要到 `ffprobe` 才現形（`moov atom not found`）。驗收條件是 ffprobe 讀得出 duration，不是 exit code 也不是檔案存在；重試迴圈要把 ffprobe 當成功判準。
-
-### 8. 官方 slideshow 框架的 present 目前不能用
-
-它的 `present` 是官方自己標註的 temporary workaround，要求 composition 暴露單一 `window.__timelines.root`。實測 25 幕 slide 全部解析失敗、player 卡在 loading。改成只借它的視覺語言與逐段揭示節奏，控制器自己寫 60 行，零框架相依。
-
-### 9. 投影片版式要用實際放映尺寸驗，不是瀏覽器當下視窗
-
-agent-browser 預設視窗高 577px，量出 10 頁溢出；改用 `style.height="720px"` 模擬 16:9 後剩 6 頁，字級下修再測才歸零。用預設視窗判斷會做出過度縮小的版面。`slides-tokens.css` 的字級是為 1080p 設計的，1280×720 放映要按比例覆寫。
-
-### 10. Studio 顯示「Uploading 0%」不代表上傳卡住
-
-判準是看 API 的 `uploadStatus` 與 `fileDetails.fileSize` 是否等於本地位元組數，不看 UI。這次 499MB 走 resumable 一次就成功，也推翻了舊紀錄裡「257MB 會失敗」的門檻——那是舊 chunked 路徑的限制。
-
-### 11. 縮圖標題被靜默截斷
-
-`compactTitle()` 自動砍標點、只留前 22 字、再從中點硬拆兩行，結果是「你必須知」「最常見的 5」「設定安」這種半截句掛在 YouTube 上好幾個月，36 支，沒人發現。改成手寫短標（缺條目就讓 build 直接失敗）、字級擬合改用各版型的真實容器寬、副標加 `word-break: keep-all`，並新增 `npm run lint:thumbnails` 當固定關卡。判準：任何會丟棄使用者內容的自動化，一律改成「放不下就縮小或報錯」，不准靜默丟字。
-
-四個月、四套工具，同一個教訓：驗產物，不驗 exit code。
-
-<!--
-新增非原文句子清單（忠實度自首）：
-1.「這條管道最危險的地方不是它會壞掉，是它會安靜地少做一半事情然後回報成功。exit 0 的下載其實是殘檔、`compactTitle()` 把標題砍成半句掛了三十六支、13 段轉錄有 5 段回 0 行合併起來看起來還很完整——這些沒有一個會丟 error 給你。以下按時間順序，從 Remotion 那套一路記到 HyperFrames。」— 框架句（合併文開頭；三個例子皆為下文原有事實的引用，未新增事實）
-2. 四個 H2 段標題「Remotion 時代：四月的九個坑」「五月：YouTube API 大檔上傳，216 MB 過、257 MB 不過」「六月：Remotion 動畫與 ffmpeg 後製」「八月：整條流水線換成 HyperFrames 之後的十一個坑」— 小標（合併用；原四篇的標題語意保留）
-3.「（這條門檻後來被推翻了，見最後一節第 10 點。）」— 銜接（指向本文第 10 點原有內容，不新增事實）
-4.「這一節只記製作技術層面反覆被糾正的坑。」— 改寫（原句為「本篇只記製作技術層面反覆被糾正的坑，這些坑下次想第一次就做對。」，刪去指涉單篇的後半）
-5.「四個月、四套工具，同一個教訓：驗產物，不驗 exit code。」— 框架句（收束；「驗收條件是 ffprobe 讀得出 duration，不是 exit code」為本文第 7 點原有判準的復述）
-其餘所有段落、數據、指令、判準均逐字取自四篇原文（hyperframes-video-gotchas、remotion-ffmpeg-video-pitfalls、video-production-gotchas-2026、youtube-large-upload-216-257mb），僅做小標層級調整與少量順序重排，未新增原文沒有的根因或解法。原四篇的收尾句（「這週就這些。」「踩坑是自動化流程的必要成本……」「以上是這一週兩部影片……」「這個課我這週又上了一次。」）於合併時刪去，避免重複收尾。
--->
+     # 方法 3：監控產出檔案的大小是否趨於穩定
+     ```
+
+4. **Remotion 影片超過 10 分鐘且內含 `Video` 元件時，渲染會崩潰（報 `ffmpeg 254`）**
+   - **解法**：把長片拆開處理。讓 Remotion 只負責渲染前段的純動畫（例如指定 `--frames=0-10601` 並排除螢幕錄影段落），螢幕錄影那一段另外用 `ffmpeg concat`（無損拼接功能）接進去，避免在同一次渲染裡同時處理超長片與內嵌影片元件。
+
+5. **從 Remotion 換到 HyperFrames 時，別照搬「純動畫必須單 worker（單一平行處理程序）」的舊規矩**
+   - **原因**：在 Remotion 訂下的單 worker 限制直接套到 HyperFrames，會讓渲染慢 5 到 8 倍。實測在 HyperFrames 開 8 個 worker 渲染靜止動畫，相鄰畫格（frame）比對的差異像素是 0（同時拿動態轉場畫格做反向對照確認檢查器有效），5.9 萬幀約 22 分鐘即可跑完。
+
+6. **HyperFrames 轉場閃動＝切換點沒被遮罩蓋住**
+   - **原因**：擦除轉場（wipe）排在 `B-0.6～B` 時，過場紅幕在畫面切換前 0.3 秒就滑走了，導致切換那一刀變成沒有遮擋的裸切，畫面就會閃一下。
+   - **解法**：把切換點移進完全遮蓋的時間窗內——`B-0.35` 進場、`B±0.05` 停留、`B+0.35` 離場。中間停留 0.10 秒，才能保證在每秒 30 格（30fps）的影片下至少有 3 格畫面是完全遮滿的。
+
+7. **HyperFrames 程式碼區塊或終端機框被靜默切掉最後一行**
+   - **原因**：當這些區塊是彈性排版（Flexbox）的子元素時，容易被外層容器壓縮，加上設定了隱藏超出範圍（`overflow: hidden`），最後一行字就會被安靜吃掉，畫面上看起來只像貼齊底部。
+   - **解法**：加上 `flex-shrink: 0` 禁止壓縮，真正過滿的畫面才會浮現。另外內建的 `hyperframes check` 只抽查 9 格畫面不保證抓得到，要用 `hyperframes snapshot --zoom "<selector>"` 針對元素本身放大檢查。
+
+8. **HyperFrames 預覽（preview）跑著的時候不要直接用修改工具大改檔案**
+   - **原因**：`hyperframes preview` 執行時會持續往 `index.html` 自動寫入追蹤屬性，導致編輯工具比對舊字串（`old_string`）時對不上。大改前請先執行 `hyperframes preview --stop` 停掉預覽。
+
+9. **監看 HyperFrames 渲染紀錄時，不能只用 `grep error` 抓錯**
+   - **原因**：HyperFrames 有一行正常日誌長這樣：`static-frame dedup: disabled (... this is the safe fallback, not an error)`。如果只搜尋 `error` 這個字，會把這行「這不是錯誤（not an error）」誤判成失敗。過濾條件必須排除含有 `not an error` 的行。
+
+10. **官方投影片框架的 `present` 播放模式目前無法直接用，且版面檢查必須用實際放映尺寸**
+    - **原因**：官方標註 `present` 目前只是暫時替代方案（要求暴露單一 `window.__timelines.root`），實測 25 幕投影片全部解析失敗、播放器卡在載入中。此外，若用自動化瀏覽器（agent-browser）預設的 577px 視窗高度去檢查版面，會量出 10 頁溢出；但改用 `style.height="720px"` 模擬 16:9 實際比例後只剩 6 頁（再微調字級即可歸零），用錯視窗高度會做出過度縮小的版面。另外為 1080p（1920×1080）設計的字級設定，在 1280×720 放映時必須按比例覆寫。
+    - **解法**：不依賴該官方播放模式，只借用它的視覺語言與逐段揭示節奏，自己寫 60 行播放控制器（零框架相依），並一律在實際放映解析度下驗收版面。
+
+11. **縮圖標題自動化防截斷（取代原本會砍成 22 字半截句的 `compactTitle()`）**
+    - **解法**：廢除自動砍標點與硬拆兩行的函式，改為手寫短標（漏填就直接讓建置流程 build 失敗）、字體大小依各版型的真實容器寬度自動擬合、副標題加上 `word-break: keep-all` 防止把完整詞彙拆斷，並在建置流程加入縮圖檢查關卡（`npm run lint:thumbnails`）。
+
+---
+
+### 三、影音後製與聲音處理（ffmpeg）
+
+1. **`ffmpeg drawbox` 畫多個靜態標註框時，必須各自指定時間範圍**
+   - **原因**：把多個 `drawbox` 串在同一個 `filter_complex` 濾鏡鏈裡，如果沒有分別加上 `enable='between(t,start,end)'`，渲染出來的框會疊加錯位，或在不該出現的秒數閃出來。
+   - **正確寫法**：
+     ```bash
+     ffmpeg -i input.mp4 \
+       -vf "drawbox=x=10:y=10:w=200:h=50:color=red@0.5:enable='between(t,2,5)', \
+            drawbox=x=10:y=80:w=200:h=50:color=blue@0.5:enable='between(t,8,12)'" \
+       output.mp4
+     ```
+
+2. **`ffmpeg aselect` 一次切超過百個片段會直接記憶體爆滿（OOM）崩潰**
+   - **原因**：想從一段音檔切出 218 個片段，若把 218 個 `between(t,...)` 全部塞進同一條 `aselect` 指令，會在濾鏡圖（filter graph）初始化階段就耗盡記憶體崩掉。
+   - **解法**：把切點寫成區段清單檔（segment list），改用 `ffmpeg` 的 segment muxer，或用 Python 分批執行，每批不超過 20 個片段。
+
+3. **極安靜旁白的音量正規化（拉升 26dB 時的三個連環坑）**
+   - **情境**：曾有一支影片的開頭旁白錄得極小聲，量出來整體響度（integrated）只有 `-39 LUFS`，峰值（peak）只有 `-19 dBFS`。要拉到標準的 `-13 LUFS` 等於要放大 `+26dB`，直接套用常規的 `loudnorm`（響度正規化濾鏡）會連踩三個坑：
+     1. `loudnorm linear=true` 只做線性放大，不會啟動真實峰值限制器（true-peak limiter），峰值會直接衝破 `+1.2 dBTP`（破音失真）。
+     2. `loudnorm` 一次硬推 26dB 超出它的設計範圍，連動態模式（dynamic）都會衝到 `+2 dBTP`。
+     3. 改搭 `alimiter`（音量限制器）時，它的預設參數是 `level=true`，會自動把限制後的音量又拉回滿幅，等於把你做的防破音限制抵銷掉。
+   - **最終解法**：放棄 `loudnorm`，直接用音量放大搭配關閉自動回拉的限制器：
+     ```text
+     volume=29dB,alimiter=level=false:limit=0.63
+     ```
+
+4. **大檔下載必須用 `ffprobe` 驗收，不能只看指令回傳碼（`exit 0`）**
+   - **原因**：938 MB 的錄影檔在抓取逾時（read timeout，當時抓到 971 MB 異常中斷）時，下載指令仍回傳代表成功的 `exit 0`。檔案雖然存在，但影片結構索引（`moov atom`）根本沒寫入，直到跑 `ffprobe` 才會報錯 `moov atom not found`。
+   - **解法**：把「`ffprobe` 讀得出影片總長度（duration）」設為下載重試迴圈的唯一成功判準。
+
+---
+
+### 四、語音轉錄、字幕下載與簡繁轉換（SiliconFlow ASR / yt-dlp / opencc）
+
+1. **SiliconFlow ASR 的逐字時間戳（word-level timestamp）欄位全空**
+   - **原因**：呼叫語音辨識 API 要求回傳逐字時間戳時，回傳的 `segments` 和 `words` 都是空清單，只有最外層的 `text` 有整段文字。這不是你的程式寫錯，而是部分模型（特別是快速版）只支援「整句級別（utterance-level）」、不支援「逐字級別（word-level）」。
+   - **解法**：查閱文件確認模型支援度，或切換到 `Whisper large-v3` 這類完整版模型。
+
+2. **分段轉錄合併時，正則表達式（Regex，用來比對文字格式的規則）要容許格式微幅漂移**
+   - **原因**：如正文所述，13 段轉錄裡有 5 段輸出 `**[MM:SS] Name**：`、其餘 8 段輸出 `[MM:SS] **Name**：`。
+   - **解法**：改用寬鬆的比對規則（容許開頭出現 `**`），並且在合併腳本裡逐段印出匹配到的行數——只要某段回傳 0 行，就是格式沒對上。
+
+3. **`opencc s2twp` 簡轉繁後的必查詞彙**
+   - **解法**：轉完字幕後，固定跑一次文字搜尋（`grep`），把過度在地化的「熒幕」換回「螢幕」、把「許可權」換回「權限」。
+
+4. **`yt-dlp` 下載繁體中文字幕的語系代碼（language code）不固定**
+   - **原因**：直接寫死 `--sub-lang zh-Hant` 常常抓不到，因為 YouTube 上實際的繁中字幕標籤可能是 `zh-Hant`、`zh-TW`，或是自動生成字幕帶一串隨機碼的 `zh-Hant-RsSZZSfhlqk`。
+   - **解法**：不能硬編碼，先用 `--list-subs` 列出該支影片實際的字幕代碼再下載：
+     ```bash
+     yt-dlp --list-subs "https://www.youtube.com/watch?v=VIDEO_ID"
+     yt-dlp --sub-lang zh-Hant-RsSZZSfhlqk --write-sub --no-download ...
+     ```
+
+---
+
+### 五、YouTube API 自動上傳與數據查詢
+
+1. **YouTube Analytics API 的流量來源名稱與後台畫面（Studio UI）不一樣，且有 48–72 小時延遲**
+   - **原因**：API 回傳的維度（`insightTrafficSourceType`）代碼跟你在網頁後台看到的中文名稱對不起來（例如網頁顯示「訂閱者」，API 是 `SUBSCRIBER`；網頁顯示「頻道頁」，API 可能是 `YT_CHANNEL_PAGE`）。此外，Analytics API 本身有 **48 到 72 小時的資料延遲**，剛發片就跑腳本看到數字很低，不是程式寫錯，是資料還沒進來。
+   - **查詢實際維度值的指令**：
+     ```bash
+     curl "https://youtubeanalytics.googleapis.com/v2/reports?ids=channel==MINE&metrics=views&dimensions=insightTrafficSourceType&startDate=2026-04-01&endDate=2026-04-30&key=$YT_KEY"
+     ```
+
+2. **YouTube Data API 每日配額（quota）只有 10,000 點，字幕操作特別耗點數**
+   - **原因**：預設每日總額度為 10,000 units，只要呼叫字幕相關操作（`captions.list`、`captions.download`）每次都會扣點。半夜跑批次腳本把額度刷光，隔天早上整條管線就會卡死；而且配額要到太平洋夏令時間（PDT）午夜（台灣時間隔天下午兩點）才會重置。跑批次任務前務必先確認剩餘額度。
+
+3. **大檔案續傳（Resumable Upload）的工具選擇與真實判準**
+   - **別用裸 `urllib` 或開源工具 `yutu 0.10.7`**：最早用 Python 內建的 `urllib` 切塊上傳，跑到 16 MB 就會遇到連線中斷（`SSL EOF`）；改試第三方工具 `yutu`（0.10.7 版），它的憑證解析器在初始化階段（`yutu video insert`）就會直接崩潰報錯：`failed to parse client secret: illegal base64 data at input byte 6`（就算有合法 token、不傳 `-c` 參數也一樣崩）。
+   - **兩種穩定做法**：
+     1. 用 Google 官方 Python 套件 `googleapiclient.MediaFileUpload`（內建自動重試機制）。但要注意早期走舊的 8 MB 切塊（chunked）路徑時，曾遇到 216 MB（1658×1080）成功、257 MB（2010×1080）卡在 `processing` 超過 1 小時的狀況，遇到卡住直接退回 Studio 網頁手動拖檔最快。
+     2. 直接用 `curl` 直連 YouTube Data API 的三個續傳端點（不靠第三方包裝，每一步都可控，實測 499 MB 也能一次成功）：
+        - `POST /upload/youtube/v3/videos?uploadType=resumable`（取得 `Location` 標頭後再 `PUT` 檔案位元組）
+        - `POST /upload/youtube/v3/thumbnails/set`（上傳縮圖）
+        - `POST /upload/youtube/v3/captions`（續傳字幕）
+   - **驗收判準**：不要看 Studio 網頁上顯示的「Uploading 0%」，直接檢查 API 回傳的 `uploadStatus` 以及 `fileDetails.fileSize` 是否等於本機檔案的位元組數（bytes）。

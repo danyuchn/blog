@@ -1,7 +1,7 @@
 ---
 author: Dustin Yuchen Teng
 pubDatetime: 2026-05-15T05:30:00Z
-title: "台灣公開資料兩個 MCP 評測——mcp-taiwan-legal-db 跟 Twinkle Hub 各適合什麼場景"
+title: '別再讓 AI 憑記憶瞎猜台灣法條與統編：兩款免費工具，讓它在對話裡直接查判決書與 5.3 萬筆政府資料'
 slug: zh/taiwan-data-mcp-two-servers
 featured: false
 draft: false
@@ -10,77 +10,132 @@ tags:
   - taiwan-data
   - ai-tools
   - claude-code
-description: '兩個串接台灣公開資料的 MCP server——一個專精法律判決跟法規查詢、一個聚合 5.3 萬筆政府開放資料 + 37 個在地工具。實測下來各有強項，課程跟導入場景的搭配方式不一樣。'
+description: '用 AI 查台灣法規、公司統編或補班日，最怕它一本正經胡說八道。這篇實測兩款串接台灣官方資料的工具：一款專查司法院判決書與法規原文，另一款整合 52,960 筆政府開放資料與 37 個台灣日常查詢，教你按工作場景挑對工具。'
 tldr: '想讓 AI 直接查台灣法規或政府資料，這篇實測兩款工具：mcp-taiwan-legal-db 專查判決書與法條，Twinkle Hub 則包辦 52,960 筆政府資料與 37 個日常查詢（如統編查公司、查工作日）。日常辦公首推先用後者。'
 seoTitle: 'mcp-taiwan-legal-db 實測：查台灣判決書與法規'
 ---
 
-最近兩週測了兩個串接台灣公開資料的 MCP server。背景是 L2 課程需要「官方資料來源」的 demo 素材，順便評估能不能直接給 L3 導入客戶（法務、合規、政府機關）用。
+你應該也有過這種經驗：請 AI 幫你查一條台灣法規、確認某家合作廠商的統編跟公司登記，或是算一下「下個月 12 號扣掉國定假日跟補假，到底是不是工作日」。
 
-## mcp-taiwan-legal-db
+它回答得飛快、語氣篤定，但你心裡還是毛毛的，最後還是得自己打開全國法規資料庫、商工登記網站或人事行政總處的行事曆，一筆一筆重新對。因為你很清楚，AI 預設只會「憑訓練時的記憶背誦」，遇到台灣的在地法條、最新裁判或每年的補班行事曆，它隨時可能一本正經地胡說八道。
 
-GitHub：[lawchat-oss/mcp-taiwan-legal-db](https://github.com/lawchat-oss/mcp-taiwan-legal-db)。101 stars，2026-05-12 仍活躍更新。
+要解決這個問題，不是換更貴的模型，而是幫 AI 接上「直接去台灣官方資料庫查證」的管道。
 
-8 個 MCP 工具，串接三個官方來源：
+在 AI 工具裡，這種外掛管道叫做 **MCP（Model Context Protocol，你可以把它想成 AI 的專用轉接頭，裝上去之後，AI 就能直接連進外部資料庫即時查資料，而不是靠記憶瞎猜）**。
 
-- 司法院裁判書（`search_judgments` / `get_judgment`）
-- 全國法規資料庫（`query_regulation` / `search_regulations`）
-- 憲法法庭釋字／憲判字（`get_interpretation` / `search_interpretations`）
-- 引用圖譜（`get_citations`）
+最近兩週我實測了兩款專門串接台灣公開資料的 MCP 工具：一款專精於**台灣法律判決與法規**，另一款則一口氣包辦了**政府開放資料與 37 個台灣辦公日常小工具**。對於法務、合規、顧問、政府機關，或任何每天要處理台灣在地行政與商業查核的工作者來說，這兩款工具能直接把「開五個政府網站慢慢翻」變成「在對話框裡一句話查完」。
 
-技術細節幾個值得記的點：
+---
 
-- **混合請求策略**：一般走 httpx（約 0.25 秒）；觸發司法院 F5 WAF 時自動切 Playwright 刷 cookie
-- **離線快取大法官解釋**：868 筆全部 bundle 進來，查的時候不用打網路
-- **安裝方式**：`git clone` → `pip install -e .` → repo 根目錄有 `.mcp.json`，在該資料夾開 Claude Code 自動載入，零設定
+## 做法：把「台灣日常行政」跟「專業法規判決」分給兩套工具
 
-實測上週 L2 課我把法律 MCP 接起來做「查專利侵權判決」的 demo，五分鐘內從關鍵字搜尋拉到全文，學員的反應比新聞 RSS demo 強很多。法務、顧問背景的學員特別吃這套。
+這兩款工具的定位非常清楚，不需要二選一，而是看你的工作每天碰到的是哪一種問題。
 
-**風險**：司法院 API 是爬蟲方式（非官方 API key），WAF 繞過機制理論上有被封風險。另外 Playwright 依賴需要 `playwright install chromium`，課堂環境多一步設定。
+### 1. 日常辦公與商業查核首選：Twinkle Hub（政府開放資料＋37 個台灣在地小工具）
 
-## Twinkle Hub
+如果你平常的工作不常看法院判決，但經常要查公司背景、核對台灣格式資料、或查政府的公開統計，來自 [Twinkle AI](https://hub.twinkleai.tw) 的 **Twinkle Hub** 是每天都會用到的那種工具（目前 Alpha 測試期間完全免費）。
 
-來自 [Twinkle AI](https://hub.twinkleai.tw)。定位是「把 data.gov.tw 全量 52,960 筆政府開放資料整理成單一 MCP endpoint」。Alpha 期間完全免費。
+它幫 AI 接上了兩大塊台灣在地能力：
 
-三層架構：
+第一塊是 **37 個台灣日常辦公工具**。以前要開不同網頁或寫公式才查得到的事，現在可以直接在對話裡問 AI。我自己最常用的是這 10 個：
 
-1. **OpenData**（5.3 萬筆政府資料，分 19 個 domain：不動產地政、交通運輸、醫療衛生、環境、農林漁牧、政府採購、教育、法律司法、財政統計、外交僑務、原住民族、社福勞工、文化觀光、產業科技、氣象、能源、公共安全、人口戶政、其他）
-2. **TW Utility Tools**（37 個在地工具）
-3. **BYO 連接器**（Notion / Sentry / n8n 等本機安裝）
+- **查客戶與廠商背景**：輸入統一編號，直接查公司登記資料；也能檢查統編或身分證字號的格式是否正確。
+- **算台灣工作日與假期**：直接問「下個月 12 號是不是台灣工作日？」它會把國定假日與補假算進去；也能查整年國定假日、做西元與民國年份換算、陽曆與農曆互換。
+- **處理台灣地址與文字**：把雜亂的中文地址整理成標準格式、直接把台灣中文地址翻成標準英文地址，或是做簡繁體轉換。
 
-第二層的 37 個 utility 工具實用度極高。我自己最常用的：
+第二塊是 **政府開放資料（data.gov.tw）全量整合**。它把政府開放資料平台上的 **52,960 筆（約 5.3 萬筆）** 資料集整理成單一入口，涵蓋 19 個領域：不動產地政、交通運輸、醫療衛生、環境、農林漁牧、政府採購、教育、法律司法、財政統計、外交僑務、原住民族、社福勞工、文化觀光、產業科技、氣象、能源、公共安全、人口戶政與其他。
 
-| 用途 | 工具名 |
-|------|--------|
-| 統編查公司登記 | `twtools-lookup_company_by_tax_id` |
-| 統編 checksum | `twtools-validate_tax_id_number` |
-| 身分證驗證 | `twtools-validate_taiwan_id_number` |
-| 中文地址正規化 | `twtools-normalize_taiwan_address` |
-| 中文地址英譯 | `twtools-address_zh_to_en` |
-| 民國 ←→ 西元 | `twtools-roc_year_to_western` |
-| 判定工作日／補假 | `twtools-is_taiwan_business_day` |
-| 國定假日查詢 | `twtools-lookup_holidays` |
-| 陽農曆互換 | `twtools-solar_to_lunar` / `lunar_to_solar` |
-| 簡繁轉換 | `twtools-simplified_to_traditional` |
+另外，它也支援連接你自己在電腦上安裝的 Notion、Sentry、n8n 等常見工作軟體。
 
-**安裝一行指令**（Alpha 期間免費，無需儲值）：
+### 2. 法務、合規與深度查案專用：mcp-taiwan-legal-db（台灣法律與裁判書查詢）
+
+如果你的工作需要「看判決書原文、對照法條原文」，那就要用另一款開源工具 **[mcp-taiwan-legal-db](https://github.com/lawchat-oss/mcp-taiwan-legal-db)**。
+
+它專門幫 AI 串接三個台灣官方的法律資料來源，總共提供 8 項查詢功能：
+
+- **司法院裁判書**：可以用關鍵字搜尋判決，並直接調出判決書全文。
+- **全國法規資料庫**：搜尋台灣現行法規、直接調閱指定法條原文。
+- **憲法法庭釋字／憲判字**：搜尋並調閱大法官解釋與憲法法庭判決（工具內已直接打包了 868 筆大法官解釋，查閱時甚至不需要連網，速度極快）。
+- **引用圖譜**：追查法條與判決之間的引用關係。
+
+對法務、顧問或需要做合規查核的主管來說，這代表你不用再自己去司法院網站設一堆篩選條件、點開十幾篇判決慢慢看，而是可以直接請 AI：「幫我找最近跟某類專利侵權有關的判決，拉出全文，整理爭點給我。」
+
+---
+
+## 實戰驗證：五分鐘查完專利侵權判決，以及實測踩到的限制
+
+這兩套工具不是紙上談兵，我已經在自己的日常工作與課程中實際跑過一輪。
+
+上週上課時，我現場把 `mcp-taiwan-legal-db` 接起來，示範「查專利侵權判決」。從下關鍵字搜尋、找到對應案件，到把司法院裁判書的全文直接拉進對話框裡整理，**全程不到五分鐘**。台下學員的反應比以前示範「抓新聞摘要」強烈非常多——尤其是有法務、顧問背景的學員，一眼就看出這能省下多少翻找原始卷宗的時間。
+
+而在日常商業查核與準備教材時，我實測用 **Twinkle Hub** 查了 4 個政府開放資料集：**金管會裁罰案件、勞動違規紀錄、以及用統編查公司登記**，整個過程都非常順暢，做客戶或合作方背景調查時幾秒鐘就能拿到官方紀錄。
+
+不過，實測下來兩款工具也各自有你要先知道的限制：
+
+1. **政府原始資料本身的編碼問題**：我在用 Twinkle Hub 測第 4 個資料集（IPC 專利分類）時，拉回來的內容會出現亂碼。追查後發現那是上游 `data.gov.tw` 原始檔案本身的編碼問題，與 Twinkle Hub 無關。換句話說，大多數主流資料（如金管會、勞動部、商工登記）很順，但冷門資料集仍受限於政府原始檔案的品質。
+2. **司法院網站的連線限制**：`mcp-taiwan-legal-db` 查司法院裁判書時，底層是用自動抓網頁（爬蟲）的方式，而不是司法院核發的官方金鑰。雖然作者設計了自動切換模式來通過司法院網站的防禦機制，但理論上若短時間大量密集查詢，還是有被網站暫時擋下的風險。
+
+---
+
+## 明天上班可以怎麼試？給你的搭配建議
+
+這兩套工具可以同時裝在你的 AI 工具（例如 **Claude Code，Anthropic 官方推出的指令列與桌面端 AI 工作助手**）裡，完全不會衝突。AI 光看裡面各項功能的名稱與說明，就能自己判斷「你問統編時要找 Twinkle Hub、你問判決書時要找法律資料庫」。
+
+如果你想明天就挑一個開始試：
+
+- **只裝一個的話，先裝 Twinkle Hub**：因為那 37 個台灣日常工具的覆蓋面太廣了。從查客戶統編、核對地址英譯，到問一句「下個月 12 號是不是工作日」，每天辦公都會用到，而且目前 Alpha 期間完全免費、不用綁卡儲值。
+- **工作會碰到契約、合規、爭議案件，再加裝 `mcp-taiwan-legal-db`**：只要你需要看到判決書與法條「一字不差的原文」，加上這套就能補齊最後一塊拼圖。
+
+---
+
+## 給想自己動手安裝的人：技術設定與底層細節
+
+如果你已經在使用 Claude Code，想直接把這兩套工具裝起來，以下是完整的安裝步驟與底層運作細節。
+
+### 1. 安裝 Twinkle Hub（一行指令完成）
+
+1. 先到 `https://hub.twinkleai.tw/login`，用 Google 或 GitHub 帳號登入，領取你的免費 API key（一串以 `sk-` 開頭的金鑰）。
+2. 在終端機執行以下一行指令，就能把 Twinkle Hub 掛進 Claude Code：
 
 ```bash
 claude mcp add --transport http twinkle-hub https://api.twinkleai.tw/mcp/ \
   --header "Authorization: Bearer sk-..."
 ```
 
-到 `https://hub.twinkleai.tw/login` 用 Google 或 GitHub 登入拿 API key 即可。
+（把 `sk-...` 換成你剛才拿到的金鑰即可。）
 
-**踩坑**：我實測 4 個 dataset 的時候，金管會裁罰、勞動違規、統編查公司都很順，但 IPC 專利分類那一個會回亂碼，看起來是上游 data.gov.tw 編碼問題，跟 Twinkle Hub 自己無關。
+**Twinkle Hub 三層架構與常用工具代號對照表**：
 
-## 兩個怎麼搭配
+- **第一層 OpenData**：串接 `data.gov.tw` 全量 52,960 筆資料（19 個 domain）。
+- **第二層 TW Utility Tools（37 個在地工具）**：我最常用的 10 個對應工具名如下：
 
-我自己現在的分工是：
+| 用途 | 工具內部名稱 |
+|------|--------|
+| 統編查公司登記 | `twtools-lookup_company_by_tax_id` |
+| 統編 checksum 檢查 | `twtools-validate_tax_id_number` |
+| 身分證字號驗證 | `twtools-validate_taiwan_id_number` |
+| 中文地址正規化 | `twtools-normalize_taiwan_address` |
+| 中文地址英譯 | `twtools-address_zh_to_en` |
+| 民國 ←→ 西元換算 | `twtools-roc_year_to_western` |
+| 判定台灣工作日／補假 | `twtools-is_taiwan_business_day` |
+| 國定假日查詢 | `twtools-lookup_holidays` |
+| 陽農曆互換 | `twtools-solar_to_lunar` / `lunar_to_solar` |
+| 簡繁轉換 | `twtools-simplified_to_traditional` |
 
-- **mcp-taiwan-legal-db**：所有「需要看判決書、看法條原文」的場景。法律 demo、L3 導入案、給法務客戶用
-- **Twinkle Hub**：所有「需要查政府其他資料」的場景。商業 demo、L2 課堂示範「政府開放資料 + MCP」整合、客戶背景調查（統編查公司）
+- **第三層 BYO 連接器**：支援本機安裝串接 Notion、Sentry、n8n 等工具。
 
-兩個都裝著沒衝突。Claude Code 在判斷該叫哪個工具的時候，從工具名稱跟 description 就能分辨清楚。
+### 2. 安裝 mcp-taiwan-legal-db
 
-如果你只裝一個，我會建議先裝 Twinkle Hub。因為 37 個 utility 工具的覆蓋面太廣，連「下個月 12 號是不是工作日」這種日常查詢都能直接問。法律 MCP 適合特定場景，但 Twinkle Hub 是每天都會用到的那種。
+GitHub 專案位置：[lawchat-oss/mcp-taiwan-legal-db](https://github.com/lawchat-oss/mcp-taiwan-legal-db)（截至 2026-05-12 已有 101 stars，持續活躍更新）。
+
+**安裝流程**：
+1. 將專案 `git clone` 下來，執行 `pip install -e .`。
+2. 因為專案根目錄已經內建 `.mcp.json` 設定檔，只要在該資料夾底下啟動 Claude Code 就會自動載入，零額外設定。
+3. **額外環境注意**：由於底層包含瀏覽器自動化備援，需要多跑一步 `playwright install chromium` 安裝瀏覽器核心（如果在課堂或團隊電腦部署，記得先把這一步算進環境準備時間）。
+
+**8 個工具函式與技術架構細節**：
+- **司法院裁判書**：`search_judgments` / `get_judgment`
+- **全國法規資料庫**：`query_regulation` / `search_regulations`
+- **憲法法庭釋字／憲判字**：`get_interpretation` / `search_interpretations`（868 筆大法官解釋已全部離線快取 bundle 在套件內，查詢時不需打網路）
+- **引用圖譜**：`get_citations`
+- **混合請求策略**：一般查詢走 `httpx`（回應約 0.25 秒）；當觸發司法院網站的 F5 WAF 防火牆阻擋時，會自動切換到 Playwright 無頭瀏覽器刷新 cookie 繞過（如前所述，因屬爬蟲而非官方 API key，仍需注意被封鎖的理論風險）。
