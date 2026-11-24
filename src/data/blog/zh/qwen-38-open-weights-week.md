@@ -12,6 +12,7 @@ tags:
   - model-comparison
   - open-source
 description: '從 Qwen 3.8 27B 模型卡放出、實測體感、35B A3B 被刪，到八月底 Flash Next 登場的完整過程。'
+hideFromHome: true
 ---
 
 之前寫《[最需要 CLI 的電腦，主人最不可能學會 CLI](/blog/posts/zh/cli-resource-paradox-local-models)》的時候，裡面寫了一句期待：希望 27B 開放權重後可以有人出量化版，也希望之後能夠有 MOE 版本的小模型。這篇就是那個期待的後續。

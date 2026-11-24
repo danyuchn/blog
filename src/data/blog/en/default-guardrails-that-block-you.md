@@ -10,6 +10,7 @@ tags:
   - security
   - gotchas
 description: 'An office NAS that won''t mount, AUTOMODE that won''t come back, outside visitors getting a 401, a cloud schedule that can''t send mail. None of them were bugs in my code; each was a protection switched on by default.'
+archived: true
 ---
 
 What these traps have in common: the thing blocking you isn't a bug in your code, it's some protection that was on by default.

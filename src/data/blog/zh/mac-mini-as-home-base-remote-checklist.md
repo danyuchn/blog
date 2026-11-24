@@ -12,6 +12,7 @@ tags:
   - remote-work
 description: '出國前一次寫下的八條遠端配置檢查表：Tailscale、Herdr、咖啡因防休眠、自動重開機、遠端存取，把留在家中的 Mac Mini 當成 Claude/Codex 的 harness 本體。'
 tldr: '出遠門不想扛著笨重電腦，卻又需要隨時連回家裡的桌機處理工作嗎？這份實測過的出發前檢查清單與踩坑紀錄，幫你避開斷電鎖機、遠端打字卡頓與跨裝置傳檔失敗等常見狀況。'
+archived: true
 ---
 
 明天是買了 Mac Mini 後第一次出遠門出國旅行。以下記錄一下出門前的遠端配置檢查表：

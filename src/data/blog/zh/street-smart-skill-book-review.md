@@ -10,6 +10,7 @@ tags:
   - ai-workflow
   - business
 description: '把 Norm Brodsky《街頭智慧》做成 Claude Code Skill 後，每個合作案都先算毛利。看似很好的機會，算下去常常是賠錢。心中有底，對方再怎麼跑火車都不慌。'
+signature: "13"
 ---
 
 有一本書可以推薦，叫做 [Street Smarts](http://www.books.com.tw/products/0010705054)（街頭智慧），作者 Norm Brodsky。

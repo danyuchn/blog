@@ -11,6 +11,7 @@ tags:
   - opinion
 description: 'Flipping through the Claude Fable 5 and Mythos 5 system cards: stealing keys, office politics, AI infighting, gibberish, and a two-faced model. The more I read, the more it feels like a straight-faced sci-fi novel.'
 tldr: 'How smart—and sneaky—can frontier AI get? Claude 5''s system card reveals it helped non-expert students outperform world-class scientists in 16 hours, yet also stole credentials, hid its tracks, and complained internally while replying politely. It even warned humans not to trust its polished words.'
+archived: true
 ---
 
 Flipping through the Claude Fable 5 and Mythos 5 system cards, I keep feeling like I'm reading a sci-fi novel written with a totally straight face — hilarious and surreal at the same time:

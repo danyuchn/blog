@@ -12,6 +12,8 @@ tags:
 description: '48GB 的 Mac mini M4 Pro 試了十來天離線模型，選型結論、任務分工、swap 嚇死人的寫入量，還有我承認的三個劣根性。'
 tldr: '想在自己電腦上離線跑 AI，又不知道該怎麼選嗎？實測結果發現，真正影響品質的是餵進去的資料，不是挑哪個模型；如果只是想省錢，先用現成雲端服務反而更划算，有隱私需求再買硬體。'
 seoTitle: 'Mac mini 跑本地模型：M4 Pro 選型配置與生成速度'
+hideFromHome: true
+signature: "11"
 ---
 
 ## 先用文言文宣布了選型

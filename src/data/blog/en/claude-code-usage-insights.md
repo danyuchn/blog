@@ -12,6 +12,7 @@ tags:
   - opinion
 description: "46 days, 6 projects, 7,843 conversations. This is not a manual — it's a diary of trial and error."
 tldr: 'Getting stuck with Claude Code rarely comes from lacking technical jargon—it happens when background, goals, and full error messages are missing. Ask it to list steps and risks before acting, and refine results through multi-turn dialogue. These lessons from 7,843 conversations over 46 days can save you days of trial and error.'
+archived: true
 ---
 
 ## Why I'm Writing This

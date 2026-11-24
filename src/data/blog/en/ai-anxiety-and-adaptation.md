@@ -11,6 +11,7 @@ tags:
   - mindset
 description: 'AI is iterating so fast that I can''t see where I''ll be in three years. The journey from anxiety to finding my footing, and why I believe AI is a Kingmaker.'
 tldr: 'Anxious about where your job will be in two to three years as AI evolves? People who use AI will replace those who don''t—it acts as a kingmaker for clear thinkers. By handing repetitive chores to AI, teachers and professionals gain time for human connection and deeper coaching.'
+archived: true
 ---
 
 ## The Moment I Couldn't See the Future

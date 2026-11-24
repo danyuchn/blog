@@ -11,6 +11,7 @@ tags:
   - non-engineer
 description: '我不是設計師，這週用 Fable、GPT-image-2、GPT-5.6-sol 迭代出 AgentCrew Academy 的視覺系統，記下被否決的四個方向與最後套用到網站、投影片、文件的規格。'
 tldr: '不是設計師也能自己決定品牌視覺嗎？當 AI 能快速產出多組風格圖與網站、簡報、文件原型，設計提案的門檻大幅降低，真正的難題變成你自己的品味與選擇。與其空想，不如先讓 AI 做出幾個具體畫面，直接看選項來挑出最適合的風格。'
+signature: "other"
 ---
 
 我不是設計師，但這週花了不少時間幫 AgentCrew Academy 選一套視覺系統。

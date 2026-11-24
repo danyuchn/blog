@@ -11,6 +11,7 @@ tags:
   - ai-tools
   - micro-notes
 description: "2026 年較零碎、時效性的 AI 碎念，依時間排列。精選碎念（依主題分類）見主頁。"
+archived: true
 ---
 
 這是 2026 年較零碎、時效性較強的 AI 碎念，依時間排列存檔。更精選、依主題分類的碎念請見[主頁](/blog/posts/zh/ai-micro-notes)。

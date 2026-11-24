@@ -10,6 +10,7 @@ tags:
   - opinion
   - ai-trends
 description: 'I have a love-hate thing with Anthropic: I hate the smug elitism and the black-box token-burning, but their engineering blog is some of the best out there, especially the security and permissions stuff.'
+archived: true
 ---
 
 Trust me, Claude has a hundred ways lined up for you to burn tokens in style, and a hundred excuses lined up to pin the burning on you, the user.

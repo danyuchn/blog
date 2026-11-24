@@ -11,6 +11,7 @@ tags:
   - opinion
 description: 'Commercial AI vendors take turns dropping the ball—OpenAI slashes speed and quotas, while Anthropic wrestles with outages and capacity crunches. Building reliable agent workflows means planning multi-model failovers and tuning out reflexive defensive tone.'
 tldr: 'What happens when your AI tool suddenly slows to a crawl right in the middle of a class or workday? Because major AI providers take turns throttling or going down, teams need a backup plan—plus a simple way to rewrite instructions so AI stops sounding overly defensive.'
+archived: true
 ---
 
 On the morning of October 6, I was running a live training session with Codex, and it slowed to an absolute crawl. Even with GPT-6.1 Sol set to low-effort fast mode, waiting for a single turn took over ten minutes. Even running two sessions in parallel could not salvage the awkward silence in the room.

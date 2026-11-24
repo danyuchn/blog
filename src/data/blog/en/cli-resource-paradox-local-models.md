@@ -11,6 +11,7 @@ tags:
   - ai-tools
 description: 'Many put up with aging laptops down to 1.8 GB of storage churning through swap, while dreaming of running local LLMs on a NT$5,000 machine. A look at the resource paradox, realistic hardware baselines for modern local models, and how to weigh usable speed against machine upgrades.'
 tldr: 'Wondering if your sluggish laptop can run local AI models? Do not fall for online hype: 16GB of RAM may barely start a model at unusable speeds, whereas smooth daily use typically requires something like an M4 Pro with 48GB of RAM. A computer is a productivity tool—upgrade when yours holds you back.'
+archived: true
 ---
 
 Teaching tech skills turns up a fascinating contradiction. When a machine is choking on memory and storage, a command-line interface (CLI) is hands-down the best fix—it consumes a tiny fraction of the resources a graphical interface demands. Yet in practice, the people whose computers need that relief the most are precisely the ones least likely to ever touch a terminal.

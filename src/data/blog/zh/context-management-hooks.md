@@ -11,6 +11,7 @@ tags:
   - developer-experience
 description: '從 Claude.md 到 Hooks，分享大量使用 Claude Code 後對上下文管理的理解升級。規則塞太多怎麼辦？Hooks 就是那個完美的守門員。'
 tldr: '給 AI 寫了一堆規則，它還是常常忘記或無視嗎？關鍵在於把核心說明精簡到 200 行以內，並針對寄信等絕對不能出錯的動作設定「強制把關機制」，只要條件觸發就一定停下來等你確認。'
+archived: true
 ---
 
 很多從對話視窗轉過來用 Claude Code 想要提升生產力的人，一開始感到挫折的原因，都是因為不懂 Claude.md。再來就是懂了，但不知道怎麼管理上下文。

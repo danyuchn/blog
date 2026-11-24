@@ -12,6 +12,7 @@ tags:
 description: 'Opus 5.5、Sonnet 5.5、Fable 5.1 都有了之後，我自己的分工是 Opus 親自指揮驗證部署、Sonnet 當 subagent 實作、Fable 偶爾請出場當顧問。'
 tldr: '不知道 Opus 5.5、Sonnet 5.5 和 Fable 5.1 怎麼分工？讓最懂人話的 Opus 5.5 當總指揮，照字面辦事的 Sonnet 5.5 當執行助手，再請視野最廣的 Fable 5.1 當顧問抓盲點。別把 Sonnet 開到最高檔，反而比 Opus 更貴。'
 seoTitle: 'Claude 模型怎麼分工？Opus 指揮、Sonnet 實作與 Fable 顧問搭配'
+signature: "11"
 ---
 
 手頭上同時有了 Opus 5.5、Sonnet 5.5 和 Fable 5.1 之後，大家最常問的大概就是怎麼分工。

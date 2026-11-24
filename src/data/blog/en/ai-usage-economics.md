@@ -13,6 +13,7 @@ tags:
 description: 'A breakdown of AI subscription economics: from 50x official subsidies and five-hour versus weekly quota gaps to prompt caching, the night-market steak framework, and automated off-peak scheduling.'
 tldr: 'Paying for an AI subscription but worried about hitting limits or wasting quota? Eighty percent of daily work runs fine on mid-tier models, so skip the anxiety tax for top plans. Use three questions to check if you truly hit weekly caps before upgrading or switching to pay-as-you-go.'
 seoTitle: 'Hit Claude Limits? Understanding the 5-Hour Window & Quota'
+archived: true
 ---
 
 Claude Code isn't something I open once in a while; it's the environment running the moment I boot up my machine every morning. Because I spend my whole day in it, when the terminal suddenly throws a rate limit error, the letdown hits hard. It feels worse than losing your internet connection, because whatever you were building just grinds to a dead stop.

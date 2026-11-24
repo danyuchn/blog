@@ -11,6 +11,7 @@ tags:
   - productivity
 description: '請 Opus 5.5 分析 30 天 session log 後，我把 herdr 工作區分成常駐、今日、長期；四種燈號讓常駐 agent 掌握全場，還能叫 Opus 跳到隔壁窗格救場。'
 tldr: '同時開好幾個 AI 視窗工作，常常切到迷路、忘記哪個做完沒？用 herdr 把工作區按頻率分成「常駐、今日、長期」三區，再搭配四種狀態燈號，就能讓總管 AI 盯住進度，甚至直接跳去隔壁視窗接手救場。'
+signature: "9"
 ---
 
 分享我自己用 herdr 的方法。

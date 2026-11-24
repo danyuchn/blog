@@ -11,6 +11,7 @@ tags:
   - open-source
 description: "用 Claude Code 接案按時計費，甲方要看工時怎麼辦？寫了一個開源外掛自動算。"
 tldr: '接案按時計費，同時開好幾個 Claude Code 專案卻算不清實際工時嗎？免費開源工具 claude-work-timer 會自動讀取對話紀錄、扣除超過 5 分鐘的發呆或離席空檔，依專案算出精準工時，直接丟給 Claude Code 就能幫你安裝查詢。'
+signature: "other"
 ---
 
 ## 問題

@@ -10,6 +10,7 @@ tags:
   - obsidian
 description: '這兩個工具常被拿來比較，但解決的問題其實不同。從 Claude Agent 自動化的角度來看，差異更明顯：一個是 Agent 直接讀寫的本機知識庫，另一個的 API 在「管理 Notebook」這件事上就停了。'
 tldr: '在 Obsidian 和 NotebookLM 之間猶豫該選哪一個？兩者其實互補：日常累積與讓 AI 助手自動讀寫適合放 Obsidian，資料主權留在自己電腦；要針對特定研究報告或論文做有出處的深度問答，再把檔案丟進 NotebookLM 就好。'
+hideFromHome: true
 ---
 
 Obsidian 和 NotebookLM 這兩個工具常被放在一起比較，但多數比較都停在「哪個的 AI 比較好用」這個角度。

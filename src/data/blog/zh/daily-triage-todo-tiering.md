@@ -10,6 +10,7 @@ tags:
   - ai-workflow
   - productivity
 description: '一個用 Claude Code 的小發現：把待辦先分 repo 再分成自動／審核／協作／手動四級，原本拖一整天的事 1 小時內就做完了。'
+signature: "9"
 ---
 
 一個用 Claude Code 使用習慣的小發現：待辦分級制。

@@ -11,6 +11,7 @@ tags:
   - productivity
 description: "用 claude-log 工具掃描歷史對話，從你罵 AI 的紀錄中提煉規則寫進 claude.md，讓 Claude Code 真正學會不再踩同一個坑。"
 tldr: 'AI 總是重複犯同樣的錯，問題常出在規則只憑印象寫。作者掃描 6 個專案、超過 500 次 Claude Code 對話，專搜自己糾正 AI 的關鍵字，5 分鐘就把實戰教訓補進規則檔，讓低級錯誤明顯減少。'
+archived: true
 ---
 
 ## 前情提要

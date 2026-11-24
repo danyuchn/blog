@@ -11,6 +11,7 @@ tags:
   - productivity
 description: "I used claude-log to scan 500+ Claude Code sessions across 6 projects, extracted every time I yelled at the AI, and turned those into CLAUDE.md rules. Here's what I found."
 tldr: 'Tired of AI repeating the same mistakes because your rules are written from memory? By scanning over 500 past Claude Code conversations across 6 projects for moments you corrected it, you can turn real lessons into rules in 5 minutes and cut down repeated errors.'
+archived: true
 ---
 
 ## The Problem with CLAUDE.md

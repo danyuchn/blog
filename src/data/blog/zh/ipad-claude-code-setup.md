@@ -12,6 +12,7 @@ tags:
 description: '用 iPad 11 吋成功運行 Claude Code 的完整方案：tmux 保持 session、Tailscale 穿 NAT、Moshi 做 SSH 終端。目標是重建九成生產力，不只是修 bug。'
 tldr: '想用 iPad 遠端操作家裡電腦跑 Claude Code，卻嫌遠端桌面卡頓又耗電？改用 Tailscale、Moshi 與 tmux 這套三件組，免動路由器設定、切換畫面不會斷線，電池還能撐一整個下午。'
 seoTitle: 'iPad 怎麼跑 Claude Code？tmux 加 Tailscale 重現 9 成生產力'
+hideFromHome: true
 ---
 
 成功搞定，用 tmux + Tailscale + Moshi 在 iPad 11 吋上安穩運行 Claude Code。

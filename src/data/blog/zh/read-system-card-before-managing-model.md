@@ -12,6 +12,7 @@ tags:
 description: '新模型發布時先看系統卡的個性評估，才能像帶團隊一樣因材施教。整理 Opus、Sonnet、Haiku 5.5 與 Fable 5.2 的職場性格定位、主控派工邏輯與具體溝通對策。'
 tldr: '用 AI 卡關常不是提示詞不夠好，而是沒摸清它的脾氣。先讀官方「系統卡」再像帶同事一樣分工：找 Opus 討論策略、叫 Sonnet 按明確規格執行、把固定雜工交給 Haiku、對 Fable 則要禮貌且直說，合作立刻順很多。'
 seoTitle: 'Claude 模型怎麼選？從系統卡看 Opus、Sonnet 與 Haiku 差異'
+signature: "11"
 ---
 
 每次 Anthropic 發布 Claude 新模型，我都有一個怪習慣：第一時間把那份兩百多頁的系統卡（system card）載下來，翻看裡面在寫什麼。在所有章節裡，我最感興趣的是描述模型福利的部分。Anthropic 聘請了專業心理學家把模型當成人類，評估它們的個性特質。

@@ -10,6 +10,7 @@ tags:
   - model-comparison
   - ai-tools
 description: '最近 Codex 跟 Claude 搶盡風頭，Gemini 好像被嫌棄了。但 Gemini 有四個其他模型打不過的場景：Flash Lite 性價比、音訊多模態、影片理解、書籍掃描 OCR。'
+archived: true
 ---
 
 最近 AI agent 圈子好像都是 Codex 跟 Claude 的戲，但凡用 agent 的都會或多或少嫌棄 Gemini。

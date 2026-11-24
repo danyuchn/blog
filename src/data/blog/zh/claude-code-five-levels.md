@@ -11,6 +11,7 @@ tags:
   - developer-experience
 description: '從 Raw Prompting 到 Orchestration，Reddit 上 778 個讚的框架——每一層存在的原因，是因為上一層壞掉了。'
 tldr: '覺得 Claude Code 時好時壞、常自己亂改東西嗎？問題通常不是 AI 不穩，而是你卡在目前的用法天花板；當它開始出錯時，該做的不是繼續聊天修正，而是替它加上規則檔與檢查流程。'
+hideFromHome: true
 ---
 
 很多人說 Claude Code 不穩定，有時候又準又快，有時候就自己亂做。我以前也這樣覺得。

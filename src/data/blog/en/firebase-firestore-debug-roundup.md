@@ -11,6 +11,7 @@ tags:
   - case-study
 description: 'Eight bugs I hit in one week on the same Firebase project (a GMAT question bank): Firestore rules, composite indexes, error_logs spam, TPA scoring, App Check tokens, and a browser-translation DOM crash — symptom, root cause, fix for each.'
 tldr: 'Web apps often break in production with bugs that never show up locally, like false permission errors, alert floods, or crashes when users turn on browser translation. This roundup breaks down 9 real-world fixes from a question-bank system, covering data access rules, error filtering, and page stability.'
+archived: true
 ---
 
 None of these bugs blow up while you're developing locally — they surface as days of permission-denied alerts in Slack, an error_logs collection getting spammed, and a page that dies the moment a user turns on browser translation.

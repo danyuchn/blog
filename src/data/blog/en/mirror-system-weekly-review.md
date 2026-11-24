@@ -11,6 +11,7 @@ tags:
   - productivity
 description: 'Normal weekly reviews let you make excuses for yourself. Mirror System doesn''t offer reassurance — just feed your daily notes to Claude and watch it surface the patterns you''ve been avoiding.'
 tldr: 'Tend to make excuses for unfinished tasks during your weekly review? Feed your weekly notes to Claude with this no-comfort prompt template to spot repeated delays and the blind spots you keep avoiding.'
+archived: true
 ---
 
 In a normal weekly review, you'll make excuses for yourself.

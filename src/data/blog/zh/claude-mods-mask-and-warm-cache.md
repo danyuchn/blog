@@ -11,6 +11,7 @@ tags:
   - security
 description: '我做了兩個 Claude Mod：錄課用的敏感資訊遮罩，和 Claude Code 暖快取外掛。後來才發現 Claude Code 原生就有閒置壓縮。'
 tldr: '用 Claude Code 錄課或直播教學，最怕螢幕突然跳出客戶隱私，或對話放著太久導致重新計費。作者開源了兩個免費小工具：錄影遮罩會在畫面出現前先自動塗黑敏感資訊，暖快取選單則能比較三種省額度方案的成本，幫你省下後製時間與費用。'
+signature: "10"
 ---
 
 Claude Mod 正式登陸 Desktop App，大家都在討論，我看到每個人都做了好棒的應用。我也想分享我做的 Claude Mod：AI 永遠看不到你的機密資訊，Mod 自動幫你遮，自動還原，關鍵資訊不出你的本機。我已經給了我客戶的團隊使用，目前用上來完全沒有問題。原始碼在 [pii-guard](https://github.com/danyuchn/pii-guard)，介紹見 [PII Guard TW](/blog/posts/zh/pii-guard-tw)。

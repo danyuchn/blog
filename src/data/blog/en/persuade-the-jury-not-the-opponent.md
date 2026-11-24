@@ -10,6 +10,7 @@ tags:
   - mindset
   - opinion
 description: 'How I stay happy online: I moved to Thailand, I separate whose problem is whose, and if I really want to reply I reply once, to the bystanders.'
+archived: true
 ---
 
 Here's how I stay happy.

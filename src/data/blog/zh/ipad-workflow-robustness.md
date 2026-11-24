@@ -11,6 +11,7 @@ tags:
   - remote-work
   - ipad
 description: 'iPad 跑 Claude Code 全攻略的續篇：談的不是安裝，是穩健性——曼谷家用網路會斷、雨季會停電，主機端怎麼撐住；以及我為什麼放棄妙控鍵盤、改用一張嘴加手勢。'
+hideFromHome: true
 ---
 
 上一篇講了用 tmux + [Tailscale](/blog/posts/zh/ipad-claude-code-setup) + Moshi 在 iPad 上跑 Claude Code 的基本三件套。那篇是「怎麼裝起來」，這篇是「怎麼讓它不會在你最需要的時候掛掉」。

@@ -12,6 +12,7 @@ tags:
   - ai-course
 description: "Real analytics breakdown of how EP.18 went viral — not through SEO, but retention triggering subscriber activation, then spreading via sidebar. Plus what I actually did to make it happen."
 tldr: 'Growing a YouTube channel by 2205% in two weeks without ads or collabs didn''t come from SEO. A 47% retention rate triggered subscriber homepage pushes and sidebar recommendations. Normalizing audio to -13 LUFS, pairing 30–60s Shorts for discovery, and adding pinned tracking links help turn views into website visits.'
+archived: true
 ---
 
 In the third week of April, something happened that had me staring at GA4 for two hours straight.

@@ -11,6 +11,7 @@ tags:
   - prompting
 description: 'After reading Anthropic''s context engineering guidance for Claude 5, I turned the key points into nine cards, then cut 1,473 lines from a harness I had built up over four model generations.'
 tldr: 'Packing settings with rigid bans and repetitive examples can make Claude 5 overthink. Anthropic cut over 80% of the Claude Code system prompt, shifting to fewer hard rules, loading instructions only when needed, and using richer references. Removing 1473 lines of old settings reduced overthinking while keeping the model on track.'
+archived: true
 ---
 
 After reading Anthropic's official context engineering guidance for Claude 5, I turned the key points into nine cards. The whole guide comes down to one line: fewer rules, better judgment, stronger context.

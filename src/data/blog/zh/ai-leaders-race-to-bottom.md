@@ -11,6 +11,7 @@ tags:
   - model-comparison
   - opinion
 description: 'GPT 生圖降智、Claude 額度縮水、Gemini Flash 漲價。三家輪流坐莊，坐上去就開始偷料。按年訂閱是最傻的事，沒消息才是最好的消息。'
+hideFromHome: true
 ---
 
 最近同時觀察到三件事，放在一起看挺有意思的。

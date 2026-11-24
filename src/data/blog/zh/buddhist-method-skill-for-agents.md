@@ -12,6 +12,7 @@ tags:
   - harness
   - ai-workflow
 description: '一個叫 buddhist-method 的 SKILL，用六條佛法概念約束 agent 的行為——查證、找根因、重新確認狀態、丟掉草稿、捨斷成因、不因壓力改立場。'
+hideFromHome: true
 ---
 
 這個 SKILL 我已經用了好幾天，真的服了。

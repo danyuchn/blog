@@ -12,6 +12,7 @@ tags:
   - ai-workflow
 description: 'After making nearly thirty tutorial videos: tools change, thinking doesn''t. Don''t dismiss others'' tool choices. What matters is the orchestration logic — task decomposition, validation planning, responsibility assignment.'
 tldr: 'Unsure which AI tool to learn or worried it will soon be outdated? Tools change every few months, so focus on transferable thinking instead: break down tasks, ask AI to critique rather than flatter you, and use strong models for planning and cheaper ones for bulk work.'
+archived: true
 ---
 
 After making nearly thirty free Claude Code tutorial videos, I've developed some new perspectives.

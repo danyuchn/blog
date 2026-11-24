@@ -11,6 +11,7 @@ tags:
   - token-optimization
 description: '把我之前在社群整理獲得一千多讚的省額度技巧做成健診 skill。丟給 Claude Code 安裝後，它會自動檢查設定、近期 session、rules 與 context 用量，產出可執行的修正清單。'
 tldr: '用 Claude Code 常覺得額度莫名見底，內建的 /stats 卻只顯示用量、照不出病因。裝上 cc-audit 後，五分鐘就能自動檢查預設模型、近 5 次對話快取與規則檔設定，直接列出該改哪個檔案、哪一行。'
+signature: "other"
 ---
 
 Claude 最近額度亂搞，大家罵歸罵，Claude 還是得繼續用。與其每天看著額度見底焦慮，更實在的作法是把背後偷吃 token 的設定與習慣徹底抓出來。前陣子我在 Threads 上整理了一大串省額度的技巧，收穫一千多讚之後，有網友提議可以做成 skill。
