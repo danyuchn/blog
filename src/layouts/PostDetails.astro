@@ -118,6 +118,7 @@ const layoutProps = {
   scrollSmooth: true,
   language: postLang,
   alternates,
+  noindex: archived === true,
 };
 
 /* ========== Prev/Next Posts (same language only) ========== */
@@ -140,11 +141,15 @@ const nextPost =
     ? sameLangPosts[currentPostIndex + 1]
     : null;
 
-/* ========== Related reading: same language, ranked by shared tags then recency ========== */
+/* ========== Related reading ==========
+   Same language, non-archived. With `signature`, take other posts in that
+   group newest-first, then fill leftover slots by shared tags then recency.
+   Without `signature`, shared tags then recency only. */
 
 const RELATED_COUNT = 3;
 const currentTags = new Set(tags ?? []);
-const relatedPosts = posts
+const signature = post.data.signature;
+const eligible = posts
   .map((p, recencyRank) => ({
     p,
     recencyRank, // `posts` is already sorted newest first
@@ -156,10 +161,28 @@ const relatedPosts = posts
       p.id !== translation?.id &&
       !p.data.archived &&
       getLangFromPost(p) === postLang
-  )
-  .sort((a, b) => b.shared - a.shared || a.recencyRank - b.recencyRank)
-  .slice(0, RELATED_COUNT)
-  .map(({ p }) => p);
+  );
+const byTagsThenRecency = (items: typeof eligible) =>
+  [...items].sort(
+    (a, b) => b.shared - a.shared || a.recencyRank - b.recencyRank
+  );
+
+const relatedPosts = (() => {
+  if (!signature) {
+    return byTagsThenRecency(eligible)
+      .slice(0, RELATED_COUNT)
+      .map(({ p }) => p);
+  }
+  // Filter keeps `posts` order, which is newest first.
+  const sameSignature = eligible
+    .filter(({ p }) => p.data.signature === signature)
+    .slice(0, RELATED_COUNT);
+  const pickedIds = new Set(sameSignature.map(({ p }) => p.id));
+  const fill = byTagsThenRecency(
+    eligible.filter(({ p }) => !pickedIds.has(p.id))
+  ).slice(0, RELATED_COUNT - sameSignature.length);
+  return [...sameSignature, ...fill].map(({ p }) => p);
+})();
 ---
 
 <Layout {...layoutProps}>

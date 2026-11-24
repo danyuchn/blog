@@ -164,7 +164,9 @@ for (const fn of MICRO_NOTES) {
 }
 
 // 4. internal post links must resolve, and must not point at a merge stub
-// (a stub only renders one "merged into" line, so readers have to click twice)
+// (a stub only renders one "merged into" line, so readers have to click twice).
+// Archived targets stay at their URL, so a live post may still link one;
+// that is a warning, not an error, and does not require rewriting the body.
 for (const [key, body] of Object.entries(bodies)) {
   if (key in stubs) continue; // a stub linking to its own canonical target is correct
   const sourceArchived = archived.has(key);
@@ -189,7 +191,7 @@ for (const [key, body] of Object.entries(bodies)) {
         `internal link /blog/posts/${target} points at a merge stub — link to ${canonical ? `/blog/posts/${canonical}` : "its canonicalURL target"} instead`
       );
     } else if (archived.has(target) && !sourceArchived) {
-      err(rel, `internal link /blog/posts/${target} points at an archived post — link a live post on the same topic, or drop the link`);
+      warn(rel, `internal link /blog/posts/${target} points at an archived post — link a live post on the same topic, or drop the link`);
     }
   }
 }

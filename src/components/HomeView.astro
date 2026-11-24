@@ -20,7 +20,9 @@ const other: Lang = lang === "zh" ? "en" : "zh";
 const RECENT_COUNT = 6;
 
 const posts = await getCollection("blog");
-const sortedPosts = filterByLang(getListedPosts(posts), lang);
+const sortedPosts = filterByLang(getListedPosts(posts), lang).filter(
+  ({ data }) => !data.hideFromHome
+);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts
   .filter(({ data }) => !data.featured)
