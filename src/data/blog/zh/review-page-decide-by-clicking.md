@@ -4,7 +4,7 @@ pubDatetime: 2026-11-23T22:00:00Z
 title: 'AI 每次都丟一長串選擇題問你？學會「奏摺附票擬」工作法，只管例外、不再當橡皮圖章'
 slug: zh/review-page-decide-by-clicking
 featured: false
-draft: true
+draft: false
 tags:
   - ai-workflow
   - productivity
