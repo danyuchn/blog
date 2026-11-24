@@ -12,6 +12,7 @@ tags:
   - token-optimization
 description: 'The most expensive model is not meant to run the whole way. Three moments where calling in Fable feels right to me, plus why I cap Opus 5 at med, and the weekly cycle I fell into: efficiency king Monday to Thursday, Fable mode Friday to Sunday.'
 tldr: 'Burning through your weekly AI usage limit before the weekend? Save your strongest model like Fable for planning, getting unstuck, or final review, and skip maxing out thinking intensity for everyday tasks. Run routine work on lighter models Monday through Thursday, then use leftover quota for big-picture planning on weekends.'
+archived: true
 ---
 
 When do I call in Fable? Switching models means a cache miss, so the usual move is a subagent. The three moments that work best for me:

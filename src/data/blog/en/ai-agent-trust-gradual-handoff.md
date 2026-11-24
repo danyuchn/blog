@@ -11,6 +11,7 @@ tags:
   - opinion
 description: 'Someone asked what to do if you worry about AI agents going rogue. My answer: don''t pick a highly autonomous lobster up front. Start in an isolated setting where you supervise and approve every step, then let go slowly.'
 tldr: 'Worried an AI assistant might delete files or send emails without asking? Don''t hand over full access on day one—start in a controlled setup where tools like Claude Code only draft emails for you to send. Once you see what permissions it needs and set clear limits and backups, automate step by step.'
+archived: true
 ---
 
 Someone asked what to do if you worry about an AI agent going rogue. Here's my answer.

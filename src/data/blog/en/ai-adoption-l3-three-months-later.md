@@ -10,6 +10,7 @@ tags:
   - claude-code
   - productivity
 description: 'In July I rated myself L2.5 on Boris''s AI adoption table. Three months later I measured again: Claude can reach my knowledge base and old chats, code goes through Codex review first, schedules run everything, and 430 sessions in two weeks were started by code.'
+archived: true
 ---
 
 Back in July I saw the father of Claude Code, the bald guy, post a table of AI adoption levels, from L0 to L4.

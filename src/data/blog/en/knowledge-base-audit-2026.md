@@ -13,6 +13,7 @@ tags:
   - automation
 description: "Rules trimmed from 13,020 to 7,590 tokens. 92 broken wikilinks. Five root causes behind a failing todo system. Four days of cleanup, one quarterly SOP."
 tldr: 'Note systems and to-do lists rarely break overnight—they rot slowly. A four-day Obsidian audit cut startup overhead by 42% via on-demand rules, triaged 92 broken links into three tiers, pinpointed five causes of messy to-dos, and produced a two-hour quarterly cleanup checklist.'
+archived: true
 ---
 
 Knowledge bases don't usually break dramatically. They rot slowly.

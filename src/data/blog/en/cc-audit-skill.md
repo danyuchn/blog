@@ -66,7 +66,7 @@ It checks whether your rules files should use conditional loading with `paths:`.
 
 I used to audit everything manually against the docs, which easily took 30 to 40 minutes and left plenty of room to miss things. Packaging it into a skill cut that down to a fully automated five-minute run that covers every item in one shot.
 
-If you want to bake this into your routine, the best time to run it is right before your quota resets. As I mentioned in my [Obsidian + Claude Code workflow](/blog/posts/en/obsidian-claude-code-workflow) piece, quota reset day makes you a temporary "token billionaire." With tokens to spare, that is the prime window to refactor your environment, split bloated rules, and prune unused configs.
+If you want to bake this into your routine, the best time to run it is right before your quota resets. As I mentioned in my [Obsidian + Claude Code workflow](/blog/posts/en/obsidian-knowledge-base-personal) piece, quota reset day makes you a temporary "token billionaire." With tokens to spare, that is the prime window to refactor your environment, split bloated rules, and prune unused configs.
 
 Give this link to Claude Code: <https://github.com/danyuchn/cc-audit>
 

@@ -37,7 +37,7 @@ Opus 5 除了不講人話之外，還有過度寫作的習慣。（不講人話�
 
 雖然網友常常臭 A 家，但很少有人否定他們的技術文章，寫的真正是深度跟科普並具。
 
-簡單來說，調低努力程度、一開始就提供更清晰的上下文，可以有效遏制 overthinking。努力程度該怎麼配我在[何時派工 Fable](/blog/posts/zh/when-to-call-fable-and-effort)那篇講過，這裡不重複。
+簡單來說，調低努力程度、一開始就提供更清晰的上下文，可以有效遏制 overthinking。努力程度該怎麼配我在[何時派工 Fable](/blog/posts/zh/opus-sonnet-fable-division-of-labor)那篇講過，這裡不重複。
 
 <!--
 新增非原文句子清單（忠實度自首）：

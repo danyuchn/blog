@@ -66,7 +66,7 @@ Claude Code 內建的 `/stats` 確實會告訴你「這個 session 用了多少 
 
 之前我是手動對照文檔逐項修改，常常要花三四十分鐘，還容易看漏。做成 skill 之後變成五分鐘全自動，所有項目一次檢查完畢。
 
-如果你想把這套做法放進日常工作流，最好的時機是配合你的方案重置週期。可以參考我前面寫過的 [Obsidian + Claude Code 工作流](/blog/posts/zh/obsidian-claude-code-workflow)——在額度即將重置的那一天，你暫時變身「單日 token 富翁」，這時候額度最充裕，正是進行環境重構、拆分 rules 與清理設定的黃金時段。
+如果你想把這套做法放進日常工作流，最好的時機是配合你的方案重置週期。可以參考我前面寫過的 [Obsidian + Claude Code 工作流](/blog/posts/zh/obsidian-knowledge-base-personal)——在額度即將重置的那一天，你暫時變身「單日 token 富翁」，這時候額度最充裕，正是進行環境重構、拆分 rules 與清理設定的黃金時段。
 
 丟這個連結給 Claude Code：<https://github.com/danyuchn/cc-audit>
 

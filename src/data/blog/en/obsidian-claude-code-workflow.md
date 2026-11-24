@@ -11,6 +11,7 @@ tags:
   - productivity
 description: 'Put your entire life into Obsidian, then let Claude Code tap in. How I do daily logs, manage to-dos, and why local Markdown beats Notion.'
 tldr: 'Tired of writing daily reports manually or worrying about cloud note apps changing policies? Keep your logs and to-dos locally in Obsidian so Claude Code can read and write them directly, turning work chats into daily logs and clearing doable tasks on the spot. Local files beat Notion because they never depend on a service provider.'
+archived: true
 ---
 
 My Obsidian vault holds my diary, work logs, ideas, stray thoughts, links across all my projects, and every to-do item big and small. Then I hook Claude Code into it, so AI can directly read and write all of that data.
