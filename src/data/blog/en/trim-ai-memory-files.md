@@ -26,7 +26,7 @@ Once I looked through them, the contents fell into a few kinds:
 - Running logs of amounts and dates.
 - Old conclusions that no longer hold.
 
-Kept in a place that loads in every conversation, these cause two problems. They take up room at the start of each session, so the model reads a pile of things unrelated to the job at hand. And they go out of date, yet still get read in as fact. It's the same principle as [the more rules I add, the less the model listens](/blog/posts/en/harness-slim-down-36), only this time the target is memory.
+Kept in a place that loads in every conversation, these cause two problems. They take up room at the start of each session, so the model reads a pile of things unrelated to the job at hand. And they go out of date, yet still get read in as fact. It's the same principle as [the more rules I add, the less the model listens](/blog/posts/en/harness-ablation-one-week), only this time the target is memory.
 
 ## Decide where each one belongs, then delete
 

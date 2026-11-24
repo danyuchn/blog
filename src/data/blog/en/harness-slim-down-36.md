@@ -13,6 +13,7 @@ tags:
   - harness
 description: 'Piling on rules makes LLMs miss what actually matters. When a 1M context window gets clogged with noise, you need an overhaul. Here is how an automated team of subagents trimmed my baseline harness by 36% by stripping out narrative fluff and conflicting constraints.'
 tldr: 'Stuffing every past note and lesson into your AI only makes it miss key rules and slow down? Clutter fills up its working memory. By stripping out background stories, keeping only core rules, and loading extras on demand, rule lines dropped 36% while speed improved.'
+archived: true
 ---
 
 When Opus 4.8 dropped late at night just as my weekly Claude quota reset, the very first thing I did was overhaul my harness. Looking back, I am glad I did.

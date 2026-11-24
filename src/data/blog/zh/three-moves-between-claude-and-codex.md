@@ -115,7 +115,7 @@ Claude、Codex 各訂 100，一有 reset 就用好用滿，如圖所示，發揮
 
 七月上旬那一波尤其明顯：又是主動 reset，又是主動還過期的 credit。沒有任何理由，我能想到的唯一理由就是看到 GPT-5.6 發布，急了。
 
-我個人已經在積極做的，是把 harness 持續瘦身、把部分很單純的單發任務路由到本地模型夜間做或走量大管飽的 Gemini 訂閱方案，這條線另外寫在 [第二次 harness 減肥：全域 skills 58 砍到 40](/blog/posts/zh/skills-58-to-40-second-diet)。
+我個人已經在積極做的，是把 harness 持續瘦身、把部分很單純的單發任務路由到本地模型夜間做或走量大管飽的 Gemini 訂閱方案，這條線另外寫在 [第二次 harness 減肥：全域 skills 58 砍到 40](/blog/posts/zh/harness-ablation-one-week)。
 
 ### Deepseek 那張圖可能要作廢了
 
@@ -188,7 +188,7 @@ Codex 是時候走下神壇了吧。Claude 家最近低調很多，四平八穩�
 1.「我在 Claude Code 和 Codex 之間來回搬了三次家。以下照時間順序排：五月把整套 harness 搬過去、七月換掉主力、蜜月期、充滿 reset 的七月，最後蜜月期結束。」— 框架句（合併文開頭，內容全部指向下文既有段落）
 2. 五個 H2 段標題「五月：先做一個 Skill 把 harness 搬過去」「七月十日：主力真的換過去了」「七月中：額度蜜月期」「八月初：充滿 reset 的七月，補貼大戰復盤」「八月二十日：蜜月期結束」— 小標（合併用；語意取自原五篇標題與其發文日期）
 3.「一個多月後，蜜月期結束了。」— 銜接（取代原文的「一個多月前我寫過[…額度蜜月期](…)。現在蜜月期結束了。」外部連結；合併後蜜月期已在同一篇上文，改為時間銜接）
-4.「我個人已經在積極做的，是把 harness 持續瘦身、把部分很單純的單發任務路由到本地模型夜間做或走量大管飽的 Gemini 訂閱方案，這條線另外寫在 [第二次 harness 減肥：全域 skills 58 砍到 40](/blog/posts/zh/skills-58-to-40-second-diet)。」— 改寫（原 july-of-resets 的「## 個人已經在積極做的」整節屬 harness 減肥系列、非本篇主線，壓縮成一句並外連；原節內「這週減了 40% 常駐注入的 token」數字與「未來打算做的進一步分流：非敏感資訊，或者透過本地……」截斷句於此捨棄）
+4.「我個人已經在積極做的，是把 harness 持續瘦身、把部分很單純的單發任務路由到本地模型夜間做或走量大管飽的 Gemini 訂閱方案，這條線另外寫在 [第二次 harness 減肥：全域 skills 58 砍到 40](/blog/posts/zh/harness-ablation-one-week)。」— 改寫（原 july-of-resets 的「## 個人已經在積極做的」整節屬 harness 減肥系列、非本篇主線，壓縮成一句並外連；原節內「這週減了 40% 常駐注入的 token」數字與「未來打算做的進一步分流：非敏感資訊，或者透過本地……」截斷句於此捨棄）
 5. 原五篇各自的 H2 小標降為 H3（痛點／SKILL 做了什麼／額外收穫／順便講一個生圖的意外發現／七輪五小時窗口／默默飄走／Deepseek 那張圖可能要作廢了／關於 reset 本身），文字未改 — 改寫（標題層級調整）
 其餘所有段落、數據、引用區塊、連結與圖片 alt 均逐字取自五篇原文（codex-migration-skill、why-i-switched-from-claude-code-to-codex、codex-quota-honeymoon、july-of-resets-subsidy-war、codex-quota-nerf-off-the-pedestal），僅做標題層級調整與圖片路徑改指合併目錄，未新增原文沒有的事實、判準或結論，未替作者調和前後立場，也未新增總收尾。
 
