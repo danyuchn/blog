@@ -9,6 +9,7 @@ tags:
   - ai-education
   - teaching
 description: '當學員有錯誤期待時，授課者也常常不及格。15 年補教經驗加上最近試教 Claude Code 的觀察，聊一下教學品質的基本盤與老師的責任心。'
+archived: true
 ---
 
 最近線上看到一個討論：「很多學員對課程有錯誤期待，以為一堂課就能掌握某個技能。」留言區很多人附和。

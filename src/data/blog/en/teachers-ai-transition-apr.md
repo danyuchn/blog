@@ -9,6 +9,7 @@ tags:
   - ai-education
   - teaching
 description: 'When students carry unrealistic expectations, instructors are often failing too. Drawing from 15 years in test prep and recent Claude Code workshops, here is an honest look at teaching fundamentals and instructor accountability.'
+archived: true
 ---
 
 I recently caught an online discussion where someone pointed out: "Too many students expect miracles from a single workshop, assuming one session will make them master a skill." The comment section was packed with people nodding along.

@@ -10,6 +10,7 @@ tags:
   - ai-tools
   - skills
 description: '路過彩券行起念想下運彩，順手用手機 Claude Code 接賭率分析 skill 現場開算，結論：台運波膽盤水錢高達 191%，期望值全負，誰下誰賠。'
+hideFromHome: true
 ---
 
 好好笑，剛剛路過彩券行，想說來下個運彩好了，再想說有沒有 Claude Code skill 處理這種事，沒想到還真的有⋯⋯ 直接接在彩券行用手機 Claude Code 現場開幹。省流板：台運賠率爛透了，誰下誰賠。

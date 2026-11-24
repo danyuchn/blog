@@ -11,6 +11,7 @@ tags:
   - developer-experience
 description: 'A non-engineer power user''s journey through the Claude Code Dunning-Kruger curve: from day-one confusion and day-three hubris to week-two wall-hitting, before mastering rules, skills, and multi-model collaboration.'
 tldr: 'Frustrated by Claude Code forgetting details, looping on errors, and burning through your quota? A non-engineer''s six-month journey shows that training AI like a new hire—organizing files and writing clear manuals—cuts usage by 50% and doubles your speed.'
+archived: true
 ---
 
 I don't have an engineering background, but over the past six months, I've used Claude Code to refactor databases, connect frontends and backends, coordinate multi-agent setups, and deploy production apps completely on my own.

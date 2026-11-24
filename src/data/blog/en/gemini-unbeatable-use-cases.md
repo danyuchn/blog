@@ -10,6 +10,7 @@ tags:
   - model-comparison
   - ai-tools
 description: 'Everyone seems to be dismissing Gemini now that Codex and Claude dominate the agent space. But Gemini has four use cases other models cannot match: Flash Lite cost efficiency, audio multimodal, video understanding, and book scanning OCR.'
+archived: true
 ---
 
 The AI agent space right now feels like it's all Codex and Claude. Anyone using agents seems to dismiss Gemini to some degree.

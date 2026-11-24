@@ -12,6 +12,7 @@ tags:
 description: '遠端桌面又卡又耗電？分享如何只靠一台 11 吋 iPad，在咖啡店或機場穩定連線家裡的 Mac Mini 操作 Claude Code 寫文件、跑自動化任務、管理知識庫，電池還能撐一整個下午。'
 tldr: '想用 iPad 遠端操作家裡電腦跑 Claude Code，卻嫌遠端桌面卡頓又耗電？改用 Tailscale、Moshi 與 tmux 這套三件組，免動路由器設定、切換畫面不會斷線，電池還能撐一整個下午。'
 seoTitle: 'iPad 怎麼跑 Claude Code？tmux 加 Tailscale 重現 9 成生產力'
+hideFromHome: true
 ---
 
 你一定有過這種經驗：去咖啡店或出差在機場等飛機時，不想背厚重的筆電，只想帶一台輕便的 iPad 出門；但當你真的需要處理正事——整理大量的專案文件、更新資料庫，或是讓電腦裡設定好的 AI 幫你跑一段長時間的任務——光靠 iPad 上的網頁版聊天視窗，根本使不上力。

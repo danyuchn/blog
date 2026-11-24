@@ -10,6 +10,7 @@ tags:
   - mindset
   - opinion
 description: '分享我保持快樂的方法：搬到泰國、課題分離、真的想回就只回一次，而且那一次是講給路過的網友聽。'
+archived: true
 ---
 
 分享我保持快樂的方法。

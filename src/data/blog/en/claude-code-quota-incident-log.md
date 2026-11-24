@@ -13,6 +13,7 @@ tags:
 description: 'Four quota incidents in full: two official cache bugs, an 80x jump in API requests pulled from JSONL, Opus 4.7 measured at 2x consumption, and one session of mine that burned 90% in half an hour.'
 tldr: 'Watching your Claude Code quota vanish even when you barely typed? Hidden issues—like the system recalculating past chats, a newer model doubling usage, and uncapped auto-spawned tasks burning 90% quota in 30 minutes—are to blame; switching to the steadier older model and capping parallel tasks stops the bleed.'
 seoTitle: 'Why Is Claude Quota Draining Fast? 4 Incidents Explained'
+archived: true
 ---
 
 Your quota isn't burned by the words you type. It's burned by things you can't see: a string-matching bug that invalidates the cache, an entry fee that reprocesses the whole context every time you resume, a behavioral regression that multiplies API requests 80x, and a subagent tree that breeds until some of them are grandpas because nobody set a cap. Four incidents, in the order they happened.

@@ -4,7 +4,7 @@ pubDatetime: 2026-11-23T22:00:00Z
 title: "Tired of AI Dumping Endless Multiple-Choice Lists in Chat? I Built a One-Page Review Page to Click Only Exceptions, Not Rubber-Stamp"
 slug: en/review-page-decide-by-clicking
 featured: false
-draft: false
+draft: true
 tags:
   - ai-workflow
   - productivity

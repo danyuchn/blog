@@ -11,6 +11,7 @@ tags:
   - skills
   - ai-workflow
 description: '用沒燒完的閒 token 做了一個庭皓 SKILL：蒸餾 17 部財經速解讀、3-4 輪盲測驗證，還發現 AI 跟人類講黃段子的邏輯不太一樣。'
+hideFromHome: true
 ---
 
 前天 Claude 額度重置，但明天又要例行重置，好多 token 沒燒完，我決定讓他週末在家全職研究：

@@ -12,6 +12,7 @@ tags:
   - opinion
 description: 'Block / Square / Cash App''s Jack Dorsey did an interview about why he laid off 40% of the company and rebuilt from scratch. Plus Sequoia''s Roelof on the "three things a good CEO needs" — once AI can do 80%, the remaining 20% is where humans live.'
 tldr: 'If AI can handle 80% of planning, coordination, and output, where does your value lie? Looking at Jack Dorsey''s 40% staff cut and rebuild, the real edge is training the 20% AI cannot replace: taste, sound judgment, and making tough calls.'
+archived: true
 ---
 
 Jack Dorsey (Twitter founder, now running Block / Square / Cash App) gave an interview about his recent move: laying off 40% of the company, then rebuilding from scratch.

@@ -11,6 +11,7 @@ tags:
   - teaching
 description: 'In discussions about AI taking over, timelines and taste miss the point—because AI will never go to prison for you. While everyone rushes toward vibe coding, frontline workers carry an asymmetric risk premium. Learning to audit toolchains and catch errors before signing off is the one skill that can''t be replaced.'
 tldr: 'While everyone debates AI timelines and taste, the one thing AI can never do for you is take responsibility—it won''t go to jail in your place. Whether at school or work, the real skill to build is checking AI''s reasoning and catching mistakes before you sign off.'
+archived: true
 ---
 
 ## Timelines and Taste Aren't the Real Issue

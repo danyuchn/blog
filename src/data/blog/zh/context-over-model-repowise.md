@@ -11,6 +11,7 @@ tags:
   - agentic-coding
 description: '看到 repowise 這個在 codebase 與模型之間插一層 context 的工具，想聊一個更大的觀念：模型改壞東西時，第一反應常常是換更強的模型，但真正的根因往往是 context 不夠。'
 tldr: 'AI 改一個地方卻不小心弄壞別處，第一反應別急著換更貴的模型。實測顯示，先把檔案之間的關聯與設計原因整理成地圖餵給 AI，就能減少 89% 的讀檔次數、降低 36% 成本，讓同一個模型變好用。'
+archived: true
 ---
 
 最近在 r/ClaudeAI 看到一個工具叫 repowise，順手研究了一下。它解決的問題我自己常踩，想藉這篇講一個更大的觀念。

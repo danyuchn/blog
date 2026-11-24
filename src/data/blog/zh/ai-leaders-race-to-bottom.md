@@ -11,6 +11,7 @@ tags:
   - model-comparison
   - opinion
 description: 'GPT 生圖退步、Claude 額度放寬三天就縮水、Google 先佛心後收割。當 AI 大廠輪流坐莊偷料，老師與職場工作者該如何選訂閱、留後路？'
+hideFromHome: true
 ---
 
 你有沒有過這種經驗：明明上個月還很好用的 AI，這個月用一模一樣的指令請它做事，它卻像突然忘記怎麼工作一樣，不管你怎麼補充要求、來回請它修改，結果總是越改越糟？

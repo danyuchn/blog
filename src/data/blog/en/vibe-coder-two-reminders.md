@@ -11,6 +11,7 @@ tags:
   - opinion
 description: 'Two great posts I found on Reddit: one says vibe coders should learn system architecture before rushing to code, the other says what you build with Claude is useless to others — the real value is the thinking.'
 tldr: 'Struggling to turn an AI-built demo into a real working tool, or wondering why others ignore what you built? Learn how screens, rules, data, and passwords connect safely before worrying about code. When sharing, highlight how you spotted the problem and thought it through—that mindset helps people far more than the tool itself.'
+archived: true
 ---
 
 Lately I've felt that instead of watching vibe coders trade jabs on Threads, it's worth spending some time over on Reddit.

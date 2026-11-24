@@ -11,6 +11,7 @@ tags:
   - ai-tools
 description: 'Claude Code 已從單純的 CLI 演進為具備 Skill、Hook 與多代理協同的完整平台。了解如何透過架構組合流程與控制上下文，能讓日常自動化更加穩固。'
 tldr: '以為 Claude Code 只能拿來寫程式嗎？它已進化成完整的工作平台，能把重複流程存成操作手冊、在底層設下 AI 無法繞過的檢查關卡，還能在單一畫面同時管理多個協作任務。'
+archived: true
 ---
 
 很多人剛接觸 Claude Code 時，只把它當成一個在終端機裡幫忙寫程式碼的 CLI 工具。但在短短幾個月內，它的形態已經完全不同——從最初單純的命令列對話，迅速演變為具備 Skill、Hook、Agent View 到 Subagent 的完整架構。

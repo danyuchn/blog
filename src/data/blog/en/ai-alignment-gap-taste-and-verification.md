@@ -11,6 +11,7 @@ tags:
   - ai-workflow
 description: 'The gap between AI and human intent is closing fast, so what separates good output moves toward taste and verification — and verification is where human responsibility stays.'
 tldr: 'As AI gets better at understanding vague instructions, what sets people apart shifts to taste and verification—especially since humans still carry the final responsibility. When checking AI work, inspect the actual output and original source files directly rather than trusting AI''s own summary or flawed checklists.'
+archived: true
 ---
 
 ## The Alignment Gap Is Closing

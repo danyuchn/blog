@@ -9,6 +9,7 @@ tags:
   - personal
   - teaching
 description: 'I can''t sit still for thirty seconds when I''m bored, but if an interest survives two weeks in flow, I''ll stick with it for decades. From acing exams to teaching AI, this is my confession and personal standard as someone with ADHD.'
+archived: true
 ---
 
 When I'm faced with something I don't care about, I can't sit still for even thirty seconds — even playing a YouTube video at 2x speed, I don't have the patience to finish it. But the moment something genuinely hooks me, I dive in headfirst, slipping into a flow state that lasts over ten hours without eating or sleeping, and getting interrupted can make me furious.

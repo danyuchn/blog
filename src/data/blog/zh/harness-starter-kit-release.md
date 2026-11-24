@@ -12,6 +12,7 @@ tags:
   - open-source
 description: '把我每天都在用、不需要技術力、純邏輯導向的幾個 Claude Code Skill 跟 Hook 開源出來，最適合跟我一樣沒有編程背景的知識工作者。'
 tldr: '剛開始用 Claude Code 或 Codex，卻不知道怎麼讓它別亂說話、別寫出難懂術語？作者將每天用的兩道自動把關與五個常用指令免費開源，從白話解釋、跨檔檢查到寫對外禮貌信都有。不懂程式也能直接貼上連結請 AI 安裝。'
+signature: "other"
 ---
 
 跟網路上的 Claude／Codex 大神相比，我還差得很遠，因為我技術力不高。

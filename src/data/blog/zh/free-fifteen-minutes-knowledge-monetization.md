@@ -11,6 +11,7 @@ tags:
   - consulting
   - opinion
 description: '教齡 15 年累積下來的四條判準：免費諮詢只給 15 分鐘、先當社群分享者再談收費、別看不起你覺得 google 就有的東西、以及怎麼分辨同業裡的詐騙。'
+archived: true
 ---
 
 ## 免費諮詢只給 15 分鐘

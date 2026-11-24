@@ -25,6 +25,8 @@ type Props = {
   siteLang?: "en" | "zh";
   /** Root-relative counterpart URL, including the /blog base. */
   langAlt?: string;
+  /** Archived posts: keep the URL, ask crawlers not to index it. */
+  noindex?: boolean;
 };
 
 const {
@@ -42,6 +44,7 @@ const {
   alternates = [],
   siteLang,
   langAlt,
+  noindex = false,
 } = Astro.props;
 
 // The /blog proxy serves both "/x" and "/x/" with 200; always point canonical
@@ -55,7 +58,8 @@ const canonicalURL = (() => {
 })();
 
 // BCP 47 tag for <html lang>: zh posts are Traditional Chinese.
-const htmlLang = language === "zh" ? "zh-Hant" : (language ?? SITE.lang ?? "en");
+const htmlLang =
+  language === "zh" ? "zh-Hant" : (language ?? SITE.lang ?? "en");
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
@@ -108,6 +112,7 @@ const structuredData = {
     <meta name="title" content={docTitle ?? title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="sitemap" href={withBase("/sitemap-index.xml")} />
 
     <!-- Open Graph / Facebook -->

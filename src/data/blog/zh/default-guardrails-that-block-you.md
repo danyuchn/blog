@@ -10,6 +10,7 @@ tags:
   - security
   - gotchas
 description: '內網 NAS 讀不到、AUTOMODE 回不去、外部訪客拿到 401、雲端排程寄不了信，四個坑都不是程式寫錯，是預設開著的保護。'
+archived: true
 ---
 
 這幾個坑的共通點是：卡住你的不是程式寫錯，是某個預設開著的保護。

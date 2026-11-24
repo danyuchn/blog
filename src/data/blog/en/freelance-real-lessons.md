@@ -11,6 +11,7 @@ tags:
   - case-study
 description: 'Early freelancing rules for rates and boundaries: don''t lower your floor, cut off scope-creepers quickly, and drop low-margin clients that drain you. When you protect your time to deliver real quality, you build word-of-mouth referrals like the pros who never post online.'
 tldr: 'The hardest part of freelancing is rarely the work itself—it is pricing and boundaries. Make your highest accepted rate your new baseline and walk away from scope creep; higher-paying clients are often far easier to work with, and lasting work comes from referrals rather than online promotion.'
+archived: true
 ---
 
 What drains freelancers most usually isn't their actual craft, but how they handle pricing and boundaries.

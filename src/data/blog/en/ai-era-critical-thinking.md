@@ -11,6 +11,7 @@ tags:
   - opinion
 description: 'AI can help you find answers, but it won''t find the questions you don''t know to ask. Why playing dumb, combining the Feynman technique with AI, and sharp critical thinking form the foundation of human-AI collaboration.'
 tldr: 'Ever read an answer key thinking you understood, only to get the same score two months later? Record yourself explaining your reasoning out loud, ask AI to explain the exact point where you get stuck from 10 or 20 angles, and re-record until smooth. Providing sufficient data and spotting AI''s logical flaws are what make you irreplaceable.'
+archived: true
 ---
 
 AI can help you find answers, but it can't find the questions you don't even know to ask.

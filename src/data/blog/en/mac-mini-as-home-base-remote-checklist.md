@@ -12,6 +12,7 @@ tags:
   - remote-work
 description: 'Eight things I checked before flying out, to keep a home Mac Mini reachable as the base for Claude and Codex: Tailscale, Herdr, caffeinate, auto-reboot, and remote file access.'
 tldr: 'Traveling light without your main computer, yet still need reliable access to your desktop at home? This field-tested checklist and troubleshooting log helps you avoid common remote-access traps like power-loss lockouts, typing lag, and failed file transfers.'
+archived: true
 ---
 
 Tomorrow is my first trip abroad since I bought the Mac Mini. Here's the remote setup checklist I ran through before leaving:

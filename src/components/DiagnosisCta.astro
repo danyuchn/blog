@@ -1,5 +1,6 @@
 ---
 import { t } from "@/i18n/ui";
+import { agentcrewCtaHref } from "@/utils/agentcrewCta";
 import type { Lang } from "@/utils/i18n";
 
 type Props = {
@@ -11,22 +12,10 @@ type Props = {
 
 const { lang, slug, deep = false } = Astro.props;
 
-const utmContent = slug.replace(/^(zh|en)\//, "");
-
-function ctaHref(path: string, campaign: string) {
-  const params = new URLSearchParams({
-    utm_source: "blog",
-    utm_medium: "post_end",
-    utm_campaign: campaign,
-    utm_content: utmContent,
-  });
-  return `https://www.agentcrew.cc${path}?${params.toString()}`;
-}
-
-const l0Url = ctaHref("/l0/", "l0");
-const l1Url = ctaHref("/l1/", "l1");
-const diagnosisUrl = ctaHref("/l3/inquire", "diagnosis");
-const soloUrl = ctaHref("/l3/solo", "l3");
+const l0Url = agentcrewCtaHref("/l0/", "l0", slug);
+const l1Url = agentcrewCtaHref("/l1/", "l1", slug);
+const diagnosisUrl = agentcrewCtaHref("/l3/inquire", "diagnosis", slug);
+const soloUrl = agentcrewCtaHref("/l3/solo", "l3", slug);
 ---
 
 <div

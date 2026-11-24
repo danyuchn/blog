@@ -11,6 +11,7 @@ tags:
   - ai-workflow
 description: 'From /loop clocking in for me at ERP, to Monitor Tool as a background event gatekeeper, to Google Map MCP saving browser clicks, to Obsidian + Mirror framework for weekly reflection. Here''s my six-month Claude Code automation stack, plus a clarification of how commands and skills actually split.'
 tldr: 'Want to turn AI from a reactive chatbot into a daily automation helper without overcomplicating things? This five-layer setup shows how to combine scheduled tasks, event triggers, batch-generating options to pick from, and weekly reviews—plus four automations worth skipping.'
+archived: true
 ---
 
 After six months my Claude Code workflow has accumulated an automation stack.

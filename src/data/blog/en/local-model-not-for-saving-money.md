@@ -11,6 +11,7 @@ tags:
   - ai-economics
 description: 'If you''re buying hardware to run local models just to save money, do the math with me first: capable rigs start at NT$100k, commercial models are priced to the bone, and privacy is the only irreplaceable edge left.'
 tldr: 'Buying hardware to run AI at home just to save money rarely pays off. Capable setups cost at least NT$100,000 plus electricity, while commercial cloud AI is far cheaper—save local hardware strictly for stripping sensitive data before sending work to the cloud.'
+archived: true
 ---
 
 If you're an individual consumer looking at buying hardware to run local models just to save money, take a pause. Let me do the math with you first.

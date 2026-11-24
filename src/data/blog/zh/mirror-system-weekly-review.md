@@ -11,6 +11,7 @@ tags:
   - productivity
 description: '普通的週回顧，你會幫自己找理由。Mirror System 不要肯定，不要安慰，只要事實——把本週 daily notes 餵給 Claude，看它反照出你不想正視的模式。'
 tldr: '自己做週回顧總是會忍不住替沒完成的事找理由嗎？只要把一週的工作筆記丟給 Claude，加上這套禁止安慰的提問模板，就能精準抓出你反覆拖延與一直迴避的盲點。'
+archived: true
 ---
 
 普通的週回顧，你會幫自己找理由。

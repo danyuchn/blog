@@ -11,6 +11,7 @@ tags:
   - consulting
   - opinion
 description: 'Four rules from fifteen years of teaching: free consultations get fifteen minutes, be a community contributor before you think about money, don''t look down on things you assume anyone could google, and how to spot the frauds in your own field.'
+archived: true
 ---
 
 ## Free Consultations Get Fifteen Minutes

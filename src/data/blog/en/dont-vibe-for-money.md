@@ -10,6 +10,7 @@ tags:
   - ai-product-building
   - opinion
 description: 'Six things I jotted down after the product I vibe coded made it out of Taiwan and started pulling steady subscribers at home and abroad.'
+archived: true
 ---
 
 A product I vibe coded myself is being used by a lot of people. That's the first joy. It made it out of Taiwan, and there are steady subscribers here and overseas every month now. Second joy. Overseas users go out of their way to write me thank-you messages on Reddit. Third joy. Three joys at once, wonderful.

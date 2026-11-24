@@ -12,6 +12,7 @@ tags:
 description: 'A small job, transcribing consulting videos: the smart model builds a pipeline, the dumb one does every step by hand. After Opus 5.5 took over Codex''s mess, it found four failure modes in 6 Sol / Luna, and why Cost per Task now needs a time variable.'
 tldr: 'Picking an AI model based on quota savings alone can backfire when slow runs and over-cautious checks waste your time. Using a Google Drive video transcription task, Opus 5.5 breaks down four failure modes in GPT 6 Sol and Luna. Let smart models design the workflow first, and factor time spent into your cost.'
 seoTitle: 'Why GPT-6 Sol and Luna Feel Dumb: 4 Failure Modes'
+archived: true
 ---
 
 ## The smart model writes the pipeline, the dumb model follows it

@@ -7,6 +7,55 @@ import { withBase } from "@/utils/withBase";
 type Props = { lang: Lang };
 
 const { lang } = Astro.props;
+
+const attention = START_HERE.find(entry => entry.key === "attention");
+
+/** Zh homepage only. The attention card stays on its start-here path. */
+const zhCards = [
+  {
+    title: "別再忍受 AI 滿嘴官腔與廢話",
+    desc: "套用白話文規範與收斂模式，把愛掉書袋、愛話癆的 AI，調教成講重點的助手。",
+    href: `${withBase("/my-work")}#sig-1`,
+  },
+  {
+    title: "AI 說做完了，你敢直接放行嗎？",
+    desc: "建立可逆與不可逆的放手界線，搭配一鍵裁決的審閱頁，讓你省事又不失控。",
+    href: `${withBase("/my-work")}#sig-7`,
+  },
+  {
+    title: "為什麼你的 AI 永遠記不住你的習慣？",
+    desc: "規則不是越多越好。砍掉廢規則，換上個人系統卡與判例庫，AI 才會照你的意思做。",
+    href: `${withBase("/my-work")}#sig-5`,
+  },
+  {
+    title: "不會寫程式，才是用好 AI 的起點",
+    desc: "從挑對主力模型、個資去識別化到語音派工，給專業工作者一套拿來就能跑的工作系統。",
+    href: `${withBase("/my-work")}#sig-12`,
+  },
+  {
+    title: "企業導入 AI，現場到底長怎樣？",
+    desc: "拿掉美化的宣傳，直接攤開接案與企業培訓的真實復盤，看團隊怎麼跨過第一道檻。",
+    href: `${withBase("/my-work")}#sig-13`,
+  },
+  ...(attention
+    ? [
+        {
+          title: attention.title_zh,
+          desc: attention.desc_zh,
+          href: withBase(startPath(attention.key, "zh")),
+        },
+      ]
+    : []),
+];
+
+const cards =
+  lang === "zh"
+    ? zhCards
+    : START_HERE.map(entry => ({
+        title: entry.title_en,
+        desc: entry.desc_en,
+        href: withBase(startPath(entry.key, "en")),
+      }));
 ---
 
 <section id="start-here" class="border-b border-border pt-8 pb-8">
@@ -15,17 +64,17 @@ const { lang } = Astro.props;
   </p>
   <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2">
     {
-      START_HERE.map(entry => (
+      cards.map(card => (
         <li>
           <a
-            href={withBase(startPath(entry.key, lang))}
+            href={card.href}
             class="block h-full border border-border p-4 text-foreground no-underline transition-colors duration-150 hover:bg-accent-surface"
           >
             <span class="block font-display text-lg leading-snug font-bold">
-              {lang === "zh" ? entry.title_zh : entry.title_en}
+              {card.title}
             </span>
             <span class="mt-2 block text-sm leading-relaxed text-foreground/75">
-              {lang === "zh" ? entry.desc_zh : entry.desc_en}
+              {card.desc}
             </span>
           </a>
         </li>

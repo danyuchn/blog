@@ -11,6 +11,7 @@ tags:
   - developer-experience
 description: '分享六個下 Claude Code 起始指令的實戰心法：從釐清目標、流程翻譯到善用計畫模式與模型切換，讓 AI 協作精準不卡關。'
 tldr: '打開 Claude Code 卻不知道第一句該怎麼下？只要先想清楚目標與手動步驟、放心用口語或語音輸入，不確定細節就開啟計畫模式讓 AI 先擬定方案，看懂再放手執行就能大幅減少做白工。'
+archived: true
 ---
 
 最近有機會幫以前的同事和團隊成員升級工作流程、跟 AI 接軌，我也開始有意識地記錄自己每天用 Claude Code 工作的習慣。

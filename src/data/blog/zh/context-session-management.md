@@ -12,6 +12,7 @@ tags:
 description: 'Claude Code 的 context window 從 200k 長到 1M，但更大不代表更好用。這篇整理五種 session 管理操作（Continue / rewind / clear / compact / Subagents）、四大策略、以及最容易踩的兩個坑。'
 tldr: '對話視窗變大，AI 卻越聊越糊塗，是因為舊資訊會干擾新任務。換新任務就重開對話、走錯路直接退回分叉點，並在小任務剛結束時主動精簡紀錄，別等快滿了才處理。'
 seoTitle: '1M Context 管理：Claude Code 防上下文腐化'
+hideFromHome: true
 ---
 
 ![1M Context 不是裝更多，而是管理更好](/blog/assets/posts/context-session-mgmt/slide-1.jpg)

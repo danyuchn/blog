@@ -11,6 +11,7 @@ tags:
   - code-review
 description: 'AI 自己審查自己的產出，盲點難以避免。用 Codex 做獨立審查、或用 Review Council skill 組三模型 expert team，是目前最務實的解法。'
 tldr: '讓同一個 AI 自己檢查自己寫的內容，很容易陷入盲點。解方是找不同家的模型獨立覆核，不讓它看原本的思考過程，最後再彙整各方共識與分歧，用在履歷篩選、合約或報告審查都有效。'
+signature: "other"
 ---
 
 讓 AI 自己審查自己的產出，盲點很難避免。

@@ -10,6 +10,7 @@ tags:
   - ai-product-building
   - opinion
 description: '自己 Vibe 出來的產品走出台灣、每個月有穩定的海內外訂閱用戶之後，我隨筆寫下的六點感想。'
+archived: true
 ---
 
 自己 Vibe 出來的產品可以被很多人用是第一喜，走出台灣，每個月有穩定的海內外訂閱用戶是第二喜，海外用戶還會特別在 Reddit 寫訊息感謝，是第三喜。三喜臨門，妙哉妙哉。

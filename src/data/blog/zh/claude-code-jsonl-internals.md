@@ -11,6 +11,7 @@ tags:
   - developer-experience
 description: 'Claude Code 的 `/stats` 只告訴你總 token 數，但 JSONL 檔案裡其實藏著更細的資訊——快取類型、compact 觸發、貼圖 cache miss 都能手動算。這是我最近做 cc-audit skill 時整理出來的幾個實用公式。'
 tldr: '覺得 Claude Code 的用量統計太籠統、常莫名其妙就撞到上限？其實對話紀錄全存在電腦本機，檢查這些紀錄就能抓出「在長對話貼圖導致重算」等隱形吃額度元兇，及早重開新對話省下用量。'
+archived: true
 ---
 
 Claude Code 的 `/stats` 只告訴你「這個 session 花了多少 token」，但那是一個總數，藏了很多重要細節。我最近做 [cc-audit skill](/blog/posts/zh/cc-audit-skill) 的時候，把 JSONL 檔案整個翻過一遍，發現其實藏著一堆有用的指標，只要你知道去哪裡抓。

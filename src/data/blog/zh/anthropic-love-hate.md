@@ -10,6 +10,7 @@ tags:
   - opinion
   - ai-trends
 description: '我對 Anthropic 又愛又恨：恨那股噁心的精英心態跟燒 token 的黑箱操作，愛他們數一數二高品質的技術部落格，尤其資安權限那塊。'
+archived: true
 ---
 
 相信我，Claude 為你準備好了一百種方式讓你花式燒 token，他也準備好了一百種藉口，把燒 token 的責任推給使用者。

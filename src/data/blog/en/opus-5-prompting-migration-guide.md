@@ -11,6 +11,7 @@ tags:
   - ai-workflow
 description: 'Nine cards I made after reading Anthropic''s official Opus 5 prompting guide: response length, agent narration, task boundaries, subagent delegation, self-correction, and what happens when you turn thinking off.'
 tldr: 'Moving old prompts to Claude Opus 5 and finding its replies too long or overly proactive? This nine-card official guide shows how to adapt: ask directly for brief answers instead of lowering thinking effort, remove old "double-check" prompts, and set clear task boundaries to cut costs without losing quality.'
+archived: true
 ---
 
 After reading Anthropic's official Opus 5 prompting guide, I turned it into nine cards. The point isn't how much stronger Opus 5 is. It's how to port your old prompts over. Long-horizon agentic work got better, but the prompting strategy needs retuning too.

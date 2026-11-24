@@ -13,6 +13,7 @@ tags:
   - prompting
 description: 'The "ugly crayon doodle" prompt that went viral overseas works because over-constraint kills GPT-image-2''s creativity. Here is what I observed this week — including why routing prompts through Claude makes things worse, and why "consistency" matters more than raw image quality at work.'
 tldr: 'AI-generated images drifting off-style or getting blurry after edits? With GPT image models, fewer constraints actually produce better results and stronger multi-image continuity. For real work, keep your image instructions loose, then lock down layout consistency inside Canva.'
+archived: true
 ---
 
 ## The viral "ugly crayon" prompt

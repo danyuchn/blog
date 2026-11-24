@@ -12,6 +12,7 @@ tags:
   - ai-tools
 description: 'What to know before handling sensitive data with Claude: data retention windows, Enterprise contract protections, input minimization, coding agent controls, and alternative architectures.'
 tldr: 'Before pasting company or student data into Claude, know how long it stays and what to strip out. Deleted chats can remain on servers for up to 30 days, so always replace passwords, names, and emails with placeholders—or use Enterprise zero-retention or a local model for strict isolation.'
+archived: true
 ---
 
 A few things to get straight before you hand sensitive data to Claude.

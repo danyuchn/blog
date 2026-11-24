@@ -11,6 +11,7 @@ tags:
   - developer-experience
 description: 'Six practical habits for writing Claude Code initial prompts: clarifying goals, mapping manual workflows, picking the right model, and leaning on plan mode.'
 tldr: 'Not sure what to type first in Claude Code? Clarify your goal and manual steps, speak naturally without worrying about typos, and use Plan Mode so AI drafts a clear plan for you to approve before running.'
+archived: true
 ---
 
 Lately, while helping former colleagues and team members bring AI into their workflows, I started taking notes on how I actually use Claude Code every day.

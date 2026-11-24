@@ -11,6 +11,7 @@ tags:
   - productivity
 description: '同時開超過 5 個 Claude Code／Codex 視窗時會遇到注意力瓶頸，一直 context switching 真的很累。分享目前跳脫這個瓶頸的五個做法：多窗口管理器、語音輸入、夜間排程、reviewable skill、定期做減法。'
 tldr: '同時開 5 個以上 AI 幫手工作，來回切換常讓人累到吃不消。作者分享五個省力做法：讓 AI 彼此互相監督、改用語音下指令與轉錄長音檔、交給夜間排程自動跑、規定 AI 用自己習慣的格式回報，並定期刪掉多餘流程。'
+signature: "3"
 ---
 
 當我同時管理 5 個以上的 Claude Code／Codex 時，就會遇到注意力瓶頸，一直 context switching 是真的會很疲累。

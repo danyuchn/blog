@@ -12,6 +12,7 @@ tags:
 description: '誰該買 Pro、誰該買 Max 5x、Max 20x 要不要買，什麼時候直接用 API。價格以官方頁面為準，用量判斷來自我每天開 Claude Code 的經驗。'
 tldr: 'Claude 訂閱方案該買 20 美元的 Pro、100 美元還是 200 美元的 Max？實測建議日常工作直接選 100 美元方案最划算，200 美元的每週額度只多一倍且人腦根本跟不上驗收，偶爾才用的重度任務則改用按量付費。'
 seoTitle: 'Claude Code 訂閱方案怎麼選？Pro、Max 5x 與 API 費用評估'
+archived: true
 ---
 
 Pro 20 美元，適合偶爾問問題、還沒讓 Claude Code 自己跑多步驟工作的人。Max 5x 100 美元，適合每天開著 Claude Code 當工作環境的人，我自己用這個。Max 20x 200 美元，我的建議是先別買。API 按量付費，留給「偶爾一次、吃很多 token、又不挑最貴模型」的重活。

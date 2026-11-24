@@ -11,6 +11,7 @@ tags:
   - ai-workflow
   - competitive-analysis
 description: '看到別人做出爆款，第一反應往往是不安。與其急著抄或亂改方向，不如先讓 AI 幫你做一次「向外看清對手、向內想清自己」的兩步拆解，把焦慮換成具體判斷。'
+signature: "other"
 ---
 
 滑手機的時候，偶然看到同業推出一個產品賣得很好，你的第一反應是什麼？
