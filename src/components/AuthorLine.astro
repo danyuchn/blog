@@ -1,0 +1,20 @@
+---
+import { withBase } from "@/utils/withBase";
+
+const href = `${withBase("/my-work")}#sig-13`;
+---
+
+<aside
+  class="mt-10 border-t border-border pt-6 text-sm leading-relaxed text-foreground/75"
+  data-pagefind-ignore
+>
+  <p>
+    關於 Dustin：補教老師出身，不講技術黑話。自己做有人在用的 AI
+    工具與方法，現在專門教非技術人駕馭 AI，也幫企業把 AI 真正落地。
+  </p>
+  <p class="mt-2">
+    <a href={href} class="link-underline-slide w-fit text-accent">
+      看接案與培訓復盤
+    </a>
+  </p>
+</aside>

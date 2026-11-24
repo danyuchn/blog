@@ -10,6 +10,7 @@ import ShareLinks from "@/components/ShareLinks.astro";
 import DiagnosisCta from "@/components/DiagnosisCta.astro";
 import NewsletterBox from "@/components/NewsletterBox.astro";
 import PostQuestion from "@/components/PostQuestion.astro";
+import AuthorLine from "@/components/AuthorLine.astro";
 import { postActionKind } from "@/data/signatures";
 import { firstGitHubUrl } from "@/utils/githubLink";
 import BackButton from "@/components/BackButton.astro";
@@ -353,6 +354,8 @@ const relatedPosts = (() => {
         </>
       )
     }
+
+    {postLang === "zh" && <AuthorLine />}
 
     {
       relatedPosts.length > 0 && (
