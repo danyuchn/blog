@@ -9,6 +9,7 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import DiagnosisCta from "@/components/DiagnosisCta.astro";
 import NewsletterBox from "@/components/NewsletterBox.astro";
+import PostQuestion from "@/components/PostQuestion.astro";
 import { postActionKind } from "@/data/signatures";
 import { firstGitHubUrl } from "@/utils/githubLink";
 import BackButton from "@/components/BackButton.astro";
@@ -320,6 +321,8 @@ const relatedPosts = (() => {
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
     <BackToTopButton />
+
+    {postLang === "zh" && <PostQuestion slug={post.id} />}
 
     {
       actionKind === "tool" ? (

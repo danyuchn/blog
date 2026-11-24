@@ -1,0 +1,27 @@
+---
+import { agentcrewCtaHref } from "@/utils/agentcrewCta";
+
+type Props = { slug: string };
+
+const { slug } = Astro.props;
+const href = agentcrewCtaHref("/l3/inquire", "diagnosis", slug);
+---
+
+<div
+  class="mt-10 border-2 border-accent bg-accent-surface p-6 sm:p-8"
+  data-pagefind-ignore
+  data-cta-location="post_end"
+>
+  <p class="text-sm leading-relaxed text-foreground/75 sm:text-base">
+    文章沒寫到你的狀況？直接丟過來，我用文字拆給你。
+  </p>
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mt-5 inline-flex items-center gap-1.5 bg-accent px-5 py-3 text-sm font-semibold text-background no-underline"
+  >
+    直接問 Dustin
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+</div>
