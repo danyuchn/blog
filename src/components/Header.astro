@@ -9,7 +9,12 @@ import LinkButton from "./LinkButton.astro";
 import LangSwitcher from "./LangSwitcher.astro";
 import { SITE } from "@/config";
 import { t } from "@/i18n/ui";
-import { homePath, langFromPathname, postsPath, tagsPath } from "@/utils/siteLang";
+import {
+  homePath,
+  langFromPathname,
+  postsPath,
+  tagsPath,
+} from "@/utils/siteLang";
 import { withBase } from "@/utils/withBase";
 
 const { pathname } = Astro.url;
@@ -93,17 +98,38 @@ const tagsActive =
         ]}
       >
         <li class="col-span-2">
-          <a href={withBase(postsPath(lang))} class:list={{ "active-nav": postsActive }}>
+          <a
+            href={withBase(postsPath(lang))}
+            class:list={{ "active-nav": postsActive }}
+          >
             Posts
           </a>
         </li>
+        {
+          lang === "zh" && (
+            <li class="col-span-2">
+              <a
+                href={withBase("/my-work")}
+                class:list={{ "active-nav": isActive("/my-work") }}
+              >
+                我做的東西
+              </a>
+            </li>
+          )
+        }
         <li class="col-span-2">
-          <a href={withBase(tagsPath(lang))} class:list={{ "active-nav": tagsActive }}>
+          <a
+            href={withBase(tagsPath(lang))}
+            class:list={{ "active-nav": tagsActive }}
+          >
             Tags
           </a>
         </li>
         <li class="col-span-2">
-          <a href={withBase("/about")} class:list={{ "active-nav": isActive("/about") }}>
+          <a
+            href={withBase("/about")}
+            class:list={{ "active-nav": isActive("/about") }}
+          >
             About
           </a>
         </li>
