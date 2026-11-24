@@ -94,3 +94,20 @@ export const SIGNATURES: SignatureEntry[] = [
     name: "其他自製工具",
   },
 ];
+
+export type PostActionKind = "tool" | "method" | "teaching";
+
+const TOOL_IDS = new Set<SignatureId>(["1", "2", "4", "10", "other"]);
+const METHOD_IDS = new Set<SignatureId>(["3", "5", "6", "7", "8", "9", "11"]);
+const TEACHING_IDS = new Set<SignatureId>(["12", "13"]);
+
+/** Null when the post has no known signature (keep the default end action). */
+export function postActionKind(
+  signature: string | undefined
+): PostActionKind | null {
+  if (!signature) return null;
+  if (TOOL_IDS.has(signature as SignatureId)) return "tool";
+  if (METHOD_IDS.has(signature as SignatureId)) return "method";
+  if (TEACHING_IDS.has(signature as SignatureId)) return "teaching";
+  return null;
+}
