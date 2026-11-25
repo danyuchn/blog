@@ -1,6 +1,6 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-11-25T02:00:00Z
+pubDatetime: 2026-11-25T01:00:00Z
 title: "80% of Workers Say They Feel Faster, Yet 83% of Executives Report Zero Net Impact on Labor Productivity: Who Gets Credit for Enterprise AI Efficiency?"
 slug: en/ai-efficiency-attribution
 featured: false
