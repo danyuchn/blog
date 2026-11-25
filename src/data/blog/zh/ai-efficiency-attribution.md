@@ -1,10 +1,10 @@
 ---
 author: Dustin Yuchen Teng
-pubDatetime: 2026-11-24T04:00:00Z
+pubDatetime: 2026-11-25T02:00:00Z
 title: 80% 受訪者自評變快，83% 高管卻回報勞動生產力零淨影響：企業導入 AI 的真實效率該算給誰？
 slug: zh/ai-efficiency-attribution
 featured: false
-draft: true
+draft: false
 tags:
   - ai-trends
   - enterprise-ai
