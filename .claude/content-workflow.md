@@ -23,7 +23,7 @@
 1. **Extract & Classify**：`scripts/classify_posts.py`（Gemini 分類，30 則/批，輸出 gitignored 的 `scripts/classified_posts.json`）。
    - Meta 匯出編碼、Threads-only 匯出、與上週 micro-notes 去重：細節與失敗對策見 `.claude/checklists/weekly-roundup.md` §1。
 2. **Aggregate**：聚類提案。**提案分批（全跑 vs Top N）時必說每個未選篇章的去處**（micro-notes / 留下週 / 棄寫），否則會補開重做。
-3. **Write**：`ext-run --kind write`（寫作模型 Argon→Flash，取代 Sonnet 寫手）照模板 Prompt A 從素材寫 zh，主對話只備料、寫 brief、驗事實。
+3. **Write**：`ext-run --kind write`（寫作模型 Argon→Flash，取代 Sonnet 寫手）照模板 Prompt A 從素材寫 zh 大膽版，主對話只備料、寫 brief、驗事實；驗過後 `ext-run --kind polish` 出白話、非技術版再進翻譯（順序 SSOT：`~/.claude/skills/subagent-dispatch/references/write-brief.md`）。
 4. **Translate**：同一個 agy 工作接著翻 en，檔名與 zh 完全相同。
 5. **Humanize**：agy 讀 `~/.claude/skills/humanizer/SKILL.md` 把 en 過一次去 AI 腔（Prompt A 第 3 步）。**例外**：原創技術分享文（`tech-share-post-spec.md`）的 en 版以 agy 翻譯＋核對數字、引言、程式碼為準，不另跑 humanizer。
 6. **Build & Verify**：`npm run check:content` → `npm run build` → `npm run dev` 抽查。
