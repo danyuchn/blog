@@ -130,7 +130,7 @@ description: '近八成企業已導入 AI、80% 受訪者自評個人生產力�
 - 全美這段期間平均有 58% 的 AI 職缺（2024 年的生成式與代理型 AI 職缺更高達 66%），日常工作不是在發明新演算法，而是在把人的工作方法寫進系統與制度裡，打造帶不走的「公司制度資產（組織資本）」；而且只有這類幫忙建制度的 AI 職位，才能真正帶動公司生產力成長。
 - 1990 年代的企業流程改造運動，大約 50%–70% 的專案因為部門抗拒或缺乏動力而失敗。今天，「導入 AI」往往成了最好的內部催化劑：平時沒人想批預算、沒人想碰的枯燥資料清理與 SOP 整頓，一旦掛上 AI 專案的名義，高層就願意買單、部門也願意配合動起來。
 
-[![AI 職務中，一般非 AI 職務基準為 31%，15 年全期 AI 職務平均 58%，生成式與代理型 AI 職務 66%，AI 管理與架構主管職 79% 在幫公司把經驗寫成制度資產](/blog/assets/posts/ai-efficiency-attribution/babina-zh.jpg)](/blog/assets/posts/ai-efficiency-attribution/babina-zh.jpg)
+[![AI 職務中，一般非 AI 職務基準為 31%，2018–2024 年 AI 職務平均 58%，生成式與代理型 AI 職務 66%，AI 管理與架構主管職 79% 在幫公司把經驗寫成制度資產](/blog/assets/posts/ai-efficiency-attribution/babina-zh.jpg)](/blog/assets/posts/ai-efficiency-attribution/babina-zh.jpg)
 
 *圖說：AI 職務有多少比例在把經驗寫成制度資產。出處：Babina、He 與 Jiang（2026，NBER Working Paper No. 35684），整理自 AgentCrew Academy 企業 AI 導入實證報告圖六。*
 
