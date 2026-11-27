@@ -7,8 +7,9 @@
 
 ## 1. 分類
 
-- [ ] 跑 `scripts/classify_posts.py`（讀 `/tmp/ig_export`，輸出 `scripts/classified_posts.json`）。
-  - 失敗對策：**Threads-only 匯出**（無 IG `posts_1.json`）會報錯 → 跳過腳本，為當週日期範圍寫一次性分類 snippet，不要為單次案例改腳本。
+- [ ] **Threads 文章與留言：跑 API 匯出，不再手動申請 Meta 匯出**：`python3 ~/.claude/skills/social-promo/scripts/threads_export.py`（起點預設為 KB 最近一條已勾的週例行 Blog ✅ 日期，`--since YYYY-MM-DD` 可覆寫；輸出 `~/.claude/state/threads-export/<今天>.md`，含文章、留言與其回覆的原文）。**讀完每則再判斷**，沒讀完不得判「不開新稿」。
+- [ ] （僅 IG 貼文需要時）跑 `scripts/classify_posts.py`（讀 `/tmp/ig_export`，輸出 `scripts/classified_posts.json`）。
+  - 失敗對策：無 IG `posts_1.json`（只有 Threads）會報錯 → 跳過腳本，為當週日期範圍寫一次性分類 snippet，不要為單次案例改腳本。
   - Meta 匯出編碼：文字是 latin-1 包 UTF-8，逐欄 `s.encode('latin-1').decode('utf-8')` 修正。
 - [ ] **與上週 micro-notes 去重**：匯出視窗頭一兩天的貼文常已收進上週週報，逐條對照上週區段剔除（W25 實例：兩則 Fable 貼文已在 W24 文章中）。
 
@@ -23,8 +24,9 @@
 ## 3. 寫作（zh 先行）
 
 - [ ] 每篇從 `.claude/templates/article.md` 起手，遵守 `.claude/specs/article-spec.md`。
-- [ ] 寫手一律是 agy，不派 Sonnet：新文走 `ext-run --kind write`（寫作模型，Argon 額度滿自動退 Flash），brief 照 `~/.claude/skills/subagent-dispatch/references/write-brief.md` 骨架（讀者目標＋自由重寫＋只守事實底線，不加語氣限制）；併入與翻譯照 `.claude/templates/fanout-writer-prompt.md`。都改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。（Dustin 2026-11-12 W47 核准定案）
+- [ ] 寫手一律是 agy，不派 Sonnet：順序照 write-brief.md「大膽版 → 驗證 → 白話版」，先寫大膽版；新文走 `ext-run --kind write`（寫作模型，Argon 額度滿自動退 Flash），brief 照 `~/.claude/skills/subagent-dispatch/references/write-brief.md` 骨架（讀者目標＋自由重寫＋只守事實底線，不加語氣限制）；併入與翻譯照 `.claude/templates/fanout-writer-prompt.md`。都改 scratchpad 複本；**派工前 working tree 清乾淨、圖片由主對話先複製**。主對話不親自寫內文。（Dustin 2026-11-12 W47 核准定案）
 - [ ] 回收：只驗事實不改句子；照檔尾出處表核對引號原話與數字，素材沒有的論點、誇飾、內部代號列出退回寫作模型改（模板 Prompt A 收件段）。
+- [ ] 驗過後另跑 `ext-run --kind polish` 出白話、非技術版（非工程師看得懂，技術名詞進附錄或刪；不改事實），收回再對一次事實與數字，才進翻譯（2026-11-27 Dustin 定，與電子報同一順序）。
 
 ## 4. 翻譯與去 AI 腔
 
