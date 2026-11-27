@@ -7,8 +7,9 @@
 
 ## 1. 分類
 
-- [ ] 跑 `scripts/classify_posts.py`（讀 `/tmp/ig_export`，輸出 `scripts/classified_posts.json`）。
-  - 失敗對策：**Threads-only 匯出**（無 IG `posts_1.json`）會報錯 → 跳過腳本，為當週日期範圍寫一次性分類 snippet，不要為單次案例改腳本。
+- [ ] **Threads 文章與留言：跑 API 匯出，不再手動申請 Meta 匯出**：`python3 ~/.claude/skills/social-promo/scripts/threads_export.py`（起點預設為 KB 最近一條已勾的週例行 Blog ✅ 日期，`--since YYYY-MM-DD` 可覆寫；輸出 `~/.claude/state/threads-export/<今天>.md`，含文章、留言與其回覆的原文）。**讀完每則再判斷**，沒讀完不得判「不開新稿」。
+- [ ] （僅 IG 貼文需要時）跑 `scripts/classify_posts.py`（讀 `/tmp/ig_export`，輸出 `scripts/classified_posts.json`）。
+  - 失敗對策：無 IG `posts_1.json`（只有 Threads）會報錯 → 跳過腳本，為當週日期範圍寫一次性分類 snippet，不要為單次案例改腳本。
   - Meta 匯出編碼：文字是 latin-1 包 UTF-8，逐欄 `s.encode('latin-1').decode('utf-8')` 修正。
 - [ ] **與上週 micro-notes 去重**：匯出視窗頭一兩天的貼文常已收進上週週報，逐條對照上週區段剔除（W25 實例：兩則 Fable 貼文已在 W24 文章中）。
 
